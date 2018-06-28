@@ -1,0 +1,128 @@
+/*** Navbar ***/
+/*
+        since this is a full page app, until I get told to put in the navbar/banner/tabs,
+        I'm keeping them out
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 15;
+    padding: 1% 180px 1% 180px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0,0,0,.175);
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    list-style-type: none;
+}
+nav ul li{
+    margin: 0 1% 0 1%;
+}
+#navInput{
+    border-radius: 3px;
+    outline: none;
+}*/
+.hidden{
+    display: none;
+}
+.category-active{
+    background: #666;
+    font-weight: 800;
+}
+
+
+#title{
+    text-align: center;
+    margin: 0;
+    padding: 3vh 0 3vh 0;
+    background: #f7f7f7;
+    color: #3E6990;
+    border-bottom: 10px solid #121212;
+}
+
+
+/*** Main Indicator Wrapper ***/
+.indicators-wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(93vh - 29px);
+    overflow-y: auto;
+}
+.indicators-nav{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+}
+.indicators-nav img{
+    height: 80px;
+    width: 80px;
+}
+.icon-set{
+    width: 100%;
+    text-align: center;
+    padding: 10% 0 10% 0;
+}
+.icon-set:hover{
+    cursor: pointer;
+}
+.icon-set p{
+    text-align: center;
+    margin: 0;
+    color: #f7f7f7;
+}
+.indicators-grid{
+    height: 100%;
+    width: 80%;
+    background: #666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.indicators-grid-item{
+    margin: 1%;
+    height: 14%;
+    width: 14%;
+    background: #F1E9DB;
+}
+.indicators-grid-item:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+}
+.economy-indicator{
+    border: 3px solid orange;
+}
+.environment-indicator{
+    border: 3px solid purple;
+}
+.other-indicator{
+    border: 3px solid black;
+}
+.commerce-indicator{
+    border: 3px solid green;
+}
+.equity-indicator{
+    border: 3px solid red;
+}
+
+
+/*** Footer ***/
+footer{
+    width: 100%;
+    bottom: 0;
+    line-height: 35px;
+    background: #545454;
+    color: #fff;
+    padding: 5% 1% 5% 1%;
+    display: flex;
+    justify-content: space-between;
+}
