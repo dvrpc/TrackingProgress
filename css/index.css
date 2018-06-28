@@ -63,6 +63,14 @@ nav ul li{
     align-items: center;
     background: #333;
 }
+.back-to-dash{
+    color: #f7f7f7;
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 10% 0 10% 0;
+    cursor: pointer;
+}
 .indicators-nav img{
     height: 80px;
     width: 80px;
@@ -114,6 +122,21 @@ nav ul li{
     border: 3px solid red;
 }
 
+/*** Animations (and their classes) ***/
+@keyframes fade-out{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+.fade-out{
+    animation: fade-out 2s;
+    animation-fill-mode: forwards;
+}
 
 /*** Footer ***/
 footer{

@@ -61,4 +61,27 @@ toggleIndicators = element => {
 }
 
 // get a handle on the clickable elements & apply the toggle function
-const categories = [... document.querySelectorAll('.icon-set')].forEach(category => category.onclick = () => toggleIndicators(category))
+const categories = [... document.querySelectorAll('.icon-set')]
+categories.forEach(category => category.onclick = () => toggleIndicators(category))
+
+
+
+/*** Indicator Details View ***/
+
+// fade out elements
+fadeOut = () => {
+    indicators.forEach(indicator => indicator.classList.add('fade-out'))
+    categories.forEach(category => category.classList.add('fade-out'))
+}
+
+const back = document.querySelector('.back-to-dash')
+back.onclick = () => {
+    back.style.display = 'none'
+    indicators.forEach(indicator => indicator.classList.toggle('fade-out'))
+    categories.forEach(category => category.classList.toggle('fade-out'))
+}
+// apply fade-out functionality to each indicator & reveal 'back' button
+indicators.forEach(indicator => indicator.onclick = () => {
+    fadeOut()
+    setTimeout(() => back.style.display = 'block', 2000)
+})
