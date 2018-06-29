@@ -65,8 +65,11 @@ const categories = [... document.querySelectorAll('.icon-set')]
 categories.forEach(category => category.onclick = () => toggleIndicators(category))
 
 
-
 /*** Indicator Details View ***/
+
+// get a handle on additional elements
+const indicatorsWrapper = document.querySelector('.indicators-wrapper')
+const back = document.querySelector('.back-to-dash')
 
 // fade out elements
 fadeOut = () => {
@@ -74,14 +77,27 @@ fadeOut = () => {
     categories.forEach(category => category.classList.add('fade-out'))
 }
 
-const back = document.querySelector('.back-to-dash')
+// reveal all the indicators and categories and reset indicatorsWrapper height after clicking the back button
 back.onclick = () => {
     back.style.display = 'none'
+    indicatorsWrapper.style.height = 'calc(93vh - 29px)'
+    
+    // reveal all of the indicators and category
     indicators.forEach(indicator => indicator.classList.toggle('fade-out'))
     categories.forEach(category => category.classList.toggle('fade-out'))
 }
-// apply fade-out functionality to each indicator & reveal 'back' button
+
+// apply fade-out transition to each indicator & reveal 'back' button
 indicators.forEach(indicator => indicator.onclick = () => {
     fadeOut()
-    setTimeout(() => back.style.display = 'block', 2000)
+    setTimeout(() => {
+
+        // adjust the indicators wrapper height to account for the back button block
+        indicatorsWrapper.style.height = 'calc(93vh - 29px + 10vh + 20px)'
+        back.style.display = 'block'
+
+        // TODO: create HTML snippets for each indicator, put them in their own folder and then have a function that, given the ID/name of an indicator,
+        // finds the right snippet in the folder and appends it to the indicators-grid.
+    }
+    , 1000)
 })

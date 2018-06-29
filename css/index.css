@@ -1,7 +1,4 @@
 /*** Navbar ***/
-/*
-        since this is a full page app, until I get told to put in the navbar/banner/tabs,
-        I'm keeping them out
 nav{
     position: fixed;
     width: 100%;
@@ -27,7 +24,9 @@ nav ul li{
 #navInput{
     border-radius: 3px;
     outline: none;
-}*/
+}
+
+/*** General Purpose ***/
 .hidden{
     display: none;
 }
@@ -40,7 +39,7 @@ nav ul li{
 #title{
     text-align: center;
     margin: 0;
-    padding: 3vh 0 3vh 0;
+    padding: 5vh 0 5vh 0;
     background: #f7f7f7;
     color: #3E6990;
     border-bottom: 10px solid #121212;
@@ -68,7 +67,8 @@ nav ul li{
     display: none;
     width: 100%;
     text-align: center;
-    padding: 10% 0 10% 0;
+    padding: 5vh 0 5vh 0;
+    font-size: 20px;
     cursor: pointer;
 }
 .indicators-nav img{
@@ -79,6 +79,10 @@ nav ul li{
     width: 100%;
     text-align: center;
     padding: 10% 0 10% 0;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+    transition-timing-function: linear;
 }
 .icon-set:hover{
     cursor: pointer;
@@ -101,6 +105,10 @@ nav ul li{
     height: 14%;
     width: 14%;
     background: #F1E9DB;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+    transition-timing-function: linear;
 }
 .indicators-grid-item:hover{
     cursor: pointer;
@@ -122,20 +130,10 @@ nav ul li{
     border: 3px solid red;
 }
 
-/*** Animations (and their classes) ***/
-@keyframes fade-out{
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        display: none;
-    }
-}
+/*** Transitions ***/
 .fade-out{
-    animation: fade-out 2s;
-    animation-fill-mode: forwards;
+    opacity: 0;
+    visibility: hidden;
 }
 
 /*** Footer ***/
