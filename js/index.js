@@ -13,12 +13,21 @@ const grid = document.querySelector('.indicators-grid')
 // dummy data to loop thru and create 36 sub grids
 for(var i = 0; i < 36; i++){
     let gridItem = document.createElement('div')
+    // once the data is set up, add Titles and icons here
     gridItem.classList.add('indicators-grid-item')
     grid.appendChild(gridItem)
 
-    // dummy data classNames for the categories
+    // dummy data classNames for the categories - 7 per for now but there wil be overlap
+    // once the actual data is being used (indicators with multiple categories)
     if(i >= 0 && i < 7) gridItem.classList.add('economy-indicator')
-    if(i >= 7 && i < 14) gridItem.classList.add('environment-indicator')
+    if(i === 7) {
+        gridItem.classList.add('environment-indicator')
+        const title = document.createElement('p')
+        title.classList.add('indicators-title')
+        title.textContent = 'Vehicle Miles Traveled'
+        gridItem.appendChild(title)
+    }
+    if(i > 7 && i < 14) gridItem.classList.add('environment-indicator')
     if(i >= 14 && i < 21) gridItem.classList.add('other-indicator')
     if(i >= 21 && i < 28) gridItem.classList.add('commerce-indicator')
     if(i >= 28) gridItem.classList.add('equity-indicator')
@@ -68,36 +77,73 @@ categories.forEach(category => category.onclick = () => toggleIndicators(categor
 /*** Indicator Details View ***/
 
 // get a handle on additional elements
-const indicatorsWrapper = document.querySelector('.indicators-wrapper')
+const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 
-// fade out elements
-fadeOut = () => {
-    indicators.forEach(indicator => indicator.classList.add('fade-out'))
+// fade/slide out elements
+fade = () => {
+    grid.classList.add('fade-right')
+    indicatorsNav.classList.add('fade-narrow')    
     categories.forEach(category => category.classList.add('fade-out'))
 }
 
-// reveal all the indicators and categories and reset indicatorsWrapper height after clicking the back button
+// reveal all the indicators and categories
 back.onclick = () => {
-    back.style.display = 'none'
-    indicatorsWrapper.style.height = 'calc(93vh - 29px)'
-    
-    // reveal all of the indicators and category
-    indicators.forEach(indicator => indicator.classList.toggle('fade-out'))
-    categories.forEach(category => category.classList.toggle('fade-out'))
+    grid.style.display = 'flex'
+    setTimeout(() => {
+
+        // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
+        const indicatorDetails = document.querySelector('.indicators-snippet')
+        if(indicatorDetails) indicatorDetails.remove()
+
+        back.style.display = 'none'
+        
+        // reveal the indicators grid, widen the sideNav and reveal the categories
+        indicatorsNav.classList.remove('fade-narrow')
+        grid.classList.remove('fade-right')
+        categories.forEach(category => category.classList.toggle('fade-out'))
+    }, 100)
 }
+
+
+// this object will eventually be populated with 36 key/value pairs corresponding to the indicator name & its HTML snippet
+const snippetsRef = {
+    'Vehicle Miles Traveled': 'vehicleMilesTraveled.html'
+}
+
+
+getIndicatorSnippet = title => {
+    
+    // using the indicator title, get the corresponding snippet for that indicator page
+    const snippet = snippetsRef[title]
+
+    // this condition only exists because most of the indicators are empty at the moment
+    if(snippet){
+        let page = `./indicatorSnippets/${snippet}`
+        fetch(page).then(response => response.text()).then(snippet =>{
+
+            grid.insertAdjacentHTML('beforebegin', snippet)
+        })
+    }
+}
+
+
+let indicatorTitle;
 
 // apply fade-out transition to each indicator & reveal 'back' button
 indicators.forEach(indicator => indicator.onclick = () => {
-    fadeOut()
+    fade()
     setTimeout(() => {
 
-        // adjust the indicators wrapper height to account for the back button block
-        indicatorsWrapper.style.height = 'calc(93vh - 29px + 10vh + 20px)'
-        back.style.display = 'block'
+        // after the transition is done, display: none to remove DOM space
+        grid.style.display = 'none'
 
-        // TODO: create HTML snippets for each indicator, put them in their own folder and then have a function that, given the ID/name of an indicator,
-        // finds the right snippet in the folder and appends it to the indicators-grid.
+        // check for title for now b/c most of the indicator tiles are blank
+        indicator.children.length ? indicatorTitle = indicator.children[0].textContent : null
+        if(indicatorTitle) getIndicatorSnippet(indicatorTitle)
+
+        const indicatorSnippet = document.querySelector('.indicators-snippet')
+        back.style.display = 'block'
     }
-    , 1000)
+    , 1500)
 })
