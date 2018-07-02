@@ -27,6 +27,10 @@ nav ul li{
 }
 
 /*** General Purpose ***/
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
 .hidden{
     display: none;
 }
@@ -39,7 +43,7 @@ nav ul li{
 #title{
     text-align: center;
     margin: 0;
-    padding: 5vh 0 5vh 0;
+    padding: 3vh 0 3vh 0;
     background: #f7f7f7;
     color: #3E6990;
     border-bottom: 10px solid #121212;
@@ -48,12 +52,15 @@ nav ul li{
 
 /*** Main Indicator Wrapper ***/
 .indicators-wrapper{
+    position: relative;
     display: flex;
     width: 100%;
     height: calc(93vh - 29px);
     overflow-y: auto;
+    overflow-x: hidden;
 }
 .indicators-nav{
+    position: absolute;
     height: 100%;
     width: 20%;
     display: flex;
@@ -61,6 +68,8 @@ nav ul li{
     justify-content: space-between;
     align-items: center;
     background: #333;
+    transition: width 1.4s;
+    transition-timing-function: linear;
 }
 .back-to-dash{
     color: #f7f7f7;
@@ -81,7 +90,7 @@ nav ul li{
     padding: 10% 0 10% 0;
     opacity: 1;
     visibility: visible;
-    transition: opacity 1s, visibility 1s;
+    transition: opacity 1.4s, visibility 1.4s;
     transition-timing-function: linear;
 }
 .icon-set:hover{
@@ -93,41 +102,53 @@ nav ul li{
     color: #f7f7f7;
 }
 .indicators-grid{
+    position: absolute;
     height: 100%;
     width: 80%;
     background: #666;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    opacity: 1;
+    margin-left: 20%;
+    transition: opacity 1.4s, margin-left 1.4s;
+    transition-timing-function: linear;
 }
 .indicators-grid-item{
+    position: relative;
     margin: 1%;
     height: 14%;
     width: 14%;
     background: #F1E9DB;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 1s, visibility 1s;
-    transition-timing-function: linear;
 }
 .indicators-grid-item:hover{
     cursor: pointer;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
+.indicators-title{
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    padding: 2% 0;
+    text-align: center;
+    color: #333;
+    background: rgba(51, 51, 51, 0.1);
+}
 .economy-indicator{
-    border: 3px solid orange;
+    border-bottom: 3px solid orange;
 }
 .environment-indicator{
-    border: 3px solid purple;
+    border-bottom: 3px solid purple;
 }
 .other-indicator{
-    border: 3px solid black;
+    border-bottom: 3px solid black;
 }
 .commerce-indicator{
-    border: 3px solid green;
+    border-bottom: 3px solid green;
 }
 .equity-indicator{
-    border: 3px solid red;
+    border-bottom: 3px solid red;
 }
 
 /*** Transitions ***/
@@ -135,10 +156,23 @@ nav ul li{
     opacity: 0;
     visibility: hidden;
 }
+.fade-right{
+    opacity: 0;
+    margin-left: 100vw;
+}
+.fade-narrow{
+    width: 10%;
+}
+
+/*** Indicator Pages ***/
+.indicators-snippet{
+    margin-left: 10%;
+    width: 100%;
+}
 
 /*** Footer ***/
 footer{
-    width: 100%;
+    overflow-x: hidden;
     bottom: 0;
     line-height: 35px;
     background: #545454;
