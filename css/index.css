@@ -41,21 +41,45 @@ body{
 
 
 #title{
-    text-align: center;
     margin: 0;
-    padding: 3vh 0 3vh 0;
+    padding: 3%;
     background: #f7f7f7;
     color: #3E6990;
-    border-bottom: 10px solid #121212;
+}
+.lead{
+    padding: 0 3% 3% 3%;
+    line-height: 1.7;
+}
+i{
+    border: solid #151515;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 6%;
+    margin-left: 92%;
+}
+.down-arrow{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -webkit-box-shadow: 3px 3px 4px -0.5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 3px 3px 4px -0.5px rgba(0,0,0,0.6);
+    box-shadow: 3px 3px 4px -0.5px rgba(0,0,0,0.6);
+}
+.down-arrow:active{
+    margin-top: 3px;
+    margin-bottom: calc(6% - 3px);
+    box-shadow: none;
 }
 
 
 /*** Main Indicator Wrapper ***/
 .indicators-wrapper{
+    border-top: 10px solid #121212;
+    border-bottom: 10px solid #121212;
     position: relative;
     display: flex;
     width: 100%;
-    height: calc(93vh - 29px);
+    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -165,9 +189,26 @@ body{
 }
 
 /*** Indicator Pages ***/
-.indicators-snippet{
-    margin-left: 10%;
+
+/* 
+    side bar is 10% width so all calculations have to factor that in.
+    could get real ugly real fast
+ */
+.indicators-snippet:not(hr){
+    margin-left: 13%;
     width: 100%;
+}
+
+/*this is temporary - I have an image of all 5 principles.
+The actual set up will be a div containing icons of however many principles apply to the indicator*/
+.snippet-categories{
+    height: 50px;
+}
+.indicator-description{
+    line-height: 1.6;
+}
+.data-viz{
+    margin-top: 3%;
 }
 
 /*** Footer ***/
