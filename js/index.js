@@ -10,27 +10,87 @@ if(nav.offsetTop > 0){
 
 const grid = document.querySelector('.indicators-grid')
 
+const topSoFar = [
+    {
+        name: 'Vehicle Miles Traveled',
+        indicator: 'transportation-indicator'
+    },
+    {
+        name: 'Highway Congestion',
+        indicator: 'transportation-indicator+economy-indicator'
+    },
+    {
+        name: 'Bridge Conditions',
+        indicator: 'transportation-indicator+economy-indicator'
+    },
+    {
+        name: 'non-SOV Commuting Mode Share',
+        indicator: 'environment-indicator+communication-indicator+transportation-indicator'
+    },
+    {
+        name: 'Educational Attainment',
+        indicator: 'communication-indicator+economy-indicator+equity-indicator'
+    },
+    {
+        name: 'Income Inequality',
+        indicator: 'communication-indicator+economy-indicator+equity-indicator'
+    },
+    {
+        name: 'Land Preservation',
+        indicator: 'communication-indicator+environment-indicator+transportation-indicator'
+    },
+    {
+        name: 'Population Growth',
+        indicator: 'environment-indicator+communication-indicator+economy-indicator'
+    },
+    {
+        name: 'Air Quality',
+        indicator: 'environment-indicator+communication-indicator+equity-indicator'
+    },
+    {
+        name: 'Affordable Housing',
+        indicator: 'communication-indicator+economy-indicator+equity-indicator'
+    },
+    {
+        name: 'Transit Conditions',
+        indicator: 'economy-indicator+transportation-indicator'
+    }
+]
+
 // dummy data to loop thru and create 36 sub grids
 for(var i = 0; i < 36; i++){
     let gridItem = document.createElement('div')
-    // once the data is set up, add Titles and icons here
     gridItem.classList.add('indicators-grid-item')
-    grid.appendChild(gridItem)
 
-    // dummy data classNames for the categories - 7 per for now but there wil be overlap
-    // once the actual data is being used (indicators with multiple categories)
-    if(i >= 0 && i < 7) gridItem.classList.add('economy-indicator')
-    if(i === 7) {
-        gridItem.classList.add('environment-indicator')
+    if(topSoFar[i]) {
+        console.log('in the condition')
+
+        // add all the necessary indicator classes to it
+        let classes = topSoFar[i].indicator.split('+')
+        
+        // loop thru each one if there are multiple
+        if(classes.length > 1){
+            classes.forEach(className => gridItem.classList.add(className))
+        }else{
+            gridItem.classList.add(topSoFar.indicator)
+        }
+
         const title = document.createElement('p')
         title.classList.add('indicators-title')
-        title.textContent = 'Vehicle Miles Traveled'
+        title.textContent = topSoFar[i].name
         gridItem.appendChild(title)
+        grid.appendChild(gridItem)
+
+    // make up the rest since I only have partial data for 11 indicators so far.
+    // this dummy data situation is getting out of hand
+    }else{     
+        if(i >= 11 && i < 16) gridItem.classList.add('economy-indicator')
+        if(i >= 16 && i < 21) gridItem.classList.add('environment-indicator')
+        if(i >= 21 && i < 26) gridItem.classList.add('communication-indicator')
+        if(i >= 26 && i < 31) gridItem.classList.add('transportation-indicator')
+        if(i >= 31) gridItem.classList.add('equity-indicator')
+        grid.appendChild(gridItem)
     }
-    if(i > 7 && i < 14) gridItem.classList.add('environment-indicator')
-    if(i >= 14 && i < 21) gridItem.classList.add('other-indicator')
-    if(i >= 21 && i < 28) gridItem.classList.add('commerce-indicator')
-    if(i >= 28) gridItem.classList.add('equity-indicator')
 }
 
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
@@ -105,12 +165,20 @@ back.onclick = () => {
     }, 100)
 }
 
-
-// this object will eventually be populated with 36 key/value pairs corresponding to the indicator name & its HTML snippet
+// refernce to the snippets for quick access during fetch
 const snippetsRef = {
-    'Vehicle Miles Traveled': 'vehicleMilesTraveled.html'
+    'Vehicle Miles Traveled': 'vehicleMilesTraveled.html',
+    'Highway Congestion': 'highwayCongestion.html',
+    'Bridge Conditions': 'bridgeConditions.html',
+    'non-SOV Commuting Mode Share': 'nonSOVCommutingModeShare.html',
+    'Educational Attainment': 'educationalAttainment.html',
+    'Income Inequality': 'incomeInequality.html',
+    'Land Preservation': 'landPreservation.html',
+    'Population Growth': 'populationGrowth.html',
+    'Air Quality': 'airQuality.html',
+    'Affordable Housing': 'affordableHousing.html',
+    'Transit Conditions': 'transitConditions.html'
 }
-
 
 getIndicatorSnippet = title => {
     
@@ -126,7 +194,6 @@ getIndicatorSnippet = title => {
         })
     }
 }
-
 
 let indicatorTitle;
 
