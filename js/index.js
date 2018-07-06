@@ -8,8 +8,17 @@ if(nav.offsetTop > 0){
     navLogo.src = '/img/homepage/logo_small30px.png'
 }*/
 
-const grid = document.querySelector('.indicators-grid')
+const scrollArrow = document.querySelector('.down-arrow')
+scrollArrow.onclick = () => window.scrollTo({
+    top: 825,
+    behavior: 'smooth'
+})
 
+
+
+/************************ Dashboard Functionality *********************************/
+const grid = document.querySelector('.indicators-grid')
+const categories = [... document.querySelectorAll('.icon-set')]
 const topSoFar = [
     {
         name: 'Vehicle Miles Traveled',
@@ -57,13 +66,15 @@ const topSoFar = [
     }
 ]
 
+// rerence to the clicked category
+let clickedRef;
+
 // dummy data to loop thru and create 36 sub grids
 for(var i = 0; i < 36; i++){
     let gridItem = document.createElement('div')
     gridItem.classList.add('indicators-grid-item')
 
     if(topSoFar[i]) {
-        console.log('in the condition')
 
         // add all the necessary indicator classes to it
         let classes = topSoFar[i].indicator.split('+')
@@ -93,10 +104,8 @@ for(var i = 0; i < 36; i++){
     }
 }
 
+// get a handle on each indicator after they've been generated ^
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
-
-// rerence to the clicked category
-let clickedRef = ''
 
 // function to display/hide indicators based on which category is clicked
 toggleIndicators = element => {
@@ -129,16 +138,37 @@ toggleIndicators = element => {
     }
 }
 
-// get a handle on the clickable elements & apply the toggle function
-const categories = [... document.querySelectorAll('.icon-set')]
+// apply filter toggle to each category
 categories.forEach(category => category.onclick = () => toggleIndicators(category))
 
 
-/*** Indicator Details View ***/
 
-// get a handle on additional elements
+/************************ Toggle Indicators View *********************************/
 const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
+
+// reference to the snippets for quick access during fetch
+
+// map true's for now:
+    // highway congestion, educational attainment, population growth, transit conditions
+const snippetsRef = {
+    'Vehicle Miles Traveled': {file: 'vehicleMilesTraveled.html', map: false, d3: false },
+    'Highway Congestion': {file: 'highwayCongestion.html', map: true, d3: false },
+    'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
+    'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', map: false, d3: false },
+    'Educational Attainment': {file: 'educationalAttainment.html', map: true, d3: false },
+    'Income Inequality': {file: 'incomeInequality.html', map: false, d3: false },
+    'Land Preservation': {file: 'landPreservation.html', map: false, d3: false },
+    'Population Growth': {file: 'populationGrowth.html', map: true, d3: false},
+    'Air Quality': {file: 'airQuality.html', map: false, d3: true},
+    'Affordable Housing': {file: 'affordableHousing.html', map: false, d3: true},
+    'Transit Conditions': {file: 'transitConditions.html', map: true, d3: true}
+}
+let indicatorTitle;
+
+// booleans to keep track of what extra visualizations are needed
+let snippetHasMap = false
+let d3 = false
 
 // fade/slide out elements
 fade = () => {
@@ -165,37 +195,32 @@ back.onclick = () => {
     }, 100)
 }
 
-// refernce to the snippets for quick access during fetch
-const snippetsRef = {
-    'Vehicle Miles Traveled': 'vehicleMilesTraveled.html',
-    'Highway Congestion': 'highwayCongestion.html',
-    'Bridge Conditions': 'bridgeConditions.html',
-    'non-SOV Commuting Mode Share': 'nonSOVCommutingModeShare.html',
-    'Educational Attainment': 'educationalAttainment.html',
-    'Income Inequality': 'incomeInequality.html',
-    'Land Preservation': 'landPreservation.html',
-    'Population Growth': 'populationGrowth.html',
-    'Air Quality': 'airQuality.html',
-    'Affordable Housing': 'affordableHousing.html',
-    'Transit Conditions': 'transitConditions.html'
-}
-
+// fetch indicator HTML based on the title of the clicked indicator
 getIndicatorSnippet = title => {
     
     // using the indicator title, get the corresponding snippet for that indicator page
-    const snippet = snippetsRef[title]
+    const snippet = snippetsRef[title].file
 
     // this condition only exists because most of the indicators are empty at the moment
     if(snippet){
-        let page = `./indicatorSnippets/${snippet}`
-        fetch(page).then(response => response.text()).then(snippet =>{
 
+        // trigger visualization conditions
+        snippetHasMap = snippetsRef[title].map
+        d3 = snippetsRef[title].d3
+
+        let page = `./indicatorSnippets/${snippet}`
+
+        // note for the future: the intial response has a URL that is base + snippetFileName.html. will be useful later IF I have to create a way to link to/from indicator views
+        fetch(page).then(response => response.text()).then(snippet =>{
             grid.insertAdjacentHTML('beforebegin', snippet)
+            if(snippetHasMap) {
+                // get a handle on the newly created map div & use that to generate a map
+                let container = document.querySelector('#map')
+                generateMap(container)
+            }
         })
     }
 }
-
-let indicatorTitle;
 
 // apply fade-out transition to each indicator & reveal 'back' button
 indicators.forEach(indicator => indicator.onclick = () => {
@@ -214,3 +239,17 @@ indicators.forEach(indicator => indicator.onclick = () => {
     }
     , 1500)
 })
+
+
+
+/************************ Map Content for Indicators *********************************/
+generateMap = container => {
+    mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
+    const map = new mapboxgl.Map({
+        container: container,
+        style: 'mapbox://styles/mapbox/outdoors-v9',
+        attributionControl: true,
+        center: [-75.2273, 40.071],
+        zoom: 8.82
+    })
+}
