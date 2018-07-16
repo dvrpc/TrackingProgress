@@ -148,9 +148,8 @@ const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 
 // reference to the snippets for quick access during fetch
-
-// map true's for now:
-    // highway congestion, educational attainment, population growth, transit conditions
+    // map true's for now:
+        // highway congestion, educational attainment, population growth, transit conditions
 const snippetsRef = {
     'Vehicle Miles Traveled': {file: 'vehicleMilesTraveled.html', map: false, d3: false },
     'Highway Congestion': {file: 'highwayCongestion.html', map: true, d3: false },
@@ -185,7 +184,6 @@ back.onclick = () => {
         // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
         const indicatorDetails = document.querySelector('.indicators-snippet')
         if(indicatorDetails) indicatorDetails.remove()
-
         back.style.display = 'none'
         
         // reveal the indicators grid, widen the sideNav and reveal the categories
@@ -216,6 +214,82 @@ getIndicatorSnippet = title => {
             if(snippetHasMap) {
                 // get a handle on the newly created map div & use that to generate a map
                 let container = document.querySelector('#map')
+
+                /* when I have real data, it will be passed as a second argument to create layers, filters, etc
+                    // the trick is where to store the data. It seems like all the data will exist in excel sheets so
+                    // either make a call and parse through that, or format & store the data on a db & set up a server (linux box?) that can accept a GET for a specific project's information
+                        // if db/server route is the move, it could make sense to also store al the data on the response object and just make 1 call that pulls in the structure & the data.
+                            // this becomes especially useful is a project has map & d3 visualizations.
+                            
+                            // example response object:
+                                {
+                                    name: 'indicator name',
+                                    id: 'indicator id',
+                                    html: `huge snippet, maybe`,
+                                    geoData: {
+                                      data: [lat/lng pairs(?)],
+                                      type: 'fill',
+                                      color: 'hex values'
+                                      },
+                                    vizData: [
+                                        {
+                                            chart1: {
+                                                legend: 'walje;fawlkef',
+                                                title: 'alwjkefwaljkf',
+                                                xLAbel: 'lfwajkef',
+                                                yLabel: 'alwjkef',
+                                                charts: [
+                                                    {
+                                                        type: bar
+                                                        source: source.csv,
+                                                        series: [
+                                                            // column names for layers
+                                                        ]
+                                                    },
+                                                    {
+                                                        type: line,
+                                                        source: lineSource.csv,
+                                                        series: [
+                                                            // column names for layers
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            chart2: {
+                                                legend: 'flejkf',
+                                                title: 'pie',
+                                                xLabel: 'crust',
+                                                yLAbel: 'filling',
+                                                charts: [
+                                                    type: scatter,
+                                                    source: scatterSource.csv
+                                                    series: {
+                                                        // column names for layers
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            
+                            // example flow:
+                                fetch(`api/${projectID}`).then(response => response.json()).then(dataObj => {
+                                    grid.insertAdjacentHTML('beforebegin', dataObj.html)
+                                    
+                                    if(dataObj.mapData){
+                                        let container = document.querySelector('#map')
+                                        generateMap(container, dataObj.mapData)
+                                    }
+                                    
+                                    if(dataObj.chartData){
+                                        // loop through the vizData field and create charts as appropriate. Build everything on the fly ... (?)
+                                            // need a way to cache what's been built so that these things don't need to be re-calculated every time someone 
+                                            // expands an indicator view
+                                    }
+                                })
+                */
                 generateMap(container)
             }
         })
@@ -243,13 +317,64 @@ indicators.forEach(indicator => indicator.onclick = () => {
 
 
 /************************ Map Content for Indicators *********************************/
-generateMap = container => {
+generateMap = (container, geoJSON) => {
     mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
     const map = new mapboxgl.Map({
         container: container,
         style: 'mapbox://styles/mapbox/outdoors-v9',
         attributionControl: true,
+        // DVRPC center but add a || geoJSON.center or whatever to center it according to the project geometry
         center: [-75.2273, 40.071],
         zoom: 8.82
     })
+
+    // create helper functions map types (fill, circle)
+        // need some kind of identifier in the response object to determine what kind of layer to add 
+    if(geoJSON){
+        // add base source (?) 
+        map.addSource('', {
+            type: 'geojson',
+            data: geoJSON
+        })
+
+        switch(geoJSON.layerType) {
+            case 'fill':
+                map.addLayer(addFillLayer(geoJSON))
+                break
+            case 'circle':
+                map.addLayer(addCircleLayer(geoJSON))
+                break
+            default:
+                console.log('wut wut wut')
+        }
+    }
 }
+
+// helper functions for different map types
+addFillLayer = id => {
+    return {
+        'id': id,
+        type: 'fill',
+        source: id,
+        'paint': {
+            'fill-color': '#6fb8b9',
+            'fill-opacity': 0.7
+        }
+    }
+}
+
+addCircleLayer = id => {
+    return {
+        'id': id,
+        'type': 'circle',
+        'source': id,
+        'paint': {
+            'circle-color': '#B6C1C6',
+            'circle-opacity': 0.7
+        }
+    }
+}
+
+
+
+/************************ D3 Content for Indicators *********************************/

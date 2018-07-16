@@ -1,4 +1,15 @@
-/*** Navbar ***/
+/*********** General Purpose ***********/
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+.hidden{
+    display: none;
+}
+
+
+
+/*********** Navbar ***********/
 nav{
     position: fixed;
     width: 100%;
@@ -26,20 +37,9 @@ nav ul li{
     outline: none;
 }
 
-/*** General Purpose ***/
-body{
-    margin: 0;
-    overflow-x: hidden;
-}
-.hidden{
-    display: none;
-}
-.category-active{
-    background: #666;
-    font-weight: 800;
-}
 
 
+/*********** Intro Bit ***********/
 #title{
     margin: 0;
     padding: 3%;
@@ -75,7 +75,8 @@ i{
 }
 
 
-/*** Main Indicator Wrapper ***/
+
+/*********** Indicator Dashboard ***********/
 .indicators-wrapper{
     border-top: 10px solid #121212;
     border-bottom: 10px solid #121212;
@@ -107,8 +108,9 @@ i{
     font-size: 20px;
     cursor: pointer;
 }
-.indicators-nav img{
-
+.category-active{
+    background: #666;
+    font-weight: 800;
 }
 .icon-set{
     width: 100%;
@@ -135,6 +137,7 @@ i{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow-y: auto;
     opacity: 1;
     margin-left: 20%;
     transition: opacity 1.4s, margin-left 1.4s;
@@ -160,14 +163,14 @@ i{
     margin: 0;
     width: 100%;
     height: 35%;
-/*    padding: 2% 0;
-*/    text-align: center;
+    text-align: center;
     color: #fff;
     background: #333;
 }
 
 
-/*** Transitions ***/
+
+/*********** Transitions ***********/
 .fade-out{
     opacity: 0;
     visibility: hidden;
@@ -182,12 +185,9 @@ i{
 
 
 
-/************* Indicator Pages *************/
-/* 
-    side bar is 10% width so all calculations have to factor that in.
-    could get real ugly real fast
- */
+/*********** Indicator Pages ***********/
 .indicators-snippet{
+    /*3% is the intended margin, add 10 for the width of the sidebar*/
     margin-left: 13%;
     width: 100%;
 }
@@ -211,15 +211,14 @@ i{
     margin: 0 1%;
     height: 50px;
 }
-
-/*main paragraph text content*/
 .indicator-description{
     line-height: 1.6;
+    color: #333;
 }
 
 
 
-/******* Map Views ******/
+/*********** Map Views /***********/
 #map{
     height: 500px;
     width: 98%;
@@ -235,7 +234,8 @@ i{
 }
 
 
-/*** Footer ***/
+
+/*********** Footer /***********/
 footer{
     overflow-x: hidden;
     bottom: 0;
@@ -245,4 +245,17 @@ footer{
     padding: 5% 1% 5% 1%;
     display: flex;
     justify-content: space-between;
+}
+
+
+
+/*********** Media Queries ***********/
+@media all and (max-width: 900px){
+    .indicators-grid-item{
+        height: 23%;
+        width: 23%;
+    }
+}
+@media all and (max-width: 800px){
+    
 }
