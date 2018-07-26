@@ -8,12 +8,49 @@ if(nav.offsetTop > 0){
     navLogo.src = '/img/homepage/logo_small30px.png'
 }*/
 
+
+/*************************** Helper Functions ************************************/
 const scrollArrow = document.querySelector('.down-arrow')
 scrollArrow.onclick = () => window.scrollTo({
     top: 825,
     behavior: 'smooth'
 })
 
+// Filter rows helper function
+// as is, this is not generalized b/c it runs parseInt on the jawns & not every data set will have numbers as the values
+
+// the biggest challenge at this point is extracting the Value properties as variables. d3.csv is async yet doesn't accept any async functionality. you can't .then off of it or anything.
+filterColumns = (dataset, column1, column2) => {
+
+    // to make this more general purpose, get a handle on args (can & will be filtering more than 2 columns)
+    // use [0] for dataset & then have the return object loop thru the rest to create the filtered columns csvObj
+    let data;
+    let intervalID;
+    let dataReady = false;
+   
+    d3.csv(dataset, rows => {
+        return {0: +rows[column1], 1: +rows[column2]}
+    }, csvObj => {
+        data = csvObj
+        // could set a window global? that sounds like a mess waiting to happen tho...
+    })
+
+    // idea: have this callback in the global scope, call it in the constructor or whatever ikd this sucsk
+    returnCSV = data => data
+    
+    // slightly more elegant hack: setInterval to check data until it exists, then return & clearInterval()
+    intervalID = window.setInterval(() => {
+        if(data){
+            // clearInteral & return data
+            window.clearInterval(intervalID)
+
+            returnCSV(data)
+        }
+    }, 200)
+
+}
+
+console.log('return from test ', filterColumns('./data/aq_yearly.csv', 'year', 'daysViolating'))
 
 
 /************************ Dashboard Functionality *********************************/
@@ -34,31 +71,31 @@ const topSoFar = [
     },
     {
         name: 'non-SOV Commuting Mode Share',
-        indicator: 'environment-indicator+communication-indicator+transportation-indicator'
+        indicator: 'environment-indicator+community-indicator+transportation-indicator'
     },
     {
         name: 'Educational Attainment',
-        indicator: 'communication-indicator+economy-indicator+equity-indicator'
+        indicator: 'community-indicator+economy-indicator+equity-indicator'
     },
     {
         name: 'Income Inequality',
-        indicator: 'communication-indicator+economy-indicator+equity-indicator'
+        indicator: 'community-indicator+economy-indicator+equity-indicator'
     },
     {
         name: 'Land Preservation',
-        indicator: 'communication-indicator+environment-indicator+transportation-indicator'
+        indicator: 'community-indicator+environment-indicator+transportation-indicator'
     },
     {
         name: 'Population Growth',
-        indicator: 'environment-indicator+communication-indicator+economy-indicator'
+        indicator: 'environment-indicator+community-indicator+economy-indicator'
     },
     {
         name: 'Air Quality',
-        indicator: 'environment-indicator+communication-indicator+equity-indicator'
+        indicator: 'environment-indicator+community-indicator+equity-indicator'
     },
     {
         name: 'Affordable Housing',
-        indicator: 'communication-indicator+economy-indicator+equity-indicator'
+        indicator: 'community-indicator+economy-indicator+equity-indicator'
     },
     {
         name: 'Transit Conditions',
@@ -97,7 +134,7 @@ for(var i = 0; i < 36; i++){
     }else{     
         if(i >= 11 && i < 16) gridItem.classList.add('economy-indicator')
         if(i >= 16 && i < 21) gridItem.classList.add('environment-indicator')
-        if(i >= 21 && i < 26) gridItem.classList.add('communication-indicator')
+        if(i >= 21 && i < 26) gridItem.classList.add('community-indicator')
         if(i >= 26 && i < 31) gridItem.classList.add('transportation-indicator')
         if(i >= 31) gridItem.classList.add('equity-indicator')
         grid.appendChild(gridItem)
@@ -148,10 +185,37 @@ const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 
 // reference to the snippets for quick access during fetch
-    // map true's for now:
-        // highway congestion, educational attainment, population growth, transit conditions
+// the functions inside of data are being invoked immediately, so this snippetsRef object will have to be stored OUTSIDE of the main project (db?) otherwise every single
+// data set will be parsed on page load which is definitely not desirable
 const snippetsRef = {
-    'Vehicle Miles Traveled': {file: 'vehicleMilesTraveled.html', map: false, d3: false },
+    // VMT re-structured to mimic the real response object
+    'Vehicle Miles Traveled': {
+        file: 'vehicleMilesTraveled.html',
+        map: false,
+        d3: [
+            {
+                legend: 'no legend',
+                title: 'Sample Line Chart',
+                xLabel: 'Time',
+                yLabel: 'Things',
+                type: 'line and bar',
+                series: null,
+                data: [
+                    {
+                        key : "Quantity" ,
+                        bar: true,
+                        // Goal: values is the co-ordinate pairs that arise as a result of d3.csv
+                            // if that proves impossible/inefficient, have values be a refernce to the data set and rows & then in the create function loop thru.
+                        values: 'lakjflajef'
+                    },
+                    {
+                        key: "Price" ,
+                        values: ['./data/aq_quarterly.csv', 'year', 'fiveYearAvg']
+                    }
+                ]
+            }
+        ]
+    },
     'Highway Congestion': {file: 'highwayCongestion.html', map: true, d3: false },
     'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
     'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', map: false, d3: false },
@@ -159,20 +223,20 @@ const snippetsRef = {
     'Income Inequality': {file: 'incomeInequality.html', map: false, d3: false },
     'Land Preservation': {file: 'landPreservation.html', map: false, d3: false },
     'Population Growth': {file: 'populationGrowth.html', map: true, d3: false},
-    'Air Quality': {file: 'airQuality.html', map: false, d3: true},
-    'Affordable Housing': {file: 'affordableHousing.html', map: false, d3: true},
-    'Transit Conditions': {file: 'transitConditions.html', map: true, d3: true}
+    'Air Quality': {file: 'airQuality.html', map: false, d3: false},
+    'Affordable Housing': {file: 'affordableHousing.html', map: false, d3: false},
+    'Transit Conditions': {file: 'transitConditions.html', map: true, d3: false}
 }
 let indicatorTitle;
 
 // booleans to keep track of what extra visualizations are needed
-let snippetHasMap = false
-let d3 = false
+let hasMap = false
+let hasDataViz = false
 
 // fade/slide out elements
 fade = () => {
     grid.classList.add('fade-right')
-    indicatorsNav.classList.add('fade-narrow')    
+    indicatorsNav.classList.add('fade-narrow')
     categories.forEach(category => category.classList.add('fade-out'))
 }
 
@@ -199,98 +263,38 @@ getIndicatorSnippet = title => {
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippet = snippetsRef[title].file
 
-    // this condition only exists because most of the indicators are empty at the moment
+    // make sure snippet exists before going any further
     if(snippet){
 
         // trigger visualization conditions
-        snippetHasMap = snippetsRef[title].map
-        d3 = snippetsRef[title].d3
+        hasMap = snippetsRef[title].map
+        hasDataViz = snippetsRef[title].d3
 
         let page = `./indicatorSnippets/${snippet}`
 
         // note for the future: the intial response has a URL that is base + snippetFileName.html. will be useful later IF I have to create a way to link to/from indicator views
         fetch(page).then(response => response.text()).then(snippet =>{
             grid.insertAdjacentHTML('beforebegin', snippet)
-            if(snippetHasMap) {
+            if(hasMap) {
                 // get a handle on the newly created map div & use that to generate a map
                 let container = document.querySelector('#map')
-
-                /* when I have real data, it will be passed as a second argument to create layers, filters, etc
-                    // the trick is where to store the data. It seems like all the data will exist in excel sheets so
-                    // either make a call and parse through that, or format & store the data on a db & set up a server (linux box?) that can accept a GET for a specific project's information
-                        // if db/server route is the move, it could make sense to also store al the data on the response object and just make 1 call that pulls in the structure & the data.
-                            // this becomes especially useful is a project has map & d3 visualizations.
-                            
-                            // example response object:
-                                {
-                                    name: 'indicator name',
-                                    id: 'indicator id',
-                                    html: `huge snippet, maybe`,
-                                    geoData: {
-                                      data: [lat/lng pairs(?)],
-                                      type: 'fill',
-                                      color: 'hex values'
-                                      },
-                                    vizData: [
-                                        {
-                                            chart1: {
-                                                legend: 'walje;fawlkef',
-                                                title: 'alwjkefwaljkf',
-                                                xLAbel: 'lfwajkef',
-                                                yLabel: 'alwjkef',
-                                                charts: [
-                                                    {
-                                                        type: bar
-                                                        source: source.csv,
-                                                        series: [
-                                                            // column names for layers
-                                                        ]
-                                                    },
-                                                    {
-                                                        type: line,
-                                                        source: lineSource.csv,
-                                                        series: [
-                                                            // column names for layers
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            chart2: {
-                                                legend: 'flejkf',
-                                                title: 'pie',
-                                                xLabel: 'crust',
-                                                yLAbel: 'filling',
-                                                charts: [
-                                                    type: scatter,
-                                                    source: scatterSource.csv
-                                                    series: {
-                                                        // column names for layers
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            
-                            // example flow:
-                                fetch(`api/${projectID}`).then(response => response.json()).then(dataObj => {
-                                    grid.insertAdjacentHTML('beforebegin', dataObj.html)
-                                    
-                                    if(dataObj.mapData){
-                                        let container = document.querySelector('#map')
-                                        generateMap(container, dataObj.mapData)
-                                    }
-                                    
-                                    if(dataObj.chartData){
-                                        // loop through the vizData field and create charts as appropriate. Build everything on the fly ... (?)
-                                            // need a way to cache what's been built so that these things don't need to be re-calculated every time someone 
-                                            // expands an indicator view
-                                    }
-                                })
-                */
                 generateMap(container)
+            }
+            if(hasDataViz){
+                // loop through each chart option in d3
+                hasDataViz.forEach(chart => {
+                    switch (chart.type) {
+                        case 'line and bar':
+                            createLinePlusBarGraph(chart.data)
+                            break;
+                        case 'bar':
+                            createBarGraph(chart.data)
+                            break;
+                        case 'line':
+                            createLineGraph(chart.data)
+                            break;
+                    }
+                })
             }
         })
     }
@@ -299,6 +303,7 @@ getIndicatorSnippet = title => {
 // apply fade-out transition to each indicator & reveal 'back' button
 indicators.forEach(indicator => indicator.onclick = () => {
     fade()
+
     setTimeout(() => {
 
         // after the transition is done, display: none to remove DOM space
@@ -319,6 +324,7 @@ indicators.forEach(indicator => indicator.onclick = () => {
 /************************ Map Content for Indicators *********************************/
 generateMap = (container, geoJSON) => {
     mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
+
     const map = new mapboxgl.Map({
         container: container,
         style: 'mapbox://styles/mapbox/outdoors-v9',
@@ -378,3 +384,38 @@ addCircleLayer = id => {
 
 
 /************************ D3 Content for Indicators *********************************/
+createBarGraph = source => {
+
+}
+
+createLineGraph = source => nv.addGraph( () => {
+    console.log(source)
+    
+    // initialize the chart & allow users to hover over areas for details instead of having to hover over specific points
+    let chart = nv.models.lineChart().useInteractiveGuideline(true)
+})
+
+createLinePlusBarGraph = source => nv.addGraph( () => {
+    console.log('source passed into createLinePlusBarGraph ', source)
+
+    let chart = nv.models.linePlusBarChart().color(d3.scale.category10().range());
+
+    // .call(chart) (and maybe .transition().duration(500)) seems essential for actually rendering the chart
+    d3.select('.chart svg').datum(source.data).transition().duration(500).call(chart)
+
+    // these two bits are common to everything...gonna be some not DRY code
+    nv.utils.windowResize(chart.update)
+    return chart
+})
+
+createScatterPlot = source => {
+
+}
+
+createBubbleChart = source => {
+
+}
+
+createSunburst = source => {
+
+}

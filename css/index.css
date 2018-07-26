@@ -1,5 +1,6 @@
 /*********** General Purpose ***********/
 body{
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
@@ -229,10 +230,15 @@ i{
 
 
 /*********** D3 Views **********/
-.data-viz{
+.chart{
     margin-top: 3%;
 }
-
+.chart svg{
+    display: block;
+    margin: 0 auto;
+    height: 450px;
+    width: 50%;
+}
 
 
 /*********** Footer /***********/
