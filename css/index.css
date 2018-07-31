@@ -230,14 +230,14 @@ i{
 
 
 /*********** D3 Views **********/
-.chart{
+.dava-viz{
     margin-top: 3%;
 }
-.chart svg{
+.dava-viz svg.nvd3-svg{
     display: block;
     margin: 0 auto;
     height: 450px;
-    width: 50%;
+    width: 75%;
 }
 
 

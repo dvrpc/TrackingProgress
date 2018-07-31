@@ -16,41 +16,6 @@ scrollArrow.onclick = () => window.scrollTo({
     behavior: 'smooth'
 })
 
-// Filter rows helper function
-// as is, this is not generalized b/c it runs parseInt on the jawns & not every data set will have numbers as the values
-
-// the biggest challenge at this point is extracting the Value properties as variables. d3.csv is async yet doesn't accept any async functionality. you can't .then off of it or anything.
-filterColumns = (dataset, column1, column2) => {
-
-    // to make this more general purpose, get a handle on args (can & will be filtering more than 2 columns)
-    // use [0] for dataset & then have the return object loop thru the rest to create the filtered columns csvObj
-    let data;
-    let intervalID;
-    let dataReady = false;
-   
-    d3.csv(dataset, rows => {
-        return {0: +rows[column1], 1: +rows[column2]}
-    }, csvObj => {
-        data = csvObj
-        // could set a window global? that sounds like a mess waiting to happen tho...
-    })
-
-    // idea: have this callback in the global scope, call it in the constructor or whatever ikd this sucsk
-    returnCSV = data => data
-    
-    // slightly more elegant hack: setInterval to check data until it exists, then return & clearInterval()
-    intervalID = window.setInterval(() => {
-        if(data){
-            // clearInteral & return data
-            window.clearInterval(intervalID)
-
-            returnCSV(data)
-        }
-    }, 200)
-
-}
-
-console.log('return from test ', filterColumns('./data/aq_yearly.csv', 'year', 'daysViolating'))
 
 
 /************************ Dashboard Functionality *********************************/
@@ -184,33 +149,49 @@ categories.forEach(category => category.onclick = () => toggleIndicators(categor
 const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 
-// reference to the snippets for quick access during fetch
-// the functions inside of data are being invoked immediately, so this snippetsRef object will have to be stored OUTSIDE of the main project (db?) otherwise every single
-// data set will be parsed on page load which is definitely not desirable
+// reference to the snippets for quick access during fetch ( move to outside of this file eventually)
 const snippetsRef = {
-    // VMT re-structured to mimic the real response object
-    'Vehicle Miles Traveled': {
-        file: 'vehicleMilesTraveled.html',
+    'Air Quality': {
+        file: 'airQuality.html',
         map: false,
         d3: [
             {
-                legend: 'no legend',
-                title: 'Sample Line Chart',
-                xLabel: 'Time',
-                yLabel: 'Things',
                 type: 'line and bar',
-                series: null,
+                container: 'chart',
+                dataSource: './data/aq_yearly.csv',
                 data: [
                     {
-                        key : "Quantity" ,
-                        bar: true,
-                        // Goal: values is the co-ordinate pairs that arise as a result of d3.csv
-                            // if that proves impossible/inefficient, have values be a refernce to the data set and rows & then in the create function loop thru.
-                        values: 'lakjflajef'
+                        "key" : "Days Violating",
+                        "bar": true,
+                        "color": "#f03b20",
+                        "columns": ["year", "daysViolating"],
                     },
                     {
-                        key: "Price" ,
-                        values: ['./data/aq_quarterly.csv', 'year', 'fiveYearAvg']
+                        "key": "Five Year Average",
+                        "color": "#666",
+                        "columns": ["year", "fiveYearAvg"]
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                dataSource: './data/aq_quarterly.csv',
+                data: [
+                    {
+                        "key" : "Unhealthy Sensitive Ozone",
+                        "color": "de425b",
+                        "columns": "unhealthySensitiveOzone",
+                    },
+                    {
+                        "key": "Unhealthy Ozone",
+                        "color": "#b62a38",
+                        "columns": "unhealthyOzone"
+                    },
+                    {
+                        "key": "Very Unhealthy Ozone",
+                        "color": "#750000",
+                        "columns": "veryUnhealthyOzone"
                     }
                 ]
             }
@@ -223,15 +204,10 @@ const snippetsRef = {
     'Income Inequality': {file: 'incomeInequality.html', map: false, d3: false },
     'Land Preservation': {file: 'landPreservation.html', map: false, d3: false },
     'Population Growth': {file: 'populationGrowth.html', map: true, d3: false},
-    'Air Quality': {file: 'airQuality.html', map: false, d3: false},
+    'Vehicle Miles Traveled': {file: 'vehicleMilesTraveled.html', map: false, d3: false},
     'Affordable Housing': {file: 'affordableHousing.html', map: false, d3: false},
     'Transit Conditions': {file: 'transitConditions.html', map: true, d3: false}
 }
-let indicatorTitle;
-
-// booleans to keep track of what extra visualizations are needed
-let hasMap = false
-let hasDataViz = false
 
 // fade/slide out elements
 fade = () => {
@@ -258,47 +234,57 @@ back.onclick = () => {
 }
 
 // fetch indicator HTML based on the title of the clicked indicator
+// booleans to keep track of what extra visualizations are needed
+let hasMap = false
+let hasDataViz = false
 getIndicatorSnippet = title => {
     
     // using the indicator title, get the corresponding snippet for that indicator page
-    const snippet = snippetsRef[title].file
+    const snippetFile = snippetsRef[title].file
 
-    // make sure snippet exists before going any further
-    if(snippet){
+    // make sure snippetFile exists before going any further
+    if(snippetFile){
 
-        // trigger visualization conditions
+        // get a handle on data viz metadata (if it exists)
         hasMap = snippetsRef[title].map
         hasDataViz = snippetsRef[title].d3
 
-        let page = `./indicatorSnippets/${snippet}`
+        let page = `./indicatorSnippets/${snippetFile}`
 
         // note for the future: the intial response has a URL that is base + snippetFileName.html. will be useful later IF I have to create a way to link to/from indicator views
         fetch(page).then(response => response.text()).then(snippet =>{
+
+            // insert the HTML to update the structure & put the map and/or data viz components in place
             grid.insertAdjacentHTML('beforebegin', snippet)
+
             if(hasMap) {
+
                 // get a handle on the newly created map div & use that to generate a map
                 let container = document.querySelector('#map')
                 generateMap(container)
             }
+
             if(hasDataViz){
-                // loop through each chart option in d3
+
+                // loop through each chart option & call the appropriate d3 function on it
                 hasDataViz.forEach(chart => {
                     switch (chart.type) {
                         case 'line and bar':
-                            createLinePlusBarGraph(chart.data)
+                            createLinePlusBarGraph(chart)
                             break;
-                        case 'bar':
-                            createBarGraph(chart.data)
+                        case 'stacked area':
+                            createStackedAreaGraph(chart)
                             break;
-                        case 'line':
-                            createLineGraph(chart.data)
-                            break;
+                        default:
+                            console.log('default')
                     }
                 })
             }
         })
     }
 }
+
+let indicatorTitle;
 
 // apply fade-out transition to each indicator & reveal 'back' button
 indicators.forEach(indicator => indicator.onclick = () => {
@@ -384,38 +370,87 @@ addCircleLayer = id => {
 
 
 /************************ D3 Content for Indicators *********************************/
-createBarGraph = source => {
+createStackedAreaGraph = source => {
 
-}
+    console.log('source to begin with ', source)
 
-createLineGraph = source => nv.addGraph( () => {
-    console.log(source)
+    // the name of the div containing the svg for d3 to paint on
+    const container = `.${source.container} svg`
+
+    // @TODO: finish this. is broke.
+    d3.csv(source.dataSource, rows => {
+
+        // create a values field based on the desired column as defined in the reference object
+        source.data.forEach((column, i) => {
+            source.data[i].values = [rows[source.data[i].columns] === 'NA' ? null : +rows[source.data[i].columns]]
+        })
+
+
+    }, csvObj => {
+
+        console.log('source data after processing ', source.data)
+
+        nv.addGraph(() => {
+            let chart = nv.models.stackedAreaChart()
+                .margin({top: 35, right: 55, bottom: 35, left: 55})
+                // each series has format [year, values] so set the axes accordingly
+                .x(d => d[0])
+                .y((d, i) => d[1])
+                .userInteractiveGuideline(true)
+                .showControls(true)
+                .clipeEdge(true)
     
-    // initialize the chart & allow users to hover over areas for details instead of having to hover over specific points
-    let chart = nv.models.lineChart().useInteractiveGuideline(true)
-})
+            d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
-createLinePlusBarGraph = source => nv.addGraph( () => {
-    console.log('source passed into createLinePlusBarGraph ', source)
+            nv.utils.windowResize(chart.update)
 
-    let chart = nv.models.linePlusBarChart().color(d3.scale.category10().range());
-
-    // .call(chart) (and maybe .transition().duration(500)) seems essential for actually rendering the chart
-    d3.select('.chart svg').datum(source.data).transition().duration(500).call(chart)
-
-    // these two bits are common to everything...gonna be some not DRY code
-    nv.utils.windowResize(chart.update)
-    return chart
-})
-
-createScatterPlot = source => {
-
+            return chart
+        })
+    })
 }
 
-createBubbleChart = source => {
+createLinePlusBarGraph = source => {
 
-}
+    // the name of the div containing the svg for d3 to paint on
+    const container = `.${source.container} svg`
 
-createSunburst = source => {
+    // extract the column names
+    let barSource = source.data[0].columns
+    let lineSource = source.data[1].columns
 
+    // with the names extracted, replaced the values with empty arrays to be populated by the result of the rows function
+    source.data[0].values = []
+    source.data[1].values = []
+
+    d3.csv(source.dataSource, rows => {
+
+        source.data[0].values.push([+rows[barSource[0]], +rows[barSource[1]]])
+        source.data[1].values.push([+rows[lineSource[0]], rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]] ])
+
+    }, csvObj => {
+
+        nv.addGraph(() => {
+            let chart = nv.models.linePlusBarChart()
+                .margin({top: 35, right: 55, bottom: 35, left: 55})
+                // each series has format [year, values] so set the axes accordingly
+                .x(d => d[0])
+                .y((d, i) => d[1])
+
+
+/*
+    The current data set just has days violating so they don't need notation, but future datasets may have values of $ or % or degrees or whatever, so 
+    there will eventually be a need to implement some kind of parameter that sets the axes to the correct label. But that's a future problem
+
+            chart.y1Axis.tickFormat(d3.format(',f'));
+
+            chart.y2Axis.tickFormat(function(d) { return '$' + d3.format(',f')(d) });
+*/
+
+            d3.select(container).datum(source.data).transition().duration(500).call(chart)
+
+            nv.utils.windowResize(chart.update)
+
+            return chart
+        })
+    })
 }
