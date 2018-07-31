@@ -161,15 +161,15 @@ const snippetsRef = {
                 dataSource: './data/aq_yearly.csv',
                 data: [
                     {
-                        "key" : "Days Violating",
-                        "bar": true,
-                        "color": "#f03b20",
-                        "columns": ["year", "daysViolating"],
+                        'key' : 'Days Violating',
+                        'bar': true,
+                        'color': '#f03b20',
+                        'columns': ['year', 'daysViolating'],
                     },
                     {
-                        "key": "Five Year Average",
-                        "color": "#666",
-                        "columns": ["year", "fiveYearAvg"]
+                        'key': 'Five Year Average',
+                        'color': '#666',
+                        'columns': ['year', 'fiveYearAvg']
                     }
                 ]
             },
@@ -179,19 +179,19 @@ const snippetsRef = {
                 dataSource: './data/aq_quarterly.csv',
                 data: [
                     {
-                        "key" : "Unhealthy Sensitive Ozone",
-                        "color": "de425b",
-                        "columns": "unhealthySensitiveOzone",
+                        'key' : 'Unhealthy Sensitive Ozone',
+                        'color': 'de425b',
+                        'columns': ['quarterYear', 'unhealthySensitiveOzone'],
                     },
                     {
-                        "key": "Unhealthy Ozone",
-                        "color": "#b62a38",
-                        "columns": "unhealthyOzone"
+                        'key': 'Unhealthy Ozone',
+                        'color': '#b62a38',
+                        'columns': ['quarterYear', 'unhealthyOzone']
                     },
                     {
-                        "key": "Very Unhealthy Ozone",
-                        "color": "#750000",
-                        "columns": "veryUnhealthyOzone"
+                        'key': 'Very Unhealthy Ozone',
+                        'color': '#750000',
+                        'columns': ['quarterYear', 'veryUnhealthyOzone']
                     }
                 ]
             }
@@ -370,25 +370,28 @@ addCircleLayer = id => {
 
 
 /************************ D3 Content for Indicators *********************************/
+// for some reason, this is being called twice? que?
 createStackedAreaGraph = source => {
-
-    console.log('source to begin with ', source)
 
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
 
-    // @TODO: finish this. is broke.
+    // creating the empty array *was* in the .csv forEach but I had to move it here to get results. Not thrilled about it, @TODO improve this
+    source.data.forEach((column, i) => source.data[i].values = [])
+
     d3.csv(source.dataSource, rows => {
 
         // create a values field based on the desired column as defined in the reference object
-        source.data.forEach((column, i) => {
-            source.data[i].values = [rows[source.data[i].columns] === 'NA' ? null : +rows[source.data[i].columns]]
+        source.data.forEach(series => {
+            series.values.push([rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]])
         })
-
 
     }, csvObj => {
 
-        console.log('source data after processing ', source.data)
+        // errors are coming from x-time being improperly converted.
+        // see here: https://stackoverflow.com/questions/19459687/understanding-nvd3-x-axis-date-format
+        // for how to (possibly) resolve, and change up chart.xAxis on line 407. 
+        console.log('source.data after processing ', source.data)
 
         nv.addGraph(() => {
             let chart = nv.models.stackedAreaChart()
@@ -396,9 +399,12 @@ createStackedAreaGraph = source => {
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
-                .userInteractiveGuideline(true)
+                .useInteractiveGuideline(true)
                 .showControls(true)
-                .clipeEdge(true)
+                .clipEdge(true)
+
+            // dates coming in as mm/dd/yyyy
+            chart.xAxis.tickFormat(d => d3.time.format('%d %b %Y')(new Date(d)));
     
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -431,7 +437,9 @@ createLinePlusBarGraph = source => {
 
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
-                .margin({top: 35, right: 55, bottom: 35, left: 55})
+                // for some reason, setting left margin to 0 cuts off the axis a little bit (???) so some left margin + container offset hack will be 
+                // needed to get this to center correctly
+                .margin({top: 35, right: 65, bottom: 35, left: 0})
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
