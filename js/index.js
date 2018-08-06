@@ -174,7 +174,7 @@ const snippetsRef = {
                 ]
             },
             {
-                type: 'stacked area',
+                type: 'stacked bar',
                 container: 'chart2',
                 dataSource: './data/aq_quarterly.csv',
                 data: [
@@ -272,8 +272,8 @@ getIndicatorSnippet = title => {
                         case 'line and bar':
                             createLinePlusBarGraph(chart)
                             break;
-                        case 'stacked area':
-                            createStackedAreaGraph(chart)
+                        case 'stacked bar':
+                            createStackedBarChart(chart)
                             break;
                         default:
                             console.log('default')
@@ -371,7 +371,7 @@ addCircleLayer = id => {
 
 /************************ D3 Content for Indicators *********************************/
 // for some reason, this is being called twice? que?
-createStackedAreaGraph = source => {
+createStackedBarChart = source => {
 
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
@@ -394,12 +394,11 @@ createStackedAreaGraph = source => {
         console.log('source.data after processing ', source.data)
 
         nv.addGraph(() => {
-            let chart = nv.models.stackedAreaChart()
+            let chart = nv.models.multiBarChart()
                 .margin({top: 35, right: 55, bottom: 35, left: 55})
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
-                .useInteractiveGuideline(true)
                 .showControls(true)
                 .clipEdge(true)
 
@@ -439,7 +438,7 @@ createLinePlusBarGraph = source => {
             let chart = nv.models.linePlusBarChart()
                 // for some reason, setting left margin to 0 cuts off the axis a little bit (???) so some left margin + container offset hack will be 
                 // needed to get this to center correctly
-                .margin({top: 35, right: 65, bottom: 35, left: 0})
+                .margin({top: 35, right: 65, bottom: 35, left: 65})
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
