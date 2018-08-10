@@ -196,11 +196,14 @@ i{
     color: #333;
     margin: 2% 0 0 0;
 }
+.indicator-content-hr{
+    margin: 5% 0;
+}
 .indicator-subheader{
     text-align: center;
     color: #333;
 }
-.indicators-snippet hr{
+.indicator-header-hr{
     margin: 1% 0;
 }
 /*category icons*/
@@ -218,6 +221,29 @@ i{
 }
 
 
+/*********** Togglabe Elements **********/
+.toggle-subheader{
+    border-right: 2px solid #333;
+    padding-right: 1%;
+}
+.toggle-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggle-wrapper p{
+    padding: 0 1%;
+    font-size: 16px;
+}
+.toggle-fieldset{
+    display: flex;
+}
+label{
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+
 
 /*********** Map Views /***********/
 #map{
@@ -231,8 +257,10 @@ i{
 
 /*********** D3 Views **********/
 .data-viz{
-    margin: 3% 0;
     height: 450px;
+}
+.data-viz:last-child{
+    margin-bottom: 5%;
 }
 .dava-viz svg.nvd3-svg{
     display: block;

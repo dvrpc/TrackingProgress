@@ -16,6 +16,39 @@ scrollArrow.onclick = () => window.scrollTo({
     behavior: 'smooth'
 })
 
+// toggle between charts on an indicator page
+toggleChart = selected => {
+    // on click, use the ID/Class to re-draw the graph for the correct indicator 
+    // ex. Air Quality: radio buttons have class/ID of Air Quality-0 and Air Quality-1, respectively
+        // class/ID.split("-") to get the correct indicator set [0] and dataset [1] (0 is default, 1 is alt)
+
+    // need a way to call the correct Data Viz function (stacked bar, line+bar, etc)
+        // with hardcoded metadata object, it's easy to use the information from above to get the correct indicator & use it's chart type
+        // to select the correct function (Switch/case w/column names just like in the toggleIndicators function...not DRY but eh)
+            // however if the goal is to move the metadata object elsewhere (API call or something), this won't work.
+                // does the metadata object need to be moved...?
+    console.log('clicked and selected is ', selected)
+    let idComps = selected.id.split('-')
+    console.log('id comps are ', idComps)
+
+    // get a handle on the new source jawn
+    let source = snippetsRef[idComps[0]].d3[idComps[1]]
+
+    console.log('source is ', source)
+
+    // switch case to determine which kind of vis to make (copied from snippetsREf for now - refactor into a function that can be plugged into both places to keep things DRY)
+    switch (source.type) {
+        case 'line and bar':
+            createLinePlusBarGraph(source)
+            break;
+        case 'stacked bar':
+            createStackedBarChart(source)
+            break;
+        default:
+            console.log('default')
+    }
+}
+
 
 
 /************************ Dashboard Functionality *********************************/
@@ -35,7 +68,7 @@ const topSoFar = [
         indicator: 'transportation-indicator+economy-indicator'
     },
     {
-        name: 'non-SOV Commuting Mode Share',
+        name: 'non-SOV Mode Share',
         indicator: 'environment-indicator+community-indicator+transportation-indicator'
     },
     {
@@ -150,6 +183,8 @@ const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 
 // reference to the snippets for quick access during fetch ( move to outside of this file eventually)
+// Added a SECONDARY attribute to some chart types that will have toggleable data visualizations
+    // this will let the getIndicatorSnippets switch/case know to skip over the data set & NOT create it by default
 const snippetsRef = {
     'Air Quality': {
         file: 'airQuality.html',
@@ -192,6 +227,29 @@ const snippetsRef = {
                         'key': 'Very Unhealthy Ozone',
                         'color': '#750000',
                         'columns': ['quarterYear', 'veryUnhealthyOzone']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                secondary: true,
+                container: 'chart2',
+                dataSource: './data/aq_quarterly.csv',
+                data: [
+                    {
+                        'key' : 'Unhealthy Sensitive PM',
+                        'color': 'de425b',
+                        'columns': ['quarterYear', 'unhealthySensitivePM'],
+                    },
+                    {
+                        'key': 'Unhealthy PM',
+                        'color': '#b62a38',
+                        'columns': ['quarterYear', 'unhealthyPM']
+                    },
+                    {
+                        'key': 'Very Unhealthy PM',
+                        'color': '#750000',
+                        'columns': ['quarterYear', 'veryUnhealthyPM']
                     }
                 ]
             }
@@ -237,6 +295,7 @@ back.onclick = () => {
 // booleans to keep track of what extra visualizations are needed
 let hasMap = false
 let hasDataViz = false
+
 getIndicatorSnippet = title => {
     
     // using the indicator title, get the corresponding snippet for that indicator page
@@ -268,15 +327,17 @@ getIndicatorSnippet = title => {
 
                 // loop through each chart option & call the appropriate d3 function on it
                 hasDataViz.forEach(chart => {
-                    switch (chart.type) {
-                        case 'line and bar':
-                            createLinePlusBarGraph(chart)
-                            break;
-                        case 'stacked bar':
-                            createStackedBarChart(chart)
-                            break;
-                        default:
-                            console.log('default')
+                    if(!chart.secondary){
+                        switch (chart.type) {
+                            case 'line and bar':
+                                createLinePlusBarGraph(chart)
+                                break;
+                            case 'stacked bar':
+                                createStackedBarChart(chart)
+                                break;
+                            default:
+                                console.log('default')
+                        }
                     }
                 })
             }
@@ -391,7 +452,6 @@ createStackedBarChart = source => {
         // errors are coming from x-time being improperly converted.
         // see here: https://stackoverflow.com/questions/19459687/understanding-nvd3-x-axis-date-format
         // for how to (possibly) resolve, and change up chart.xAxis on line 407. 
-        console.log('source.data after processing ', source.data)
 
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
@@ -401,6 +461,7 @@ createStackedBarChart = source => {
                 .y((d, i) => d[1])
                 .showControls(true)
                 .clipEdge(true)
+                .stacked(true)
 
             // dates coming in as mm/dd/yyyy
             chart.xAxis.tickFormat(d => d3.time.format('%d %b %Y')(new Date(d)));

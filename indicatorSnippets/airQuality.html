@@ -1,6 +1,6 @@
 <div class="indicators-snippet">
     <h1 class="indicator-header">Air Quality</h1>
-    <hr />
+    <hr class="indicator-header-hr"/>
     <div class="indicator-category-icons">
         <img class="snippet-categories" src="./img/equity_icon.png" alt="equity category icon"/>
         <img class="snippet-categories" src="./img/enviro_icon.png" alt="environment category icon"/>
@@ -15,11 +15,30 @@
     </p>
 
     <h2 class="indicator-subheader">Air Quality Yearly</h2>
-    <div class="data-viz chart">
-        <svg></svg>
+        <div class="data-viz chart">
+            <svg></svg>
+        </div>
+
+    <hr class="indicator-content-hr" />
+
+    <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">Air Quality Quarterly</h2>
+
+        <p> toggle chart data: </p>
+
+        <fieldset class="toggle-fieldset">
+            <div>
+                <input id="Air Quality-1" type="radio" name="ozone" value="ozone" checked onclick="toggleChart(this)">
+                <label for="ozone">Ozone</label>
+            </div>
+
+            <div>
+                <input id="Air Quality-2" type="radio" name="pm" value="pm" onclick="toggleChart(this)">
+                <label for="pm">PM</label>
+            </div>
+        </fieldset>
     </div>
 
-    <h2 class="indicator-subheader">Air Quality Quarterly</h2>
     <div class="data-viz chart2">
         <svg></svg>
     </div>
