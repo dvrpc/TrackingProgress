@@ -7,36 +7,41 @@
         <img class="snippet-categories" src="./img/comm_icon.png" alt="communication category icon"/>
     </div>
 
-    <p class="indicator-description">
-        Nulla porta justo ipsum, eget fermentum nisi lobortis sed. Vestibulum ornare a purus dictum imperdiet. Donec malesuada tortor sit amet ante molestie dignissim. Donec et odio suscipit, volutpat mauris eu, pretium dolor. Vestibulum bibendum tristique tellus tempor posuere. Nam pellentesque pulvinar sagittis. Phasellus euismod nulla in nulla semper, sed fringilla enim pellentesque. Nulla quis purus odio. Nam porta, lacus nec aliquet porta, massa mi tristique tellus, sed tincidunt ipsum sapien sit amet ex.
-    </p>
-    <p class="indicator-description">
-        Quisque interdum commodo dolor at varius. Ut a sapien eget mi rutrum finibus nec id massa. Pellentesque id ultrices tellus. Sed efficitur auctor ultricies. Morbi aliquet ut tortor ut ultrices. Ut maximus venenatis porta. Nulla sit amet pretium neque. Quisque a mattis magna. Sed ac sollicitudin sapien. Sed in risus massa. Aliquam nec elit non erat efficitur consectetur et a erat. Donec convallis pharetra purus, sit amet fermentum turpis ornare ut. Pellentesque quis enim dui.
-    </p>
+    <div class="description-wrapper">
+        <p class="indicator-description">
+            Nulla porta justo ipsum, eget fermentum nisi lobortis sed. Vestibulum ornare a purus dictum imperdiet. Donec malesuada tortor sit amet ante molestie dignissim. Donec et odio suscipit, volutpat mauris eu, pretium dolor. Vestibulum bibendum tristique tellus tempor posuere. Nam pellentesque pulvinar sagittis. Phasellus euismod nulla in nulla semper, sed fringilla enim pellentesque. Nulla quis purus odio. Nam porta, lacus nec aliquet porta, massa mi tristique tellus, sed tincidunt ipsum sapien sit amet ex.
+        </p>
+        <p class="indicator-description">
+            Quisque interdum commodo dolor at varius. Ut a sapien eget mi rutrum finibus nec id massa. Pellentesque id ultrices tellus. Sed efficitur auctor ultricies. Morbi aliquet ut tortor ut ultrices. Ut maximus venenatis porta. Nulla sit amet pretium neque. Quisque a mattis magna. Sed ac sollicitudin sapien. Sed in risus massa. Aliquam nec elit non erat efficitur consectetur et a erat. Donec convallis pharetra purus, sit amet fermentum turpis ornare ut. Pellentesque quis enim dui.
+        </p>
+    </div>
 
     <h2 class="indicator-subheader">Air Quality Yearly</h2>
-        <div class="data-viz chart">
-            <svg></svg>
-        </div>
+
+    <div class="data-viz chart">
+        <svg></svg>
+    </div>
 
     <hr class="indicator-content-hr" />
 
     <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Air Quality Quarterly</h2>
 
-        <p> toggle chart data: </p>
+        <p>toggle chart data: </p>
 
-        <fieldset class="toggle-fieldset">
-            <div>
-                <input id="Air Quality-1" type="radio" name="ozone" value="ozone" checked onclick="toggleChart(this)">
-                <label for="ozone">Ozone</label>
-            </div>
+        <form>
+            <fieldset class="toggle-fieldset">
+                <div>
+                    <input type="radio" id="Air_Quality-1" name="togglable-aq" value="ozone" checked onclick="toggleChart(this)">
+                    <label for="Air_Quality-1">Ozone</label>
+                </div>
 
-            <div>
-                <input id="Air Quality-2" type="radio" name="pm" value="pm" onclick="toggleChart(this)">
-                <label for="pm">PM</label>
-            </div>
-        </fieldset>
+                <div>
+                    <input type="radio" id="Air_Quality-2" name="togglable-aq" value="pm" onclick="toggleChart(this)">
+                    <label for="Air_Quality-2">PM</label>
+                </div>
+            </fieldset>
+        </form>
     </div>
 
     <div class="data-viz chart2">

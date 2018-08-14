@@ -209,15 +209,17 @@ i{
 /*category icons*/
 .indicator-category-icons{
     display: flex;
-    margin-bottom: 5%;
 }
 .snippet-categories{
-    margin: 0 1%;
+    margin-right: 2%;
     height: 50px;
 }
 .indicator-description{
     line-height: 1.6;
     color: #333;
+}
+.description-wrapper{
+    padding: 3% 0;
 }
 
 

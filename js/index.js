@@ -10,39 +10,34 @@ if(nav.offsetTop > 0){
 
 
 /*************************** Helper Functions ************************************/
-const scrollArrow = document.querySelector('.down-arrow')
+/*const scrollArrow = document.querySelector('.down-arrow')
 scrollArrow.onclick = () => window.scrollTo({
     top: 825,
     behavior: 'smooth'
-})
+})*/
 
 // toggle between charts on an indicator page
 toggleChart = selected => {
-    // on click, use the ID/Class to re-draw the graph for the correct indicator 
-    // ex. Air Quality: radio buttons have class/ID of Air Quality-0 and Air Quality-1, respectively
-        // class/ID.split("-") to get the correct indicator set [0] and dataset [1] (0 is default, 1 is alt)
 
-    // need a way to call the correct Data Viz function (stacked bar, line+bar, etc)
-        // with hardcoded metadata object, it's easy to use the information from above to get the correct indicator & use it's chart type
-        // to select the correct function (Switch/case w/column names just like in the toggleIndicators function...not DRY but eh)
-            // however if the goal is to move the metadata object elsewhere (API call or something), this won't work.
-                // does the metadata object need to be moved...?
-    console.log('clicked and selected is ', selected)
-    let idComps = selected.id.split('-')
-    console.log('id comps are ', idComps)
+    // get & isolate the Indicator name and chart # from clicked radio button ID
+    let refNames = selected.id.split('-')
 
-    // get a handle on the new source jawn
-    let source = snippetsRef[idComps[0]].d3[idComps[1]]
+    // replace the underscore with a space in order to query the snippetsRef object
+    refNames[0] = refNames[0].replace(/_/g, ' ')
 
-    console.log('source is ', source)
+    // get a handle on the correct chart item, baesd on indicator name and chart dataset
+    let source = snippetsRef[refNames[0]].d3[refNames[1]]
 
     // switch case to determine which kind of vis to make (copied from snippetsREf for now - refactor into a function that can be plugged into both places to keep things DRY)
     switch (source.type) {
         case 'line and bar':
-            createLinePlusBarGraph(source)
+            createLinePlusBarChart(source)
             break;
         case 'stacked bar':
             createStackedBarChart(source)
+            break;
+        case 'line':
+            createLineChart(source)
             break;
         default:
             console.log('default')
@@ -255,14 +250,210 @@ const snippetsRef = {
             }
         ]
     },
-    'Highway Congestion': {file: 'highwayCongestion.html', map: true, d3: false },
+    'Vehicle Miles Traveled': {
+        file: 'vehicleMilesTraveled.html', 
+        map: false, 
+        d3: [
+            {
+                // Total VMT
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/vmtWeb.csv',
+                data: [
+                    {
+                        'key' : 'DVRPC Region',
+                        'values': [],
+                        'columns': ['year', 'vmtDVRPC']
+                    },
+                    {
+                        'key' : 'NJ Suburbs',
+                        'values': [],
+                        'columns': ['year', 'vmtNJSuburbs']
+                    },
+                    {
+                        'key' : 'PA Suburbs',
+                        'values': [],
+                        'columns': ['year', 'vmtPASuburbs']
+                    },
+                    {
+                        'key' : 'Philly Subregion',
+                        'values': [],
+                        'columns': ['year', 'vmtPhillySubregion']
+                    },
+                    {
+                        'key' : 'Bucks Co',
+                        'values': [],
+                        'columns': ['year', 'vmtBucksCo']
+                    },
+                    {
+                        'key' : 'Chester Co',
+                        'values': [],
+                        'columns': ['year', 'vmtChesterCo']
+                    },
+                    {
+                        'key' : 'Delaware Co',
+                        'values': [],
+                        'columns': ['year', 'vmtDelawareCo']
+                    },
+                    {
+                        'key' : 'Montgomery Co',
+                        'values': [],
+                        'columns': ['year', 'vmtMontgomeryCo']
+                    },
+                    {
+                        'key' : 'Philly Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPhillyCo']
+                    },
+                    {
+                        'key' : 'Burlington Co',
+                        'values': [],
+                        'columns': ['year', 'vmtBurlingtonCo']
+                    },
+                    {
+                        'key' : 'Camden Co',
+                        'values': [],
+                        'columns': ['year', 'vmtCamdenCo']
+                    }
+                ]
+            },
+            {
+                // VMT/Vehicle
+                type: 'line',
+                secondary: true,
+                container: 'chart',
+                dataSource: './data/vmtWeb.csv',
+                data: [
+                    {
+                        'key' : 'DVRPC Region',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehicleDVRPC']
+                    },
+                    {
+                        'key' : 'NJ Suburbs',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehicleNJSuburbs']
+                    },
+                    {
+                        'key' : 'PA Suburbs',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehiclePASuburbs']
+                    },
+                    {
+                        'key' : 'Philly Subregion',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehiclePhillySubregion']
+                    },
+                    {
+                        'key' : 'Bucks Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehicleBucksCo']
+                    },
+                    {
+                        'key' : 'Chester Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehicleChesterCo']
+                    },
+                    {
+                        'key' : 'Delaware Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehicleDelawareCo']
+                    },
+                    {
+                        'key' : 'Montgomery Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehicleMontgomeryCo']
+                    },
+                    {
+                        'key' : 'Philly Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehiclePhillyCo']
+                    },
+                    {
+                        'key' : 'Burlington Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehicleBurlingtonCo']
+                    },
+                    {
+                        'key' : 'Camden Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerVehicleCamdenCo']
+                    }
+                ]
+            },
+            {
+                // VMT/Capita
+                type: 'line',
+                secondary: true,
+                container: 'chart',
+                dataSource: './data/vmtWeb.csv',
+                data: [
+                    {
+                        'key' : 'DVRPC Region',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapDVRPC']
+                    },
+                    {
+                        'key' : 'NJ Suburbs',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapNJSuburbs']
+                    },
+                    {
+                        'key' : 'PA Suburbs',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapPASuburbs']
+                    },
+                    {
+                        'key' : 'Philly Subregion',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapPhillySubregion']
+                    },
+                    {
+                        'key' : 'Bucks Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapBucksCo']
+                    },
+                    {
+                        'key' : 'Chester Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapChesterCo']
+                    },
+                    {
+                        'key' : 'Delaware Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapDelawareCo']
+                    },
+                    {
+                        'key' : 'Montgomery Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapMontgomeryCo']
+                    },
+                    {
+                        'key' : 'Philly Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapPhillyCo']
+                    },
+                    {
+                        'key' : 'Burlington Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapBurlingtonCo']
+                    },
+                    {
+                        'key' : 'Camden Co',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapCamdenCo']
+                    }
+                ]
+            }
+        ]
+    },
+    'Highway Congestion': {file: 'highwayCongestion.html', map: true, d3: false},
     'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
     'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', map: false, d3: false },
     'Educational Attainment': {file: 'educationalAttainment.html', map: true, d3: false },
     'Income Inequality': {file: 'incomeInequality.html', map: false, d3: false },
     'Land Preservation': {file: 'landPreservation.html', map: false, d3: false },
     'Population Growth': {file: 'populationGrowth.html', map: true, d3: false},
-    'Vehicle Miles Traveled': {file: 'vehicleMilesTraveled.html', map: false, d3: false},
     'Affordable Housing': {file: 'affordableHousing.html', map: false, d3: false},
     'Transit Conditions': {file: 'transitConditions.html', map: true, d3: false}
 }
@@ -330,10 +521,13 @@ getIndicatorSnippet = title => {
                     if(!chart.secondary){
                         switch (chart.type) {
                             case 'line and bar':
-                                createLinePlusBarGraph(chart)
+                                createLinePlusBarChart(chart)
                                 break;
                             case 'stacked bar':
                                 createStackedBarChart(chart)
+                                break;
+                            case 'line':
+                                createLineChart(chart)
                                 break;
                             default:
                                 console.log('default')
@@ -475,7 +669,7 @@ createStackedBarChart = source => {
     })
 }
 
-createLinePlusBarGraph = source => {
+createLinePlusBarChart = source => {
 
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
@@ -505,14 +699,46 @@ createLinePlusBarGraph = source => {
                 .y((d, i) => d[1])
 
 
-/*
-    The current data set just has days violating so they don't need notation, but future datasets may have values of $ or % or degrees or whatever, so 
-    there will eventually be a need to implement some kind of parameter that sets the axes to the correct label. But that's a future problem
+            /*
+                The current data set just has days violating so they don't need notation, but future datasets may have values of $ or % or degrees or whatever, so 
+                there will eventually be a need to implement some kind of parameter that sets the axes to the correct label. But that's a future problem
 
             chart.y1Axis.tickFormat(d3.format(',f'));
 
             chart.y2Axis.tickFormat(function(d) { return '$' + d3.format(',f')(d) });
-*/
+            */
+
+            d3.select(container).datum(source.data).transition().duration(500).call(chart)
+
+            nv.utils.windowResize(chart.update)
+
+            return chart
+        })
+    })
+}
+
+createLineChart = source => {
+
+    // the name of the div containing the svg for d3 to paint on
+    const container = `.${source.container} svg`
+
+    d3.csv(source.dataSource, rows => {
+
+        // extract information from the columns set in the snippetsRef lookup table
+        source.data.forEach(series => {
+            
+            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
+        })
+
+    }, csvObj => {
+
+        nv.addGraph(() => {
+            let chart = nv.models.lineChart()
+                .margin({top: 35, right: 65, bottom: 35, left: 85})
+                .useInteractiveGuideline(true)
+                .showYAxis(true)
+                .x(d => d[0])
+                .y((d, i) => d[1])
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
