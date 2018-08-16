@@ -16,10 +16,10 @@ scrollArrow.onclick = () => window.scrollTo({
     behavior: 'smooth'
 })*/
 
-// toggle between charts on an indicator page (& handle the possibility of multiple ones)
+// toggle between charts on an indicator page
 toggleChart = selected => {
 
-    // get & isolate the Indicator name and chart # from clicked radio button ID
+    // get & isolate the Indicator name and chart # from the selected option
     let refNames = selected.options[selected.selectedIndex].value.split('-')
 
     // replace the underscore with a space in order to query the snippetsRef object
@@ -195,13 +195,11 @@ const snippetsRef = {
                         'bar': true,
                         'color': '#f03b20',
                         'columns': ['year', 'daysViolating'],
-                        'values': []
                     },
                     {
                         'key': 'Five Year Average',
                         'color': '#666',
                         'columns': ['year', 'fiveYearAvg'],
-                        'values': []
                     }
                 ]
             },
@@ -214,19 +212,16 @@ const snippetsRef = {
                         'key' : 'Unhealthy Sensitive Ozone',
                         'color': 'de425b',
                         'columns': ['quarterYear', 'unhealthySensitiveOzone'],
-                        'values': []
                     },
                     {
                         'key': 'Unhealthy Ozone',
                         'color': '#b62a38',
                         'columns': ['quarterYear', 'unhealthyOzone'],
-                        'values': []
                     },
                     {
                         'key': 'Very Unhealthy Ozone',
                         'color': '#750000',
                         'columns': ['quarterYear', 'veryUnhealthyOzone'],
-                        'values': []
                     }
                 ]
             },
@@ -240,19 +235,16 @@ const snippetsRef = {
                         'key' : 'Unhealthy Sensitive PM',
                         'color': 'de425b',
                         'columns': ['quarterYear', 'unhealthySensitivePM'],
-                        'values': []
                     },
                     {
                         'key': 'Unhealthy PM',
                         'color': '#b62a38',
                         'columns': ['quarterYear', 'unhealthyPM'],
-                        'values': []
                     },
                     {
                         'key': 'Very Unhealthy PM',
                         'color': '#750000',
                         'columns': ['quarterYear', 'veryUnhealthyPM'],
-                        'values': []
                     }
                 ]
             }
@@ -270,78 +262,65 @@ const snippetsRef = {
                 data: [
                     {
                         'key' : 'DVRPC Region',
-                        'values': [],
                         'columns': ['year', 'vmtPerCapDVRPC']
                     },
                     {
                         'key' : 'NJ Suburbs',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapNJSuburbs']
                     },
                     {
                         'key' : 'PA Suburbs',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapPASuburbs']
                     },
                     {
                         'key' : 'Philadelphia Subregion',
-                        'values': [],
                         'columns': ['year', 'vmtPerCapPhillySubregion']
                     },
                     {
                         'key' : 'Bucks Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapBucksCo']
                     },
                     {
                         'key' : 'Chester Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapChesterCo']
                     },
                     {
                         'key' : 'Delaware Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapDelawareCo']
                     },
                     {
                         'key' : 'Montgomery Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapMontgomeryCo']
                     },
                     {
                         'key' : 'Philadelphia Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapPhillyCo']
                     },
                     {
                         'key' : 'Burlington Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapBurlingtonCo']
                     },
                     {
                         'key' : 'Camden Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapCamdenCo']
                     },
                     {
                         'key' : 'Gloucester Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapGloucesterCo']
                     },
                     {
                         'key' : 'Mercer Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerCapMercerCo']
                     }
                 ]
@@ -355,78 +334,65 @@ const snippetsRef = {
                 data: [
                     {
                         'key' : 'DVRPC Region',
-                        'values': [],
                         'columns': ['year', 'vmtDVRPC']
                     },
                     {
                         'key' : 'NJ Suburbs',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtNJSuburbs']
                     },
                     {
                         'key' : 'PA Suburbs',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPASuburbs']
                     },
                     {
                         'key' : 'Philadelphia Subregion',
-                        'values': [],
                         'columns': ['year', 'vmtPhillySubregion']
                     },
                     {
                         'key' : 'Bucks Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtBucksCo']
                     },
                     {
                         'key' : 'Chester Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtChesterCo']
                     },
                     {
                         'key' : 'Delaware Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtDelawareCo']
                     },
                     {
                         'key' : 'Montgomery Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtMontgomeryCo']
                     },
                     {
                         'key' : 'Philadelphia Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPhillyCo']
                     },
                     {
                         'key' : 'Burlington Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtBurlingtonCo']
                     },
                     {
                         'key' : 'Camden Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtCamdenCo']
                     },
                     {
                         'key' : 'Gloucester Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtGloucesterCo']
                     },
                     {
                         'key' : 'Mercer Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtMercerCo']
                     }
                 ]
@@ -440,78 +406,65 @@ const snippetsRef = {
                 data: [
                     {
                         'key' : 'DVRPC Region',
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleDVRPC']
                     },
                     {
                         'key' : 'NJ Suburbs',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleNJSuburbs']
                     },
                     {
                         'key' : 'PA Suburbs',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehiclePASuburbs']
                     },
                     {
                         'key' : 'Philadelphia Subregion',
-                        'values': [],
                         'columns': ['year', 'vmtPerVehiclePhillySubregion']
                     },
                     {
                         'key' : 'Bucks Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleBucksCo']
                     },
                     {
                         'key' : 'Chester Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleChesterCo']
                     },
                     {
                         'key' : 'Delaware Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleDelawareCo']
                     },
                     {
                         'key' : 'Montgomery Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleMontgomeryCo']
                     },
                     {
                         'key' : 'Philadelphia Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehiclePhillyCo']
                     },
                     {
                         'key' : 'Burlington Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleBurlingtonCo']
                     },
                     {
                         'key' : 'Camden Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleCamdenCo']
                     },
                     {
                         'key' : 'Gloucester Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleGloucesterCo']
                     },
                     {
                         'key' : 'Mercer Co',
                         'disabled': true,
-                        'values': [],
                         'columns': ['year', 'vmtPerVehicleMercerCo']
                     }
                 ]
@@ -701,6 +654,9 @@ createStackedBarChart = source => {
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
 
+    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
+    source.data.forEach(series => series.values = [])
+
     d3.csv(source.dataSource, rows => {
 
         // create a values field based on the desired column as defined in the reference object
@@ -741,6 +697,9 @@ createLinePlusBarChart = source => {
 
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
+
+    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
+    source.data.forEach(series => series.values = [])
 
     // extract the column names
     let barSource = source.data[0].columns
@@ -786,11 +745,13 @@ createLineChart = source => {
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
 
+    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
+    source.data.forEach(series => series.values = [])
+
     d3.csv(source.dataSource, rows => {
 
         // extract information from the columns set in the snippetsRef lookup table
         source.data.forEach(series => {
-            
             series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
         })
 
