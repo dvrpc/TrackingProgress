@@ -16,11 +16,11 @@ scrollArrow.onclick = () => window.scrollTo({
     behavior: 'smooth'
 })*/
 
-// toggle between charts on an indicator page
+// toggle between charts on an indicator page (& handle the possibility of multiple ones)
 toggleChart = selected => {
 
     // get & isolate the Indicator name and chart # from clicked radio button ID
-    let refNames = selected.id.split('-')
+    let refNames = selected.options[selected.selectedIndex].value.split('-')
 
     // replace the underscore with a space in order to query the snippetsRef object
     refNames[0] = refNames[0].replace(/_/g, ' ')
@@ -195,11 +195,13 @@ const snippetsRef = {
                         'bar': true,
                         'color': '#f03b20',
                         'columns': ['year', 'daysViolating'],
+                        'values': []
                     },
                     {
                         'key': 'Five Year Average',
                         'color': '#666',
-                        'columns': ['year', 'fiveYearAvg']
+                        'columns': ['year', 'fiveYearAvg'],
+                        'values': []
                     }
                 ]
             },
@@ -212,16 +214,19 @@ const snippetsRef = {
                         'key' : 'Unhealthy Sensitive Ozone',
                         'color': 'de425b',
                         'columns': ['quarterYear', 'unhealthySensitiveOzone'],
+                        'values': []
                     },
                     {
                         'key': 'Unhealthy Ozone',
                         'color': '#b62a38',
-                        'columns': ['quarterYear', 'unhealthyOzone']
+                        'columns': ['quarterYear', 'unhealthyOzone'],
+                        'values': []
                     },
                     {
                         'key': 'Very Unhealthy Ozone',
                         'color': '#750000',
-                        'columns': ['quarterYear', 'veryUnhealthyOzone']
+                        'columns': ['quarterYear', 'veryUnhealthyOzone'],
+                        'values': []
                     }
                 ]
             },
@@ -235,16 +240,19 @@ const snippetsRef = {
                         'key' : 'Unhealthy Sensitive PM',
                         'color': 'de425b',
                         'columns': ['quarterYear', 'unhealthySensitivePM'],
+                        'values': []
                     },
                     {
                         'key': 'Unhealthy PM',
                         'color': '#b62a38',
-                        'columns': ['quarterYear', 'unhealthyPM']
+                        'columns': ['quarterYear', 'unhealthyPM'],
+                        'values': []
                     },
                     {
                         'key': 'Very Unhealthy PM',
                         'color': '#750000',
-                        'columns': ['quarterYear', 'veryUnhealthyPM']
+                        'columns': ['quarterYear', 'veryUnhealthyPM'],
+                        'values': []
                     }
                 ]
             }
@@ -255,8 +263,93 @@ const snippetsRef = {
         map: false, 
         d3: [
             {
+                // VMT/Capita
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/vmtWeb.csv',
+                data: [
+                    {
+                        'key' : 'DVRPC Region',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapDVRPC']
+                    },
+                    {
+                        'key' : 'NJ Suburbs',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapNJSuburbs']
+                    },
+                    {
+                        'key' : 'PA Suburbs',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapPASuburbs']
+                    },
+                    {
+                        'key' : 'Philadelphia Subregion',
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapPhillySubregion']
+                    },
+                    {
+                        'key' : 'Bucks Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapBucksCo']
+                    },
+                    {
+                        'key' : 'Chester Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapChesterCo']
+                    },
+                    {
+                        'key' : 'Delaware Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapDelawareCo']
+                    },
+                    {
+                        'key' : 'Montgomery Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapMontgomeryCo']
+                    },
+                    {
+                        'key' : 'Philadelphia Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapPhillyCo']
+                    },
+                    {
+                        'key' : 'Burlington Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapBurlingtonCo']
+                    },
+                    {
+                        'key' : 'Camden Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapCamdenCo']
+                    },
+                    {
+                        'key' : 'Gloucester Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapGloucesterCo']
+                    },
+                    {
+                        'key' : 'Mercer Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtPerCapMercerCo']
+                    }
+                ]
+            },
+            {
                 // Total VMT
                 type: 'line',
+                secondary: true,
                 container: 'chart',
                 dataSource: './data/vmtWeb.csv',
                 data: [
@@ -267,53 +360,74 @@ const snippetsRef = {
                     },
                     {
                         'key' : 'NJ Suburbs',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtNJSuburbs']
                     },
                     {
                         'key' : 'PA Suburbs',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPASuburbs']
                     },
                     {
-                        'key' : 'Philly Subregion',
+                        'key' : 'Philadelphia Subregion',
                         'values': [],
                         'columns': ['year', 'vmtPhillySubregion']
                     },
                     {
                         'key' : 'Bucks Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtBucksCo']
                     },
                     {
                         'key' : 'Chester Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtChesterCo']
                     },
                     {
                         'key' : 'Delaware Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtDelawareCo']
                     },
                     {
                         'key' : 'Montgomery Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtMontgomeryCo']
                     },
                     {
-                        'key' : 'Philly Co',
+                        'key' : 'Philadelphia Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPhillyCo']
                     },
                     {
                         'key' : 'Burlington Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtBurlingtonCo']
                     },
                     {
                         'key' : 'Camden Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtCamdenCo']
+                    },
+                    {
+                        'key' : 'Gloucester Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtGloucesterCo']
+                    },
+                    {
+                        'key' : 'Mercer Co',
+                        'disabled': true,
+                        'values': [],
+                        'columns': ['year', 'vmtMercerCo']
                     }
                 ]
             },
@@ -331,117 +445,74 @@ const snippetsRef = {
                     },
                     {
                         'key' : 'NJ Suburbs',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPerVehicleNJSuburbs']
                     },
                     {
                         'key' : 'PA Suburbs',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPerVehiclePASuburbs']
                     },
                     {
-                        'key' : 'Philly Subregion',
+                        'key' : 'Philadelphia Subregion',
                         'values': [],
                         'columns': ['year', 'vmtPerVehiclePhillySubregion']
                     },
                     {
                         'key' : 'Bucks Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPerVehicleBucksCo']
                     },
                     {
                         'key' : 'Chester Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPerVehicleChesterCo']
                     },
                     {
                         'key' : 'Delaware Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPerVehicleDelawareCo']
                     },
                     {
                         'key' : 'Montgomery Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPerVehicleMontgomeryCo']
                     },
                     {
-                        'key' : 'Philly Co',
+                        'key' : 'Philadelphia Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPerVehiclePhillyCo']
                     },
                     {
                         'key' : 'Burlington Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPerVehicleBurlingtonCo']
                     },
                     {
                         'key' : 'Camden Co',
+                        'disabled': true,
                         'values': [],
                         'columns': ['year', 'vmtPerVehicleCamdenCo']
-                    }
-                ]
-            },
-            {
-                // VMT/Capita
-                type: 'line',
-                secondary: true,
-                container: 'chart',
-                dataSource: './data/vmtWeb.csv',
-                data: [
-                    {
-                        'key' : 'DVRPC Region',
-                        'values': [],
-                        'columns': ['year', 'vmtPerCapDVRPC']
                     },
                     {
-                        'key' : 'NJ Suburbs',
+                        'key' : 'Gloucester Co',
+                        'disabled': true,
                         'values': [],
-                        'columns': ['year', 'vmtPerCapNJSuburbs']
+                        'columns': ['year', 'vmtPerVehicleGloucesterCo']
                     },
                     {
-                        'key' : 'PA Suburbs',
+                        'key' : 'Mercer Co',
+                        'disabled': true,
                         'values': [],
-                        'columns': ['year', 'vmtPerCapPASuburbs']
-                    },
-                    {
-                        'key' : 'Philly Subregion',
-                        'values': [],
-                        'columns': ['year', 'vmtPerCapPhillySubregion']
-                    },
-                    {
-                        'key' : 'Bucks Co',
-                        'values': [],
-                        'columns': ['year', 'vmtPerCapBucksCo']
-                    },
-                    {
-                        'key' : 'Chester Co',
-                        'values': [],
-                        'columns': ['year', 'vmtPerCapChesterCo']
-                    },
-                    {
-                        'key' : 'Delaware Co',
-                        'values': [],
-                        'columns': ['year', 'vmtPerCapDelawareCo']
-                    },
-                    {
-                        'key' : 'Montgomery Co',
-                        'values': [],
-                        'columns': ['year', 'vmtPerCapMontgomeryCo']
-                    },
-                    {
-                        'key' : 'Philly Co',
-                        'values': [],
-                        'columns': ['year', 'vmtPerCapPhillyCo']
-                    },
-                    {
-                        'key' : 'Burlington Co',
-                        'values': [],
-                        'columns': ['year', 'vmtPerCapBurlingtonCo']
-                    },
-                    {
-                        'key' : 'Camden Co',
-                        'values': [],
-                        'columns': ['year', 'vmtPerCapCamdenCo']
+                        'columns': ['year', 'vmtPerVehicleMercerCo']
                     }
                 ]
             }
@@ -625,14 +696,10 @@ addCircleLayer = id => {
 
 
 /************************ D3 Content for Indicators *********************************/
-// for some reason, this is being called twice? que?
 createStackedBarChart = source => {
 
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
-
-    // creating the empty array *was* in the .csv forEach but I had to move it here to get results. Not thrilled about it, @TODO improve this
-    source.data.forEach((column, i) => source.data[i].values = [])
 
     d3.csv(source.dataSource, rows => {
 
@@ -653,7 +720,8 @@ createStackedBarChart = source => {
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
-                .showControls(true)
+                // hide controls b/c were not interested in grouped bar (also it gets cluttered on smaller screens to this is a double win)
+                .showControls(false)
                 .clipEdge(true)
                 .stacked(true)
 
@@ -677,10 +745,6 @@ createLinePlusBarChart = source => {
     // extract the column names
     let barSource = source.data[0].columns
     let lineSource = source.data[1].columns
-
-    // with the names extracted, replaced the values with empty arrays to be populated by the result of the rows function
-    source.data[0].values = []
-    source.data[1].values = []
 
     d3.csv(source.dataSource, rows => {
 
@@ -737,8 +801,13 @@ createLineChart = source => {
                 .margin({top: 35, right: 65, bottom: 35, left: 85})
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
+                .clipEdge(false)
+                .forceY(0)
                 .x(d => d[0])
                 .y((d, i) => d[1])
+
+            // format y-axis for large numbers
+            chart.yAxis.tickFormat(d3.format(','))
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 

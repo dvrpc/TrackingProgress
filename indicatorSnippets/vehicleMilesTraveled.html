@@ -1,6 +1,8 @@
 <div class="indicators-snippet">
     <h1 class="indicator-header">Vehicle Miles Traveled</h1>
-    <hr />
+
+    <hr class="indicator-header-hr"/>
+    
     <div class="indicator-category-icons">
         <img class="snippet-categories" src="./img/transpo_icon.png" alt="transportation category icon"/>
     </div>
@@ -22,20 +24,13 @@
 
         <form>
             <fieldset class="toggle-fieldset">
-                <div>
-                    <input type="radio" id="Vehicle_Miles_Traveled-0" name="togglable-vmt" value="totalVMT" checked onclick="toggleChart(this)">
-                    <label for="Vehicle_Miles_Traveled-0">Total VMT</label>
-                </div>
+                <select class="toggle-data-selector" onchange="toggleChart(this)">
+                    <option value="Vehicle_Miles_Traveled-0">VMT/Capita</option>
 
-                <div>
-                    <input type="radio" id="Vehicle_Miles_Traveled-1" name="togglable-vmt" value="VMTVehicle" onclick="toggleChart(this)">
-                    <label for="Vehicle_Miles_Traveled-1">VMT/Vehicle</label>
-                </div>
-
-                <div>
-                    <input type="radio" id="Vehicle_Miles_Traveled-2" name="togglable-vmt" value="VMTCapita" onclick="toggleChart(this)">
-                    <label for="Vehicle_Miles_Traveled-2">VMT/Capita</label>
-                </div>
+                    <option value="Vehicle_Miles_Traveled-1">Total VMT</option>
+                    
+                    <option value="Vehicle_Miles_Traveled-2">VMT/Vehicle</option>
+                </select>
             </fieldset>
         </form>
     </div>

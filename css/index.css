@@ -84,7 +84,7 @@ i{
     position: relative;
     display: flex;
     width: 100%;
-    min-height: 1000px;
+    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -191,6 +191,7 @@ i{
     /*3% is the intended margin, add 10 for the width of the sidebar*/
     margin-left: 13%;
     width: 100%;
+    overflow-y: auto;
 }
 .indicator-header{
     color: #333;

@@ -1,9 +1,13 @@
 <div class="indicators-snippet">
     <h1 class="indicator-header">Air Quality</h1>
+
     <hr class="indicator-header-hr"/>
+    
     <div class="indicator-category-icons">
         <img class="snippet-categories" src="./img/equity_icon.png" alt="equity category icon"/>
+
         <img class="snippet-categories" src="./img/enviro_icon.png" alt="environment category icon"/>
+        
         <img class="snippet-categories" src="./img/comm_icon.png" alt="communication category icon"/>
     </div>
 
@@ -31,15 +35,11 @@
 
         <form>
             <fieldset class="toggle-fieldset">
-                <div>
-                    <input type="radio" id="Air_Quality-1" name="togglable-aq" value="ozone" checked onclick="toggleChart(this)">
-                    <label for="Air_Quality-1">Ozone</label>
-                </div>
+                <select onchange="toggleChart(this)">
+                    <option value="Air_Quality-1">Ozone</option>
 
-                <div>
-                    <input type="radio" id="Air_Quality-2" name="togglable-aq" value="pm" onclick="toggleChart(this)">
-                    <label for="Air_Quality-2">PM</label>
-                </div>
+                    <option value="Air_Quality-2">PM</option>
+                </select>
             </fieldset>
         </form>
     </div>
