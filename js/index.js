@@ -497,6 +497,9 @@ back.onclick = () => {
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
+
+    // remove it from the DOM space
+    relatedIndicators.style.display = 'none'
     
     setTimeout(() => {
 
@@ -591,10 +594,6 @@ indicators.forEach(indicator => indicator.onclick = () => {
         // after the transition is done, display: none to remove DOM space
         grid.style.display = 'none'
 
-        // check for title for now b/c most of the indicator tiles are blank
-/*        indicator.children.length ? indicatorTitle = indicator.children[0].textContent : null
-        if(indicatorTitle) getIndicatorSnippet(indicatorTitle)*/
-
         // get the title and primary class of the selected indicator
         const title = indicator.children.length ? indicatorTitle = indicator.children[0].textContent : null
         const primaryCategory = indicator.classList[1]
@@ -613,17 +612,14 @@ generateSideNav = primaryCategory => {
 
         if(indicator.classList.contains(primaryCategory)){
 
-            console.log('indicator ', indicator)
-
             // get a handle on the necessary info (skip dummy data for now...ugh)
             const linkTitle = indicator.children[0] ? indicator.children[0].textContent : 'fake'
-
-            console.log('linkTitle is ', linkTitle)
             const primaryCategory = indicator.classList[1]
 
             //  create a link to the indicator page that will go on the side bar
             let sideLink = document.createElement('a')
             sideLink.style.padding = '10% 0'
+            sideLink.style.cursor = 'pointer'
 
             // truncate the title where needed
             let truncatedTitle = linkTitle.length > 7 ? linkTitle.substring(0, 6) + '...' : linkTitle
@@ -650,8 +646,6 @@ generateSideNav = primaryCategory => {
             relatedIndicators.appendChild(sideLink)
         }
     })
-
-    console.log('related indicators populated with jawns ', relatedIndicators)
 
     // make sideNav list (which was populated in the getIndicatorSnippet function) visible
     relatedIndicators.style.display = 'flex'
