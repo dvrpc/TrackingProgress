@@ -9,7 +9,11 @@ if(nav.offsetTop > 0){
 }*/
 
 
+
+
+/*********************************************************************************/
 /*************************** Helper Functions ************************************/
+/*********************************************************************************/
 /*const scrollArrow = document.querySelector('.down-arrow')
 scrollArrow.onclick = () => window.scrollTo({
     top: 825,
@@ -28,7 +32,7 @@ toggleChart = selected => {
     // get a handle on the correct chart item, baesd on indicator name and chart dataset
     let source = snippetsRef[refNames[0]].d3[refNames[1]]
 
-    // switch case to determine which kind of vis to make (copied from snippetsREf for now - refactor into a function that can be plugged into both places to keep things DRY)
+    // switch case to determine which kind of vis to make
     switch (source.type) {
         case 'line and bar':
             createLinePlusBarChart(source)
@@ -46,7 +50,10 @@ toggleChart = selected => {
 
 
 
+
+/**********************************************************************************/
 /************************ Dashboard Functionality *********************************/
+/**********************************************************************************/
 const grid = document.querySelector('.indicators-grid')
 const categories = [... document.querySelectorAll('.icon-set')]
 const topSoFar = [
@@ -173,13 +180,21 @@ categories.forEach(category => category.onclick = () => toggleIndicators(categor
 
 
 
+
+/*********************************************************************************/
 /************************ Toggle Indicators View *********************************/
+/*********************************************************************************/
+// get a handle on the all the necessary elements & variables for toggles
 const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
+const relatedIndicators = document.querySelector('.related-indicators')
+
+// booleans to keep track of what visualizations are needed
+let hasMap = false
+let hasDataViz = false
+let indicatorTitle;
 
 // reference to the snippets for quick access during fetch ( move to outside of this file eventually)
-// Added a SECONDARY attribute to some chart types that will have toggleable data visualizations
-    // this will let the getIndicatorSnippets switch/case know to skip over the data set & NOT create it by default
 const snippetsRef = {
     'Air Quality': {
         file: 'airQuality.html',
@@ -489,16 +504,16 @@ fade = () => {
     categories.forEach(category => category.classList.add('fade-out'))
 }
 
-// reveal all the indicators and categories
+// return to dashboard view
 back.onclick = () => {
     grid.style.display = 'flex'
 
-    // clear the side nav of all it's children
+    // clear the relatedIndicators div of all it's children
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
 
-    // remove it from the DOM space
+    // remove relatedIndicators from the DOM space
     relatedIndicators.style.display = 'none'
     
     setTimeout(() => {
@@ -514,11 +529,6 @@ back.onclick = () => {
         categories.forEach(category => category.classList.toggle('fade-out'))
     }, 100)
 }
-
-// fetch indicator HTML based on the title of the clicked indicator
-// booleans to keep track of what extra visualizations are needed
-let hasMap = false
-let hasDataViz = false
 
 // parameters: title to reference the snippetsRef lookup table, and primary class to generate the side nav
 getIndicatorSnippet = (title, primaryCategory) => {
@@ -579,11 +589,6 @@ getIndicatorSnippet = (title, primaryCategory) => {
     }
 }
 
-let indicatorTitle;
-
-// get a handle on the side jawn (do it here for now, will move)
-const relatedIndicators = document.querySelector('.related-indicators')
-
 // apply fade-out transition to each indicator, reveal the 'back' button & populate the new side nav w/related indicators
 indicators.forEach(indicator => indicator.onclick = () => {
 
@@ -605,6 +610,7 @@ indicators.forEach(indicator => indicator.onclick = () => {
     , 1500)
 })
 
+// populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
 generateSideNav = primaryCategory => {
 
     // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
@@ -656,7 +662,10 @@ generateSideNav = primaryCategory => {
 
 
 
+
+/*************************************************************************************/
 /************************ Map Content for Indicators *********************************/
+/*************************************************************************************/
 generateMap = (container, geoJSON) => {
     mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 
@@ -691,7 +700,6 @@ generateMap = (container, geoJSON) => {
     }
 }
 
-// helper functions for different map types
 addFillLayer = id => {
     return {
         'id': id,
@@ -718,7 +726,10 @@ addCircleLayer = id => {
 
 
 
+
+/************************************************************************************/
 /************************ D3 Content for Indicators *********************************/
+/************************************************************************************/
 createStackedBarChart = source => {
 
     // the name of the div containing the svg for d3 to paint on
