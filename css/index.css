@@ -3,11 +3,36 @@ body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
 }
 .hidden{
     display: none;
 }
-
+/*The following are taken from subpage.css*/
+a{
+    background-color: transparent;
+    color: inherit;
+}
+hr{
+    border: 0;
+    border-top: 1px solid #ddd;
+    height: 0;
+    width: 100%;
+    box-sizing: content-box;
+    clear: both;
+}
+select{
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+}
+fieldset{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 0;
+}
 
 
 /*********** Navbar ***********/
@@ -108,6 +133,10 @@ i{
     padding: 5vh 0 5vh 0;
     font-size: 20px;
     cursor: pointer;
+}
+.related-indicators{
+    display: none;
+    width: 100%;
 }
 .category-active{
     background: #666;
@@ -240,11 +269,6 @@ i{
 }
 .toggle-fieldset{
     display: flex;
-}
-label{
-    margin-bottom: 0;
-    font-weight: normal;
-    font-size: 16px;
 }
 
 

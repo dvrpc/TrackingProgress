@@ -492,6 +492,12 @@ fade = () => {
 // reveal all the indicators and categories
 back.onclick = () => {
     grid.style.display = 'flex'
+
+    // clear the side nav of all it's children
+    while(relatedIndicators.firstChild){
+        relatedIndicators.removeChild(relatedIndicators.firstChild)
+    }
+    
     setTimeout(() => {
 
         // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
@@ -511,7 +517,8 @@ back.onclick = () => {
 let hasMap = false
 let hasDataViz = false
 
-getIndicatorSnippet = title => {
+// parameters: title to reference the snippetsRef lookup table, and primary class to generate the side nav
+getIndicatorSnippet = (title, primaryCategory) => {
     
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippetsRef[title].file
@@ -560,13 +567,23 @@ getIndicatorSnippet = title => {
                 })
             }
         })
+
+        // populating the sideNav here ensures that it gets made/remade everytime you get a new indicator snippet
+        // it will be made visible during the setTimer function that gets attached to each indicator. I have no idea if this logic makes any sense...
+        // TBD on if this should be the first thing to happen or if it should happen after. Since the above is async, it's probably better to have it happen "after" cause it could still execute before
+        generateSideNav(primaryCategory)
+
     }
 }
 
 let indicatorTitle;
 
-// apply fade-out transition to each indicator & reveal 'back' button
+// get a handle on the side jawn (do it here for now, will move)
+const relatedIndicators = document.querySelector('.related-indicators')
+
+// apply fade-out transition to each indicator, reveal the 'back' button & populate the new side nav w/related indicators
 indicators.forEach(indicator => indicator.onclick = () => {
+
     fade()
 
     setTimeout(() => {
@@ -575,14 +592,73 @@ indicators.forEach(indicator => indicator.onclick = () => {
         grid.style.display = 'none'
 
         // check for title for now b/c most of the indicator tiles are blank
-        indicator.children.length ? indicatorTitle = indicator.children[0].textContent : null
-        if(indicatorTitle) getIndicatorSnippet(indicatorTitle)
+/*        indicator.children.length ? indicatorTitle = indicator.children[0].textContent : null
+        if(indicatorTitle) getIndicatorSnippet(indicatorTitle)*/
 
-        const indicatorSnippet = document.querySelector('.indicators-snippet')
+        // get the title and primary class of the selected indicator
+        const title = indicator.children.length ? indicatorTitle = indicator.children[0].textContent : null
+        const primaryCategory = indicator.classList[1]
+
         back.style.display = 'block'
+
+        getIndicatorSnippet(title, primaryCategory)
     }
     , 1500)
 })
+
+generateSideNav = primaryCategory => {
+
+    // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
+    indicators.forEach(indicator => {
+
+        if(indicator.classList.contains(primaryCategory)){
+
+            console.log('indicator ', indicator)
+
+            // get a handle on the necessary info (skip dummy data for now...ugh)
+            const linkTitle = indicator.children[0] ? indicator.children[0].textContent : 'fake'
+
+            console.log('linkTitle is ', linkTitle)
+            const primaryCategory = indicator.classList[1]
+
+            //  create a link to the indicator page that will go on the side bar
+            let sideLink = document.createElement('a')
+            sideLink.style.padding = '10% 0'
+
+            // truncate the title where needed
+            let truncatedTitle = linkTitle.length > 7 ? linkTitle.substring(0, 6) + '...' : linkTitle
+            sideLink.textContent = truncatedTitle
+
+            // clicking a link removes the old indicator page, renders the new indicator page & refreshes the sideNav links
+            sideLink.onclick = () => {
+                // clear the current indicator snippet
+                const indicatorDetails = document.querySelector('.indicators-snippet')
+                if(indicatorDetails) indicatorDetails.remove()
+
+                // clear the side nav of all it's children
+                while(relatedIndicators.firstChild){
+                    relatedIndicators.removeChild(relatedIndicators.firstChild)
+                }
+
+                // update with the new snippet which in turn updates the side nav
+                getIndicatorSnippet(linkTitle, primaryCategory)
+            }
+            
+            // add hover effect that immediately triggers and clearly shows the full title for that indicator
+            //sideLink.onmouseover = () => 
+
+            relatedIndicators.appendChild(sideLink)
+        }
+    })
+
+    console.log('related indicators populated with jawns ', relatedIndicators)
+
+    // make sideNav list (which was populated in the getIndicatorSnippet function) visible
+    relatedIndicators.style.display = 'flex'
+    relatedIndicators.style.flexDirection = 'column'
+    relatedIndicators.style.textAlign = 'center'
+    relatedIndicators.style.color = '#f7f7f7'
+}
 
 
 
