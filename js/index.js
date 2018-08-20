@@ -43,6 +43,8 @@ toggleChart = selected => {
         case 'line':
             createLineChart(source)
             break;
+        case 'stacked area':
+            createStackedAreaChart(source)
         default:
             console.log('default')
     }
@@ -486,10 +488,94 @@ const snippetsRef = {
             }
         ]
     },
+    'Educational Attainment': {
+        file: 'educationalAttainment.html',
+        map: false,
+        d3: [
+            {
+                // HS levels 
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/edattainHS.csv',
+                data: [
+                    {
+                        'key': 'Bucks',
+                        'columns': ['year', 'hsRateBucksCo']
+                    },
+                    {
+                        'key': 'Burlington',
+                        'columns': ['year', 'hsRateBurlingtonCo']
+                    },
+                    {
+                        'key': 'Camden',
+                        'columns': ['year', 'hsRateCamdenCo']
+                    },
+                    {
+                        'key': 'Chester',
+                        'columns': ['year', 'hsRateChesterCo']
+                    },
+                    {
+                        'key': 'Delaware',
+                        'columns': ['year', 'hsRateDelawareCo']
+                    },
+                    {
+                        'key': 'Gloucester',
+                        'columns': ['year', 'hsRateGloucesterCo']
+                    },
+                    {
+                        'key': 'Mercer',
+                        'columns': ['year', 'hsRateMercerCo']
+                    },
+                    {
+                        'key': 'Montgomery',
+                        'columns': ['year', 'hsRateMontgomeryCo']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        'columns': ['year', 'hsRatePhiladelphiaCo']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'DVRPC-Graduate/Professional Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'DVRPC-Bachelors Degree']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'DVRPC-Associates Degree']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'DVRPC-Some College']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'DVRPC-Graduated High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'DVRPC-Some High School']
+                    },
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'DVRPC-Less than High School']
+                    }
+                ]
+            }
+        ]
+    },
     'Highway Congestion': {file: 'highwayCongestion.html', map: true, d3: false},
     'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
     'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', map: false, d3: false },
-    'Educational Attainment': {file: 'educationalAttainment.html', map: true, d3: false },
     'Income Inequality': {file: 'incomeInequality.html', map: false, d3: false },
     'Land Preservation': {file: 'landPreservation.html', map: false, d3: false },
     'Population Growth': {file: 'populationGrowth.html', map: true, d3: false},
@@ -573,6 +659,9 @@ getIndicatorSnippet = (title, primaryCategory) => {
                             case 'line':
                                 createLineChart(chart)
                                 break;
+                            case 'stacked area':
+                                createStackedAreaChart(chart)
+                                break;
                             default:
                                 console.log('default')
                         }
@@ -581,9 +670,7 @@ getIndicatorSnippet = (title, primaryCategory) => {
             }
         })
 
-        // populating the sideNav here ensures that it gets made/remade everytime you get a new indicator snippet
-        // it will be made visible during the setTimer function that gets attached to each indicator. I have no idea if this logic makes any sense...
-        // TBD on if this should be the first thing to happen or if it should happen after. Since the above is async, it's probably better to have it happen "after" cause it could still execute before
+        // populating the sideNav here ensures that it gets made/remade everytime you get a new indicator snippet (from within an indicator page or from the dashboard)
         generateSideNav(primaryCategory)
 
     }
@@ -605,6 +692,7 @@ indicators.forEach(indicator => indicator.onclick = () => {
 
         back.style.display = 'block'
 
+        // create the indicator page and populate/refresh the related indicators sideNav
         getIndicatorSnippet(title, primaryCategory)
     }
     , 1500)
@@ -618,21 +706,21 @@ generateSideNav = primaryCategory => {
 
         if(indicator.classList.contains(primaryCategory)){
 
+            //  create a link to the indicator page that will go on the side bar
+            let sideLink = document.createElement('a')
+
             // get a handle on the necessary info (skip dummy data for now...ugh)
             const linkTitle = indicator.children[0] ? indicator.children[0].textContent : 'fake'
             const primaryCategory = indicator.classList[1]
 
-            //  create a link to the indicator page that will go on the side bar
-            let sideLink = document.createElement('a')
+            // update basic info + styling
+            sideLink.textContent = linkTitle
             sideLink.style.padding = '10% 0'
             sideLink.style.cursor = 'pointer'
 
-            // truncate the title where needed
-            let truncatedTitle = linkTitle.length > 7 ? linkTitle.substring(0, 6) + '...' : linkTitle
-            sideLink.textContent = truncatedTitle
-
             // clicking a link removes the old indicator page, renders the new indicator page & refreshes the sideNav links
             sideLink.onclick = () => {
+
                 // clear the current indicator snippet
                 const indicatorDetails = document.querySelector('.indicators-snippet')
                 if(indicatorDetails) indicatorDetails.remove()
@@ -645,13 +733,19 @@ generateSideNav = primaryCategory => {
                 // update with the new snippet which in turn updates the side nav
                 getIndicatorSnippet(linkTitle, primaryCategory)
             }
-            
-            // add hover effect that immediately triggers and clearly shows the full title for that indicator
-            //sideLink.onmouseover = () => 
 
             relatedIndicators.appendChild(sideLink)
         }
     })
+
+    // hover effect
+    relatedIndicators.onmouseover = e => {
+        e.target.style.fontWeight = '700'
+    }
+
+    relatedIndicators.onmouseout = e => {
+        e.target.style.fontWeight = '500'
+    }
 
     // make sideNav list (which was populated in the getIndicatorSnippet function) visible
     relatedIndicators.style.display = 'flex'
@@ -730,6 +824,9 @@ addCircleLayer = id => {
 /************************************************************************************/
 /************************ D3 Content for Indicators *********************************/
 /************************************************************************************/
+
+// @TODO: helper function that spits out container and the source.data empty values array
+
 createStackedBarChart = source => {
 
     // the name of the div containing the svg for d3 to paint on
@@ -759,6 +856,7 @@ createStackedBarChart = source => {
                 .y((d, i) => d[1])
                 // hide controls b/c were not interested in grouped bar (also it gets cluttered on smaller screens to this is a double win)
                 .showControls(false)
+                .forceY(0)
                 .clipEdge(true)
                 .stacked(true)
 
@@ -800,6 +898,7 @@ createLinePlusBarChart = source => {
                 .margin({top: 35, right: 65, bottom: 35, left: 65})
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
+                .forceY(0)
                 .y((d, i) => d[1])
 
 
@@ -851,6 +950,40 @@ createLineChart = source => {
             // format y-axis for large numbers
             chart.yAxis.tickFormat(d3.format(','))
 
+            d3.select(container).datum(source.data).transition().duration(500).call(chart)
+
+            nv.utils.windowResize(chart.update)
+
+            return chart
+        })
+    })
+}
+
+createStackedAreaChart = source => {
+    // the name of the div containing the svg for d3 to paint on
+    const container = `.${source.container} svg`
+
+    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
+    source.data.forEach(series => series.values = [])
+
+    d3.csv(source.dataSource, rows => {
+
+        // extract information from the columns set in the snippetsRef lookup table
+        source.data.forEach(series => {
+            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
+        })
+
+    }, csvObj => {
+
+        nv.addGraph(() => {
+            let chart = nv.models.stackedAreaChart()
+                .margin({top: 35, right: 55, bottom: 35, left: 55})
+                .x(d => d[0])
+                .y(d => d[1])
+                .useInteractiveGuideline(true)
+                .showControls(true)
+                .clipEdge(true)
+    
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
             nv.utils.windowResize(chart.update)
