@@ -137,6 +137,8 @@ i{
 .related-indicators{
     display: none;
     width: 100%;
+    text-align: center;
+    color: #f7f7f7;
 }
 .category-active{
     background: #666;
@@ -250,6 +252,10 @@ i{
 }
 .description-wrapper{
     padding: 3% 0;
+}
+.sideLink{
+    padding: 10% 0;
+    cursor: pointer;
 }
 
 
