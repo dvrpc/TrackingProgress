@@ -35,10 +35,11 @@
 
         <form>
             <fieldset class="toggle-fieldset">
-                <select onchange="toggleChart(this)">
-                    <option value="Air_Quality-1">Ozone</option>
+                <select class="toggle-data-selector">
+                    <!-- value 1 & 2 b/c AQ Yearly is the 0th chart -->
+                    <option value="1">Ozone</option>
 
-                    <option value="Air_Quality-2">PM</option>
+                    <option value="2">PM</option>
                 </select>
             </fieldset>
         </form>

@@ -1,55 +1,8 @@
-// nav interactivity
-/*const nav = document.querySelector('.nav')
-const navLogo = document.querySelector('#nav-logo')
-
-if(nav.offsetTop > 0){
-    console.log('in the nav condition')
-    nav.style.padding = '0 1% 0 1%'
-    navLogo.src = '/img/homepage/logo_small30px.png'
-}*/
-
-
-
-
 /*********************************************************************************/
-/*************************** Helper Functions ************************************/
+/*********************************Imports*****************************************/
 /*********************************************************************************/
-/*const scrollArrow = document.querySelector('.down-arrow')
-scrollArrow.onclick = () => window.scrollTo({
-    top: 825,
-    behavior: 'smooth'
-})*/
-
-// toggle between charts on an indicator page
-toggleChart = selected => {
-
-    // get & isolate the Indicator name and chart # from the selected option
-    let refNames = selected.options[selected.selectedIndex].value.split('-')
-
-    // replace the underscore with a space in order to query the snippetsRef object
-    refNames[0] = refNames[0].replace(/_/g, ' ')
-
-    // get a handle on the correct chart item, baesd on indicator name and chart dataset
-    let source = snippetsRef[refNames[0]].d3[refNames[1]]
-
-    // switch case to determine which kind of vis to make
-    switch (source.type) {
-        case 'line and bar':
-            createLinePlusBarChart(source)
-            break;
-        case 'stacked bar':
-            createStackedBarChart(source)
-            break;
-        case 'line':
-            createLineChart(source)
-            break;
-        case 'stacked area':
-            createStackedAreaChart(source)
-        default:
-            console.log('default')
-    }
-}
-
+import { toggleChart } from './helpers.js'
+import * as graphs from './viz.js'
 
 
 
@@ -64,8 +17,8 @@ const topSoFar = [
         indicator: 'transportation-indicator'
     },
     {
-        name: 'Highway Congestion',
-        indicator: 'transportation-indicator+economy-indicator'
+        name: 'Vehicle Crashes',
+        indicator: 'transportation-indicator+community-indicator+economy-indicator+equity-indicator'
     },
     {
         name: 'Bridge Conditions',
@@ -147,7 +100,7 @@ for(var i = 0; i < 36; i++){
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 // function to display/hide indicators based on which category is clicked
-toggleIndicators = element => {
+const toggleIndicators = element => {
 
     // mark the category as active & remove it from another element (if applicable)
     const allCategories = [... element.parentNode.children]
@@ -542,38 +495,69 @@ const snippetsRef = {
                 dataSource: './data/edattainComprehensive.csv',
                 data: [
                     {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'DVRPC-Graduate/Professional Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'DVRPC-Bachelors Degree']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'DVRPC-Associates Degree']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'DVRPC-Some College']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'DVRPC-Graduated High School']
+                        'key': 'Less than High School',
+                        'columns': ['year', 'DVRPC-Less than High School']
                     },
                     {
                         'key': 'Some High School',
                         'columns': ['year', 'DVRPC-Some High School']
                     },
                     {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'DVRPC-Less than High School']
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'DVRPC-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'DVRPC-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'DVRPC-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'DVRPC-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'DVRPC-Graduate/Professional Degree', 'New Jersey Suburbs-Graduate/Professional Degree']
                     }
                 ]
             }
         ]
     },
-    'Highway Congestion': {file: 'highwayCongestion.html', map: true, d3: false},
+    'Vehicle Crashes': {
+        file: 'vehicleCrashes.html',
+        map: false,
+        d3: [
+        // multichart format: individual data sets need to state their type & axis
+            {
+                type: 'stacked bar plus line',
+                container: 'chart',
+                dataSource: './data/crashesWeb.csv',
+                data: [
+                    {
+                        'key': '5 year avg',
+                        'type': 'line',
+                        'yAxis': 1,
+                        'columns': ['year', 'ksi5yrAvgDVRPC']
+                    },
+                    {
+                        'key': 'Motor Vehicle',
+                        'type': 'bar',
+                        'yAxis': 2,
+                        'columns': ['year', 'ksiMotorVehicleDVRPC']
+                    },
+                    {
+                        'key': 'Bike + Ped',
+                        'type': 'bar',
+                        'yAxis': 2,
+                        'columns': ['year', 'ksiBikePedDVRPC']
+                    }
+                ]
+            }
+        ]
+    },
     'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
     'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', map: false, d3: false },
     'Income Inequality': {file: 'incomeInequality.html', map: false, d3: false },
@@ -584,7 +568,7 @@ const snippetsRef = {
 }
 
 // fade/slide out elements
-fade = () => {
+const fade = () => {
     grid.classList.add('fade-right')
     indicatorsNav.classList.add('fade-narrow')
     categories.forEach(category => category.classList.add('fade-out'))
@@ -617,7 +601,7 @@ back.onclick = () => {
 }
 
 // parameters: title to reference the snippetsRef lookup table, and primary class to generate the side nav
-getIndicatorSnippet = (title, primaryCategory) => {
+const getIndicatorSnippet = (title, primaryCategory) => {
     
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippetsRef[title].file
@@ -646,21 +630,28 @@ getIndicatorSnippet = (title, primaryCategory) => {
 
             if(hasDataViz){
 
+                // apply toggle functionality to all togglable elements in the snippet
+                const dataToggles = document.querySelectorAll('.toggle-data-selector')
+                if(dataToggles) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz, graphs))
+
                 // loop through each chart option & call the appropriate d3 function on it
                 hasDataViz.forEach(chart => {
                     if(!chart.secondary){
                         switch (chart.type) {
                             case 'line and bar':
-                                createLinePlusBarChart(chart)
+                                graphs.createLinePlusBarChart(chart)
                                 break;
                             case 'stacked bar':
-                                createStackedBarChart(chart)
+                                graphs.createStackedBarChart(chart)
                                 break;
                             case 'line':
-                                createLineChart(chart)
+                                graphs.createLineChart(chart)
                                 break;
                             case 'stacked area':
-                                createStackedAreaChart(chart)
+                                graphs.createStackedAreaChart(chart)
+                                break;
+                            case 'stacked bar plus line':
+                                graphs.createdStackedBarPlusLine(chart)
                                 break;
                             default:
                                 console.log('default')
@@ -699,7 +690,7 @@ indicators.forEach(indicator => indicator.onclick = () => {
 })
 
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
-generateSideNav = primaryCategory => {
+const generateSideNav = primaryCategory => {
 
     // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
     indicators.forEach(indicator => {
@@ -752,243 +743,4 @@ generateSideNav = primaryCategory => {
     relatedIndicators.style.flexDirection = 'column'
     relatedIndicators.style.textAlign = 'center'
     relatedIndicators.style.color = '#f7f7f7'
-}
-
-
-
-
-/*************************************************************************************/
-/************************ Map Content for Indicators *********************************/
-/*************************************************************************************/
-generateMap = (container, geoJSON) => {
-    mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
-
-    const map = new mapboxgl.Map({
-        container: container,
-        style: 'mapbox://styles/mapbox/outdoors-v9',
-        attributionControl: true,
-        // DVRPC center but add a || geoJSON.center or whatever to center it according to the project geometry
-        center: [-75.2273, 40.071],
-        zoom: 8.82
-    })
-
-    // create helper functions map types (fill, circle)
-        // need some kind of identifier in the response object to determine what kind of layer to add 
-    if(geoJSON){
-        // add base source (?) 
-        map.addSource('', {
-            type: 'geojson',
-            data: geoJSON
-        })
-
-        switch(geoJSON.layerType) {
-            case 'fill':
-                map.addLayer(addFillLayer(geoJSON))
-                break
-            case 'circle':
-                map.addLayer(addCircleLayer(geoJSON))
-                break
-            default:
-                console.log('wut wut wut')
-        }
-    }
-}
-
-addFillLayer = id => {
-    return {
-        'id': id,
-        type: 'fill',
-        source: id,
-        'paint': {
-            'fill-color': '#6fb8b9',
-            'fill-opacity': 0.7
-        }
-    }
-}
-
-addCircleLayer = id => {
-    return {
-        'id': id,
-        'type': 'circle',
-        'source': id,
-        'paint': {
-            'circle-color': '#B6C1C6',
-            'circle-opacity': 0.7
-        }
-    }
-}
-
-
-
-
-/************************************************************************************/
-/************************ D3 Content for Indicators *********************************/
-/************************************************************************************/
-
-// @TODO: helper function that spits out container and the source.data empty values array
-
-createStackedBarChart = source => {
-
-    // the name of the div containing the svg for d3 to paint on
-    const container = `.${source.container} svg`
-
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
-
-    d3.csv(source.dataSource, rows => {
-
-        // create a values field based on the desired column as defined in the reference object
-        source.data.forEach(series => {
-            series.values.push([rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]])
-        })
-
-    }, csvObj => {
-
-        // errors are coming from x-time being improperly converted.
-        // see here: https://stackoverflow.com/questions/19459687/understanding-nvd3-x-axis-date-format
-        // for how to (possibly) resolve, and change up chart.xAxis on line 407. 
-
-        nv.addGraph(() => {
-            let chart = nv.models.multiBarChart()
-                .margin({top: 35, right: 55, bottom: 35, left: 55})
-                // each series has format [year, values] so set the axes accordingly
-                .x(d => d[0])
-                .y((d, i) => d[1])
-                // hide controls b/c were not interested in grouped bar (also it gets cluttered on smaller screens to this is a double win)
-                .showControls(false)
-                .forceY(0)
-                .clipEdge(true)
-                .stacked(true)
-
-            // dates coming in as mm/dd/yyyy
-            chart.xAxis.tickFormat(d => d3.time.format('%d %b %Y')(new Date(d)));
-    
-            d3.select(container).datum(source.data).transition().duration(500).call(chart)
-
-            nv.utils.windowResize(chart.update)
-
-            return chart
-        })
-    })
-}
-
-createLinePlusBarChart = source => {
-
-    // the name of the div containing the svg for d3 to paint on
-    const container = `.${source.container} svg`
-
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
-
-    // extract the column names
-    let barSource = source.data[0].columns
-    let lineSource = source.data[1].columns
-
-    d3.csv(source.dataSource, rows => {
-
-        source.data[0].values.push([+rows[barSource[0]], +rows[barSource[1]]])
-        source.data[1].values.push([+rows[lineSource[0]], rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]] ])
-
-    }, csvObj => {
-
-        nv.addGraph(() => {
-            let chart = nv.models.linePlusBarChart()
-                // for some reason, setting left margin to 0 cuts off the axis a little bit (???) so some left margin + container offset hack will be 
-                // needed to get this to center correctly
-                .margin({top: 35, right: 65, bottom: 35, left: 65})
-                // each series has format [year, values] so set the axes accordingly
-                .x(d => d[0])
-                .forceY(0)
-                .y((d, i) => d[1])
-
-
-            /*
-                The current data set just has days violating so they don't need notation, but future datasets may have values of $ or % or degrees or whatever, so 
-                there will eventually be a need to implement some kind of parameter that sets the axes to the correct label. But that's a future problem
-
-            chart.y1Axis.tickFormat(d3.format(',f'));
-
-            chart.y2Axis.tickFormat(function(d) { return '$' + d3.format(',f')(d) });
-            */
-
-            d3.select(container).datum(source.data).transition().duration(500).call(chart)
-
-            nv.utils.windowResize(chart.update)
-
-            return chart
-        })
-    })
-}
-
-createLineChart = source => {
-
-    // the name of the div containing the svg for d3 to paint on
-    const container = `.${source.container} svg`
-
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
-
-    d3.csv(source.dataSource, rows => {
-
-        // extract information from the columns set in the snippetsRef lookup table
-        source.data.forEach(series => {
-            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
-        })
-
-    }, csvObj => {
-
-        nv.addGraph(() => {
-            let chart = nv.models.lineChart()
-                .margin({top: 35, right: 65, bottom: 35, left: 85})
-                .useInteractiveGuideline(true)
-                .showYAxis(true)
-                .clipEdge(false)
-                .forceY(0)
-                .x(d => d[0])
-                .y((d, i) => d[1])
-
-            // format y-axis for large numbers
-            chart.yAxis.tickFormat(d3.format(','))
-
-            d3.select(container).datum(source.data).transition().duration(500).call(chart)
-
-            nv.utils.windowResize(chart.update)
-
-            return chart
-        })
-    })
-}
-
-createStackedAreaChart = source => {
-    // the name of the div containing the svg for d3 to paint on
-    const container = `.${source.container} svg`
-
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
-
-    d3.csv(source.dataSource, rows => {
-
-        // extract information from the columns set in the snippetsRef lookup table
-        source.data.forEach(series => {
-            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
-        })
-
-    }, csvObj => {
-
-        nv.addGraph(() => {
-            let chart = nv.models.stackedAreaChart()
-                .margin({top: 35, right: 55, bottom: 35, left: 55})
-                .x(d => d[0])
-                .y(d => d[1])
-                .useInteractiveGuideline(true)
-                .showControls(true)
-                .clipEdge(true)
-    
-            d3.select(container).datum(source.data).transition().duration(500).call(chart)
-
-            nv.utils.windowResize(chart.update)
-
-            return chart
-        })
-    })
 }
