@@ -104,12 +104,12 @@ i{
 
 /*********** Indicator Dashboard ***********/
 .indicators-wrapper{
-    border-top: 10px solid #121212;
-    border-bottom: 10px solid #121212;
+    border-top: 10px solid #333;
+    border-bottom: 10px solid #333;
     position: relative;
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 20px);
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -165,7 +165,7 @@ i{
     position: absolute;
     height: 100%;
     width: 80%;
-    background: #666;
+    background: #b4b4b4;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -180,7 +180,7 @@ i{
     margin: 1%;
     height: 14%;
     width: 14%;
-    background: #F1E9DB;
+    background: #f7f7f7;
 }
 .indicators-grid-item:hover{
     cursor: pointer;
@@ -196,7 +196,7 @@ i{
     width: 100%;
     height: 35%;
     text-align: center;
-    color: #fff;
+    color: #f7f7f7;
     background: #333;
 }
 

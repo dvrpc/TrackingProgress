@@ -11,7 +11,6 @@ const categories = [... document.querySelectorAll('.icon-set')]
 const back = document.querySelector('.back-to-dash')
 const indicatorsNav = document.querySelector('.indicators-nav')
 const relatedIndicators = document.querySelector('.related-indicators')
-let newIndicator = false;
 const topSoFar = [
     {
         name: 'Vehicle Miles Traveled',
@@ -122,33 +121,41 @@ indicators.forEach(indicator => indicator.onclick = () => {
         // create the indicator page and populate/refresh the related indicators sideNav
         const sideNavParams = [indicators, relatedIndicators, primaryCategory]
         getIndicatorSnippet(grid, snippet, graphs, sideNavParams)
+        generateSideNav(indicators, relatedIndicators, primaryCategory)
     }
     , 1500)
 })
 
-// clicking a link removes the old indicator page, renders the new indicator page & refreshes the sideNav links
-// @TODO: putting sideLinks on click here is probably the best solution, just need a to trigger this everytime a new indicator page gets created...
-let sideLinks = document.querySelectorAll('.sideLinks')
-console.log('side links ', sideLinks)
-sideLinks.forEach(sideLink => {
-    sideLink.onclick = () => {
+// use a mutation observer to attach click handlers every time the sideLinks container div gets updated
+const mutationConfig = {childList: true}
 
-        // clear the current indicator snippet
-        const indicatorDetails = document.querySelector('.indicators-snippet')
-        if(indicatorDetails) indicatorDetails.remove()
+const updateLinks = () => {
+    const sideLinks = document.querySelectorAll('.sideLink')
 
-        // clear the side nav of all it's children
-        while(relatedIndicators.firstChild){
-            relatedIndicators.removeChild(relatedIndicators.firstChild)
+    sideLinks.forEach(sideLink => {
+        sideLink.onclick = () => {
+
+            const snippetTitle = sideLink.textContent
+            const snippet = snippetsRef[snippetTitle]
+            const primaryCategory = sideLink.classList[1]
+
+            // clear the current indicator snippet
+            const indicatorDetails = document.querySelector('.indicators-snippet')
+            if(indicatorDetails) indicatorDetails.remove()
+
+            // clear the side nav of all it's children
+            while(relatedIndicators.firstChild){
+                relatedIndicators.removeChild(relatedIndicators.firstChild)
+            }
+
+            getIndicatorSnippet(grid, snippet, graphs)
+            generateSideNav(indicators, relatedIndicators, primaryCategory)
         }
+    })
+}
 
-        // update with the new snippet which in turn updates the side nav
-
-        //@ TODO: back to square one. Updating indicatorSnippets from within the scope of this is h-a-r-d.
-            // previously attempted to assign the sideLink onclick elsewhere but that didn't work
-        getIndicatorSnippet(grid, snippet, graphs)
-    }
-})
+const observer = new MutationObserver(updateLinks)
+observer.observe(relatedIndicators, mutationConfig)
 
 // return to dashboard view
 back.onclick = () => {

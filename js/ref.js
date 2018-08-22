@@ -1,4 +1,3 @@
-// reference to the snippets for quick access during fetch ( move to outside of this file eventually)
 const snippetsRef = {
     'Air Quality': {
         file: 'airQuality.html',
@@ -369,7 +368,403 @@ const snippetsRef = {
                     },
                     {
                         'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'DVRPC-Graduate/Professional Degree', 'New Jersey Suburbs-Graduate/Professional Degree']
+                        'columns': ['year', 'DVRPC-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Philadelphia Subregion-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Philadelphia Subregion-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Philadelphia Subregion-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Philadelphia Subregion-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Philadelphia Subregion-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Philadelphia Subregion-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Philadelphia Subregion-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'New Jersey Suburbs-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'New Jersey Suburbs-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'New Jersey Suburbs-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'New Jersey Suburbs-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'New Jersey Suburbs-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'New Jersey Suburbs-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'New Jersey Suburbs-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Pennsylvania Suburbs-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Pennsylvania Suburbs-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Pennsylvania Suburbs-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Pennsylvania Suburbs-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Pennsylvania Suburbs-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Pennsylvania Suburbs-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Pennsylvania Suburbs-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Bucks-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Bucks-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Bucks-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Bucks-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Bucks-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Bucks-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Bucks-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Burlington-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Burlington-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Burlington-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Burlington-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Burlington-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Burlington-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Burlington-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Camden-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Camden-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Camden-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Camden-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Camden-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Camden-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Camden-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Chester-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Chester-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Chester-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Chester-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Chester-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Chester-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Chester-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Delaware-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Delaware-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Delaware-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Delaware-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Delaware-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Delaware-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Delaware-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Gloucester-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Gloucester-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Gloucester-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Gloucester-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Gloucester-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Gloucester-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Gloucester-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Mercer-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Mercer-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Mercer-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Mercer-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Mercer-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Mercer-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Mercer-Graduate/Professional Degree']
+                    }
+                ]
+            },
+            {
+                type: 'stacked area',
+                container: 'chart2',
+                secondary: true,
+                dataSource: './data/edattainComprehensive.csv',
+                data: [
+                    {
+                        'key': 'Less than High School',
+                        'columns': ['year', 'Montgomery-Less than High School']
+                    },
+                    {
+                        'key': 'Some High School',
+                        'columns': ['year', 'Montgomery-Some High School']
+                    },
+                    {
+                        'key': 'Graduated High School',
+                        'columns': ['year', 'Montgomery-Graduated High School']
+                    },
+                    {
+                        'key': 'Some College',
+                        'columns': ['year', 'Montgomery-Some College']
+                    },
+                    {
+                        'key': "Associate's Degree",
+                        'columns': ['year', 'Montgomery-Associates Degree']
+                    },
+                    {
+                        'key': "Bachelor's Degree",
+                        'columns': ['year', 'Montgomery-Bachelors Degree']
+                    },
+                    {
+                        'key': 'Graduate/Professional Degree',
+                        'columns': ['year', 'Montgomery-Graduate/Professional Degree']
                     }
                 ]
             }

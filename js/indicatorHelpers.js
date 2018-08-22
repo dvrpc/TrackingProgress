@@ -92,11 +92,6 @@ const getIndicatorSnippet = (grid, snippet, graphs, sideNavParams) => {
                 })
             }
         })
-
-        // populating the sideNav here ensures that it gets made/remade everytime you get a new indicator snippet (from within an indicator page or from the dashboard)
-        generateSideNav(...sideNavParams)
-
-        return true
     }
 }
 
@@ -113,11 +108,12 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 
             // get a handle on the necessary info (skip dummy data for now...ugh)
             const linkTitle = indicator.children[0] ? indicator.children[0].textContent : 'fake'
-            const primaryCategory = indicator.classList[1]
+            const indicatorPrimaryCategory = indicator.classList[1]
 
             // update basic info + styling
             sideLink.textContent = linkTitle
             sideLink.classList.add('sideLink')
+            sideLink.classList.add(indicatorPrimaryCategory)
 
             relatedIndicators.appendChild(sideLink)
         }

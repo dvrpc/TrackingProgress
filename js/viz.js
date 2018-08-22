@@ -183,7 +183,16 @@ const createdStackedBarPlusLine = source => {
         // extract information from the columns set in the snippetsRef lookup table
             // @ TODO: accept columns of length > 2
         source.data.forEach(series => {
-            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
+            // multi-chart wants each entry in the values array to be an object, not an array like all the other functions...
+            // from the documentation & jsFiddle, it seems like this is the exact object nvd3 is expecting but I still only get axes w/blank chart. 
+            // replacing null with 0 doesn't fix it
+            // also doesn't work when the object is only {x, y} w/type and yAxis coming from the parent. This is so stupid. 
+            series.values.push({ 
+                x: +rows[series.columns[0]], 
+                y: rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]],
+                type: series.type,
+                yAxis: series.yAxis
+            })
         })
 
     }, csvObj => {
