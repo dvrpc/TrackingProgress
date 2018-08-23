@@ -183,27 +183,23 @@ const createdStackedBarPlusLine = source => {
         // extract information from the columns set in the snippetsRef lookup table
             // @ TODO: accept columns of length > 2
         source.data.forEach(series => {
-            // multi-chart wants each entry in the values array to be an object, not an array like all the other functions...
-            // from the documentation & jsFiddle, it seems like this is the exact object nvd3 is expecting but I still only get axes w/blank chart. 
-            // replacing null with 0 doesn't fix it
-            // also doesn't work when the object is only {x, y} w/type and yAxis coming from the parent. This is so stupid. 
             series.values.push({ 
                 x: +rows[series.columns[0]], 
-                y: rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]],
-                type: series.type,
-                yAxis: series.yAxis
+                y: rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
             })
         })
 
     }, csvObj => {
 
-        console.log('processed data ', source.data)
-
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
                 .margin({top: 35, right: 55, bottom: 35, left: 55})
-                .x(d => d[0])
-                .y((d, i) => d[1])
+                // hard coding max values for now. @TODO: calculate max and use that as the upper bound. Do this for every viz type
+                .yDomain1([0, 2000])
+                .yDomain2([0, 2000])
+
+            chart.bars1.stacked(true)
+            chart.bars2.stacked(true)
 
             chart.yAxis1.tickFormat(d3.format(','))
             chart.yAxis2.tickFormat(d3.format(','))

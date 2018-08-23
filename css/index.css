@@ -104,8 +104,8 @@ i{
 
 /*********** Indicator Dashboard ***********/
 .indicators-wrapper{
-    border-top: 10px solid #333;
-    border-bottom: 10px solid #333;
+    border-top: 10px solid #141414;
+    border-bottom: 10px solid #141414;
     position: relative;
     display: flex;
     width: 100%;
@@ -121,7 +121,7 @@ i{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: #333;
+    background: #141414;
     transition: width 1.4s;
     transition-timing-function: linear;
 }
@@ -197,7 +197,7 @@ i{
     height: 35%;
     text-align: center;
     color: #f7f7f7;
-    background: #333;
+    background: #141414;
 }
 
 
@@ -225,7 +225,7 @@ i{
     overflow-y: auto;
 }
 .indicator-header{
-    color: #333;
+    color: #141414;
     margin: 2% 0 0 0;
 }
 .indicator-content-hr{
@@ -233,7 +233,7 @@ i{
 }
 .indicator-subheader{
     text-align: center;
-    color: #333;
+    color: #141414;
 }
 .indicator-header-hr{
     margin: 1% 0;
@@ -248,7 +248,7 @@ i{
 }
 .indicator-description{
     line-height: 1.6;
-    color: #333;
+    color: #141414;
 }
 .description-wrapper{
     padding: 3% 0;
@@ -261,7 +261,7 @@ i{
 
 /*********** Togglabe Elements **********/
 .toggle-subheader{
-    border-right: 2px solid #333;
+    border-right: 2px solid #141414;
     padding-right: 1%;
 }
 .toggle-wrapper{

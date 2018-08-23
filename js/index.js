@@ -72,7 +72,7 @@ for(var i = 0; i < 36; i++){
         if(classes.length > 1){
             classes.forEach(className => gridItem.classList.add(className))
         }else{
-            gridItem.classList.add(topSoFar.indicator)
+            gridItem.classList.add(classes[0])
         }
 
         const title = document.createElement('p')
