@@ -145,7 +145,10 @@ const createStackedAreaChart = source => {
 
         // extract information from the columns set in the snippetsRef lookup table
         source.data.forEach(series => {
-            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
+            series.values.push([
+                +rows[series.columns[0]],
+                rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
+            ])
         })
 
     }, csvObj => {
@@ -184,7 +187,7 @@ const createdStackedBarPlusLine = source => {
             // @ TODO: accept columns of length > 2
         source.data.forEach(series => {
             series.values.push({ 
-                x: +rows[series.columns[0]], 
+                x: +rows[series.columns[0]],
                 y: rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
             })
         })

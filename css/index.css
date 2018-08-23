@@ -125,21 +125,6 @@ i{
     transition: width 1.4s;
     transition-timing-function: linear;
 }
-.back-to-dash{
-    color: #f7f7f7;
-    display: none;
-    width: 100%;
-    text-align: center;
-    padding-top: 1vh;
-    font-size: 20px;
-    cursor: pointer;
-}
-.related-indicators{
-    display: none;
-    width: 100%;
-    text-align: center;
-    color: #f7f7f7;
-}
 .category-active{
     background: #666;
     font-weight: 800;
@@ -177,14 +162,19 @@ i{
 }
 .indicators-grid-item{
     position: relative;
+    border-radius: 3px;
     margin: 1%;
     height: 14%;
     width: 14%;
     background: #f7f7f7;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
 .indicators-grid-item:hover{
     cursor: pointer;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7);
+}
+.indicators-grid-item:active{
+    box-shadow: none;
 }
 .indicators-title{
     display: flex;
@@ -198,6 +188,8 @@ i{
     text-align: center;
     color: #f7f7f7;
     background: #141414;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px
 }
 
 
@@ -253,9 +245,29 @@ i{
 .description-wrapper{
     padding: 3% 0;
 }
+.back-to-dash{
+    color: #f7f7f7;
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 1vh;
+    font-size: 20px;
+    cursor: pointer;
+}
+.related-indicators{
+    display: none;
+    border-top: 1px solid #f7f7f7;
+    width: 100%;
+    text-align: center;
+    color: #f7f7f7;
+}
 .sideLink{
     padding: 10% 0;
     cursor: pointer;
+    color: #f7f7f7;
+}
+.sideLink:hover{
+    color: #75b8c8;
 }
 
 

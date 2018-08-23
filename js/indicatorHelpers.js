@@ -119,10 +119,6 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
         }
     })
 
-    // hover effect
-    relatedIndicators.onmouseover = e => e.target.style.fontWeight = '700'
-    relatedIndicators.onmouseout = e => e.target.style.fontWeight = '500'
-
     // make sideNav list (which was populated in the getIndicatorSnippet function) visible
     relatedIndicators.style.display = 'flex'
     relatedIndicators.style.flexDirection = 'column'

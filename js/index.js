@@ -21,16 +21,20 @@ const topSoFar = [
         indicator: 'transportation-indicator+community-indicator+economy-indicator+equity-indicator'
     },
     {
+        name: 'Educational Attainment',
+        indicator: 'community-indicator+economy-indicator+equity-indicator'
+    },
+    {
+        name: 'Air Quality',
+        indicator: 'environment-indicator+community-indicator+equity-indicator'
+    },
+    {
         name: 'Bridge Conditions',
         indicator: 'transportation-indicator+economy-indicator'
     },
     {
         name: 'non-SOV Mode Share',
         indicator: 'environment-indicator+community-indicator+transportation-indicator'
-    },
-    {
-        name: 'Educational Attainment',
-        indicator: 'community-indicator+economy-indicator+equity-indicator'
     },
     {
         name: 'Income Inequality',
@@ -43,10 +47,6 @@ const topSoFar = [
     {
         name: 'Population Growth',
         indicator: 'environment-indicator+community-indicator+economy-indicator'
-    },
-    {
-        name: 'Air Quality',
-        indicator: 'environment-indicator+community-indicator+equity-indicator'
     },
     {
         name: 'Affordable Housing',
