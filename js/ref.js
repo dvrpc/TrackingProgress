@@ -779,6 +779,46 @@ const snippetsRef = {
                 type: 'stacked bar plus line',
                 container: 'chart',
                 dataSource: './data/crashesWeb.csv',
+                // add a field here that is an array of possible y values & keys
+                /* ex:
+
+                toggleVals: [
+                    {
+                        key: 'the seires name',
+                        columns: ['ksi5yrAvgDVRPC', 'ksiMotorVehicleDVRPC', 'ksiBikePedDVRPC']
+                    },
+                    {
+                        key: 'other series name',
+                        columns: ['ksi5yrAvgPhillySubregion', 'ksiMotorVehiclePhillySubregion', 'ksiBikePedPhillySubregion']
+                    }
+                ]
+
+                Result: 1 data array for a togglable chart + as many toggleVals objects as there are options.
+                    gain: type, container, dataSource, yAxis & other things don't need to be repeated but objects for key and columns still need
+                    to be made for each togglable jawn. Performance/size gain might be worth it, but readability gain would be big.
+                    // @TODO: talk to people better at optimizing this kind of shit & revisit the problem.
+
+                use the # <option> value to query which array in yValues should be mapped to data below.
+                Those values will be pushed into the columns array, which will contain the common jawn ('year', in this case)
+                This avoids having to create massive massive objects for each toggle chart - just one data array for the whole chart
+                and a series of yVals to plug in depending on which <option> is selected 
+                    
+                    pseudocode from within the d3 function doesn't change. Default will be hard coded
+
+                    pseudocode (from within toggleJanws):
+                        let chartNumber = selected.options[selected.selectedIndex].value
+                        
+                        // get the data set
+                        let source = dataSets[chartNumber]
+                        
+                        // get the correct key and columns object for that dataset
+                        let newKeyAndColumns = source.toggleVals[chartNumber]
+
+                        source.data.forEach(series => series.key = newKeyAndColumns.key, series.columns = newKeyAndColumns.columns)
+
+                HOW TO: handle pages w/multiple togglabe graphs:
+                    give the selector an id IndicatorName-#. Use that number to query which object within snippetsRef[title].d3 to query
+                */
                 data: [
                     {
                         'key': '5 year avg',
@@ -797,6 +837,32 @@ const snippetsRef = {
                         'type': 'bar',
                         'yAxis': 2,
                         'columns': ['year', 'ksiBikePedDVRPC']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar plus line',
+                container: 'chart',
+                secondary: true,
+                dataSource: './data/crashesWeb.csv',
+                data: [
+                    {
+                        'key': '5 year avg',
+                        'type': 'line',
+                        'yAxis': 1,
+                        'columns': ['year', 'ksi5yrAvgPhillySubregion']
+                    },
+                    {
+                        'key': 'Motor Vehicle',
+                        'type': 'bar',
+                        'yAxis': 2,
+                        'columns': ['year', 'ksiMotorVehiclePhillySubregion']
+                    },
+                    {
+                        'key': 'Bike + Ped',
+                        'type': 'bar',
+                        'yAxis': 2,
+                        'columns': ['year', 'ksiBikePedPhillySubregion']
                     }
                 ]
             }

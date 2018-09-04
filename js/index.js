@@ -1,6 +1,6 @@
 import snippetsRef from './ref.js'
 import { toggleIndicators, fade } from './dashboardHelpers.js'
-import { toggleChart, getIndicatorSnippet, generateSideNav } from './indicatorHelpers.js'
+import { getIndicatorSnippet, generateSideNav } from './indicatorHelpers.js'
 import * as graphs from './viz.js'
 
 // get a handle on the dashboard elements
@@ -11,86 +11,20 @@ const categories = [... document.querySelectorAll('.icon-set')]
 const back = document.querySelector('.back-to-dash')
 const indicatorsNav = document.querySelector('.indicators-nav')
 const relatedIndicators = document.querySelector('.related-indicators')
-const topSoFar = [
-    {
-        name: 'Vehicle Miles Traveled',
-        indicator: 'transportation-indicator'
-    },
-    {
-        name: 'Vehicle Crashes',
-        indicator: 'transportation-indicator+community-indicator+economy-indicator+equity-indicator'
-    },
-    {
-        name: 'Educational Attainment',
-        indicator: 'community-indicator+economy-indicator+equity-indicator'
-    },
-    {
-        name: 'Air Quality',
-        indicator: 'environment-indicator+community-indicator+equity-indicator'
-    },
-    {
-        name: 'Bridge Conditions',
-        indicator: 'transportation-indicator+economy-indicator'
-    },
-    {
-        name: 'non-SOV Mode Share',
-        indicator: 'environment-indicator+community-indicator+transportation-indicator'
-    },
-    {
-        name: 'Income Inequality',
-        indicator: 'community-indicator+economy-indicator+equity-indicator'
-    },
-    {
-        name: 'Land Preservation',
-        indicator: 'community-indicator+environment-indicator+transportation-indicator'
-    },
-    {
-        name: 'Population Growth',
-        indicator: 'environment-indicator+community-indicator+economy-indicator'
-    },
-    {
-        name: 'Affordable Housing',
-        indicator: 'community-indicator+economy-indicator+equity-indicator'
-    },
-    {
-        name: 'Transit Conditions',
-        indicator: 'economy-indicator+transportation-indicator'
-    }
-]
 
-// dummy data to loop thru and create 36 sub grids
-for(var i = 0; i < 36; i++){
+
+// dummy data to loop thru and create the remaining 25 sub-grids
+for(var i = 0; i < 24; i++){
     let gridItem = document.createElement('div')
     gridItem.classList.add('indicators-grid-item')
+     
+    if(i >= 0 && i < 5) gridItem.classList.add('economy-indicator')
+    if(i >= 5 && i < 10) gridItem.classList.add('environment-indicator')
+    if(i >= 10 && i < 15) gridItem.classList.add('community-indicator')
+    if(i >= 15 && i < 20) gridItem.classList.add('transportation-indicator')
+    if(i >= 20) gridItem.classList.add('equity-indicator')
 
-    if(topSoFar[i]) {
-
-        // add all the necessary indicator classes to it
-        let classes = topSoFar[i].indicator.split('+')
-        
-        // loop thru each one if there are multiple
-        if(classes.length > 1){
-            classes.forEach(className => gridItem.classList.add(className))
-        }else{
-            gridItem.classList.add(classes[0])
-        }
-
-        const title = document.createElement('p')
-        title.classList.add('indicators-title')
-        title.textContent = topSoFar[i].name
-        gridItem.appendChild(title)
-        grid.appendChild(gridItem)
-
-    // make up the rest since I only have partial data for 11 indicators so far.
-    // this dummy data situation is getting out of hand
-    }else{     
-        if(i >= 11 && i < 16) gridItem.classList.add('economy-indicator')
-        if(i >= 16 && i < 21) gridItem.classList.add('environment-indicator')
-        if(i >= 21 && i < 26) gridItem.classList.add('community-indicator')
-        if(i >= 26 && i < 31) gridItem.classList.add('transportation-indicator')
-        if(i >= 31) gridItem.classList.add('equity-indicator')
-        grid.appendChild(gridItem)
-    }
+    grid.appendChild(gridItem)
 }
 
 // get a handle on each indicator after they've been generated ^
@@ -112,7 +46,7 @@ indicators.forEach(indicator => indicator.onclick = () => {
         grid.style.display = 'none'
 
         // get the title and primary class of the selected indicator
-        let title = indicator.children.length ? indicator.children[0].textContent : null
+        let title = indicator.children.length ? indicator.children[1].textContent : null
         const primaryCategory = indicator.classList[1]
         snippet = snippetsRef[title]
 

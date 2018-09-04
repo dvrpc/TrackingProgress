@@ -1,11 +1,13 @@
 // toggle between charts on an indicator page
-const toggleChart = (selected, indicatorName, graphs) => {
+const toggleChart = (selected, dataSets, graphs) => {
+
+    console.log('indicator name ', dataSets)
 
     // get chart # from the selected option
     let chartNumber = selected.options[selected.selectedIndex].value
 
     // get a handle on the correct chart item
-    let source = indicatorName[chartNumber]
+    let source = dataSets[chartNumber]
 
     // switch case to determine which kind of vis to make
     switch (source.type) {
@@ -107,7 +109,7 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
             let sideLink = document.createElement('a')
 
             // get a handle on the necessary info (skip dummy data for now...ugh)
-            const linkTitle = indicator.children[0] ? indicator.children[0].textContent : 'fake'
+            const linkTitle = indicator.children[1] ? indicator.children[1].textContent : 'fake'
             const indicatorPrimaryCategory = indicator.classList[1]
 
             // update basic info + styling
@@ -124,4 +126,4 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
     relatedIndicators.style.flexDirection = 'column'
 }
 
-export {toggleChart, getIndicatorSnippet, generateSideNav}
+export {getIndicatorSnippet, generateSideNav}
