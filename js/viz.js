@@ -67,14 +67,10 @@ const createLinePlusBarChart = source => {
 
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
-                // for some reason, setting left margin to 0 cuts off the axis a little bit (???) so some left margin + container offset hack will be 
-                // needed to get this to center correctly
                 .margin({top: 35, right: 65, bottom: 35, left: 65})
-                // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .forceY(0)
                 .y((d, i) => d[1])
-
 
             /*
                 The current data set just has days violating so they don't need notation, but future datasets may have values of $ or % or degrees or whatever, so 

@@ -272,6 +272,75 @@ const snippetsRef = {
                         'columns': ['year', 'ksiBikePedDVRPC']
                     }
                 ]
+            },
+            {
+                type: 'stacked bar plus line',
+                container: 'chart2',
+                dataSource: './data/crashesWeb.csv',
+                columnOptions: [
+                    ['ksiPerCap5yrAvgDVRPC', 'ksiMotorVehiclePerCapDVRPC', 'ksiBikePedPerCapDVRPC'],
+                    ['ksiPerCap5yrAvgPhillySubregion', 'ksiMotorVehiclePerCapPhillySubregion', 'ksiBikePedPerCapPhillySubregion'],
+                    ['ksiPerCap5yrAvgNJSubregion', 'ksiMotorVehiclePerCapNJSubregion', 'ksiBikePedPerCapNJSubregion'],
+                    ['ksiPerCap5yrAvgPASubregion', 'ksiMotorVehiclePerCapPASubregion', 'ksiBikePedPerCapPASubregion'],
+                    ['ksiPerCap5yrAvgBucksCo', 'ksiMotorVehiclePerCapBucksCo', 'ksiBikePedPerCapBucksCo'],
+                    ['ksiPerCap5yrAvgChesterCo', 'ksiMotorVehiclePerCapChesterCo', 'ksiBikePedPerCapChesterCo'],
+                    ['ksiPerCap5yrAvgDelawareCo', 'ksiMotorVehiclePerCapDelawareCo', 'ksiBikePedPerCapDelawareCo'],
+                    ['ksiPerCap5yrAvgMontgomeryCo', 'ksiMotorVehiclePerCapMontgomeryCo', 'ksiBikePedPerCapMontgomeryCo'],
+                    ['ksiPerCap5yrAvgBurlingtonCo', 'ksiMotorVehiclePerCapBurlingtonCo', 'ksiBikePedPerCapBurlingtonCo'],
+                    ['ksiPerCap5yrAvgCamdenCo', 'ksiMotorVehiclePerCapCamdenCo', 'ksiBikePedPerCapCamdenCo'],
+                    ['ksiPerCap5yrAvgGloucesterCo', 'ksiMotorVehiclePerCapGloucesterCo', 'ksiBikePedPerCapGloucesterCo'],
+                    ['ksiPerCap5yrAvgMercerCo', 'ksiMotorVehiclePerCapMercerCo', 'ksiBikePedPerCapMercerCo']
+                ],
+                data: [
+                    {
+                        'key': '5 year avg',
+                        'type': 'line',
+                        'yAxis': 1,
+                        'columns': ['year', 'ksiPerCap5yrAvgDVRPC']
+                    },
+                    {
+                        'key': 'Motor Vehicle',
+                        'type': 'bar',
+                        'yAxis': 2,
+                        'columns': ['year', 'ksiMotorVehiclePerCapDVRPC']
+                    },
+                    {
+                        'key': 'Bike + Ped',
+                        'type': 'bar',
+                        'yAxis': 2,
+                        'columns': ['year', 'ksiBikePedPerCapDVRPC']
+                    }
+                ]
+            },
+            {
+                type: 'line and bar',
+                container: 'chart3',
+                dataSource: './data/crashesWeb.csv',
+                columnOptions: [
+                    ['ksiPerVMT5yrAvgDVRPC', 'ksiPerVMTDVRPC'],
+                    ['ksiPerVMT5yrAvgPhillySubregion', 'ksiPerVMTPhillySubregion'],
+                    ['ksiPerVMT5yrAvgNJSubregion', 'ksiPerVMTNJSubregion'],
+                    ['ksiPerVMT5yrAvgPASubregion', 'ksiPerVMTPASubregion'],
+                    ['ksiPerVMT5yrAvgBucksCo', 'ksiPerVMTBucksCo'],
+                    ['ksiPerVMT5yrAvgChesterCo', 'ksiPerVMTChesterCo'],
+                    ['ksiPerVMT5yrAvgDelawareCo', 'ksiPerVMTDelawareCo'],
+                    ['ksiPerVMT5yrAvgMontgomeryCo', 'ksiPerVMTMontgomeryCo'],
+                    ['ksiPerVMT5yrAvgBurlingtonCo', 'ksiPerVMTBurlingtonCo'],
+                    ['ksiPerVMT5yrAvgCamdenCo', 'ksiPerVMTCamdenCo'],
+                    ['ksiPerVMT5yrAvgGloucesterCo', 'ksiPerVMTGloucesterCo'],
+                    ['ksiPerVMT5yrAvgMercerCo', 'ksiPerVMTMercerCo']
+                ],
+                data: [
+                    {
+                        'key': '5 year avg',
+                        'columns': ['year', 'ksiPerVMT5yrAvgDVRPC']
+                    },
+                    {
+                        'key': 'Total KSI',
+                        'bar': true,
+                        'columns': ['year', 'ksiPerVMTDVRPC']
+                    }
+                ]
             }
         ]
     },

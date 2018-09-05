@@ -51,6 +51,7 @@ indicators.forEach(indicator => indicator.onclick = () => {
         snippet = snippetsRef[title]
 
         back.style.display = 'block'
+        indicatorsNav.style.justifyContent = 'flex-start'
 
         // create the indicator page and populate/refresh the related indicators sideNav
         const sideNavParams = [indicators, relatedIndicators, primaryCategory]
@@ -94,6 +95,7 @@ observer.observe(relatedIndicators, mutationConfig)
 // return to dashboard view
 back.onclick = () => {
     grid.style.display = 'flex'
+    indicatorsNav.style.justifyContent = 'space-between'
 
     // clear the relatedIndicators div of all it's children
     while(relatedIndicators.firstChild){
