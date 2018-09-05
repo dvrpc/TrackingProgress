@@ -1,13 +1,20 @@
 // toggle between charts on an indicator page
 const toggleChart = (selected, dataSets, graphs) => {
 
-    console.log('indicator name ', dataSets)
+    // get the correct dataSet based on the selector id
+    let setNumber = parseInt(selected.id.split('-')[1])
 
     // get chart # from the selected option
-    let chartNumber = selected.options[selected.selectedIndex].value
+    let chartNumber = parseInt(selected.options[selected.selectedIndex].value)
 
-    // get a handle on the correct chart item
-    let source = dataSets[chartNumber]
+    // get a handle on the names of the new columns to read from
+    let newColumns = dataSets[setNumber].columnOptions[chartNumber]
+
+    // replace the y-axis columns with the newly selected columns 
+    dataSets[setNumber].data.forEach((series, index) => series.columns[1] = newColumns[index])
+
+    // source is the correct dataset with updated column names
+    const source = dataSets[setNumber]
 
     // switch case to determine which kind of vis to make
     switch (source.type) {
@@ -30,6 +37,7 @@ const toggleChart = (selected, dataSets, graphs) => {
             console.log('default')
     }
 }
+
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
 const getIndicatorSnippet = (grid, snippet, graphs, sideNavParams) => {
@@ -64,32 +72,30 @@ const getIndicatorSnippet = (grid, snippet, graphs, sideNavParams) => {
 
             if(hasDataViz){
 
-                // apply toggle functionality to all togglable elements in the snippet
+                // apply toggle functionality to all togglable elements in the snippet, if they exist
                 const dataToggles = document.querySelectorAll('.toggle-data-selector')
                 if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz, graphs))
 
                 // loop through each chart option & call the appropriate d3 function on it
                 hasDataViz.forEach(chart => {
-                    if(!chart.secondary){
-                        switch (chart.type) {
-                            case 'line and bar':
-                                graphs.createLinePlusBarChart(chart)
-                                break;
-                            case 'stacked bar':
-                                graphs.createStackedBarChart(chart)
-                                break;
-                            case 'line':
-                                graphs.createLineChart(chart)
-                                break;
-                            case 'stacked area':
-                                graphs.createStackedAreaChart(chart)
-                                break;
-                            case 'stacked bar plus line':
-                                graphs.createdStackedBarPlusLine(chart)
-                                break;
-                            default:
-                                console.log('default')
-                        }
+                    switch (chart.type) {
+                        case 'line and bar':
+                            graphs.createLinePlusBarChart(chart)
+                            break;
+                        case 'stacked bar':
+                            graphs.createStackedBarChart(chart)
+                            break;
+                        case 'line':
+                            graphs.createLineChart(chart)
+                            break;
+                        case 'stacked area':
+                            graphs.createStackedAreaChart(chart)
+                            break;
+                        case 'stacked bar plus line':
+                            graphs.createdStackedBarPlusLine(chart)
+                            break;
+                        default:
+                            console.log('default')
                     }
                 })
             }

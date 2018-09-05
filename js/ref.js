@@ -25,10 +25,14 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: './data/aq_quarterly.csv',
+                columnOptions: [
+                    ['unhealthySensitiveOzone', 'unhealthyOzone', 'veryUnhealthyOzone'],
+                    ['unhealthySensitivePM', 'unhealthyPM', 'veryUnhealthyPM']
+                ],
                 data: [
                     {
                         'key' : 'Unhealthy Sensitive Ozone',
-                        'color': 'de425b',
+                        'color': '#de425b',
                         'columns': ['quarterYear', 'unhealthySensitiveOzone'],
                     },
                     {
@@ -43,29 +47,6 @@ const snippetsRef = {
                     }
                 ]
             },
-            {
-                type: 'stacked bar',
-                secondary: true,
-                container: 'chart2',
-                dataSource: './data/aq_quarterly.csv',
-                data: [
-                    {
-                        'key' : 'Unhealthy Sensitive PM',
-                        'color': 'de425b',
-                        'columns': ['quarterYear', 'unhealthySensitivePM'],
-                    },
-                    {
-                        'key': 'Unhealthy PM',
-                        'color': '#b62a38',
-                        'columns': ['quarterYear', 'unhealthyPM'],
-                    },
-                    {
-                        'key': 'Very Unhealthy PM',
-                        'color': '#750000',
-                        'columns': ['quarterYear', 'veryUnhealthyPM'],
-                    }
-                ]
-            }
         ]
     },
     'Vehicle Miles Traveled': {
@@ -77,6 +58,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/vmtWeb.csv',
+                columnOptions: [
+                    ['vmtPerCapDVRPC', 'vmtPerCapNJSuburbs', 'vmtPerCapPASuburbs', 'vmtPerCapPhillySubregion', 'vmtPerCapBucksCo', 'vmtPerCapChesterCo', 'vmtPerCapDelawareCo', 'vmtPerCapMontgomeryCo', 'vmtPerCapPhillyCo', 'vmtPerCapBurlingtonCo', 'vmtPerCapCamdenCo', 'vmtPerCapGloucesterCo', 'vmtPerCapMercerCo'],
+                    ['vmtDVRPC', 'vmtNJSuburbs', 'vmtPASuburbs', 'vmtPhillySubregion', 'vmtBucksCo', 'vmtChesterCo', 'vmtDelawareCo', 'vmtMontgomeryCo', 'vmtPhillyCo', 'vmtBurlingtonCo', 'vmtCamdenCo', 'vmtGloucesterCo', 'vmtMercerCo'],
+                    ['vmtPerVehicleDVRPC', 'vmtPerVehicleNJSuburbs', 'vmtPerVehiclePASuburbs', 'vmtPerVehiclePhillySubregion', 'vmtPerVehicleBucksCo', 'vmtPerVehicleChesterCo', 'vmtPerVehicleDelawareCo', 'vmtPerVehicleMontgomeryCo', 'vmtPerVehiclePhillyCo', 'vmtPerVehicleBurlingtonCo', 'vmtPerVehicleCamdenCo', 'vmtPerVehicleGloucesterCo', 'vmtPerVehicleMercerCo']
+                ],
                 data: [
                     {
                         'key' : 'DVRPC Region',
@@ -143,150 +129,6 @@ const snippetsRef = {
                     }
                 ]
             },
-            {
-                // Total VMT
-                type: 'line',
-                secondary: true,
-                container: 'chart',
-                dataSource: './data/vmtWeb.csv',
-                data: [
-                    {
-                        'key' : 'DVRPC Region',
-                        'columns': ['year', 'vmtDVRPC']
-                    },
-                    {
-                        'key' : 'NJ Suburbs',
-                        'disabled': true,
-                        'columns': ['year', 'vmtNJSuburbs']
-                    },
-                    {
-                        'key' : 'PA Suburbs',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPASuburbs']
-                    },
-                    {
-                        'key' : 'Philadelphia Subregion',
-                        'columns': ['year', 'vmtPhillySubregion']
-                    },
-                    {
-                        'key' : 'Bucks Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtBucksCo']
-                    },
-                    {
-                        'key' : 'Chester Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtChesterCo']
-                    },
-                    {
-                        'key' : 'Delaware Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtDelawareCo']
-                    },
-                    {
-                        'key' : 'Montgomery Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtMontgomeryCo']
-                    },
-                    {
-                        'key' : 'Philadelphia Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPhillyCo']
-                    },
-                    {
-                        'key' : 'Burlington Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtBurlingtonCo']
-                    },
-                    {
-                        'key' : 'Camden Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtCamdenCo']
-                    },
-                    {
-                        'key' : 'Gloucester Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtGloucesterCo']
-                    },
-                    {
-                        'key' : 'Mercer Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtMercerCo']
-                    }
-                ]
-            },
-            {
-                // VMT/Vehicle
-                type: 'line',
-                secondary: true,
-                container: 'chart',
-                dataSource: './data/vmtWeb.csv',
-                data: [
-                    {
-                        'key' : 'DVRPC Region',
-                        'columns': ['year', 'vmtPerVehicleDVRPC']
-                    },
-                    {
-                        'key' : 'NJ Suburbs',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehicleNJSuburbs']
-                    },
-                    {
-                        'key' : 'PA Suburbs',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehiclePASuburbs']
-                    },
-                    {
-                        'key' : 'Philadelphia Subregion',
-                        'columns': ['year', 'vmtPerVehiclePhillySubregion']
-                    },
-                    {
-                        'key' : 'Bucks Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehicleBucksCo']
-                    },
-                    {
-                        'key' : 'Chester Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehicleChesterCo']
-                    },
-                    {
-                        'key' : 'Delaware Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehicleDelawareCo']
-                    },
-                    {
-                        'key' : 'Montgomery Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehicleMontgomeryCo']
-                    },
-                    {
-                        'key' : 'Philadelphia Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehiclePhillyCo']
-                    },
-                    {
-                        'key' : 'Burlington Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehicleBurlingtonCo']
-                    },
-                    {
-                        'key' : 'Camden Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehicleCamdenCo']
-                    },
-                    {
-                        'key' : 'Gloucester Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehicleGloucesterCo']
-                    },
-                    {
-                        'key' : 'Mercer Co',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerVehicleMercerCo']
-                    }
-                ]
-            }
         ]
     },
     'Educational Attainment': {
@@ -341,6 +183,20 @@ const snippetsRef = {
                 type: 'stacked area',
                 container: 'chart2',
                 dataSource: './data/edattainComprehensive.csv',
+                columnOptions: [
+                    ['DVRPC-Less than High School', 'DVRPC-Some High School', 'DVRPC-Graduated High School', 'DVRPC-Some College', 'DVRPC-Associates Degree', 'DVRPC-Bachelors Degree', 'DVRPC-Graduate/Professional Degree'],
+                    ['Philadelphia Subregion-Less than High School', 'Philadelphia Subregion-Some High School', 'Philadelphia Subregion-Graduated High School', 'Philadelphia Subregion-Some College', 'Philadelphia Subregion-Associates Degree', 'Philadelphia Subregion-Bachelors Degree', 'Philadelphia Subregion-Graduate/Professional Degree'],
+                    ['New Jersey Suburbs-Less than High School', 'New Jersey Suburbs-Some High School', 'New Jersey Suburbs-Graduated High School', 'New Jersey Suburbs-Some College', 'New Jersey Suburbs-Associates Degree', 'New Jersey Suburbs-Bachelors Degree', 'New Jersey Suburbs-Graduate/Professional Degree'],
+                    ['Pennsylvania Suburbs-Less than High School', 'Pennsylvania Suburbs-Some High School', 'Pennsylvania Suburbs-Graduated High School', 'Pennsylvania Suburbs-Some College', 'Pennsylvania Suburbs-Associates Degree', 'Pennsylvania Suburbs-Bachelors Degree', 'Pennsylvania Suburbs-Graduate/Professional Degree'],
+                    ['Bucks-Less than High School', 'Bucks-Some High School', 'Bucks-Graduated High School', 'Bucks-Some College', 'Bucks-Associates Degree', 'Bucks-Bachelors Degree', 'Bucks-Graduate/Professional Degree'],
+                    ['Burlington-Less than High School', 'Burlington-Some High School', 'Burlington-Graduated High School', 'Burlington-Some College', 'Burlington-Associates Degree', 'Burlington-Bachelors Degree', 'Burlington-Graduate/Professional Degree'],
+                    ['Camden-Less than High School', 'Camden-Some High School', 'Camden-Graduated High School', 'Camden-Some College', 'Camden-Associates Degree', 'Camden-Bachelors Degree', 'Camden-Graduate/Professional Degree'],
+                    ['Chester-Less than High School', 'Chester-Some High School', 'Chester-Graduated High School', 'Chester-Some College', 'Chester-Associates Degree', 'Chester-Bachelors Degree', 'Chester-Graduate/Professional Degree'],
+                    ['Delaware-Less than High School', 'Delaware-Some High School', 'Delaware-Graduated High School', 'Delaware-Some College', 'Delaware-Associates Degree', 'Delaware-Bachelors Degree', 'Delaware-Graduate/Professional Degree'],
+                    ['Gloucester-Less than High School', 'Gloucester-Some High School', 'Gloucester-Graduated High School', 'Gloucester-Some College', 'Gloucester-Associates Degree', 'Gloucester-Bachelors Degree', 'Gloucester-Graduate/Professional Degree'],
+                    ['Mercer-Less than High School', 'Mercer-Some High School', 'Mercer-Graduated High School', 'Mercer-Some College', 'Mercer-Associates Degree', 'Mercer-Bachelors Degree', 'Mercer-Graduate/Professional Degree'],
+                    ['Montgomery-Less than High School', 'Montgomery-Some High School', 'Montgomery-Graduated High School', 'Montgomery-Some College', 'Montgomery-Associates Degree', 'Montgomery-Bachelors Degree', 'Montgomery-Graduate/Professional Degree']
+                ],
                 data: [
                     {
                         'key': 'Less than High School',
@@ -371,402 +227,6 @@ const snippetsRef = {
                         'columns': ['year', 'DVRPC-Graduate/Professional Degree']
                     }
                 ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Philadelphia Subregion-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Philadelphia Subregion-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Philadelphia Subregion-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Philadelphia Subregion-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Philadelphia Subregion-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Philadelphia Subregion-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Philadelphia Subregion-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'New Jersey Suburbs-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'New Jersey Suburbs-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'New Jersey Suburbs-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'New Jersey Suburbs-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'New Jersey Suburbs-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'New Jersey Suburbs-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'New Jersey Suburbs-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Pennsylvania Suburbs-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Pennsylvania Suburbs-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Pennsylvania Suburbs-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Pennsylvania Suburbs-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Pennsylvania Suburbs-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Pennsylvania Suburbs-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Pennsylvania Suburbs-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Bucks-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Bucks-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Bucks-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Bucks-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Bucks-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Bucks-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Bucks-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Burlington-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Burlington-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Burlington-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Burlington-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Burlington-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Burlington-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Burlington-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Camden-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Camden-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Camden-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Camden-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Camden-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Camden-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Camden-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Chester-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Chester-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Chester-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Chester-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Chester-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Chester-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Chester-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Delaware-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Delaware-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Delaware-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Delaware-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Delaware-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Delaware-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Delaware-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Gloucester-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Gloucester-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Gloucester-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Gloucester-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Gloucester-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Gloucester-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Gloucester-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Mercer-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Mercer-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Mercer-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Mercer-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Mercer-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Mercer-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Mercer-Graduate/Professional Degree']
-                    }
-                ]
-            },
-            {
-                type: 'stacked area',
-                container: 'chart2',
-                secondary: true,
-                dataSource: './data/edattainComprehensive.csv',
-                data: [
-                    {
-                        'key': 'Less than High School',
-                        'columns': ['year', 'Montgomery-Less than High School']
-                    },
-                    {
-                        'key': 'Some High School',
-                        'columns': ['year', 'Montgomery-Some High School']
-                    },
-                    {
-                        'key': 'Graduated High School',
-                        'columns': ['year', 'Montgomery-Graduated High School']
-                    },
-                    {
-                        'key': 'Some College',
-                        'columns': ['year', 'Montgomery-Some College']
-                    },
-                    {
-                        'key': "Associate's Degree",
-                        'columns': ['year', 'Montgomery-Associates Degree']
-                    },
-                    {
-                        'key': "Bachelor's Degree",
-                        'columns': ['year', 'Montgomery-Bachelors Degree']
-                    },
-                    {
-                        'key': 'Graduate/Professional Degree',
-                        'columns': ['year', 'Montgomery-Graduate/Professional Degree']
-                    }
-                ]
             }
         ]
     },
@@ -774,51 +234,24 @@ const snippetsRef = {
         file: 'vehicleCrashes.html',
         map: false,
         d3: [
-        // multichart format: individual data sets need to state their type & axis
             {
                 type: 'stacked bar plus line',
                 container: 'chart',
                 dataSource: './data/crashesWeb.csv',
-                // add a field here that is an array of possible y values & keys
-                /* ex:
-
-                toggleVals: [
-                    {
-                        key: 'the seires name',
-                        columns: ['ksi5yrAvgDVRPC', 'ksiMotorVehicleDVRPC', 'ksiBikePedDVRPC']
-                    },
-                    {
-                        key: 'other series name',
-                        columns: ['ksi5yrAvgPhillySubregion', 'ksiMotorVehiclePhillySubregion', 'ksiBikePedPhillySubregion']
-                    }
-                ]
-
-                Result: 1 data array for a togglable chart + as many toggleVals objects as there are options.
-                    gain: type, container, dataSource, yAxis & other things don't need to be repeated but objects for key and columns still need
-                    to be made for each togglable jawn. Performance/size gain might be worth it, but readability gain would be big.
-                    // @TODO: talk to people better at optimizing this kind of shit & revisit the problem.
-
-                use the # <option> value to query which array in yValues should be mapped to data below.
-                Those values will be pushed into the columns array, which will contain the common jawn ('year', in this case)
-                This avoids having to create massive massive objects for each toggle chart - just one data array for the whole chart
-                and a series of yVals to plug in depending on which <option> is selected 
-                    
-                    pseudocode from within the d3 function doesn't change. Default will be hard coded
-
-                    pseudocode (from within toggleJanws):
-                        let chartNumber = selected.options[selected.selectedIndex].value
-                        
-                        // get the data set
-                        let source = dataSets[chartNumber]
-                        
-                        // get the correct key and columns object for that dataset
-                        let newKeyAndColumns = source.toggleVals[chartNumber]
-
-                        source.data.forEach(series => series.key = newKeyAndColumns.key, series.columns = newKeyAndColumns.columns)
-
-                HOW TO: handle pages w/multiple togglabe graphs:
-                    give the selector an id IndicatorName-#. Use that number to query which object within snippetsRef[title].d3 to query
-                */
+                columnOptions: [
+                    ['ksi5yrAvgDVRPC', 'ksiMotorVehicleDVRPC', 'ksiBikePedDVRPC'],
+                    ['ksi5yrAvgPhillySubregion', 'ksiMotorVehiclePhillySubregion', 'ksiBikePedPhillySubregion'],
+                    ['ksi5yrAvgNJSubregion', 'ksiMotorVehicleNJSubregion', 'ksiBikePedNJSubregion'],
+                    ['ksi5yrAvgPASubregion', 'ksiMotorVehiclePASubregion', 'ksiBikePedPASubregion'],
+                    ['ksi5yrAvgBucksCo', 'ksiMotorVehicleBucksCo', 'ksiBikePedBucksCo'],
+                    ['ksi5yrAvgChesterCo', 'ksiMotorVehicleChesterCo', 'ksiBikePedChesterCo'],
+                    ['ksi5yrAvgDelawareCo', 'ksiMotorVehicleDelawareCo', 'ksiBikePedDelawareCo'],
+                    ['ksi5yrAvgMontgomeryCo', 'ksiMotorVehicleMontgomeryCo', 'ksiBikePedMontgomeryCo'],
+                    ['ksi5yrAvgBurlingtonCo', 'ksiMotorVehicleBurlingtonCo', 'ksiBikePedBurlingtonCo'],
+                    ['ksi5yrAvgCamdenCo', 'ksiMotorVehicleCamdenCo', 'ksiBikePedCamdenCo'],
+                    ['ksi5yrAvgGloucesterCo', 'ksiMotorVehicleGloucesterCo', 'ksiBikePedGloucesterCo'],
+                    ['ksi5yrAvgMercerCo', 'ksiMotorVehicleMercerCo', 'ksiBikePedMercerCo']
+                ],
                 data: [
                     {
                         'key': '5 year avg',
@@ -837,32 +270,6 @@ const snippetsRef = {
                         'type': 'bar',
                         'yAxis': 2,
                         'columns': ['year', 'ksiBikePedDVRPC']
-                    }
-                ]
-            },
-            {
-                type: 'stacked bar plus line',
-                container: 'chart',
-                secondary: true,
-                dataSource: './data/crashesWeb.csv',
-                data: [
-                    {
-                        'key': '5 year avg',
-                        'type': 'line',
-                        'yAxis': 1,
-                        'columns': ['year', 'ksi5yrAvgPhillySubregion']
-                    },
-                    {
-                        'key': 'Motor Vehicle',
-                        'type': 'bar',
-                        'yAxis': 2,
-                        'columns': ['year', 'ksiMotorVehiclePhillySubregion']
-                    },
-                    {
-                        'key': 'Bike + Ped',
-                        'type': 'bar',
-                        'yAxis': 2,
-                        'columns': ['year', 'ksiBikePedPhillySubregion']
                     }
                 ]
             }
