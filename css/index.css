@@ -63,7 +63,7 @@ nav h1 span{
     position: relative;
     display: flex;
     width: 100%;
-    min-height: calc(92vh - 10px);
+    min-height: calc(92vh - 8px);
     border-bottom: 8px solid white;
 /*    overflow-y: auto;
     overflow-x: hidden;*/
