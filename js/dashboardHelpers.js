@@ -4,7 +4,6 @@ let clickedRef;
 // function to display/hide indicators based on which category is clicked
 const toggleIndicators = (element, indicators) => {
 
-
     // mark the category as active & remove it from another element (if applicable)
     const allCategories = [... element.parentNode.children]
 
@@ -24,12 +23,12 @@ const toggleIndicators = (element, indicators) => {
         // category already clicked & user clicks another one --> filters to just the new categories indicators
         // category already clicked & user clicks it again  --> show all indicators
     if(clickedRef === element){
-        indicators.forEach(indicator => indicator.classList.remove('hidden'))
+        indicators.forEach(indicator => indicator.classList.remove('inactive'))
         clickedRef = ''
     }else{    
         indicators.forEach(indicator => {
-            if(!indicator.classList.contains(category)) indicator.classList.add('hidden')
-            else indicator.classList.remove('hidden')
+            if(!indicator.classList.contains(category)) indicator.classList.add('inactive')
+            else indicator.classList.remove('inactive')
         })
         clickedRef = element
     }

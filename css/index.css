@@ -8,6 +8,10 @@ body{
 .hidden{
     display: none;
 }
+.inactive{
+    opacity: 0.5;
+    cursor: auto;
+}
 /*The following are taken from subpage.css*/
 a{
     background-color: transparent;
@@ -37,105 +41,55 @@ fieldset{
 
 /*********** Navbar ***********/
 nav{
-    position: fixed;
-    width: 100%;
-    z-index: 15;
-    padding: 1% 180px 1% 180px;
+    width: 95%;
+    margin: 0 auto;
+    height: 8vh;
+    padding: 0 3%;
     background: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 4px rgba(0,0,0,.175);
 }
-nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    width: 50%;
-    list-style-type: none;
+nav h1{
+    font-weight: 100;
 }
-nav ul li{
-    margin: 0 1% 0 1%;
+nav h1 span{
+    font-weight: 800;
 }
-#navInput{
-    border-radius: 3px;
-    outline: none;
-}
-
-
-
-/*********** Intro Bit ***********/
-#title{
-    margin: 0;
-    padding: 3%;
-    background: #f7f7f7;
-    color: #3E6990;
-}
-.lead{
-    padding: 0 3% 3% 3%;
-    line-height: 1.7;
-}
-i{
-    border: solid #151515;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 20px;
-    margin-bottom: 6%;
-    margin-left: 92%;
-}
-.down-arrow{
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -webkit-box-shadow: 3px 3px 4px -0.5px rgba(0,0,0,0.6);
-    -moz-box-shadow: 3px 3px 4px -0.5px rgba(0,0,0,0.6);
-    box-shadow: 3px 3px 4px -0.5px rgba(0,0,0,0.6);
-}
-.down-arrow:hover{
-    cursor: pointer;
-}
-.down-arrow:active{
-    margin-top: 3px;
-    margin-bottom: calc(6% - 3px);
-    box-shadow: none;
-}
-
 
 
 /*********** Indicator Dashboard ***********/
 .indicators-wrapper{
-/*    border-top: 5px solid #141414;
-    border-bottom: 5px solid #141414;*/
     position: relative;
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(92vh - 10px);
+    border-bottom: 8px solid white;
 /*    overflow-y: auto;
     overflow-x: hidden;*/
 }
 .indicators-nav{
     position: absolute;
     height: 100%;
-    width: 20%;
-    box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.6);
+    width: 15%;
     z-index: 50;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background: #141414;
     transition: width 1.4s;
     transition-timing-function: linear;
 }
 .category-active{
-    background: #666;
-    font-weight: 800;
+    margin-right: 0 !important;
 }
 .icon-set{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    margin-bottom: 8px;
+    margin-right: 8px;
     height: 20%;
     text-align: center;
     opacity: 1;
@@ -143,37 +97,46 @@ i{
     transition: opacity 1.4s, visibility 1.4s;
     transition-timing-function: linear;
 }
+.icon-set:last-child{
+    margin-bottom: none;
+}
 #economy-icon{
-    background: #bd2556;
+    background: rgba(189,64,37,0.6);
 }
 #environment-icon{
-    background: #7b9d3e;
+    background: rgba(123,157,62,0.6);
 }
 #community-icon{
-    background: #006ba6;
+    background: rgba(0,107,166,0.6);
 }
 #transportation-icon{
-    background: #de6e1d;
+    background: rgba(222,110,29,0.6);
 }
+/*because .indicators-nav:last-child isn't working, for some reason*/
 #equity-icon{
-    background: #582267;
+    background: rgba(88,34,103,0.6);
+    margin-bottom: 0;
 }
 .icon-set img{
     align-self: center;
-    height: 55%;
-    width: 55%;
+    height: 40%;
+    width: 40%;
+    border-radius: 50%;
 }
 .icon-set:hover{
     cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    border-bottom: hidden;
 }
 .icon-set p{
-    margin: 0;
-    color: #f7f7f7;
+    margin: 3% 0 0 0;
+    font-size: 1.3rem;
+    color: #fff;
 }
 .indicators-grid{
     position: absolute;
     height: 100%;
-    width: 80%;
+    width: 85%;
     background: #b4b4b4;
     display: flex;
     flex-wrap: wrap;
@@ -181,7 +144,7 @@ i{
     align-content: center;
     overflow-y: auto;
     opacity: 1;
-    margin-left: 20%;
+    margin-left: 15%;
     transition: opacity 1.4s, margin-left 1.4s;
     transition-timing-function: linear;
 }
@@ -218,8 +181,7 @@ i{
     width: 100%;
     height: 35%;
     text-align: center;
-    color: #f7f7f7;
-    background: #141414;
+    color: #333;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px
 }
@@ -237,6 +199,7 @@ i{
 }
 .fade-narrow{
     width: 10%;
+    background: #141414;
 }
 
 
