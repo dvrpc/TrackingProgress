@@ -38,7 +38,6 @@ const toggleChart = (selected, dataSets, graphs) => {
     }
 }
 
-
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
 const getIndicatorSnippet = (grid, snippet, graphs, sideNavParams) => {
     let hasMap;

@@ -1,5 +1,5 @@
 import snippetsRef from './ref.js'
-import { toggleIndicators, fade } from './dashboardHelpers.js'
+import { toggleIndicators, fade, setIndicatorDimensions } from './dashboardHelpers.js'
 import { getIndicatorSnippet, generateSideNav } from './indicatorHelpers.js'
 import * as graphs from './viz.js'
 
@@ -14,7 +14,7 @@ const relatedIndicators = document.querySelector('.related-indicators')
 
 
 // dummy data to loop thru and create the remaining 25 sub-grids
-for(var i = 0; i < 24; i++){
+for(var i = 0; i < 23; i++){
     let gridItem = document.createElement('div')
     gridItem.classList.add('indicators-grid-item')
      
@@ -34,32 +34,41 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 categories.forEach(category => category.onclick = () => toggleIndicators(category, indicators))
 
 // apply fade-out transition to each indicator, reveal the 'back' button & populate the new side nav w/related indicators
-indicators.forEach(indicator => indicator.onclick = () => {
+indicators.forEach(indicator => {
+    
+    // make sure indicators are always square
+    setIndicatorDimensions(indicator)
 
-    let snippet;
+    indicator.onclick = () => {
 
-    fade(grid, indicatorsNav, categories)
+        let snippet;
 
-    setTimeout(() => {
+        fade(grid, indicatorsNav, categories)
 
-        // after the transition is done, display: none to remove DOM space
-        grid.style.display = 'none'
+        setTimeout(() => {
 
-        // get the title and primary class of the selected indicator
-        let title = indicator.children.length ? indicator.children[1].textContent : null
-        const primaryCategory = indicator.classList[1]
-        snippet = snippetsRef[title]
+            // after the transition is done, display: none to remove DOM space
+            grid.style.display = 'none'
 
-        back.style.display = 'block'
-        indicatorsNav.style.justifyContent = 'flex-start'
+            // get the title and primary class of the selected indicator
+            let title = indicator.children.length ? indicator.children[1].textContent : null
+            const primaryCategory = indicator.classList[1]
+            snippet = snippetsRef[title]
 
-        // create the indicator page and populate/refresh the related indicators sideNav
-        const sideNavParams = [indicators, relatedIndicators, primaryCategory]
-        getIndicatorSnippet(grid, snippet, graphs, sideNavParams)
-        generateSideNav(indicators, relatedIndicators, primaryCategory)
+            back.style.display = 'block'
+            indicatorsNav.style.justifyContent = 'flex-start'
+
+            // create the indicator page and populate/refresh the related indicators sideNav
+            const sideNavParams = [indicators, relatedIndicators, primaryCategory]
+            getIndicatorSnippet(grid, snippet, graphs, sideNavParams)
+            generateSideNav(indicators, relatedIndicators, primaryCategory)
+        }
+        , 1500)
     }
-    , 1500)
 })
+
+// update indicator tiles on window resize
+window.onresize = () => (indicators.forEach(indicator => setIndicatorDimensions(indicator)))
 
 // use a mutation observer to attach click handlers every time the sideLinks container div gets updated
 const mutationConfig = {childList: true}

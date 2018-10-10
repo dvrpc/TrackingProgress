@@ -71,7 +71,7 @@ nav h1 span{
 .indicators-nav{
     position: absolute;
     height: 100%;
-    width: 15%;
+    width: 15vw;
     z-index: 50;
     display: flex;
     flex-direction: column;
@@ -143,16 +143,13 @@ nav h1 span{
     justify-content: center;
     overflow-y: auto;
     opacity: 1;
-    margin-left: 15%;
+    margin-left: 15vw;
     transition: opacity 1.4s, margin-left 1.4s;
     transition-timing-function: linear;
 }
 .indicators-grid-item{
     position: relative;
     border-radius: 3px;
-    margin: 1%;
-    height: 11vw;
-    width: 12vw;
     background: #f7f7f7;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
@@ -326,32 +323,30 @@ footer{
 
 
 /*********** Media Queries ***********/
-@media all and (max-width: 900px){
-    .indicators-grid-item{
-        height: 15vh;
-        width: 15vh;
-    }
-}
 @media all and (max-width: 800px){
+    /* Mobile styles for nav */
+    nav h1{
+        font-size: 1rem;
+    }
     /* Mobile styles for the dashboard page */
     .indicators-wrapper{
         flex-direction: column;
     }
     .indicators-nav{
+        height: 9vh;
         position: sticky;
+        top: 0;
         width: 100%;
         flex-direction: row;
-    }
-    .indicators-grid-item{
-        height: 10vh;
-        width: 10vh;
+        justify-content: center;
     }
     .indicators-title{
         font-size: 0.7rem;
     }
     .icon-set{
         height: 100%;
-        width: calc(20% - 8px);
+        width: calc(20% - 3px);
+        margin-right: 4px
     }
     .icon-set p{
         font-size: 0.8rem;
@@ -361,7 +356,7 @@ footer{
         margin-bottom: 8px;
     }
     .category-active:not(#equity-icon){
-        margin-right: 8px !important;
+        margin-right: 4px !important;
     }
     .category-active{
         margin-bottom: 0 !important;
@@ -373,9 +368,8 @@ footer{
     }
 
     /* Mobile styles for the indicator subpages */
-    .indicators-snippet{
-        padding: 0 3%;
-        margin: 0 auto;
+    .fade-out{
+        display: none;
     }
     .fade-narrow{
         height: 8vh;
@@ -383,12 +377,38 @@ footer{
     }
     .back-to-dash{
         width: auto;
-        padding: 0 1%;
+        padding: 0 1vw;
         border-right: 1px solid white;
+        font-size: 1rem;
     }
     .related-indicators{
-        flex-direction: row;
-        padding-left: 1%;
+        border-top: none;
+        font-size: 0.8rem;
+        flex-direction: row !important;
         justify-content: space-around;
+        align-items: center;
+        padding: 0 2vw;
+        overflow-x: scroll;
+    }
+    .sideLink{
+        padding: 0 2vw;
+    }
+    .indicators-snippet{
+        width: auto;
+        padding: 0 3%;
+        margin: 0 auto;
+    }
+    .indicator-header{
+        padding-top: 3%;
+        font-size: 1.3rem;
+    }
+    .snippet-categories{
+        height: 30px;
+    }
+    .indicator-subheader{
+        font-size: 1.1rem;
+    }
+    .toggle-wrapper p{
+        font-size: 0.8rem;
     }
 }
