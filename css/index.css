@@ -141,7 +141,6 @@ nav h1 span{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
     overflow-y: auto;
     opacity: 1;
     margin-left: 15%;
@@ -152,8 +151,8 @@ nav h1 span{
     position: relative;
     border-radius: 3px;
     margin: 1%;
-    height: 14%;
-    width: 14%;
+    height: 11vw;
+    width: 12vw;
     background: #f7f7f7;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
 }
@@ -206,8 +205,9 @@ nav h1 span{
 
 /*********** Indicator Pages ***********/
 .indicators-snippet{
+    background: #f7f7f7;
     /*3% is the intended margin, add 10 for the width of the sidebar*/
-    margin-left: 13%;
+    padding-left: 13%;
     width: 100%;
     overflow-y: auto;
 }
@@ -328,10 +328,67 @@ footer{
 /*********** Media Queries ***********/
 @media all and (max-width: 900px){
     .indicators-grid-item{
-        height: 23%;
-        width: 23%;
+        height: 15vh;
+        width: 15vh;
     }
 }
 @media all and (max-width: 800px){
-    
+    /* Mobile styles for the dashboard page */
+    .indicators-wrapper{
+        flex-direction: column;
+    }
+    .indicators-nav{
+        position: sticky;
+        width: 100%;
+        flex-direction: row;
+    }
+    .indicators-grid-item{
+        height: 10vh;
+        width: 10vh;
+    }
+    .indicators-title{
+        font-size: 0.7rem;
+    }
+    .icon-set{
+        height: 100%;
+        width: calc(20% - 8px);
+    }
+    .icon-set p{
+        font-size: 0.8rem;
+    }
+    #equity-icon{
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    .category-active:not(#equity-icon){
+        margin-right: 8px !important;
+    }
+    .category-active{
+        margin-bottom: 0 !important;
+    }
+    .indicators-grid{
+        position: initial;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Mobile styles for the indicator subpages */
+    .indicators-snippet{
+        padding: 0 3%;
+        margin: 0 auto;
+    }
+    .fade-narrow{
+        height: 8vh;
+        width: 100%;
+    }
+    .back-to-dash{
+        width: auto;
+        padding: 0 1%;
+        border-right: 1px solid white;
+    }
+    .related-indicators{
+        flex-direction: row;
+        padding-left: 1%;
+        justify-content: space-around;
+    }
 }
