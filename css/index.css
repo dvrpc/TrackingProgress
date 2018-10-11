@@ -53,10 +53,23 @@ nav{
     align-items: center;
 }
 #nav-h1{
+    color: #008d92;
+    font-size: 2.8rem;
     font-weight: 100;
 }
 #nav-span{
-    font-weight: 800;
+    font-weight: 900;
+    text-shadow: 1px 1px #008d92;
+}
+#nav-social-media{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-imgs{
+    height: 50%;
+    width: 50%;
 }
 
 
@@ -333,8 +346,8 @@ footer{
 }
 @media all and (max-width: 800px){
     /* Mobile styles for nav */
-    nav h1{
-        font-size: 1rem;
+    #nav-h1{
+        font-size: 1.5rem;
     }
     /* Mobile styles for the dashboard page */
     .indicators-wrapper{
