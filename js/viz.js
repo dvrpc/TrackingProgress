@@ -17,11 +17,6 @@ const createStackedBarChart = source => {
         })
 
     }, csvObj => {
-
-        // errors are coming from x-time being improperly converted.
-        // see here: https://stackoverflow.com/questions/19459687/understanding-nvd3-x-axis-date-format
-        // for how to (possibly) resolve, and change up chart.xAxis on line 407. 
-
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
                 .margin({top: 35, right: 55, bottom: 35, left: 55})
@@ -60,14 +55,14 @@ const createLinePlusBarChart = source => {
 
     d3.csv(source.dataSource, rows => {
 
-        source.data[0].values.push([+rows[barSource[0]], +rows[barSource[1]]])
-        source.data[1].values.push([+rows[lineSource[0]], rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]] ])
+        source.data[0].values.push([ +rows[barSource[0]], rows[barSource[1]] === 'NA' ? null : +rows[barSource[1]] ])
+        source.data[1].values.push([ +rows[lineSource[0]], rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]] ])
 
     }, csvObj => {
-
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
                 .margin({top: 35, right: 65, bottom: 35, left: 55})
+                .focusEnable(false)
                 .x(d => d[0])
                 .forceY(0)
                 .y((d, i) => d[1])
@@ -171,6 +166,10 @@ const createStackedAreaChart = source => {
 }
 
 const createdStackedBarPlusLine = source => {
+    let lineMax = 0;
+    let barMax = 0;
+    let max;
+
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
 
@@ -178,10 +177,11 @@ const createdStackedBarPlusLine = source => {
     source.data.forEach(series => series.values = [])
 
     d3.csv(source.dataSource, rows => {
-
-        // extract information from the columns set in the snippetsRef lookup table
-            // @ TODO: accept columns of length > 2
         source.data.forEach(series => {
+            // dynamically create an upper bound that will be the combination of the max line value + the min bar value
+            if(series.type === 'bar') +rows[series.columns[1]] > barMax ? barMax = +rows[series.columns[1]] : null
+            if(series.type === 'line') +rows[series.columns[1]] > lineMax ? lineMax = +rows[series.columns[1]] : null
+
             series.values.push({ 
                 x: +rows[series.columns[0]],
                 y: rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
@@ -190,12 +190,13 @@ const createdStackedBarPlusLine = source => {
 
     }, csvObj => {
 
+        // kinda hacky but it's the current solution to finding the max (which is generally bar1Max + bar2Max)
+        max = lineMax + (barMax / 2.5)
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
                 .margin({top: 35, right: 55, bottom: 35, left: 55})
-                // hard coding max values for now. @TODO: calculate max and use that as the upper bound. Do this for every viz type
-                .yDomain1([0, 2000])
-                .yDomain2([0, 2000])
+                .yDomain1([0, max])
+                .yDomain2([0, max])
 
             chart.bars1.stacked(true)
             chart.bars2.stacked(true)
