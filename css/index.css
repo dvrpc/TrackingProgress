@@ -1,6 +1,8 @@
 /*********** General Purpose ***********/
-body{
+* {
     font-family: 'Roboto', sans-serif;
+}
+body{
     margin: 0;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
@@ -50,10 +52,10 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-nav h1{
+#nav-h1{
     font-weight: 100;
 }
-nav h1 span{
+#nav-span{
     font-weight: 800;
 }
 
@@ -255,7 +257,7 @@ nav h1 span{
     color: #f7f7f7;
 }
 .sideLink{
-    padding: 10% 0;
+    padding: 10% 1%;
     cursor: pointer;
     color: #f7f7f7;
 }
@@ -383,7 +385,7 @@ footer{
     }
     .related-indicators{
         border-top: none;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         flex-direction: row !important;
         justify-content: space-around;
         align-items: center;

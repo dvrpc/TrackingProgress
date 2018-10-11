@@ -67,7 +67,7 @@ const createLinePlusBarChart = source => {
 
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
-                .margin({top: 35, right: 65, bottom: 35, left: 65})
+                .margin({top: 35, right: 65, bottom: 35, left: 55})
                 .x(d => d[0])
                 .forceY(0)
                 .y((d, i) => d[1])
@@ -109,7 +109,7 @@ const createLineChart = source => {
 
         nv.addGraph(() => {
             let chart = nv.models.lineChart()
-                .margin({top: 35, right: 65, bottom: 35, left: 85})
+                .margin({top: 35, right: 65, bottom: 35, left: 55})
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
                 .clipEdge(false)
