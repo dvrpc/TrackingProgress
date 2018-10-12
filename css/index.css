@@ -71,6 +71,15 @@ nav{
     height: 50%;
     width: 50%;
 }
+#dvrpc-logo{
+    display: block;
+    float: right;
+    padding-right: 1vw;
+    border-right: 2px solid #008d92;
+}
+#mailto{
+    padding-left: 1vw;
+}
 
 
 /*********** Indicator Dashboard ***********/
@@ -101,8 +110,8 @@ nav{
 .icon-set{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-content: center;
+    justify-content: center;
     margin-bottom: 8px;
     margin-right: 8px;
     height: 20%;
@@ -116,27 +125,32 @@ nav{
     margin-bottom: none;
 }
 #economy-icon{
-    background: rgba(189,64,37,0.6);
+    background: #f0cfd0;
+    color: #bd2556;
 }
 #environment-icon{
-    background: rgba(123,157,62,0.6);
+    background: #e0e6cf;
+    color: #7b9d3e;
 }
 #community-icon{
-    background: rgba(0,107,166,0.6);
+    background: #c6d6ea;
+    color: #006ba6;
 }
 #transportation-icon{
-    background: rgba(222,110,29,0.6);
+    background: #f9dcc4;
+    color: #de6e1d;
 }
-/*because .indicators-nav:last-child isn't working, for some reason*/
 #equity-icon{
-    background: rgba(88,34,103,0.6);
+    background: #c6b7cd;
+    color: #582267;
+}
+.indicators-nav div:last-child{
     margin-bottom: 0;
 }
 .icon-set img{
     align-self: center;
-    height: 40%;
-    width: 40%;
-    border-radius: 50%;
+    height: 70%;
+    width: 70%;
 }
 .icon-set:hover{
     cursor: pointer;
@@ -144,9 +158,9 @@ nav{
     border-bottom: hidden;
 }
 .icon-set p{
-    margin: 3% 0 0 0;
+    margin: 0;
+    padding: 0;
     font-size: 1.3rem;
-    color: #fff;
 }
 .indicators-grid{
     position: absolute;
@@ -210,7 +224,9 @@ nav{
 }
 .fade-narrow{
     width: 10%;
-    background: #141414;
+    /* old: #141414 */
+    /* other otion: 3c3744 */
+    background: #222222;
 }
 
 
@@ -340,14 +356,20 @@ footer{
 /*********** Media Queries ***********/
 @media all and (min-width: 1366px){
     .icon-set img{
-        height: 35%;
-        width: 30%;
+        height: 80%;
+        width: 55%;
     }
 }
 @media all and (max-width: 800px){
     /* Mobile styles for nav */
     #nav-h1{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    #nav-social-media a:not(:first-child){
+        display: none;
+    }
+    #dvrpc-logo{
+        border-right: none;
     }
     /* Mobile styles for the dashboard page */
     .indicators-wrapper{
@@ -370,13 +392,13 @@ footer{
         margin-right: 4px
     }
     .icon-set p{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
-    #equity-icon{
+    .indicators-nav div:last-child{
         margin-right: 0;
         margin-bottom: 8px;
     }
-    .category-active:not(#equity-icon){
+    .category-active:not(:last-child){
         margin-right: 4px !important;
     }
     .category-active{
