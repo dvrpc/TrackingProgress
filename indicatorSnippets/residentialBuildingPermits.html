@@ -39,7 +39,28 @@
 
     <hr class="indicator-content-hr" />
 
-    <h2 class="indicator-subheader"></h2>
+    <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">Planning Area by County</h2>
+
+        <p>toggle chart data:</p>
+
+        <form>
+            <fieldset class="toggle-fieldset">
+                <select id="viz-1" class="toggle-data-selector">
+                    <option value="0">DVRPC Region</option>
+                    <option value="1">Chester County</option>
+                    <option value="2">Delaware County</option>
+                    <option value="3">Montgomery County</option>
+                    <option value="4">Burlington County</option>
+                    <option value="5">Camden County</option>
+                    <option value="6">Gloucester County</option>
+                    <option value="7">Mercer County</option>
+                    <option value="8">Bucks County</option>
+                    <option value="9">Philadelphia County</option>
+                </select>
+            </fieldset>
+        </form>
+    </div>
 
     <div class="data-viz chart2">
         <svg></svg>

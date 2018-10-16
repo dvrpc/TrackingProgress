@@ -402,7 +402,41 @@ const snippetsRef = {
                         columns: ['year', 'ratio_annual']
                     }
                 ]
-
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: './data/permits_graph_2A.csv',
+                columnOptions: [
+                    ['DVRPC- Core City', 'DVRPC- Developed Community', 'DVRPC- Growing Suburb', 'DVRPC- Rural Area'],
+                    ['Chester County- Core City', 'Chester County- Developed Community', 'Chester County- Growing Suburb', 'Chester County- Rural Area'],
+                    ['Delaware County- Core City', 'Delaware County- Developed Community', 'Delaware County- Growing Suburb', 'Delaware County- Rural Area'],
+                    ['Montgomery County- Core City', 'Montgomery County- Developed Community', 'Montgomery County- Growing Suburb', 'Montgomery County- Rural Area'],
+                    ['Burlington County- Core City', 'Burlington County- Developed Community', 'Burlington County- Growing Suburb', 'Burlington County- Rural Area'],
+                    ['Camden County- Core City', 'Camden County- Developed Community', 'Camden County- Growing Suburb', 'Camden County- Rural Area'],
+                    ['Gloucester County- Core City', 'Gloucester County- Developed Community', 'Gloucester County- Growing Suburb', 'Gloucester County- Rural Area'],
+                    ['Mercer County- Core City', 'Mercer County- Developed Community', 'Mercer County- Growing Suburb', 'Mercer County- Rural Area'],
+                    ['Bucks County- Core City', 'Bucks County- Developed Community', 'Bucks County- Growing Suburb', 'Bucks County- Rural Area'],
+                    ['Philadelphia County- Core City', 'Philadelphia County- Developed Community', 'Philadelphia County- Growing Suburb', 'Philadelphia County- Rural Area']
+                ],
+                data: [
+                    {
+                        'key': 'Core City',
+                        columns: ['year', 'DVRPC- Core City']
+                    },
+                    {
+                        'key': 'Developed Suburb',
+                        columns: ['year', 'DVRPC- Developed Community']
+                    },
+                    {
+                        'key': 'Growing Suburb',
+                        columns: ['year', 'DVRPC- Growing Suburb']
+                    },
+                    {
+                        'key': 'Rural Area',
+                        columns: ['year', 'DVRPC- Rural Area']
+                    }
+                ]
             }
         ]
     },
