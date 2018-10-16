@@ -386,9 +386,25 @@ const snippetsRef = {
     'Residential Building Permits': {
         file: 'residentialBuildingPermits.html',
         map: false,
-        d3: {
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/permits_graph_1.csv',
+                columnOptions: [
+                    ['ratio_annual'],
+                    ['ratio_cumulative']
+                ],
+                newKeys: true,
+                data: [
+                    {
+                        'key': 'Ratio Annual',
+                        columns: ['year', 'ratio_annual']
+                    }
+                ]
 
-        }
+            }
+        ]
     },
     'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
     'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', map: false, d3: false },
