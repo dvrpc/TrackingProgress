@@ -344,6 +344,62 @@ const snippetsRef = {
             }
         ]
     },
+    'Global Connectivity': {
+        file: 'globalConnectivity.html',
+        map: false,
+        d3: [
+            {
+                type: 'stacked bar',
+                container: 'chart',
+                dataSource: './data/PHL_IntlDest.csv',
+                columnOptions: [
+                    ['Middle Eastern', 'Mexican', 'Canadian', 'Caribbean', 'European'],
+                    ['European (non-seasonal)', 'European (seasonal)', 'Caribbean (non-seasonal)', 'Caribbean (seasonal)', 'Canadian (non-seasonal)', 'Canadian (seasonal)', 'Mexican (non-seasonal)', 'Middle Eastern (non-seasonal)']
+                ],
+                data: [
+                    {
+                        'key': 'Middle Eastern',
+                        columns: ['year', 'Middle Eastern']
+                    },
+                    {
+                        'key': 'Mexican',
+                        columns: ['year', 'Mexican']
+                    },
+                    {
+                        'key': 'Canadian',
+                        columns: ['year', 'Canadian']
+                    },
+                    // {
+                    //     'key': 'Canadian (seasonal)',
+                    //     columns: []
+                    // },
+                    {
+                        'key': 'Caribbean',
+                        columns: ['year', 'Caribbean']
+                    },
+                    // {
+                    //     'key': 'Caribbean (seasonal)',
+                    //     columns: []
+                    // },
+                    {
+                        'key': 'European',
+                        columns: ['year', 'European']
+                    },
+                    // {
+                    //     'key': 'European (seasonal)',
+                    //     columns: []
+                    // }
+                ]
+            }
+        ]
+    },
+    'Residential Building Permits': {
+        file: 'residentialBuildingPermits.html',
+        map: false,
+        d3: {
+
+        }
+    },
     'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
     'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', map: false, d3: false },
     'Income Inequality': {file: 'incomeInequality.html', map: false, d3: false },

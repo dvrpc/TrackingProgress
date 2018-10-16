@@ -1,4 +1,5 @@
 // toggle between charts on an indicator page
+// @TODO: check if the keys are the same and update if not (also check on length and add/remove if needed)
 const toggleChart = (selected, dataSets, graphs) => {
 
     // get the correct dataSet based on the selector id

@@ -13,7 +13,7 @@ const indicatorsNav = document.querySelector('.indicators-nav')
 const relatedIndicators = document.querySelector('.related-indicators')
 
 // dummy data to loop thru and create the remaining 25 sub-grids
-for(var i = 0; i < 23; i++){
+for(var i = 0; i < 21; i++){
     let gridItem = document.createElement('div')
     let tempPhoto = document.createElement('img')
     let tempTitle = document.createElement('p')
