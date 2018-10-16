@@ -29,6 +29,7 @@ const snippetsRef = {
                     ['unhealthySensitiveOzone', 'unhealthyOzone', 'veryUnhealthyOzone'],
                     ['unhealthySensitivePM', 'unhealthyPM', 'veryUnhealthyPM']
                 ],
+                newKeys: true,
                 data: [
                     {
                         'key' : 'Unhealthy Sensitive Ozone',
@@ -354,8 +355,9 @@ const snippetsRef = {
                 dataSource: './data/PHL_IntlDest.csv',
                 columnOptions: [
                     ['Middle Eastern', 'Mexican', 'Canadian', 'Caribbean', 'European'],
-                    ['European (non-seasonal)', 'European (seasonal)', 'Caribbean (non-seasonal)', 'Caribbean (seasonal)', 'Canadian (non-seasonal)', 'Canadian (seasonal)', 'Mexican (non-seasonal)', 'Middle Eastern (non-seasonal)']
+                    ['Middle Eastern (non-seasonal)', 'Mexican (non-seasonal)', 'Canadian (non-seasonal)', 'Canadian (seasonal)', 'Caribbean (non-seasonal)', 'Caribbean (seasonal)', 'European (non-seasonal)', 'European (seasonal)']
                 ],
+                newKeys: true,
                 data: [
                     {
                         'key': 'Middle Eastern',
@@ -369,26 +371,14 @@ const snippetsRef = {
                         'key': 'Canadian',
                         columns: ['year', 'Canadian']
                     },
-                    // {
-                    //     'key': 'Canadian (seasonal)',
-                    //     columns: []
-                    // },
                     {
                         'key': 'Caribbean',
                         columns: ['year', 'Caribbean']
                     },
-                    // {
-                    //     'key': 'Caribbean (seasonal)',
-                    //     columns: []
-                    // },
                     {
                         'key': 'European',
                         columns: ['year', 'European']
-                    },
-                    // {
-                    //     'key': 'European (seasonal)',
-                    //     columns: []
-                    // }
+                    }
                 ]
             }
         ]

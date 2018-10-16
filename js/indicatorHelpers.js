@@ -1,5 +1,4 @@
 // toggle between charts on an indicator page
-// @TODO: check if the keys are the same and update if not (also check on length and add/remove if needed)
 const toggleChart = (selected, dataSets, graphs) => {
 
     // get the correct dataSet based on the selector id
@@ -11,8 +10,34 @@ const toggleChart = (selected, dataSets, graphs) => {
     // get a handle on the names of the new columns to read from
     let newColumns = dataSets[setNumber].columnOptions[chartNumber]
 
-    // replace the y-axis columns with the newly selected columns 
-    dataSets[setNumber].data.forEach((series, index) => series.columns[1] = newColumns[index])
+    // replace the y-axis columns with the newly selected columns
+    // if selected columnOptions.length === datasets[setNumber].data do a wholesale re-assignment of data
+    if(newColumns.length != dataSets[setNumber].data.length){
+        
+        // grab a reference to the xValue name
+        let xVal = dataSets[setNumber].data[0].columns[0]
+
+        // clear old data array
+        dataSets[setNumber].data = []
+
+        // build and push new data objects to the data array
+        newColumns.forEach(newData => {
+            const newEntry = {
+                'key': newData,
+                columns: [xVal, newData]
+            }
+            dataSets[setNumber].data.push(newEntry)
+        })
+    }
+    // otherwise just update the columns (and key names if necessary)
+    else{
+        let newKeys = dataSets[setNumber].newKeys ? true : false
+
+        dataSets[setNumber].data.forEach((series, index) => {
+            if(newKeys) series.key = newColumns[index]
+            series.columns[1] = newColumns[index]
+        })
+    }
 
     // source is the correct dataset with updated column names
     const source = dataSets[setNumber]
