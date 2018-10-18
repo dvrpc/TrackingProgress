@@ -1,6 +1,7 @@
 import snippetsRef from './ref.js'
 import { toggleIndicators, fade, setIndicatorDimensions } from './dashboardHelpers.js'
 import { getIndicatorSnippet, generateSideNav } from './indicatorHelpers.js'
+import { setIndexURL } from './routing.js'
 import * as graphs from './viz.js'
 
 // get a handle on the dashboard elements
@@ -152,5 +153,8 @@ back.onclick = () => {
         indicatorsNav.classList.remove('fade-narrow')
         grid.classList.remove('fade-right')
         categories.forEach(category => category.classList.toggle('fade-out'))
+
+        // reset the URL to the index
+        setIndexURL()
     }, 100)
 }

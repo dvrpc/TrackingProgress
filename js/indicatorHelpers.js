@@ -1,3 +1,5 @@
+import { setIndicatorURL } from './routing.js'
+
 // toggle between charts on an indicator page
 const toggleChart = (selected, dataSets, graphs) => {
 
@@ -124,6 +126,9 @@ const getIndicatorSnippet = (grid, snippet, graphs, sideNavParams) => {
                     }
                 })
             }
+
+            // at this point, update the URL
+            setIndicatorURL(snippetFile)
         })
     }
 }
