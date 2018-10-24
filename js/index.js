@@ -1,7 +1,7 @@
 import snippetsRef from './ref.js'
 import { toggleIndicators, fade, setIndicatorDimensions } from './dashboardHelpers.js'
 import { getIndicatorSnippet, generateSideNav } from './indicatorHelpers.js'
-import { setIndexURL } from './routing.js'
+import { setIndexURL, setIndicatorURL } from './routing.js'
 import * as graphs from './viz.js'
 
 // get a handle on the dashboard elements
@@ -81,17 +81,14 @@ grid.onclick = e => {
             // get the title and primary class of the selected indicator
             let title = indicator.children.length ? indicator.children[1].textContent : null
             const primaryCategory = indicator.classList[1]
-            snippet = snippetsRef[title]
     
             back.style.display = 'block'
             indicatorsNav.style.justifyContent = 'flex-start'
     
-            // create the indicator page and populate/refresh the related indicators sideNav
-            const sideNavParams = [indicators, relatedIndicators, primaryCategory]
-            getIndicatorSnippet(grid, snippet, graphs, sideNavParams)
-            generateSideNav(indicators, relatedIndicators, primaryCategory)
+            // update the URL which in turn hydrates the indicator page
+            setIndicatorURL(title, primaryCategory)
         }
-        , 1500)
+        , 1000)
     }
 }
 
@@ -107,8 +104,7 @@ const updateLinks = () => {
     sideLinks.forEach(sideLink => {
         sideLink.onclick = () => {
 
-            const snippetTitle = sideLink.textContent
-            const snippet = snippetsRef[snippetTitle]
+            const title = sideLink.textContent
             const primaryCategory = sideLink.classList[1]
 
             // clear the current indicator snippet
@@ -120,8 +116,8 @@ const updateLinks = () => {
                 relatedIndicators.removeChild(relatedIndicators.firstChild)
             }
 
-            getIndicatorSnippet(grid, snippet, graphs)
-            generateSideNav(indicators, relatedIndicators, primaryCategory)
+            // update the URL which in turn hydrates the new indicator page
+            setIndicatorURL(title, primaryCategory)
         }
     })
 }

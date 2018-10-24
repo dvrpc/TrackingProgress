@@ -67,10 +67,9 @@ const toggleChart = (selected, dataSets, graphs) => {
 }
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
-const getIndicatorSnippet = (grid, snippet, graphs, sideNavParams) => {
+const getIndicatorSnippet = (grid, snippet, graphs) => {
     let hasMap;
     let hasDataViz;
-    let indicatorTitle;
 
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippet.file
@@ -84,7 +83,6 @@ const getIndicatorSnippet = (grid, snippet, graphs, sideNavParams) => {
 
         let page = `./indicatorSnippets/${snippetFile}`
 
-        // note for the future: the intial response has a URL that is base + snippetFileName.html. will be useful later IF I have to create a way to link to/from indicator views
         fetch(page).then(response => response.text()).then(snippet =>{
 
             // insert the HTML to update the structure & put the map and/or data viz components in place
@@ -126,9 +124,6 @@ const getIndicatorSnippet = (grid, snippet, graphs, sideNavParams) => {
                     }
                 })
             }
-
-            // at this point, update the URL
-            setIndicatorURL(snippetFile)
         })
     }
 }

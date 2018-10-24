@@ -101,7 +101,7 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: width 1.4s;
+    transition: width 1s;
     transition-timing-function: linear;
 }
 .category-active{
@@ -118,7 +118,7 @@ nav{
     text-align: center;
     opacity: 1;
     visibility: visible;
-    transition: opacity 1.4s, visibility 1.4s;
+    transition: opacity 1s, visibility 1s;
     transition-timing-function: linear;
 }
 .icon-set:last-child{
@@ -173,7 +173,7 @@ nav{
     overflow-y: auto;
     opacity: 1;
     margin-left: 15vw;
-    transition: opacity 1.4s, margin-left 1.4s;
+    transition: opacity 1s, margin-left 1s;
     transition-timing-function: linear;
 }
 .indicators-grid-item{
