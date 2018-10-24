@@ -102,6 +102,9 @@ nav{
     justify-content: space-between;
     align-items: center;
     transition: width 1s;
+    -webkit-transition:  width 1s;
+    -moz-transition:  width 1s;
+    -o-transition:  width 1s;
     transition-timing-function: linear;
 }
 .category-active{
@@ -119,6 +122,9 @@ nav{
     opacity: 1;
     visibility: visible;
     transition: opacity 1s, visibility 1s;
+    -webkit-transition: opacity 1s, visibility 1s;
+    -moz-transition: opacity 1s, visibility 1s;
+    -o-transition: opacity 1s, visibility 1s;
     transition-timing-function: linear;
 }
 .icon-set:last-child{
@@ -174,6 +180,9 @@ nav{
     opacity: 1;
     margin-left: 15vw;
     transition: opacity 1s, margin-left 1s;
+    -webkit-transition: opacity 1s, margin-left 1s;
+    -moz-transition: opacity 1s, margin-left 1s;
+    -o-transition: opacity 1s, margin-left 1s;
     transition-timing-function: linear;
 }
 .indicators-grid-item{
@@ -226,7 +235,12 @@ nav{
     width: 10%;
     background: #222222;
 }
-
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
 
 
 /*********** Indicator Pages ***********/

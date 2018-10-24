@@ -46,10 +46,8 @@ const updateView = () => {
 const refreshView = () => {
     // if refreshing the homepage, do nothing
     if(location.href !== 'http://dev.dvrpc.org/TrackingProgress/'){
-        // needs to remove the grid and update the indicators-nav to the indicator style
-        // brute force way: get a handle on grid and display: none it
-        // get a handle on side nav and add fade-narrow & flex-start to it
 
+        // this can and should all be refactored into a function that sizurps
         const grid = document.querySelector('.indicators-grid')
         const categories = [... document.querySelectorAll('.icon-set')]
         const indicatorsNav = document.querySelector('.indicators-nav')
@@ -58,10 +56,14 @@ const refreshView = () => {
         grid.style.display = 'none'
         back.style.display = 'block'
         indicatorsNav.style.justifyContent = 'flex-start'
-        indicatorsNav.style.background = '#222222'
-        indicatorsNav.style.width = '10%'
-        categories.forEach(category => category.style.display = 'none')
+
+        grid.classList.add('notransition', 'fade-right')
+        indicatorsNav.classList.add('notransition', 'fade-narrow')
+        back.classList.add('notransition')
+
+        categories.forEach(category => category.classList.add('notransition', 'fade-out'))
         updateView()
+
     }
 }
 

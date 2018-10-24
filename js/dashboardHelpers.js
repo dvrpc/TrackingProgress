@@ -38,7 +38,7 @@ const toggleIndicators = (element, indicators) => {
 const fade = (grid, indicatorsNav, categories) => {
     grid.classList.add('fade-right')
     indicatorsNav.classList.add('fade-narrow')
-    categories.forEach(category => category.style.display = 'none')
+    categories.forEach(category => category.classList.add('fade-out'))
 }
 
 // set the indicator tiles height/width

@@ -143,9 +143,9 @@ back.onclick = () => {
         back.style.display = 'none'
         
         // reveal the indicators grid, widen the sideNav and reveal the categories
-        indicatorsNav.classList.remove('fade-narrow')
-        grid.classList.remove('fade-right')
-        categories.forEach(category => category.style.display = '')
+        indicatorsNav.classList.remove('fade-narrow', 'notransition')
+        grid.classList.remove('fade-right', 'notransition')
+        categories.forEach(category => category.classList.remove('fade-out', 'notransition'))
 
         // reset the URL to the index
         setIndexURL()
