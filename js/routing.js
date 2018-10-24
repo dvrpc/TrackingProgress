@@ -11,7 +11,7 @@ if(!window.HashChangeEvent)(function(){
 	});
 }());
 
-const setIndexURL = () => history.replaceState(null, 'Tracking Progress', 'http://dev.dvrpc.org/TrackingProgress/')
+const setIndexURL = () => history.pushState(null, 'Tracking Progress', 'http://dev.dvrpc.org/TrackingProgress/')
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
 const setIndicatorURL = (title, primaryCategory) => {
@@ -22,7 +22,7 @@ const setIndicatorURL = (title, primaryCategory) => {
     location.hash = newHash
 
     // update URL state
-    history.replaceState(null, title, `http://dev.dvrpc.org/TrackingProgress/#/${newHash}`)
+    history.pushState(null, title, `http://dev.dvrpc.org/TrackingProgress/#/${newHash}`)
 
     // something missing here to hook it into back/forward buttons
 }
@@ -69,6 +69,12 @@ const refreshView = () => {
 
 // handles refresh (only gets triggered when refreshing and url has a /jawn in it)
 window.onload = refreshView
+
+// listen for window.onback (?) calls.
+    // if back brings us to an indicator page, remove the old one & then call updateView
+    // if back brings us to home then god help us all
+        // the function in refreshView...but...opposite?
+
 // hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
 window.onhashchange = updateView
 

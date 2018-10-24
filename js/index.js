@@ -60,9 +60,6 @@ indicators.forEach(indicator => setIndicatorDimensions(indicator))
 grid.onclick = e => {
     // avoid cases where user clicks the grid itself
     if(e.target.nodeName != 'SECTION'){
-        let snippet;
-        let title;
-        let primaryCategory
         let indicator = e.target
         
         // if img or p is selected, get the parent div to have all the information 
