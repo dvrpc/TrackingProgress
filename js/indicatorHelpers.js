@@ -1,4 +1,10 @@
-import { setIndicatorURL } from './routing.js'
+// get a handle on the necessary elements to create indicator subpages
+import * as graphs from './viz.js'
+import snippetsRef from './ref.js'
+
+const grid = document.querySelector('.indicators-grid')
+const indicators = [... document.querySelectorAll('.indicators-grid-item')]
+const relatedIndicators = document.querySelector('.related-indicators')
 
 // toggle between charts on an indicator page
 const toggleChart = (selected, dataSets, graphs) => {
@@ -157,4 +163,18 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
     relatedIndicators.style.flexDirection = 'column'
 }
 
-export {getIndicatorSnippet, generateSideNav}
+// helper function for the routing
+const makeIndicatorPage = hashArray => {
+    const title = hashArray[1].replace(/-/g, ' ')
+    const snippet = snippetsRef[title]
+
+    // make sure the snippet exists before proceeding
+        // @TODO: route to a 404 page or re-route to home or something
+    if(snippet){
+        const primaryCategory = hashArray[2]
+        getIndicatorSnippet(grid, snippet, graphs)
+        generateSideNav(indicators, relatedIndicators, primaryCategory)
+    }
+}
+
+export { makeIndicatorPage }

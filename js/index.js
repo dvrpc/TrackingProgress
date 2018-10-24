@@ -1,8 +1,5 @@
-import snippetsRef from './ref.js'
 import { toggleIndicators, fade, setIndicatorDimensions } from './dashboardHelpers.js'
-import { getIndicatorSnippet, generateSideNav } from './indicatorHelpers.js'
 import { setIndexURL, setIndicatorURL } from './routing.js'
-import * as graphs from './viz.js'
 
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
@@ -148,7 +145,7 @@ back.onclick = () => {
         // reveal the indicators grid, widen the sideNav and reveal the categories
         indicatorsNav.classList.remove('fade-narrow')
         grid.classList.remove('fade-right')
-        categories.forEach(category => category.classList.toggle('fade-out'))
+        categories.forEach(category => category.style.display = '')
 
         // reset the URL to the index
         setIndexURL()

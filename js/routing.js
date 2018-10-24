@@ -1,11 +1,5 @@
-// get a handle on the necessary elements to populate routing functions
-import * as graphs from './viz.js'
-import snippetsRef from './ref.js'
-import { getIndicatorSnippet, generateSideNav } from './indicatorHelpers.js';
-
-const grid = document.querySelector('.indicators-grid')
-const indicators = [... document.querySelectorAll('.indicators-grid-item')]
-const relatedIndicators = document.querySelector('.related-indicators')
+import { makeIndicatorPage } from './indicatorHelpers.js'
+import { fade } from './dashboardHelpers.js';
 
 // first and formost, handle cases where the browser doesn't have onhashchange built in (from MDN)
 if(!window.HashChangeEvent)(function(){
@@ -19,16 +13,18 @@ if(!window.HashChangeEvent)(function(){
 
 const setIndexURL = () => history.replaceState(null, 'Tracking Progress', 'http://dev.dvrpc.org/TrackingProgress/')
 
-// This handler is for internal navigation i.e. from the indicator tile or a sideLink URL. All it needs to do is update the hash URL
+// take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
 const setIndicatorURL = (title, primaryCategory) => {
     const titlesMinusSpace = title.replace(/\s+/g, '-')
-    const newHash = `Indicator/${titlesMinusSpace}/${primaryCategory}`
+    const newHash = `${titlesMinusSpace}/${primaryCategory}`
     
     // trigger a hash change to pull in the new page information
     location.hash = newHash
 
     // update URL state
     history.replaceState(null, title, `http://dev.dvrpc.org/TrackingProgress/#/${newHash}`)
+
+    // something missing here to hook it into back/forward buttons
 }
 
 // wrapper function that accepts a URL fragment and hydrates the page with the appropriate information
@@ -38,28 +34,40 @@ const updateView = () => {
     if(location.hostname === 'dev.dvrpc.org'){
         let hashArray = location.hash.split('/')
         if(hashArray.length){
-            const title = hashArray[2].replace(/-/g, ' ')
-            const snippet = snippetsRef[title]
-
-            // make sure the snippet exists before proceeding
-                // @TODO: route to a 404 page or re-route to home or something
-            if(snippet){
-                const primaryCategory = hashArray[3]
-                getIndicatorSnippet(grid, snippet, graphs)
-                generateSideNav(indicators, relatedIndicators, primaryCategory)
-            }
+            makeIndicatorPage(hashArray)
+        }else{
+            alert('nah b')
+            // load the homepage?
         }
-    }else{
-        alert('nah b')
     }
-    
-    // @ TODO: get the required information to generate the indicator page and sideNav
-        // of the sideNav and indicator params, Grid, Graphs, Indicators and Related Indicators can be obtained via querySelectorAll
-            // snippet is obtained via snippetsRef[title]
-            // primaryCategory is obtained via indicator.classList[1]
 }
 
+// on refresh, remove a jawn before proceeding?
+const refreshView = () => {
+    // if refreshing the homepage, do nothing
+    if(location.href !== 'http://dev.dvrpc.org/TrackingProgress/'){
+        // needs to remove the grid and update the indicators-nav to the indicator style
+        // brute force way: get a handle on grid and display: none it
+        // get a handle on side nav and add fade-narrow & flex-start to it
+
+        const grid = document.querySelector('.indicators-grid')
+        const categories = [... document.querySelectorAll('.icon-set')]
+        const indicatorsNav = document.querySelector('.indicators-nav')
+        const back = document.querySelector('.back-to-dash')
+
+        grid.style.display = 'none'
+        back.style.display = 'block'
+        indicatorsNav.style.justifyContent = 'flex-start'
+        indicatorsNav.style.background = '#222222'
+        indicatorsNav.style.width = '10%'
+        categories.forEach(category => category.style.display = 'none')
+        updateView()
+    }
+}
+
+// handles refresh (only gets triggered when refreshing and url has a /jawn in it)
+window.onload = refreshView
 // hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
 window.onhashchange = updateView
 
-export {updateView, setIndicatorURL, setIndexURL}
+export {setIndicatorURL, setIndexURL}
