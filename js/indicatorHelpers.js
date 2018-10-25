@@ -1,6 +1,7 @@
 // get a handle on the necessary elements to create indicator subpages
 import * as graphs from './viz.js'
 import snippetsRef from './ref.js'
+import { setIndicatorURL } from './routing.js'
 
 const grid = document.querySelector('.indicators-grid')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
@@ -93,6 +94,8 @@ const getIndicatorSnippet = (grid, snippet, graphs) => {
 
             // insert the HTML to update the structure & put the map and/or data viz components in place
             grid.insertAdjacentHTML('beforebegin', snippet)
+            console.log(grid.previousElementSibling)
+            grid.previousElementSibling.classList.add('fade-in')
 
             if(hasMap) {
 
@@ -176,5 +179,37 @@ const makeIndicatorPage = hashArray => {
         generateSideNav(indicators, relatedIndicators, primaryCategory)
     }
 }
+
+// use a mutation observer to attach click handlers every time the sideLinks container div gets updated
+const mutationConfig = {childList: true}
+
+const updateLinks = () => {
+    const sideLinks = document.querySelectorAll('.sideLink')
+
+    sideLinks.forEach(sideLink => {
+        sideLink.onclick = () => {
+
+            const title = sideLink.textContent
+            const primaryCategory = sideLink.classList[1]
+
+            // clear the current indicator snippet
+            const indicatorDetails = document.querySelector('.indicators-snippet')
+            if(indicatorDetails) indicatorDetails.remove()
+
+            // clear the side nav of all it's children
+            while(relatedIndicators.firstChild){
+                relatedIndicators.removeChild(relatedIndicators.firstChild)
+            }
+
+            // update the URL which in turn hydrates the new indicator page
+            setIndicatorURL(title, primaryCategory)
+        }
+    })
+}
+
+// moved the sideLinks observer into indicatorHelpers because that helps the observer listen to and attach click handlers 
+// to the indicator sideNav if/when a user refreshes an indicator page
+const observer = new MutationObserver(updateLinks)
+observer.observe(relatedIndicators, mutationConfig)
 
 export { makeIndicatorPage }

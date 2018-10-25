@@ -1,5 +1,4 @@
 import { makeIndicatorPage } from './indicatorHelpers.js'
-import { fade } from './dashboardHelpers.js';
 
 // first and formost, handle cases where the browser doesn't have onhashchange built in (from MDN)
 if(!window.HashChangeEvent)(function(){
@@ -23,8 +22,6 @@ const setIndicatorURL = (title, primaryCategory) => {
 
     // update URL state
     history.pushState(null, title, `http://dev.dvrpc.org/TrackingProgress/#/${newHash}`)
-
-    // something missing here to hook it into back/forward buttons
 }
 
 // wrapper function that accepts a URL fragment and hydrates the page with the appropriate information
@@ -42,17 +39,10 @@ const updateView = () => {
     }
 }
 
-// on refresh, remove a jawn before proceeding?
-const refreshView = () => {
+// refreshing an indicator page renders it w/o triggering the normal transitions
+const refreshView = (grid, back, indicatorsNav, categories) => {
     // if refreshing the homepage, do nothing
     if(location.href !== 'http://dev.dvrpc.org/TrackingProgress/'){
-
-        // this can and should all be refactored into a function that sizurps
-        const grid = document.querySelector('.indicators-grid')
-        const categories = [... document.querySelectorAll('.icon-set')]
-        const indicatorsNav = document.querySelector('.indicators-nav')
-        const back = document.querySelector('.back-to-dash')
-
         grid.style.display = 'none'
         back.style.display = 'block'
         indicatorsNav.style.justifyContent = 'flex-start'
@@ -63,12 +53,8 @@ const refreshView = () => {
 
         categories.forEach(category => category.classList.add('notransition', 'fade-out'))
         updateView()
-
     }
 }
-
-// handles refresh (only gets triggered when refreshing and url has a /jawn in it)
-window.onload = refreshView
 
 // listen for window.onback (?) calls.
     // if back brings us to an indicator page, remove the old one & then call updateView
@@ -78,4 +64,4 @@ window.onload = refreshView
 // hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
 window.onhashchange = updateView
 
-export {setIndicatorURL, setIndexURL}
+export {setIndicatorURL, setIndexURL, refreshView}
