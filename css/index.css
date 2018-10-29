@@ -443,7 +443,7 @@ footer{
         justify-content: space-around;
         align-items: center;
         padding: 0 2vw;
-        overflow-x: scroll;
+        overflow-x: auto;
     }
     .sideLink{
         padding: 0 2vw;

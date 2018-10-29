@@ -25,7 +25,6 @@ const makeDashboard = (relatedIndicators, indicatorsNav, back, grid, categories)
 
     // reveal the homepage elements
     indicatorsNav.style.justifyContent = 'space-between'
-    grid.style.display = 'flex'
 }
 
 const removeDashboard = (grid, indicatorsNav, back, categories, transition) => {
@@ -44,11 +43,6 @@ const removeDashboard = (grid, indicatorsNav, back, categories, transition) => {
 
     // transition animation from dash to indicator page
     fade(grid, indicatorsNav, categories)
-
-    // after the transition is done, remove the grid
-    setTimeout(() => {
-        grid.style.display = 'none'
-    }, 1000)
 }
 
 // function to display/hide indicators based on which category is clicked
