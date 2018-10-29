@@ -1,48 +1,61 @@
 import { makeIndicatorPage } from './indicatorHelpers.js'
+import { makeDashboard, removeDashboard } from './dashboardHelpers.js';
 
-// first and formost, handle cases where the browser doesn't have onhashchange built in (from MDN)
-if(!window.HashChangeEvent)(function(){
-	var lastURL=document.URL;
-	window.addEventListener("hashchange",function(event){
-		Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
-		Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
-		lastURL=document.URL;
-	});
-}());
+const setIndexURL = () => {
+    console.log('triggered set index url')
 
-const setIndexURL = () => history.pushState(null, 'Tracking Progress', 'http://dev.dvrpc.org/TrackingProgress/')
+    history.pushState({page: 'home'}, 'Tracking Progress', 'http://dev.dvrpc.org/TrackingProgress/')
+}
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
 const setIndicatorURL = (title, primaryCategory) => {
-    const titlesMinusSpace = title.replace(/\s+/g, '-')
+    console.log('triggered set indicator url')
+
+    const titlesMinusSpace = title.trim().replace(/\s+/g, '-')
     const newHash = `${titlesMinusSpace}/${primaryCategory}`
-    
+        
     // trigger a hash change to pull in the new page information
     location.hash = newHash
 
     // update URL state
-    history.pushState(null, title, `http://dev.dvrpc.org/TrackingProgress/#/${newHash}`)
+    history.pushState({page: 'indicator', details: newHash}, title, `http://dev.dvrpc.org/TrackingProgress/#${newHash}`)
 }
 
 // wrapper function that accepts a URL fragment and hydrates the page with the appropriate information
 const updateView = () => {
+    // console.log('triggered update view')
+
     // make sure the URL is valid from our address
         // @ TODO: change to www.dvrpc.org for deploy
     if(location.hostname === 'dev.dvrpc.org'){
-        let hashArray = location.hash.split('/')
-        if(hashArray.length){
+        let hashArray = location.hash.trim().slice(1).split('/')
+        
+        const grid = document.querySelector('.indicators-grid')
+        const indicatorsNav = document.querySelector('.indicators-nav')
+        const back = document.querySelector('.back-to-dash')
+
+        if(hashArray.length > 1){
+            removeDashboard(false, grid, indicatorsNav, back)
+
             makeIndicatorPage(hashArray)
         }else{
-            alert('nah b')
-            // load the homepage?
+            // get a handle on the necessary grid elements
+            const relatedIndicators = document.querySelector('.related-indicators')
+            const categories = [... document.querySelectorAll('.icon-set')]
+            
+            makeDashboard(relatedIndicators, indicatorsNav, back, grid, categories)
         }
     }
 }
 
 // refreshing an indicator page renders it w/o triggering the normal transitions
 const refreshView = (grid, back, indicatorsNav, categories) => {
+    // console.log('triggered refreshview')
+
     // if refreshing the homepage, do nothing
     if(location.href !== 'http://dev.dvrpc.org/TrackingProgress/'){
+
+        // refactor into a function called (hideDashboard)
         grid.style.display = 'none'
         back.style.display = 'block'
         indicatorsNav.style.justifyContent = 'flex-start'
@@ -56,12 +69,29 @@ const refreshView = (grid, back, indicatorsNav, categories) => {
     }
 }
 
-// listen for window.onback (?) calls.
-    // if back brings us to an indicator page, remove the old one & then call updateView
-    // if back brings us to home then god help us all
-        // the function in refreshView...but...opposite?
+// pop state up in this mfer
+const popState = event => {
+    const state = JSON.stringify(event.state)
+    console.log('popstate state ', state)
+    
+    switch(state){
+        case 'indicator':
+            updateView()
+        case 'home':
 
-// hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
-window.onhashchange = updateView
+    }
+    
+    // only call this if popState only gets trigered by clicking forward/back which is what I thought triggered this in the first place so fuck everything
+    //updateView()
 
-export {setIndicatorURL, setIndexURL, refreshView}
+    //const state = event.originalEvent.state
+
+    // if(state){
+    //     console.log('state is ', state)
+        
+    //     // call update view? just doing this might not be enough to handle removing extra inidcators or the grid or other
+    //     updateView()
+    // }
+}
+
+export {setIndicatorURL, setIndexURL, refreshView, popState, updateView}

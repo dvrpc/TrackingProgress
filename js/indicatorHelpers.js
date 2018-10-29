@@ -94,8 +94,6 @@ const getIndicatorSnippet = (grid, snippet, graphs) => {
 
             // insert the HTML to update the structure & put the map and/or data viz components in place
             grid.insertAdjacentHTML('beforebegin', snippet)
-            console.log(grid.previousElementSibling)
-            grid.previousElementSibling.classList.add('fade-in')
 
             if(hasMap) {
 
@@ -168,13 +166,18 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 
 // helper function for the routing
 const makeIndicatorPage = hashArray => {
-    const title = hashArray[1].replace(/-/g, ' ')
+    const title = hashArray[0].replace(/-/g, ' ')
     const snippet = snippetsRef[title]
 
     // make sure the snippet exists before proceeding
         // @TODO: route to a 404 page or re-route to home or something
     if(snippet){
-        const primaryCategory = hashArray[2]
+        // remove an existing indicator page before continuing
+        const oldIndicator = document.querySelector('.indicators-snippet')
+        console.log('old indicator page ', oldIndicator)
+        if(oldIndicator) oldIndicator.remove()
+
+        const primaryCategory = hashArray[1]
         getIndicatorSnippet(grid, snippet, graphs)
         generateSideNav(indicators, relatedIndicators, primaryCategory)
     }

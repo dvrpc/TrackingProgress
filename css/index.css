@@ -40,7 +40,6 @@ fieldset{
     min-width: 0;
 }
 
-
 /*********** Navbar ***********/
 nav{
     width: 95%;
@@ -175,12 +174,11 @@ nav{
     flex-wrap: wrap;
     justify-content: center;
     overflow-y: auto;
-    opacity: 1;
     margin-left: 15vw;
-    transition: opacity 4s, margin-left 1s;
-    -webkit-transition: opacity 4s, margin-left 1s;
-    -moz-transition: opacity 4s, margin-left 1s;
-    -o-transition: opacity 4s, margin-left 1s;
+    transition: margin-left 1s;
+    -webkit-transition: margin-left 1s;
+    -moz-transition: margin-left 1s;
+    -o-transition: margin-left 1s;
     transition-timing-function: linear;
 }
 .indicators-grid-item{
@@ -221,7 +219,7 @@ nav{
 
 /*********** Indicator Pages ***********/
 .indicators-snippet{
-    opacity: 0;
+    opacity: 1;
     background: #f7f7f7;
     /*3% is the intended margin, add 10 for the width of the sidebar*/
     padding-left: 13%;
@@ -353,7 +351,6 @@ footer{
     opacity: 1;
 }
 .fade-right{
-    opacity: 0;
     margin-left: 100vw;
 }
 .fade-narrow{

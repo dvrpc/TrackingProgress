@@ -1,5 +1,5 @@
-import { toggleIndicators, fade, setIndicatorDimensions } from './dashboardHelpers.js'
-import { setIndexURL, setIndicatorURL, refreshView } from './routing.js'
+import { makeDashboard, removeDashboard, toggleIndicators, setIndicatorDimensions } from './dashboardHelpers.js'
+import { setIndexURL, setIndicatorURL, refreshView, popState, updateView } from './routing.js'
 
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
@@ -11,11 +11,31 @@ const indicatorsNav = document.querySelector('.indicators-nav')
 const relatedIndicators = document.querySelector('.related-indicators')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
-// Window Events
+
+/**************** Window Events ****************/
+
+    // first and formost, handle cases where the browser doesn't have onhashchange built in (from MDN)
+if(!window.HashChangeEvent)(function(){
+	var lastURL=document.URL;
+	window.addEventListener("hashchange",function(event){
+		Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
+		Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
+		lastURL=document.URL;
+	});
+}());
+
     // handles refresh (only gets triggered when refreshing an indicator page)
 window.onload = refreshView(grid, back, indicatorsNav, categories)
+
+    // hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
+window.onhashchange = updateView
+
+    // listen for back/forward and update accordingly
+window.onpopstate = event => popState(event)
+
     // update indicator tiles on window resize
 window.onresize = () => (indicators.forEach(indicator => setIndicatorDimensions(indicator)))
+
 
 // apply filter toggle to each category
 categories.forEach(category => category.onclick = () => toggleIndicators(category, indicators))
@@ -35,56 +55,19 @@ grid.onclick = e => {
         // get the title and primary class of the selected indicator
         let title = indicator.children.length ? indicator.children[1].textContent : null
         const primaryCategory = indicator.classList[1]
+        
+        removeDashboard(true, grid, back, indicatorsNav, categories)
 
         // update the URL which in turn hydrates the indicator page
         setIndicatorURL(title, primaryCategory)
-
-        // allow transitions (if previously removed via a 'back to home' click or refresh)
-        indicatorsNav.classList.remove('notransition')
-        grid.classList.remove('notransition')
-
-        // transition animation from dash to indicator page
-        fade(grid, indicatorsNav, categories)
-
-        // adjust side nav display
-        back.style.display = 'block'
-        indicatorsNav.style.justifyContent = 'flex-start'
-
-        // after the transition is done, remove the grid
-        setTimeout(() => {
-            grid.style.display = 'none'
-        }, 1000)
     }
 }
 
 // return to dashboard view
-// Edited to not have transitions - just goes right to the dashboard view. 
-    // pros: More pleasant on the user going back and forth from indicator to dash
-    // cons: Inconsistent with behavior of hiding the dash
 back.onclick = () => {
-    // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
-    const indicator = document.querySelector('.indicators-snippet')
-    if(indicator) indicator.remove()
-    
-    // clear the relatedIndicators div of all it's children
-    while(relatedIndicators.firstChild){
-        relatedIndicators.removeChild(relatedIndicators.firstChild)
-    }
-    
-    // remove un-needed elements
-    relatedIndicators.style.display = 'none'
-    back.style.display = 'none'
-    
-    // reveal the indicators grid, widen the sideNav and reveal the categories
-    indicatorsNav.classList.add('notransition')
-    indicatorsNav.classList.remove('fade-narrow')
-    grid.classList.remove('fade-right')
-    categories.forEach(category => category.classList.remove('fade-out'))
-
-    // reveal the homepage elements
-    indicatorsNav.style.justifyContent = 'space-between'
-    grid.style.display = 'flex'
-
     // reset the URL to the index
     setIndexURL()
+
+    // bring the dashboard back into view
+    makeDashboard(relatedIndicators, indicatorsNav, back, grid, categories)
 }
