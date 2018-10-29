@@ -1,5 +1,5 @@
 import { makeDashboard, removeDashboard, toggleIndicators, setIndicatorDimensions } from './dashboardHelpers.js'
-import { setIndexURL, setIndicatorURL, refreshView, popState, updateView } from './routing.js'
+import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
 
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
@@ -12,9 +12,9 @@ const relatedIndicators = document.querySelector('.related-indicators')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 
-/**************** Window Events ****************/
-
-    // first and formost, handle cases where the browser doesn't have onhashchange built in (from MDN)
+/*************************************************/
+/***************** Window Events *****************/
+// first and formost, handle cases where the browser doesn't have onhashchange built in (from MDN)
 if(!window.HashChangeEvent)(function(){
 	var lastURL=document.URL;
 	window.addEventListener("hashchange",function(event){
@@ -24,19 +24,20 @@ if(!window.HashChangeEvent)(function(){
 	});
 }());
 
-    // handles refresh (only gets triggered when refreshing an indicator page)
+// handles refresh (only gets triggered when refreshing an indicator page)
 window.onload = refreshView(grid, back, indicatorsNav, categories)
 
-    // hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
+// hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
 window.onhashchange = updateView
 
-    // listen for back/forward and update accordingly
-window.onpopstate = event => popState(event)
-
-    // update indicator tiles on window resize
+// update indicator tiles on window resize
 window.onresize = () => (indicators.forEach(indicator => setIndicatorDimensions(indicator)))
+/***************** /Window Events *****************/
+/**************************************************/
 
 
+/**************************************************/
+/**************** Dashboard Events ****************/
 // apply filter toggle to each category
 categories.forEach(category => category.onclick = () => toggleIndicators(category, indicators))
 
@@ -71,3 +72,5 @@ back.onclick = () => {
     // bring the dashboard back into view
     makeDashboard(relatedIndicators, indicatorsNav, back, grid, categories)
 }
+/**************** /Dashboard Events ***************/
+/**************************************************/

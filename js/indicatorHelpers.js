@@ -170,12 +170,15 @@ const makeIndicatorPage = hashArray => {
     const snippet = snippetsRef[title]
 
     // make sure the snippet exists before proceeding
-        // @TODO: route to a 404 page or re-route to home or something
     if(snippet){
         // remove an existing indicator page before continuing
         const oldIndicator = document.querySelector('.indicators-snippet')
-        console.log('old indicator page ', oldIndicator)
         if(oldIndicator) oldIndicator.remove()
+
+        // remove an existing sideNav before continuing
+        while(relatedIndicators.firstChild){
+            relatedIndicators.removeChild(relatedIndicators.firstChild)
+        }
 
         const primaryCategory = hashArray[1]
         getIndicatorSnippet(grid, snippet, graphs)
