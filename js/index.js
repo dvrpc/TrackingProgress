@@ -25,7 +25,7 @@ if(!window.HashChangeEvent)(function(){
 }());
 
 // handles refresh (only gets triggered when refreshing an indicator page)
-window.onload = refreshView(grid, back, indicatorsNav, categories)
+window.onload = refreshView
 
 // hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
 window.onhashchange = updateView
@@ -57,10 +57,8 @@ grid.onclick = e => {
         let title = indicator.children.length ? indicator.children[1].textContent : null
         const primaryCategory = indicator.classList[1]
         
-        removeDashboard(grid, back, indicatorsNav, categories)
-
         // update the URL which in turn hydrates the indicator page
-        setIndicatorURL(title, primaryCategory)
+        setIndicatorURL(title, primaryCategory, true)
     }
 }
 

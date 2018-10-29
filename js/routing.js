@@ -10,9 +10,11 @@ const setIndexURL = () => {
 }
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
-const setIndicatorURL = (title, primaryCategory) => {
+const setIndicatorURL = (title, primaryCategory, fromHome) => {
+
+    // pull relevant info from the URL
     const titlesMinusSpace = title.trim().replace(/\s+/g, '-')
-    const newHash = `${titlesMinusSpace}/${primaryCategory}`
+    const newHash = fromHome ? `${titlesMinusSpace}/${primaryCategory}/${fromHome}` : `${titlesMinusSpace}/${primaryCategory}`
 
     // update URL state
     history.pushState({page: 'indicator'}, title, `http://dev.dvrpc.org/TrackingProgress/#${newHash}`)
@@ -21,14 +23,12 @@ const setIndicatorURL = (title, primaryCategory) => {
     updateView()
 }
 
-// wrapper function that accepts a URL fragment and hydrates the page with the appropriate information
+// takes the URL hash and hydrates the page with the appropriate information
 const updateView = () => {
-    
     // make sure the URL is valid from our address
-        // @ TODO: change to www.dvrpc.org for deploy
+    // @ TODO: change to www.dvrpc.org for deploy
     if(location.hostname === 'dev.dvrpc.org'){
         let hashArray = location.hash.trim().slice(1).split('/')
-        console.log('hasharray is ', hashArray)
 
         const grid = document.querySelector('.indicators-grid')
         const indicatorsNav = document.querySelector('.indicators-nav')
@@ -36,7 +36,8 @@ const updateView = () => {
         const categories = [... document.querySelectorAll('.icon-set')]
 
         if(hashArray.length > 1){
-            removeDashboard(grid, indicatorsNav, back, categories)
+            let fromHome = hashArray[2] ? true : false
+            removeDashboard(grid, indicatorsNav, back, categories, fromHome)
             makeIndicatorPage(hashArray)
         }else{
             // get a handle on the necessary grid elements
@@ -47,20 +48,18 @@ const updateView = () => {
 }
 
 // refreshing an indicator page renders it w/o triggering the normal transitions
-const refreshView = (grid, back, indicatorsNav, categories) => {
+const refreshView = () => {
+
     // if refreshing the homepage, do nothing
     if(location.href !== 'http://dev.dvrpc.org/TrackingProgress/'){
+        let hashFragment = location.hash.slice(1).split('/')
 
-        // refactor into a function called (hideDashboard)
-        grid.style.display = 'none'
-        back.style.display = 'block'
-        indicatorsNav.style.justifyContent = 'flex-start'
-
-        grid.classList.add('notransition', 'fade-right')
-        indicatorsNav.classList.add('notransition', 'fade-narrow')
-        back.classList.add('notransition')
-
-        categories.forEach(category => category.classList.add('notransition', 'fade-out'))
+        // handle edge case where user refreshes with the homepage 'true' in the hash fragment
+        if(hashFragment[2] && hashFragment[2] === 'true'){
+            const newHash = `${hashFragment[0]}/${hashFragment[1]}`
+            const title = hashFragment[0]
+            history.replaceState({page: 'indicator'}, title, `http://dev.dvrpc.org/TrackingProgress/#${newHash}`)
+        }
         updateView()
     }
 }

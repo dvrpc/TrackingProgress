@@ -17,6 +17,8 @@ const makeDashboard = (relatedIndicators, indicatorsNav, back, grid, categories)
     
     // reveal the indicators grid, widen the sideNav and reveal the categories
     indicatorsNav.classList.add('notransition')
+    grid.classList.add('notransition')
+
     indicatorsNav.classList.remove('fade-narrow')
     grid.classList.remove('fade-right')
     categories.forEach(category => category.classList.remove('fade-out'))
@@ -26,22 +28,23 @@ const makeDashboard = (relatedIndicators, indicatorsNav, back, grid, categories)
     grid.style.display = 'flex'
 }
 
-// @ TODO:
-    /*
-        many issues with this function:
-            1) cat nav doesn't get fully removed on click
-    */
-const removeDashboard = (grid, indicatorsNav, back, categories) => {
+const removeDashboard = (grid, indicatorsNav, back, categories, transition) => {
+    // toggle transition depending on when/where removeDashboard gets called
+    if(transition){
+        grid.classList.remove('notransition')
+        indicatorsNav.classList.remove('notransition')
+    }else{
+        grid.classList.add('notransition')
+        indicatorsNav.classList.add('notransition')
+    }
+
     // adjust side nav display
     back.style.display = 'block'
     indicatorsNav.style.justifyContent = 'flex-start'
 
-    // allow transitions (if previously removed via a 'back to home' click or refresh)
-    grid.classList.remove('notransition')
-    indicatorsNav.classList.remove('notransition')
-
     // transition animation from dash to indicator page
     fade(grid, indicatorsNav, categories)
+
     // after the transition is done, remove the grid
     setTimeout(() => {
         grid.style.display = 'none'
