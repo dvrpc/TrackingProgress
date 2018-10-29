@@ -29,19 +29,19 @@ const updateView = () => {
         // @ TODO: change to www.dvrpc.org for deploy
     if(location.hostname === 'dev.dvrpc.org'){
         let hashArray = location.hash.trim().slice(1).split('/')
-        
+
         const grid = document.querySelector('.indicators-grid')
         const indicatorsNav = document.querySelector('.indicators-nav')
         const back = document.querySelector('.back-to-dash')
+        const categories = [... document.querySelectorAll('.icon-set')]
 
         if(hashArray.length > 1){
-            removeDashboard(false, grid, indicatorsNav, back)
+            removeDashboard(grid, indicatorsNav, back, categories)
 
             makeIndicatorPage(hashArray)
         }else{
             // get a handle on the necessary grid elements
             const relatedIndicators = document.querySelector('.related-indicators')
-            const categories = [... document.querySelectorAll('.icon-set')]
             
             makeDashboard(relatedIndicators, indicatorsNav, back, grid, categories)
         }

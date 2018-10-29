@@ -56,7 +56,7 @@ grid.onclick = e => {
         let title = indicator.children.length ? indicator.children[1].textContent : null
         const primaryCategory = indicator.classList[1]
         
-        removeDashboard(true, grid, back, indicatorsNav, categories)
+        removeDashboard(grid, back, indicatorsNav, categories)
 
         // update the URL which in turn hydrates the indicator page
         setIndicatorURL(title, primaryCategory)

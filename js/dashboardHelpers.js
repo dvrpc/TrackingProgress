@@ -31,26 +31,21 @@ const makeDashboard = (relatedIndicators, indicatorsNav, back, grid, categories)
         many issues with this function:
             1) cat nav doesn't get fully removed on click
     */
-const removeDashboard = (transition, grid, indicatorsNav, back, categories) => {
+const removeDashboard = (grid, indicatorsNav, back, categories) => {
     // adjust side nav display
     back.style.display = 'block'
     indicatorsNav.style.justifyContent = 'flex-start'
 
-    if(transition){
-        // allow transitions (if previously removed via a 'back to home' click or refresh)
-        grid.classList.remove('notransition')
-        indicatorsNav.classList.remove('notransition')
+    // allow transitions (if previously removed via a 'back to home' click or refresh)
+    grid.classList.remove('notransition')
+    indicatorsNav.classList.remove('notransition')
 
-        // transition animation from dash to indicator page
-        fade(grid, indicatorsNav, categories)
-        // after the transition is done, remove the grid
-        setTimeout(() => {
-            grid.style.display = 'none'
-        }, 1000)
-    }else{
+    // transition animation from dash to indicator page
+    fade(grid, indicatorsNav, categories)
+    // after the transition is done, remove the grid
+    setTimeout(() => {
         grid.style.display = 'none'
-        indicatorsNav.classList.add('fade-narrow')
-    }
+    }, 1000)
 }
 
 // function to display/hide indicators based on which category is clicked
