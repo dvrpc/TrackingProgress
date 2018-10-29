@@ -1,4 +1,4 @@
-import { makeDashboard, removeDashboard, toggleIndicators, setIndicatorDimensions } from './dashboardHelpers.js'
+import { toggleIndicators, setIndicatorDimensions } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
 
 // get a handle on the dashboard elements
@@ -7,8 +7,6 @@ const categories = [... document.querySelectorAll('.icon-set')]
 
 // get a handle on the indicator page elements
 const back = document.querySelector('.back-to-dash')
-const indicatorsNav = document.querySelector('.indicators-nav')
-const relatedIndicators = document.querySelector('.related-indicators')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 
@@ -62,13 +60,7 @@ grid.onclick = e => {
     }
 }
 
-// return to dashboard view
-back.onclick = () => {
-    // reset the URL to the index
-    setIndexURL()
-
-    // bring the dashboard back into view
-    makeDashboard(relatedIndicators, indicatorsNav, back, grid, categories)
-}
+// return to dashboard view 
+back.onclick = () => setIndexURL()
 /**************** /Dashboard Events ***************/
 /**************************************************/
