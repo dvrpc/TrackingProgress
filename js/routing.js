@@ -15,11 +15,11 @@ const setIndexURL = () => {
 }
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
-const setIndicatorURL = (title, primaryCategory, fromHome) => {
+const setIndicatorURL = (title, primaryCategory, transition) => {
 
     // pull relevant info from the URL
     const titlesMinusSpace = title.trim().replace(/\s+/g, '-')
-    const newHash = fromHome ? `${titlesMinusSpace}/${primaryCategory}/${fromHome}` : `${titlesMinusSpace}/${primaryCategory}`
+    const newHash = transition ? `${titlesMinusSpace}/${primaryCategory}/${transition}` : `${titlesMinusSpace}/${primaryCategory}`
 
     // update URL state
     history.pushState({page: 'indicator'}, title, `http://dev.dvrpc.org/TrackingProgress/#${newHash}`)
@@ -35,9 +35,10 @@ const updateView = () => {
         let hashArray = location.hash.trim().slice(1).split('/')
 
         if(hashArray.length > 1){
-            let fromHome = hashArray[2] ? true : false
-            removeDashboard(grid, indicatorsNav, back, categories, fromHome)
+            let transition = hashArray[2] ? true : false
+            removeDashboard(grid, indicatorsNav, back, categories, transition)
             makeIndicatorPage(hashArray)
+            
         }else{
             // get a handle on the necessary grid elements
             const relatedIndicators = document.querySelector('.related-indicators')
