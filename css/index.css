@@ -171,6 +171,7 @@ nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     overflow-y: auto;
     margin-left: 15vw;
     transition: margin-left 1s;
@@ -372,8 +373,8 @@ footer{
 }
 @media all and (max-width: 800px){
     /* Mobile styles for nav */
-    #nav-h1{
-        font-size: 1.2rem;
+    #nav-header{
+        height: 80%;
     }
     #nav-social-media a:not(:first-child){
         display: none;
@@ -387,6 +388,7 @@ footer{
     }
     .indicators-nav{
         height: 9vh;
+        background: white;
         position: sticky;
         top: 0;
         width: 100%;
