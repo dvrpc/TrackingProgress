@@ -38,7 +38,7 @@ const updateView = () => {
             let transition = hashArray[2] ? true : false
             removeDashboard(grid, indicatorsNav, back, categories, transition)
             makeIndicatorPage(hashArray)
-            
+
         }else{
             // get a handle on the necessary grid elements
             const relatedIndicators = document.querySelector('.related-indicators')
@@ -60,6 +60,7 @@ const refreshView = () => {
             const title = hashFragment[0]
             history.replaceState({page: 'indicator'}, title, `http://dev.dvrpc.org/TrackingProgress/#${newHash}`)
         }
+        
         updateView()
     }
 }

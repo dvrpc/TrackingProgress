@@ -1,6 +1,15 @@
 // rerence to the clicked category (this has to exist outside the scope of toggleIndicators, otherwise clicking an active category won't reset to all indicators view)
 let clickedRef;
 
+// colors to change indicator background to on cat filter
+const catColors = {
+    'economy': '#bd2756',
+    'environment': '#7a9c3e',
+    'community': '#006ba6',
+    'transportation': '#dd6e1d',
+    'equity': '#582267'
+}
+
 const makeDashboard = (relatedIndicators, indicatorsNav, back, grid, categories) => {
     // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
     const indicator = document.querySelector('.indicators-snippet')
@@ -60,19 +69,26 @@ const toggleIndicators = (element, indicators) => {
     element.classList.toggle('category-active')
 
     // get a handle on the id of the clicked div in order to grab its corresponding indicators
-    let category = element.id.split('-')[0]+'-indicator'
+    let id = element.id.split('-')[0]
+    let category = id+'-indicator'
 
     // handle 3 conditions & expected behaviors: 
         // all options visible & user clicks a category --> filters to just that categories indicators
         // category already clicked & user clicks another one --> filters to just the new categories indicators
         // category already clicked & user clicks it again  --> show all indicators
     if(clickedRef === element){
-        indicators.forEach(indicator => indicator.classList.remove('inactive'))
+        indicators.forEach(indicator => {
+            indicator.classList.remove('inactive')
+            indicator.style.background = '#4fa3a8'
+        })
         clickedRef = ''
     }else{    
         indicators.forEach(indicator => {
             if(!indicator.classList.contains(category)) indicator.classList.add('inactive')
-            else indicator.classList.remove('inactive')
+            else {
+                indicator.classList.remove('inactive')
+                indicator.style.background = catColors[id]
+        }
         })
         clickedRef = element
     }
