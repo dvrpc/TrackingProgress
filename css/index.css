@@ -6,6 +6,7 @@ body{
     margin: 0;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
+    font-size: 16px;
 }
 .hidden{
     display: none;
@@ -161,7 +162,7 @@ nav{
 .icon-set p{
     margin: 0;
     padding: 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 .indicators-grid{
     position: absolute;

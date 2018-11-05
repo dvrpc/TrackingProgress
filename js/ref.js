@@ -478,12 +478,208 @@ const snippetsRef = {
             }
         ]
     },
+    'Affordable Housing': {
+        file: 'affordableHousing.html',
+        map: false,
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/housing_afford_graph_1.csv',
+                data: [
+                    {
+                        'key': 'DVRPC',
+                        columns: ['year', 'DVRPC']
+                    },
+                    {
+                        'key': 'Pennsylvania Suburbs',
+                        columns: ['year', 'Pennsylvania Suburbs']
+                    },
+                    {
+                        'key': 'New Jersey Suburbs',
+                        columns: ['year', 'New Jersey Suburbs']
+                    },
+                    {
+                        'key': 'Philadelphia Subregion',
+                        columns: ['year', 'Philadelphia Subregion']
+                    },
+                    {
+                        'key': 'Core City',
+                        columns: ['year', 'Core City']
+                    },
+                    {
+                        'key': 'Developed Community',
+                        columns: ['year', 'Developed Community']
+                    },
+                    {
+                        'key': 'Growing Suburb',
+                        columns: ['year', 'Growing Suburb']
+                    },
+                    {
+                        'key': 'Rural Area',
+                        columns: ['year', 'Rural Area']
+                    },
+                    {
+                        'key': 'Bucks County',
+                        columns: ['year', 'Bucks County']
+                    },
+                    {
+                        'key': 'Chester County',
+                        columns: ['year', 'Chester County']
+                    },
+                    {
+                        'key': 'Delaware County',
+                        columns: ['year', 'Delaware County']
+                    },
+                    {
+                        'key': 'Montgomery County',
+                        columns: ['year', 'Montgomery County']
+                    },
+                    {
+                        'key': 'Burlington County',
+                        columns: ['year', 'Burlington County']
+                    },
+                    {
+                        'key': 'Camden County',
+                        columns: ['year', 'Camden County']
+                    },
+                    {
+                        'key': 'Gloucester County',
+                        columns: ['year', 'Gloucester County']
+                    },
+                    {
+                        'key': 'Mercer County',
+                        columns: ['year', 'Mercer County']
+                    },
+                    {
+                        'key': 'Philadelphia County',
+                        columns: ['year', 'Philadelphia County']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: './data/housing_afford_graph_2.csv',
+                columnOptions: [
+                    ['DVRPC- Not Computed- Own', 'DVRPC- Not Computed- Rent', 'DVRPC- Below 35%- Own', 'DVRPC- Below 35%- Rent', 'DVRPC- Above 35%- Rent', 'DVRPC- Above 35%- Own'],
+                    ['Pennsylvania Suburbs- Not Computed- Own', 'Pennsylvania Suburbs- Not Computed- Rent', 'Pennsylvania Suburbs- Below 35%- Own', 'Pennsylvania Suburbs- Below 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Own'],
+                    ['New Jersey Suburbs- Not Computed- Own', 'New Jersey Suburbs- Not Computed- Rent', 'New Jersey Suburbs- Below 35%- Own', 'New Jersey Suburbs- Below 35%- Rent', 'New Jersey Suburbs- Above 35%- Rent', 'New Jersey Suburbs- Above 35%- Own'],
+                    ['Philadelphia Subregion- Not Computed- Own', 'Philadelphia Subregion- Not Computed- Rent', 'Philadelphia Subregion- Below 35%- Own', 'Philadelphia Subregion- Below 35%- Rent', 'Philadelphia Subregion- Above 35%- Rent', 'Philadelphia Subregion- Above 35%- Own'],
+                    ['Core City- Not Computed- Own', 'Core City- Not Computed- Rent', 'Core City- Below 35%- Own', 'Core City- Below 35%- Rent', 'Core City- Above 35%- Rent', 'Core City- Above 35%- Own'],
+                    ['Developed Community- Not Computed- Own', 'Developed Community- Not Computed- Rent', 'Developed Community- Below 35%- Own', 'Developed Community- Below 35%- Rent', 'Developed Community- Above 35%- Rent', 'Developed Community- Above 35%- Own'],
+                    ['Growing Suburb- Not Computed- Own', 'Growing Suburb- Not Computed- Rent', 'Growing Suburb- Below 35%- Own', 'Growing Suburb- Below 35%- Rent', 'Growing Suburb- Above 35%- Rent', 'Growing Suburb- Above 35%- Own'],
+                    ['Rural Area- Not Computed- Own', 'Rural Area- Not Computed- Rent', 'Rural Area- Below 35%- Own', 'Rural Area- Below 35%- Rent', 'Rural Area- Above 35%- Rent', 'Rural Area- Above 35%- Own'],
+                    ['Bucks County- Not Computed- Own', 'Bucks County- Not Computed- Rent', 'Bucks County- Below 35%- Own', 'Bucks County- Below 35%- Rent', 'Bucks County- Above 35%- Rent', 'Bucks County- Above 35%- Own'],
+                    ['Chester County- Not Computed- Own', 'Chester County- Not Computed- Rent', 'Chester County- Below 35%- Own', 'Chester County- Below 35%- Rent', 'Chester County- Above 35%- Rent', 'Chester County- Above 35%- Own'],
+                    ['Delaware County- Not Computed- Own', 'Delaware County- Not Computed- Rent', 'Delaware County- Below 35%- Own', 'Delaware County- Below 35%- Rent', 'Delaware County- Above 35%- Rent', 'Delaware County- Above 35%- Own'],
+                    ['Montgomery County- Not Computed- Own', 'Montgomery County- Not Computed- Rent', 'Montgomery County- Below 35%- Own', 'Montgomery County- Below 35%- Rent', 'Montgomery County- Above 35%- Rent', 'Montgomery County- Above 35%- Own'],
+                    ['Philadelphia County- Not Computed- Own', 'Philadelphia County- Not Computed- Rent', 'Philadelphia County- Below 35%- Own', 'Philadelphia County- Below 35%- Rent', 'Philadelphia County- Above 35%- Rent', 'Philadelphia County- Above 35%- Own'],
+                    ['Burlington County- Not Computed- Own', 'Burlington County- Not Computed- Rent', 'Burlington County- Below 35%- Own', 'Burlington County- Below 35%- Rent', 'Burlington County- Above 35%- Rent', 'Burlington County- Above 35%- Own'],
+                    ['Camden County- Not Computed- Own', 'Camden County- Not Computed- Rent', 'Camden County- Below 35%- Own', 'Camden County- Below 35%- Rent', 'Camden County- Above 35%- Rent', 'Camden County- Above 35%- Own'],
+                    ['Gloucester County- Not Computed- Own', 'Gloucester County- Not Computed- Rent', 'Gloucester County- Below 35%- Own', 'Gloucester County- Below 35%- Rent', 'Gloucester County- Above 35%- Rent', 'Gloucester County- Above 35%- Own'],
+                    ['Mercer County- Not Computed- Own', 'Mercer County- Not Computed- Rent', 'Mercer County- Below 35%- Own', 'Mercer County- Below 35%- Rent', 'Mercer County- Above 35%- Rent', 'Mercer County- Above 35%- Own']
+                ],
+                data: [
+                    {
+                        'key': 'Not Computed - Own',
+                        columns: ['year', 'DVRPC- Not Computed- Own']
+                    },
+                    {
+                        'key': 'Not Computed - Rent',
+                        columns: ['year', 'DVRPC- Not Computed- Rent']
+                    },
+                    {
+                        'key': 'Below 35% - Own',
+                        columns: ['year', 'DVRPC- Below 35%- Own']
+                    },
+                    {
+                        'key': 'Below 35% - Rent',
+                        columns: ['year', 'DVRPC- Below 35%- Rent']
+                    },
+                    {
+                        'key': 'Above 35% - Rent',
+                        columns: ['year', 'DVRPC- Above 35%- Rent']
+                    },
+                    {
+                        'key': 'Above 35% - Own',
+                        columns: ['year', 'DVRPC- Above 35%- Own']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart3',
+                dataSource: './data/housing_afford_graph_3.csv',
+                columnOptions: [
+                    ['DVRPC- Not Computed', 'DVRPC- 0.0-9.9%', 'DVRPC- 10.0-14.9%', 'DVRPC- 15.0-19.9%', 'DVRPC- 20.0-24.9%', 'DVRPC- 25.0-29.9%', 'DVRPC- 30.0-34.9%', 'DVRPC- 35.0-39.9%', 'DVRPC- 40.0-49.9%', 'DVRPC- 50%+'],
+                    ['Pennsylvania Suburbs- Not Computed', 'Pennsylvania Suburbs- 0.0-9.9%', 'Pennsylvania Suburbs- 10.0-14.9%', 'Pennsylvania Suburbs- 15.0-19.9%', 'Pennsylvania Suburbs- 20.0-24.9%', 'Pennsylvania Suburbs- 25.0-29.9%', 'Pennsylvania Suburbs- 30.0-34.9%', 'Pennsylvania Suburbs- 35.0-39.9%', 'Pennsylvania Suburbs- 40.0-49.9%', 'Pennsylvania Suburbs- 50%+'],
+                    ['New Jersey Suburbs- Not Computed', 'New Jersey Suburbs- 0.0-9.9%', 'New Jersey Suburbs- 10.0-14.9%', 'New Jersey Suburbs- 15.0-19.9%', 'New Jersey Suburbs- 20.0-24.9%', 'New Jersey Suburbs- 25.0-29.9%', 'New Jersey Suburbs- 30.0-34.9%', 'New Jersey Suburbs- 35.0-39.9%', 'New Jersey Suburbs- 40.0-49.9%', 'New Jersey Suburbs- 50%+'],
+                    ['Philadelphia Subregion- Not Computed', 'Philadelphia Subregion- 0.0-9.9%', 'Philadelphia Subregion- 10.0-14.9%', 'Philadelphia Subregion- 15.0-19.9%', 'Philadelphia Subregion- 20.0-24.9%', 'Philadelphia Subregion- 25.0-29.9%', 'Philadelphia Subregion- 30.0-34.9%', 'Philadelphia Subregion- 35.0-39.9%', 'Philadelphia Subregion- 40.0-49.9%', 'Philadelphia Subregion- 50%+'],
+                    ['Core City- Not Computed', 'Core City- 0.0-9.9%','Core City- 10.0-14.9%', 'Core City- 15.0-19.9%', 'Core City- 20.0-24.9%', 'Core City- 25.0-29.9%', 'Core City- 30.0-34.9%', 'Core City- 35.0-39.9%', 'Core City- 40.0-49.9%', 'Core City- 50%+'],
+                    ['Developed Community- Not Computed', 'Developed Community- 0.0-9.9%', 'Developed Community- 10.0-14.9%', 'Developed Community- 15.0-19.9%', 'Developed Community- 20.0-24.9%', 'Developed Community- 25.0-29.9%', 'Developed Community- 30.0-34.9%', 'Developed Community- 35.0-39.9%', 'Developed Community- 40.0-49.9%', 'Developed Community- 50%+'],
+                    ['Growing Suburb- Not Computed', 'Growing Suburb- 0.0-9.9%', 'Growing Suburb- 10.0-14.9%', 'Growing Suburb- 15.0-19.9%', 'Growing Suburb- 20.0-24.9%', 'Growing Suburb- 25.0-29.9%', 'Growing Suburb- 30.0-34.9%', 'Growing Suburb- 35.0-39.9%', 'Growing Suburb- 40.0-49.9%', 'Growing Suburb- 50%+'],
+                    ['Rural Area- Not Computed', 'Rural Area- 0.0-9.9%', 'Rural Area- 10.0-14.9%', 'Rural Area- 15.0-19.9%', 'Rural Area- 20.0-24.9%', 'Rural Area- 25.0-29.9%', 'Rural Area- 30.0-34.9%', 'Rural Area- 35.0-39.9%', 'Rural Area- 40.0-49.9%', 'Rural Area- 50%+'],
+                    ['Bucks County- Not Computed', 'Bucks County- 0.0-9.9%', 'Bucks County- 10.0-14.9%', 'Bucks County- 15.0-19.9%', 'Bucks County- 20.0-24.9%', 'Bucks County- 25.0-29.9%', 'Bucks County- 30.0-34.9%', 'Bucks County- 35.0-39.9%', 'Bucks County- 40.0-49.9%', 'Bucks County- 50%+'],
+                    ['Chester County- Not Computed', 'Chester County- 0.0-9.9%', 'Chester County- 10.0-14.9%', 'Chester County- 15.0-19.9%', 'Chester County- 20.0-24.9%', 'Chester County- 25.0-29.9%', 'Chester County- 30.0-34.9%', 'Chester County- 35.0-39.9%', 'Chester County- 40.0-49.9%', 'Chester County- 50%+'],
+                    ['Delaware County- Not Computed', 'Delaware County- 0.0-9.9%', 'Delaware County- 10.0-14.9%', 'Delaware County- 15.0-19.9%', 'Delaware County- 20.0-24.9%', 'Delaware County- 25.0-29.9%', 'Delaware County- 30.0-34.9%', 'Delaware County- 35.0-39.9%', 'Delaware County- 40.0-49.9%', 'Delaware County- 50%+'],
+                    ['Montgomery County- Not Computed', 'Montgomery County- 0.0-9.9%','Montgomery County- 10.0-14.9%', 'Montgomery County- 15.0-19.9%', 'Montgomery County- 20.0-24.9%', 'Montgomery County- 25.0-29.9%', 'Montgomery County- 30.0-34.9%', 'Montgomery County- 35.0-39.9%', 'Montgomery County- 40.0-49.9%', 'Montgomery County- 50%+'],
+                    ['Philadelphia County- Not Computed', 'Philadelphia County- 0.0-9.9%', 'Philadelphia County- 10.0-14.9%', 'Philadelphia County- 15.0-19.9%', 'Philadelphia County- 20.0-24.9%', 'Philadelphia County- 25.0-29.9%', 'Philadelphia County- 30.0-34.9%', 'Philadelphia County- 35.0-39.9%', 'Philadelphia County- 40.0-49.9%', 'Philadelphia County- 50%+'],
+                    ['Burlington County- Not Computed', 'Burlington County- 0.0-9.9%', 'Burlington County- 10.0-14.9%', 'Burlington County- 15.0-19.9%', 'Burlington County- 20.0-24.9%', 'Burlington County- 25.0-29.9%', 'Burlington County- 30.0-34.9%', 'Burlington County- 35.0-39.9%', 'Burlington County- 40.0-49.9%', 'Burlington County- 50%+'],
+                    ['Camden County- Not Computed', 'Camden County- 0.0-9.9%', 'Camden County- 10.0-14.9%', 'Camden County- 15.0-19.9%', 'Camden County- 20.0-24.9%', 'Camden County- 25.0-29.9%', 'Camden County- 30.0-34.9%', 'Camden County- 35.0-39.9%', 'Camden County- 40.0-49.9%', 'Camden County- 50%+'],
+                    ['Gloucester County- Not Computed', 'Gloucester County- 0.0-9.9%', 'Gloucester County- 10.0-14.9%', 'Gloucester County- 15.0-19.9%', 'Gloucester County- 20.0-24.9%', 'Gloucester County- 25.0-29.9%', 'Gloucester County- 30.0-34.9%', 'Gloucester County- 35.0-39.9%', 'Gloucester County- 40.0-49.9%', 'Gloucester County- 50%+'],
+                    ['Mercer County- Not Computed', 'Mercer County- 0.0-9.9%', 'Mercer County- 10.0-14.9%', 'Mercer County- 15.0-19.9%', 'Mercer County- 20.0-24.9%', 'Mercer County- 25.0-29.9%', 'Mercer County- 30.0-34.9%', 'Mercer County- 35.0-39.9%', 'Mercer County- 40.0-49.9%', 'Mercer County- 50%+']
+                ],
+                data: [
+                    {
+                        'key': 'Not Computed',
+                        columns: ['year', 'DVRPC- Not Computed']
+                    },
+                    {
+                        'key': '0.0 - 9.9%',
+                        columns: ['year', 'DVRPC- 0.0-9.9%']
+                    },
+                    {
+                        'key': '10.0 - 14.9%',
+                        columns: ['year', 'DVRPC- 10.0-14.9%']
+                    },
+                    {
+                        'key': '15.0 - 19.9%',
+                        columns: ['year', 'DVRPC- 15.0-19.9%']
+                    },
+                    {
+                        'key': '20.0 - 24.9%',
+                        columns: ['year', 'DVRPC- 20.0-24.9%']
+                    },
+                    {
+                        'key': '25.0 - 29.9%',
+                        columns: ['year', 'DVRPC- 25.0-29.9%']
+                    },
+                    {
+                        'key': '30 - 34.9%',
+                        columns: ['year', 'DVRPC- 30.0-34.9%']
+                    },
+                    {
+                        'key': '35.0 - 39.9%',
+                        columns: ['year', 'DVRPC- 35.0-39.9%']
+                    },
+                    {
+                        'key': '40.0 - 49.9%',
+                        columns: ['year', 'DVRPC- 40.0-49.9%']
+                    },
+                    {
+                        'key': '50%+',
+                        columns: ['year', 'DVRPC- 50%+']
+                    },
+                ]
+            },
+        ]
+    },
     'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
     'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', map: false, d3: false },
     'Income Inequality': {file: 'incomeInequality.html', map: false, d3: false },
     'Land Preservation': {file: 'landPreservation.html', map: false, d3: false },
     'Population Growth': {file: 'populationGrowth.html', map: true, d3: false},
-    'Affordable Housing': {file: 'affordableHousing.html', map: false, d3: false},
     'Transit Conditions': {file: 'transitConditions.html', map: true, d3: false}
 }
 
