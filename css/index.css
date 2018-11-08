@@ -199,6 +199,7 @@ nav{
     width: 69%;
     height: 69%;
     margin: 0 auto;
+    font-size: 0.6em;
 }
 .indicators-title{
     display: flex;
@@ -214,6 +215,14 @@ nav{
     color: #f7f7f7;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px
+}
+.flipside{
+    display: none;
+    position: absolute;
+}
+.flipside-img{
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -436,6 +445,7 @@ footer{
     .fade-narrow{
         height: 8vh;
         width: 100%;
+        background: #222222;
     }
     .back-to-dash{
         width: auto;

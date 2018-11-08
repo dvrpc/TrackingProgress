@@ -115,4 +115,32 @@ const setIndicatorDimensions = indicator => {
     indicator.style.margin = `${dimensions * 0.01}px`
 }
 
-export {toggleIndicators, fade, setIndicatorDimensions, makeDashboard, removeDashboard}
+const indicatorHoverFlip = (indicator, flipTo) => {
+    
+    // get the target of the mose event
+    indicator = indicator.originalTarget
+    
+    // get to the parent element (unless you're already on it)
+    if(!indicator.classList.contains('indicators-grid-item')) indicator = indicator.parentElement
+    
+    // toggle display property of ze children
+    var children = indicator.children
+
+    // brute force just to get it to work for now
+    // flipTo condition: hide default view and reveal quick peak states
+    if(flipTo){
+        children[0].style.display = 'none'
+        children[1].style.display = 'none'
+        children[2].style.display = 'block'
+    
+    // else: go back to default view
+    }else{
+        children[0].style.display = 'block'
+        children[1].style.display = 'flex'
+        children[2].style.display = 'none'
+    }
+    
+    //children[i].style.display === 'none' ? children[i].style.display = 'block' : children[i].style.display = 'none'
+}
+
+export {toggleIndicators, fade, setIndicatorDimensions, makeDashboard, removeDashboard, indicatorHoverFlip}

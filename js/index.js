@@ -1,4 +1,4 @@
-import { toggleIndicators, setIndicatorDimensions } from './dashboardHelpers.js'
+import { toggleIndicators, setIndicatorDimensions, indicatorHoverFlip } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
 
 // get a handle on the dashboard elements
@@ -8,6 +8,7 @@ const categories = [... document.querySelectorAll('.icon-set')]
 // get a handle on the indicator page elements
 const back = document.querySelector('.back-to-dash')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
+
 
 
 /*************************************************/
@@ -30,8 +31,7 @@ window.onhashchange = updateView
 
 // update indicator tiles on window resize
 window.onresize = () => (indicators.forEach(indicator => setIndicatorDimensions(indicator)))
-/***************** /Window Events *****************/
-/**************************************************/
+
 
 
 /**************************************************/
@@ -39,18 +39,21 @@ window.onresize = () => (indicators.forEach(indicator => setIndicatorDimensions(
 // apply filter toggle to each category
 categories.forEach(category => category.onclick = () => toggleIndicators(category, indicators))
 
-// make sure indicators are always square
-indicators.forEach(indicator => setIndicatorDimensions(indicator))
+// make sure indicators are always square + add flip handler
+// @TODO: figure out a better way to assign these click handlers because it's a huge bottleneck atm
+indicators.forEach(indicator => {
+    setIndicatorDimensions(indicator)
+    indicator.onmouseenter = indicator => indicatorHoverFlip(indicator, true)
+    indicator.onmouseleave = indicator => indicatorHoverFlip(indicator, false)
+})
 
-// apply fade-out transition to each indicator, reveal the 'back' button & populate the new side nav w/related indicators. Use event delegation to reduce the number of assigned click handlers
+// load the selected indicator page & transition to it
 grid.onclick = e => {
     // avoid cases where user clicks the grid itself
     if(e.target.nodeName != 'SECTION'){
-        let indicator = e.target
+        // introduction of the flipside jawns means the clicked element will always be the flipside img which makes the indicator itself the grandparent. every time.
+        let indicator = e.target.parentNode.parentNode
         
-        // if img or p is selected, get the parent div to have all the information 
-        if(indicator.nodeName != 'DIV') indicator = indicator.parentElement
-
         // get the title and primary class of the selected indicator
         let title = indicator.children.length ? indicator.children[1].textContent : null
         const primaryCategory = indicator.classList[1]
@@ -62,5 +65,3 @@ grid.onclick = e => {
 
 // return to dashboard view 
 back.onclick = () => setIndexURL()
-/**************** /Dashboard Events ***************/
-/**************************************************/

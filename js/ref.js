@@ -1,3 +1,75 @@
+// Store references to common dropdown datasets (pull them into their own file and import cause why not)
+const fullGeography = [
+    {
+        'key': 'DVRPC',
+        columns: ['year', 'DVRPC']
+    },
+    {
+        'key': 'Pennsylvania Suburbs',
+        columns: ['year', 'Pennsylvania Suburbs']
+    },
+    {
+        'key': 'New Jersey Suburbs',
+        columns: ['year', 'New Jersey Suburbs']
+    },
+    {
+        'key': 'Philadelphia Subregion',
+        columns: ['year', 'Philadelphia Subregion']
+    },
+    {
+        'key': 'Core City',
+        columns: ['year', 'Core City']
+    },
+    {
+        'key': 'Developed Community',
+        columns: ['year', 'Developed Community']
+    },
+    {
+        'key': 'Growing Suburb',
+        columns: ['year', 'Growing Suburb']
+    },
+    {
+        'key': 'Rural Area',
+        columns: ['year', 'Rural Area']
+    },
+    {
+        'key': 'Bucks County',
+        columns: ['year', 'Bucks County']
+    },
+    {
+        'key': 'Chester County',
+        columns: ['year', 'Chester County']
+    },
+    {
+        'key': 'Delaware County',
+        columns: ['year', 'Delaware County']
+    },
+    {
+        'key': 'Montgomery County',
+        columns: ['year', 'Montgomery County']
+    },
+    {
+        'key': 'Burlington County',
+        columns: ['year', 'Burlington County']
+    },
+    {
+        'key': 'Camden County',
+        columns: ['year', 'Camden County']
+    },
+    {
+        'key': 'Gloucester County',
+        columns: ['year', 'Gloucester County']
+    },
+    {
+        'key': 'Mercer County',
+        columns: ['year', 'Mercer County']
+    },
+    {
+        'key': 'Philadelphia County',
+        columns: ['year', 'Philadelphia County']
+    }
+]
+
 const snippetsRef = {
     'Air Quality': {
         file: 'airQuality.html',
@@ -486,76 +558,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/housing_afford_graph_1.csv',
-                data: [
-                    {
-                        'key': 'DVRPC',
-                        columns: ['year', 'DVRPC']
-                    },
-                    {
-                        'key': 'Pennsylvania Suburbs',
-                        columns: ['year', 'Pennsylvania Suburbs']
-                    },
-                    {
-                        'key': 'New Jersey Suburbs',
-                        columns: ['year', 'New Jersey Suburbs']
-                    },
-                    {
-                        'key': 'Philadelphia Subregion',
-                        columns: ['year', 'Philadelphia Subregion']
-                    },
-                    {
-                        'key': 'Core City',
-                        columns: ['year', 'Core City']
-                    },
-                    {
-                        'key': 'Developed Community',
-                        columns: ['year', 'Developed Community']
-                    },
-                    {
-                        'key': 'Growing Suburb',
-                        columns: ['year', 'Growing Suburb']
-                    },
-                    {
-                        'key': 'Rural Area',
-                        columns: ['year', 'Rural Area']
-                    },
-                    {
-                        'key': 'Bucks County',
-                        columns: ['year', 'Bucks County']
-                    },
-                    {
-                        'key': 'Chester County',
-                        columns: ['year', 'Chester County']
-                    },
-                    {
-                        'key': 'Delaware County',
-                        columns: ['year', 'Delaware County']
-                    },
-                    {
-                        'key': 'Montgomery County',
-                        columns: ['year', 'Montgomery County']
-                    },
-                    {
-                        'key': 'Burlington County',
-                        columns: ['year', 'Burlington County']
-                    },
-                    {
-                        'key': 'Camden County',
-                        columns: ['year', 'Camden County']
-                    },
-                    {
-                        'key': 'Gloucester County',
-                        columns: ['year', 'Gloucester County']
-                    },
-                    {
-                        'key': 'Mercer County',
-                        columns: ['year', 'Mercer County']
-                    },
-                    {
-                        'key': 'Philadelphia County',
-                        columns: ['year', 'Philadelphia County']
-                    }
-                ]
+                data: fullGeography
             },
             {
                 type: 'stacked bar',
@@ -673,6 +676,139 @@ const snippetsRef = {
                     },
                 ]
             },
+        ]
+    },
+    'Job Growth': {
+        file: 'jobGrowth.html',
+        map: false,
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/jobs_graph1.csv',
+                columnOptions: [
+                    ['DVRPC', 'New Jersey Suburbs', 'Pennsylvania Suburbs', 'Philadelphia Subregion', 'Bucks', 'Burlington', 'Camden', 'Chester', 'Delaware', 'Gloucester', 'Mercer', 'Montgomery', 'Philadelphia'],
+                    ['DVRPC-total', 'New Jersey Suburbs-total', 'Pennsylvania Suburbs-total', 'Philadelphia Subregion-total', 'Bucks-total', 'Burlington-total', 'Camden-total', 'Chester-total', 'Delaware-total', 'Gloucester-total', 'Mercer-total', 'Montgomery-total', 'Philadelphia-total']
+                ],
+                data: fullGeography
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: './data/jobs_graph2.csv',
+                data: [
+                    {
+                        'key': 'Bucks County',
+                        columns: ['year', 'Bucks']
+                    },
+                    {
+                        'key': 'Burlington County',
+                        columns: ['year', 'Burlington']
+                    },
+                    {
+                        'key': 'Camden County',
+                        columns: ['year', 'Camden']
+                    },
+                    {
+                        'key': 'Chester County',
+                        columns: ['year', 'Chester']
+                    },
+                    {
+                        'key': 'Delaware County',
+                        columns: ['year', 'Delaware']
+                    },
+                    {
+                        'key': 'Gloucester County',
+                        columns: ['year', 'Gloucester']
+                    },
+                    {
+                        'key': 'Mercer County',
+                        columns: ['year', 'Mercer']
+                    },
+                    {
+                        'key': 'Montgomery County',
+                        columns: ['year', 'Montgomery']
+                    },
+                    {
+                        'key': 'Philadelphia County',
+                        columns: ['year', 'Philadelphia']
+                    },
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart3',
+                dataSource: './data/jobs_graph3.csv',
+                columnOptions: [
+                    ['DVRPC- Accommodation and food services', 'DVRPC- Agriculture, forestry, fishing', 'DVRPC- Arts, entertainment, and recreation', 'DVRPC- Construction and manufacturing', 'DVRPC- Educational services', 'DVRPC- Finance, Insurance, and Real Estate', 'DVRPC- Health care and social assistance', 'DVRPC- Industry not classified', 'DVRPC- Information Technology', 'DVRPC- Management of companies and enterprises', 'DVRPC- Mining and utilities', 'DVRPC- Other services (except public administration)', 'DVRPC- Professional, scientific, and technical services', 'DVRPC- Transportation and warehousing', 'DVRPC- Waste management and remediation services', 'DVRPC- Wholesale and retail trade']
+                ],
+                data: [
+                    {
+                        'key': 'Accommodation and food services',
+                        'columns': ['year', 'DVRPC- Accommodation and food services']
+                    },
+                    {
+                        'key': 'Agriculture, forestry, fishing',
+                        'columns': ['year', 'DVRPC- Agriculture, forestry, fishing']
+                    },
+                    {
+                        'key': 'Arts, entertainment, and recreation',
+                        'columns': ['year', 'DVRPC- Arts, entertainment, and recreation']
+                    },
+                    {
+                        'key': 'Construction and manufacturing',
+                        'columns': ['year', 'DVRPC- Construction and manufacturing']
+                    },
+                    {
+                        'key': 'Educational services',
+                        'columns': ['year', 'DVRPC- Educational services']
+                    },
+                    {
+                        'key': 'Finance, Insurance, and Real Estate',
+                        'columns': ['year', 'DVRPC- Finance, Insurance, and Real Estate']
+                    },
+                    {
+                        'key': 'Health care and social assistance',
+                        'columns': ['year', 'DVRPC- Health care and social assistance']
+                    },
+                    {
+                        'key': 'Industry not classified',
+                        'columns': ['year', 'DVRPC- Industry not classified']
+                    },
+                    {
+                        'key': 'Information Technology',
+                        'columns': ['year', 'DVRPC- Information Technology']
+                    },
+                    {
+                        'key': 'Management of companies and enterprises',
+                        'columns': ['year', 'DVRPC- Management of companies and enterprises']
+                    },
+                    {
+                        'key': 'Mining and utilities',
+                        'columns': ['year', 'DVRPC- Mining and utilities']
+                    },
+                    {
+                        'key': 'Other services (except public administration)',
+                        'columns': ['year', 'DVRPC- Other services (except public administration)']
+                    },
+                    {
+                        'key': 'Professional, scientific, and technical services',
+                        'columns': ['year', 'DVRPC- Professional, scientific, and technical services']
+                    },
+                    {
+                        'key': 'Transportation and warehousing',
+                        'columns': ['year', 'DVRPC- Transportation and warehousing']
+                    },
+                    {
+                        'key': 'Waste management and remediation services',
+                        'columns': ['year', 'DVRPC- Waste management and remediation services']
+                    },
+                    {
+                        'key': 'Wholesale and retail trade',
+                        'columns': ['year', 'DVRPC- Wholesale and retail trade']
+                    }
+                ]
+            }
         ]
     },
     'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
