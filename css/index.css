@@ -1,4 +1,19 @@
 /*********** General Purpose ***********/
+
+/* 
+    TODO LIST:
+        General:
+            - Tracking Progress logo removed and replaced w/text + absolutely positioned (i) (see old commit for code)
+        Dashboard:
+            - Category icons media queries
+            - Grid scale (work out how to never have scroll - setINdicadtorDimensions function
+            - smaller indicator title text (change box sizes accordingly(?)
+        Indicator Sub Pages:
+            - center indicator title and images
+            - make images rounded squares instead of circles
+            - paragraphs ~70% width and centered
+            - datasets ~65% width and centered
+*/
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -196,8 +211,8 @@ nav{
 }
 .indicators-icons{
     display: block;
-    width: 69%;
-    height: 69%;
+    width: 71%;
+    height: 71%;
     margin: 0 auto;
     font-size: 0.6em;
 }
@@ -209,8 +224,9 @@ nav{
     bottom: 0;
     margin: 0;
     width: 100%;
+    font-size: 0.9em;
     /* icons are 69% so text takes up the remaining 31% */
-    height: 31%;
+    height: 29%;
     text-align: center;
     color: #f7f7f7;
     border-bottom-left-radius: 3px;
@@ -230,8 +246,8 @@ nav{
 .indicators-snippet{
     opacity: 1;
     background: #f7f7f7;
-    /*3% is the intended margin, add 10 for the width of the sidebar*/
-    padding-left: 13%;
+    /*10 for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
+    padding-left: 10%;
     width: 100%;
     overflow-y: auto;
     transition: opacity 1s;
@@ -243,6 +259,7 @@ nav{
 .indicator-header{
     color: #141414;
     margin: 2% 0 0 0;
+    text-align: center;
 }
 .indicator-content-hr{
     margin: 5% 0;
@@ -257,13 +274,17 @@ nav{
 /*category icons*/
 .indicator-category-icons{
     display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
 }
 .snippet-categories{
     margin-right: 2%;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 3px;
 }
 .indicator-description{
+    width: 90%;
+    margin: 0 auto;
     line-height: 1.6;
     color: #141414;
 }
@@ -406,7 +427,7 @@ footer{
         justify-content: center;
     }
     .indicators-title{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
     .icon-set{
         height: 100%;
