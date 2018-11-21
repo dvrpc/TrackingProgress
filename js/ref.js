@@ -1,74 +1,4 @@
-// Store references to common dropdown datasets (pull them into their own file and import cause why not)
-const fullGeography = [
-    {
-        'key': 'DVRPC',
-        columns: ['year', 'DVRPC']
-    },
-    {
-        'key': 'Pennsylvania Suburbs',
-        columns: ['year', 'Pennsylvania Suburbs']
-    },
-    {
-        'key': 'New Jersey Suburbs',
-        columns: ['year', 'New Jersey Suburbs']
-    },
-    {
-        'key': 'Philadelphia Subregion',
-        columns: ['year', 'Philadelphia Subregion']
-    },
-    {
-        'key': 'Core City',
-        columns: ['year', 'Core City']
-    },
-    {
-        'key': 'Developed Community',
-        columns: ['year', 'Developed Community']
-    },
-    {
-        'key': 'Growing Suburb',
-        columns: ['year', 'Growing Suburb']
-    },
-    {
-        'key': 'Rural Area',
-        columns: ['year', 'Rural Area']
-    },
-    {
-        'key': 'Bucks County',
-        columns: ['year', 'Bucks County']
-    },
-    {
-        'key': 'Chester County',
-        columns: ['year', 'Chester County']
-    },
-    {
-        'key': 'Delaware County',
-        columns: ['year', 'Delaware County']
-    },
-    {
-        'key': 'Montgomery County',
-        columns: ['year', 'Montgomery County']
-    },
-    {
-        'key': 'Burlington County',
-        columns: ['year', 'Burlington County']
-    },
-    {
-        'key': 'Camden County',
-        columns: ['year', 'Camden County']
-    },
-    {
-        'key': 'Gloucester County',
-        columns: ['year', 'Gloucester County']
-    },
-    {
-        'key': 'Mercer County',
-        columns: ['year', 'Mercer County']
-    },
-    {
-        'key': 'Philadelphia County',
-        columns: ['year', 'Philadelphia County']
-    }
-]
+import { fullGeography, lightGeography } from './commonGeographies.js'
 
 const snippetsRef = {
     'Air Quality': {
@@ -214,6 +144,10 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: './data/edattainHS.csv',
                 data: [
+                    {
+                        'key': 'DVRPC',
+                        'columns': ['year', 'hsRateDVRPC']
+                    },
                     {
                         'key': 'Bucks',
                         'columns': ['year', 'hsRateBucksCo']
@@ -690,7 +624,7 @@ const snippetsRef = {
                     ['DVRPC', 'New Jersey Suburbs', 'Pennsylvania Suburbs', 'Philadelphia Subregion', 'Bucks', 'Burlington', 'Camden', 'Chester', 'Delaware', 'Gloucester', 'Mercer', 'Montgomery', 'Philadelphia'],
                     ['DVRPC-total', 'New Jersey Suburbs-total', 'Pennsylvania Suburbs-total', 'Philadelphia Subregion-total', 'Bucks-total', 'Burlington-total', 'Camden-total', 'Chester-total', 'Delaware-total', 'Gloucester-total', 'Mercer-total', 'Montgomery-total', 'Philadelphia-total']
                 ],
-                data: fullGeography
+                data: lightGeography
             },
             {
                 type: 'stacked bar',

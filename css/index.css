@@ -7,12 +7,6 @@
         Dashboard:
             - Category icons media queries
             - Grid scale (work out how to never have scroll - setINdicadtorDimensions function
-            - smaller indicator title text (change box sizes accordingly(?)
-        Indicator Sub Pages:
-            - center indicator title and images
-            - make images rounded squares instead of circles
-            - paragraphs ~70% width and centered
-            - datasets ~65% width and centered
 */
 * {
     font-family: 'Roboto', sans-serif;
@@ -32,6 +26,7 @@ body{
     opacity: 0.5;
     cursor: auto;
 }
+
 /*The following are taken from subpage.css*/
 a{
     background-color: transparent;
@@ -71,8 +66,14 @@ nav{
     align-items: center;
 }
 #nav-header{
-    width: 40%;
-    height: 90%;
+    color: #4fa3a8;
+    font-weight: 100;
+    font-size: 2.7em;
+    letter-spacing: 2px;
+}
+#nav-header-span{
+    font-weight: 900;
+    text-shadow: 1px 0px #008d92;
 }
 #nav-social-media{
     width: 40%;
