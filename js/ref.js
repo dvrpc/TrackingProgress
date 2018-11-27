@@ -880,7 +880,44 @@ const snippetsRef = {
                 ]
             },
             {
-
+                type: 'line',
+                container: 'chart2',
+                dataSource: './data/IncomeQuintiles.csv',
+                columnOptions: [
+                    ['RegionMean_1st', 'RegionMean_2nd', 'RegionMean_3rd', 'RegionMean_4th', 'RegionMean_5th'],
+                    ['PhilCoMean_1st', 'PhilCoMean_2nd', 'PhilCoMean_3rd', 'PhilCoMean_4th', 'PhilCoMean_5th'],
+                    ['NJCosMean_1st', 'NJCosMean_2nd', 'NJCosMean_3rd', 'NJCosMean_4th', 'NJCosMean_5th'],
+                    ['BuckCoMean_1st', 'BuckCoMean_2nd', 'BuckCoMean_3rd', 'BuckCoMean_4th', 'BuckCoMean_5th'],
+                    ['ChesCoMean_1st', 'ChesCoMean_2nd', 'ChesCoMean_3rd', 'ChesCoMean_4th', 'ChesCoMean_5th'],
+                    ['DelCoMean_1st', 'DelCoMean_2nd', 'DelCoMean_3rd', 'DelCoMean_4th', 'DelCoMean_5th'],
+                    ['MontCoMean_1st', 'MontCoMean_2nd', 'MontCoMean_3rd', 'MontCoMean_4th', 'MontCoMean_5th'],
+                    ['BurlCoMean_1st', 'BurlCoMean_2nd', 'BurlCoMean_3rd', 'BurlCoMean_4th', 'BurlCoMean_5th'],
+                    ['CamdCoMean_1st', 'CamdCoMean_2nd', 'CamdCoMean_3rd', 'CamdCoMean_4th', 'CamdCoMean_5th'],
+                    ['GloCoMean_1st', 'GloCoMean_2nd', 'GloCoMean_3rd', 'GloCoMean_4th', 'GloCoMean_5th'],
+                    ['MerCoMean_1st', 'MerCoMean_2nd', 'MerCoMean_3rd', 'MerCoMean_4th', 'MerCoMean_5th']
+                ],
+                data: [
+                    {
+                        'key': '1st Quintile',
+                        columns: ['year', 'RegionMean_1st']
+                    },
+                    {
+                        'key': '2nd Quintile',
+                        columns: ['year', 'RegionMean_2nd']
+                    },
+                    {
+                        'key': '3rd Quintile',
+                        columns: ['year', 'RegionMean_3rd']
+                    },
+                    {
+                        'key': '4th Quintile',
+                        columns: ['year', 'RegionMean_4th']
+                    },
+                    {
+                        'key': '5th Quintile',
+                        columns: ['year', 'RegionMean_5th']
+                    }
+                ]
             },
             {
                 type: 'line',
