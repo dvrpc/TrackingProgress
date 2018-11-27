@@ -3,7 +3,6 @@ import { fullGeography, lightGeography } from './commonGeographies.js'
 const snippetsRef = {
     'Air Quality': {
         file: 'airQuality.html',
-        map: false,
         d3: [
             {
                 type: 'line and bar',
@@ -54,7 +53,7 @@ const snippetsRef = {
     },
     'Vehicle Miles Traveled': {
         file: 'vehicleMilesTraveled.html', 
-        map: false, 
+         
         d3: [
             {
                 // VMT/Capita
@@ -136,7 +135,6 @@ const snippetsRef = {
     },
     'Educational Attainment': {
         file: 'educationalAttainment.html',
-        map: false,
         d3: [
             {
                 // HS levels 
@@ -239,7 +237,6 @@ const snippetsRef = {
     },
     'Vehicle Crashes': {
         file: 'vehicleCrashes.html',
-        map: false,
         d3: [
             {
                 type: 'stacked bar plus line',
@@ -353,7 +350,6 @@ const snippetsRef = {
     },
     'Global Connectivity': {
         file: 'globalConnectivity.html',
-        map: false,
         d3: [
             {
                 type: 'stacked bar',
@@ -391,7 +387,6 @@ const snippetsRef = {
     },
     'Residential Building Permits': {
         file: 'residentialBuildingPermits.html',
-        map: false,
         d3: [
             {
                 type: 'line',
@@ -404,8 +399,7 @@ const snippetsRef = {
                 newKeys: true,
                 data: [
                     {
-                        'key': 'Ratio Annual',
-                        columns: ['year', 'ratio_annual']
+                        'key': 'Ratio Annual',                columns: ['year', 'ratio_annual']
                     }
                 ]
             },
@@ -486,7 +480,6 @@ const snippetsRef = {
     },
     'Affordable Housing': {
         file: 'affordableHousing.html',
-        map: false,
         d3: [
             {
                 type: 'line',
@@ -614,7 +607,6 @@ const snippetsRef = {
     },
     'Job Growth': {
         file: 'jobGrowth.html',
-        map: false,
         d3: [
             {
                 type: 'line',
@@ -756,10 +748,145 @@ const snippetsRef = {
             }
         ]
     },
-    'Bridge Conditions': {file: 'bridgeConditions.html', map: false, d3: false },
-    'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', map: false, d3: false },
-    'Income Inequality': {file: 'incomeInequality.html', map: false, d3: false },
-    'Land Preservation': {file: 'landPreservation.html', map: false, d3: false },
+    'Racial Disparities':{
+        file: 'racialDisparities.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/medIncByRace_wide.csv',
+                columnOptions: [
+                    ['Region_minorityInc', 'Region_whtNonHispInc'],
+                    ['Philadelphia_minorityInc', 'Philadelphia_whtNonHispInc'],
+                    ['PA Suburban Counties_minorityInc', 'PA Suburban Counties_whtNonHispInc'],
+                    ['Burlington_minorityInc', 'Burlington_whtNonHispInc'],
+                    ['Camden_minorityInc', 'Camden_whtNonHispInc'],
+                    ['Gloucester_minorityInc', 'Gloucester_whtNonHispInc'],
+                    ['Mercer_minorityInc', 'Mercer_whtNonHispInc']
+                ],
+                data: [
+                    {
+                        'key': 'Minority Income',
+                        columns: ['year', 'Region_minorityInc']
+                    },
+                    {
+                        'key': 'White Non-Hispanic Income',
+                        columns: ['year', 'Region_whtNonHispInc']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart2',
+                dataSource: './data/medIncByRace_wide.csv',
+                data: [
+                    {
+                        'key': 'DVRPC Region',
+                        columns: ['year', 'Region_difference']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        columns: ['year', 'Philadelphia_difference']
+                    },
+                    {
+                        'key': 'PA Suburban Counties',
+                        columns: ['year', 'PA Suburban Counties_difference']
+                    },
+                    {
+                        'key': 'NJ Suburban Counties',
+                        columns: ['year', 'Region_difference']
+                    },
+                    {
+                        'key': 'Bucks County',
+                        disabled: true,
+                        columns: ['year', 'Bucks_difference']
+                    },
+                    {
+                        'key': 'Burlington County',
+                        disabled: true,
+                        columns: ['year', 'Burlington_difference']
+                    },
+                    {
+                        'key': 'Camden County',
+                        disabled: true,
+                        columns: ['year', 'Camden_difference']
+                    },
+                    {
+                        'key': 'Chester County',
+                        disabled: true,
+                        columns: ['year', 'Chester_difference']
+                    },
+                    {
+                        'key': 'Delaware County',
+                        disabled: true,
+                        columns: ['year', 'Delaware_difference']
+                    },
+                    {
+                        'key': 'Gloucester County',
+                        disabled: true,
+                        columns: ['year', 'Gloucester_difference']
+                    },
+                    {
+                        'key': 'Mercer County',
+                        disabled: true,
+                        columns: ['year', 'Mercer_difference']
+                    },
+                    {
+                        'key': 'Montgomery County',
+                        disabled: true,
+                        columns: ['year', 'Montgomery_difference']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart3',
+                dataSource: './data/RaceEthnSegregation.csv',
+                data: [
+                    {
+                        'key': 'Segregation Index',
+                        columns: ['year', 'PeopleofColor']
+                    }
+                ]
+            }
+        ]
+    },
+    'Income Disparities': {
+        file: 'incomeDisparities.html',
+        d3: [
+            {
+
+            },
+            {
+
+            },
+            {
+                type: 'line',
+                container: 'chart3',
+                dataSource: './data/IncomeSegregation.csv',
+                data: [
+                    {
+                        'key': 'Segregation Index',
+                        columns: ['year', 'LowIncome']
+                    }
+                ]
+            }
+        ]
+    },
+    'Sex Disparities': {
+        file: 'sexDisparities.html',
+        d3: [
+            {
+                
+            },
+            {
+                
+            }
+        ]
+    },
+    'Bridge Conditions': {file: 'bridgeConditions.html', d3: false },
+    'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', d3: false },
+    'Land Preservation': {file: 'landPreservation.html',  d3: false },
     'Population Growth': {file: 'populationGrowth.html', map: true, d3: false},
     'Transit Conditions': {file: 'transitConditions.html', map: true, d3: false}
 }

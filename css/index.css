@@ -16,6 +16,7 @@ body{
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
     font-size: 16px;
+    line-height: 1.5;
 }
 .hidden{
     display: none;
@@ -69,7 +70,7 @@ nav{
     color: #4fa3a8;
     font-weight: 100;
     font-size: 2.7em;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 #nav-header-span{
     font-weight: 900;
@@ -298,7 +299,7 @@ nav{
     width: 100%;
     text-align: center;
     padding-top: 1vh;
-    font-size: 20px;
+    font-size: 1.4em;
     cursor: pointer;
 }
 .related-indicators{
@@ -330,25 +331,18 @@ nav{
 }
 .toggle-wrapper p{
     padding: 0 1%;
-    font-size: 16px;
+    font-size: 1em;
 }
 .toggle-fieldset{
     display: flex;
 }
 
 
-/*********** Map Views /***********/
-#map{
-    height: 500px;
-    width: 98%;
-    margin-right: 2%;
-    margin-bottom: 3%;
-}
-
-
 /*********** D3 Views **********/
 .data-viz{
     height: 450px;
+    width: 90%;
+    margin: 0 auto;
 }
 .data-viz:last-child{
     margin-bottom: 5%;
@@ -404,9 +398,13 @@ footer{
     }
 }
 @media all and (max-width: 800px){
+    /* reset the font-size */
+    body{
+        font-size: 12px;
+    }
     /* Mobile styles for nav */
     #nav-header{
-        height: 80%;
+        font-size: 2em;
     }
     #nav-social-media a:not(:first-child){
         display: none;
@@ -427,8 +425,12 @@ footer{
         flex-direction: row;
         justify-content: center;
     }
+    .indicators-icons{
+        width: 65%;
+        height: 65%;
+    }
     .indicators-title{
-        font-size: 0.6rem;
+        height: 35%;
     }
     .icon-set{
         height: 100%;
@@ -436,7 +438,7 @@ footer{
         margin-right: 4px
     }
     .icon-set p{
-        font-size: 0.7rem;
+        font-size: 1em;
     }
     .indicators-nav div:last-child{
         margin-right: 0;
@@ -473,11 +475,9 @@ footer{
         width: auto;
         padding: 0 1vw;
         border-right: 1px solid white;
-        font-size: 1rem;
     }
     .related-indicators{
         border-top: none;
-        font-size: 0.7rem;
         flex-direction: row !important;
         justify-content: space-around;
         align-items: center;
@@ -494,15 +494,8 @@ footer{
     }
     .indicator-header{
         padding-top: 3%;
-        font-size: 1.3rem;
     }
     .snippet-categories{
         height: 30px;
-    }
-    .indicator-subheader{
-        font-size: 1.1rem;
-    }
-    .toggle-wrapper p{
-        font-size: 0.8rem;
     }
 }
