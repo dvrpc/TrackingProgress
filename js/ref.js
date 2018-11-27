@@ -858,67 +858,25 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/IncomeQuintileTopBottomGap.csv',
+                columnOptions: [
+                    ['Region'],
+                    ['PASubCos'],
+                    ['NJCos'],
+                    ['BuckCo'],
+                    ['ChesCo'],
+                    ['DelCo'],
+                    ['MontCo'],
+                    ['BurlCo'],
+                    ['CamdCo'],
+                    ['GloCo'],
+                    ['MerCo'],
+                    ['PhilCo']
+                ],
                 data: [
-                    {
-                        'key': 'Burlington',
-                        disabled: true,
-                        columns: ['year', 'BurlCo']
-                    },
-                    {
-                        'key': 'Camden',
-                        disabled: true,
-                        columns: ['year', 'CamdCo']
-                    },
-                    {
-                        'key': 'Gloucester',
-                        disabled: true,
-                        columns: ['year', 'GloCo']
-                    },
-                    {
-                        'key': 'Mercer',
-                        disabled: true,
-                        columns: ['year', 'MerCo']
-                    },
-                    {
-                        'key': 'Bucks',
-                        disabled: true,
-                        columns: ['year', 'BuckCo']
-                    },
-                    {
-                        'key': 'Chester',
-                        disabled: true,
-                        columns: ['year', 'ChesCo']
-                    },
-                    {
-                        'key': 'Delaware',
-                        disabled: true,
-                        columns: ['year', 'DelCo']
-                    },
-                    {
-                        'key': 'Montgomery',
-                        disabled: true,
-                        columns: ['year', 'MontCo']
-                    },
-                    {
-                        'key': 'Philadelphia',
-                        disabled: true,
-                        columns: ['year', 'PhilCo']
-                    },
-                    {
-                        'key': 'NJ Suburbs',
-                        disabled: true,
-                        columns: ['year', 'NJCos']
-                    },
-                    {
-                        'key': 'PA Suburbs',
-                        disabled: true,
-                        columns: ['year', 'PASubCos']
-                    },
                     {
                         'key': 'DVRPC Region',
                         columns: ['year', 'Region']
-                    },
-
+                    }
                 ]
             },
             {
