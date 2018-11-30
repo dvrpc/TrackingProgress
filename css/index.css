@@ -236,11 +236,21 @@ nav{
 }
 .flipside{
     display: none;
-    position: absolute;
-}
-.flipside-img{
     height: 100%;
     width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #f7f7f7;
+    font-size: 0.8em;
+}
+.flipside-img{
+    height: 35px;
+    width: 35px;
+    margin: 0 auto;
+}
+.flipside-text{
+    padding: 0 1%;
 }
 
 
@@ -396,6 +406,13 @@ footer{
         height: 80%;
         width: 55%;
     }
+    .data-viz{
+        width: 70%;
+    }
+    .flipside-img{
+        height: 55px;
+        width: 55px;
+    }
 }
 @media all and (max-width: 800px){
     /* reset the font-size */
@@ -440,6 +457,10 @@ footer{
     .icon-set p{
         font-size: 1em;
     }
+    .flipside-img{
+        height: 25px;
+        width: 25px;
+    }
     .indicators-nav div:last-child{
         margin-right: 0;
         margin-bottom: 8px;
@@ -455,7 +476,6 @@ footer{
         width: 100%;
         display: flex;
         margin-left: 0;
-
     }
     .fade-right{
         margin-left: 100vw;

@@ -127,11 +127,11 @@ const indicatorHoverFlip = (indicator, flipTo) => {
     var children = indicator.children
 
     // brute force just to get it to work for now
-    // flipTo condition: hide default view and reveal quick peak states
+    // flipTo condition: hide default view and reveal quick peak stats
     if(flipTo){
         children[0].style.display = 'none'
         children[1].style.display = 'none'
-        children[2].style.display = 'block'
+        children[2].style.display = 'flex'
     
     // else: go back to default view
     }else{

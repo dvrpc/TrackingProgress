@@ -755,30 +755,6 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/medIncByRace_wide.csv',
-                columnOptions: [
-                    ['Region_minorityInc', 'Region_whtNonHispInc'],
-                    ['Philadelphia_minorityInc', 'Philadelphia_whtNonHispInc'],
-                    ['PA Suburban Counties_minorityInc', 'PA Suburban Counties_whtNonHispInc'],
-                    ['Burlington_minorityInc', 'Burlington_whtNonHispInc'],
-                    ['Camden_minorityInc', 'Camden_whtNonHispInc'],
-                    ['Gloucester_minorityInc', 'Gloucester_whtNonHispInc'],
-                    ['Mercer_minorityInc', 'Mercer_whtNonHispInc']
-                ],
-                data: [
-                    {
-                        'key': 'Minority Income',
-                        columns: ['year', 'Region_minorityInc']
-                    },
-                    {
-                        'key': 'White Non-Hispanic Income',
-                        columns: ['year', 'Region_whtNonHispInc']
-                    }
-                ]
-            },
-            {
-                type: 'line',
-                container: 'chart2',
-                dataSource: './data/medIncByRace_wide.csv',
                 data: [
                     {
                         'key': 'DVRPC Region',
@@ -835,6 +811,30 @@ const snippetsRef = {
                         'key': 'Montgomery County',
                         disabled: true,
                         columns: ['year', 'Montgomery_difference']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart2',
+                dataSource: './data/medIncByRace_wide.csv',
+                columnOptions: [
+                    ['Region_minorityInc', 'Region_whtNonHispInc'],
+                    ['Philadelphia_minorityInc', 'Philadelphia_whtNonHispInc'],
+                    ['PA Suburban Counties_minorityInc', 'PA Suburban Counties_whtNonHispInc'],
+                    ['Burlington_minorityInc', 'Burlington_whtNonHispInc'],
+                    ['Camden_minorityInc', 'Camden_whtNonHispInc'],
+                    ['Gloucester_minorityInc', 'Gloucester_whtNonHispInc'],
+                    ['Mercer_minorityInc', 'Mercer_whtNonHispInc']
+                ],
+                data: [
+                    {
+                        'key': 'Minority Income',
+                        columns: ['year', 'Region_minorityInc']
+                    },
+                    {
+                        'key': 'White Non-Hispanic Income',
+                        columns: ['year', 'Region_whtNonHispInc']
                     }
                 ]
             },
@@ -936,18 +936,68 @@ const snippetsRef = {
         file: 'sexDisparities.html',
         d3: [
             {
-                
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/sexInc_wide.csv',
+                columnOptions: [
+                    ['Region_difference'],
+                    ['NJ Suburban Counties_difference'],
+                    ['Bucks_difference'],
+                    ['Chester_difference'],
+                    ['Delaware_difference'],
+                    ['Montgomery_difference'],
+                    ['Burlington_difference'],
+                    ['Camden_difference'],
+                    ['Gloucester_difference'],
+                    ['Mercer_difference']
+                ],
+                data: [
+                    {
+                        'key': 'Difference',
+                        columns: ['year', 'Region_difference']
+                    }
+                ]
             },
             {
-                
+                type: 'line',
+                container: 'chart2',
+                dataSource: './data/sexInc_wide.csv',
+                columnOptions: [
+                    ['Region_FemaleMed', 'Region_MaleMed'],
+                    ['NJ Suburban Counties_FemaleMed', 'NJ Suburban Counties_MaleMed'],
+                    ['Bucks_FemaleMed', 'Bucks_MaleMed'],
+                    ['Chester_FemaleMed', 'Chester_MaleMed'],
+                    ['Delaware_FemaleMed', 'Delaware_MaleMed'],
+                    ['Montgomery_FemaleMed', 'Montgomery_MaleMed'],
+                    ['Burlington_FemaleMed', 'Burlington_MaleMed'],
+                    ['Camden_FemaleMed', 'Camden_MaleMed'],
+                    ['Gloucester_FemaleMed', 'Gloucester_MaleMed'],
+                    ['Mercer_FemaleMed', 'Mercer_MaleMed']
+                ],
+                data: [
+                    {
+                        'key': 'Female',
+                        columns: ['year', 'Region_FemaleMed']
+                    },
+                    {
+                        'key': 'Male',
+                        columns: ['year', 'Region_MaleMed']
+                    }
+                ]
             }
+        ]
+    },
+    'Roadway Reliability': {
+        file: 'roadwayReliability.html',
+        d3: [
+
         ]
     },
     'Bridge Conditions': {file: 'bridgeConditions.html', d3: false },
     'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', d3: false },
     'Land Preservation': {file: 'landPreservation.html',  d3: false },
-    'Population Growth': {file: 'populationGrowth.html', map: true, d3: false},
-    'Transit Conditions': {file: 'transitConditions.html', map: true, d3: false}
+    'Population Growth': {file: 'populationGrowth.html', d3: false},
+    'Transit Conditions': {file: 'transitConditions.html', d3: false}
 }
 
 export default snippetsRef
