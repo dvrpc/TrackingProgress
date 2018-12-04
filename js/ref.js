@@ -479,7 +479,7 @@ const snippetsRef = {
         ]
     },
     'Affordable Housing': {
-        file: 'affordableHousing.html',
+        file: 'housingAffordability.html',
         d3: [
             {
                 type: 'line',

@@ -50,7 +50,7 @@ indicators.forEach(indicator => {
 // load the selected indicator page & transition to it
 grid.onclick = e => {
     // avoid cases where user clicks the grid itself
-    if(e.target.nodeName != 'SECTION'){
+    if(e.target.nodeName != 'MAIN'){
         // introduction of the flipside jawns means the clicked element will always be the flipside img which makes the indicator itself the grandparent. every time.
         let indicator = e.target.parentNode.parentNode
         
