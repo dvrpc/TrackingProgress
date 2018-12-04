@@ -272,6 +272,7 @@ nav{
     color: #141414;
     margin: 2% 0 0 0;
     text-align: center;
+    font-size: 2em;
 }
 .indicator-content-hr{
     margin: 5% 0;
@@ -279,6 +280,7 @@ nav{
 .indicator-subheader{
     text-align: center;
     color: #141414;
+    font-size: 1.3em;
 }
 .indicator-header-hr{
     margin: 1% 0;
@@ -295,9 +297,9 @@ nav{
     border-radius: 3px;
 }
 .indicator-description{
+    font-size: 1em;
     width: 90%;
     margin: 0 auto;
-    line-height: 1.6;
     color: #141414;
 }
 .description-wrapper{
