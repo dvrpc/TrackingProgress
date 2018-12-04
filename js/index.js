@@ -51,8 +51,14 @@ indicators.forEach(indicator => {
 grid.onclick = e => {
     // avoid cases where user clicks the grid itself
     if(e.target.nodeName != 'MAIN'){
-        // introduction of the flipside jawns means the clicked element will always be the flipside img which makes the indicator itself the grandparent. every time.
-        let indicator = e.target.parentNode.parentNode
+        let indicator;
+        const firstClass = e.target.className
+
+        if(firstClass === 'flipside-img' || firstClass === "flipside-text"){
+            indicator = e.target.parentNode.parentNode
+        }else{
+            indicator = e.target.parentNode
+        }
         
         // get the title and primary class of the selected indicator
         let title = indicator.children.length ? indicator.children[1].textContent : null
