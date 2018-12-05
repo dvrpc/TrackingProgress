@@ -770,7 +770,7 @@ const snippetsRef = {
                     },
                     {
                         'key': 'NJ Suburban Counties',
-                        columns: ['year', 'Region_difference']
+                        columns: ['year', 'NJ Suburban Counties_difference']
                     },
                     {
                         'key': 'Bucks County',
@@ -1154,6 +1154,82 @@ const snippetsRef = {
         file: 'roadwayReliability.html',
         d3: [
 
+        ]
+    },
+    'Exports': {
+        file: 'exports.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/Exports.csv',
+                data: [
+                    {
+                        'key': 'DVRPC',
+                        columns: ['year', 'DVRPC']
+                    },
+                    {
+                        'key': 'PA Counties',
+                        disabled: true,
+                        columns: ['year', 'PA Counties']
+                    },
+                    {
+                        'key': 'Suburban PA',
+                        disabled: true,
+                        columns: ['year', 'Suburban PA']
+                    },
+                    {
+                        'key': 'NJ Counties',
+                        disabled: true,
+                        columns: ['year', 'NJ Counties']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        disabled: true,
+                        columns: ['year', 'Philadelphia']
+                    },
+                    {
+                        'key': 'Montgomery County',
+                        disabled: true,
+                        columns: ['year', 'Montgomery County']
+                    },
+                    {
+                        'key': 'Delaware County',
+                        disabled: true,
+                        columns: ['year', 'Delaware County']
+                    },
+                    {
+                        'key': 'Chester County',
+                        disabled: true,
+                        columns: ['year', 'Chester County']
+                    },
+                    {
+                        'key': 'Bucks County',
+                        disabled: true,
+                        columns: ['year', 'Bucks County']
+                    },
+                    {
+                        'key': 'Mercer County',
+                        disabled: true,
+                        columns: ['year', 'Mercer County']
+                    },
+                    {
+                        'key': 'Gloucester County',
+                        disabled: true,
+                        columns: ['year', 'Gloucester County']
+                    },
+                    {
+                        'key': 'Camden County',
+                        disabled: true,
+                        columns: ['year', 'Camden County']
+                    },
+                    {
+                        'key': 'Burlington County',
+                        disabled: true,
+                        columns: ['year', 'Burlington County']
+                    }
+                ]
+            }
         ]
     },
     'Bridge Conditions': {file: 'bridgeConditions.html', d3: false },
