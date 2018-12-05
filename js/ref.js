@@ -1191,49 +1191,165 @@ const snippetsRef = {
                     {
                         'key': 'Montgomery County',
                         disabled: true,
-                        columns: ['year', 'Montgomery County']
+                        columns: ['year', 'Montgomery']
                     },
                     {
                         'key': 'Delaware County',
                         disabled: true,
-                        columns: ['year', 'Delaware County']
+                        columns: ['year', 'Delaware']
                     },
                     {
                         'key': 'Chester County',
                         disabled: true,
-                        columns: ['year', 'Chester County']
+                        columns: ['year', 'Chester']
                     },
                     {
                         'key': 'Bucks County',
                         disabled: true,
-                        columns: ['year', 'Bucks County']
+                        columns: ['year', 'Bucks']
                     },
                     {
                         'key': 'Mercer County',
                         disabled: true,
-                        columns: ['year', 'Mercer County']
+                        columns: ['year', 'Mercer']
                     },
                     {
                         'key': 'Gloucester County',
                         disabled: true,
-                        columns: ['year', 'Gloucester County']
+                        columns: ['year', 'Gloucester']
                     },
                     {
                         'key': 'Camden County',
                         disabled: true,
-                        columns: ['year', 'Camden County']
+                        columns: ['year', 'Camden']
                     },
                     {
                         'key': 'Burlington County',
                         disabled: true,
-                        columns: ['year', 'Burlington County']
+                        columns: ['year', 'Burlington']
+                    }
+                ]
+            }
+        ]
+    },
+    'Commute Mode': {
+        file: 'commuteMode.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/ResNonSOV.csv',
+                columnOptions: [
+                    ['DVRPCSOV', 'DVRPCNonSOV'],
+                    ['PASubSOV', 'PASubNonSOV'],
+                    ['NJCosSOV', 'NJCosNonSOV'],
+                    ['ChesSOV', 'ChesNonSOV'],
+                    ['DelSOV', 'DelNonSOV'],
+                    ['MontSOV', 'MontNonSOV'],
+                    ['BurlSOV', 'BurlNonSOV'],
+                    ['CamdSOV', 'CamdNonSOV'],
+                    ['GlocSOV', 'GlocNonSOV'],
+                    ['MercSOV', 'MercNonSOV'],
+                    ['PhilSOV', 'PhilNonSOV'],
+                ],
+                data: [
+                    {
+                        'key': 'Drove Alone',
+                        columns: ['year', 'DVRPCSOV']
+                    },
+                    {
+                        'key': 'Other Means',
+                        columns: ['year', 'DVRPCNonSOV']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart2',
+                dataSource: './data/ResNonSOV_multi.csv',
+                columnOptions: [
+                    ['DVRPCPool', 'DVRPCTransit', 'DVRPCWalk', 'DVRPCBike', 'DVRPCTMO', 'DVRPCWFH', 'DVRPCBus', 'DVRPCRail', 'DVRPCSubw', 'DVRPCTroll', 'DVRPCFerry',  'DVRPCMcyc', 'DVRPCOther', 'DVRPCTaxi'],
+                    ['PASubPool', 'PASubTransit', 'PASubWalk', 'PASubBike', 'PASubTMO', 'PASubWFH', 'PASubBus', 'PASubRail', 'PASubSubw', 'PASubTroll', 'PASubFerry',  'PASubMcyc', 'PASubOther', 'PASubTaxi'],
+                    ['NJCosPool', 'NJCosTransit', 'NJCosWalk', 'NJCosBike', 'NJCosTMO', 'NJCosWFH', 'NJCosBus', 'NJCosRail', 'NJCosSubw', 'NJCosTroll', 'NJCosFerry',  'NJCosMcyc', 'NJCosOther', 'NJCosTaxi'],
+                    ['ChesPool', 'ChesTransit', 'ChesWalk', 'ChesBike', 'ChesTMO', 'ChesWFH', 'ChesBus', 'ChesRail', 'ChesSubw', 'ChesTroll', 'ChesFerry',  'ChesMcyc', 'ChesOther', 'ChesTaxi'],
+                    ['DelaPool', 'DelaTransit', 'DelaWalk', 'DelaBike', 'DelaTMO', 'DelaWFH', 'DelaBus', 'DelaRail', 'DelaSubw', 'DelaTroll', 'DelaFerry',  'DelaMcyc', 'DelaOther', 'DelaTaxi'],
+                    ['MontPool', 'MontTransit', 'MontWalk', 'MontBike', 'MontTMO', 'MontWFH', 'MontBus', 'MontRail', 'MontSubw', 'MontTroll', 'MontFerry',  'MontMcyc', 'MontOther', 'MontTaxi'],
+                    ['BurlPool', 'BurlTransit', 'BurlWalk', 'BurlBike', 'BurlTMO', 'BurlWFH', 'BurlBus', 'BurlRail', 'BurlSubw', 'BurlTroll', 'BurlFerry',  'BurlMcyc', 'BurlOther', 'BurlTaxi'],
+                    ['CamdPool', 'CamdTransit', 'CamdWalk', 'CamdBike', 'CamdTMO', 'CamdWFH', 'CamdBus', 'CamdRail', 'CamdSubw', 'CamdTroll', 'CamdFerry',  'CamdMcyc', 'CamdOther', 'CamdTaxi'],
+                    ['GlocPool', 'GlocTransit', 'GlocWalk', 'GlocBike', 'GlocTMO', 'GlocWFH', 'GlocBus', 'GlocRail', 'GlocSubw', 'GlocTroll', 'GlocFerry',  'GlocMcyc', 'GlocOther', 'GlocTaxi'],
+                    ['MercPool', 'MercTransit', 'MercWalk', 'MercBike', 'MercTMO', 'MercWFH', 'MercBus', 'MercRail', 'MercSubw', 'MercTroll', 'MercFerry',  'MercMcyc', 'MercOther', 'MercTaxi'],
+                    ['PhilPool', 'PhilTransit', 'PhilWalk', 'PhilBike', 'PhilTMO', 'PhilWFH', 'PhilBus', 'PhilRail', 'PhilSubw', 'PhilTroll', 'PhilFerry',  'PhilMcyc', 'PhilOther', 'PhilTaxi'],
+                ],
+                data: [
+                    {
+                        'key': 'Carpool',
+                        columns: ['year', 'DVRPCPool']
+                    },
+                    {
+                        'key': 'Public Transit',
+                        columns: ['year', 'DVRPCTransit']
+                    },
+                    {
+                        'key': 'Walked',
+                        columns: ['year', 'DVRPCWalk']
+                    },
+                    {
+                        'key': 'Biked',
+                        columns: ['year', 'DVRPCBike']
+                    },
+                    {
+                        'key': 'Taxi, Motorcycle or Other',
+                        columns: ['year', 'DVRPCTMO']
+                    },
+                    {
+                        'key': 'Worked from Home',
+                        columns: ['year', 'DVRPCWFH']
+                    },
+                    {
+                        'key': 'Bus',
+                        columns: ['year', 'DVRPCBus'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Railroad',
+                        columns: ['year', 'DVRPCRail'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Subway',
+                        columns: ['year', 'DVRPCSubw'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Streetcar or Trolley',
+                        columns: ['year', 'DVRPCTroll'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Ferryboat',
+                        columns: ['year', 'DVRPCFerry'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Motorcycle',
+                        columns: ['year', 'DVRPCMcyc'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Other Means',
+                        columns: ['year', 'DVRPCOther'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Taxi',
+                        columns: ['year', 'DVRPCTaxi'],
+                        disabled: true
                     }
                 ]
             }
         ]
     },
     'Bridge Conditions': {file: 'bridgeConditions.html', d3: false },
-    'non-SOV Commuting Mode Share': {file: 'nonSOVCommutingModeShare.html', d3: false },
     'Land Preservation': {file: 'landPreservation.html',  d3: false },
     'Population Growth': {file: 'populationGrowth.html', d3: false},
     'Transit Conditions': {file: 'transitConditions.html', d3: false}
