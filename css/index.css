@@ -2,10 +2,7 @@
 
 /* 
     TODO LIST:
-        General:
-            - Tracking Progress logo removed and replaced w/text + absolutely positioned (i) (see old commit for code)
         Dashboard:
-            - Category icons media queries
             - Grid scale (work out how to never have scroll - setINdicadtorDimensions function
 */
 * {
@@ -129,8 +126,9 @@ nav{
     align-content: center;
     justify-content: center;
     margin-bottom: 8px;
-    margin-right: 8px;
+    margin-right: 16px;
     height: 20%;
+    width: 100%;
     text-align: center;
     opacity: 1;
     visibility: visible;
@@ -166,17 +164,17 @@ nav{
 .indicators-nav div:last-child{
     margin-bottom: 0;
 }
-.icon-set img{
+.icon-set-img{
     align-self: center;
-    height: 70%;
-    width: 70%;
+    height: 100px;
+    width: 100px;
 }
 .icon-set:hover{
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
     border-bottom: hidden;
 }
-.icon-set p{
+.icon-set-p{
     margin: 0;
     padding: 0;
     font-size: 1.2rem;
@@ -404,9 +402,9 @@ footer{
 
 /*********** Media Queries ***********/
 @media all and (min-width: 1366px){
-    .icon-set img{
-        height: 80%;
-        width: 55%;
+    .icon-set-img{
+        height: 150px;
+        width: 150px;
     }
     .data-viz{
         width: 70%;
@@ -456,7 +454,11 @@ footer{
         width: calc(20% - 3px);
         margin-right: 4px
     }
-    .icon-set p{
+    .icon-set-img{
+        width: 60px;
+        height: 60px;
+    }
+    .icon-set-p{
         font-size: 1em;
     }
     .flipside-img{

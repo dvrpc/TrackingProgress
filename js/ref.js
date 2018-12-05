@@ -908,10 +908,24 @@ const snippetsRef = {
                 container: 'chart6',
                 dataSource: './data/labForceByEth_wide.csv',
                 columnOptions: [
-
+                    ['Region_difference'],
+                    ['NJ Suburban Counties_difference'],
+                    ['PA Suburban Counties_difference'],
+                    ['Bucks_difference'],
+                    ['Chester_difference'],
+                    ['Delaware_difference'],
+                    ['Montgomery_difference'],
+                    ['Burlington_difference'],
+                    ['Camden_difference'],
+                    ['Gloucester_difference'],
+                    ['Mercer_difference'],
+                    ['Philadelphia_difference']
                 ],
                 data: [
-                    
+                    {
+                        'key': 'Labor Force Participation Gap',
+                        columns: ['year', 'Region_difference']
+                    }
                 ]
             },
             {
@@ -919,10 +933,28 @@ const snippetsRef = {
                 container: 'chart7',
                 dataSource: './data/labForceByEth_wide.csv',
                 columnOptions: [
-
+                    ['Region_labWht', 'Region_labHisp'],
+                    ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labHisp'],
+                    ['PA Suburban Counties_labWht', 'PA Suburban Counties_labHisp'],
+                    ['Bucks_labWht', 'Bucks_labHisp'],
+                    ['Chester_labWht', 'Chester_labHisp'],
+                    ['Delaware_labWht', 'Delaware_labHisp'],
+                    ['Montgomery_labWht', 'Montgomery_labHisp'],
+                    ['Burlington_labWht', 'Burlington_labHisp'],
+                    ['Camden_labWht', 'Camden_labHisp'],
+                    ['Gloucester_labWht', 'Gloucester_labHisp'],
+                    ['Mercer_labWht', 'Mercer_labHisp'],
+                    ['Philadelphia_labWht', 'Philadelphia_labHisp']
                 ],
                 data: [
-                    
+                    {
+                        'key': 'Non-Latinx',
+                        columns: ['year', 'Region_labWht']
+                    },
+                    {
+                        'key': 'Latinx',
+                        columns: ['year', 'Region_labHisp']
+                    }
                 ]
             },
 
