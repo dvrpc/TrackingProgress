@@ -51,8 +51,8 @@ const snippetsRef = {
             },
         ]
     },
-    'Vehicle Miles Traveled': {
-        file: 'vehicleMilesTraveled.html', 
+    'Miles Driven': {
+        file: 'milesDriven.html', 
          
         d3: [
             {
@@ -130,7 +130,7 @@ const snippetsRef = {
                         'columns': ['year', 'vmtPerCapMercerCo']
                     }
                 ]
-            },
+            }
         ]
     },
     'Educational Attainment': {
@@ -235,8 +235,8 @@ const snippetsRef = {
             }
         ]
     },
-    'Vehicle Crashes': {
-        file: 'vehicleCrashes.html',
+    'Roadway Safety': {
+        file: 'roadwaySafety.html',
         d3: [
             {
                 type: 'stacked bar plus line',
@@ -385,8 +385,8 @@ const snippetsRef = {
             }
         ]
     },
-    'Residential Building Permits': {
-        file: 'residentialBuildingPermits.html',
+    'Housing Activity': {
+        file: 'housingActivity.html',
         d3: [
             {
                 type: 'line',
@@ -748,8 +748,8 @@ const snippetsRef = {
             }
         ]
     },
-    'Racial Disparities':{
-        file: 'racialDisparities.html',
+    'Racial Ethnic Disparities':{
+        file: 'racialAndEthnicDisparities.html',
         d3: [
             {
                 type: 'line',
