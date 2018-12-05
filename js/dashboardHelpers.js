@@ -118,7 +118,7 @@ const setIndicatorDimensions = indicator => {
 const indicatorHoverFlip = (indicator, flipTo) => {
     
     // get the target of the mose event
-    indicator = indicator.originalTarget
+    indicator = indicator.target
     
     // get to the parent element (unless you're already on it)
     if(!indicator.classList.contains('indicators-grid-item')) indicator = indicator.parentElement

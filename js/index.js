@@ -49,15 +49,25 @@ indicators.forEach(indicator => {
 
 // load the selected indicator page & transition to it
 grid.onclick = e => {
-    // avoid cases where user clicks the grid itself
-    if(e.target.nodeName != 'MAIN'){
-        let indicator;
-        const firstClass = e.target.className
+    const node = e.target.nodeName
 
-        if(firstClass === 'flipside-img' || firstClass === "flipside-text"){
-            indicator = e.target.parentNode.parentNode
-        }else{
-            indicator = e.target.parentNode
+    // avoid cases where user clicks the grid itself
+    if(node != 'MAIN'){
+        let indicator;
+
+        // this feels like a bad solution but maybe that's because there's no good way to get (great)grandparents
+        switch(node){
+            case 'STRONG':
+                indicator = e.target.parentNode.parentNode.parentNode
+                break
+            case 'IMG':
+                indicator = e.target.parentNode.parentNode
+                break
+            case 'P':
+                indicator = e.target.parentNode.parentNode
+                break
+            default:
+                indicator = e.target.parentNode
         }
         
         // get the title and primary class of the selected indicator

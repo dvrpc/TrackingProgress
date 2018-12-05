@@ -844,11 +844,88 @@ const snippetsRef = {
                 dataSource: './data/RaceEthnSegregation.csv',
                 data: [
                     {
-                        'key': 'Segregation Index',
+                        'key': 'Racial/Ethnic Segregation Index',
                         columns: ['year', 'PeopleofColor']
                     }
                 ]
-            }
+            },
+            {
+                type: 'line',
+                container: 'chart4',
+                dataSource: './data/labForceByRace_wide.csv',
+                columnOptions: [
+                    ['Region_difference'],
+                    ['NJ Suburban Counties_difference'],
+                    ['PA Suburban Counties_difference'],
+                    ['Bucks_difference'],
+                    ['Chester_difference'],
+                    ['Delaware_difference'],
+                    ['Montgomery_difference'],
+                    ['Burlington_difference'],
+                    ['Camden_difference'],
+                    ['Gloucester_difference'],
+                    ['Mercer_difference'],
+                    ['Philadelphia_difference']
+                ],
+                data: [
+                    {
+                        'key': 'Participation Gap',
+                        columns: ['year', 'Region_difference']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart5',
+                dataSource: './data/labForceByRace_wide.csv',
+                columnOptions: [
+                    ['Region_labWht', 'Region_labNonWht'],
+                    ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
+                    ['PA Suburban Counties_labWht', 'PA Suburban Counties_labNonWht'],
+                    ['Bucks_labWht', 'Bucks_labNonWht'],
+                    ['Chester_labWht', 'Chester_labNonWht'],
+                    ['Delaware_labWht', 'Delaware_labNonWht'],
+                    ['Montgomery_labWht', 'Montgomery_labNonWht'],
+                    ['Burlington_labWht', 'Burlington_labNonWht'],
+                    ['Camden_labWht', 'Camden_labNonWht'],
+                    ['Gloucester_labWht', 'Gloucester_labNonWht'],
+                    ['Mercer_labWht', 'Mercer_labNonWht'],
+                    ['Philadelphia_labWht', 'Philadelphia_labNonWht']
+                ],
+                data: [
+                    {
+                        'key': 'White',
+                        columns: ['year', 'Region_labWht']
+                    },
+                    {
+                        'key': 'Non-White',
+                        columns: ['year', 'Region_labNonWht']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart6',
+                dataSource: './data/labForceByEth_wide.csv',
+                columnOptions: [
+
+                ],
+                data: [
+                    
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart7',
+                dataSource: './data/labForceByEth_wide.csv',
+                columnOptions: [
+
+                ],
+                data: [
+                    
+                ]
+            },
+
         ]
     },
     'Income Disparities': {
@@ -982,6 +1059,60 @@ const snippetsRef = {
                     {
                         'key': 'Male',
                         columns: ['year', 'Region_MaleMed']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart3',
+                dataSource: './data/labForceBySex_wide.csv',
+                columnOptions: [
+                    ['Region_difference'],
+                    ['NJ Suburban Counties_difference'],
+                    ['PA Suburban Counties_difference'],
+                    ['Bucks_difference'],
+                    ['Chester_difference'],
+                    ['Delaware_difference'],
+                    ['Montgomery_difference'],
+                    ['Burlington_difference'],
+                    ['Camden_difference'],
+                    ['Gloucester_difference'],
+                    ['Mercer_difference'],
+                    ['Philadelphia_difference']
+                ],
+                data: [
+                    {
+                        'key': 'Male to Female Gap',
+                        columns: ['year', 'Region_difference']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart4',
+                dataSource: './data/labForceBySex_wide.csv',
+                columnOptions: [
+                    ['Region_labMl', 'Region_labFm'],
+                    ['NJ Suburban Counties_labMl', 'NJ Suburban Counties_labFm'],
+                    ['PA Suburban Counties_labMl', 'PA Suburban Counties_labFm'],
+                    ['Bucks_labMl', 'Bucks_labFm'],
+                    ['Chester_labMl', 'Chester_labFm'],
+                    ['Delaware_labMl', 'Delaware_labFm'],
+                    ['Montgomery_labMl', 'Montgomery_labFm'],
+                    ['Burlington_labMl', 'Burlington_labFm'],
+                    ['Camden_labMl', 'Camden_labFm'],
+                    ['Gloucester_labMl', 'Gloucester_labFm'],
+                    ['Mercer_labMl', 'Mercer_labFm'],
+                    ['Philadelphia_labMl', 'Philadelphia_labFm'],
+                ],
+                data: [
+                    {
+                        'key': 'Male',
+                        columns: ['year', 'Region_labMl']
+                    },
+                    {
+                        'key': 'Female',
+                        columns: ['year', 'Region_labFm']
                     }
                 ]
             }
