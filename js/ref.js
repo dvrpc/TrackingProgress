@@ -52,8 +52,7 @@ const snippetsRef = {
         ]
     },
     'Miles Driven': {
-        file: 'milesDriven.html', 
-         
+        file: 'milesDriven.html',   
         d3: [
             {
                 // VMT/Capita
@@ -399,7 +398,8 @@ const snippetsRef = {
                 newKeys: true,
                 data: [
                     {
-                        'key': 'Ratio Annual',                columns: ['year', 'ratio_annual']
+                        'key': 'Ratio Annual',
+                        columns: ['year', 'ratio_annual']
                     }
                 ]
             },
@@ -1344,6 +1344,88 @@ const snippetsRef = {
                         'key': 'Taxi',
                         columns: ['year', 'DVRPCTaxi'],
                         disabled: true
+                    }
+                ]
+            }
+        ]
+    },
+    'Transit Ridership': {
+        file: 'transitRidership.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/transit_ridership_graph_1.csv',
+                columnOptions: [
+                    ['unlinkedTrips'],
+                    ['unlinkedTripsPerCap']
+                ],
+                data: [
+                    {
+                        'key': 'Unlinked Trips',
+                        columns: ['year', 'unlinkedTrips']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart2',
+                dataSource: './data/transit_ridership_graph_2.csv',
+                columnOptions: [
+                    ['Bus', 'Commuter Rail', 'Light Rail', 'Non-Scheduled Services', 'Subway', 'Trolleybus'],
+                    ['Bus-per capita', 'Commuter Rail-per capita', 'Light Rail-per capita', 'Non-Scheduled Services-per capita', 'Subway-per capita', 'Trolleybus-per capita']
+                ],
+                data: [
+                    {
+                        'key': 'Bus',
+                        columns: ['year', 'Bus'],
+                    },
+                    {
+                        'key': 'Commuter Rail',
+                        columns: ['year', 'Commuter Rail']
+                    },
+                    {
+                        'key': 'Light Rail',
+                        columns: ['year', 'Light Rail']
+                    },
+                    {
+                        'key': 'Non-Scheduled Services',
+                        columns: ['year', 'Non-Scheduled Services']
+                    },
+                    {
+                        'key': 'Subway',
+                        columns: ['year', 'Subway']
+                    },
+                    {
+                        'key': 'Trolleybus',
+                        columns: ['year', 'Trolleybus']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart3',
+                dataSource: './data/transit_ridership_graph_3.csv',
+                columnOptions: [
+                    ['NJ Transit', 'PATCO', 'Pottstown Area Rapid Transit', 'SEPTA'],
+                    ['NJ Transit-per capita', 'PATCO-per capita', 'Pottstown Area Rapid Transit-per capita', 'SEPTA-per capita',]
+                ],
+                data: [
+                    {
+                        'key': 'NJ Transit',
+                        columns: ['year', 'NJ Transit']
+                    },
+                    {
+                        'key': 'PATCO',
+                        columns: ['year', 'PATCO']
+                    },
+                    {
+                        'key': 'Pottstown Area Rapid Transit',
+                        columns: ['year', 'Pottstown Area Rapid Transit']
+                    },
+                    {
+                        'key': 'SEPTA',
+                        columns: ['year', 'SEPTA']
                     }
                 ]
             }
