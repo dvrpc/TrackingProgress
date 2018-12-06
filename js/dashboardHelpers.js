@@ -3,11 +3,16 @@ let clickedRef;
 
 // colors to change indicator background to on cat filter
 const catColors = {
-    'economy': '#bd2756',
-    'environment': '#7a9c3e',
-    'community': '#006ba6',
-    'transportation': '#dd6e1d',
-    'equity': '#582267'
+    'econo': '#bd2756',
+    'enviro': '#7a9c3e',
+    'comm': '#006ba6',
+    'transpo': '#dd6e1d',
+    'equity': '#582267',
+    'econo-default': '#f0cfd0',
+    'enviro-default': '#e0e6cf',
+    'comm-default': '#c6d6ea',
+    'transpo-default': '#f9dcc4',
+    'equity-default': '#c6b7cd'
 }
 
 const makeDashboard = (relatedIndicators, indicatorsNav, back, grid, categories) => {
@@ -60,17 +65,45 @@ const toggleIndicators = (element, indicators) => {
     // mark the category as active & remove it from another element (if applicable)
     const allCategories = [... element.parentNode.children]
 
+    // set the previously selected category (if there was one) back to default
     allCategories.forEach(category => {
         if(category != element){
-            if(category.classList.contains('category-active')) category.classList.remove('category-active')
+            // remove active category and go back to inactive bg
+            if(category.classList.contains('category-active')){
+                const img = category.children[0]
+                const elID = category.id
+                const categoryName = elID.split('-')[0]+'-default'
+                
+                img.src = `./img/${elID}.png`
+                category.classList.remove('category-active')
+                category.style.background = catColors[categoryName]
+            }
         }
     })
+
+    // get a handle on ID info 
+    const img = element.children[0]
+    const elID = element.id
+    const categoryName = elID.split('-')[0]
     
     element.classList.toggle('category-active')
+    
+    // update img and background color
+    if(element.classList.contains('category-active')){
+        // active case
+        const activeCategoryImg = elID + '-active'
+        img.src=`./img/${activeCategoryImg}.png`
+        element.style.background = catColors[categoryName]
+        
+    }else{
+        // default case
+        img.src=`./img/${elID}.png`
+        const categoryDefaultBackground = categoryName + '-default'
+        element.style.background = catColors[categoryDefaultBackground]
+    }
 
     // get a handle on the id of the clicked div in order to grab its corresponding indicators
-    let id = element.id.split('-')[0]
-    let category = id+'-indicator'
+    let category = categoryName+'-indicator'
 
     // handle 3 conditions & expected behaviors: 
         // all options visible & user clicks a category --> filters to just that categories indicators
@@ -87,7 +120,7 @@ const toggleIndicators = (element, indicators) => {
             if(!indicator.classList.contains(category)) indicator.classList.add('inactive')
             else {
                 indicator.classList.remove('inactive')
-                indicator.style.background = catColors[id]
+                indicator.style.background = catColors[categoryName]
         }
         })
         clickedRef = element

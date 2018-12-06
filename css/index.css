@@ -119,6 +119,7 @@ nav{
 }
 .category-active{
     margin-right: 0 !important;
+    color: #f7f7f7 !important;
 }
 .icon-set{
     display: flex;
@@ -141,19 +142,19 @@ nav{
 .icon-set:last-child{
     margin-bottom: none;
 }
-#economy-icon{
+#econo-icon{
     background: #f0cfd0;
     color: #bd2556;
 }
-#environment-icon{
+#enviro-icon{
     background: #e0e6cf;
     color: #7b9d3e;
 }
-#community-icon{
+#comm-icon{
     background: #c6d6ea;
     color: #006ba6;
 }
-#transportation-icon{
+#transpo-icon{
     background: #f9dcc4;
     color: #de6e1d;
 }
