@@ -64,43 +64,44 @@ const toggleIndicators = (element, indicators) => {
 
     // mark the category as active & remove it from another element (if applicable)
     const allCategories = [... element.parentNode.children]
+   
+    // get a handle on the elements info
+    const elID = element.id
+    const img = element.children[0]
+    const categoryName = elID.split('-')[0]
 
-    // set the previously selected category (if there was one) back to default
     allCategories.forEach(category => {
         if(category != element){
-            // remove active category and go back to inactive bg
+            
+            // check if another category is active and set it back to default
             if(category.classList.contains('category-active')){
+                const categoryID = category.id
                 const img = category.children[0]
-                const elID = category.id
-                const categoryName = elID.split('-')[0]+'-default'
-                
-                img.src = `./img/${elID}.png`
+                const previousCategoryName = categoryID.split('-')[0]+'-default'
+
+                img.src = `./img/${categoryID}.png`
                 category.classList.remove('category-active')
-                category.style.background = catColors[categoryName]
+                category.style.background = catColors[previousCategoryName]
+            }
+
+        // toggle selected category
+        }else{
+            element.classList.toggle('category-active')
+            
+            // set active styles
+            if(element.classList.contains('category-active')){
+                const activeCategoryImg = elID + '-active'
+                img.src=`./img/${activeCategoryImg}.png`
+                element.style.background = catColors[categoryName]
+                
+            // set default styles
+            }else{
+                img.src=`./img/${elID}.png`
+                const categoryDefaultBackground = categoryName + '-default'
+                element.style.background = catColors[categoryDefaultBackground]
             }
         }
     })
-
-    // get a handle on ID info 
-    const img = element.children[0]
-    const elID = element.id
-    const categoryName = elID.split('-')[0]
-    
-    element.classList.toggle('category-active')
-    
-    // update img and background color
-    if(element.classList.contains('category-active')){
-        // active case
-        const activeCategoryImg = elID + '-active'
-        img.src=`./img/${activeCategoryImg}.png`
-        element.style.background = catColors[categoryName]
-        
-    }else{
-        // default case
-        img.src=`./img/${elID}.png`
-        const categoryDefaultBackground = categoryName + '-default'
-        element.style.background = catColors[categoryDefaultBackground]
-    }
 
     // get a handle on the id of the clicked div in order to grab its corresponding indicators
     let category = categoryName+'-indicator'

@@ -1153,7 +1153,120 @@ const snippetsRef = {
     'Roadway Reliability': {
         file: 'roadwayReliability.html',
         d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/roadwayreliability24.csv',
+                columnOptions: [
+                    ['DVRPCFree24', 'PASubCosFree24', 'PACosFree24', 'NJCosFree24', 'BucFree24', 'ChesFree24', 'DelFree24', 'MontFree24', 'BurlFree24', 'CamFree24', 'GloFree24', 'MerFree24', 'PhilFree24'],
+                    ['DVRPCLoca24', 'PASubCosLoca24', 'PACosLoca24', 'NJCosLoca24', 'BucLoca24', 'ChesLoca24', 'DelLoca24', 'MontLoca24', 'BurlLoca24', 'CamLoca24', 'GloLoca24', 'MerLoca24', 'PhilLoca24']
 
+                ],
+                data: [
+                    {
+                        'key': 'DVRPC',
+                        columns: ['year', 'DVRPCFree24']
+                    },
+                    {
+                        'key': 'PA Suburban Counties',
+                        columns: ['year', 'PASubCosFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'PA Counties',
+                        columns: ['year', 'PACosFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'NJ Counties',
+                        columns: ['year', 'NJCosFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Bucks Co',
+                        columns: ['year', 'BucFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Chester Co',
+                        columns: ['year', 'ChesFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Delaware Co',
+                        columns: ['year', 'DelFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Montgomery Co',
+                        columns: ['year', 'MontFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Burlington Co',
+                        columns: ['year', 'BurlFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Camden Co',
+                        columns: ['year', 'CamFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Gloucester Co',
+                        columns: ['year', 'GloFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Mercer Co',
+                        columns: ['year', 'MerFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Philadelphia Co',
+                        columns: ['year', 'PhilFree24'],
+                        disabled: true
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart2',
+                dataSource: './data/roadwayreliabilityTOD.csv',
+                columnOptions: [
+                    ['DVRPCFreeAM', 'DVRPCFreeMD', 'DVRPCFreePM', 'DVRPCFreeNT'],
+                    ['PASubCosFreeAM', 'PASubCosFreeMD', 'PASubCosFreePM', 'PASubCosFreeNT'],
+                    ['PACosFreeAM', 'PACosFreeMD', 'PACosFreePM', 'PACosFreeNT'],
+                    ['NJCosFreeAM', 'NJCosFreeMD', 'NJCosFreePM', 'NJCosFreeNT'],
+                    ['BucFreeAM', 'BucFreeMD', 'BucFreePM', 'BucFreeNT'],
+                    ['ChesFreeAM', 'ChesFreeMD', 'ChesFreePM', 'ChesFreeNT'],
+                    ['DelFreeAM', 'DelFreeMD', 'DelFreePM', 'DelFreeNT'],
+                    ['MontFreeAM', 'MontFreeMD', 'MontFreePM', 'MontFreeNT'],
+                    ['BurlFreeAM', 'BurlFreeMD', 'BurlFreePM', 'BurlFreeNT'],
+                    ['CamFreeAM', 'CamFreeMD', 'CamFreePM', 'CamFreeNT'],
+                    ['GloFreeAM', 'GloFreeMD', 'GloFreePM', 'GloFreeNT'],
+                    ['MerFreeAM', 'MerFreeMD', 'MerFreePM', 'MerFreeNT'],
+                    ['PhilFreeAM', 'PhilFreeMD', 'PhilFreePM', 'PhilFreeNT']
+                ],
+                data: [
+                    {
+                        'key': 'AM',
+                        columns: ['year', 'DVRPCFreeAM']
+                    },
+                    {
+                        'key': 'MD',
+                        columns: ['year', 'DVRPCFreeMD']
+                    },
+                    {
+                        'key': 'PM',
+                        columns: ['year', 'DVRPCFreePM']
+                    },
+                    {
+                        'key': 'NT',
+                        columns: ['year', 'DVRPCFreeNT']
+                    }
+                ]
+            }
         ]
     },
     'Exports': {
