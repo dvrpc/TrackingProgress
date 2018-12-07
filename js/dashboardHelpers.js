@@ -177,4 +177,35 @@ const indicatorHoverFlip = (indicator, flipTo) => {
     //children[i].style.display === 'none' ? children[i].style.display = 'block' : children[i].style.display = 'none'
 }
 
-export {toggleIndicators, fade, setIndicatorDimensions, makeDashboard, removeDashboard, indicatorHoverFlip}
+// get indicator information from grid click
+const clickIndicator = e => {
+    const node = e.target.nodeName
+
+    // avoid cases where user clicks the grid itself
+    if(node != 'MAIN'){
+        const el = e.target
+        let indicator;
+
+        // recursively find the parent indicator element
+        indicator = getIndicatorDetails(el)
+
+        // get the title from it's id
+        let title = indicator.id ? indicator.id : null
+        const primaryCategory = indicator.classList[1]
+
+        return [title, primaryCategory]
+    }
+}
+
+// recursive helper to get the indicator itself
+const getIndicatorDetails = el => {
+    let parent = el.parentNode
+    
+    // base case
+    if(parent.classList.contains('indicators-grid-item')) return parent
+    
+    // recursive case
+    return getIndicatorDetails(parent)
+}
+
+export {toggleIndicators, fade, setIndicatorDimensions, makeDashboard, removeDashboard, indicatorHoverFlip, clickIndicator}

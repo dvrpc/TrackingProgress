@@ -1,4 +1,4 @@
-import { toggleIndicators, setIndicatorDimensions, indicatorHoverFlip } from './dashboardHelpers.js'
+import { toggleIndicators, setIndicatorDimensions, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
 
 // get a handle on the dashboard elements
@@ -49,34 +49,13 @@ indicators.forEach(indicator => {
 
 // load the selected indicator page & transition to it
 grid.onclick = e => {
-    const node = e.target.nodeName
+    let title, primaryCategory;
 
-    // avoid cases where user clicks the grid itself
-    if(node != 'MAIN'){
-        let indicator;
+    // get title and primary category from the clicked element
+    [title, primaryCategory] = [... clickIndicator(e)]
 
-        // this feels like a bad solution but maybe that's because there's no good way to get (great)grandparents
-        switch(node){
-            case 'STRONG':
-                indicator = e.target.parentNode.parentNode.parentNode
-                break
-            case 'IMG':
-                indicator = e.target.parentNode.parentNode
-                break
-            case 'P':
-                indicator = e.target.parentNode.parentNode
-                break
-            default:
-                indicator = e.target.parentNode
-        }
-        
-        // get the title and primary class of the selected indicator
-        let title = indicator.children.length ? indicator.children[1].textContent : null
-        const primaryCategory = indicator.classList[1]
-        
-        // update the URL which in turn hydrates the indicator page
-        setIndicatorURL(title, primaryCategory, true)
-    }
+    // update the URL which in turn hydrates the indicator page
+    setIndicatorURL(title, primaryCategory, true)
 }
 
 // return to dashboard view 

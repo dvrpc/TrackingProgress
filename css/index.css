@@ -422,7 +422,7 @@ footer{
     }
     /* Mobile styles for nav */
     #nav-header{
-        font-size: 2em;
+        font-size: 1.5em;
     }
     #nav-social-media a:not(:first-child){
         display: none;
@@ -449,6 +449,7 @@ footer{
     }
     .indicators-title{
         height: 35%;
+        font-size: 0.8em;
     }
     .icon-set{
         height: 100%;
@@ -456,11 +457,11 @@ footer{
         margin-right: 4px
     }
     .icon-set-img{
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
     .icon-set-p{
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .flipside-img{
         height: 25px;
