@@ -1,0 +1,28 @@
+{
+  "name": "tracking-progress",
+  "author": "Marc Molta",
+  "version": "1.0.0",
+  "license": "ISC",
+  "keywords": [],
+  "description": "Updating the Tracking Progress pages from walls of text to an interactive dashboard with maps, visualizations, and smaller walls of text.",
+  "main": "index.js",
+  "scripts": {
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvrpc/TrackingProgress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dvrpc/TrackingProgress/issues"
+  },
+  "homepage": "https://github.com/dvrpc/TrackingProgress#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
