@@ -6,9 +6,11 @@ const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 const categories = [... document.querySelectorAll('.icon-set')]
 
+const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
+
 const setIndexURL = () => {
     // update the URL state
-    history.pushState({page: 'home'}, 'Tracking Progress', 'http://dev.dvrpc.org/TrackingProgress/')
+    history.pushState({page: 'home'}, 'Tracking Progress', baseURL)
     
     // update the view
     updateView()
@@ -22,7 +24,7 @@ const setIndicatorURL = (title, primaryCategory, transition) => {
     const newHash = transition ? `${titlesMinusSpace}/${primaryCategory}/${transition}` : `${titlesMinusSpace}/${primaryCategory}`
 
     // update URL state
-    history.pushState({page: 'indicator'}, title, `http://dev.dvrpc.org/TrackingProgress/#${newHash}`)
+    history.pushState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
 
     // update the view
     updateView()
@@ -51,14 +53,14 @@ const updateView = () => {
 const refreshView = () => {
 
     // if refreshing the homepage, do nothing
-    if(location.hostname === 'dev.dvrpc.org' && location.href !== 'http://dev.dvrpc.org/TrackingProgress/'){
+    if(location.hostname === 'dev.dvrpc.org' && location.href !== baseURL){
         let hashFragment = location.hash.slice(1).split('/')
 
         // handle edge case where user refreshes with the homepage 'true' in the hash fragment
         if(hashFragment[2] && hashFragment[2] === 'true'){
             const newHash = `${hashFragment[0]}/${hashFragment[1]}`
             const title = hashFragment[0]
-            history.replaceState({page: 'indicator'}, title, `http://dev.dvrpc.org/TrackingProgress/#${newHash}`)
+            history.replaceState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
         }
         
         updateView()
