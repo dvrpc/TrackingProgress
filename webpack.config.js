@@ -1,5 +1,45 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+// update this array with each new snippet
+const snippets = [
+    'airQuality',
+    'bridgeConditions',
+    'commuteMode',
+    'educationalAttainment',
+    'exports',
+    'globalConnectivity',
+    'highwayCongestion',
+    'housingActivity',
+    'housingAffordability',
+    'incomeDisparities',
+    'jobGrowth',
+    'landPreservation',
+    'milesDriven',
+    'populationGrowth',
+    'racialAndEthnicDisparities',
+    'roadwayReliability',
+    'roadwaySafety',
+    'sexDisparities',
+    'transitConditions',
+    'transitRidership'
+]
+
+// configure snippets
+const snippetPlugins = snippets.map(snippet => {
+    return new HtmlWebpackPlugin({
+        filename: snippet + '.html',
+        template: path.resolve(__dirname + `/indicatorSnippets/${snippet}.html`)
+    })
+})
+
+// configure index.html
+let indexConfig = new HtmlWebpackPlugin({
+    template: path.resolve(__dirname + "/index.html"),
+    file: 'index.html',
+    inject: 'body'
+})
 
 // entry: './js/index.js',
 module.exports = {
@@ -41,19 +81,12 @@ module.exports = {
                 use: [
                     'csv-loader'
                 ]
-            },
-            // load html snippets
-            {
-                test: /\.html$/,
-                use: {
-                    loader: 'html-loader',
-                    options: {
-                        attrs: false,
-                        minimize: true
-                    }
-                }
             }
         ]
+    },
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'build')
     },
     plugins: [
         new CopyWebpackPlugin(
@@ -73,12 +106,9 @@ module.exports = {
                     to: 'css',
                     toType: 'dir'
                 }
-            ],
-
-        )
-    ],
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'build')
-    }
+            ]
+        ),
+    // HtmlWebpackPlugin
+        indexConfig
+    ].concat(snippetPlugins)
 }
