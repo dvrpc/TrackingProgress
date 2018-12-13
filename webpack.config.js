@@ -30,7 +30,15 @@ const snippets = [
 const snippetPlugins = snippets.map(snippet => {
     return new HtmlWebpackPlugin({
         filename: snippet + '.html',
-        template: path.resolve(__dirname + `/indicatorSnippets/${snippet}.html`)
+        template: path.resolve(__dirname + `/indicatorSnippets/${snippet}.html`),
+        minify: {
+            collapseWhitespace: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true
+        }
     })
 })
 
@@ -38,7 +46,15 @@ const snippetPlugins = snippets.map(snippet => {
 let indexConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname + "/index.html"),
     file: 'index.html',
-    inject: 'body'
+    inject: 'body',
+    minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: false,
+        removeStyleLinkTypeAttributes: false,
+        useShortDoctype: true
+    }
 })
 
 // entry: './js/index.js',
