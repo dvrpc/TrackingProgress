@@ -57,7 +57,6 @@ let indexConfig = new HtmlWebpackPlugin({
     }
 })
 
-// entry: './js/index.js',
 module.exports = {
     entry: ['@babel/polyfill', './js/index.js'],
     mode: 'production',
