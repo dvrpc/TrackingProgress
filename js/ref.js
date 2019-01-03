@@ -1544,6 +1544,92 @@ const snippetsRef = {
             }
         ]
     },
+    'Emissions': {
+        file: 'emissions.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/emissions_1.csv',
+                columnOptions: [
+                    ['emissions_total'],
+                    ['emissions_per_capita']
+                ],
+                data: [
+                    {
+                        'key': 'mmt co2e',
+                        columns: ['year', 'emissions_total']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: './data/emissions_2.csv',
+                data: [
+                    {
+                        'key': 'Residential mmt co2e',
+                        columns: ['year', 'residential']
+                    },
+                    {
+                        'key': 'Commercial/Industrial mmt co2e',
+                        columns: ['year', 'commercial_industrial']
+                    },
+                    {
+                        'key': 'Transportation mmt co2e',
+                        columns: ['year', 'transportation']
+                    },
+                    {
+                        'key': 'Other mmt co2e',
+                        columns: ['year', 'other']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart3',
+                dataSource: './data/emissions_3.csv',
+                data: [
+                    {
+                        'key': 'Coal',
+                        columns: ['year', 'coal']
+                    },
+                    {
+                        'key': 'Oil',
+                        columns: ['year', 'oil']
+                    },
+                    {
+                        'key': 'Gas',
+                        columns: ['year', 'gas']
+                    },
+                    {
+                        'key': 'Other Fossil Fuels',
+                        columns: ['year', 'other_fossil']
+                    },
+                    {
+                        'key': 'Biomass',
+                        columns: ['year', 'biomass']
+                    },
+                    {
+                        'key': 'Hydro',
+                        columns: ['year', 'hydro']
+                    },
+                    {
+                        'key': 'Nuclear',
+                        columns: ['year', 'nuclear']
+                    },
+                    {
+                        'key': 'Wind',
+                        columns: ['year', 'wind']
+                    },
+                    {
+                        'key': 'Solar',
+                        columns: ['year', 'solar']
+                    }
+                ]
+            }
+        ]
+    },
     'Bridge Conditions': {file: 'bridgeConditions.html', d3: false },
     'Land Preservation': {file: 'landPreservation.html',  d3: false },
     'Population Growth': {file: 'populationGrowth.html', d3: false},

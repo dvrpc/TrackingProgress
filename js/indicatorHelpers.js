@@ -95,13 +95,6 @@ const getIndicatorSnippet = (grid, snippet, graphs) => {
             // insert the HTML to update the structure & put the map and/or data viz components in place
             grid.insertAdjacentHTML('beforebegin', snippet)
 
-            if(hasMap) {
-
-                // get a handle on the newly created map div & use that to generate a map
-                let container = document.querySelector('#map')
-                generateMap(container)
-            }
-
             if(hasDataViz){
 
                 // apply toggle functionality to all togglable elements in the snippet, if they exist

@@ -138,6 +138,7 @@ nav{
     -moz-transition: opacity 1s, visibility 1s;
     -o-transition: opacity 1s, visibility 1s;
     transition-timing-function: linear;
+    overflow-y: hidden;
 }
 .icon-set:last-child{
     margin-bottom: none;
@@ -415,6 +416,13 @@ footer{
         width: 55px;
     }
 }
+/* height query for the category icons situation */
+@media all and (max-height: 700px){
+    .icon-set-img{
+        height: 70px;
+        width: 70px;
+    }
+}
 @media all and (max-width: 800px){
     /* reset the font-size */
     body{
@@ -435,13 +443,14 @@ footer{
         flex-direction: column;
     }
     .indicators-nav{
-        height: 9vh;
+        height: 10vh;
         background: white;
         position: sticky;
         top: 0;
         width: 100%;
         flex-direction: row;
         justify-content: center;
+        box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
     }
     .indicators-icons{
         width: 65%;
