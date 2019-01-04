@@ -56,7 +56,10 @@ const createLinePlusBarChart = (source, doubleToggle) => {
     let barSource = source.data[0].columns
     let lineSource = source.data[1].columns
 
-    d3.csv(source.dataSource, rows => {
+    // handle double toggle cases
+    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
+
+    d3.csv(dataSource, rows => {
 
         source.data[0].values.push([ +rows[barSource[0]], rows[barSource[1]] === 'NA' ? null : +rows[barSource[1]] ])
         source.data[1].values.push([ +rows[lineSource[0]], rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]] ])
@@ -138,7 +141,10 @@ const createStackedAreaChart = (source, doubleToggle) => {
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
 
-    d3.csv(source.dataSource, rows => {
+    // handle double toggle cases
+    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
+
+    d3.csv(dataSource, rows => {
 
         // extract information from the columns set in the snippetsRef lookup table
         source.data.forEach(series => {
@@ -182,7 +188,10 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
 
-    d3.csv(source.dataSource, rows => {
+    // handle double toggle cases
+    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
+
+    d3.csv(dataSource, rows => {
         source.data.forEach(series => {
             // dynamically create an upper bound that will be the combination of the max line value + the min bar value
             if(series.type === 'bar') +rows[series.columns[1]] > barMax ? barMax = +rows[series.columns[1]] : null
