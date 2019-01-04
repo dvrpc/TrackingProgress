@@ -102,7 +102,7 @@ const toggleChart = (selected, dataSets) => {
 }
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
-const getIndicatorSnippet = (grid, snippet, graphs) => {
+const getIndicatorSnippet = (grid, snippet) => {
     let hasDataViz;
 
     // using the indicator title, get the corresponding snippet for that indicator page

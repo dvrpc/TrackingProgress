@@ -8,13 +8,9 @@ const createStackedBarChart = (source, doubleToggle) => {
 
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
-
-    console.log('double toggle is ', doubleToggle)
     
     // handle double toggle cases
     let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
-
-    console.log('dat source that viz is using is: ', dataSource)
 
     d3.csv(dataSource, rows => {
 
@@ -48,7 +44,7 @@ const createStackedBarChart = (source, doubleToggle) => {
     })
 }
 
-const createLinePlusBarChart = source => {
+const createLinePlusBarChart = (source, doubleToggle) => {
 
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
@@ -92,7 +88,7 @@ const createLinePlusBarChart = source => {
     })
 }
 
-const createLineChart = source => {
+const createLineChart = (source, doubleToggle) => {
 
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
@@ -100,7 +96,10 @@ const createLineChart = source => {
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
 
-    d3.csv(source.dataSource, rows => {
+    // handle double toggle cases
+    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
+
+    d3.csv(dataSource, rows => {
 
         // extract information from the columns set in the snippetsRef lookup table
         source.data.forEach(series => {
@@ -132,7 +131,7 @@ const createLineChart = source => {
     })
 }
 
-const createStackedAreaChart = source => {
+const createStackedAreaChart = (source, doubleToggle) => {
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
 
@@ -172,7 +171,7 @@ const createStackedAreaChart = source => {
     })
 }
 
-const createdStackedBarPlusLine = source => {
+const createdStackedBarPlusLine = (source, doubleToggle) => {
     let lineMax = 0;
     let barMax = 0;
     let max;
