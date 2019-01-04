@@ -1,7 +1,7 @@
 /************************************************************************************/
 /************************ D3 Content for Indicators *********************************/
 /************************************************************************************/
-const createStackedBarChart = source => {
+const createStackedBarChart = (source, doubleToggle) => {
 
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
@@ -9,7 +9,12 @@ const createStackedBarChart = source => {
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
 
-    d3.csv(source.dataSource, rows => {
+    // handle double toggle cases
+    let dataSource = doubleToggle ? source.secondDataSource : source.dataSource
+
+    console.log('dat source that viz is using is: ', dataSource)
+
+    d3.csv(dataSource, rows => {
 
         // create a values field based on the desired column as defined in the reference object
         source.data.forEach(series => {

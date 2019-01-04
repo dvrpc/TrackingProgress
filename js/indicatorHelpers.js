@@ -7,16 +7,49 @@ const grid = document.querySelector('.indicators-grid')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 const relatedIndicators = document.querySelector('.related-indicators')
 
+// helper function to determine what data viz to make
+const dataVizSwitch = (type, source, doubleToggle) => {
+    switch (type) {
+        case 'line and bar':
+            graphs.createLinePlusBarChart(source, doubleToggle)
+            break;
+        case 'stacked bar':
+            graphs.createStackedBarChart(source, doubleToggle)
+            break;
+        case 'line':
+            graphs.createLineChart(source, doubleToggle)
+            break;
+        case 'stacked area':
+            graphs.createStackedAreaChart(source, doubleToggle)
+            break;
+        case 'stacked bar plus line':
+            graphs.createdStackedBarPlusLine(source, doubleToggle)
+            break;
+        default:
+            console.log('default')
+    }
+}
+
 // toggle between charts on an indicator page
-const toggleChart = (selected, dataSets, graphs) => {
+const toggleChart = (selected, dataSets) => {
+    
+    // get the component pieces of the toggle ID
+    let toggleID = selected.id.split('-')
 
     // get the correct dataSet based on the selector id
-    let setNumber = parseInt(selected.id.split('-')[1])
-
+    let setNumber = parseInt(toggleID[1])
+    
     // get chart # from the selected option
     let chartNumber = parseInt(selected.options[selected.selectedIndex].value)
+    
+    // flag for the viz functions to know whether to pull the OG data or the new data
+        // double toggles go between OG (0) and new (1), so the only time we want to pull the new dataset is when:
+            // a) double toggle is selected
+            // b) double toggle option value = 1
+    let doubleToggle = (toggleID.length > 2 && chartNumber === 1) ? true : false
 
     // get a handle on the names of the new columns to read from
+    // Double Toggle Cases dont need mroe work here b/c the column names are the same - just different data.
     let newColumns = dataSets[setNumber].columnOptions[chartNumber]
 
     // replace the y-axis columns with the newly selected columns
@@ -51,31 +84,15 @@ const toggleChart = (selected, dataSets, graphs) => {
     // source is the correct dataset with updated column names
     const source = dataSets[setNumber]
 
-    // switch case to determine which kind of vis to make
-    switch (source.type) {
-        case 'line and bar':
-            graphs.createLinePlusBarChart(source)
-            break;
-        case 'stacked bar':
-            graphs.createStackedBarChart(source)
-            break;
-        case 'line':
-            graphs.createLineChart(source)
-            break;
-        case 'stacked area':
-            graphs.createStackedAreaChart(source)
-            break;
-        case 'stacked bar plus line':
-            graphs.createdStackedBarPlusLine(source)
-            break;
-        default:
-            console.log('default')
-    }
+    // @TODO: handle cases where user has the double toggle new data case selected, and browse thru the 1st toggle
+        // as of now, that will default to the old data set. This is a post-lunch goal 
+
+    // switch case to determine which kind of vis to make and which dataset to reference
+    dataVizSwitch(source.type, source, doubleToggle)
 }
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
 const getIndicatorSnippet = (grid, snippet, graphs) => {
-    let hasMap;
     let hasDataViz;
 
     // using the indicator title, get the corresponding snippet for that indicator page
@@ -85,7 +102,6 @@ const getIndicatorSnippet = (grid, snippet, graphs) => {
     if(snippetFile){
 
         // get a handle on data viz metadata (if it exists)
-        hasMap = snippet.map
         hasDataViz = snippet.d3
 
         let page = `./indicatorSnippets/${snippetFile}`
@@ -102,27 +118,7 @@ const getIndicatorSnippet = (grid, snippet, graphs) => {
                 if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz, graphs))
 
                 // loop through each chart option & call the appropriate d3 function on it
-                hasDataViz.forEach(chart => {
-                    switch (chart.type) {
-                        case 'line and bar':
-                            graphs.createLinePlusBarChart(chart)
-                            break;
-                        case 'stacked bar':
-                            graphs.createStackedBarChart(chart)
-                            break;
-                        case 'line':
-                            graphs.createLineChart(chart)
-                            break;
-                        case 'stacked area':
-                            graphs.createStackedAreaChart(chart)
-                            break;
-                        case 'stacked bar plus line':
-                            graphs.createdStackedBarPlusLine(chart)
-                            break;
-                        default:
-                            console.log('default')
-                    }
-                })
+                hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart))
             }
         })
     }

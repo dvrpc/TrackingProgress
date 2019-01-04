@@ -116,6 +116,7 @@ nav{
     -moz-transition:  width 1s;
     -o-transition:  width 1s;
     transition-timing-function: linear;
+    overflow-y: auto;
 }
 .category-active{
     margin-right: 0 !important;
@@ -298,7 +299,7 @@ nav{
 }
 .indicator-description{
     font-size: 1em;
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     color: #141414;
 }

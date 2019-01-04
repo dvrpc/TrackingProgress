@@ -407,6 +407,17 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: './data/permits_graph_2A.csv',
+                secondDataSource: './data/permits_graph_2B.csv',
+                // could be rebuilt as:
+                // columnOptions: {
+                //     DVRPC: ['DVRPC - Core City', 'DVRPC - Developed Community'],
+                //     ChesterCo: ['etc', 'etc', 'etc']
+                // }
+                // Toggle values need to be renamed for this to work. 
+                // It lets chart# not rely on the order of columnOptions being the same as the toggle.
+                // ensures the right data is grabbed everytime and is more robust/easier to manage, update, etc.
+                // also faster b/c object indexing instead of array..
+                
                 columnOptions: [
                     ['DVRPC- Core City', 'DVRPC- Developed Community', 'DVRPC- Growing Suburb', 'DVRPC- Rural Area'],
                     ['Chester County- Core City', 'Chester County- Developed Community', 'Chester County- Growing Suburb', 'Chester County- Rural Area'],
