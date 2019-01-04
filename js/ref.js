@@ -408,16 +408,6 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: './data/permits_graph_2A.csv',
                 secondDataSource: './data/permits_graph_2B.csv',
-                // could be rebuilt as:
-                // columnOptions: {
-                //     DVRPC: ['DVRPC - Core City', 'DVRPC - Developed Community'],
-                //     ChesterCo: ['etc', 'etc', 'etc']
-                // }
-                // Toggle values need to be renamed for this to work. 
-                // It lets chart# not rely on the order of columnOptions being the same as the toggle.
-                // ensures the right data is grabbed everytime and is more robust/easier to manage, update, etc.
-                // also faster b/c object indexing instead of array..
-                
                 columnOptions: [
                     ['DVRPC- Core City', 'DVRPC- Developed Community', 'DVRPC- Growing Suburb', 'DVRPC- Rural Area'],
                     ['Chester County- Core City', 'Chester County- Developed Community', 'Chester County- Growing Suburb', 'Chester County- Rural Area'],
@@ -453,6 +443,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: './data/permits_graph_3A.csv',
+                secondDataSource: './data/permits_graph_3B.csv',
                 columnOptions: [
                     ['DVRPC- large multi-family', 'DVRPC- small multi-family', 'DVRPC- single family'],
                     ['Core City- large multi-family', 'Core City- small multi-family', 'Core City- single family'],
@@ -1363,6 +1354,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/ResNonSOV.csv',
+                secondDataSource: './data/WorkNonSOV.csv',
                 columnOptions: [
                     ['DVRPCSOV', 'DVRPCNonSOV'],
                     ['PASubSOV', 'PASubNonSOV'],
@@ -1391,6 +1383,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart2',
                 dataSource: './data/ResNonSOV_multi.csv',
+                secondDataSource: './data/WorkNonSOV_multi.csv',
                 columnOptions: [
                     ['DVRPCPool', 'DVRPCTransit', 'DVRPCWalk', 'DVRPCBike', 'DVRPCTMO', 'DVRPCWFH', 'DVRPCBus', 'DVRPCRail', 'DVRPCSubw', 'DVRPCTroll', 'DVRPCFerry',  'DVRPCMcyc', 'DVRPCOther', 'DVRPCTaxi'],
                     ['PASubPool', 'PASubTransit', 'PASubWalk', 'PASubBike', 'PASubTMO', 'PASubWFH', 'PASubBus', 'PASubRail', 'PASubSubw', 'PASubTroll', 'PASubFerry',  'PASubMcyc', 'PASubOther', 'PASubTaxi'],
@@ -1646,5 +1639,15 @@ const snippetsRef = {
     'Population Growth': {file: 'populationGrowth.html', d3: false},
     'Transit Conditions': {file: 'transitConditions.html', d3: false}
 }
+
+// @TODO: rebuild column options in the following way:
+    // columnOptions: {
+    //     DVRPC: ['DVRPC - Core City', 'DVRPC - Developed Community'],
+    //     ChesterCo: ['etc', 'etc', 'etc']
+    // }
+// Toggle values need to be renamed for this to work. 
+// It lets chart# not rely on the order of columnOptions being the same as the toggle.
+// ensures the right data is grabbed everytime and is more robust/easier to manage, update, etc.
+// also faster b/c object indexing instead of array..
 
 export default snippetsRef

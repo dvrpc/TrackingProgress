@@ -41,12 +41,25 @@ const toggleChart = (selected, dataSets) => {
     
     // get chart # from the selected option
     let chartNumber = parseInt(selected.options[selected.selectedIndex].value)
+
+    // handle double toggle cases:
+    let doubleToggle = 0
     
-    // flag for the viz functions to know whether to pull the OG data or the new data
-        // double toggles go between OG (0) and new (1), so the only time we want to pull the new dataset is when:
-            // a) double toggle is selected
-            // b) double toggle option value = 1
-    let doubleToggle = (toggleID.length > 2 && chartNumber === 1) ? true : false
+    // handle DIRECT interaction with the second toggle (toggleID.length > 2 means the user has selected the 2nd toggle)
+    if(toggleID.length > 2) {
+        doubleToggle = chartNumber
+
+    // handle possible INDIRECT interaction with the second toggle (user hasn't selected the 2nd toggle but its state still needs to be captured)
+    }else {
+        // get a handle on the double toggle <select> (if it exists)
+        const hasDoubleToggle = selected.parentElement.nextElementSibling
+
+        // if the chart has a double toggle, get the value of the 2nd toggle to pass on to viz.js functions
+        if(hasDoubleToggle){
+            const doubleToggleSelect = hasDoubleToggle.children[0]
+            doubleToggle = parseInt(doubleToggleSelect.options[doubleToggleSelect.selectedIndex].value)
+        }
+    }
 
     // get a handle on the names of the new columns to read from
     // Double Toggle Cases dont need mroe work here b/c the column names are the same - just different data.
@@ -84,9 +97,6 @@ const toggleChart = (selected, dataSets) => {
     // source is the correct dataset with updated column names
     const source = dataSets[setNumber]
 
-    // @TODO: handle cases where user has the double toggle new data case selected, and browse thru the 1st toggle
-        // as of now, that will default to the old data set. This is a post-lunch goal 
-
     // switch case to determine which kind of vis to make and which dataset to reference
     dataVizSwitch(source.type, source, doubleToggle)
 }
@@ -112,13 +122,13 @@ const getIndicatorSnippet = (grid, snippet, graphs) => {
             grid.insertAdjacentHTML('beforebegin', snippet)
 
             if(hasDataViz){
-
-                // apply toggle functionality to all togglable elements in the snippet, if they exist
                 const dataToggles = document.querySelectorAll('.toggle-data-selector')
-                if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz, graphs))
+                
+                // apply toggle functionality to all togglable elements in the snippet, if they exist
+                if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz))
 
-                // loop through each chart option & call the appropriate d3 function on it
-                hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart))
+                // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
+                hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, 0))
             }
         })
     }

@@ -9,8 +9,10 @@ const createStackedBarChart = (source, doubleToggle) => {
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
 
+    console.log('double toggle is ', doubleToggle)
+    
     // handle double toggle cases
-    let dataSource = doubleToggle ? source.secondDataSource : source.dataSource
+    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
 
     console.log('dat source that viz is using is: ', dataSource)
 
