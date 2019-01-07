@@ -99,7 +99,7 @@ nav{
     position: relative;
     display: flex;
     width: 100%;
-    min-height: calc(92vh - 8px);
+    /* height: calc(92vh - 8px); */
     border-bottom: 8px solid white;
 }
 .indicators-nav{
@@ -183,8 +183,7 @@ nav{
     font-size: 1.2rem;
 }
 .indicators-grid{
-    position: absolute;
-    height: 100%;
+    height: calc(92vh - 8px);
     width: 85%;
     background: #e9e9e9;
     display: flex;
@@ -262,8 +261,8 @@ nav{
 .indicators-snippet{
     opacity: 1;
     background: #f7f7f7;
-    /*10 for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
-    padding-left: 10%;
+    /*15vw for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
+    padding-left: 15vw;
     width: 100%;
     overflow-y: auto;
     transition: opacity 1s;
@@ -326,7 +325,7 @@ nav{
     color: #f7f7f7;
 }
 .sideLink{
-    padding: 10% 1%;
+    padding: 10% 2%;
     cursor: pointer;
     color: #f7f7f7;
 }
@@ -395,10 +394,10 @@ footer{
     opacity: 1;
 }
 .fade-right{
+    position: absolute;
     margin-left: 100vw;
 }
 .fade-narrow{
-    width: 10%;
     background: #222222;
 }
 .notransition {
@@ -473,8 +472,8 @@ footer{
         margin-right: 4px
     }
     .icon-set-img{
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
     }
     .icon-set-p{
         font-size: 0.9em;
@@ -509,7 +508,6 @@ footer{
         display: none;
     }
     .fade-narrow{
-        height: 8vh;
         width: 100%;
         background: #222222;
     }
@@ -524,7 +522,7 @@ footer{
         flex-direction: row !important;
         justify-content: space-around;
         align-items: center;
-        padding: 0 2vw;
+        padding: 1vh 0 1vh 6vw;
         overflow-x: auto;
     }
     .sideLink{
@@ -537,13 +535,16 @@ footer{
     }
     .indicator-header{
         padding-top: 3%;
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
     .indicator-subheader{
         font-size: 1.1em;
     }
     .snippet-categories{
         height: 30px;
+    }
+    .indicator-description{
+        width: 90%;
     }
     .toggle-wrapper{
         flex-direction: column;
