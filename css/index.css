@@ -66,7 +66,7 @@ nav{
 #nav-header{
     color: #4fa3a8;
     font-weight: 100;
-    font-size: 2.7em;
+    font-size: 2.4em;
     letter-spacing: 1px;
 }
 #nav-header-span{
@@ -443,6 +443,10 @@ footer{
     }
     #dvrpc-logo{
         border-right: none;
+    }
+    .nav-imgs{
+        height: 45%;
+        width: 45%;
     }
     /* Mobile styles for the dashboard page */
     .indicators-wrapper{

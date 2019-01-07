@@ -1634,10 +1634,114 @@ const snippetsRef = {
             }
         ]
     },
+    'Transit Conditions': {
+        file: 'transitConditions.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/transit_conditions_graph_1.csv',
+                columnOptions: [
+                    ['All Agencies- All Vehicles', 'All Agencies- Buses', 'All Agencies- Rail Vehicles'],
+                    ['NJ Transit- All Vehicles', 'NJ Transit- Buses', 'NJ Transit- Rail Vehicles'],
+                    ['', 'PART- Buses', ''],
+                    ['', '', 'PATCO- Rail Vehicles'],
+                    ['SEPTA- All Vehicles', 'SEPTA- Buses', 'SEPTA- Rail Vehicles']
+                ],
+                data: [
+                    {
+                        'key': 'All Vehicles',
+                        columns: ['year', 'All Agencies- All Vehicles']
+                    },
+                    {
+                        'key': 'Buses',
+                        columns: ['year', 'All Agencies- Buses']
+                    },
+                    {
+                        'key': 'Rail Vehicles',
+                        columns: ['year', 'All Agencies- Rail Vehicles']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: './data/transit_conditions_graph_2.csv',
+                columnOptions: [
+                    [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
+                    [ 'NJ Transit- age_0_5', 'NJ Transit- age_6_11', 'NJ Transit- age_12_15', 'NJ Transit- age_16_20', 'NJ Transit- age_21_25', 'NJ Transit- age_25over'],
+                    [ 'PATCO- age_0_5', 'PATCO- age_6_11', 'PATCO- age_12_15', 'PATCO- age_16_20', 'PATCO- age_21_25', 'PATCO- age_25over'],
+                    [ 'SEPTA- age_0_5', 'SEPTA- age_6_11', 'SEPTA- age_12_15', 'SEPTA- age_16_20', 'SEPTA- age_21_25', 'SEPTA- age_25over']
+                ],
+                data: [
+                    {
+                        'key': 'Age (0-5)',
+                        columns: ['year', 'All Agencies- age_0_5']
+                    },
+                    {
+                        'key': 'Age (6-11)',
+                        columns: ['year', 'All Agencies- age_6_11']
+                    },
+                    {
+                        'key': 'Age (12-15)',
+                        columns: ['year', 'All Agencies- age_12_15']
+                    },
+                    {
+                        'key': 'Age (16-20)',
+                        columns: ['year', 'All Agencies- age_16_20']
+                    },
+                    {
+                        'key': 'Age (21-25)',
+                        columns: ['year', 'All Agencies- age_21_25']
+                    },
+                    {
+                        'key': 'Age (25+)',
+                        columns: ['year', 'All Agencies- age_25over']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart3',
+                dataSource: './data/transit_conditions_graph_3.csv',
+                columnOptions: [
+                    [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
+                    [ 'NJ Transit- age_0_5', 'NJ Transit- age_6_11', 'NJ Transit- age_12_15', 'NJ Transit- age_16_20', 'NJ Transit- age_21_25', 'NJ Transit- age_25over'],
+                    [ 'PART- age_0_5', 'PART- age_6_11', 'PART- age_12_15', 'PART- age_16_20', 'PART- age_21_25', 'PART- age_25over'],
+                    [ 'SEPTA- age_0_5', 'SEPTA- age_6_11', 'SEPTA- age_12_15', 'SEPTA- age_16_20', 'SEPTA- age_21_25', 'SEPTA- age_25over']
+                ],
+                data: [
+                    {
+                        'key': 'Age (0-5)',
+                        columns: ['year', 'All Agencies- age_0_5']
+                    },
+                    {
+                        'key': 'Age (6-11)',
+                        columns: ['year', 'All Agencies- age_6_11']
+                    },
+                    {
+                        'key': 'Age (12-15)',
+                        columns: ['year', 'All Agencies- age_12_15']
+                    },
+                    {
+                        'key': 'Age (16-20)',
+                        columns: ['year', 'All Agencies- age_16_20']
+                    },
+                    {
+                        'key': 'Age (21-25)',
+                        columns: ['year', 'All Agencies- age_21_25']
+                    },
+                    {
+                        'key': 'Age (25+)',
+                        columns: ['year', 'All Agencies- age_25over']
+                    }
+                ]
+            }
+        ]
+    },
     'Bridge Conditions': {file: 'bridgeConditions.html', d3: false },
     'Land Preservation': {file: 'landPreservation.html',  d3: false },
-    'Population Growth': {file: 'populationGrowth.html', d3: false},
-    'Transit Conditions': {file: 'transitConditions.html', d3: false}
+    'Population Growth': {file: 'populationGrowth.html', d3: false}
 }
 
 // @TODO: rebuild column options in the following way:
