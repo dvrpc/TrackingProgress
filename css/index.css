@@ -66,12 +66,13 @@ nav{
 #nav-header{
     color: #4fa3a8;
     font-weight: 100;
-    font-size: 2.4em;
-    letter-spacing: 1px;
+    font-size: 2.2em;
+    letter-spacing: 2px;
 }
 #nav-header-span{
+    letter-spacing: 1px;
     font-weight: 900;
-    text-shadow: 1px 0px #4fa3a8;
+    text-shadow: 1px 1px #4fa3a8;
 }
 #nav-social-media{
     width: 40%;
@@ -260,7 +261,10 @@ nav{
 /*********** Indicator Pages ***********/
 .indicators-snippet{
     opacity: 1;
-    background: #f7f7f7;
+    /* fallback bg for browsers that don't support linear gradient */
+    background: #fcfcfc;
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(242,242,242,1) 20%);
+    color: #050709;
     /*15vw for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
     padding-left: 15vw;
     width: 100%;
@@ -272,18 +276,16 @@ nav{
     transition-timing-function: linear;
 }
 .indicator-header{
-    color: #141414;
-    margin: 2% 0 0 0;
+    margin: 1.5% 0;
     text-align: center;
     font-size: 2em;
 }
 .indicator-content-hr{
-    margin: 5% 0;
+    margin: 4% 0 2% 0;
 }
 .indicator-subheader{
     text-align: center;
-    color: #141414;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 .indicator-header-hr{
     margin: 1% 0;
@@ -292,18 +294,17 @@ nav{
 .indicator-category-icons{
     display: flex;
     justify-content: center;
-    margin-bottom: 2%;
+    margin-top: 3%;
 }
 .snippet-categories{
     margin-right: 2%;
-    height: 50px;
+    height: 46px;
     border-radius: 3px;
 }
 .indicator-description{
     font-size: 1em;
     width: 70%;
     margin: 0 auto;
-    color: #141414;
 }
 .description-wrapper{
     padding: 3% 0;
@@ -361,6 +362,10 @@ nav{
     height: 450px;
     width: 90%;
     margin: 0 auto;
+    background: #fff;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    padding: 2% 1%;
 }
 .data-viz:last-child{
     margin-bottom: 5%;
@@ -371,7 +376,6 @@ nav{
     height: 100%;
     width: 75%;
 }
-
 
 /*********** Footer /***********/
 footer{
@@ -411,8 +415,8 @@ footer{
 /*********** Media Queries ***********/
 @media all and (min-width: 1366px){
     .icon-set-img{
-        height: 150px;
-        width: 150px;
+        height: 135px;
+        width: 135px;
     }
     .data-viz{
         width: 70%;
@@ -432,11 +436,11 @@ footer{
 @media all and (max-width: 800px){
     /* reset the font-size */
     body{
-        font-size: 12px;
+        font-size: 14px;
     }
     /* Mobile styles for nav */
     #nav-header{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     #nav-social-media a:not(:first-child){
         display: none;
@@ -463,11 +467,11 @@ footer{
         box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
     }
     .indicators-icons{
-        width: 65%;
-        height: 65%;
+        width: 60%;
+        height: 60%;
     }
     .indicators-title{
-        height: 35%;
+        height: 40%;
         font-size: 0.8em;
     }
     .icon-set{
@@ -476,11 +480,11 @@ footer{
         margin-right: 4px
     }
     .icon-set-img{
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
     }
     .icon-set-p{
-        font-size: 0.9em;
+        font-size: 0.77em;
     }
     .flipside-img{
         height: 25px;
@@ -517,20 +521,21 @@ footer{
     }
     .back-to-dash{
         width: auto;
-        padding: 0 1vw;
+        padding: 0 2vw 0 1vw;
         border-right: 1px solid white;
-        font-size: 1.1em;
+        font-size: 1em;
     }
     .related-indicators{
         border-top: none;
         flex-direction: row !important;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-items: center;
-        padding: 1vh 0 1vh 6vw;
+        padding: 1vh 0;
         overflow-x: auto;
     }
     .sideLink{
         padding: 0 2vw;
+        font-size: 0.8em;
     }
     .indicators-snippet{
         width: auto;
@@ -539,13 +544,13 @@ footer{
     }
     .indicator-header{
         padding-top: 3%;
-        font-size: 1.7em;
+        font-size: 1.6em;
     }
     .indicator-subheader{
         font-size: 1.1em;
     }
     .snippet-categories{
-        height: 30px;
+        height: 35px;
     }
     .indicator-description{
         width: 90%;
@@ -566,5 +571,25 @@ footer{
     .nv-legendWrap{
         width: 95vw !important;
         display: flex !important;
+    }
+}
+@media all and (max-width: 325px) {
+    #nav-header{
+        font-size: 1.2em;
+    }
+    .icon-set-img{
+        width: 32px;
+        height: 32px;
+    }
+    .icon-set-p{
+        font-size: 0.67em;
+    }
+    .indicators-icons{
+        width: 60%;
+        height: 60%;
+    }
+    .indicators-title{
+        height: 40%;
+        font-size: 0.67em;
     }
 }
