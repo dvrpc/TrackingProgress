@@ -1,4 +1,4 @@
-import { toggleIndicators, setIndicatorDimensions, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
+import { toggleIndicators, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
 
 // get a handle on the dashboard elements
@@ -29,20 +29,14 @@ window.onload = refreshView
 // hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
 window.onhashchange = updateView
 
-// update indicator tiles on window resize
-window.onresize = () => (indicators.forEach(indicator => setIndicatorDimensions(indicator)))
-
-
 
 /**************************************************/
 /**************** Dashboard Events ****************/
 // apply filter toggle to each category
 categories.forEach(category => category.onclick = () => toggleIndicators(category, indicators))
 
-// make sure indicators are always square + add flip handler
-// @TODO: figure out a better way to assign these click handlers because it's a huge bottleneck atm
+//  add flip handler
 indicators.forEach(indicator => {
-    setIndicatorDimensions(indicator)
     indicator.onmouseenter = indicator => indicatorHoverFlip(indicator, true)
     indicator.onmouseleave = indicator => indicatorHoverFlip(indicator, false)
 })

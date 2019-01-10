@@ -135,20 +135,6 @@ const fade = (grid, indicatorsNav, categories) => {
     categories.forEach(category => category.classList.add('fade-out'))
 }
 
-// set the indicator tiles height/width
-const setIndicatorDimensions = indicator => {
-    let height = window.innerHeight;
-    let width = window.innerWidth;
-
-    // set the dimensions baesd on the larger of height/width. Factor in nav (8vh) for height and side nav(15vh) for width & margin (8px) for both
-    let dimensions = height > width ? (height - (height * 0.08) - 8) : (width - (width * 0.15) - 8)
-
-    indicator.style.width = `${ (dimensions / 9) + (dimensions * 0.01) }px`
-    indicator.style.height = indicator.style.width
-
-    indicator.style.margin = `${dimensions * 0.01}px`
-}
-
 const indicatorHoverFlip = (indicator, flipTo) => {
     
     // get the target of the mose event
@@ -208,4 +194,4 @@ const getIndicatorDetails = el => {
     return getIndicatorDetails(parent)
 }
 
-export {toggleIndicators, fade, setIndicatorDimensions, makeDashboard, removeDashboard, indicatorHoverFlip, clickIndicator}
+export {toggleIndicators, fade, makeDashboard, removeDashboard, indicatorHoverFlip, clickIndicator}

@@ -204,6 +204,13 @@ nav{
     border-radius: 3px;
     background: #4fa3a8;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    /* 
+    Finish incorporating this to get rid of the resize function
+        as it stands, it handles all desktop cases (aka wider than tall). Starts to break down at thinner monitors
+        */
+    margin: 1%;
+    width: 10vw;
+    height: 10vw;
 }
 .blank-grid-item{
     pointer-events: none;
@@ -262,7 +269,7 @@ nav{
 .indicators-snippet{
     opacity: 1;
     /* fallback bg for browsers that don't support linear gradient */
-    background: #fcfcfc;
+    background: #f2f2f2;
     background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(242,242,242,1) 20%);
     color: #050709;
     /*15vw for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
@@ -433,6 +440,12 @@ footer{
         width: 70px;
     }
 }
+@media all and (max-width: 1100px){
+    .indicators-grid-item{
+        width: 12vh;
+        height: 12vh;
+    }
+}
 @media all and (max-width: 800px){
     /* reset the font-size */
     body{
@@ -465,6 +478,11 @@ footer{
         flex-direction: row;
         justify-content: center;
         box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
+    }
+    .indicators-grid-item{
+        margin: 1.5%;
+        width: 11vh;
+        height: 11vh;
     }
     .indicators-icons{
         width: 60%;
