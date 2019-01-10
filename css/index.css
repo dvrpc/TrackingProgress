@@ -386,14 +386,35 @@ nav{
 
 /*********** Footer /***********/
 footer{
-    overflow-x: hidden;
-    bottom: 0;
-    line-height: 35px;
+    height: 25vh;
+    padding: 1% 15%;
     background: #545454;
-    color: #fff;
-    padding: 5% 1% 5% 1%;
+    color: #f7f7f7;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+}
+#footer-logo{
+    height: 30px;
+    width: 85px;
+}
+#footer-words{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+}
+#footer-links{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 70%;
+}
+.footer-social{
+    height: 17px;
+    width: 20px;
 }
 
 
@@ -589,6 +610,17 @@ footer{
     .nv-legendWrap{
         width: 95vw !important;
         display: flex !important;
+    }
+    footer{
+        font-size: 0.7em;
+    }
+    .footer-social{
+        width: 14px;
+        height: 15px;
+    }
+    #footer-logo{
+        height: 25px;
+        width: 80px;
     }
 }
 @media all and (max-width: 325px) {

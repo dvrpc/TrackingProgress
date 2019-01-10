@@ -10,7 +10,6 @@ const back = document.querySelector('.back-to-dash')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 
-
 /*************************************************/
 /***************** Window Events *****************/
 // first and formost, handle cases where the browser doesn't have onhashchange built in (from MDN)
