@@ -89,7 +89,7 @@ const toggleChart = (selected, dataSets) => {
         let newKeys = dataSets[setNumber].newKeys ? true : false
 
         dataSets[setNumber].data.forEach((series, index) => {
-            if(newKeys) series.key = newColumns[index]
+            if(newKeys) series.key = series.originalKey = newColumns[index]
             series.columns[1] = newColumns[index]
         })
     }

@@ -61,7 +61,7 @@ const createStackedBarChart = (source, doubleToggle) => {
 const createLinePlusBarChart = (source, doubleToggle) => {
     let container, dataSource;
     [container, dataSource, source] = formatInpus(source, doubleToggle)
-    
+
     // extract the column names
     let barSource = source.data[0].columns
     let lineSource = source.data[1].columns
@@ -75,10 +75,11 @@ const createLinePlusBarChart = (source, doubleToggle) => {
                 .margin({top: 35, right: 65, bottom: 35, left: 55})
                 .focusEnable(false)
                 .x(d => d[0])
-                .forceY(0)
+                .forceY([0])
                 .y((d, i) => d[1])
 
-            console.log('bar source before draw ', source.data[1])
+            // bar source is correctly updating. EVerything is doing what it should EXCEPT for the graph itself clearing the bar data
+            console.log('bar source before draw ', source.data[0])
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -94,12 +95,9 @@ const createLineChart = (source, doubleToggle) => {
     [container, dataSource, source] = formatInpus(source, doubleToggle)
 
     d3.csv(dataSource, rows => {
-
-        // extract information from the columns set in the snippetsRef lookup table
         source.data.forEach(series => {
             series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
         })
-
     }, csvObj => {
 
         nv.addGraph(() => {
