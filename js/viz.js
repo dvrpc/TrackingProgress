@@ -2,7 +2,7 @@
 /************************ D3 Content for Indicators *********************************/
 /************************************************************************************/
 // input helper function
-const inputJawn = source => {
+const formatInpus = (source, doubleToggle) => {
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
 
@@ -59,31 +59,17 @@ const createStackedBarChart = (source, doubleToggle) => {
 }
 
 const createLinePlusBarChart = (source, doubleToggle) => {
-
-    // the name of the div containing the svg for d3 to paint on
-    const container = `.${source.container} svg`
-
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
-
-    // handle double toggle cases
-    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
-
-    /* @TODO: incorporate this into every function:
-        let container, dataSource;
-        [container, dataSource, source] = inputJawn(source)
-    */
-
+    let container, dataSource;
+    [container, dataSource, source] = formatInpus(source, doubleToggle)
+    
     // extract the column names
     let barSource = source.data[0].columns
     let lineSource = source.data[1].columns
 
     d3.csv(dataSource, rows => {
-
         source.data[0].values.push([ +rows[barSource[0]], rows[barSource[1]] === 'NA' ? null : +rows[barSource[1]] ])
         source.data[1].values.push([ +rows[lineSource[0]], rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]] ])
-
-    }, csvObj => {
+    }, csvObj => {        
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
                 .margin({top: 35, right: 65, bottom: 35, left: 55})
@@ -92,14 +78,7 @@ const createLinePlusBarChart = (source, doubleToggle) => {
                 .forceY(0)
                 .y((d, i) => d[1])
 
-            /*
-                The current data set just has days violating so they don't need notation, but future datasets may have values of $ or % or degrees or whatever, so 
-                there will eventually be a need to implement some kind of parameter that sets the axes to the correct label. But that's a future problem
-
-            chart.y1Axis.tickFormat(d3.format(',f'));
-
-            chart.y2Axis.tickFormat(function(d) { return '$' + d3.format(',f')(d) });
-            */
+            console.log('bar source before draw ', source.data[1])
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -111,15 +90,8 @@ const createLinePlusBarChart = (source, doubleToggle) => {
 }
 
 const createLineChart = (source, doubleToggle) => {
-
-    // the name of the div containing the svg for d3 to paint on
-    const container = `.${source.container} svg`
-
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
-
-    // handle double toggle cases
-    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
+    let container, dataSource;
+    [container, dataSource, source] = formatInpus(source, doubleToggle)
 
     d3.csv(dataSource, rows => {
 
@@ -154,14 +126,8 @@ const createLineChart = (source, doubleToggle) => {
 }
 
 const createStackedAreaChart = (source, doubleToggle) => {
-    // the name of the div containing the svg for d3 to paint on
-    const container = `.${source.container} svg`
-
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
-
-    // handle double toggle cases
-    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
+    let container, dataSource;
+    [container, dataSource, source] = formatInpus(source, doubleToggle)
 
     d3.csv(dataSource, rows => {
 
@@ -201,14 +167,8 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
     let barMax = 0;
     let max;
 
-    // the name of the div containing the svg for d3 to paint on
-    const container = `.${source.container} svg`
-
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
-
-    // handle double toggle cases
-    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
+    let container, dataSource;
+    [container, dataSource, source] = formatInpus(source, doubleToggle)
 
     d3.csv(dataSource, rows => {
         source.data.forEach(series => {
@@ -226,6 +186,7 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
 
         // kinda hacky but it's the current solution to finding the max (which is generally bar1Max + bar2Max)
         max = lineMax + (barMax / 2.5)
+        
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
                 .margin({top: 35, right: 55, bottom: 35, left: 55})

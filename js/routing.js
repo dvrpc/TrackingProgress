@@ -78,6 +78,19 @@ const updateView = transition => {
             
             // check if the proposed route is valid
             if(hashArray[1] && allowedRoutes[hashArray[0]] === hashArray[1]){
+                // if coming from refresh view, set the dashboard default to fade()...
+                // this is the only place that calls removeDashboard, so consider refactoring it to remove fade() from inside it
+                    /* and then try something like:
+                     if(coming-from-refresh){
+                         fade()
+                         removeDashboard()
+                    }else{
+                        removeDashboard()
+                        fade()
+                    }
+
+                    */
+
                 removeDashboard(grid, indicatorsNav, back, categories, transition)
                 makeIndicatorPage(hashArray)
             }else{

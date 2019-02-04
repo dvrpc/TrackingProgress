@@ -90,19 +90,12 @@ const toggleChart = (selected, dataSets) => {
 
         dataSets[setNumber].data.forEach((series, index) => {
             if(newKeys) series.key = newColumns[index]
-            
-            // SOMEHOW series.key is being CORRECTLY REASSIGNED but when you log series, IT SHOWS THE OLD VALUE
-                // HOW IS THAT POSSIBLE WHAT AM I MISSING HERE
-            console.log('key ', series.key)
-            console.log('series ', series)
             series.columns[1] = newColumns[index]
         })
     }
 
     // source is the correct dataset with updated column names
     const source = dataSets[setNumber]
-
-    console.log('source ', source)
 
     // switch case to determine which kind of vis to make and which dataset to reference
     dataVizSwitch(source.type, source, doubleToggle)
