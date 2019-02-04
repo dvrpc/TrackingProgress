@@ -8,6 +8,7 @@ const categories = [... document.querySelectorAll('.icon-set')]
 
 // @TODO: add '|| process.ENV.jawn' for baseURL, hostName and 404 in production
 const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
+const baseURLLower = 'http://dev.dvrpc.org/trackingprogress/'
 const hostName = 'dev.dvrpc.org' 
 const four0four = 'http://dev.dvrpc.org/TrackingProgress/404.html'
 
@@ -47,44 +48,45 @@ const setIndexURL = () => {
     history.pushState({page: 'home'}, 'Tracking Progress', baseURL)
     
     // update the view
-    updateView()
+    updateView(false)
 }
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
-const setIndicatorURL = (title, primaryCategory, transition) => {
+const setIndicatorURL = (title, primaryCategory) => {
 
     // pull relevant info from the URL
     const titlesMinusSpace = title.trim().replace(/\s+/g, '-')
-    const newHash = transition ? `${titlesMinusSpace}/${primaryCategory}/${transition}` : `${titlesMinusSpace}/${primaryCategory}`
+    const newHash = `${titlesMinusSpace}/${primaryCategory}`
 
     // update URL state
     history.pushState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
 
     // update the view
-    updateView()
+    updateView(true)
 }
 
 // takes the URL hash and hydrates the page with the appropriate information
-const updateView = () => {
+// handle better refresh: have updateview return a boolean, and have refreshView hold the page load status until AFTER updateView() has returned it's value
+const updateView = transition => {
 
     // make sure the URL is valid from our address
     if(location.hostname === hostName){
 
         // updating indicator page case
         if(location.hash.length){
-            const hashArray = location.hash.trim().slice(1).split('/')
+            let hashArray = location.hash.trim().slice(1).split('/')
             
             // check if the proposed route is valid
             if(hashArray[1] && allowedRoutes[hashArray[0]] === hashArray[1]){
-                let transition = hashArray[2] ? true : false
                 removeDashboard(grid, indicatorsNav, back, categories, transition)
                 makeIndicatorPage(hashArray)
             }else{
+                console.log('broken hash case')
                 window.location.assign(four0four)
             }
 
         // going back home case
-        }else if(location.href === baseURL) {
+        }else if(location.href === baseURL || location.href === baseURLLower) {
 
             // get a handle on the necessary grid elements
             const relatedIndicators = document.querySelector('.related-indicators')
@@ -92,6 +94,7 @@ const updateView = () => {
         
         // catch all 404 case (doesn't handle no hash cases...)
         }else{
+            console.log('catch all case')
             window.location.assign(four0four)
         }
     }
@@ -101,23 +104,10 @@ const updateView = () => {
 const refreshView = () => {
 
     // if refreshing the homepage, do nothing
-    if(location.hostname === hostName && location.href !== baseURL){
-        let hashArray = location.hash.trim().slice(1).split('/')
-
-        if(allowedRoutes[hashArray[0]] === hashArray[1]){
-
-            // handle edge case where user refreshes with the homepage 'true' in the hash fragment
-            if(hashArray[2] && hashArray[2] === 'true'){
-                const newHash = `${hashArray[0]}/${hashArray[1]}`
-                const title = hashArray[0]
-                history.replaceState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
-            }
-            
-            updateView()
-        }else{
-            window.location.assign(four0four)
-        }
-
+    if(location.href !== baseURL || location.href !== baseURLLower){
+        
+        // handle edge case where user refreshes with the homepage 'true' in the hash fragment            
+        updateView(false)
     }
 }
 

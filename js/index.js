@@ -48,7 +48,7 @@ grid.onclick = e => {
     [title, primaryCategory] = [... clickIndicator(e)]
 
     // update the URL which in turn hydrates the indicator page
-    setIndicatorURL(title, primaryCategory, true)
+    setIndicatorURL(title, primaryCategory)
 }
 
 // return to dashboard view 

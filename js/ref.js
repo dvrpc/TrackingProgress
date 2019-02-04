@@ -1631,6 +1631,28 @@ const snippetsRef = {
                         columns: ['year', 'solar']
                     }
                 ]
+            },
+            {
+                type: 'line and bar',
+                container: 'chart4',
+                newKeys: true,
+                dataSource: './data/emissions_4.csv',
+                columnOptions: [
+                    ['Temperature', '30 year trend - Temperature'],
+                    ['Precipitation', '30 year trend - Precipitation'],
+                    ['Precipitation from Severe Storms', '30 year trend - Precipitation from Severe Storms']
+                ],
+                data: [
+                    {
+                        'key': 'Temperature - Farenheit',
+                        columns: ['year', 'Temperature'],
+                        bar: true
+                    },
+                    {
+                        'key': '30-year trend',
+                        columns: ['year', '30 year trend - Temperature']
+                    }
+                ]
             }
         ]
     },
