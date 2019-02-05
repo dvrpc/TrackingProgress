@@ -62,7 +62,7 @@ const createLinePlusBarChart = (source, doubleToggle) => {
     let container, dataSource;
     [container, dataSource, source] = formatInpus(source, doubleToggle)
 
-    // extract the column names
+    // extract the column names (@TODO: refactor this to check TYPE instead of just assuming bar will be the first entry)
     let barSource = source.data[0].columns
     let lineSource = source.data[1].columns
 
@@ -78,8 +78,8 @@ const createLinePlusBarChart = (source, doubleToggle) => {
                 .forceY([0])
                 .y((d, i) => d[1])
 
-            // bar source is correctly updating. EVerything is doing what it should EXCEPT for the graph itself clearing the bar data
-            console.log('bar source before draw ', source.data[0])
+            // bar source is correctly updating. Everything is doing what it should EXCEPT for the graph itself clearing the bar data
+            //console.log('bar source before draw ', source.data[0])
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -121,6 +121,50 @@ const createLineChart = (source, doubleToggle) => {
             return chart
         })
     })
+}
+
+const createLineAndScatterChart = (source, doubleToggle) => {
+    let container, dataSource;
+    [container, dataSource, source] = formatInpus(source, doubleToggle)
+
+    let scatterIndex = source.data[0].type === 'scatter' ? 0 : 1
+    let lineIndex = scatterIndex === 0 ? 1 : 0
+
+    let scatterSource = scatterIndex === 0 ? source.data[0].columns : source.data[1].columns
+    let lineSource = lineIndex === 1 ? source.data[1].columns : source.data[0].columns
+
+    d3.csv(dataSource, rows => {
+        source.data[scatterIndex].values.push({
+            x: +rows[scatterSource[0]],
+            y: rows[scatterSource[1]] === 'NA' ? null : +rows[scatterSource[1]],
+            size: 0.5,
+            shape: 'circle'
+        })
+        source.data[lineIndex].values.push({
+            x: +rows[lineSource[0]],
+            y: rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]]
+        })
+    }, csvObj => {
+        nv.addGraph(() => {
+            let chart = nv.models.multiChart()
+                .margin({top: 35, right: 65, bottom: 35, left: 55})
+                // previously had scatter and line in different yAxis (1 and 2, respectively) w/explicitly defined domains
+                // .yDomain1([0, 60])
+                // .yDomain2([0, 60])
+
+            chart.yAxis1.tickFormat(d3.format(','))
+            //chart.yAxis2.tickFormat(d3.format(','))
+
+            console.log('line scatter source data before paint ', source.data)
+            
+            d3.select(container).datum(source.data).transition().duration(500).call(chart)
+
+            nv.utils.windowResize(chart.update)
+
+            return chart
+        })
+    })
+
 }
 
 const createStackedAreaChart = (source, doubleToggle) => {
@@ -174,7 +218,7 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
             if(series.type === 'bar') +rows[series.columns[1]] > barMax ? barMax = +rows[series.columns[1]] : null
             if(series.type === 'line') +rows[series.columns[1]] > lineMax ? lineMax = +rows[series.columns[1]] : null
 
-            series.values.push({ 
+            series.values.push({
                 x: +rows[series.columns[0]],
                 y: rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
             })
@@ -206,4 +250,4 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
     })
 }
 
-export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createdStackedBarPlusLine};
+export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createdStackedBarPlusLine, createLineAndScatterChart};

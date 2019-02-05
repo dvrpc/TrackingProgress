@@ -25,6 +25,9 @@ const dataVizSwitch = (type, source, doubleToggle) => {
         case 'stacked bar plus line':
             graphs.createdStackedBarPlusLine(source, doubleToggle)
             break;
+        case 'line and scatter':
+            graphs.createLineAndScatterChart(source, doubleToggle)
+            break;
         default:
             console.log('default')
     }

@@ -335,13 +335,13 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': '5 year avg',
-                        'columns': ['year', 'ksiPerVMT5yrAvgDVRPC']
-                    },
-                    {
                         'key': 'Total KSI',
                         'bar': true,
                         'columns': ['year', 'ksiPerVMTDVRPC']
+                    },
+                    {
+                        'key': '5 year avg',
+                        'columns': ['year', 'ksiPerVMT5yrAvgDVRPC']
                     }
                 ]
             }
@@ -1633,7 +1633,7 @@ const snippetsRef = {
                 ]
             },
             {
-                type: 'line and bar',
+                type: 'line and scatter',
                 container: 'chart4',
                 newKeys: true,
                 dataSource: './data/emissions_4.csv',
@@ -1646,11 +1646,14 @@ const snippetsRef = {
                     {
                         'key': 'Temperature - Farenheit',
                         columns: ['year', 'Temperature'],
-                        bar: true
+                        type: 'scatter',
+                        yAxis: 1
                     },
                     {
                         'key': '30-year trend',
-                        columns: ['year', '30 year trend - Temperature']
+                        columns: ['year', '30 year trend - Temperature'],
+                        type: 'line',
+                        yAxis: 1
                     }
                 ]
             }
