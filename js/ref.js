@@ -1638,14 +1638,14 @@ const snippetsRef = {
                 newKeys: true,
                 dataSource: './data/emissions_4.csv',
                 columnOptions: [
-                    ['Temperature', '30 year trend - Temperature'],
+                    ['Temperature - Farenheit', '30 year trend - Temperature'],
                     ['Precipitation', '30 year trend - Precipitation'],
                     ['Precipitation from Severe Storms', '30 year trend - Precipitation from Severe Storms']
                 ],
                 data: [
                     {
                         'key': 'Temperature - Farenheit',
-                        columns: ['year', 'Temperature'],
+                        columns: ['year', 'Temperature - Farenheit'],
                         type: 'scatter',
                         yAxis: 1
                     },

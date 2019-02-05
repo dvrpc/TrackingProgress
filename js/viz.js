@@ -63,6 +63,7 @@ const createLinePlusBarChart = (source, doubleToggle) => {
     [container, dataSource, source] = formatInpus(source, doubleToggle)
 
     // extract the column names (@TODO: refactor this to check TYPE instead of just assuming bar will be the first entry)
+        // first need to refactor the linePlusBar instances in ref to have a type field, instead of just bar: true
     let barSource = source.data[0].columns
     let lineSource = source.data[1].columns
 
@@ -137,7 +138,7 @@ const createLineAndScatterChart = (source, doubleToggle) => {
         source.data[scatterIndex].values.push({
             x: +rows[scatterSource[0]],
             y: rows[scatterSource[1]] === 'NA' ? null : +rows[scatterSource[1]],
-            size: 0.5,
+            size: 1.5,
             shape: 'circle'
         })
         source.data[lineIndex].values.push({
@@ -148,14 +149,10 @@ const createLineAndScatterChart = (source, doubleToggle) => {
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
                 .margin({top: 35, right: 65, bottom: 35, left: 55})
-                // previously had scatter and line in different yAxis (1 and 2, respectively) w/explicitly defined domains
-                // .yDomain1([0, 60])
-                // .yDomain2([0, 60])
+                // @TODO: calculate a max instead of just using 60
+                .yDomain1([0, 65])
 
             chart.yAxis1.tickFormat(d3.format(','))
-            //chart.yAxis2.tickFormat(d3.format(','))
-
-            console.log('line scatter source data before paint ', source.data)
             
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -185,7 +182,7 @@ const createStackedAreaChart = (source, doubleToggle) => {
 
         nv.addGraph(() => {
             let chart = nv.models.stackedAreaChart()
-                .margin({top: 35, right: 55, bottom: 35, left: 55})
+                .margin({top: 65, right: 55, bottom: 35, left: 55})
                 .x(d => d[0])
                 .y(d => d[1])
                 .useInteractiveGuideline(true)
