@@ -89,7 +89,9 @@ nav{
     position: relative;
     display: flex;
     width: 100%;
-    /* height: calc(92vh - 8px); */
+    /* This line is important for switching between indicators. It prevents the flash of the footer shooting up to the top in the brief moment where there's no content. 
+    @TODO: keep this in mind if any weird side effects show up */
+    min-height: calc(92vh - 8px);
     border-bottom: 8px solid white;
 }
 .indicators-nav{
