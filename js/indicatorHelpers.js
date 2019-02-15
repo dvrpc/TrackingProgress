@@ -176,15 +176,11 @@ const makeIndicatorPage = hashArray => {
         // remove an existing indicator page before continuing
         const oldIndicator = document.querySelector('.indicators-snippet')
         if(oldIndicator) oldIndicator.remove()
-
-        // remove an existing sideNav before continuing
-        while(relatedIndicators.firstChild){
-            relatedIndicators.removeChild(relatedIndicators.firstChild)
-        }
-
+        
         const primaryCategory = hashArray[1]
-        getIndicatorSnippet(grid, snippet, graphs)
         generateSideNav(indicators, relatedIndicators, primaryCategory)
+        getIndicatorSnippet(grid, snippet, graphs)
+        
     }
 }
 
@@ -200,17 +196,13 @@ const updateLinks = () => {
             const title = sideLink.textContent
             const primaryCategory = sideLink.classList[1]
 
-            // clear the current indicator snippet
-            const indicatorDetails = document.querySelector('.indicators-snippet')
-            if(indicatorDetails) indicatorDetails.remove()
-
             // clear the side nav of all it's children
             while(relatedIndicators.firstChild){
                 relatedIndicators.removeChild(relatedIndicators.firstChild)
             }
 
             // update the URL which in turn hydrates the new indicator page
-            setIndicatorURL(title, primaryCategory, false)
+            setIndicatorURL(title, primaryCategory)
         }
     })
 }

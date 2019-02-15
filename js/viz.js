@@ -16,15 +16,8 @@ const formatInpus = (source, doubleToggle) => {
 }
 
 const createStackedBarChart = (source, doubleToggle) => {
-
-    // the name of the div containing the svg for d3 to paint on
-    const container = `.${source.container} svg`
-
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
-    
-    // handle double toggle cases
-    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
+    let container, dataSource;
+    [container, dataSource, source] = formatInpus(source, doubleToggle)
 
     d3.csv(dataSource, rows => {
 
@@ -61,15 +54,16 @@ const createStackedBarChart = (source, doubleToggle) => {
 const createLinePlusBarChart = (source, doubleToggle) => {
     let container, dataSource;
     [container, dataSource, source] = formatInpus(source, doubleToggle)
+    
+    let barIndex = source.data[0].type === 'bar' ? 0 : 1
+    let lineIndex = barIndex === 0 ? 1 : 0
 
-    // extract the column names (@TODO: refactor this to check TYPE instead of just assuming bar will be the first entry)
-        // first need to refactor the linePlusBar instances in ref to have a type field, instead of just bar: true
-    let barSource = source.data[0].columns
-    let lineSource = source.data[1].columns
+    let barSource = barIndex === 0 ? source.data[0].columns : source.data[1].columns
+    let lineSource = lineIndex === 1 ? source.data[1].columns : source.data[0].columns
 
     d3.csv(dataSource, rows => {
-        source.data[0].values.push([ +rows[barSource[0]], rows[barSource[1]] === 'NA' ? null : +rows[barSource[1]] ])
-        source.data[1].values.push([ +rows[lineSource[0]], rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]] ])
+        source.data[barIndex].values.push([ +rows[barSource[0]], rows[barSource[1]] === 'NA' ? null : +rows[barSource[1]] ])
+        source.data[lineIndex].values.push([ +rows[lineSource[0]], rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]] ])
     }, csvObj => {        
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
@@ -149,7 +143,7 @@ const createLineAndScatterChart = (source, doubleToggle) => {
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
                 .margin({top: 35, right: 65, bottom: 35, left: 55})
-                // @TODO: calculate a max instead of just using 60
+                // @TODO: calculate a max instead of just using 65
                 .yDomain1([0, 65])
 
             chart.yAxis1.tickFormat(d3.format(','))

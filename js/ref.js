@@ -11,14 +11,16 @@ const snippetsRef = {
                 data: [
                     {
                         'key' : 'Days Violating',
-                        'bar': true,
                         'color': '#f03b20',
                         'columns': ['year', 'daysViolating'],
+                        type: 'bar',
+                        bar: true
                     },
                     {
                         'key': 'Five Year Average',
                         'color': '#666',
                         'columns': ['year', 'fiveYearAvg'],
+                        type: 'line'
                     }
                 ]
             },
@@ -336,12 +338,14 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'Total KSI',
-                        'bar': true,
-                        'columns': ['year', 'ksiPerVMTDVRPC']
+                        'columns': ['year', 'ksiPerVMTDVRPC'],
+                        type: 'bar',
+                        bar: true
                     },
                     {
                         'key': '5 year avg',
-                        'columns': ['year', 'ksiPerVMT5yrAvgDVRPC']
+                        'columns': ['year', 'ksiPerVMT5yrAvgDVRPC'],
+                        type: 'line'
                     }
                 ]
             }

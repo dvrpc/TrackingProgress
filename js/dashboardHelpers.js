@@ -51,12 +51,12 @@ const removeDashboard = (grid, indicatorsNav, back, categories, transition) => {
         indicatorsNav.classList.add('notransition')
     }
 
+    // transition animation from dash to indicator page
+    fade(grid, indicatorsNav, categories)
+
     // adjust side nav display
     back.style.display = 'block'
     indicatorsNav.style.justifyContent = 'flex-start'
-
-    // transition animation from dash to indicator page
-    fade(grid, indicatorsNav, categories)
 }
 
 // function to display/hide indicators based on which category is clicked

@@ -5,6 +5,7 @@ const grid = document.querySelector('.indicators-grid')
 const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 const categories = [... document.querySelectorAll('.icon-set')]
+const footer = document.querySelector('footer')
 
 // @TODO: add '|| process.ENV.jawn' for baseURL, hostName and 404 in production
 const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
@@ -91,8 +92,8 @@ const updateView = transition => {
 
                     */
 
-                removeDashboard(grid, indicatorsNav, back, categories, transition)
                 makeIndicatorPage(hashArray)
+                grid.classList.contains('fade-right') ? null : removeDashboard(grid, indicatorsNav, back, categories, transition)
             }else{
                 console.log('broken hash case')
                 window.location.assign(four0four)
@@ -118,7 +119,7 @@ const refreshView = () => {
 
     // if refreshing the homepage, do nothing
     if(location.href !== baseURL || location.href !== baseURLLower){
-        
+
         // handle edge case where user refreshes with the homepage 'true' in the hash fragment            
         updateView(false)
     }
