@@ -1,10 +1,4 @@
 /*********** General Purpose ***********/
-
-/* 
-    TODO LIST:
-        Dashboard:
-            - Grid scale (work out how to never have scroll - setINdicadtorDimensions function
-*/
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -511,8 +505,8 @@ footer{
         margin-right: 4px
     }
     .icon-set-img{
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: 55px;
     }
     .icon-set-p{
         font-size: 0.77em;
@@ -613,6 +607,12 @@ footer{
     #footer-logo{
         height: 25px;
         width: 80px;
+    }
+}
+@media all and (max-width: 450px) {
+    .icon-set-img{
+        width: 40px;
+        height: 40px;
     }
 }
 @media all and (max-width: 325px) {

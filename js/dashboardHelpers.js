@@ -165,22 +165,17 @@ const indicatorHoverFlip = (indicator, flipTo) => {
 
 // get indicator information from grid click
 const clickIndicator = e => {
-    const node = e.target.nodeName
+    const el = e.target
+    let indicator;
 
-    // avoid cases where user clicks the grid itself
-    if(node != 'MAIN'){
-        const el = e.target
-        let indicator;
+    // recursively find the parent indicator element
+    indicator = getIndicatorDetails(el)
 
-        // recursively find the parent indicator element
-        indicator = getIndicatorDetails(el)
+    // get the title from it's id
+    let title = indicator.id ? indicator.id : null
+    const primaryCategory = indicator.classList[1]
 
-        // get the title from it's id
-        let title = indicator.id ? indicator.id : null
-        const primaryCategory = indicator.classList[1]
-
-        return [title, primaryCategory]
-    }
+    return [title, primaryCategory]
 }
 
 // recursive helper to get the indicator itself

@@ -484,7 +484,7 @@ const snippetsRef = {
             }
         ]
     },
-    'Affordable Housing': {
+    'Housing Affordability': {
         file: 'housingAffordability.html',
         d3: [
             {

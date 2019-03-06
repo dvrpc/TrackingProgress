@@ -43,12 +43,16 @@ indicators.forEach(indicator => {
 // load the selected indicator page & transition to it
 grid.onclick = e => {
     let title, primaryCategory;
+    const node = e.target.nodeName
 
-    // get title and primary category from the clicked element
-    [title, primaryCategory] = [... clickIndicator(e)]
-
-    // update the URL which in turn hydrates the indicator page
-    setIndicatorURL(title, primaryCategory)
+    // only setIndicator if the user clicked on a valid tile
+    if(node != 'MAIN'){
+        // get title and primary category from the clicked element
+        [title, primaryCategory] = [... clickIndicator(e)]
+    
+        // update the URL which in turn hydrates the indicator page
+        setIndicatorURL(title, primaryCategory)
+    }
 }
 
 // return to dashboard view 
