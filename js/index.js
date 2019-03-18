@@ -10,25 +10,6 @@ const back = document.querySelector('.back-to-dash')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 
-/*************************************************/
-/***************** Window Events *****************/
-// first and formost, handle cases where the browser doesn't have onhashchange built in (from MDN)
-if(!window.HashChangeEvent)(function(){
-	var lastURL=document.URL;
-	window.addEventListener("hashchange",function(event){
-		Object.defineProperty(event,"oldURL",{enumerable:true,configurable:true,value:lastURL});
-		Object.defineProperty(event,"newURL",{enumerable:true,configurable:true,value:document.URL});
-		lastURL=document.URL;
-	});
-}());
-
-// handles refresh (only gets triggered when refreshing an indicator page)
-window.onload = refreshView
-
-// hashChange function that takes an updated # URL and updates the page (and route) if/when necessary
-window.onhashchange = updateView
-
-
 /**************************************************/
 /**************** Dashboard Events ****************/
 // apply filter toggle to each category
@@ -51,9 +32,20 @@ grid.onclick = e => {
         [title, primaryCategory] = [... clickIndicator(e)]
     
         // update the URL which in turn hydrates the indicator page
-        setIndicatorURL(title, primaryCategory)
+        setIndicatorURL(title, primaryCategory, true)
     }
 }
 
 // return to dashboard view 
 back.onclick = () => setIndexURL()
+
+
+/*************************************************/
+/***************** Window Events *****************/
+
+// hashChange function parses an updated URL and updates the page (and route) if/when necessary
+// @TODO: Look into why this only gets called when navigating with arrows. pushState causes a hash change, but onhashchange doesn't capture it...
+window.onhashchange = updateView
+
+// handles refresh (only gets triggered when refreshing an indicator page)
+window.onload = refreshView

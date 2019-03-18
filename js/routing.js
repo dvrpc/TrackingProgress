@@ -48,12 +48,12 @@ const setIndexURL = () => {
     // update the URL state
     history.pushState({page: 'home'}, 'Tracking Progress', baseURL)
     
-    // update the view
+    // update the view (same issue here as the comments in line 70)
     updateView(false)
 }
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
-const setIndicatorURL = (title, primaryCategory) => {
+const setIndicatorURL = (title, primaryCategory, transition) => {
 
     // pull relevant info from the URL
     const titlesMinusSpace = title.trim().replace(/\s+/g, '-')
@@ -63,11 +63,12 @@ const setIndicatorURL = (title, primaryCategory) => {
     history.pushState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
 
     // update the view
-    updateView(true)
+    // In theory I shouldn't have to make this function call. history.pushSate changes the hash but for some reason it doesn't trigger onhashchange
+    // only back/forward arrows trigger window.onhashchange, for some reason
+    updateView(transition)
 }
 
-// takes the URL hash and hydrates the page with the appropriate information
-// handle better refresh: have updateview return a boolean, and have refreshView hold the page load status until AFTER updateView() has returned it's value
+// parses the URL hash and hydrates the page with the appropriate information
 const updateView = transition => {
 
     // make sure the URL is valid from our address
@@ -79,19 +80,6 @@ const updateView = transition => {
             
             // check if the proposed route is valid
             if(hashArray[1] && allowedRoutes[hashArray[0]] === hashArray[1]){
-                // if coming from refresh view, set the dashboard default to fade()...
-                // this is the only place that calls removeDashboard, so consider refactoring it to remove fade() from inside it
-                    /* and then try something like:
-                     if(coming-from-refresh){
-                         fade()
-                         removeDashboard()
-                    }else{
-                        removeDashboard()
-                        fade()
-                    }
-
-                    */
-
                 makeIndicatorPage(hashArray)
                 grid.classList.contains('fade-right') ? null : removeDashboard(grid, indicatorsNav, back, categories, transition)
             }else{
@@ -112,6 +100,9 @@ const updateView = transition => {
             window.location.assign(four0four)
         }
     }
+    
+    // let the buffer jawn know the function is done
+    return false
 }
 
 // refreshing an indicator page renders it w/o triggering the normal transitions
@@ -119,6 +110,32 @@ const refreshView = () => {
 
     // if refreshing the homepage, do nothing
     if(location.href !== baseURL || location.href !== baseURLLower){
+
+        // @TODO: add a buffer here so refreshes aren't as jarring.
+        // give updateView a return bool that flips a while statement
+        /* ex.:
+            nav = document.querySelector('nav')
+            
+            // the html loaded by insertLoadingBuffer() should be absolutely positioned, have the highest z-index and 100vw calc(100vh - navHeight)
+                // the html should be a skeleton indicator page w/o content
+                    - empty black side nav
+                    - empty indicator page content w/gradient
+            // basically it's an overlay that will buy time for updateView() to do it's thing
+            nav.insertAdjacentHTML(insertLoadingBuffer(), 'after-begin')
+            
+            let loading = true
+            let calledUpdateView = false
+            while(loading){
+                if(!calledUpdateView) {
+                    calledUpdateView = true
+                    loading = updateView(true)
+                }
+            }
+
+            // remove the buffer 
+            const buffer = document.querySelector('da buffer')
+            buffer.remove() (display: none or something like that)
+        */
 
         // handle edge case where user refreshes with the homepage 'true' in the hash fragment            
         updateView(false)
