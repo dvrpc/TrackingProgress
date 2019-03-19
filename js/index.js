@@ -43,8 +43,7 @@ back.onclick = () => setIndexURL()
 /*************************************************/
 /***************** Window Events *****************/
 
-// hashChange function parses an updated URL and updates the page (and route) if/when necessary
-// @TODO: Look into why this only gets called when navigating with arrows. pushState causes a hash change, but onhashchange doesn't capture it...
+// hashChange function parses an updated URL and updates the page (and route) when using navigation arrows
 window.onhashchange = updateView
 
 // handles refresh (only gets triggered when refreshing an indicator page)

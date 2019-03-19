@@ -180,7 +180,6 @@ const makeIndicatorPage = hashArray => {
         const primaryCategory = hashArray[1]
         generateSideNav(indicators, relatedIndicators, primaryCategory)
         getIndicatorSnippet(grid, snippet, graphs)
-        
     }
 }
 

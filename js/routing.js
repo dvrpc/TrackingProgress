@@ -1,15 +1,15 @@
 import { makeIndicatorPage } from './indicatorHelpers.js'
 import { makeDashboard, removeDashboard } from './dashboardHelpers.js';
 
+const appWrapper = document.getElementById('dashboard')
 const grid = document.querySelector('.indicators-grid')
 const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 const categories = [... document.querySelectorAll('.icon-set')]
-const footer = document.querySelector('footer')
 
 // @TODO: add '|| process.ENV.jawn' for baseURL, hostName and 404 in production
+const basePath = '/trackingprogress/'
 const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
-const baseURLLower = 'http://dev.dvrpc.org/trackingprogress/'
 const hostName = 'dev.dvrpc.org' 
 const four0four = 'http://dev.dvrpc.org/TrackingProgress/404.html'
 
@@ -48,7 +48,7 @@ const setIndexURL = () => {
     // update the URL state
     history.pushState({page: 'home'}, 'Tracking Progress', baseURL)
     
-    // update the view (same issue here as the comments in line 70)
+    // update the view (onhashchange doesnt get triggered so have to manually invoke updateView)
     updateView(false)
 }
 
@@ -62,9 +62,7 @@ const setIndicatorURL = (title, primaryCategory, transition) => {
     // update URL state
     history.pushState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
 
-    // update the view
-    // In theory I shouldn't have to make this function call. history.pushSate changes the hash but for some reason it doesn't trigger onhashchange
-    // only back/forward arrows trigger window.onhashchange, for some reason
+    // update the view (onhashchange doesnt get triggered so have to manually invoke updateView)
     updateView(transition)
 }
 
@@ -73,9 +71,11 @@ const updateView = transition => {
 
     // make sure the URL is valid from our address
     if(location.hostname === hostName){
+        const path = location.pathname.toLowerCase()
+        const hash = location.hash.length
 
         // updating indicator page case
-        if(location.hash.length){
+        if(hash){
             let hashArray = location.hash.trim().slice(1).split('/')
             
             // check if the proposed route is valid
@@ -88,7 +88,7 @@ const updateView = transition => {
             }
 
         // going back home case
-        }else if(location.href === baseURL || location.href === baseURLLower) {
+        }else if(path === basePath) {
 
             // get a handle on the necessary grid elements
             const relatedIndicators = document.querySelector('.related-indicators')
@@ -107,39 +107,26 @@ const updateView = transition => {
 
 // refreshing an indicator page renders it w/o triggering the normal transitions
 const refreshView = () => {
+    const hash = location.hash.length
 
-    // if refreshing the homepage, do nothing
-    if(location.href !== baseURL || location.href !== baseURLLower){
+    if(hash){
+        const buffer = document.getElementById('buffer')
+        buffer.style.display = 'flex'
 
-        // @TODO: add a buffer here so refreshes aren't as jarring.
-        // give updateView a return bool that flips a while statement
-        /* ex.:
-            nav = document.querySelector('nav')
-            
-            // the html loaded by insertLoadingBuffer() should be absolutely positioned, have the highest z-index and 100vw calc(100vh - navHeight)
-                // the html should be a skeleton indicator page w/o content
-                    - empty black side nav
-                    - empty indicator page content w/gradient
-            // basically it's an overlay that will buy time for updateView() to do it's thing
-            nav.insertAdjacentHTML(insertLoadingBuffer(), 'after-begin')
-            
-            let loading = true
-            let calledUpdateView = false
-            while(loading){
-                if(!calledUpdateView) {
-                    calledUpdateView = true
-                    loading = updateView(true)
-                }
+        let loading = true
+        let calledUpdateView = false
+
+        while(loading){
+            console.log('loading')
+            if(!calledUpdateView) {
+                calledUpdateView = true
+                loading = updateView(false)
             }
-
-            // remove the buffer 
-            const buffer = document.querySelector('da buffer')
-            buffer.remove() (display: none or something like that)
-        */
-
-        // handle edge case where user refreshes with the homepage 'true' in the hash fragment            
-        updateView(false)
+        }
+        buffer.style.display = 'none'
     }
+
+    appWrapper.style.visibility = 'visible'
 }
 
 export {setIndicatorURL, setIndexURL, refreshView, updateView}

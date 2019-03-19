@@ -1,3 +1,4 @@
+/****************************************/
 /*********** General Purpose ***********/
 * {
     font-family: 'Roboto', sans-serif;
@@ -19,7 +20,9 @@ body{
     cursor: auto;
 }
 
-/*The following are taken from subpage.css*/
+
+/************************************/
+/*********** subpage.css************/
 a{
     background-color: transparent;
     color: inherit;
@@ -46,6 +49,7 @@ fieldset{
 }
 
 
+/*******************************/
 /*********** Navbar ***********/
 nav{
     width: 95%;
@@ -78,15 +82,15 @@ nav{
 }
 
 
+/********************************************/
 /*********** Indicator Dashboard ***********/
 .indicators-wrapper{
     position: relative;
     display: flex;
     width: 100%;
-    /* This line is important for switching between indicators. It prevents the flash of the footer shooting up to the top in the brief moment where there's no content. 
-    @TODO: keep this in mind if any weird side effects show up */
     min-height: calc(92vh - 8px);
     border-bottom: 8px solid white;
+    visibility: hidden;
 }
 .indicators-nav{
     position: absolute;
@@ -119,11 +123,10 @@ nav{
     width: 100%;
     text-align: center;
     opacity: 1;
-    visibility: visible;
-    transition: opacity 1s, visibility 1s;
-    -webkit-transition: opacity 1s, visibility 1s;
-    -moz-transition: opacity 1s, visibility 1s;
-    -o-transition: opacity 1s, visibility 1s;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
     transition-timing-function: linear;
     overflow-y: hidden;
 }
@@ -189,10 +192,6 @@ nav{
     border-radius: 3px;
     background: #4fa3a8;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
-    /* 
-    Finish incorporating this to get rid of the resize function
-        as it stands, it handles all desktop cases (aka wider than tall). Starts to break down at thinner monitors
-        */
     margin: 1%;
     width: 10vw;
     height: 10vw;
@@ -250,6 +249,7 @@ nav{
 }
 
 
+/****************************************/
 /*********** Indicator Pages ***********/
 .indicators-snippet{
     opacity: 1;
@@ -282,7 +282,6 @@ nav{
 .indicator-header-hr{
     margin: 1% 0;
 }
-/*category icons*/
 .indicator-category-icons{
     display: flex;
     justify-content: center;
@@ -325,9 +324,6 @@ nav{
 .sideLink:hover{
     color: #75b8c8;
 }
-
-
-/*********** Togglabe Elements **********/
 .toggle-subheader{
     border-right: 2px solid #141414;
     padding-right: 1%;
@@ -349,6 +345,7 @@ nav{
 }
 
 
+/********************************/
 /*********** D3 Views **********/
 .data-viz{
     height: 450px;
@@ -370,7 +367,29 @@ nav{
 }
 
 
-/*********** Footer /***********/
+/**************************************/
+/******* Indicator Page Buffer *******/
+#buffer{
+    display: none;
+    position: absolute;
+    z-index: 60;
+    width: 100vw;
+    height: 92vh;
+}
+#sidenav-buffer{
+    width: 15vw;
+    height: 100%;
+    background: #222222;
+}
+#indicator-page-buffer{
+    width: 85vw;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(242,242,242,1) 20%);
+}
+
+
+/*******************************/
+/*********** Footer ***********/
 footer{
     height: 25vh;
     padding: 1% 15%;
@@ -404,6 +423,7 @@ footer{
 }
 
 
+/************************************/
 /*********** Transitions ***********/
 .fade-out{
     display: none;
@@ -426,6 +446,7 @@ footer{
 }
 
 
+/**************************************/
 /*********** Media Queries ***********/
 @media all and (min-width: 1366px){
     .icon-set-img{
