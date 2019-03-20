@@ -1784,9 +1784,17 @@ const snippetsRef = {
             }
         ]
     },
+    'Population Growth': {
+        file: 'populationGrowth.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart'
+            }
+        ]
+    },
     'Bridge Conditions': {file: 'bridgeConditions.html', d3: false },
-    'Land Preservation': {file: 'landPreservation.html',  d3: false },
-    'Population Growth': {file: 'populationGrowth.html', d3: false}
+    'Land Preservation': {file: 'landPreservation.html',  d3: false }
 }
 
 // @TODO: rebuild column options in the following way:
