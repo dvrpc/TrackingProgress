@@ -180,6 +180,8 @@ const makeIndicatorPage = hashArray => {
         const primaryCategory = hashArray[1]
         generateSideNav(indicators, relatedIndicators, primaryCategory)
         getIndicatorSnippet(grid, snippet, graphs)
+    }else{
+        alert('invalid indicator snippet - @TODO: make an invalid request template')
     }
 }
 

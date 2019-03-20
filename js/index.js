@@ -36,13 +36,12 @@ grid.onclick = e => {
     }
 }
 
-// return to dashboard view 
+// return to dashboard view
 back.onclick = () => setIndexURL()
 
 
 /*************************************************/
 /***************** Window Events *****************/
-
 // hashChange function parses an updated URL and updates the page (and route) when using navigation arrows
 window.onhashchange = updateView
 

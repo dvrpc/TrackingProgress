@@ -16,6 +16,7 @@ const catColors = {
 }
 
 const makeDashboard = (relatedIndicators, indicatorsNav, back, grid, categories) => {
+    
     // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
     const indicator = document.querySelector('.indicators-snippet')
     if(indicator) indicator.remove()
