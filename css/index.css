@@ -193,11 +193,8 @@ nav{
     background: #4fa3a8;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
     margin: 1%;
-    width: 10vw;
-    height: 10vw;
-}
-.blank-grid-item{
-    pointer-events: none;
+    width: 11vw;
+    height: 11vw;
 }
 .indicators-grid-item:hover{
     cursor: pointer;
@@ -518,8 +515,6 @@ footer{
     }
     .indicators-grid-item{
         margin: 1.5%;
-        width: 11vh;
-        height: 11vh;
     }
     .indicators-icons{
         width: 60%;
