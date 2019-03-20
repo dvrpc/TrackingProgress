@@ -369,12 +369,21 @@ nav{
 
 /**************************************/
 /******* Indicator Page Buffer *******/
-#buffer{
-    display: none;
+.buffer-wrapper{
+    visibility: hidden;
     position: absolute;
     z-index: 60;
     width: 100vw;
     height: 92vh;
+}
+#indicators-nav-buffer{
+    width: 15vw;
+    height: 100%;
+}
+#indicators-grid-buffer{
+    width: 85vw;
+    height: 100%;
+    background: #e9e9e9;
 }
 #sidenav-buffer{
     width: 15vw;

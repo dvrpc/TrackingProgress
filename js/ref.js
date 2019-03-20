@@ -1768,6 +1768,22 @@ const snippetsRef = {
             }
         ]
     },
+    'Innovation': {
+        file: 'innovation.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/patents.csv',
+                data: [
+                    {
+                        'key': 'Pattent Approvals',
+                        columns: ['Year', 'DVRPC']
+                    }
+                ]
+            }
+        ]
+    },
     'Bridge Conditions': {file: 'bridgeConditions.html', d3: false },
     'Land Preservation': {file: 'landPreservation.html',  d3: false },
     'Population Growth': {file: 'populationGrowth.html', d3: false}
