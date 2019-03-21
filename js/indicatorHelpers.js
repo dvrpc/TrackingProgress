@@ -140,6 +140,11 @@ const getIndicatorSnippet = (grid, snippet) => {
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
 const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 
+    // clear the side nav of all it's children
+    while(relatedIndicators.firstChild){
+        relatedIndicators.removeChild(relatedIndicators.firstChild)
+    }
+
     // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
     indicators.forEach(indicator => {
 
@@ -194,16 +199,8 @@ const updateLinks = () => {
 
     sideLinks.forEach(sideLink => {
         sideLink.onclick = () => {
-
             const title = sideLink.textContent
             const primaryCategory = sideLink.classList[1]
-
-            console.log('****** AT UPDATE LINKS *******')
-
-            // clear the side nav of all it's children
-            while(relatedIndicators.firstChild){
-                relatedIndicators.removeChild(relatedIndicators.firstChild)
-            }
 
             // update the URL which in turn hydrates the new indicator page
             setIndicatorURL(title, primaryCategory, false)
@@ -211,8 +208,7 @@ const updateLinks = () => {
     })
 }
 
-// moved the sideLinks observer into indicatorHelpers because that helps the observer listen to and attach click handlers 
-// to the indicator sideNav if/when a user refreshes an indicator page
+// listen for changes to sideNav and update the links 
 const observer = new MutationObserver(updateLinks)
 observer.observe(relatedIndicators, mutationConfig)
 
