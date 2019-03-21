@@ -3,12 +3,13 @@ import { makeDashboard, removeDashboard } from './dashboardHelpers.js';
 
 const appWrapper = document.getElementById('dashboard')
 const grid = document.querySelector('.indicators-grid')
-const indicatorsNav = document.querySelector('.indicators-nav')
-const back = document.querySelector('.back-to-dash')
-const categories = [... document.querySelectorAll('.icon-set')]
+
 
 // @TODO: update baseURL for production
 const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
+
+// remove possible special characters from URL by whitelisting alphanumeric characters, - and /
+const sanitizeHash = hash => hash.replace(/[^\w\-\/]/gi, '')
 
 const setIndexURL = () => {
     // update the URL state
@@ -22,11 +23,11 @@ const setIndexURL = () => {
 const setIndicatorURL = (title, primaryCategory, transition) => {
 
     // pull relevant info from the URL
-    const titlesMinusSpace = title.trim().replace(/\s+/g, '-')
-    const newHash = `#${titlesMinusSpace}/${primaryCategory}`
+    const formattedTitle = title.trim().replace(/\s+/g, '-')
+    const newHash = `${formattedTitle}/${primaryCategory}`
 
     // update URL state
-    history.pushState({page: 'indicator'}, title, `${baseURL}${newHash}`)
+    history.pushState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
 
     // update the view (onhashchange doesnt get triggered so have to manually invoke updateView)
     updateView(transition, newHash)
@@ -34,27 +35,27 @@ const setIndicatorURL = (title, primaryCategory, transition) => {
 
 // parses the URL hash and hydrates the page with the appropriate information
 const updateView = (transition, hashParam) => {
-    let hash = hashParam ? hashParam : location.hash
+    let hash = hashParam ? hashParam : sanitizeHash(location.hash)
 
     if(hash){
-        let hashArray = hash.trim().slice(1).split('/')
+        let hashArray = hash.split('/')
         makeIndicatorPage(hashArray)
-        grid.classList.contains('fade-right') ? null : removeDashboard(grid, indicatorsNav, back, categories, transition)
+        grid.classList.contains('fade-right') ? null : removeDashboard(transition)
     }else{
         const relatedIndicators = document.querySelector('.related-indicators')
-        makeDashboard(relatedIndicators, indicatorsNav, back, grid, categories)
+        makeDashboard(relatedIndicators)
     }
-
-    // let the buffer jawn know the function is done
-    return false
 }
 
 // refreshing an indicator page renders it w/o triggering the normal transitions
 const refreshView = () => {
-    const hash = location.hash
+    let hash = location.hash
 
     // only update the view if refreshing an indicator page
-    if(hash.length) updateView(false, hash)
+    if(hash.length) {
+        hash = sanitizeHash(hash)
+        updateView(false, hash)
+    }
 
     appWrapper.style.visibility = 'visible'
 }

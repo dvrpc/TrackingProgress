@@ -173,6 +173,7 @@ const makeIndicatorPage = hashArray => {
 
     // make sure the snippet exists before proceeding
     if(snippet){
+
         // remove an existing indicator page before continuing
         const oldIndicator = document.querySelector('.indicators-snippet')
         if(oldIndicator) oldIndicator.remove()
@@ -196,6 +197,8 @@ const updateLinks = () => {
 
             const title = sideLink.textContent
             const primaryCategory = sideLink.classList[1]
+
+            console.log('****** AT UPDATE LINKS *******')
 
             // clear the side nav of all it's children
             while(relatedIndicators.firstChild){

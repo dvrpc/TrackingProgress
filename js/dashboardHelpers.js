@@ -1,3 +1,9 @@
+// get a handle on elements to make/remove the dashboard
+const grid = document.querySelector('.indicators-grid')
+const indicatorsNav = document.querySelector('.indicators-nav')
+const back = document.querySelector('.back-to-dash')
+const categories = [... document.querySelectorAll('.icon-set')]
+
 // rerence to the clicked category (this has to exist outside the scope of toggleIndicators, otherwise clicking an active category won't reset to all indicators view)
 let clickedRef;
 
@@ -15,7 +21,7 @@ const catColors = {
     'equity-default': '#c6b7cd'
 }
 
-const makeDashboard = (relatedIndicators, indicatorsNav, back, grid, categories) => {
+const makeDashboard = relatedIndicators => {
     
     // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
     const indicator = document.querySelector('.indicators-snippet')
@@ -42,7 +48,7 @@ const makeDashboard = (relatedIndicators, indicatorsNav, back, grid, categories)
     indicatorsNav.style.justifyContent = 'space-between'
 }
 
-const removeDashboard = (grid, indicatorsNav, back, categories, transition) => {
+const removeDashboard = transition => {
     // toggle transition depending on when/where removeDashboard gets called
     if(transition){
         grid.classList.remove('notransition')
