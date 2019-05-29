@@ -55,7 +55,6 @@ nav{
     width: 95%;
     margin: 0 auto;
     height: 8vh;
-    padding: 0 3%;
     background: #fff;
     display: flex;
     justify-content: space-between;
@@ -219,7 +218,7 @@ nav{
     margin: 0;
     width: 100%;
     font-size: 0.9em;
-    /* icons are 69% so text takes up the remaining 31% */
+    /* icons are 71% so text takes up the remaining 29% */
     height: 29%;
     text-align: center;
     color: #f7f7f7;
@@ -398,30 +397,37 @@ nav{
 /*********** Footer ***********/
 footer{
     height: 25vh;
-    padding: 1% 15%;
+    padding: 1% 2.5%;
     background: #545454;
     color: #f7f7f7;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 #footer-logo{
     height: 30px;
     width: 85px;
 }
 #footer-words{
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 70%;
 }
 #footer-links{
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
     height: 70%;
+}
+#footer-social-wrapper{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+
 }
 .footer-social{
     height: 20px;
