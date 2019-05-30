@@ -296,6 +296,11 @@ nav{
 .description-wrapper{
     padding: 3% 0;
 }
+.description-subheader{
+    width: 70%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
 .back-to-dash{
     color: #f7f7f7;
     display: none;

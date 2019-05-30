@@ -10,14 +10,14 @@ const snippetsRef = {
                 dataSource: './data/aq_yearly.csv',
                 data: [
                     {
-                        'key' : 'Days Violating',
+                        'key' : 'Annual',
                         'color': '#f03b20',
                         'columns': ['year', 'daysViolating'],
                         type: 'bar',
                         bar: true
                     },
                     {
-                        'key': 'Five Year Average',
+                        'key': 'Five-Year Average',
                         'color': '#666',
                         'columns': ['year', 'fiveYearAvg'],
                         type: 'line'
@@ -35,17 +35,17 @@ const snippetsRef = {
                 newKeys: true,
                 data: [
                     {
-                        'key' : 'Unhealthy Sensitive Ozone',
+                        'key' : 'Unhealthy for Sensitive Groups',
                         'color': '#de425b',
                         'columns': ['quarterYear', 'unhealthySensitiveOzone'],
                     },
                     {
-                        'key': 'Unhealthy Ozone',
+                        'key': 'Unhealthy',
                         'color': '#b62a38',
                         'columns': ['quarterYear', 'unhealthyOzone'],
                     },
                     {
-                        'key': 'Very Unhealthy Ozone',
+                        'key': 'Very Unhealthy',
                         'color': '#750000',
                         'columns': ['quarterYear', 'veryUnhealthyOzone'],
                     }
