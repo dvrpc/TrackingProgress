@@ -133,8 +133,35 @@ const getIndicatorSnippet = (grid, snippet) => {
                 // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
                 hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, 0))
             }
+
+            const tabs = document.getElementById('description-wrapper-tabs')
+            tabs.onclick = e => handleTabs(e)
         })
     }
+}
+
+// text tab functionality @TODO: this but better
+const handleTabs = e => {
+    const activeText = document.querySelector('.active-description')
+    const activeTab = document.querySelector('.active-tab')
+
+    const clickedTab = e.target
+    const clickedTabId = clickedTab.id.split('-')[0]
+    const activeTextId = activeText.id.split('-')[0]
+
+    // short out if clicking on an existing tab
+    if(clickedTabId === activeTextId) return
+
+    // get a handle on the new text to reveal
+    const newText = document.getElementById(`${clickedTabId}-description`)
+
+    // hide the old text and set the old header to inactive
+    activeText.classList.remove('active-description')
+    activeTab.classList.remove('active-tab')
+
+    // set the new biz
+    clickedTab.classList.add('active-tab')
+    newText.classList.add('active-description')
 }
 
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view

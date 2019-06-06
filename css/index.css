@@ -251,7 +251,7 @@ nav{
     opacity: 1;
     /* fallback bg for browsers that don't support linear gradient */
     background: #f2f2f2;
-    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(242,242,242,1) 20%);
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(240,240,240,1) 20%);
     color: #050709;
     /*15vw for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
     padding-left: 15vw;
@@ -273,7 +273,7 @@ nav{
 }
 .indicator-subheader{
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 .indicator-header-hr{
     margin: 1% 0;
@@ -288,18 +288,41 @@ nav{
     height: 46px;
     border-radius: 3px;
 }
-.indicator-description{
-    font-size: 1em;
-    width: 70%;
-    margin: 0 auto;
-}
-.description-wrapper{
+#description-wrapper{
     padding: 3% 0;
-}
-.description-subheader{
     width: 70%;
     margin: 0 auto;
+}
+#description-wrapper-tabs{
+    display: flex;
+    justify-content: space-between;
+}
+.description-tab-middle{
+    border-right: 2px solid grey;
+    border-left: 2px solid grey;
+}
+.description-wrapper-tab-headers{
+    width: 33%;
+    text-align: center;
+    margin: 0;
     padding: 2% 0;
+    font-size: 1.3em;
+}
+.description-wrapper-tab-headers:hover{
+    cursor: pointer;
+}
+.active-tab{
+    background: #f9f9f9;
+    color: inherit;
+}
+.indicator-description{
+    display: none;
+    margin: 0;
+    background: #f9f9f9;
+    padding: 3%;
+}
+.active-description{
+    display: block;
 }
 .back-to-dash{
     color: #f7f7f7;
@@ -352,7 +375,7 @@ nav{
     height: 450px;
     width: 90%;
     margin: 0 auto;
-    background: #fff;
+    background: #f9f9f9;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
     border-radius: 5px;
     padding: 2% 1%;
