@@ -263,8 +263,14 @@ nav{
     -o-transition: opacity 1s;
     transition-timing-function: linear;
 }
+#indicator-header-wrapper{
+    max-width: 40%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
 .indicator-header{
-    margin: 1.5% 0;
     text-align: center;
     font-size: 2em;
 }
@@ -281,7 +287,6 @@ nav{
 .indicator-category-icons{
     display: flex;
     justify-content: center;
-    margin-top: 3%;
 }
 .snippet-categories{
     margin-right: 2%;
@@ -310,19 +315,18 @@ nav{
 }
 .description-wrapper-tab-headers:hover{
     cursor: pointer;
+    background: #f9f9f9;
 }
 .active-tab{
     background: #f9f9f9;
-    color: inherit;
+    box-shadow: 1px -2px 3px rgba(0,0,0,0.2);
+    overflow: hidden;
 }
-.indicator-description{
-    display: none;
+#indicator-description-container{
     margin: 0;
     background: #f9f9f9;
     padding: 3%;
-}
-.active-description{
-    display: block;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 }
 .back-to-dash{
     color: #f7f7f7;

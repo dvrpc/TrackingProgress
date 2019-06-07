@@ -107,6 +107,7 @@ const toggleChart = (selected, dataSets) => {
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
 const getIndicatorSnippet = (grid, snippet) => {
     let hasDataViz;
+    let hasText;
 
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippet.file
@@ -114,8 +115,9 @@ const getIndicatorSnippet = (grid, snippet) => {
     // make sure snippetFile exists before going any further
     if(snippetFile){
 
-        // get a handle on data viz metadata (if it exists)
+        // get a handle on data viz metadata and text content
         hasDataViz = snippet.d3
+        hasText = snippet.text
 
         let page = `./indicatorSnippets/${snippetFile}`
 
@@ -134,34 +136,36 @@ const getIndicatorSnippet = (grid, snippet) => {
                 hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, 0))
             }
 
-            const tabs = document.getElementById('description-wrapper-tabs')
-            tabs.onclick = e => handleTabs(e)
+            // load the default text + add tab click handler
+            if(hasText){
+                const descriptionContainer = document.getElementById('indicator-description-container')
+                descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
+                
+                const tabs = document.getElementById('description-wrapper-tabs')
+                tabs.onclick = e => handleTabs(e, hasText, descriptionContainer)
+            }
         })
     }
 }
 
-// text tab functionality @TODO: this but better
-const handleTabs = e => {
-    const activeText = document.querySelector('.active-description')
-    const activeTab = document.querySelector('.active-tab')
-
+// toggle tabs and text
+const handleTabs = (e, text, wrapper) => {
     const clickedTab = e.target
-    const clickedTabId = clickedTab.id.split('-')[0]
-    const activeTextId = activeText.id.split('-')[0]
+    const oldTab = document.querySelector('.active-tab')
+    
+    // short out if clicking on the already active tab
+    if(oldTab.id === clickedTab.id) return
 
-    // short out if clicking on an existing tab
-    if(clickedTabId === activeTextId) return
+    // update the text
+    const textSection = clickedTab.id.split('-')[0]
+    while(wrapper.firstChild) wrapper.removeChild(wrapper.firstChild)
+    wrapper.insertAdjacentHTML('afterbegin', text[textSection])
 
-    // get a handle on the new text to reveal
-    const newText = document.getElementById(`${clickedTabId}-description`)
+    // deactivate the old jawn
+    oldTab.classList.remove('active-tab')
 
-    // hide the old text and set the old header to inactive
-    activeText.classList.remove('active-description')
-    activeTab.classList.remove('active-tab')
-
-    // set the new biz
+    // uset the new active tab
     clickedTab.classList.add('active-tab')
-    newText.classList.add('active-description')
 }
 
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
