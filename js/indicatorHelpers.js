@@ -168,13 +168,28 @@ const handleTabs = (e, text, wrapper) => {
     clickedTab.classList.add('active-tab')
 }
 
+const makeRelatedSubheader = cat => {
+    return `
+        <div id="related-indicators-subheader">
+            <img id="related-indicators-img" src='./img/sidenav/${cat}.png' alt='${cat} icons' />
+            <h3>Indicators:</h3>
+        </div>
+    `
+}
+
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
 const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
-
+        
     // clear the side nav of all it's children
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
+
+    // use primary category to create the "related indicators" subheader
+    const subheader = makeRelatedSubheader(primaryCategory)
+
+    // create a fragment to house each sidelink
+    let sideLinks = document.createDocumentFragment()
 
     // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
     indicators.forEach(indicator => {
@@ -193,9 +208,12 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
             sideLink.classList.add('sideLink')
             sideLink.classList.add(indicatorPrimaryCategory)
 
-            relatedIndicators.appendChild(sideLink)
+            sideLinks.appendChild(sideLink)
         }
     })
+
+    relatedIndicators.insertAdjacentHTML('afterbegin', subheader)
+    relatedIndicators.appendChild(sideLinks)
 
     // make sideNav list (which was populated in the getIndicatorSnippet function) visible
     relatedIndicators.style.display = 'flex'
