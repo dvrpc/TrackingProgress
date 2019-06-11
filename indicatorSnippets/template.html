@@ -38,18 +38,18 @@
                             <option value="1">Philadelphia Subregion</option>
                             <option value="2">New Jersey Subregion</option>
                             <option value="3">PA Subregion</option>
-                        </optgroup>
+                    </optgroup>
                         
-                        <optgroup label="County">
-                            <option value="4">Bucks</option>
-                            <option value="5">Chester</option>
-                            <option value="6">Delaware</option>
-                            <option value="7">Montgomery</option>
-                            <option value="8">Burlington</option>
-                            <option value="9">Camden</option>
-                            <option value="10">Gloucester</option>
-                            <option value="11">Mercer</option>
-                        </optgroup>
+                    <optgroup label="County">
+                        <option value="4">Bucks</option>
+                        <option value="5">Chester</option>
+                        <option value="6">Delaware</option>
+                        <option value="7">Montgomery</option>
+                        <option value="8">Burlington</option>
+                        <option value="9">Camden</option>
+                        <option value="10">Gloucester</option>
+                        <option value="11">Mercer</option>
+                    </optgroup>
                 </select>
             </fieldset>
         </form>
@@ -61,10 +61,57 @@
 
     <hr class="indicator-content-hr" />
 
+    <!-- Wrapper for DOUBLE toggles -->
+    <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader"></h2>
+
+        <p>toggle chart data:</p>
+
+        <form>
+            <fieldset class="toggle-fieldset">
+                <select id="viz-1" class="toggle-data-selector">
+                    <optgroup label="Region">
+                        <option value="0">DVRPC Region</option>
+                        <option value="1">PA Suburban Counties</option>
+                        <option value="2">PA Counties</option>
+                        <option value="3">NJ Counties</option>
+                    </optgroup>
+                    
+                    <optgroup label="County">
+                        <option value="4">Bucks</option>
+                        <option value="5">Chester</option>
+                        <option value="6">Delaware</option>
+                        <option value="7">Montgomery</option>
+                        <option value="8">Burlington</option>
+                        <option value="9">Camden</option>
+                        <option value="10">Gloucester</option>
+                        <option value="11">Mercer</option>
+                        <option value="12">Philadelphia</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+        </form>
+
+        <form>
+            <fieldset class="toggle-fieldset">
+                <select id="" class="toggle-data-selector">
+                    <option value="0"></option>
+                    <option value="1"></option>
+                </select>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="data-viz chart2">
+        <svg></svg>
+    </div>
+
+    <hr class="indicator-content-hr" />
+
     <!-- set up for non-togglable viz -->
     <h2 class="indicator-subheader"></h2>
 
-    <div class="data-viz chart2">
+    <div class="data-viz chart3">
         <svg></svg>
     </div>
 </article>
