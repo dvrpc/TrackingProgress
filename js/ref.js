@@ -1773,8 +1773,8 @@ const snippetsRef = {
             }
         ]
     },
-    'Innovation': {
-        file: 'innovation.html',
+    'Patents': {
+        file: 'patents.html',
         d3: [
             {
                 type: 'line',
