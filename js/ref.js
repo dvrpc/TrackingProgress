@@ -1911,6 +1911,73 @@ const snippetsRef = {
             }
         ]
     },
+    'Water Quality': {
+        file: 'waterQuality.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/water_quality_1.csv',
+                data: [
+                    {
+                        'key': 'Pennsylvania',
+                        columns: ['Year', 'Pennsylvania']
+                    },
+                    {
+                        'key': 'New Jersey',
+                        columns: ['Year', 'New Jersey']
+                    },
+                    {
+                        'key': 'Average',
+                        columns: ['Year', 'Average']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: './data/water_quality_2.csv',
+                data: [
+                    {
+                        'key': 'Supporting (miles)',
+                        columns: ['year', 'Supporting']
+                    },
+                    {
+                        'key': 'Not Assessed (miles)',
+                        columns: ['year', 'Not Assessed']
+                    },
+                    {
+                        'key': 'Impaired (miles)',
+                        columns: ['year', 'Impaired']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart3',
+                dataSource: './data/water_quality_3.csv',
+                data: [
+                    {
+                        'key': 'Supporting (acres)',
+                        columns: ['year', 'Attaining']
+                    },
+                    {
+                        'key': 'Insufficient Data (acres)',
+                        columns: ['year', 'Insufficient Data']
+                    },
+                    {
+                        'key': 'Impaired (acres)',
+                        columns: ['year', 'Impaired']
+                    }
+                ]
+            }
+        ],
+        text: {
+            why: '',
+            what: `<p>The Federal Clean Water Act was established to restore and maintain the chemical, physical, and biological integrity of the nation's waters. Water quality standards have been established by federal and state governments to ensure that waterbodies attain their designated uses. Designated uses are those human uses and ecological conditions that are officially recognized and protected by the Clean Water Act. These uses include aquatic life (general), aquatic life (trout), recreation, drinking water supply, industrial water supply, agricultural water supply, shellfish harvesting, and fish consumption.</p><p>As mandated by the Clean Water Act, water quality in all states is monitored and assessed on a biennial basis. Water quality is assessed based on whether or not a waterbody attains its designated use(s). The designated use of aquatic life (general) is the most indicative of overall water quality and is the most comprehensively monitored across the region. Therefore, aquatic life is used as the indicator of regional water quality.</p><p>Water quality in Pennsylvania is assessed based on stream segments, and attainment is measured by the number of stream miles within the region that support aquatic life. The assessment plan covers the entire state in 10-year increments. Interim evaluations are performed using targeted sampling in each of the state's major subwatersheds every two years.</p>`,
+            how: ''
+        }
+    },
     'Land Preservation': {file: 'landPreservation.html',  d3: false }
 }
 
