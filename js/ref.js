@@ -1834,6 +1834,80 @@ const snippetsRef = {
                         columns: ['year', 'DVRPC- Other']
                     }
                 ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: './data/Bridge_Conditions_2.csv',
+                columnOptions: [
+                    ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
+                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
+                    ['Pennsylvania Suburbs- NA','Pennsylvania Suburbs- Poor','Pennsylvania Suburbs- Fair','Pennsylvania Suburbs- Good'],
+                    ['Bucks- NA','Bucks- Poor','Bucks- Fair','Bucks- Good'],
+                    ['Chester- NA','Chester- Poor','Chester- Fair','Chester- Good'],
+                    ['Delaware- NA','Delaware- Poor','Delaware- Fair','Delaware- Good'],
+                    ['Montgomery- NA','Montgomery- Poor','Montgomery- Fair','Montgomery- Good'],
+                    ['Burlington- NA','Burlington- Poor','Burlington- Fair','Burlington- Good'],
+                    ['Camden- NA','Camden- Poor','Camden- Fair','Camden- Good'],
+                    ['Gloucester- NA','Gloucester- Poor','Gloucester- Fair','Gloucester- Good'],
+                    ['Mercer- NA','Mercer- Poor','Mercer- Fair','Mercer- Good'],
+                    ['Philadelphia- NA','Philadelphia- Poor','Philadelphia- Fair','Philadelphia- Good']
+                ],
+                data: [
+                    {
+                        'key': 'NA',
+                        columns: ['year', 'DVRPC- NA']
+                    },
+                    {
+                        'key': 'Poor',
+                        columns: ['year', 'DVRPC- Poor']
+                    },
+                    {
+                        'key': 'Fair',
+                        columns: ['year', 'DVRPC- Fair']
+                    },
+                    {
+                        'key': 'Good',
+                        columns: ['year', 'DVRPC- Good']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart3',
+                dataSource: './data/Bridge_Conditions_3.csv',
+                columnOptions: [
+                    ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
+                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
+                    ['Pennsylvania Suburbs- NA','Pennsylvania Suburbs- Poor','Pennsylvania Suburbs- Fair','Pennsylvania Suburbs- Good'],
+                    ['Bucks- NA','Bucks- Poor','Bucks- Fair','Bucks- Good'],
+                    ['Chester- NA','Chester- Poor','Chester- Fair','Chester- Good'],
+                    ['Delaware- NA','Delaware- Poor','Delaware- Fair','Delaware- Good'],
+                    ['Montgomery- NA','Montgomery- Poor','Montgomery- Fair','Montgomery- Good'],
+                    ['Burlington- NA','Burlington- Poor','Burlington- Fair','Burlington- Good'],
+                    ['Camden- NA','Camden- Poor','Camden- Fair','Camden- Good'],
+                    ['Gloucester- NA','Gloucester- Poor','Gloucester- Fair','Gloucester- Good'],
+                    ['Mercer- NA','Mercer- Poor','Mercer- Fair','Mercer- Good'],
+                    ['Philadelphia- NA','Philadelphia- Poor','Philadelphia- Fair','Philadelphia- Good']
+                ],
+                data: [
+                    {
+                        'key': 'NA',
+                        columns: ['year', 'DVRPC- NA']
+                    },
+                    {
+                        'key': 'Poor',
+                        columns: ['year', 'DVRPC- Poor']
+                    },
+                    {
+                        'key': 'Fair',
+                        columns: ['year', 'DVRPC- Fair']
+                    },
+                    {
+                        'key': 'Good',
+                        columns: ['year', 'DVRPC- Good']
+                    }
+                ]
             }
         ]
     },
