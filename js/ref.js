@@ -1909,7 +1909,12 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: `<p>The region's bridges enable mobility and commerce throughout the region. Bridges with a poor condition rating indicate maintenance needs that do not pose safety issues so long as they are resolved in a timely manner. Depending on the ratings and the bridge's age, it may be repairable. However, for older bridges with multiple components in poor condition, replacement is generally the more cost-effective option.</p>`,
+            what: `<p>Bridges are inspected every two years at minimum, bridges in poor condition are inspected more frequently. These inspections rate the condition for various bridge elements. The inspection records are stored in a bridge management system. The National Bridge Inventory (NBI) collects bridge data from each state DOT, including PennDOT and NJDOT, annually for bridges more than 20 feet long.</p><p>This analysis considers a bridge's deck, super, and substructure ratings, or the culvert rating for a culvert. These scores are given between 0 and 9 for each component, with 9 being the score of a brand new, just opened bridge. Bridges with all three scores of 7 or greater are rated "good", those with any of the score at 4 or lower are rated "poor". A bridge that doesn't fall into good or poor is considered fair.</p>`,
+            how: ``
+        }
     },
     'Water Quality': {
         file: 'waterQuality.html',
