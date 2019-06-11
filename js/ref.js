@@ -1782,7 +1782,7 @@ const snippetsRef = {
                 dataSource: './data/patents.csv',
                 data: [
                     {
-                        'key': 'Pattent Approvals',
+                        'key': 'Patent Approvals',
                         columns: ['Year', 'DVRPC']
                     }
                 ]
@@ -1798,7 +1798,45 @@ const snippetsRef = {
             }
         ]
     },
-    'Bridge Conditions': {file: 'bridgeConditions.html', d3: false },
+    'Bridge Conditions': {
+        file: 'bridgeConditions.html',
+        d3: [
+            {
+                type: 'stacked bar',
+                container: 'chart',
+                dataSource: './data/Bridge_Conditions_1A.csv',
+                secondDataSource: './data/Bridge_Conditions_1B.csv',
+                columnOptions: [
+                    ['DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
+                    ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
+                    ['Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
+                    ['Bucks- State', 'Bucks- Local', 'Bucks- Other'],
+                    ['Chester- State', 'Chester- Local', 'Chester- Other'],
+                    ['Delaware- State', 'Delaware- Local', 'Delaware- Other'],
+                    ['Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
+                    ['Burlington- State', 'Burlington- Local', 'Burlington- Other'],
+                    ['Camden- State', 'Camden- Local', 'Camden- Other'],
+                    ['Gloucester- State', 'Gloucester- Local', 'Gloucester- Other'],
+                    ['Mercer- State', 'Mercer- Local', 'Mercer- Other'],
+                    ['Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other']
+                ],
+                data: [
+                    {
+                        'key': 'State',
+                        columns: ['year', 'DVRPC- State']
+                    },
+                    {
+                        'key': 'Local',
+                        columns: ['year', 'DVRPC- Local']
+                    },
+                    {
+                        'key': 'Other',
+                        columns: ['year', 'DVRPC- Other']
+                    }
+                ]
+            }
+        ]
+    },
     'Land Preservation': {file: 'landPreservation.html',  d3: false }
 }
 
