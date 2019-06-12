@@ -1571,7 +1571,12 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: ``,
+            what: `<p>DVRPC tracks transit ridership in the region through unlinked passenger trips, with data provided by each of the region's four transit operators: Southeastern Pennsylvania Transportation Authority (SEPTA), New Jersey Transit (NJ Transit), Port Authority Transportation Company (PATCO), and Pottstown Area Rapid Transit (PART) to the National Transit Database (NTD). Unlinked passenger trips count each passenger boarding, regardless of fare paid. Thus, a trip with a transfer would count as two boardings. Transit ridership does not include Amtrak or private bus passengers.</p><p>NJ Transit's ridership figures are for the DVRPC region only. These figures are based on service in the Trenton and Philadelphia Urbanized Area collected by the NTD.</p>`,
+            how: ``
+        }
     },
     'Emissions': {
         file: 'emissions.html',
