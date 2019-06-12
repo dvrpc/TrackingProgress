@@ -1989,9 +1989,78 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: '',
+                dataSource: './data/landConsumption1.csv',
+                columnOptions: [
+                    ['Total Developed Acres- DVRPC','Total Developed Acres- NJ Suburbs','Total Developed Acres- PA Suburbs','Total Developed Acres- Core City','Total Developed Acres- Developed Community','Total Developed Acres- Growing Suburb','Total Developed Acres- Rural Area','Total Developed Acres- Bucks','Total Developed Acres- Burlington','Total Developed Acres- Camden','Total Developed Acres- Chester','Total Developed Acres- Delaware','Total Developed Acres- Gloucester','Total Developed Acres- Mercer','Total Developed Acres- Montgomery','Total Developed Acres- Philadelphia'],
+                    ['Developed Acres per Capita- DVRPC','Developed Acres per Capita- NJ Suburbs','Developed Acres per Capita- PA Suburbs','Developed Acres per Capita- Core City','Developed Acres per Capita- Developed Community','Developed Acres per Capita- Growing Suburb','Developed Acres per Capita- Rural Area','Developed Acres per Capita- Bucks','Developed Acres per Capita- Burlington','Developed Acres per Capita- Camden','Developed Acres per Capita- Chester','Developed Acres per Capita- Delaware','Developed Acres per Capita- Gloucester','Developed Acres per Capita- Mercer','Developed Acres per Capita- Montgomery','Developed Acres per Capita- Philadelphia'],
+                    ['Total Agricultural Acres- DVRPC','Total Agricultural Acres- NJ Suburbs','Total Agricultural Acres- PA Suburbs','Total Agricultural Acres- Core City','Total Agricultural Acres- Developed Community','Total Agricultural Acres- Growing Suburb','Total Agricultural Acres- Rural Area','Total Agricultural Acres- Bucks','Total Agricultural Acres- Burlington','Total Agricultural Acres- Camden','Total Agricultural Acres- Chester','Total Agricultural Acres- Delaware','Total Agricultural Acres- Gloucester','Total Agricultural Acres- Mercer','Total Agricultural Acres- Montgomery','Total Agricultural Acres- Philadelphia'],
+                    ['Agricultural Acres per Capita- DVRPC','Agricultural Acres per Capita- NJ Suburbs','Agricultural Acres per Capita- PA Suburbs','Agricultural Acres per Capita- Core City','Agricultural Acres per Capita- Developed Community','Agricultural Acres per Capita- Growing Suburb','Agricultural Acres per Capita- Rural Area','Agricultural Acres per Capita- Bucks','Agricultural Acres per Capita- Burlington','Agricultural Acres per Capita- Camden','Agricultural Acres per Capita- Chester','Agricultural Acres per Capita- Delaware','Agricultural Acres per Capita- Gloucester','Agricultural Acres per Capita- Mercer','Agricultural Acres per Capita- Montgomery','Agricultural Acres per Capita- Philadelphia']
+                ],
                 data: [
-
+                    {
+                        'key': 'DVRPC',
+                        columns: ['year', 'Total Developed Acres- DVRPC']
+                    },
+                    {
+                        'key': 'NJ Suburbs',
+                        columns: ['year', 'Total Developed Acres- NJ Suburbs']
+                    },
+                    {
+                        'key': 'PA Suburbs',
+                        columns: ['year', 'Total Developed Acres- PA Suburbs']
+                    },
+                    {
+                        'key': 'Core City',
+                        columns: ['year', 'Total Developed Acres- Core City']
+                    },
+                    {
+                        'key': 'Developed Community',
+                        columns: ['year', 'Total Developed Acres- Developed Community']
+                    },
+                    {
+                        'key': 'Growing Suburb',
+                        columns: ['year', 'Total Developed Acres- Growing Suburb']
+                    },
+                    {
+                        'key': 'Rural Area',
+                        columns: ['year', 'Total Developed Acres- Rural Area']
+                    },
+                    {
+                        'key': 'Bucks',
+                        columns: ['year', 'Total Developed Acres- Bucks']
+                    },
+                    {
+                        'key': 'Burlington',
+                        columns: ['year', 'Total Developed Acres- Burlington']
+                    },
+                    {
+                        'key': 'Camden',
+                        columns: ['year', 'Total Developed Acres- Camden']
+                    },
+                    {
+                        'key': 'Chester',
+                        columns: ['year', 'Total Developed Acres- Chester']
+                    },
+                    {
+                        'key': 'Delaware',
+                        columns: ['year', 'Total Developed Acres- Delaware']
+                    },
+                    {
+                        'key': 'Gloucester',
+                        columns: ['year', 'Total Developed Acres- Gloucester']
+                    },
+                    {
+                        'key': 'Mercer',
+                        columns: ['year', 'Total Developed Acres- Mercer']
+                    },
+                    {
+                        'key': 'Montgomery',
+                        columns: ['year', 'Total Developed Acres- Montgomery']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        columns: ['year', 'Total Developed Acres- Philadelphia']
+                    }
                 ]
             },
             {
