@@ -62,7 +62,6 @@ const snippetsRef = {
         file: 'milesDriven.html',   
         d3: [
             {
-                // VMT/Capita
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/vmtWeb.csv',
@@ -137,7 +136,12 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: `<p>Annual miles driven per capita, or Vehicle Miles Traveled (VMT) is an indicator of travel demand on roads. VMT can be used to understand where funds might be allocated for strained roadways. A negative trend in per capita VMT can indicate a slower economy (i.e. household funds are constrained so fewer discretionary trips are made) or a change in travel mode preference (i.e. populations are increasingly opting for non-auto travel modes).</p>`,
+            what: `<p>Annual Miles driven, or VMT, is a distance-based measure of all vehicle travel on roadways (auto and truck) in a given year. Per capita VMT is the same measure divided by the same area's population for the same year. Per vehicle VMT divides VMT by the number of household vehicles available by residents of that geography.</p>`,
+            how: ``
+        }
     },
     'Educational Attainment': {
         file: 'educationalAttainment.html',
