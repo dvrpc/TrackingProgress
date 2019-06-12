@@ -1354,7 +1354,12 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: `<p>The export of goods and services to international destinations is a key indicator of how a nation or region is performing economically. While these data are limited to just goods, they serve to highlight merchandise produced in our region and our businesses' global reach and contribution to the national economy.</p>`,
+            what: `<p>Initial declarations of merchandise export values are reported at the metropolitan and county level by the International Trade Administration using data from the US Census Bureau's Origin of Movement–ZIP code Based Series (OM-ZIP). This represents the exports of goods. Services exports are not included in this dataset.</p><p>Goods exports data reported below the national level relies on initial declarations and does not get updated subsequent revisions found in national data. County is assigned using the address of the United States Principal Party in Interest (USPPI) of record--which is often, but not always the entity producing the merchandise. A small portion of the overall metropolitan Core Based Statistical Area (CBSA) export value does not have a county determination. For this analysis, DVRPC staff assigned this residual CBSA value to counties according the portion of the CBSA's export value attributable to each county. Despite inherent errors, these data are a relevant gauge of where the region stands based off previous years.</p>`,
+            how: `<p>The value of merchandise exports for the region are available starting in 2012 so they do not cover a large span to show how our exports were doing in the Great Recession versus the most recent year (2017). It shows a fairly steady production around $20 billion from 2012 through 2014 but a decline to about $16 billion in 2016. 2017 showed a promising gain of close to a billion dollars over 2016.</p>`
+        }
     },
     'Commute Mode': {
         file: 'commuteMode.html',
