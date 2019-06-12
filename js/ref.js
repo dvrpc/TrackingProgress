@@ -1978,12 +1978,110 @@ const snippetsRef = {
             }
         ],
         text: {
-            why: '',
+            why: ``,
             what: `<p>The Federal Clean Water Act was established to restore and maintain the chemical, physical, and biological integrity of the nation's waters. Water quality standards have been established by federal and state governments to ensure that waterbodies attain their designated uses. Designated uses are those human uses and ecological conditions that are officially recognized and protected by the Clean Water Act. These uses include aquatic life (general), aquatic life (trout), recreation, drinking water supply, industrial water supply, agricultural water supply, shellfish harvesting, and fish consumption.</p><p>As mandated by the Clean Water Act, water quality in all states is monitored and assessed on a biennial basis. Water quality is assessed based on whether or not a waterbody attains its designated use(s). The designated use of aquatic life (general) is the most indicative of overall water quality and is the most comprehensively monitored across the region. Therefore, aquatic life is used as the indicator of regional water quality.</p><p>Water quality in Pennsylvania is assessed based on stream segments, and attainment is measured by the number of stream miles within the region that support aquatic life. The assessment plan covers the entire state in 10-year increments. Interim evaluations are performed using targeted sampling in each of the state's major subwatersheds every two years.</p>`,
-            how: ''
+            how: ``
         }
     },
-    'Land Preservation': {file: 'landPreservation.html',  d3: false }
+    'Land Consumption': {
+        file: 'landConsumption.html',
+        d3: [
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: '',
+                data: [
+
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: './data/landConsumption2.csv',
+                columnOptions: [
+                    ['DVRPC- agricultural','DVRPC- comm_services','DVRPC- commercial','DVRPC- industrial','DVRPC- military','DVRPC- mining','DVRPC- multi_fam','DVRPC- recreation','DVRPC- single_fam','DVRPC- transportation','DVRPC- utility','DVRPC- vacant','DVRPC- water','DVRPC- wooded'],
+                    ['PA Suburbs- agricultural','PA Suburbs- comm_services','PA Suburbs- commercial','PA Suburbs- industrial','PA Suburbs- military','PA Suburbs- mining','PA Suburbs- multi_fam','PA Suburbs- recreation','PA Suburbs- single_fam','PA Suburbs- transportation','PA Suburbs- utility','PA Suburbs- vacant','PA Suburbs- water','PA Suburbs- wooded'],
+                    ['NJ Suburbs- agricultural','NJ Suburbs- comm_services','NJ Suburbs- commercial','NJ Suburbs- industrial','NJ Suburbs- military','NJ Suburbs- mining','NJ Suburbs- multi_fam','NJ Suburbs- recreation','NJ Suburbs- single_fam','NJ Suburbs- transportation','NJ Suburbs- utility','NJ Suburbs- vacant','NJ Suburbs- water','NJ Suburbs- wooded'],
+                    ['Core City- agricultural','Core City- comm_services','Core City- commercial','Core City- industrial','Core City- military','Core City- mining','Core City- multi_fam','Core City- recreation','Core City- single_fam','Core City- transportation','Core City- utility','Core City- vacant','Core City- water','Core City- wooded'],
+                    ['Developed Community- agricultural','Developed Community- comm_services','Developed Community- commercial','Developed Community- industrial','Developed Community- military','Developed Community- mining','Developed Community- multi_fam','Developed Community- recreation','Developed Community- single_fam','Developed Community- transportation','Developed Community- utility','Developed Community- vacant','Developed Community- water','Developed Community- wooded'],
+                    ['Growing Suburb- agricultural','Growing Suburb- comm_services','Growing Suburb- commercial','Growing Suburb- industrial','Growing Suburb- military','Growing Suburb- mining','Growing Suburb- multi_fam','Growing Suburb- recreation','Growing Suburb- single_fam','Growing Suburb- transportation','Growing Suburb- utility','Growing Suburb- vacant','Growing Suburb- water','Growing Suburb- wooded'],
+                    ['Rural Area- agricultural','Rural Area- comm_services','Rural Area- commercial','Rural Area- industrial','Rural Area- military','Rural Area- mining','Rural Area- multi_fam','Rural Area- recreation','Rural Area- single_fam','Rural Area- transportation','Rural Area- utility','Rural Area- vacant','Rural Area- water','Rural Area- wooded'],
+                    ['Bucks- agricultural','Bucks- comm_services','Bucks- commercial','Bucks- industrial','Bucks- military','Bucks- mining','Bucks- multi_fam','Bucks- recreation','Bucks- single_fam','Bucks- transportation','Bucks- utility','Bucks- vacant','Bucks- water','Bucks- wooded'],
+                    ['Chester- agricultural','Chester- comm_services','Chester- commercial','Chester- industrial','Chester- military','Chester- mining','Chester- multi_fam','Chester- recreation','Chester- single_fam','Chester- transportation','Chester- utility','Chester- vacant','Chester- water','Chester- wooded'],
+                    ['Delaware- agricultural','Delaware- comm_services','Delaware- commercial','Delaware- industrial','Delaware- military','Delaware- mining','Delaware- multi_fam','Delaware- recreation','Delaware- single_fam','Delaware- transportation','Delaware- utility','Delaware- vacant','Delaware- water','Delaware- wooded'],
+                    ['Montgomery- agricultural','Montgomery- comm_services','Montgomery- commercial','Montgomery- industrial','Montgomery- military','Montgomery- mining','Montgomery- multi_fam','Montgomery- recreation','Montgomery- single_fam','Montgomery- transportation','Montgomery- utility','Montgomery- vacant','Montgomery- water','Montgomery- wooded'],
+                    ['Burlington- agricultural','Burlington- comm_services','Burlington- commercial','Burlington- industrial','Burlington- military','Burlington- mining','Burlington- multi_fam','Burlington- recreation','Burlington- single_fam','Burlington- transportation','Burlington- utility','Burlington- vacant','Burlington- water','Burlington- wooded'],
+                    ['Camden- agricultural','Camden- comm_services','Camden- commercial','Camden- industrial','Camden- military','Camden- mining','Camden- multi_fam','Camden- recreation','Camden- single_fam','Camden- transportation','Camden- utility','Camden- vacant','Camden- water','Camden- wooded'],
+                    ['Gloucester- agricultural','Gloucester- comm_services','Gloucester- commercial','Gloucester- industrial','Gloucester- military','Gloucester- mining','Gloucester- multi_fam','Gloucester- recreation','Gloucester- single_fam','Gloucester- transportation','Gloucester- utility','Gloucester- vacant','Gloucester- water','Gloucester- wooded'],
+                    ['Mercer- agricultural','Mercer- comm_services','Mercer- commercial','Mercer- industrial','Mercer- military','Mercer- mining','Mercer- multi_fam','Mercer- recreation','Mercer- single_fam','Mercer- transportation','Mercer- utility','Mercer- vacant','Mercer- water','Mercer- wooded'],
+                    ['Philadelphia- agricultural','Philadelphia- comm_services','Philadelphia- commercial','Philadelphia- industrial','Philadelphia- military','Philadelphia- mining','Philadelphia- multi_fam','Philadelphia- recreation','Philadelphia- single_fam','Philadelphia- transportation','Philadelphia- utility','Philadelphia- vacant','Philadelphia- water','Philadelphia- wooded'],
+                ],
+                data: [
+                    {
+                        'key': 'Agricultural',
+                        columns: ['year', 'DVRPC- agricultural']
+                    },
+                    {
+                        'key': 'Comm Services',
+                        columns: ['year', 'DVRPC- comm_services']
+                    },
+                    {
+                        'key': 'Commercial',
+                        columns: ['year', 'DVRPC- commercial']
+                    },
+                    {
+                        'key': 'Industrial',
+                        columns: ['year', 'DVRPC- industrial']
+                    },
+                    {
+                        'key': 'Military',
+                        columns: ['year', 'DVRPC- military']
+                    },
+                    {
+                        'key': 'Mining',
+                        columns: ['year', 'DVRPC- mining']
+                    },
+                    {
+                        'key': 'Multi Family',
+                        columns: ['year', 'DVRPC- multi_fam']
+                    },
+                    {
+                        'key': 'Recreation',
+                        columns: ['year', 'DVRPC- recreation']
+                    },
+                    {
+                        'key': 'Single Family',
+                        columns: ['year', 'DVRPC- single_fam']
+                    },
+                    {
+                        'key': 'Transportation',
+                        columns: ['year', 'DVRPC- transportation']
+                    },
+                    {
+                        'key': 'Utility',
+                        columns: ['year', 'DVRPC- utility']
+                    },
+                    {
+                        'key': 'Vacant',
+                        columns: ['year', 'DVRPC- vacant']
+                    },
+                    {
+                        'key': 'Water',
+                        columns: ['year', 'DVRPC- water']
+                    },
+                    {
+                        'key': 'Wooded',
+                        columns: ['year', 'DVRPC- wooded']
+                    },
+                ]
+            }
+        ],
+        text: {
+            why: ``,
+            what: ``,
+            how: ``
+        }
+    }
 }
 
 // @TODO: rebuild column options in the following way:
