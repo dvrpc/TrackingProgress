@@ -2286,7 +2286,7 @@ const snippetsRef = {
             }
         ],
         text: {
-            why: ``,
+            why: `<p>There is only a finite amount of land available within the region and around the planet to provide homes for people, habitat for animals, grow food, preserve for recreation and natural resources, and to extract resources. Thanks to sprawling development patterns, land consumption in the region has increased at a rate nearly five times more than population growth over the last 75 years. There are many externalities that result from this inefficient land use:</p><ul><li>Increased reliance on motorized transportation and congestion.</li><li>Loss of open space and agricultural land.</li><li>Detrimental impacts to air and water quality.</li><li>Increased need for infrastructure and services.</li></ul>`,
             what: ``,
             how: ``
         }
