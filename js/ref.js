@@ -1977,6 +1977,52 @@ const snippetsRef = {
                         columns: ['Year', 'DVRPC_65+']
                     },
                 ]
+            },
+            {
+                type: 'line',
+                container: 'chart4',
+                dataSource: './data/pop_race_change.csv',
+                secondDataSource: './data/pop_race_totals.csv',
+                columnOptions: [
+                    ['DVRPC_WA','DVRPC_BA','DVRPC_IA','DVRPC_AA','DVRPC_NA','DVRPC_TOM'],
+                    ['PASub_WA','PASub_BA','PASub_IA','PASub_AA','PASub_NA','PASub_TOM'],
+                    ['NJCnt_WA','NJCnt_BA','NJCnt_IA','NJCnt_AA','NJCnt_NA','NJCnt_TOM'],
+                    ['Chester_WA','Chester_BA','Chester_IA','Chester_AA','Chester_NA','Chester_TOM'],
+                    ['Delaware_WA','Delaware_BA','Delaware_IA','Delaware_AA','Delaware_NA','Delaware_TOM'],
+                    ['Montgomery_WA','Montgomery_BA','Montgomery_IA','Montgomery_AA','Montgomery_NA','Montgomery_TOM'],
+                    ['Burlington_WA','Burlington_BA','Burlington_IA','Burlington_AA','Burlington_NA','Burlington_TOM'],
+                    ['Camden_WA','Camden_BA','Camden_IA','Camden_AA','Camden_NA','Camden_TOM'],
+                    ['Gloucester_WA','Gloucester_BA','Gloucester_IA','Gloucester_AA','Gloucester_NA','Gloucester_TOM'],
+                    ['Mercer_WA','Mercer_BA','Mercer_IA','Mercer_AA','Mercer_NA','Mercer_TOM'],
+                    ['Bucks_WA','Bucks_BA','Bucks_IA','Bucks_AA','Bucks_NA','Bucks_TOM'],
+                    ['Philadelphia_WA','Philadelphia_BA','Philadelphia_IA','Philadelphia_AA','Philadelphia_NA','Philadelphia_TOM']
+                ],
+                data: [
+                    {
+                        'key': 'White Alone',
+                        columns: ['Year', 'DVRPC_WA']
+                    },
+                    {
+                        'key': 'Black or African American alone',
+                        columns: ['Year', 'DVRPC_BA']
+                    },
+                    {
+                        'key': 'American Indian and Alaska Native alone',
+                        columns: ['Year', 'DVRPC_IA']
+                    },
+                    {
+                        'key': 'Asian alone',
+                        columns: ['Year', 'DVRPC_AA']
+                    },
+                    {
+                        'key': 'Native HAwaiian and Other Pacific Islander',
+                        columns: ['Year', 'DVRPC_NA']
+                    },
+                    {
+                        'key': 'Two or More Races',
+                        columns: ['Year', 'DVRPC_TOM']
+                    }
+                ]
             }
         ]
     },
