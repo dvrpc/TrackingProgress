@@ -1,21 +1,23 @@
-<div class="indicators-snippet">
-    <h1 class="indicator-header">Racial/Ethnic Disparities</h1>
-    <hr />
-
-    <div class="indicator-category-icons">
-        <img class="snippet-categories" src="./img/comm-icon.png" alt="community category icon" />
-        <img class="snippet-categories" src="./img/econo-icon.png" alt="economy category icon" />
-        <img class="snippet-categories" src="./img/equity-icon.png" alt="equity category icon" />
+<article class="indicators-snippet">
+    <div id="indicator-header-wrapper">
+        <h1 class="indicator-header">Racial/Ethnic Disparities</h1>
+        <div class="indicator-category-icons">
+            <img class="snippet-categories" src="./img/comm-icon.png" alt="community category icon" />
+            <img class="snippet-categories" src="./img/econo-icon.png" alt="economy category icon" />
+            <img class="snippet-categories" src="./img/equity-icon.png" alt="equity category icon" />
+        </div>
     </div>
 
-    <div class="description-wrapper">
-        <p class="indicator-description">
-            Nulla porta justo ipsum, eget fermentum nisi lobortis sed. Vestibulum ornare a purus dictum imperdiet. Donec malesuada tortor sit amet ante molestie dignissim. Donec et odio suscipit, volutpat mauris eu, pretium dolor. Vestibulum bibendum tristique tellus tempor posuere. Nam pellentesque pulvinar sagittis. Phasellus euismod nulla in nulla semper, sed fringilla enim pellentesque. Nulla quis purus odio. Nam porta, lacus nec aliquet porta, massa mi tristique tellus, sed tincidunt ipsum sapien sit amet ex.
-        </p>
-        <p class="indicator-description">
-            Quisque interdum commodo dolor at varius. Ut a sapien eget mi rutrum finibus nec id massa. Pellentesque id ultrices tellus. Sed efficitur auctor ultricies. Morbi aliquet ut tortor ut ultrices. Ut maximus venenatis porta. Nulla sit amet pretium neque. Quisque a mattis magna. Sed ac sollicitudin sapien. Sed in risus massa. Aliquam nec elit non erat efficitur consectetur et a erat. Donec convallis pharetra purus, sit amet fermentum turpis ornare ut. Pellentesque quis enim dui.
-        </p>
-    </div>
+    <section id="description-wrapper">
+        <div id="description-wrapper-tabs">
+            <h2 id="why-tab" class="description-wrapper-tab-headers active-tab">Why is it Important?</h2>
+            <h2 id="what-tab" class="description-tab-middle description-wrapper-tab-headers">What is it?</h2>
+            <h2 id="how-tab" class="description-wrapper-tab-headers">How Are We Doing?</h2>
+        </div>
+        <div id="indicator-description-container"></div>
+    </section>
+    
+    <hr class="indicator-header-hr"/>
 
     <h2 class="indicator-subheader">Median Income Gap between People of Color vs. White, non-Latinx (2017 Dollars)</h2>
     
@@ -28,7 +30,7 @@
     <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Median Income by People of Color vs. White, non-Latinx (2017 Dollars)</h2>
 
-        <p>toggle chart data:</p>
+        <p>toggle data:</p>
 
         <form>
             <fieldset class="toggle-fieldset">
@@ -67,7 +69,7 @@
     <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Whites &amp; Non-Whites (2017 Dollars)</h2>
 
-        <p>toggle chart data:</p>
+        <p>toggle data:</p>
 
         <form>
             <fieldset class="toggle-fieldset">
@@ -103,7 +105,7 @@
     <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Whites &amp; Non-Whites (2017 Dollars)</h2>
 
-        <p>toggle chart data:</p>
+        <p>toggle data:</p>
 
         <form>
             <fieldset class="toggle-fieldset">
@@ -139,7 +141,7 @@
     <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Non-Latinx &amp; Latinx (2017 Dollars)</h2>
 
-        <p>toggle chart data:</p>
+        <p>toggle data:</p>
 
         <form>
             <fieldset class="toggle-fieldset">
@@ -175,7 +177,7 @@
     <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Non-Latinx &amp; Latinx (2017 Dollars)</h2>
 
-        <p>toggle chart data:</p>
+        <p>toggle data:</p>
 
         <form>
             <fieldset class="toggle-fieldset">
@@ -205,4 +207,4 @@
     <div class="data-viz chart7">
         <svg></svg>
     </div>
-</div>
+</article>

@@ -219,7 +219,7 @@ const snippetsRef = {
                 ]
             },
             {
-                type: 'stacked area',
+                type: 'stacked bar',
                 container: 'chart2',
                 dataSource: './data/edattainComprehensive.csv',
                 columnOptions: [
@@ -1843,7 +1843,99 @@ const snippetsRef = {
         d3: [
             {
                 type: 'line',
-                container: 'chart'
+                container: 'chart',
+                dataSource: './data/popGrowth.csv',
+                columnOptions: [
+                    ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
+                    ['Core-count','DevCom-count','GroSub-count','Rural-count','Burlington-count','Camden-count','Gloucester-count','Mercer-count','Bucks-count','Chester-count','Delaware-count','Montgomery-count','Philadelphia-count','NJCnt-count','PASub-count','DVRPC-count'],
+                    ['Core-perc','DevCom-perc','GroSub-perc','Rural-perc','Burlington-perc','Camden-perc','Gloucester-perc','Mercer-perc','Bucks-perc','Chester-perc','Delaware-perc','Montgomery-perc','Philadelphia-perc','NJCnt-perc','PASub-perc','DVRPC-perc']
+                ],
+                data: [
+                    {
+                        'key': 'DVRPC',
+                        columns: ['Year', 'DVRPC']
+                    },
+                    {
+                        'key': 'PA Suburbs',
+                        disabled: true,
+                        columns: ['Year', 'PASub']
+                    },
+                    {
+                        'key': 'NJ Counties',
+                        disabled: true,
+                        columns: ['Year', 'NJCnt']
+                    },
+                    {
+                        'key': 'Core City',
+                        disabled: true,
+                        columns: ['Year', 'Core']
+                    },
+                    {
+                        'key': 'Developed Community',
+                        disabled: true,
+                        columns: ['Year', 'DevCom']
+                    },
+                    {
+                        'key': 'Growing Suburb',
+                        disabled: true,
+                        columns: ['Year', 'GroSub']
+                    },
+                    {
+                        'key': 'Rural Area',
+                        disabled: true,
+                        columns: ['Year', 'Rural']
+                    },
+                    {
+                        'key': 'Burlington',
+                        disabled: true,
+                        columns: ['Year', 'Burlington']
+                    },
+                    {
+                        'key': 'Camden',
+                        disabled: true,
+                        columns: ['Year', 'Camden']
+                    },
+                    {
+                        'key': 'Gloucester',
+                        disabled: true,
+                        columns: ['Year', 'Gloucester']
+                    },
+                    {
+                        'key': 'Mercer',
+                        disabled: true,
+                        columns: ['Year', 'Mercer']
+                    },
+                    {
+                        'key': 'Bucks',
+                        disabled: true,
+                        columns: ['Year', 'Bucks']
+                    },
+                    {
+                        'key': 'Delaware',
+                        disabled: true,
+                        columns: ['Year', 'Delaware']
+                    },
+                    {
+                        'key': 'Chester',
+                        disabled: true,
+                        columns: ['Year', 'Chester']
+                    },
+                    {
+                        'key': 'Montgomery',
+                        disabled: true,
+                        columns: ['Year', 'Montgomery']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        disabled: true,
+                        columns: ['Year', 'Philadelphia']
+                    }
+                ]
+            },
+            {
+                type: 'waterfall',
+                container: 'chart2',
+                dataSource: './data/'
             }
         ]
     },

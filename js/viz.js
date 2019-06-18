@@ -241,4 +241,9 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
     })
 }
 
-export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createdStackedBarPlusLine, createLineAndScatterChart};
+const createWaterfallChart = (source, doubleToggle) => {
+    let container, dataSource;
+    [container, dataSource, source] = formatInpus(source, doubleToggle)
+}
+
+export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createdStackedBarPlusLine, createLineAndScatterChart, createWaterfallChart};
