@@ -251,7 +251,7 @@ nav{
     opacity: 1;
     /* fallback bg for browsers that don't support linear gradient */
     background: #f2f2f2;
-    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(240,240,240,1) 20%);
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(240,240,240,1) 20vh);
     color: #050709;
     /*15vw for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
     padding-left: 15vw;
@@ -404,36 +404,6 @@ nav{
     margin: 0 auto;
     height: 100%;
     width: 75%;
-}
-
-
-/**************************************/
-/******* Indicator Page Buffer *******/
-.buffer-wrapper{
-    visibility: hidden;
-    position: absolute;
-    z-index: 60;
-    width: 100vw;
-    height: 92vh;
-}
-#indicators-nav-buffer{
-    width: 15vw;
-    height: 100%;
-}
-#indicators-grid-buffer{
-    width: 85vw;
-    height: 100%;
-    background: #e9e9e9;
-}
-#sidenav-buffer{
-    width: 15vw;
-    height: 100%;
-    background: #222222;
-}
-#indicator-page-buffer{
-    width: 85vw;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(242,242,242,1) 20%);
 }
 
 
