@@ -1935,7 +1935,48 @@ const snippetsRef = {
             {
                 type: 'waterfall',
                 container: 'chart2',
-                dataSource: './data/'
+            },
+            {
+                type: 'line',
+                container: 'chart3',
+                dataSource: './data/pop_age_change.csv',
+                secondDataSource: './data/pop_age_totals.csv',
+                columnOptions: [
+                    ['DVRPC_<20','DVRPC_20-34','DVRPC_35-49','DVRPC_50-64','DVRPC_65+'],
+                    ['PASub_<20','PASub_20-34','PASub_35-49','PASub_50-64','PASub_65+'],
+                    ['NJCnt_<20','NJCnt_20-34','NJCnt_35-49','NJCnt_50-64','NJCnt_65+'],
+                    ['Chester_<20','Chester_20-34','Chester_35-49','Chester_50-64','Chester_65+'],
+                    ['Delaware_<20','Delaware_20-34','Delaware_35-49','Delaware_50-64','Delaware_65+'],
+                    ['Montgomery_<20','Montgomery_20-34','Montgomery_35-49','Montgomery_50-64','Montgomery_65+'],
+                    ['Burlington_<20','Burlington_20-34','Burlington_35-49','Burlington_50-64','Burlington_65+'],
+                    ['Camden_<20','Camden_20-34','Camden_35-49','Camden_50-64','Camden_65+'],
+                    ['Gloucester_<20','Gloucester_20-34','Gloucester_35-49','Gloucester_50-64','Gloucester_65+'],
+                    ['Mercer_<20','Mercer_20-34','Mercer_35-49','Mercer_50-64','Mercer_65+'],
+                    ['Bucks_<20','Bucks_20-34','Bucks_35-49','Bucks_50-64','Bucks_65+'],
+                    ['Philadelphia_<20','Philadelphia_20-34','Philadelphia_35-49','Philadelphia_50-64','Philadelphia_65+'],
+                ],
+                data: [
+                    {
+                        'key': '<= 20 years',
+                        columns: ['Year', 'DVRPC_<20']
+                    },
+                    {
+                        'key': '20-34 years',
+                        columns: ['Year', 'DVRPC_20-34']
+                    },
+                    {
+                        'key': '35-49 years',
+                        columns: ['Year', 'DVRPC_35-49']
+                    },
+                    {
+                        'key': '50-64 years',
+                        columns: ['Year', 'DVRPC_50-64']
+                    },
+                    {
+                        'key': '65+ years',
+                        columns: ['Year', 'DVRPC_65+']
+                    },
+                ]
             }
         ]
     },

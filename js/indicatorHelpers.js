@@ -29,7 +29,7 @@ const dataVizSwitch = (type, source, doubleToggle) => {
             graphs.createLineAndScatterChart(source, doubleToggle)
             break;
         case 'waterfall':
-            greaphs.createWaterfallChart(source, doubleToggle)
+            //graphs.createWaterfallChart(source, doubleToggle)
         default:
             console.log('default')
     }
