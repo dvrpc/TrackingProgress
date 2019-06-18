@@ -2023,6 +2023,36 @@ const snippetsRef = {
                         columns: ['Year', 'DVRPC_TOM']
                     }
                 ]
+            },
+            {
+                type: 'line',
+                container: 'chart5',
+                dataSource: './data/pop_hisp_change.csv',
+                secondDataSource: './data/pop_hisp_totals.csv',
+                columnOptions: [
+                    ['DVRPC_NH','DVRPC_H'],
+                    ['PASub_NH','PASub_H'],
+                    ['NJCnt_NH','NJCnt_H'],
+                    ['Chester_NH','Chester_H'],
+                    ['Delaware_NH','Delaware_H'],
+                    ['Montgomery_NH','Montgomery_H'],
+                    ['Burlington_NH','Burlington_H'],
+                    ['Camden_NH','Camden_H'],
+                    ['Gloucester_NH','Gloucester_H'],
+                    ['Mercer_NH','Mercer_H'],
+                    ['Bucks_NH','Bucks_H'],
+                    ['Philadelphia_NH','Philadelphia_H'],
+                ],
+                data: [
+                    {
+                        'key': 'Non-Hispanic',
+                        columns: ['Year', 'DVRPC_NH']
+                    },
+                    {
+                        'key': 'Hispanic',
+                        columns: ['Year', 'DVRPC_H']
+                    }
+                ]
             }
         ]
     },
