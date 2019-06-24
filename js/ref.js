@@ -1935,6 +1935,23 @@ const snippetsRef = {
             {
                 type: 'waterfall',
                 container: 'chart2',
+                dataSource: './data/pop_comp_change.csv',
+                columnOptions: [
+                    ['Burlington'],
+                    ['Camden'],
+                    ['Gloucester'],
+                    ['Mercer'],
+                    ['Bucks'],
+                    ['Chester'],
+                    ['Delaware'],
+                    ['Montgomery'],
+                    ['Philadelphia']
+                ],
+                data: [
+                    {
+                        'key': ''
+                    }
+                ]
             },
             {
                 type: 'line',

@@ -38,9 +38,6 @@ const createStackedBarChart = (source, doubleToggle) => {
                 .forceY(0)
                 .clipEdge(true)
                 .stacked(true)
-
-            // dates coming in as mm/dd/yyyy
-            chart.xAxis.tickFormat(d => d3.time.format('%d %b %Y')(new Date(d)));
     
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
