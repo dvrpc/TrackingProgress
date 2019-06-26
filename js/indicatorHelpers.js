@@ -57,7 +57,8 @@ const toggleChart = (selected, dataSets) => {
     // handle possible INDIRECT interaction with the second toggle (user hasn't selected the 2nd toggle but its state still needs to be captured)
     }else {
         // get a handle on the double toggle <select> (if it exists)
-        const hasDoubleToggle = selected.parentElement.nextElementSibling
+        const hasDoubleToggle = selected.parentElement.nextElementSibling || selected.parentElement.previousElementSibling
+        console.log('hasdoubletoggle ', hasDoubleToggle)
 
         // if the chart has a double toggle, get the value of the 2nd toggle to pass on to viz.js functions
         if(hasDoubleToggle){

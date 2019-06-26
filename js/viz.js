@@ -5,10 +5,10 @@
 const formatInpus = (source, doubleToggle) => {
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
-
+    
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
-
+    
     // handle double toggle cases
     let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
 
