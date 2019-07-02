@@ -399,11 +399,11 @@ nav{
 .data-viz:last-child{
     margin-bottom: 5%;
 }
-.dava-viz svg.nvd3-svg{
+svg.nvd3-svg{
     display: block;
     margin: 0 auto;
     height: 100%;
-    width: 75%;
+    width: 100%;
 }
 
 

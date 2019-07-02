@@ -18,7 +18,8 @@ const formatInpus = (source, doubleToggle) => {
 // formatting lookup table
 const axisFormats = {
     'percent': '.0%',
-    'thousands': ','
+    'thousands': ',',
+    'millions': '.3n'
 }
 
 const createStackedBarChart = (source, doubleToggle) => {
@@ -45,7 +46,7 @@ const createStackedBarChart = (source, doubleToggle) => {
                 .clipEdge(true)
                 .stacked(true)
 
-            chart.yAxis.tickFormat(d3.format(',.0f'))
+            source.yAxis ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxis])) : chart.yAxis.tickFormat(d3.format(',.0f'))
     
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 

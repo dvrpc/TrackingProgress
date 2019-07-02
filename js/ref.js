@@ -2088,6 +2088,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: './data/Bridge_Conditions_1A.csv',
                 secondDataSource: './data/Bridge_Conditions_1B.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
                     ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
@@ -2100,7 +2101,7 @@ const snippetsRef = {
                     ['Camden- State', 'Camden- Local', 'Camden- Other'],
                     ['Gloucester- State', 'Gloucester- Local', 'Gloucester- Other'],
                     ['Mercer- State', 'Mercer- Local', 'Mercer- Other'],
-                    ['Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other']
+                    ['Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other'],
                 ],
                 data: [
                     {
@@ -2121,6 +2122,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: './data/Bridge_Conditions_2.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
                     ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
@@ -2158,6 +2160,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: './data/Bridge_Conditions_3.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
                     ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
