@@ -15,6 +15,12 @@ const formatInpus = (source, doubleToggle) => {
     return [container, dataSource, source]
 }
 
+// formatting lookup table
+const axisFormats = {
+    'percent': '.0%',
+    'thousands': ','
+}
+
 const createStackedBarChart = (source, doubleToggle) => {
     let container, dataSource;
     [container, dataSource, source] = formatInpus(source, doubleToggle)
@@ -70,9 +76,6 @@ const createLinePlusBarChart = (source, doubleToggle) => {
                 .forceY([0])
                 .y((d, i) => d[1])
 
-            // bar source is correctly updating. Everything is doing what it should EXCEPT for the graph itself clearing the bar data
-            //console.log('bar source before draw ', source.data[0])
-
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
             nv.utils.windowResize(chart.update)
@@ -104,7 +107,7 @@ const createLineChart = (source, doubleToggle) => {
 
 
             // format y-axis for large numbers
-            chart.yAxis.tickFormat(d3.format(','))
+            source.yAxis ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxis])): chart.yAxis.tickFormat(d3.format(','))
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 

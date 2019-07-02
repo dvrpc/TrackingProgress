@@ -528,7 +528,8 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/housing_afford_graph_1.csv',
-                data: fullGeography
+                data: fullGeography,
+                yAxis: 'percent'
             },
             {
                 type: 'stacked bar',
