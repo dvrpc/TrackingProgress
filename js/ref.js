@@ -1208,66 +1208,66 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'DVRPC',
-                        columns: ['year', 'DVRPCFree24']
+                        columns: ['Year', 'DVRPCFree24']
                     },
                     {
                         'key': 'PA Suburban Counties',
-                        columns: ['year', 'PASubCosFree24'],
+                        columns: ['Year', 'PASubCosFree24'],
                         disabled: true
                     },
                     {
                         'key': 'PA Counties',
-                        columns: ['year', 'PACosFree24'],
+                        columns: ['Year', 'PACosFree24'],
                         disabled: true
                     },
                     {
                         'key': 'NJ Counties',
-                        columns: ['year', 'NJCosFree24'],
+                        columns: ['Year', 'NJCosFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Bucks Co',
-                        columns: ['year', 'BucFree24'],
+                        columns: ['Year', 'BucFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Chester Co',
-                        columns: ['year', 'ChesFree24'],
+                        columns: ['Year', 'ChesFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Delaware Co',
-                        columns: ['year', 'DelFree24'],
+                        columns: ['Year', 'DelFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Montgomery Co',
-                        columns: ['year', 'MontFree24'],
+                        columns: ['Year', 'MontFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Burlington Co',
-                        columns: ['year', 'BurlFree24'],
+                        columns: ['Year', 'BurlFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Camden Co',
-                        columns: ['year', 'CamFree24'],
+                        columns: ['Year', 'CamFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Gloucester Co',
-                        columns: ['year', 'GloFree24'],
+                        columns: ['Year', 'GloFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Mercer Co',
-                        columns: ['year', 'MerFree24'],
+                        columns: ['Year', 'MerFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Philadelphia Co',
-                        columns: ['year', 'PhilFree24'],
+                        columns: ['Year', 'PhilFree24'],
                         disabled: true
                     }
                 ]
@@ -2557,7 +2557,73 @@ const snippetsRef = {
     'Pavement Conditions': {
         file: 'pavementConditions.html',
         d3: [
-
+            {
+                type: 'line',
+                container: 'chart',
+                dataSource: './data/pavement_graph_1.csv',
+                data: [
+                    {
+                        'key': 'DVRPC- All',
+                        columns: ['year', 'DVRPC- All']
+                    },
+                    {
+                        'key': 'DVRPC- Interstate',
+                        columns: ['year', 'DVRPC- Interstate']
+                    },
+                    {
+                        'key': 'DVRPC- NHS, Non-Interstate',
+                        columns: ['year', 'DVRPC- NHS, non-interstate']
+                    },
+                    {
+                        'key': 'DVRPC- Non-NHS, < 2000 ADT',
+                        columns: ['year', 'DVRPC- Non-NHS, < 2000 ADT']
+                    },
+                    {
+                        'key': 'DVRPC- Non-NHS, >= 2000 ADT',
+                        columns: ['year', 'DVRPC- Non-NHS, >= 2000 ADT']
+                    },
+                    {
+                        'key': 'New Jersey- All',
+                        columns: ['year', 'New Jersey- All']
+                    },
+                    {
+                        'key': 'New Jersey- Interstate',
+                        columns: ['year', 'New Jersey- Interstate']
+                    },
+                    {
+                        'key': 'New Jersey- NHS, Non-Interstate',
+                        columns: ['year', 'New Jersey- NHS, non-interstate']
+                    },
+                    {
+                        'key': 'New Jersey- Non-NHS, < 2000 ADT',
+                        columns: ['year', 'New Jersey- Non-NHS, < 2000 ADT']
+                    },
+                    {
+                        'key': 'New Jersey- Non-NHS, >= 2000 ADT',
+                        columns: ['year', 'New Jersey- Non-NHS, >= 2000 ADT']
+                    },
+                    {
+                        'key': 'Pennsylvania- All',
+                        columns: ['year', 'Pennsylvania- All']
+                    },
+                    {
+                        'key': 'Pennsylvania- Interstate',
+                        columns: ['year', 'Pennsylvania- Interstate']
+                    },
+                    {
+                        'key': 'Pennsylvania- NHS, Non-Interstate',
+                        columns: ['year', 'Pennsylvania- NHS, non-interstate']
+                    },
+                    {
+                        'key': 'Pennsylvania- Non-NHS, < 2000 ADT',
+                        columns: ['year', 'Pennsylvania- Non-NHS, < 2000 ADT']
+                    },
+                    {
+                        'key': 'Pennsylvania- Non-NHS, >= 2000 ADT',
+                        columns: ['year', 'Pennsylvania- Non-NHS, >= 2000 ADT']
+                    },
+                ]
+            }
         ],
         text: {
             why: `<p>The region's roadways enable mobility and commerce throughout the region. Pavement in poor condition causes unnecessary vehicle damage, increasing the cost of driving, and slows down traffic, increasing congestion. The cost of shipping is passed on to consumers when they pay for goods and services. Nearly all freight movement is completed by truck for some portion of the trip. Therefore, how well we maintain the road network has an impact on how much we pay for the everyday products and services we need or want. Savings generated by good road conditions have a positive impact on our economy.</p><p>Roads can be kept in good condition with proper maintenance for a much lower cost than reconstructing a road that has fallen into a state of disrepair. Regular resurfacing and preservation helps to maintain good pavement condition. This ensures that our roads are smooth and safe for operation. Typically, a road is resurfaced every 12 to 15 years, though a high-traffic volume interstate may be resurfaced every seven years, while a lower-volume collector road may be resurfaced only every 25 years.</p>`,

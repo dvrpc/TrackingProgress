@@ -6,67 +6,78 @@ const fullGeography = [
     },
     {
         'key': 'Pennsylvania Suburbs',
-        columns: ['year', 'Pennsylvania Suburbs']
+        columns: ['year', 'Pennsylvania Suburbs'],
+        disabled: true
     },
     {
         'key': 'New Jersey Suburbs',
-        columns: ['year', 'New Jersey Suburbs']
-    },
-    {
-        'key': 'Philadelphia Subregion',
-        columns: ['year', 'Philadelphia Subregion']
+        columns: ['year', 'New Jersey Suburbs'],
+        disabled: true
     },
     {
         'key': 'Core City',
-        columns: ['year', 'Core City']
+        columns: ['year', 'Core City'],
+        disabled: true
     },
     {
         'key': 'Developed Community',
-        columns: ['year', 'Developed Community']
+        columns: ['year', 'Developed Community'],
+        disabled: true
     },
     {
         'key': 'Growing Suburb',
-        columns: ['year', 'Growing Suburb']
+        columns: ['year', 'Growing Suburb'],
+        disabled: true
     },
     {
         'key': 'Rural Area',
-        columns: ['year', 'Rural Area']
+        columns: ['year', 'Rural Area'],
+        disabled: true
     },
     {
         'key': 'Bucks County',
-        columns: ['year', 'Bucks County']
+        columns: ['year', 'Bucks County'],
+        disabled: true
     },
     {
         'key': 'Chester County',
-        columns: ['year', 'Chester County']
+        columns: ['year', 'Chester County'],
+        disabled: true
     },
     {
         'key': 'Delaware County',
-        columns: ['year', 'Delaware County']
+        columns: ['year', 'Delaware County'],
+        disabled: true
     },
     {
         'key': 'Montgomery County',
-        columns: ['year', 'Montgomery County']
+        columns: ['year', 'Montgomery County'],
+        disabled: true
     },
     {
         'key': 'Burlington County',
-        columns: ['year', 'Burlington County']
+        columns: ['year', 'Burlington County'],
+        disabled: true
     },
     {
         'key': 'Camden County',
-        columns: ['year', 'Camden County']
+        columns: ['year', 'Camden County'],
+        disabled: true
     },
     {
         'key': 'Gloucester County',
-        columns: ['year', 'Gloucester County']
+        columns: ['year', 'Gloucester County'],
+        disabled: true
     },
     {
         'key': 'Mercer County',
-        columns: ['year', 'Mercer County']
+        columns: ['year', 'Mercer County'],
+        disabled: true
     },
     {
         'key': 'Philadelphia County',
-        columns: ['year', 'Philadelphia County']
+        columns: ['year', 'Philadelphia County'],
+        disabled: true
     }
 ]
 
