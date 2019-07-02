@@ -15,9 +15,10 @@ const formatInpus = (source, doubleToggle) => {
     return [container, dataSource, source]
 }
 
-// formatting lookup table
+// Y-axis formatting lookup table
 const axisFormats = {
     'percent': '.0%',
+    'singles': '.3n',
     'thousands': ',',
     'millions': '.3n'
 }

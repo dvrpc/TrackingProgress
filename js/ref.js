@@ -287,7 +287,7 @@ const snippetsRef = {
                 dataSource: './data/crashesWeb.csv',
                 columnOptions: [
                     ['ksi5yrAvgDVRPC', 'ksiMotorVehicleDVRPC', 'ksiBikePedDVRPC'],
-                    ['ksi5yrAvgPhillySubregion', 'ksiMotorVehiclePhillySubregion', 'ksiBikePedPhillySubregion'],
+                    ['ksi5yrAvgPASubregion', 'ksiMotorVehiclePASubregion', 'ksiBikePedPASubregion'],
                     ['ksi5yrAvgNJSubregion', 'ksiMotorVehicleNJSubregion', 'ksiBikePedNJSubregion'],
                     ['ksi5yrAvgPASubregion', 'ksiMotorVehiclePASubregion', 'ksiBikePedPASubregion'],
                     ['ksi5yrAvgBucksCo', 'ksiMotorVehicleBucksCo', 'ksiBikePedBucksCo'],
@@ -324,6 +324,7 @@ const snippetsRef = {
                 type: 'stacked bar plus line',
                 container: 'chart2',
                 dataSource: './data/crashesWeb.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['ksiPerCap5yrAvgDVRPC', 'ksiMotorVehiclePerCapDVRPC', 'ksiBikePedPerCapDVRPC'],
                     ['ksiPerCap5yrAvgPhillySubregion', 'ksiMotorVehiclePerCapPhillySubregion', 'ksiBikePedPerCapPhillySubregion'],
@@ -540,6 +541,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: './data/housing_afford_graph_2.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- Below 35%- Own', 'DVRPC- Below 35%- Rent', 'DVRPC- Above 35%- Rent', 'DVRPC- Above 35%- Own','DVRPC- Not Computed- Own', 'DVRPC- Not Computed- Rent'],
                     ['Pennsylvania Suburbs- Below 35%- Own', 'Pennsylvania Suburbs- Below 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Own','Pennsylvania Suburbs- Not Computed- Own', 'Pennsylvania Suburbs- Not Computed- Rent'],
@@ -590,6 +592,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: './data/housing_afford_graph_3.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- 0.0-9.9%', 'DVRPC- 10.0-14.9%', 'DVRPC- 15.0-19.9%', 'DVRPC- 20.0-24.9%', 'DVRPC- 25.0-29.9%', 'DVRPC- 30.0-34.9%', 'DVRPC- 35.0-39.9%', 'DVRPC- 40.0-49.9%', 'DVRPC- 50%+','DVRPC- Not Computed'],
                     ['Pennsylvania Suburbs- 0.0-9.9%', 'Pennsylvania Suburbs- 10.0-14.9%', 'Pennsylvania Suburbs- 15.0-19.9%', 'Pennsylvania Suburbs- 20.0-24.9%', 'Pennsylvania Suburbs- 25.0-29.9%', 'Pennsylvania Suburbs- 30.0-34.9%', 'Pennsylvania Suburbs- 35.0-39.9%', 'Pennsylvania Suburbs- 40.0-49.9%', 'Pennsylvania Suburbs- 50%+', 'Pennsylvania Suburbs- Not Computed'],
@@ -1207,6 +1210,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/roadwayreliability24.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['DVRPCFree24', 'PASubCosFree24', 'PACosFree24', 'NJCosFree24', 'BucFree24', 'ChesFree24', 'DelFree24', 'MontFree24', 'BurlFree24', 'CamFree24', 'GloFree24', 'MerFree24', 'PhilFree24'],
                     ['DVRPCLoca24', 'PASubCosLoca24', 'PACosLoca24', 'NJCosLoca24', 'BucLoca24', 'ChesLoca24', 'DelLoca24', 'MontLoca24', 'BurlLoca24', 'CamLoca24', 'GloLoca24', 'MerLoca24', 'PhilLoca24']
@@ -1283,6 +1287,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart2',
                 dataSource: './data/roadwayreliabilityTOD.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['DVRPCFreeAM', 'DVRPCFreeMD', 'DVRPCFreePM', 'DVRPCFreeNT'],
                     ['PASubCosFreeAM', 'PASubCosFreeMD', 'PASubCosFreePM', 'PASubCosFreeNT'],
@@ -1408,6 +1413,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: './data/ResNonSOV.csv',
                 secondDataSource: './data/WorkNonSOV.csv',
+                yAxis: 'percent',
                 columnOptions: [
                     ['DVRPCSOV', 'DVRPCNonSOV'],
                     ['PASubSOV', 'PASubNonSOV'],
@@ -1438,6 +1444,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: './data/ResNonSOV_multi.csv',
                 secondDataSource: './data/WorkNonSOV_multi.csv',
+                yAxis: 'percent',
                 columnOptions: [
                     ['DVRPCPool', 'DVRPCTransit', 'DVRPCWalk', 'DVRPCBike', 'DVRPCTMO', 'DVRPCWFH', 'DVRPCBus', 'DVRPCRail', 'DVRPCSubw', 'DVRPCTroll', 'DVRPCFerry',  'DVRPCMcyc', 'DVRPCOther', 'DVRPCTaxi'],
                     ['PASubPool', 'PASubTransit', 'PASubWalk', 'PASubBike', 'PASubTMO', 'PASubWFH', 'PASubBus', 'PASubRail', 'PASubSubw', 'PASubTroll', 'PASubFerry',  'PASubMcyc', 'PASubOther', 'PASubTaxi'],
@@ -1533,6 +1540,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/transit_ridership_graph_1.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['unlinkedTrips'],
                     ['unlinkedTripsPerCap']
@@ -1548,6 +1556,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart2',
                 dataSource: './data/transit_ridership_graph_2.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['Bus', 'Commuter Rail', 'Light Rail', 'Non-Scheduled Services', 'Subway', 'Trolleybus'],
                     ['Bus-per capita', 'Commuter Rail-per capita', 'Light Rail-per capita', 'Non-Scheduled Services-per capita', 'Subway-per capita', 'Trolleybus-per capita']
@@ -1583,6 +1592,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: './data/transit_ridership_graph_3.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['NJ Transit', 'PATCO', 'Pottstown Area Rapid Transit', 'SEPTA'],
                     ['NJ Transit-per capita', 'PATCO-per capita', 'Pottstown Area Rapid Transit-per capita', 'SEPTA-per capita',]
@@ -2571,6 +2581,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/pavement_graph_1.csv',
+                yAxis: 'percent',
                 data: [
                     {
                         'key': 'DVRPC- All',
