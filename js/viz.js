@@ -44,6 +44,8 @@ const createStackedBarChart = (source, doubleToggle) => {
                 .forceY(0)
                 .clipEdge(true)
                 .stacked(true)
+
+            chart.yAxis.tickFormat(d3.format(',.0f'))
     
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -107,7 +109,7 @@ const createLineChart = (source, doubleToggle) => {
 
 
             // format y-axis for large numbers
-            source.yAxis ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxis])): chart.yAxis.tickFormat(d3.format(','))
+            source.yAxis ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxis])): chart.yAxis.tickFormat(d3.format(',.0f'))
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
