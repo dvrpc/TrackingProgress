@@ -1829,8 +1829,8 @@ const snippetsRef = {
             }
         ]
     },
-    'Patents': {
-        file: 'patents.html',
+    'Innovation': {
+        file: 'innovation.html',
         d3: [
             {
                 type: 'line',
