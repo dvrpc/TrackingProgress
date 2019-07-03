@@ -145,7 +145,7 @@ const snippetsRef = {
         text: {
             why: `<p>Annual miles driven per capita, or Vehicle Miles Traveled (VMT) is an indicator of travel demand on roads. VMT can be used to understand where funds might be allocated for strained roadways. A negative trend in per capita VMT can indicate a slower economy (i.e. household funds are constrained so fewer discretionary trips are made) or a change in travel mode preference (i.e. populations are increasingly opting for non-auto travel modes).</p>`,
             what: `<p>Annual Miles driven, or VMT, is a distance-based measure of all vehicle travel on roadways (auto and truck) in a given year. Per capita VMT is the same measure divided by the same area's population for the same year. Per vehicle VMT divides VMT by the number of household vehicles available by residents of that geography.</p>`,
-            how: ``
+            how: `<p>Total miles traveled peaked in the region in 2007, with 41.4 billion VMT. Miles traveled declined with the Great Recession, only starting to increase again in 2012 before dipping again slightly in 2013. VMT has been increasing just over 1 percent per year since then, with a slightly higher growth rate in the New Jersey subregion than in the Pennsylvania subregion. When factoring in population growth, 2017 per capita VMT in the region (7,080) remained well below its 2006 peak (7,485).</p>`
         }
     },
     'Educational Attainment': {
