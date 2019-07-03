@@ -47,7 +47,7 @@ const createStackedBarChart = (source, doubleToggle) => {
                 .clipEdge(true)
                 .stacked(true)
 
-            source.yAxis ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxis])) : chart.yAxis.tickFormat(d3.format(',.0f'))
+            source.yAxis ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxis])) : chart.yAxis.tickFormat(d3.format('.3n'))
     
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 

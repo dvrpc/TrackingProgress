@@ -156,6 +156,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/edattainHS.csv',
+                yAxis: 'percent',
                 data: [
                     {
                         'key': 'DVRPC',
@@ -227,6 +228,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: './data/edattainComprehensive.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC-Less than High School', 'DVRPC-Some High School', 'DVRPC-Graduated High School', 'DVRPC-Some College', 'DVRPC-Associates Degree', 'DVRPC-Bachelors Degree', 'DVRPC-Graduate/Professional Degree'],
                     ['Philadelphia Subregion-Less than High School', 'Philadelphia Subregion-Some High School', 'Philadelphia Subregion-Graduated High School', 'Philadelphia Subregion-Some College', 'Philadelphia Subregion-Associates Degree', 'Philadelphia Subregion-Bachelors Degree', 'Philadelphia Subregion-Graduate/Professional Degree'],
@@ -895,6 +897,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: './data/RaceEthnSegregation.csv',
+                yAxis: 'percent',
                 data: [
                     {
                         'key': 'Racial/Ethnic Segregation Index',
@@ -906,6 +909,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart4',
                 dataSource: './data/labForceByRace_wide.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -931,6 +935,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart5',
                 dataSource: './data/labForceByRace_wide.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['Region_labWht', 'Region_labNonWht'],
                     ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
@@ -960,6 +965,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart6',
                 dataSource: './data/labForceByEth_wide.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -985,6 +991,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart7',
                 dataSource: './data/labForceByEth_wide.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['Region_labWht', 'Region_labHisp'],
                     ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labHisp'],
@@ -1020,6 +1027,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/IncomeQuintileTopBottomGap.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['Region'],
                     ['PASubCos'],
@@ -1085,6 +1093,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: './data/IncomeSegregation.csv',
+                yAxis: 'percent',
                 data: [
                     {
                         'key': 'Segregation Index',
@@ -1151,6 +1160,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: './data/labForceBySex_wide.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -1176,6 +1186,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart4',
                 dataSource: './data/labForceBySex_wide.csv',
+                yAxis: 'singles',
                 columnOptions: [
                     ['Region_labMl', 'Region_labFm'],
                     ['NJ Suburban Counties_labMl', 'NJ Suburban Counties_labFm'],
@@ -1862,6 +1873,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/popGrowth.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
                     ['Core-count','DevCom-count','GroSub-count','Rural-count','Burlington-count','Camden-count','Gloucester-count','Mercer-count','Bucks-count','Chester-count','Delaware-count','Montgomery-count','Philadelphia-count','NJCnt-count','PASub-count','DVRPC-count'],
@@ -2016,6 +2028,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart4',
                 dataSource: './data/pop_race_change.csv',
+                yAxis: 'millions',
                 secondDataSource: './data/pop_race_totals.csv',
                 columnOptions: [
                     ['DVRPC_WA','DVRPC_BA','DVRPC_IA','DVRPC_AA','DVRPC_NA','DVRPC_TOM'],
@@ -2063,6 +2076,7 @@ const snippetsRef = {
                 container: 'chart5',
                 dataSource: './data/pop_hisp_change.csv',
                 secondDataSource: './data/pop_hisp_totals.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC_NH','DVRPC_H'],
                     ['PASub_NH','PASub_H'],
@@ -2218,6 +2232,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/water_quality_1.csv',
+                yAxis: 'percent',
                 data: [
                     {
                         'key': 'Pennsylvania',
@@ -2256,6 +2271,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: './data/water_quality_3.csv',
+                yAxis: 'millions',
                 data: [
                     {
                         'key': 'Supporting (acres)',
@@ -2285,6 +2301,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/landConsumption1.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['Total Developed Acres- DVRPC','Total Developed Acres- NJ Suburbs','Total Developed Acres- PA Suburbs','Total Developed Acres- Core City','Total Developed Acres- Developed Community','Total Developed Acres- Growing Suburb','Total Developed Acres- Rural Area','Total Developed Acres- Bucks','Total Developed Acres- Burlington','Total Developed Acres- Camden','Total Developed Acres- Chester','Total Developed Acres- Delaware','Total Developed Acres- Gloucester','Total Developed Acres- Mercer','Total Developed Acres- Montgomery','Total Developed Acres- Philadelphia'],
                     ['Developed Acres per Capita- DVRPC','Developed Acres per Capita- NJ Suburbs','Developed Acres per Capita- PA Suburbs','Developed Acres per Capita- Core City','Developed Acres per Capita- Developed Community','Developed Acres per Capita- Growing Suburb','Developed Acres per Capita- Rural Area','Developed Acres per Capita- Bucks','Developed Acres per Capita- Burlington','Developed Acres per Capita- Camden','Developed Acres per Capita- Chester','Developed Acres per Capita- Delaware','Developed Acres per Capita- Gloucester','Developed Acres per Capita- Mercer','Developed Acres per Capita- Montgomery','Developed Acres per Capita- Philadelphia'],
@@ -2362,6 +2379,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: './data/landConsumption2.csv',
+                yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- agricultural','DVRPC- comm_services','DVRPC- commercial','DVRPC- industrial','DVRPC- military','DVRPC- mining','DVRPC- multi_fam','DVRPC- recreation','DVRPC- single_fam','DVRPC- transportation','DVRPC- utility','DVRPC- vacant','DVRPC- water','DVRPC- wooded'],
                     ['PA Suburbs- agricultural','PA Suburbs- comm_services','PA Suburbs- commercial','PA Suburbs- industrial','PA Suburbs- military','PA Suburbs- mining','PA Suburbs- multi_fam','PA Suburbs- recreation','PA Suburbs- single_fam','PA Suburbs- transportation','PA Suburbs- utility','PA Suburbs- vacant','PA Suburbs- water','PA Suburbs- wooded'],
