@@ -667,7 +667,12 @@ const snippetsRef = {
                     }
                 ]
             },
-        ]
+        ],
+        text: {
+            why: `<p>Maintaining a diverse supply of housing at all price points is critical to attracting a sufficient labor force and maintaining economic attractiveness. Households paying greater than 35 percent of their income will have cost-burdens that make other necessary payments more difficult, and limit discretionary funds. Housing conditions, prices, and income levels all exacerbate inequities experienced by disadvantaged communities, and can prevent individuals and families from fully accessing the opportunities afforded to others in the region.</p>`,
+            what: `<p>A commonly accepted threshold for what housing costs should be to remain affordable is 35 percent of a household’s income. This is defined as high cost-burden for households. 50 percent is thought to be the severe housing cost-burden threshold. The American Community Survey (ACS) reports percent of household income spent on housing by ownership status and in various percentage ranges.</p><p>All data by county and region are from the one-year ACS. Since Planning Areas are made up of sub-county municipal data, only five-year ACS data is available in these cases. In the charts, Planning Areas are represented in the final sample year of the 5-year period estimate. To avoid comparison of datasets that use the same sample in common years, only period estimates with distinct sample years are used.</p><p>It is important to note that this indicator only measures cost- burden among the region’s households, not the supply of affordable housing. The directionality of this trend can be impacted by changes in income and housing supply. If lower income households are priced out of the region or a county, that would create a downward trend in cost-burden, but it would not reflect a positive trend for an inclusive housing market.<p>`,
+            how: ``
+        }
     },
     'Job Growth': {
         file: 'jobGrowth.html',
