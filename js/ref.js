@@ -394,7 +394,12 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: ``,
+            what: ``,
+            how: ``
+        }
     },
     'Global Connectivity': {
         file: 'globalConnectivity.html',
