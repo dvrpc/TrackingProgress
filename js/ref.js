@@ -1605,13 +1605,13 @@ const snippetsRef = {
                 dataSource: './data/transit_ridership_graph_3.csv',
                 yAxis: 'millions',
                 columnOptions: [
-                    ['NJ Transit', 'PATCO', 'Pottstown Area Rapid Transit', 'SEPTA'],
-                    ['NJ Transit-per capita', 'PATCO-per capita', 'Pottstown Area Rapid Transit-per capita', 'SEPTA-per capita',]
+                    ['New Jersey Transit', 'PATCO', 'Pottstown Area Rapid Transit', 'SEPTA'],
+                    ['New Jersey Transit-per capita', 'PATCO-per capita', 'Pottstown Area Rapid Transit-per capita', 'SEPTA-per capita',]
                 ],
                 data: [
                     {
-                        'key': 'NJ Transit',
-                        columns: ['year', 'NJ Transit']
+                        'key': 'New Jersey Transit',
+                        columns: ['year', 'New Jersey Transit']
                     },
                     {
                         'key': 'PATCO',
@@ -1629,7 +1629,7 @@ const snippetsRef = {
             }
         ],
         text: {
-            why: ``,
+            why: `<p>Connections 2045 envisions a well-maintained, integrated multimodal transportation network that provides accessibility and equity for all citizens and visitors throughout the region, reduces congestion and auto-dependence, enhances goods movement, and moves the region toward zero roadway deaths. Transit ridership is an important indicator of the health of the region's transportation system and shows how useful the region's residents consider the transit system relative to other modes of transportation.</p>`,
             what: `<p>DVRPC tracks transit ridership in the region through unlinked passenger trips, with data provided by each of the region's four transit operators: Southeastern Pennsylvania Transportation Authority (SEPTA), New Jersey Transit (NJ Transit), Port Authority Transportation Company (PATCO), and Pottstown Area Rapid Transit (PART) to the National Transit Database (NTD). Unlinked passenger trips count each passenger boarding, regardless of fare paid. Thus, a trip with a transfer would count as two boardings. Transit ridership does not include Amtrak or private bus passengers.</p><p>NJ Transit's ridership figures are for the DVRPC region only. These figures are based on service in the Trenton and Philadelphia Urbanized Area collected by the NTD.</p>`,
             how: ``
         }
@@ -2588,8 +2588,8 @@ const snippetsRef = {
         ],
         text: {
             why: `<p>There is only a finite amount of land available within the region and around the planet to provide homes for people, habitat for animals, grow food, preserve for recreation and natural resources, and to extract resources. Thanks to sprawling development patterns, land consumption in the region has increased at a rate nearly five times more than population growth over the last 75 years. There are many externalities that result from this inefficient land use:</p><ul><li>Increased reliance on motorized transportation and congestion.</li><li>Loss of open space and agricultural land.</li><li>Detrimental impacts to air and water quality.</li><li>Increased need for infrastructure and services.</li></ul>`,
-            what: ``,
-            how: ``
+            what: `<p>This indicator shows how many acres have been developed in the Greater Philadelphia region and how many have been permanently preserved from development. Chart 1 shows how many acres are developed in the region and at subregion levels. Chart 2 provides  detail on the type of development that is using the land both regionally and subregionally. Chart 3 shows how many acres are permanently protected from future development, including by public and private ownership, at the region and subregion levels. Chart 4 shows who is the owner of protected open space (federal, state, or local government; non-profit, or preserved farmland) by a selected regional geography.</p>`,
+            how: `<p>The rapid rate of land development has been unsustainable over the last 25 years, but has slowed over the past decade. From 1990 to 2015, the total number of developed acres in the region has increased by 195,800, or 21 acres per day over this entire period. From 2005 to 2015, the rate of development decreased to just 11 acres per day, though the Great Recession was clearly a major reason for this slowdown and it's not clear that land consumption has entered a permanent slowdown.</p><p>Over the 25-year period, the region lost 78,600 acres of woodlands, a decrease of 9 percent; and 155,600 acres of agricultural lands, a decrease of 25 percent. Land devoted to single-family homes has increased by 22 percent, or 82,600 acres over the past 25 years. Chester County has developed the fastest over this period, with an additional 52,800 acres of development, an increase of 45 percent; followed by Bucks County, with 41,700 more acres developed, an increase of 34 percent; third is Montgomery County, with 35,400 acres developed, an increase of 24 percent.</p><p>The <em>Connections 2045</em> Plan maintains a goal of permanently preserving 1 million total acres in the region. As of 2016, Greater Philadelphia is nearly 60 percent of the way there, with 591,900 acres preserved. Since DVRPC started tracking protected open space in 2004, the total amount of protected land has increased by 170,000 acres or 40 percent. Over the last 12-years, preserved farmland has increased by 67,400 acres; Non-profit protected lands have increased by 57,700 acres, or 123 percent; and state-owned lands by 23,900 acres, or 12 percent.</p><p>Burlington County has the most protected open space in the region, thanks largely to the Pinelands, with 222,800 acres of preserved land in 2016. Chester County is second with 126,200 preserved acres, and Bucks County is third with 77,700 acres preserved. The region's rural areas account for 64 percent of all permanently protected open space, with 376,000 acres.</p>`
         }
     },
     'Pavement Conditions': {
