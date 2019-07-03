@@ -441,7 +441,12 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: `<p>International flight offerings from Philadelphia International Airport (PHL) indicate how connected our region is to the rest of the world through commerce and leisure activities. Each day, flights from international destinations bring global business travelers to meetings that maintain and expand business opportunities in our region, along with visitors that boost the region’s travel and tourism industry. The growth of direct flights to and from international destinations connects more markets to the region, and the region’s market to the globe.</p>`,
+            what: `<p>The number of PHL direct flight destinations are available for each year since 2009. The chart can toggle between displaying all flights by general geographic region to distinguishing between which flights are seasonal and which are year-round.</p>`,
+            how: `<p>The number of direct international destinations from PHL is back to 2009 levels (40 destinations). The Great Recession caused many companies and families to curtail international travel and the airline industry pulled back on destinations in response. By 2011 destinations were down to 34 but picked up to 38 by 2014. Still destinations dropped further in subsequent years to 33 in 2017, but increase by one in 2018 and then by six in 2019.</p><p>Europe remains the top flight destination, with 23 destinations in 2019. The Carribean (10), Canada (4), Mexico (2) and the Middle East (1) make up less than half the 2019 destinations. Year-round destinations made up 65% of total flights in 2009. They peaked in 2014 at 74% but have since dropped to just 50% in 2019.</p><p>While total destinations have rebounded, the number of seasonal flights may point to a higher share of leisure travel from PHL relative to business. Without a diversity of consistent, year-round destinations, it is harder for businesses in the region to connect to international markets and for businesses abroad to connect with us.</p>`
+        }
     },
     'Housing Activity': {
         file: 'housingActivity.html',
