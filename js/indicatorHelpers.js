@@ -201,8 +201,8 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
             //  create a link to the indicator page that will go on the side bar
             let sideLink = document.createElement('a')
 
-            // get a handle on the necessary info (skip dummy data for now...ugh)
-            const linkTitle = indicator.children[1] ? indicator.children[1].textContent : 'fake'
+            // get a handle on the necessary info
+            const linkTitle = indicator.children[1].textContent
             const indicatorPrimaryCategory = indicator.classList[1]
 
             // update basic info + styling
