@@ -1,6 +1,9 @@
 import { toggleIndicators, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
 
+// get a handle on the click-to-grid button
+const toGrid = document.getElementById('to-grid')
+
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
 const categories = [... document.querySelectorAll('.icon-set')]
@@ -8,6 +11,22 @@ const categories = [... document.querySelectorAll('.icon-set')]
 // get a handle on the indicator page elements
 const back = document.querySelector('.back-to-dash')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
+
+
+/**************************************************/
+/**************** Get to Dashboard ****************/
+toGrid.onclick = e => {
+    e.preventDefault()
+
+    // get grid distance from top in order to go 8px less than that to account for the top margin 
+    const bounds = grid.getBoundingClientRect()
+    const height = bounds.top - 8
+
+    window.scrollTo({
+        top: height,
+        behavior: 'smooth'
+    })
+}
 
 
 /**************************************************/
