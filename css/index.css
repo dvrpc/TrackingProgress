@@ -289,6 +289,8 @@ nav{
 .indicator-subheader{
     text-align: center;
     font-size: 1.3em;
+    width: 90%;
+    margin: 2% auto;
 }
 .indicator-header-hr{
     margin: 1% 0;
@@ -373,16 +375,23 @@ nav{
     color: #75b8c8;
 }
 .toggle-subheader{
-    border-right: 2px solid #141414;
-    padding-right: 1%;
+    width: auto;
+    margin: 2%;
+}
+.toggle-vr {
+    color: #141414;
+    font-size: 1.8em;
+    font-weight: 200;
 }
 .toggle-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 90%;
+    margin: 0 auto;
 }
 .toggle-wrapper p{
-    padding: 0 1%;
+    margin: 0 2%;
     font-size: 1em;
 }
 .double-toggle-form{
@@ -611,6 +620,15 @@ footer{
         padding: 1vh 0;
         overflow-x: auto;
     }
+    #related-indicators-img{
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 20px;
+    }
+    #related-indicators-subheader{
+        font-size: 1em;
+        font-weight: 500;
+    }
     .sideLink{
         padding: 0 2vw;
         font-size: 0.8em;
@@ -620,9 +638,11 @@ footer{
         padding: 0 3%;
         margin: 0 auto;
     }
+    #indicator-header-wrapper{
+        padding: 4% 0;
+    }
     .indicator-header{
-        padding-top: 3%;
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
     .indicator-subheader{
         font-size: 1.1em;
@@ -630,8 +650,11 @@ footer{
     .snippet-categories{
         height: 35px;
     }
-    .indicator-description{
-        width: 90%;
+    #description-wrapper{
+        width: 95%;
+    }
+    #description-wrapper-tabs{
+        font-size: 0.7rem;
     }
     .toggle-wrapper{
         flex-direction: column;
@@ -641,10 +664,14 @@ footer{
         border-right: none;
         padding-right: 0;
     }
+    .toggle-vr {
+        display: none;
+    }
     .data-viz{
         min-height: 300px;
         max-height: 400px;
         width: 95%;
+        margin-top: 5%;
     }
     .nv-legendWrap{
         width: 95vw !important;

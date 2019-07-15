@@ -174,7 +174,7 @@ const makeRelatedSubheader = cat => {
     return `
         <div id="related-indicators-subheader">
             <img id="related-indicators-img" src='./img/sidenav/${cat}.png' alt='${cat} icons' />
-            <h3>Indicators:</h3>
+            <h3 id="related-indicators-subheader">Indicators:</h3>
         </div>
     `
 }
