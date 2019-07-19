@@ -356,7 +356,7 @@ nav{
     text-align: center;
     color: #f7f7f7;
 }
-#related-indicators-subheader{
+#related-indicators-subheader-wrapper{
     font-size: 1.1em;
     display: flex;
     justify-content: center;
@@ -541,7 +541,7 @@ footer{
         flex-direction: column;
     }
     .indicators-nav{
-        height: 10vh;
+        height: 11vh;
         background: white;
         position: sticky;
         top: 0;
@@ -623,11 +623,16 @@ footer{
     #related-indicators-img{
         margin-left: 5px;
         margin-right: 5px;
-        width: 20px;
+        width: 15px;
+    }
+    #related-indicators-subheader-wrapper{
+        flex-direction: column;
+        margin: 0 2vw;
     }
     #related-indicators-subheader{
-        font-size: 1em;
+        font-size: 0.8em;
         font-weight: 500;
+        margin: 2px 0 0 0;
     }
     .sideLink{
         padding: 0 2vw;
@@ -635,20 +640,24 @@ footer{
     }
     .indicators-snippet{
         width: auto;
-        padding: 0 3%;
+        padding: 7% 3% 4% 3%;
         margin: 0 auto;
     }
     #indicator-header-wrapper{
-        padding: 4% 0;
+        padding-bottom: 7%;
+        justify-content: space-between;
+        max-width: 95%;
     }
     .indicator-header{
         font-size: 1.4em;
+        margin: 0;
+        text-align: left;
     }
     .indicator-subheader{
         font-size: 1.1em;
     }
     .snippet-categories{
-        height: 35px;
+        height: 33px;
     }
     #description-wrapper{
         width: 95%;
