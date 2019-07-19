@@ -1316,39 +1316,40 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: './data/roadwayreliabilityTOD.csv',
+                dataSource: './data/roadwayreliablilityTOD_Fwy.csv',
+                secondDataSource: './data/roadwayreliablilityTOD_Local.csv',
                 yAxis: 'singles',
                 columnOptions: [
-                    ['DVRPCFreeAM', 'DVRPCFreeMD', 'DVRPCFreePM', 'DVRPCFreeNT'],
-                    ['PASubCosFreeAM', 'PASubCosFreeMD', 'PASubCosFreePM', 'PASubCosFreeNT'],
-                    ['PACosFreeAM', 'PACosFreeMD', 'PACosFreePM', 'PACosFreeNT'],
-                    ['NJCosFreeAM', 'NJCosFreeMD', 'NJCosFreePM', 'NJCosFreeNT'],
-                    ['BucFreeAM', 'BucFreeMD', 'BucFreePM', 'BucFreeNT'],
-                    ['ChesFreeAM', 'ChesFreeMD', 'ChesFreePM', 'ChesFreeNT'],
-                    ['DelFreeAM', 'DelFreeMD', 'DelFreePM', 'DelFreeNT'],
-                    ['MontFreeAM', 'MontFreeMD', 'MontFreePM', 'MontFreeNT'],
-                    ['BurlFreeAM', 'BurlFreeMD', 'BurlFreePM', 'BurlFreeNT'],
-                    ['CamFreeAM', 'CamFreeMD', 'CamFreePM', 'CamFreeNT'],
-                    ['GloFreeAM', 'GloFreeMD', 'GloFreePM', 'GloFreeNT'],
-                    ['MerFreeAM', 'MerFreeMD', 'MerFreePM', 'MerFreeNT'],
-                    ['PhilFreeAM', 'PhilFreeMD', 'PhilFreePM', 'PhilFreeNT']
+                    ['DVRPCAM', 'DVRPCMD', 'DVRPCPM', 'DVRPCNT'],
+                    ['PASubCosAM', 'PASubCosMD', 'PASubCosPM', 'PASubCosNT'],
+                    ['PACosAM', 'PACosMD', 'PACosPM', 'PACosNT'],
+                    ['NJCosAM', 'NJCosMD', 'NJCosPM', 'NJCosNT'],
+                    ['BucAM', 'BucMD', 'BucPM', 'BucNT'],
+                    ['ChesAM', 'ChesMD', 'ChesPM', 'ChesNT'],
+                    ['DelAM', 'DelMD', 'DelPM', 'DelNT'],
+                    ['MontAM', 'MontMD', 'MontPM', 'MontNT'],
+                    ['BurlAM', 'BurlMD', 'BurlPM', 'BurlNT'],
+                    ['CamAM', 'CamMD', 'CamPM', 'CamNT'],
+                    ['GloAM', 'GloMD', 'GloPM', 'GloNT'],
+                    ['MerAM', 'MerMD', 'MerPM', 'MerNT'],
+                    ['PhilAM', 'PhilMD', 'PhilPM', 'PhilNT']
                 ],
                 data: [
                     {
                         'key': 'AM',
-                        columns: ['year', 'DVRPCFreeAM']
+                        columns: ['Year', 'DVRPCAM']
                     },
                     {
                         'key': 'MD',
-                        columns: ['year', 'DVRPCFreeMD']
+                        columns: ['Year', 'DVRPCMD']
                     },
                     {
                         'key': 'PM',
-                        columns: ['year', 'DVRPCFreePM']
+                        columns: ['Year', 'DVRPCPM']
                     },
                     {
                         'key': 'NT',
-                        columns: ['year', 'DVRPCFreeNT']
+                        columns: ['Year', 'DVRPCNT']
                     }
                 ]
             }
