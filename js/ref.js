@@ -1047,7 +1047,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: './data/IncomeQuintileTopBottomGap.csv',
-                yAxis: 'singles',
+                yAxis: 'percent',
                 columnOptions: [
                     ['Region'],
                     ['PASubCos'],

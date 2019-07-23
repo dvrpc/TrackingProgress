@@ -289,8 +289,6 @@ nav{
 .indicator-subheader{
     text-align: center;
     font-size: 1.3em;
-    width: 90%;
-    margin: 2% auto;
 }
 .indicator-header-hr{
     margin: 1% 0;
@@ -374,14 +372,11 @@ nav{
 .sideLink:hover{
     color: #75b8c8;
 }
-.toggle-subheader{
-    width: auto;
-    margin: 2%;
-}
 .toggle-vr {
     color: #141414;
     font-size: 1.8em;
     font-weight: 200;
+    margin: 0 2%;
 }
 .toggle-wrapper{
     display: flex;
@@ -391,7 +386,7 @@ nav{
     margin: 0 auto;
 }
 .toggle-wrapper p{
-    margin: 0 2%;
+    margin: 0 2% 0 0;
     font-size: 1em;
 }
 .double-toggle-form{
