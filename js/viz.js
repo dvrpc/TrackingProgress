@@ -9,9 +9,10 @@ const formatInpus = (source, doubleToggle) => {
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
     
-    // handle double toggle cases
-    let dataSource = doubleToggle === 0 ? source.dataSource : source.secondDataSource
-
+    // determine which chart to grab from the array of possibilities
+    let chartName = doubleToggle ? source.dataSource[doubleToggle] : source.dataSource[0]
+    const dataSource = `./data/${chartName}.csv`
+    
     return [container, dataSource, source]
 }
 

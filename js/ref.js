@@ -1046,7 +1046,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/IncomeQuintileTopBottomGap.csv',
+                dataSource: ['IncomeQuintileTopBottomGap'],
                 yAxis: 'percent',
                 columnOptions: [
                     ['Region'],
@@ -1072,47 +1072,48 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: './data/IncomeQuintiles.csv',
+                dataSource: ['IncomeQuintilesMean', 'IncomeQuintilesAbs', 'IncomeQuintilesPct']
+                ,
                 columnOptions: [
-                    ['RegionMean_1st', 'RegionMean_2nd', 'RegionMean_3rd', 'RegionMean_4th', 'RegionMean_5th'],
-                    ['PhilCoMean_1st', 'PhilCoMean_2nd', 'PhilCoMean_3rd', 'PhilCoMean_4th', 'PhilCoMean_5th'],
-                    ['NJCosMean_1st', 'NJCosMean_2nd', 'NJCosMean_3rd', 'NJCosMean_4th', 'NJCosMean_5th'],
-                    ['BuckCoMean_1st', 'BuckCoMean_2nd', 'BuckCoMean_3rd', 'BuckCoMean_4th', 'BuckCoMean_5th'],
-                    ['ChesCoMean_1st', 'ChesCoMean_2nd', 'ChesCoMean_3rd', 'ChesCoMean_4th', 'ChesCoMean_5th'],
-                    ['DelCoMean_1st', 'DelCoMean_2nd', 'DelCoMean_3rd', 'DelCoMean_4th', 'DelCoMean_5th'],
-                    ['MontCoMean_1st', 'MontCoMean_2nd', 'MontCoMean_3rd', 'MontCoMean_4th', 'MontCoMean_5th'],
-                    ['BurlCoMean_1st', 'BurlCoMean_2nd', 'BurlCoMean_3rd', 'BurlCoMean_4th', 'BurlCoMean_5th'],
-                    ['CamdCoMean_1st', 'CamdCoMean_2nd', 'CamdCoMean_3rd', 'CamdCoMean_4th', 'CamdCoMean_5th'],
-                    ['GloCoMean_1st', 'GloCoMean_2nd', 'GloCoMean_3rd', 'GloCoMean_4th', 'GloCoMean_5th'],
-                    ['MerCoMean_1st', 'MerCoMean_2nd', 'MerCoMean_3rd', 'MerCoMean_4th', 'MerCoMean_5th']
+                    ['Region_1st', 'Region_2nd', 'Region_3rd', 'Region_4th', 'Region_5th'],
+                    ['PhilCo_1st', 'PhilCo_2nd', 'PhilCo_3rd', 'PhilCo_4th', 'PhilCo_5th'],
+                    ['NJCos_1st', 'NJCos_2nd', 'NJCos_3rd', 'NJCos_4th', 'NJCos_5th'],
+                    ['BuckCo_1st', 'BuckCo_2nd', 'BuckCo_3rd', 'BuckCo_4th', 'BuckCo_5th'],
+                    ['ChesCo_1st', 'ChesCo_2nd', 'ChesCo_3rd', 'ChesCo_4th', 'ChesCo_5th'],
+                    ['DelCo_1st', 'DelCo_2nd', 'DelCo_3rd', 'DelCo_4th', 'DelCo_5th'],
+                    ['MontCo_1st', 'MontCo_2nd', 'MontCo_3rd', 'MontCo_4th', 'MontCo_5th'],
+                    ['BurlCo_1st', 'BurlCo_2nd', 'BurlCo_3rd', 'BurlCo_4th', 'BurlCo_5th'],
+                    ['CamdCo_1st', 'CamdCo_2nd', 'CamdCo_3rd', 'CamdCo_4th', 'CamdCo_5th'],
+                    ['GloCo_1st', 'GloCo_2nd', 'GloCo_3rd', 'GloCo_4th', 'GloCo_5th'],
+                    ['MerCo_1st', 'MerCo_2nd', 'MerCo_3rd', 'MerCo_4th', 'MerCo_5th']
                 ],
                 data: [
                     {
                         'key': '1st Quintile',
-                        columns: ['year', 'RegionMean_1st']
+                        columns: ['Year', 'Region_1st']
                     },
                     {
                         'key': '2nd Quintile',
-                        columns: ['year', 'RegionMean_2nd']
+                        columns: ['Year', 'Region_2nd']
                     },
                     {
                         'key': '3rd Quintile',
-                        columns: ['year', 'RegionMean_3rd']
+                        columns: ['Year', 'Region_3rd']
                     },
                     {
                         'key': '4th Quintile',
-                        columns: ['year', 'RegionMean_4th']
+                        columns: ['Year', 'Region_4th']
                     },
                     {
                         'key': '5th Quintile',
-                        columns: ['year', 'RegionMean_5th']
+                        columns: ['Year', 'Region_5th']
                     }
                 ]
             },
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: './data/IncomeSegregation.csv',
+                dataSource: ['IncomeSegregation'],
                 yAxis: 'percent',
                 data: [
                     {
