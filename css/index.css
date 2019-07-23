@@ -392,9 +392,6 @@ nav{
 .double-toggle-form{
     display: flex;
 }
-.toggle-fieldset{
-    display: flex;
-}
 
 
 /********************************/
@@ -663,6 +660,7 @@ footer{
     .toggle-wrapper{
         flex-direction: column;
         margin: 3% 0;
+        width: auto;
     }
     .toggle-subheader{
         border-right: none;
