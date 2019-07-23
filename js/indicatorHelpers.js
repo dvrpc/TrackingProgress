@@ -35,7 +35,7 @@ const dataVizSwitch = (type, source, doubleToggle) => {
     }
 }
 
-// toggle between charts on an indicator page
+// toggle between charts on an indicator page (params are the selectors and datasets for the given indicator page)
 const toggleChart = (selected, dataSets) => {
     
     // get the component pieces of the toggle ID
@@ -48,7 +48,7 @@ const toggleChart = (selected, dataSets) => {
     let chartNumber = parseInt(selected.options[selected.selectedIndex].value)
 
     // handle double toggle cases:
-    let doubleToggle = 0
+    let doubleToggle;
     
     // handle DIRECT interaction with the second toggle (toggleID.length > 2 means the user has selected the 2nd toggle)
     if(toggleID.length > 2) {

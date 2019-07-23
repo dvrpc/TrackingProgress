@@ -7,7 +7,7 @@ const snippetsRef = {
             {
                 type: 'line and bar',
                 container: 'chart',
-                dataSource: './data/aq_yearly.csv',
+                dataSource: ['aq_yearly'],
                 data: [
                     {
                         'key' : 'Annual',
@@ -27,7 +27,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/aq_quarterly.csv',
+                dataSource: ['aq_quarterly'],
                 columnOptions: [
                     ['unhealthySensitiveOzone', 'unhealthyOzone', 'veryUnhealthyOzone'],
                     ['unhealthySensitivePM', 'unhealthyPM', 'veryUnhealthyPM']
@@ -64,7 +64,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/vmtWeb.csv',
+                dataSource: ['vmtWeb'],
                 columnOptions: [
                     ['vmtPerCapDVRPC', 'vmtPerCapNJSuburbs', 'vmtPerCapAllPACounties', 'vmtPerCapPASuburbs', 'vmtPerCapPhillySubregion', 'vmtPerCapBucksCo', 'vmtPerCapChesterCo', 'vmtPerCapDelawareCo', 'vmtPerCapMontgomeryCo', 'vmtPerCapPhillyCo', 'vmtPerCapBurlingtonCo', 'vmtPerCapCamdenCo', 'vmtPerCapGloucesterCo', 'vmtPerCapMercerCo'],
                     ['vmtDVRPC', 'vmtNJSuburbs', 'vmtAllPACounties', 'vmtPASuburbs', 'vmtPhillySubregion', 'vmtBucksCo', 'vmtChesterCo', 'vmtDelawareCo', 'vmtMontgomeryCo', 'vmtPhillyCo', 'vmtBurlingtonCo', 'vmtCamdenCo', 'vmtGloucesterCo', 'vmtMercerCo'],
@@ -155,7 +155,7 @@ const snippetsRef = {
                 // HS levels 
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/edattainHS.csv',
+                dataSource: ['edattainHS'],
                 yAxis: 'percent',
                 data: [
                     {
@@ -227,7 +227,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/edattainComprehensive.csv',
+                dataSource: ['edattainComprehensive'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC-Less than High School', 'DVRPC-Some High School', 'DVRPC-Graduated High School', 'DVRPC-Some College', 'DVRPC-Associates Degree', 'DVRPC-Bachelors Degree', 'DVRPC-Graduate/Professional Degree'],
@@ -291,7 +291,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar plus line',
                 container: 'chart',
-                dataSource: './data/crashesWeb.csv',
+                dataSource: ['crashesWeb'],
                 columnOptions: [
                     ['ksi5yrAvgDVRPC', 'ksiMotorVehicleDVRPC', 'ksiBikePedDVRPC'],
                     ['ksi5yrAvgPASubregion', 'ksiMotorVehiclePASubregion', 'ksiBikePedPASubregion'],
@@ -330,7 +330,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar plus line',
                 container: 'chart2',
-                dataSource: './data/crashesWeb.csv',
+                dataSource: ['crashesWeb'],
                 yAxis: 'singles',
                 columnOptions: [
                     ['ksiPerCap5yrAvgDVRPC', 'ksiMotorVehiclePerCapDVRPC', 'ksiBikePedPerCapDVRPC'],
@@ -370,7 +370,7 @@ const snippetsRef = {
             {
                 type: 'line and bar',
                 container: 'chart3',
-                dataSource: './data/crashesWeb.csv',
+                dataSource: ['crashesWeb'],
                 columnOptions: [
                     ['ksiPerVMT5yrAvgDVRPC', 'ksiPerVMTDVRPC'],
                     ['ksiPerVMT5yrAvgPhillySubregion', 'ksiPerVMTPhillySubregion'],
@@ -412,7 +412,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart',
-                dataSource: './data/PHL_IntlDest.csv',
+                dataSource: ['PHL_IntlDest'],
                 columnOptions: [
                     ['Middle Eastern', 'Mexican', 'Canadian', 'Caribbean', 'European'],
                     ['Middle Eastern (non-seasonal)', 'Mexican (non-seasonal)', 'Canadian (non-seasonal)', 'Canadian (seasonal)', 'Caribbean (non-seasonal)', 'Caribbean (seasonal)', 'European (non-seasonal)', 'European (seasonal)']
@@ -454,7 +454,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/permits_graph_1.csv',
+                dataSource: ['permits_graph_1'],
                 columnOptions: [
                     ['ratio_annual'],
                     ['ratio_cumulative']
@@ -470,8 +470,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/permits_graph_2A.csv',
-                secondDataSource: './data/permits_graph_2B.csv',
+                dataSource: ['permits_graph_2A','permits_graph_2B'],
                 columnOptions: [
                     ['DVRPC- Core City', 'DVRPC- Developed Community', 'DVRPC- Growing Suburb', 'DVRPC- Rural Area'],
                     ['Chester County- Core City', 'Chester County- Developed Community', 'Chester County- Growing Suburb', 'Chester County- Rural Area'],
@@ -506,8 +505,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: './data/permits_graph_3A.csv',
-                secondDataSource: './data/permits_graph_3B.csv',
+                dataSource: ['permits_graph_3A','permits_graph_3B'],
                 columnOptions: [
                     ['DVRPC- large multi-family', 'DVRPC- small multi-family', 'DVRPC- single family'],
                     ['Core City- large multi-family', 'Core City- small multi-family', 'Core City- single family'],
@@ -550,14 +548,14 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/housing_afford_graph_1.csv',
+                dataSource: ['housing_afford_graph_1'],
                 data: fullGeography,
                 yAxis: 'percent'
             },
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/housing_afford_graph_2.csv',
+                dataSource: ['housing_afford_graph_2'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- Below 35%- Own', 'DVRPC- Below 35%- Rent', 'DVRPC- Above 35%- Rent', 'DVRPC- Above 35%- Own','DVRPC- Not Computed- Own', 'DVRPC- Not Computed- Rent'],
@@ -608,7 +606,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: './data/housing_afford_graph_3.csv',
+                dataSource: ['housing_afford_graph_3'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- 0.0-9.9%', 'DVRPC- 10.0-14.9%', 'DVRPC- 15.0-19.9%', 'DVRPC- 20.0-24.9%', 'DVRPC- 25.0-29.9%', 'DVRPC- 30.0-34.9%', 'DVRPC- 35.0-39.9%', 'DVRPC- 40.0-49.9%', 'DVRPC- 50%+','DVRPC- Not Computed'],
@@ -685,7 +683,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/jobs_graph1.csv',
+                dataSource: ['jobs_graph1'],
                 columnOptions: [
                     ['DVRPC', 'New Jersey Suburbs', 'Pennsylvania Suburbs', 'Philadelphia Subregion', 'Bucks', 'Burlington', 'Camden', 'Chester', 'Delaware', 'Gloucester', 'Mercer', 'Montgomery', 'Philadelphia'],
                     ['DVRPC-total', 'New Jersey Suburbs-total', 'Pennsylvania Suburbs-total', 'Philadelphia Subregion-total', 'Bucks-total', 'Burlington-total', 'Camden-total', 'Chester-total', 'Delaware-total', 'Gloucester-total', 'Mercer-total', 'Montgomery-total', 'Philadelphia-total']
@@ -696,7 +694,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/jobs_graph2.csv',
+                dataSource: ['jobs_graph2'],
                 data: [
                     {
                         'key': 'Bucks County',
@@ -739,7 +737,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: './data/jobs_graph3.csv',
+                dataSource: ['jobs_graph3'],
                 columnOptions: [
                     ['DVRPC- Accommodation and food services', 'DVRPC- Agriculture, forestry, fishing', 'DVRPC- Arts, entertainment, and recreation', 'DVRPC- Construction and manufacturing', 'DVRPC- Educational services', 'DVRPC- Finance, Insurance, and Real Estate', 'DVRPC- Health care and social assistance', 'DVRPC- Industry not classified', 'DVRPC- Information Technology', 'DVRPC- Management of companies and enterprises', 'DVRPC- Mining and utilities', 'DVRPC- Other services (except public administration)', 'DVRPC- Professional, scientific, and technical services', 'DVRPC- Transportation and warehousing', 'DVRPC- Waste management and remediation services', 'DVRPC- Wholesale and retail trade'],
                     ['Philadelphia Subregion- Accommodation and food services', 'Philadelphia Subregion- Agriculture, forestry, fishing', 'Philadelphia Subregion- Arts, entertainment, and recreation', 'Philadelphia Subregion- Construction and manufacturing', 'Philadelphia Subregion- Educational services', 'Philadelphia Subregion- Finance, Insurance, and Real Estate', 'Philadelphia Subregion- Health care and social assistance', 'Philadelphia Subregion- Industry not classified', 'Philadelphia Subregion- Information Technology', 'Philadelphia Subregion- Management of companies and enterprises', 'Philadelphia Subregion- Mining and utilities', 'Philadelphia Subregion- Other services (except public administration)', 'Philadelphia Subregion- Professional, scientific, and technical services', 'Philadelphia Subregion- Transportation and warehousing', 'Philadelphia Subregion- Waste management and remediation services', 'Philadelphia Subregion- Wholesale and retail trade'],
@@ -829,7 +827,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/medIncByRace_wide.csv',
+                dataSource: ['medIncByRace_wide'],
                 data: [
                     {
                         'key': 'DVRPC Region',
@@ -892,7 +890,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: './data/medIncByRace_wide.csv',
+                dataSource: ['medIncByRace_wide'],
                 columnOptions: [
                     ['Region_minorityInc', 'Region_whtNonHispInc'],
                     ['Philadelphia_minorityInc', 'Philadelphia_whtNonHispInc'],
@@ -916,7 +914,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: './data/RaceEthnSegregation.csv',
+                dataSource: ['RaceEthnSegregation'],
                 yAxis: 'percent',
                 data: [
                     {
@@ -928,7 +926,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart4',
-                dataSource: './data/labForceByRace_wide.csv',
+                dataSource: ['labForceByRace_wide'],
                 yAxis: 'singles',
                 columnOptions: [
                     ['Region_difference'],
@@ -954,7 +952,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart5',
-                dataSource: './data/labForceByRace_wide.csv',
+                dataSource: ['labForceByRace_wide'],
                 yAxis: 'singles',
                 columnOptions: [
                     ['Region_labWht', 'Region_labNonWht'],
@@ -984,7 +982,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart6',
-                dataSource: './data/labForceByEth_wide.csv',
+                dataSource: ['labForceByEth_wide'],
                 yAxis: 'singles',
                 columnOptions: [
                     ['Region_difference'],
@@ -1010,7 +1008,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart7',
-                dataSource: './data/labForceByEth_wide.csv',
+                dataSource: ['labForceByEth_wide'],
                 yAxis: 'singles',
                 columnOptions: [
                     ['Region_labWht', 'Region_labHisp'],
@@ -1046,8 +1044,8 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/IncomeQuintileTopBottomGap.csv',
-                yAxis: 'singles',
+                dataSource: ['IncomeQuintileTopBottomGap'],
+                yAxis: 'percent',
                 columnOptions: [
                     ['Region'],
                     ['PASubCos'],
@@ -1072,47 +1070,48 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: './data/IncomeQuintiles.csv',
+                dataSource: ['IncomeQuintilesMean', 'IncomeQuintilesAbs', 'IncomeQuintilesPct']
+                ,
                 columnOptions: [
-                    ['RegionMean_1st', 'RegionMean_2nd', 'RegionMean_3rd', 'RegionMean_4th', 'RegionMean_5th'],
-                    ['PhilCoMean_1st', 'PhilCoMean_2nd', 'PhilCoMean_3rd', 'PhilCoMean_4th', 'PhilCoMean_5th'],
-                    ['NJCosMean_1st', 'NJCosMean_2nd', 'NJCosMean_3rd', 'NJCosMean_4th', 'NJCosMean_5th'],
-                    ['BuckCoMean_1st', 'BuckCoMean_2nd', 'BuckCoMean_3rd', 'BuckCoMean_4th', 'BuckCoMean_5th'],
-                    ['ChesCoMean_1st', 'ChesCoMean_2nd', 'ChesCoMean_3rd', 'ChesCoMean_4th', 'ChesCoMean_5th'],
-                    ['DelCoMean_1st', 'DelCoMean_2nd', 'DelCoMean_3rd', 'DelCoMean_4th', 'DelCoMean_5th'],
-                    ['MontCoMean_1st', 'MontCoMean_2nd', 'MontCoMean_3rd', 'MontCoMean_4th', 'MontCoMean_5th'],
-                    ['BurlCoMean_1st', 'BurlCoMean_2nd', 'BurlCoMean_3rd', 'BurlCoMean_4th', 'BurlCoMean_5th'],
-                    ['CamdCoMean_1st', 'CamdCoMean_2nd', 'CamdCoMean_3rd', 'CamdCoMean_4th', 'CamdCoMean_5th'],
-                    ['GloCoMean_1st', 'GloCoMean_2nd', 'GloCoMean_3rd', 'GloCoMean_4th', 'GloCoMean_5th'],
-                    ['MerCoMean_1st', 'MerCoMean_2nd', 'MerCoMean_3rd', 'MerCoMean_4th', 'MerCoMean_5th']
+                    ['Region_1st', 'Region_2nd', 'Region_3rd', 'Region_4th', 'Region_5th'],
+                    ['PhilCo_1st', 'PhilCo_2nd', 'PhilCo_3rd', 'PhilCo_4th', 'PhilCo_5th'],
+                    ['NJCos_1st', 'NJCos_2nd', 'NJCos_3rd', 'NJCos_4th', 'NJCos_5th'],
+                    ['BuckCo_1st', 'BuckCo_2nd', 'BuckCo_3rd', 'BuckCo_4th', 'BuckCo_5th'],
+                    ['ChesCo_1st', 'ChesCo_2nd', 'ChesCo_3rd', 'ChesCo_4th', 'ChesCo_5th'],
+                    ['DelCo_1st', 'DelCo_2nd', 'DelCo_3rd', 'DelCo_4th', 'DelCo_5th'],
+                    ['MontCo_1st', 'MontCo_2nd', 'MontCo_3rd', 'MontCo_4th', 'MontCo_5th'],
+                    ['BurlCo_1st', 'BurlCo_2nd', 'BurlCo_3rd', 'BurlCo_4th', 'BurlCo_5th'],
+                    ['CamdCo_1st', 'CamdCo_2nd', 'CamdCo_3rd', 'CamdCo_4th', 'CamdCo_5th'],
+                    ['GloCo_1st', 'GloCo_2nd', 'GloCo_3rd', 'GloCo_4th', 'GloCo_5th'],
+                    ['MerCo_1st', 'MerCo_2nd', 'MerCo_3rd', 'MerCo_4th', 'MerCo_5th']
                 ],
                 data: [
                     {
                         'key': '1st Quintile',
-                        columns: ['year', 'RegionMean_1st']
+                        columns: ['Year', 'Region_1st']
                     },
                     {
                         'key': '2nd Quintile',
-                        columns: ['year', 'RegionMean_2nd']
+                        columns: ['Year', 'Region_2nd']
                     },
                     {
                         'key': '3rd Quintile',
-                        columns: ['year', 'RegionMean_3rd']
+                        columns: ['Year', 'Region_3rd']
                     },
                     {
                         'key': '4th Quintile',
-                        columns: ['year', 'RegionMean_4th']
+                        columns: ['Year', 'Region_4th']
                     },
                     {
                         'key': '5th Quintile',
-                        columns: ['year', 'RegionMean_5th']
+                        columns: ['Year', 'Region_5th']
                     }
                 ]
             },
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: './data/IncomeSegregation.csv',
+                dataSource: ['IncomeSegregation'],
                 yAxis: 'percent',
                 data: [
                     {
@@ -1129,7 +1128,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/sexInc_wide.csv',
+                dataSource: ['sexInc_wide'],
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -1152,7 +1151,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: './data/sexInc_wide.csv',
+                dataSource: ['sexInc_wide'],
                 columnOptions: [
                     ['Region_FemaleMed', 'Region_MaleMed'],
                     ['NJ Suburban Counties_FemaleMed', 'NJ Suburban Counties_MaleMed'],
@@ -1179,7 +1178,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: './data/labForceBySex_wide.csv',
+                dataSource: ['labForceBySex_wide'],
                 yAxis: 'singles',
                 columnOptions: [
                     ['Region_difference'],
@@ -1205,7 +1204,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart4',
-                dataSource: './data/labForceBySex_wide.csv',
+                dataSource: ['labForceBySex_wide'],
                 yAxis: 'singles',
                 columnOptions: [
                     ['Region_labMl', 'Region_labFm'],
@@ -1240,7 +1239,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/roadwayreliability24.csv',
+                dataSource: ['roadwayreliability24'],
                 yAxis: 'singles',
                 columnOptions: [
                     ['DVRPCFree24', 'PASubCosFree24', 'PACosFree24', 'NJCosFree24', 'BucFree24', 'ChesFree24', 'DelFree24', 'MontFree24', 'BurlFree24', 'CamFree24', 'GloFree24', 'MerFree24', 'PhilFree24'],
@@ -1316,8 +1315,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: './data/roadwayreliablilityTOD_Fwy.csv',
-                secondDataSource: './data/roadwayreliablilityTOD_Local.csv',
+                dataSource: ['roadwayreliablilityTOD_Fwy', 'roadwayreliablilityTOD_Local'],
                 yAxis: 'singles',
                 columnOptions: [
                     ['DVRPCAM', 'DVRPCMD', 'DVRPCPM', 'DVRPCNT'],
@@ -1366,7 +1364,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/Exports.csv',
+                dataSource: ['Exports'],
                 data: [
                     {
                         'key': 'DVRPC',
@@ -1447,8 +1445,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/ResNonSOV.csv',
-                secondDataSource: './data/WorkNonSOV.csv',
+                dataSource: ['ResNonSOV','WorkNonSOV'],
                 yAxis: 'percent',
                 columnOptions: [
                     ['DVRPCSOV', 'DVRPCNonSOV'],
@@ -1478,8 +1475,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: './data/ResNonSOV_multi.csv',
-                secondDataSource: './data/WorkNonSOV_multi.csv',
+                dataSource: ['ResNonSOV_multi','WorkNonSOV_multi'],
                 yAxis: 'percent',
                 columnOptions: [
                     ['DVRPCPool', 'DVRPCTransit', 'DVRPCWalk', 'DVRPCBike', 'DVRPCTMO', 'DVRPCWFH', 'DVRPCBus', 'DVRPCRail', 'DVRPCSubw', 'DVRPCTroll', 'DVRPCFerry',  'DVRPCMcyc', 'DVRPCOther', 'DVRPCTaxi'],
@@ -1575,7 +1571,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/transit_ridership_graph_1.csv',
+                dataSource: ['transit_ridership_graph_1'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['unlinkedTrips'],
@@ -1591,7 +1587,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: './data/transit_ridership_graph_2.csv',
+                dataSource: ['transit_ridership_graph_2'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['Bus', 'Commuter Rail', 'Light Rail', 'Non-Scheduled Services', 'Subway', 'Trolleybus'],
@@ -1627,7 +1623,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: './data/transit_ridership_graph_3.csv',
+                dataSource: ['transit_ridership_graph_3'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['New Jersey Transit', 'PATCO', 'Pottstown Area Rapid Transit', 'SEPTA'],
@@ -1665,7 +1661,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/emissions_1.csv',
+                dataSource: ['emissions_1'],
                 columnOptions: [
                     ['emissions_total'],
                     ['emissions_per_capita']
@@ -1680,7 +1676,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/emissions_2.csv',
+                dataSource: ['emissions_2'],
                 data: [
                     {
                         'key': 'Residential mmt co2e',
@@ -1703,7 +1699,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: './data/emissions_3.csv',
+                dataSource: ['emissions_3'],
                 data: [
                     {
                         'key': 'Coal',
@@ -1747,7 +1743,7 @@ const snippetsRef = {
                 type: 'line and scatter',
                 container: 'chart4',
                 newKeys: true,
-                dataSource: './data/emissions_4.csv',
+                dataSource: ['emissions_4'],
                 columnOptions: [
                     ['Temperature - Farenheit', '30 year trend - Temperature'],
                     ['Precipitation', '30 year trend - Precipitation'],
@@ -1781,7 +1777,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/transit_conditions_graph_1.csv',
+                dataSource: ['transit_conditions_graph_1'],
                 columnOptions: [
                     ['All Agencies- All Vehicles', 'All Agencies- Buses', 'All Agencies- Rail Vehicles'],
                     ['NJ Transit- All Vehicles', 'NJ Transit- Buses', 'NJ Transit- Rail Vehicles'],
@@ -1807,7 +1803,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/transit_conditions_graph_2.csv',
+                dataSource: ['transit_conditions_graph_2'],
                 columnOptions: [
                     [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
                     [ 'NJ Transit- age_0_5', 'NJ Transit- age_6_11', 'NJ Transit- age_12_15', 'NJ Transit- age_16_20', 'NJ Transit- age_21_25', 'NJ Transit- age_25over'],
@@ -1844,7 +1840,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: './data/transit_conditions_graph_3.csv',
+                dataSource: ['transit_conditions_graph_3'],
                 columnOptions: [
                     [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
                     [ 'NJ Transit- age_0_5', 'NJ Transit- age_6_11', 'NJ Transit- age_12_15', 'NJ Transit- age_16_20', 'NJ Transit- age_21_25', 'NJ Transit- age_25over'],
@@ -1886,7 +1882,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/patents.csv',
+                dataSource: ['patents'],
                 data: [
                     {
                         'key': 'Patent Approvals',
@@ -1907,7 +1903,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/popGrowth.csv',
+                dataSource: ['popGrowth'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
@@ -1999,7 +1995,7 @@ const snippetsRef = {
             {
                 type: 'waterfall',
                 container: 'chart2',
-                dataSource: './data/pop_comp_change.csv',
+                dataSource: ['pop_comp_change'],
                 columnOptions: [
                     ['Burlington'],
                     ['Camden'],
@@ -2020,8 +2016,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: './data/pop_age_change.csv',
-                secondDataSource: './data/pop_age_totals.csv',
+                dataSource: ['pop_age_change','pop_age_totals'],
                 columnOptions: [
                     ['DVRPC_<20','DVRPC_20-34','DVRPC_35-49','DVRPC_50-64','DVRPC_65+'],
                     ['PASub_<20','PASub_20-34','PASub_35-49','PASub_50-64','PASub_65+'],
@@ -2062,9 +2057,8 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart4',
-                dataSource: './data/pop_race_change.csv',
+                dataSource: ['pop_race_change','pop_race_totals'],
                 yAxis: 'millions',
-                secondDataSource: './data/pop_race_totals.csv',
                 columnOptions: [
                     ['DVRPC_WA','DVRPC_BA','DVRPC_IA','DVRPC_AA','DVRPC_NA','DVRPC_TOM'],
                     ['PASub_WA','PASub_BA','PASub_IA','PASub_AA','PASub_NA','PASub_TOM'],
@@ -2109,8 +2103,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart5',
-                dataSource: './data/pop_hisp_change.csv',
-                secondDataSource: './data/pop_hisp_totals.csv',
+                dataSource: ['pop_hisp_change','pop_hisp_totals'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC_NH','DVRPC_H'],
@@ -2145,8 +2138,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart',
-                dataSource: './data/Bridge_Conditions_1A.csv',
-                secondDataSource: './data/Bridge_Conditions_1B.csv',
+                dataSource: ['Bridge_Conditions_1A','Bridge_Conditions_1B'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
@@ -2180,7 +2172,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/Bridge_Conditions_2.csv',
+                dataSource: ['Bridge_Conditions_2'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
@@ -2218,7 +2210,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: './data/Bridge_Conditions_3.csv',
+                dataSource: ['Bridge_Conditions_3'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
@@ -2266,7 +2258,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/water_quality_1.csv',
+                dataSource: ['water_quality_1'],
                 yAxis: 'percent',
                 data: [
                     {
@@ -2286,7 +2278,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/water_quality_2.csv',
+                dataSource: ['water_quality_2'],
                 data: [
                     {
                         'key': 'Supporting (miles)',
@@ -2305,7 +2297,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: './data/water_quality_3.csv',
+                dataSource: [['water_quality_3']],
                 yAxis: 'millions',
                 data: [
                     {
@@ -2335,7 +2327,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/landConsumption1.csv',
+                dataSource: ['landConsumption1'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['Total Developed Acres- DVRPC','Total Developed Acres- NJ Suburbs','Total Developed Acres- PA Suburbs','Total Developed Acres- Core City','Total Developed Acres- Developed Community','Total Developed Acres- Growing Suburb','Total Developed Acres- Rural Area','Total Developed Acres- Bucks','Total Developed Acres- Burlington','Total Developed Acres- Camden','Total Developed Acres- Chester','Total Developed Acres- Delaware','Total Developed Acres- Gloucester','Total Developed Acres- Mercer','Total Developed Acres- Montgomery','Total Developed Acres- Philadelphia'],
@@ -2413,7 +2405,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: './data/landConsumption2.csv',
+                dataSource: ['landConsumption2'],
                 yAxis: 'millions',
                 columnOptions: [
                     ['DVRPC- agricultural','DVRPC- comm_services','DVRPC- commercial','DVRPC- industrial','DVRPC- military','DVRPC- mining','DVRPC- multi_fam','DVRPC- recreation','DVRPC- single_fam','DVRPC- transportation','DVRPC- utility','DVRPC- vacant','DVRPC- water','DVRPC- wooded'],
@@ -2495,7 +2487,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: './data/landConsumption3.csv',
+                dataSource: ['landConsumption3'],
                 columnOptions: [
                     ['DVRPC- Total Acres','NJ Suburbs- Total Acres','PA Suburbs- Total Acres','Core City- Total Acres','Developed Community- Total Acres','Growing Suburb- Total Acres','Rural Area- Total Acres','Bucks- Total Acres','Burlington- Total Acres','Camden- Total Acres','Chester- Total Acres','Delaware- Total Acres','Gloucester- Total Acres','Mercer- Total Acres','Montgomery- Total Acres','Philadelphia- Total Acres'],
                     ['DVRPC- Total Percent','NJ Suburbs- Total Percent','PA Suburbs- Total Percent','Core City- Total Percent','Developed Community- Total Percent','Growing Suburb- Total Percent','Rural Area- Total Percent','Bucks- Total Percent','Burlington- Total Percent','Camden- Total Percent','Chester- Total Percent','Delaware- Total Percent','Gloucester- Total Percent','Mercer- Total Percent','Montgomery- Total Percent','Philadelphia- Total Percent'],
@@ -2574,7 +2566,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart4',
-                dataSource: './data/landConsumption4.csv',
+                dataSource: ['landConsumption4'],
                 columnOptions: [
                     ['DVRPC- Federal','DVRPC- State','DVRPC- County','DVRPC- Municipal','DVRPC- Non-profit','DVRPC- Preserved Farmland'],
                     ['PA Suburbs- Federal','PA Suburbs- State','PA Suburbs- County','PA Suburbs- Municipal','PA Suburbs- Non-profit','PA Suburbs- Preserved Farmland'],
@@ -2633,7 +2625,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: './data/pavement_graph_1.csv',
+                dataSource: [['pavement_graph_1']],
                 yAxis: 'percent',
                 data: [
                     {
