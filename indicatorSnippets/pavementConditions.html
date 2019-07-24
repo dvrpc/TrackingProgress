@@ -18,7 +18,22 @@
 
     <hr class="indicator-header-hr"/>
 
-    <h2 class="indicator-subheader">Percent of Pavement in Deficient Condition</h2>
+    <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">Percent of Pavement in Deficient Condition</h2>
+        <span class="toggle-vr">|</span>
+        <p>toggle data:</p>
+        <form>
+            <fieldset>
+                <select id="viz-0" class="toggle-data-selector">
+                    <option value="0">All Roads</option>
+                    <option value="1">Interstate</option>
+                    <option value="2">NHS, non-interstate</option>
+                    <option value="3">Non-NHS, &#60;2000 ADT</option>
+                    <option value="4">Non-NHS, &#62;= 2000 ADT</option>
+                </select>
+            </fieldset>
+        </form>
+    </div>
     <div class="data-viz chart">
         <svg></svg>
     </div>

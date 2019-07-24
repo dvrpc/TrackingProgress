@@ -2626,68 +2626,27 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['pavement_graph_1'],
+                columnOptions: [
+                    ['DVRPC- All', 'New Jersey- All', 'Pennsylvania- All'],
+                    ['DVRPC- Interstate', 'New Jersey- Interstate', 'Pennsylvania- Interstate'],
+                    ['DVRPC- NHS, non-interstate', 'New Jersey- NHS, non-interstate', 'Pennsylvania- NHS, non-interstate'],
+                    ['DVRPC- Non-NHS, < 2000 ADT', 'New Jersey- Non-NHS, < 2000 ADT', 'Pennsylvania- Non-NHS, < 2000 ADT'],
+                    ['DVRPC- Non-NHS, >= 2000 ADT', 'New Jersey- Non-NHS, >= 2000 ADT', 'Pennsylvania- Non-NHS, >= 2000 ADT'],
+                ],
                 yAxis: 'percent',
                 data: [
                     {
-                        'key': 'DVRPC- All',
+                        'key': 'DVRPC',
                         columns: ['year', 'DVRPC- All']
                     },
                     {
-                        'key': 'DVRPC- Interstate',
-                        columns: ['year', 'DVRPC- Interstate']
-                    },
-                    {
-                        'key': 'DVRPC- NHS, Non-Interstate',
-                        columns: ['year', 'DVRPC- NHS, non-interstate']
-                    },
-                    {
-                        'key': 'DVRPC- Non-NHS, < 2000 ADT',
-                        columns: ['year', 'DVRPC- Non-NHS, < 2000 ADT']
-                    },
-                    {
-                        'key': 'DVRPC- Non-NHS, >= 2000 ADT',
-                        columns: ['year', 'DVRPC- Non-NHS, >= 2000 ADT']
-                    },
-                    {
-                        'key': 'New Jersey- All',
+                        'key': 'New Jersey',
                         columns: ['year', 'New Jersey- All']
                     },
                     {
-                        'key': 'New Jersey- Interstate',
-                        columns: ['year', 'New Jersey- Interstate']
-                    },
-                    {
-                        'key': 'New Jersey- NHS, Non-Interstate',
-                        columns: ['year', 'New Jersey- NHS, non-interstate']
-                    },
-                    {
-                        'key': 'New Jersey- Non-NHS, < 2000 ADT',
-                        columns: ['year', 'New Jersey- Non-NHS, < 2000 ADT']
-                    },
-                    {
-                        'key': 'New Jersey- Non-NHS, >= 2000 ADT',
-                        columns: ['year', 'New Jersey- Non-NHS, >= 2000 ADT']
-                    },
-                    {
-                        'key': 'Pennsylvania- All',
+                        'key': 'Penssylvania',
                         columns: ['year', 'Pennsylvania- All']
-                    },
-                    {
-                        'key': 'Pennsylvania- Interstate',
-                        columns: ['year', 'Pennsylvania- Interstate']
-                    },
-                    {
-                        'key': 'Pennsylvania- NHS, Non-Interstate',
-                        columns: ['year', 'Pennsylvania- NHS, non-interstate']
-                    },
-                    {
-                        'key': 'Pennsylvania- Non-NHS, < 2000 ADT',
-                        columns: ['year', 'Pennsylvania- Non-NHS, < 2000 ADT']
-                    },
-                    {
-                        'key': 'Pennsylvania- Non-NHS, >= 2000 ADT',
-                        columns: ['year', 'Pennsylvania- Non-NHS, >= 2000 ADT']
-                    },
+                    }
                 ]
             }
         ],
