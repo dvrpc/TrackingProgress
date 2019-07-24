@@ -1128,23 +1128,23 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['sexInc_wide'],
+                dataSource: ['sexInc_wide_difference', 'sexInc_wide_ratio'],
                 columnOptions: [
-                    ['Region_difference'],
-                    ['NJ Suburban Counties_difference'],
-                    ['Bucks_difference'],
-                    ['Chester_difference'],
-                    ['Delaware_difference'],
-                    ['Montgomery_difference'],
-                    ['Burlington_difference'],
-                    ['Camden_difference'],
-                    ['Gloucester_difference'],
-                    ['Mercer_difference']
+                    ['Region'],
+                    ['NJ Suburban Counties'],
+                    ['Bucks'],
+                    ['Chester'],
+                    ['Delaware'],
+                    ['Montgomery'],
+                    ['Burlington'],
+                    ['Camden'],
+                    ['Gloucester'],
+                    ['Mercer']
                 ],
                 data: [
                     {
                         'key': 'Difference',
-                        columns: ['year', 'Region_difference']
+                        columns: ['year', 'Region']
                     }
                 ]
             },
@@ -2625,7 +2625,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: [['pavement_graph_1']],
+                dataSource: ['pavement_graph_1'],
                 yAxis: 'percent',
                 data: [
                     {

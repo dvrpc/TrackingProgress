@@ -8,14 +8,15 @@ const snippets = [
     'bridgeConditions',
     'commuteMode',
     'educationalAttainment',
+    'emissions',
     'exports',
     'globalConnectivity',
-    'highwayCongestion',
     'housingActivity',
     'housingAffordability',
     'incomeDisparities',
+    'innovation',
     'jobGrowth',
-    'landPreservation',
+    'landConsumption',
     'milesDriven',
     'populationGrowth',
     'racialAndEthnicDisparities',
@@ -23,7 +24,8 @@ const snippets = [
     'roadwaySafety',
     'sexDisparities',
     'transitConditions',
-    'transitRidership'
+    'transitRidership',
+    'waterQuality'
 ]
 
 // configure snippets
