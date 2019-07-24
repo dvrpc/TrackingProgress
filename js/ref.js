@@ -2648,6 +2648,30 @@ const snippetsRef = {
                         columns: ['year', 'Pennsylvania- All']
                     }
                 ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: ['pavement_2_all', 'pavement_2_interstate', 'pavement_2_NHS', 'pavement_2_NoNHS', 'pavement_2_NoNHS2000'],
+                columnOptions: [
+                    ['DVRPC- Poor', 'DVRPC- Fair', 'DVRPC- Good'],
+                    ['New Jersey- Poor', 'New Jersey- Fair', 'New Jersey- Good'],
+                    ['Pennsylvania- Poor', 'Pennsylvania- Fair', 'Pennsylvania- Good']
+                ],
+                data: [
+                    {
+                        'key': 'Poor',
+                        columns: ['year', 'DVRPC- Poor']
+                    },
+                    {
+                        'key': 'Fair',
+                        columns: ['year', 'DVRPC- Fair']
+                    },
+                    {
+                        'key': 'Good',
+                        columns: ['year', 'DVRPC- Good']
+                    }
+                ]
             }
         ],
         text: {

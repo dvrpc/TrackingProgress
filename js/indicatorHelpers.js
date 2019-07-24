@@ -47,32 +47,40 @@ const toggleChart = (selected, dataSets) => {
     // get chart # from the selected option
     let chartNumber = parseInt(selected.options[selected.selectedIndex].value)
 
-    // handle double toggle cases:
+    // handle double toggle cases: 
+        // doubleToggle is the state of the second toggle and is used to determine which data csv should be loaded
+        // firstToggleValue is the state of the first toggle and is used to get the correct column names when the 2nd toggle is set and the 1st is changing
     let doubleToggle;
+    let useFirstToggle;
     
     // handle DIRECT interaction with the second toggle (toggleID.length > 2 means the user has selected the 2nd toggle)
     if(toggleID.length > 2) {
         doubleToggle = chartNumber
 
-    // handle possible INDIRECT interaction with the second toggle (user hasn't selected the 2nd toggle but its state still needs to be captured)
+        const firstToggle = selected.parentElement.previousElementSibling.children[0]
+
+        // grab the state of the first toggle to make sure the correct columns are being assigned to newColumns
+        useFirstToggle = firstToggle.options[firstToggle.selectedIndex].value
+
+    // handle possible INDIRECT interaction with the second toggle (user hasn't selected the 2nd toggle but its state still needs to be captured in case it's data set needs to be used)
     }else {
         // get a handle on the double toggle <select> (if it exists)
         const hasDoubleToggle = selected.parentElement.nextElementSibling || selected.parentElement.previousElementSibling
 
-        // if the chart has a double toggle, get the value of the 2nd toggle to pass on to viz.js functions
+        // if the chart has a double toggle, get the value of the 2nd toggle to pass on to viz.js functions to determine which data csv to use
         if(hasDoubleToggle){
             const doubleToggleSelect = hasDoubleToggle.children[0]
             doubleToggle = parseInt(doubleToggleSelect.options[doubleToggleSelect.selectedIndex].value)
         }
     }
 
-    // get a handle on the names of the new columns to read from
-    // Double Toggle Cases dont need mroe work here b/c the column names are the same - just different data.
-    let newColumns = dataSets[setNumber].columnOptions[chartNumber]
+    // Determine which columns of data to grab. Handle double toggle cases:
+        // if a user has direct interaction with a double toggle, use the state of the first toggle to determine column names
+        // otherwise chartNumber which is already the state of the first toggle so use that
+    let newColumns = useFirstToggle ? dataSets[setNumber].columnOptions[useFirstToggle] : dataSets[setNumber].columnOptions[chartNumber]
 
     // replace the y-axis columns with the newly selected columns
-    // if selected columnOptions.length === datasets[setNumber].data do a wholesale re-assignment of data
-    if(newColumns.length != dataSets[setNumber].data.length){
+    if(newColumns && newColumns.length != dataSets[setNumber].data.length){
         
         // grab a reference to the xValue name
         let xVal = dataSets[setNumber].data[0].columns[0]
@@ -90,12 +98,12 @@ const toggleChart = (selected, dataSets) => {
         })
     }
     // otherwise just update the columns (and key names if necessary)
-    else{
+    else {
         let newKeys = dataSets[setNumber].newKeys ? true : false
 
         dataSets[setNumber].data.forEach((series, index) => {
             if(newKeys) series.key = series.originalKey = newColumns[index]
-            series.columns[1] = newColumns[index]
+            series.columns[1] = newColumns[index] || index
         })
     }
 
