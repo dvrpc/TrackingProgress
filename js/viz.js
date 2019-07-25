@@ -1,6 +1,7 @@
 /************************************************************************************/
 /************************ D3 Content for Indicators *********************************/
 /************************************************************************************/
+
 // input helper function
 const formatInpus = (source, doubleToggle) => {
     // the name of the div containing the svg for d3 to paint on
@@ -14,6 +15,19 @@ const formatInpus = (source, doubleToggle) => {
     const dataSource = `./data/${chartName}.csv`
     
     return [container, dataSource, source]
+}
+
+// labelling helper function 
+const formatLabels = (axis, margin, units, label) => {
+    units ? axis.tickFormat(d3.format(axisFormats[source.yAxisUnits])) : axis.tickFormat(d3.format('.3n'))
+            
+    // add axis label & update margin to compensate
+    if(label) {
+        axis.axisLabel(label)
+
+        // axis label font size is 12, so add 14 to margin 
+        margin.left += 14
+    }
 }
 
 // Y-axis formatting lookup table
@@ -48,9 +62,9 @@ const createStackedBarChart = (source, doubleToggle) => {
                 .clipEdge(true)
                 .stacked(true)
 
-            source.yAxisUnits ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxisUnits])) : chart.yAxis.tickFormat(d3.format('.3n'))
-            if(source.axisLabel) chart.yAxis.axisLabel(source.axisLabel)
-    
+            // format yAxis units and labels if necessary
+            formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
+
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
             nv.utils.windowResize(chart.update)
@@ -111,10 +125,8 @@ const createLineChart = (source, doubleToggle) => {
                 .x(d => d[0])
                 .y((d, i) => d[1])
 
-
-            // format y-axis for large numbers
-            source.yAxisUnits ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxisUnits])): chart.yAxis.tickFormat(d3.format(',.0f'))
-            if(source.axisLabel) chart.yAxis.axisLabel(source.axisLabel)
+            // format yAxis units and labels if necessary
+            formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -152,6 +164,9 @@ const createLineAndScatterChart = (source, doubleToggle) => {
                 .margin({top: 35, right: 65, bottom: 35, left: 55})
                 // @TODO: calculate a max instead of just using 65
                 .yDomain1([0, 65])
+
+            // format yAxis units and labels if necessary
+            formatLabels(chart.yAxis1, chart.margin(), source.yAxisUnits, source.axisLabel)
 
             chart.yAxis1.tickFormat(d3.format(','))
             
@@ -191,7 +206,6 @@ const createStackedAreaChart = (source, doubleToggle) => {
                 .showControls(false)
                 // use the style method to set the default to expand
                 .style('expand')
-
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 

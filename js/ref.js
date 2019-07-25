@@ -1677,21 +1677,22 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['emissions_2'],
+                axisLabel: 'mmt co2e',
                 data: [
                     {
-                        'key': 'Residential mmt co2e',
+                        'key': 'Residential',
                         columns: ['year', 'residential']
                     },
                     {
-                        'key': 'Commercial/Industrial mmt co2e',
+                        'key': 'Commercial/Industrial',
                         columns: ['year', 'commercial_industrial']
                     },
                     {
-                        'key': 'Transportation mmt co2e',
+                        'key': 'Transportation',
                         columns: ['year', 'transportation']
                     },
                     {
-                        'key': 'Other mmt co2e',
+                        'key': 'Other',
                         columns: ['year', 'other']
                     }
                 ]
@@ -1744,6 +1745,7 @@ const snippetsRef = {
                 container: 'chart4',
                 newKeys: true,
                 dataSource: ['emissions_4'],
+                axisLabel: 'Degrees Farenheit',
                 columnOptions: [
                     ['Temperature - Farenheit', '30 year trend - Temperature'],
                     ['Precipitation', '30 year trend - Precipitation'],
@@ -1751,7 +1753,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Temperature - Farenheit',
+                        'key': 'Temperature',
                         columns: ['year', 'Temperature - Farenheit'],
                         type: 'scatter',
                         yAxis: 1
