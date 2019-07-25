@@ -156,7 +156,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['edattainHS'],
-                yAxis: 'percent',
+                yAxisUnits: 'percent',
                 data: [
                     {
                         'key': 'DVRPC',
@@ -228,7 +228,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['edattainComprehensive'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['DVRPC-Less than High School', 'DVRPC-Some High School', 'DVRPC-Graduated High School', 'DVRPC-Some College', 'DVRPC-Associates Degree', 'DVRPC-Bachelors Degree', 'DVRPC-Graduate/Professional Degree'],
                     ['Philadelphia Subregion-Less than High School', 'Philadelphia Subregion-Some High School', 'Philadelphia Subregion-Graduated High School', 'Philadelphia Subregion-Some College', 'Philadelphia Subregion-Associates Degree', 'Philadelphia Subregion-Bachelors Degree', 'Philadelphia Subregion-Graduate/Professional Degree'],
@@ -331,7 +331,7 @@ const snippetsRef = {
                 type: 'stacked bar plus line',
                 container: 'chart2',
                 dataSource: ['crashesWeb'],
-                yAxis: 'singles',
+                yAxisUnits: 'singles',
                 columnOptions: [
                     ['ksiPerCap5yrAvgDVRPC', 'ksiMotorVehiclePerCapDVRPC', 'ksiBikePedPerCapDVRPC'],
                     ['ksiPerCap5yrAvgPhillySubregion', 'ksiMotorVehiclePerCapPhillySubregion', 'ksiBikePedPerCapPhillySubregion'],
@@ -550,13 +550,13 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['housing_afford_graph_1'],
                 data: fullGeography,
-                yAxis: 'percent'
+                yAxisUnits: 'percent'
             },
             {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['housing_afford_graph_2'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['DVRPC- Below 35%- Own', 'DVRPC- Below 35%- Rent', 'DVRPC- Above 35%- Rent', 'DVRPC- Above 35%- Own','DVRPC- Not Computed- Own', 'DVRPC- Not Computed- Rent'],
                     ['Pennsylvania Suburbs- Below 35%- Own', 'Pennsylvania Suburbs- Below 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Own','Pennsylvania Suburbs- Not Computed- Own', 'Pennsylvania Suburbs- Not Computed- Rent'],
@@ -607,7 +607,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: ['housing_afford_graph_3'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['DVRPC- 0.0-9.9%', 'DVRPC- 10.0-14.9%', 'DVRPC- 15.0-19.9%', 'DVRPC- 20.0-24.9%', 'DVRPC- 25.0-29.9%', 'DVRPC- 30.0-34.9%', 'DVRPC- 35.0-39.9%', 'DVRPC- 40.0-49.9%', 'DVRPC- 50%+','DVRPC- Not Computed'],
                     ['Pennsylvania Suburbs- 0.0-9.9%', 'Pennsylvania Suburbs- 10.0-14.9%', 'Pennsylvania Suburbs- 15.0-19.9%', 'Pennsylvania Suburbs- 20.0-24.9%', 'Pennsylvania Suburbs- 25.0-29.9%', 'Pennsylvania Suburbs- 30.0-34.9%', 'Pennsylvania Suburbs- 35.0-39.9%', 'Pennsylvania Suburbs- 40.0-49.9%', 'Pennsylvania Suburbs- 50%+', 'Pennsylvania Suburbs- Not Computed'],
@@ -689,7 +689,7 @@ const snippetsRef = {
                     ['DVRPC-total', 'New Jersey Suburbs-total', 'Pennsylvania Suburbs-total', 'Philadelphia Subregion-total', 'Bucks-total', 'Burlington-total', 'Camden-total', 'Chester-total', 'Delaware-total', 'Gloucester-total', 'Mercer-total', 'Montgomery-total', 'Philadelphia-total']
                 ],
                 data: lightGeography,
-                yAxis: 'percent'
+                yAxisUnits: 'percent'
             },
             {
                 type: 'stacked bar',
@@ -915,7 +915,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: ['RaceEthnSegregation'],
-                yAxis: 'percent',
+                yAxisUnits: 'percent',
                 data: [
                     {
                         'key': 'Racial/Ethnic Segregation Index',
@@ -927,7 +927,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart4',
                 dataSource: ['labForceByRace_wide'],
-                yAxis: 'singles',
+                yAxisUnits: 'singles',
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -953,7 +953,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart5',
                 dataSource: ['labForceByRace_wide'],
-                yAxis: 'singles',
+                yAxisUnits: 'singles',
                 columnOptions: [
                     ['Region_labWht', 'Region_labNonWht'],
                     ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
@@ -983,7 +983,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart6',
                 dataSource: ['labForceByEth_wide'],
-                yAxis: 'singles',
+                yAxisUnits: 'singles',
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -1009,7 +1009,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart7',
                 dataSource: ['labForceByEth_wide'],
-                yAxis: 'singles',
+                yAxisUnits: 'singles',
                 columnOptions: [
                     ['Region_labWht', 'Region_labHisp'],
                     ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labHisp'],
@@ -1045,7 +1045,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['IncomeQuintileTopBottomGap'],
-                yAxis: 'percent',
+                yAxisUnits: 'percent',
                 columnOptions: [
                     ['Region'],
                     ['PASubCos'],
@@ -1112,7 +1112,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: ['IncomeSegregation'],
-                yAxis: 'percent',
+                yAxisUnits: 'percent',
                 data: [
                     {
                         'key': 'Segregation Index',
@@ -1179,7 +1179,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: ['labForceBySex_wide'],
-                yAxis: 'singles',
+                yAxisUnits: 'singles',
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -1205,7 +1205,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart4',
                 dataSource: ['labForceBySex_wide'],
-                yAxis: 'singles',
+                yAxisUnits: 'singles',
                 columnOptions: [
                     ['Region_labMl', 'Region_labFm'],
                     ['NJ Suburban Counties_labMl', 'NJ Suburban Counties_labFm'],
@@ -1240,7 +1240,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['roadwayreliability24'],
-                yAxis: 'singles',
+                yAxisUnits: 'singles',
                 columnOptions: [
                     ['DVRPCFree24', 'PASubCosFree24', 'PACosFree24', 'NJCosFree24', 'BucFree24', 'ChesFree24', 'DelFree24', 'MontFree24', 'BurlFree24', 'CamFree24', 'GloFree24', 'MerFree24', 'PhilFree24'],
                     ['DVRPCLoca24', 'PASubCosLoca24', 'PACosLoca24', 'NJCosLoca24', 'BucLoca24', 'ChesLoca24', 'DelLoca24', 'MontLoca24', 'BurlLoca24', 'CamLoca24', 'GloLoca24', 'MerLoca24', 'PhilLoca24']
@@ -1316,7 +1316,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart2',
                 dataSource: ['roadwayreliablilityTOD_Fwy', 'roadwayreliablilityTOD_Local'],
-                yAxis: 'singles',
+                yAxisUnits: 'singles',
                 columnOptions: [
                     ['DVRPCAM', 'DVRPCMD', 'DVRPCPM', 'DVRPCNT'],
                     ['PASubCosAM', 'PASubCosMD', 'PASubCosPM', 'PASubCosNT'],
@@ -1446,7 +1446,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['ResNonSOV','WorkNonSOV'],
-                yAxis: 'percent',
+                yAxisUnits: 'percent',
                 columnOptions: [
                     ['DVRPCSOV', 'DVRPCNonSOV'],
                     ['PASubSOV', 'PASubNonSOV'],
@@ -1476,7 +1476,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart2',
                 dataSource: ['ResNonSOV_multi','WorkNonSOV_multi'],
-                yAxis: 'percent',
+                yAxisUnits: 'percent',
                 columnOptions: [
                     ['DVRPCPool', 'DVRPCTransit', 'DVRPCWalk', 'DVRPCBike', 'DVRPCTMO', 'DVRPCWFH', 'DVRPCBus', 'DVRPCRail', 'DVRPCSubw', 'DVRPCTroll', 'DVRPCFerry',  'DVRPCMcyc', 'DVRPCOther', 'DVRPCTaxi'],
                     ['PASubPool', 'PASubTransit', 'PASubWalk', 'PASubBike', 'PASubTMO', 'PASubWFH', 'PASubBus', 'PASubRail', 'PASubSubw', 'PASubTroll', 'PASubFerry',  'PASubMcyc', 'PASubOther', 'PASubTaxi'],
@@ -1572,7 +1572,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['transit_ridership_graph_1'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['unlinkedTrips'],
                     ['unlinkedTripsPerCap']
@@ -1588,7 +1588,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart2',
                 dataSource: ['transit_ridership_graph_2'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['Bus', 'Commuter Rail', 'Light Rail', 'Non-Scheduled Services', 'Subway', 'Trolleybus'],
                     ['Bus-per capita', 'Commuter Rail-per capita', 'Light Rail-per capita', 'Non-Scheduled Services-per capita', 'Subway-per capita', 'Trolleybus-per capita']
@@ -1624,7 +1624,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: ['transit_ridership_graph_3'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['New Jersey Transit', 'PATCO', 'Pottstown Area Rapid Transit', 'SEPTA'],
                     ['New Jersey Transit-per capita', 'PATCO-per capita', 'Pottstown Area Rapid Transit-per capita', 'SEPTA-per capita',]
@@ -1904,7 +1904,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['popGrowth'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
                     ['Core-count','DevCom-count','GroSub-count','Rural-count','Burlington-count','Camden-count','Gloucester-count','Mercer-count','Bucks-count','Chester-count','Delaware-count','Montgomery-count','Philadelphia-count','NJCnt-count','PASub-count','DVRPC-count'],
@@ -2058,7 +2058,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart4',
                 dataSource: ['pop_race_change','pop_race_totals'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['DVRPC_WA','DVRPC_BA','DVRPC_IA','DVRPC_AA','DVRPC_NA','DVRPC_TOM'],
                     ['PASub_WA','PASub_BA','PASub_IA','PASub_AA','PASub_NA','PASub_TOM'],
@@ -2104,7 +2104,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart5',
                 dataSource: ['pop_hisp_change','pop_hisp_totals'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['DVRPC_NH','DVRPC_H'],
                     ['PASub_NH','PASub_H'],
@@ -2139,7 +2139,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart',
                 dataSource: ['Bridge_Conditions_1A','Bridge_Conditions_1B'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
                     ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
@@ -2173,7 +2173,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['Bridge_Conditions_2'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
                     ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
@@ -2211,7 +2211,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: ['Bridge_Conditions_3'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
                     ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
@@ -2259,7 +2259,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['water_quality_1'],
-                yAxis: 'percent',
+                yAxisUnits: 'percent',
                 data: [
                     {
                         'key': 'Pennsylvania',
@@ -2298,7 +2298,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: [['water_quality_3']],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 data: [
                     {
                         'key': 'Supporting (acres)',
@@ -2328,7 +2328,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['landConsumption1'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['Total Developed Acres- DVRPC','Total Developed Acres- NJ Suburbs','Total Developed Acres- PA Suburbs','Total Developed Acres- Core City','Total Developed Acres- Developed Community','Total Developed Acres- Growing Suburb','Total Developed Acres- Rural Area','Total Developed Acres- Bucks','Total Developed Acres- Burlington','Total Developed Acres- Camden','Total Developed Acres- Chester','Total Developed Acres- Delaware','Total Developed Acres- Gloucester','Total Developed Acres- Mercer','Total Developed Acres- Montgomery','Total Developed Acres- Philadelphia'],
                     ['Developed Acres per Capita- DVRPC','Developed Acres per Capita- NJ Suburbs','Developed Acres per Capita- PA Suburbs','Developed Acres per Capita- Core City','Developed Acres per Capita- Developed Community','Developed Acres per Capita- Growing Suburb','Developed Acres per Capita- Rural Area','Developed Acres per Capita- Bucks','Developed Acres per Capita- Burlington','Developed Acres per Capita- Camden','Developed Acres per Capita- Chester','Developed Acres per Capita- Delaware','Developed Acres per Capita- Gloucester','Developed Acres per Capita- Mercer','Developed Acres per Capita- Montgomery','Developed Acres per Capita- Philadelphia'],
@@ -2406,7 +2406,7 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['landConsumption2'],
-                yAxis: 'millions',
+                yAxisUnits: 'millions',
                 columnOptions: [
                     ['DVRPC- agricultural','DVRPC- comm_services','DVRPC- commercial','DVRPC- industrial','DVRPC- military','DVRPC- mining','DVRPC- multi_fam','DVRPC- recreation','DVRPC- single_fam','DVRPC- transportation','DVRPC- utility','DVRPC- vacant','DVRPC- water','DVRPC- wooded'],
                     ['PA Suburbs- agricultural','PA Suburbs- comm_services','PA Suburbs- commercial','PA Suburbs- industrial','PA Suburbs- military','PA Suburbs- mining','PA Suburbs- multi_fam','PA Suburbs- recreation','PA Suburbs- single_fam','PA Suburbs- transportation','PA Suburbs- utility','PA Suburbs- vacant','PA Suburbs- water','PA Suburbs- wooded'],
@@ -2633,7 +2633,7 @@ const snippetsRef = {
                     ['DVRPC- Non-NHS, < 2000 ADT', 'New Jersey- Non-NHS, < 2000 ADT', 'Pennsylvania- Non-NHS, < 2000 ADT'],
                     ['DVRPC- Non-NHS, >= 2000 ADT', 'New Jersey- Non-NHS, >= 2000 ADT', 'Pennsylvania- Non-NHS, >= 2000 ADT'],
                 ],
-                yAxis: 'percent',
+                yAxisUnits: 'percent',
                 data: [
                     {
                         'key': 'DVRPC',

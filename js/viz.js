@@ -48,7 +48,8 @@ const createStackedBarChart = (source, doubleToggle) => {
                 .clipEdge(true)
                 .stacked(true)
 
-            source.yAxis ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxis])) : chart.yAxis.tickFormat(d3.format('.3n'))
+            source.yAxisUnits ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxisUnits])) : chart.yAxis.tickFormat(d3.format('.3n'))
+            if(source.axisLabel) chart.yAxis.axisLabel(source.axisLabel)
     
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -112,7 +113,8 @@ const createLineChart = (source, doubleToggle) => {
 
 
             // format y-axis for large numbers
-            source.yAxis ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxis])): chart.yAxis.tickFormat(d3.format(',.0f'))
+            source.yAxisUnits ? chart.yAxis.tickFormat(d3.format(axisFormats[source.yAxisUnits])): chart.yAxis.tickFormat(d3.format(',.0f'))
+            if(source.axisLabel) chart.yAxis.axisLabel(source.axisLabel)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 

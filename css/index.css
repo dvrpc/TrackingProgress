@@ -392,6 +392,9 @@ nav{
 .double-toggle-form{
     display: flex;
 }
+.chart-src{
+    margin-left: 5%;
+}
 
 
 /********************************/
