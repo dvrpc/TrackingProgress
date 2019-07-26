@@ -284,6 +284,7 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
     })
 }
 
+// waterfall charts are just fancy multi-bar charts. Each "waterfall" is it's own bar
 const createWaterfallChart = (source, doubleToggle) => {
     let container, dataSource;
     [container, dataSource, source] = formatInpus(source, doubleToggle)
