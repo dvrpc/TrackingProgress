@@ -19,7 +19,7 @@ const formatInpus = (source, doubleToggle) => {
 
 // labelling helper function 
 const formatLabels = (axis, margin, units, label) => {
-    units ? axis.tickFormat(d3.format(axisFormats[source.yAxisUnits])) : axis.tickFormat(d3.format('.3n'))
+    units ? axis.tickFormat(d3.format(axisFormats[units])) : axis.tickFormat(d3.format('.3n'))
             
     // add axis label & update margin to compensate
     if(label) {
@@ -61,6 +61,9 @@ const createStackedBarChart = (source, doubleToggle) => {
                 .forceY(0)
                 .clipEdge(true)
                 .stacked(true)
+            
+            // set max legend length to an arbitrarily high number to prevent text cutoff
+            chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
             formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
@@ -96,6 +99,13 @@ const createLinePlusBarChart = (source, doubleToggle) => {
                 .forceY([0])
                 .y((d, i) => d[1])
 
+
+            // set max legend length to an arbitrarily high number to prevent text cutoff
+            chart.legend.maxKeyLength(100)
+
+            // format yAxis units and labels if necessary
+            formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
+
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
             nv.utils.windowResize(chart.update)
@@ -124,6 +134,9 @@ const createLineChart = (source, doubleToggle) => {
                 .forceY(0)
                 .x(d => d[0])
                 .y((d, i) => d[1])
+
+            // set max legend length to an arbitrarily high number to prevent text cutoff
+            chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
             formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
@@ -164,6 +177,9 @@ const createLineAndScatterChart = (source, doubleToggle) => {
                 .margin({top: 35, right: 65, bottom: 35, left: 55})
                 // @TODO: calculate a max instead of just using 65
                 .yDomain1([0, 65])
+
+            // set max legend length to an arbitrarily high number to prevent text cutoff
+            chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
             formatLabels(chart.yAxis1, chart.margin(), source.yAxisUnits, source.axisLabel)
@@ -207,6 +223,9 @@ const createStackedAreaChart = (source, doubleToggle) => {
                 // use the style method to set the default to expand
                 .style('expand')
 
+            // set max legend length to an arbitrarily high number to prevent text cutoff
+            chart.legend.maxKeyLength(100)
+            
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
             nv.utils.windowResize(chart.update)
@@ -253,6 +272,9 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
             chart.yAxis1.tickFormat(d3.format(','))
             chart.yAxis2.tickFormat(d3.format(','))
 
+            // set max legend length to an arbitrarily high number to prevent text cutoff
+            chart.legend.maxKeyLength(100)
+            
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
             nv.utils.windowResize(chart.update)
