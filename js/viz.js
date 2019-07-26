@@ -149,7 +149,7 @@ const createLinePlusBarChart = (source, doubleToggle) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
+            formatLabels(chart.y1Axis, chart.margin(), source.yAxisUnits, source.axisLabel)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
