@@ -3,7 +3,8 @@
 /************************************************************************************/
 
 // input helper function
-const formatInpus = (source, doubleToggle) => {
+const formatInpus = (source, toggleContext) => {
+    console.log('toggle context object ', toggleContext)
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
     
@@ -11,7 +12,24 @@ const formatInpus = (source, doubleToggle) => {
     source.data.forEach(series => series.values = [])
     
     // determine which chart to grab from the array of possibilities
-    let chartName = doubleToggle ? source.dataSource[doubleToggle] : source.dataSource[0]
+    //let chartName = doubleToggle ? source.dataSource[doubleToggle] : source.dataSource[0]
+
+    let newLabels, newUnits, chartName;
+
+    if(toggleContext.doubleToggle) {
+        chartName = source.dataSource[doubleToggle]
+        newLabels = toggleContext.newLabels ? toggleContext.newLabels[doubleToggle] : false
+        newUnits = toggleContext.newUnits ? toggleContext.newUnits[doubleToggle] : false
+    } else {
+        chartName = source.dataSource[0]
+        newLabels = toggleContext.newLabels ? toggleContext.newLabels[toggleContext.chartNumber] : false
+        newUnits = toggleContext.newUnits ? toggleContext.newUnits[toggleContext.chartNumber] : false
+    }
+
+    // this works!
+    console.log('new labels ', newLabels)
+    console.log('new units ', newUnits)
+
     const dataSource = `./data/${chartName}.csv`
     
     return [container, dataSource, source]
@@ -20,47 +38,8 @@ const formatInpus = (source, doubleToggle) => {
 // labelling helper function 
 const formatLabels = (axis, margin, units, label) => {
     /* 
-        units and label value will be dynamic depending on toggle state.
-        as a result, both should be stored in one object: context
-        Context cases:
-            Double toggles - use the already captured doubleToggle value to index context props
-            Single toggles - need chart num for this, but it doesn't always apply b/c many of the single toggles don't change units (i.e. just regional)
-            to handle this, add a 'noChange' bool onto context and use that to decide if chartNum should be passed to the viz fncs.
-            No toggles - context will have noChange and doubleToggle will be undefined, so check for that as last case and do context.props[0]
-            
-            Replace doubleToggle return from toggleChart with:
-                    const contextontext = dataSets[setNumber].context 
-                    let singleToggle context.noChange ? null : chartNum
-
-                    {
-                        doubleToggle,
-                        singleToggle
-                    }
-
-                change formatInputs doubleToggle param to ^ toggles obj
-                
-                add 'let contextIndex;' to formatInputs
-
-                change formatInputs line 14 to:
-                    if(toggles.doubleToggle) {
-                        chartName = source.dataSource[doubleToggle]
-                        contextIndex = doubleToggle
-                    } else {
-                        chartName = source.dataSource[0]
-                        contextIndex = chartNum
-                    }
-
-        new formatLabels params: (axis, margin, context, toggleState)
-            axis and margin are unchanged
-            
-            context: {
-                labels: ['these', 'are', 'the', 'labels'],
-                units: ['these', 'are', 'the', 'units'],
-                noChange: bool
-            }
-
-            toggleState is either contextIndex (determined by formatInputs) or null
-                contextIndex ? context.props[contextIndex] : context.props[0]
+        each viz fnc will check for newLabels || newUnits before calling formatLabels
+        formatLabels params stay the same b/c the correct values are already extracted in the formatInputs function
 =    */
     
 
@@ -160,9 +139,9 @@ const createLinePlusBarChart = (source, doubleToggle) => {
     })
 }
 
-const createLineChart = (source, doubleToggle) => {
+const createLineChart = (source, doubleToggle, toggleContext) => {
     let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+    [container, dataSource, source] = formatInpus(source, doubleToggle, toggleContext)
 
     d3.csv(dataSource, rows => {
         source.data.forEach(series => {
@@ -195,9 +174,9 @@ const createLineChart = (source, doubleToggle) => {
     })
 }
 
-const createLineAndScatterChart = (source, doubleToggle) => {
+const createLineAndScatterChart = (source, doubleToggle, toggleContext) => {
     let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+    [container, dataSource, source] = formatInpus(source, doubleToggle, toggleContext)
 
     let scatterIndex = source.data[0].type === 'scatter' ? 0 : 1
     let lineIndex = scatterIndex === 0 ? 1 : 0

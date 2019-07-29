@@ -1662,6 +1662,10 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['emissions_1'],
+                context: {
+                    keepLabels: true,
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['emissions_total'],
                     ['emissions_per_capita']
@@ -1677,6 +1681,10 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['emissions_2'],
+                context: {
+                    keepLabels: true,
+                    keepUnits: true
+                },
                 axisLabel: 'mmt co2e',
                 data: [
                     {
@@ -1701,6 +1709,10 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: ['emissions_3'],
+                context: {
+                    keepLabels: true,
+                    keepUnits: true
+                },
                 data: [
                     {
                         'key': 'Coal',
@@ -1746,6 +1758,10 @@ const snippetsRef = {
                 newKeys: true,
                 dataSource: ['emissions_4'],
                 axisLabel: 'Degrees Farenheit',
+                context: {
+                    labels: ['Degrees Farenheit', 'Precipitation (inches)', 'Precipitation (inches)'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Temperature - Farenheit', '30 year trend - Temperature'],
                     ['Precipitation', '30 year trend - Precipitation'],
