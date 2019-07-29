@@ -167,8 +167,8 @@ const handleTabs = (e, text, wrapper) => {
     if(oldTab.id === clickedTab.id) return
 
     // update the text
-    const textSection = clickedTab.id.split('-')[0]
     while(wrapper.firstChild) wrapper.removeChild(wrapper.firstChild)
+    const textSection = clickedTab.id.split('-')[0]
     wrapper.insertAdjacentHTML('afterbegin', text[textSection])
 
     // deactivate the old jawn
