@@ -10,19 +10,37 @@ const formatInpus = (source, toggleContext) => {
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
     
-    // determine which chart to grab from the array of possibilities
-    //let chartName = doubleToggle ? source.dataSource[doubleToggle] : source.dataSource[0]
-
     let labels, units, chartName;
 
-    if(toggleContext.doubleToggle) {
-        chartName = source.dataSource[doubleToggle]
-        labels = toggleContext.newLabels ? toggleContext.newLabels[doubleToggle] : false
-        units = toggleContext.newUnits ? toggleContext.newUnits[doubleToggle] : false
-    } else {
+    // abstract context code to keep things DRY
+    const formatContext = (index, hasDouble) => {
+        const formattedName = hasDouble ? source.dataSource[index] : source.dataSource[0]
+        const formatContext = toggleContext.context
+
+        let formattedLabels = formatContext.keepLabels ? formatContext.labels[0] : formatContext.labels[index]
+        let formattedUnits = formatContext.keepUnits ? formatContext.units[0] : formatContext.units[index]
+        
+        return [formattedLabels, formattedUnits, formattedName]
+    }
+
+    // index all at 0 for initial state
+    if(toggleContext === 'initial') {
+        const hasContext = source.context
+
+        if(hasContext) {
+            labels = hasContext.labels[0]
+            units = hasContext.units[0]
+        }
+
         chartName = source.dataSource[0]
-        labels = toggleContext.newLabels ? toggleContext.newLabels[toggleContext.chartNumber] : false
-        units = toggleContext.newUnits ? toggleContext.newUnits[toggleContext.chartNumber] : false
+
+    // regular case w/context: determine if using double toggles or not to index the context obj
+    }else if(toggleContext.context) {
+        [labels, units, chartName] = toggleContext.doubleToggle ? formatContext(toggleContext.doubleToggle, true) : formatContext(toggleContext.chartNumber, false)
+    
+    // regular case no context: just get chartName
+    }else {
+        chartName = source.dataSource[0]
     }
 
     const dataSource = `./data/${chartName}.csv`
@@ -35,8 +53,6 @@ const formatInpus = (source, toggleContext) => {
 
 // labelling helper function 
 const formatLabels = (axis, margin, context) => {
-    console.log('context is ', context)
-
     context.units ? axis.tickFormat(d3.format(axisFormats[context.units])) : axis.tickFormat(d3.format('.3n'))
             
     // add axis label & update margin to compensate
@@ -58,7 +74,7 @@ const axisFormats = {
 
 const createStackedBarChart = (source, toggleContext) => {
     let container, dataSource, context;
-    [container, dataSource, source] = formatInpus(source, toggleContext)
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
     d3.csv(dataSource, rows => {
 

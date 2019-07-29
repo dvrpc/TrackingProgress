@@ -1663,7 +1663,9 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['emissions_1'],
                 context: {
+                    labels: ['mmt co2e'],
                     keepLabels: true,
+                    units: ['singles'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -1682,10 +1684,11 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['emissions_2'],
                 context: {
+                    labels: ['mmt co2e'],
                     keepLabels: true,
+                    units: ['singles'],
                     keepUnits: true
                 },
-                axisLabel: 'mmt co2e',
                 data: [
                     {
                         'key': 'Residential',
@@ -1709,10 +1712,6 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: ['emissions_3'],
-                context: {
-                    keepLabels: true,
-                    keepUnits: true
-                },
                 data: [
                     {
                         'key': 'Coal',
@@ -1760,6 +1759,8 @@ const snippetsRef = {
                 axisLabel: 'Degrees Farenheit',
                 context: {
                     labels: ['Degrees Farenheit', 'Precipitation (inches)', 'Precipitation (inches)'],
+                    keepLabels: false,
+                    units: ['singles'],
                     keepUnits: true
                 },
                 columnOptions: [

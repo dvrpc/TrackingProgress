@@ -110,11 +110,10 @@ const toggleChart = (selected, dataSets) => {
     // source is the correct dataset with updated column names
     const source = dataSets[setNumber]
 
-    const context = dataSets[setNumber].context
-    let newLabels = context.keepLabels ? false : context.labels
-    let newUnits = context.keepUnits ? false : context.units
-
-    const toggleContext = {doubleToggle, newLabels, newUnits, chartNumber}
+    // get label and units context where applicable
+    const context = source.context
+    let toggleContext
+    toggleContext = context ? { doubleToggle, context, chartNumber } : { doubleToggle }
 
     // switch case to determine which kind of vis to make and which dataset to reference
     dataVizSwitch(source.type, source, toggleContext)
@@ -149,7 +148,7 @@ const getIndicatorSnippet = (grid, snippet) => {
                 if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz))
 
                 // initialize default context object for charts
-                const context = {doubleToggle: 0, newLabels: false, newUnits: false, setNumber: 0}
+                const context = 'initial'
 
                 // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
                 hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, context))
