@@ -4,7 +4,6 @@
 
 // input helper function
 const formatInpus = (source, toggleContext) => {
-    console.log('toggle context object ', toggleContext)
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
     
@@ -14,40 +13,35 @@ const formatInpus = (source, toggleContext) => {
     // determine which chart to grab from the array of possibilities
     //let chartName = doubleToggle ? source.dataSource[doubleToggle] : source.dataSource[0]
 
-    let newLabels, newUnits, chartName;
+    let labels, units, chartName;
 
     if(toggleContext.doubleToggle) {
         chartName = source.dataSource[doubleToggle]
-        newLabels = toggleContext.newLabels ? toggleContext.newLabels[doubleToggle] : false
-        newUnits = toggleContext.newUnits ? toggleContext.newUnits[doubleToggle] : false
+        labels = toggleContext.newLabels ? toggleContext.newLabels[doubleToggle] : false
+        units = toggleContext.newUnits ? toggleContext.newUnits[doubleToggle] : false
     } else {
         chartName = source.dataSource[0]
-        newLabels = toggleContext.newLabels ? toggleContext.newLabels[toggleContext.chartNumber] : false
-        newUnits = toggleContext.newUnits ? toggleContext.newUnits[toggleContext.chartNumber] : false
+        labels = toggleContext.newLabels ? toggleContext.newLabels[toggleContext.chartNumber] : false
+        units = toggleContext.newUnits ? toggleContext.newUnits[toggleContext.chartNumber] : false
     }
 
-    // this works!
-    console.log('new labels ', newLabels)
-    console.log('new units ', newUnits)
-
     const dataSource = `./data/${chartName}.csv`
+
+    // if neither labels nor units need updating, make context null so the viz fncs can avoid calling formatLabels
+    let context = labels || units ? {labels, units} : null
     
-    return [container, dataSource, source]
+    return [container, dataSource, source, context]
 }
 
 // labelling helper function 
-const formatLabels = (axis, margin, units, label) => {
-    /* 
-        each viz fnc will check for newLabels || newUnits before calling formatLabels
-        formatLabels params stay the same b/c the correct values are already extracted in the formatInputs function
-=    */
-    
+const formatLabels = (axis, margin, context) => {
+    console.log('context is ', context)
 
-    units ? axis.tickFormat(d3.format(axisFormats[units])) : axis.tickFormat(d3.format('.3n'))
+    context.units ? axis.tickFormat(d3.format(axisFormats[context.units])) : axis.tickFormat(d3.format('.3n'))
             
     // add axis label & update margin to compensate
-    if(label) {
-        axis.axisLabel(label)
+    if(context.labels) {
+        axis.axisLabel(context.labels)
 
         // axis label font size is 12, so add 14 to margin 
         margin.left += 14
@@ -62,9 +56,9 @@ const axisFormats = {
     'millions': '.3n'
 }
 
-const createStackedBarChart = (source, doubleToggle) => {
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+const createStackedBarChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source] = formatInpus(source, toggleContext)
 
     d3.csv(dataSource, rows => {
 
@@ -90,7 +84,7 @@ const createStackedBarChart = (source, doubleToggle) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
+            if(context) formatLabels(chart.yAxis, chart.margin(), context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -139,9 +133,9 @@ const createLinePlusBarChart = (source, doubleToggle) => {
     })
 }
 
-const createLineChart = (source, doubleToggle, toggleContext) => {
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle, toggleContext)
+const createLineChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
     d3.csv(dataSource, rows => {
         source.data.forEach(series => {
@@ -163,7 +157,7 @@ const createLineChart = (source, doubleToggle, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
+            if(context) formatLabels(chart.yAxis, chart.margin(), context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -174,9 +168,9 @@ const createLineChart = (source, doubleToggle, toggleContext) => {
     })
 }
 
-const createLineAndScatterChart = (source, doubleToggle, toggleContext) => {
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle, toggleContext)
+const createLineAndScatterChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
     let scatterIndex = source.data[0].type === 'scatter' ? 0 : 1
     let lineIndex = scatterIndex === 0 ? 1 : 0
@@ -206,7 +200,7 @@ const createLineAndScatterChart = (source, doubleToggle, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            formatLabels(chart.yAxis1, chart.margin(), source.yAxisUnits, source.axisLabel)
+            if(context) formatLabels(chart.yAxis1, chart.margin(), context)
 
             chart.yAxis1.tickFormat(d3.format(','))
             
