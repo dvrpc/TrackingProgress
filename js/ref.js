@@ -497,14 +497,18 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['permits_graph_1'],
+                context: {
+                    labels: ['Annual','Cumulative'],
+                    keepLabels: false,
+                    units: false
+                },
                 columnOptions: [
                     ['ratio_annual'],
                     ['ratio_cumulative']
                 ],
-                newKeys: true,
                 data: [
                     {
-                        'key': 'Ratio Annual',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'ratio_annual']
                     }
                 ]
@@ -513,6 +517,12 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['permits_graph_2A','permits_graph_2B'],
+                context: {
+                    labels: ['label'],
+                    keepLabels: true,
+                    units: ['thousands'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC- Core City', 'DVRPC- Developed Community', 'DVRPC- Growing Suburb', 'DVRPC- Rural Area'],
                     ['Chester County- Core City', 'Chester County- Developed Community', 'Chester County- Growing Suburb', 'Chester County- Rural Area'],
@@ -548,6 +558,12 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: ['permits_graph_3A','permits_graph_3B'],
+                context: {
+                    labels: ['label'],
+                    keepLabels: true,
+                    units: ['thousands'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC- large multi-family', 'DVRPC- small multi-family', 'DVRPC- single family'],
                     ['Core City- large multi-family', 'Core City- small multi-family', 'Core City- single family'],
