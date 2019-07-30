@@ -2180,14 +2180,64 @@ const snippetsRef = {
         file: 'bridgeConditions.html',
         d3: [
             {
-                type: 'stacked bar',
+                type: 'line',
                 container: 'chart',
                 dataSource: ['Bridge_Conditions_1A','Bridge_Conditions_1B'],
-                yAxisUnits: 'millions',
+                context: {
+                    labels: ['Square Feet', 'Bridges'],
+                    keepLabels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
+                columnOptions: [
+                    ['DVRPC- All','DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
+                    ['New Jersey Suburbs- All','New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
+                    ['Pennsylvania Suburbs- All','Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
+                    ['Pennsylvania All Counties- All','Pennsylvania All Counties- State', 'Pennsylvania All Counties- Local', 'Pennsylvania All Counties- Other'],
+                    ['Bucks- All','Bucks- State', 'Bucks- Local', 'Bucks- Other'],
+                    ['Chester- All','Chester- State', 'Chester- Local', 'Chester- Other'],
+                    ['Delaware- All','Delaware- State', 'Delaware- Local', 'Delaware- Other'],
+                    ['Montgomery- All','Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
+                    ['Burlington- All','Burlington- State', 'Burlington- Local', 'Burlington- Other'],
+                    ['Camden- All','Camden- State', 'Camden- Local', 'Camden- Other'],
+                    ['Gloucester- All','Gloucester- State', 'Gloucester- Local', 'Gloucester- Other'],
+                    ['Mercer- All','Mercer- State', 'Mercer- Local', 'Mercer- Other'],
+                    ['Philadelphia- All','Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other'],
+                ],
+                data: [
+                    {
+                        'key': 'All',
+                        columns: ['year', 'DVRPC- All']
+                    },
+                    {
+                        'key': 'State',
+                        columns: ['year', 'DVRPC- State']
+                    },
+                    {
+                        'key': 'Local',
+                        columns: ['year', 'DVRPC- Local']
+                    },
+                    {
+                        'key': 'Other',
+                        columns: ['year', 'DVRPC- Other']
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart2',
+                dataSource: ['Bridge_Conditions_2A','Bridge_Conditions_2B'],
+                context: {
+                    labels: ['Square Feet', 'Number of Bridges'],
+                    keepLabels: false,
+                    units: ['singles'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
                     ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
                     ['Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
+                    ['Pennsylvania All Counties- State', 'Pennsylvania All Counties- Local', 'Pennsylvania All Counties- Other'],
                     ['Bucks- State', 'Bucks- Local', 'Bucks- Other'],
                     ['Chester- State', 'Chester- Local', 'Chester- Other'],
                     ['Delaware- State', 'Delaware- Local', 'Delaware- Other'],
@@ -2215,47 +2265,14 @@ const snippetsRef = {
             },
             {
                 type: 'stacked bar',
-                container: 'chart2',
-                dataSource: ['Bridge_Conditions_2'],
-                yAxisUnits: 'millions',
-                columnOptions: [
-                    ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
-                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
-                    ['Pennsylvania Suburbs- NA','Pennsylvania Suburbs- Poor','Pennsylvania Suburbs- Fair','Pennsylvania Suburbs- Good'],
-                    ['Bucks- NA','Bucks- Poor','Bucks- Fair','Bucks- Good'],
-                    ['Chester- NA','Chester- Poor','Chester- Fair','Chester- Good'],
-                    ['Delaware- NA','Delaware- Poor','Delaware- Fair','Delaware- Good'],
-                    ['Montgomery- NA','Montgomery- Poor','Montgomery- Fair','Montgomery- Good'],
-                    ['Burlington- NA','Burlington- Poor','Burlington- Fair','Burlington- Good'],
-                    ['Camden- NA','Camden- Poor','Camden- Fair','Camden- Good'],
-                    ['Gloucester- NA','Gloucester- Poor','Gloucester- Fair','Gloucester- Good'],
-                    ['Mercer- NA','Mercer- Poor','Mercer- Fair','Mercer- Good'],
-                    ['Philadelphia- NA','Philadelphia- Poor','Philadelphia- Fair','Philadelphia- Good']
-                ],
-                data: [
-                    {
-                        'key': 'NA',
-                        columns: ['year', 'DVRPC- NA']
-                    },
-                    {
-                        'key': 'Poor',
-                        columns: ['year', 'DVRPC- Poor']
-                    },
-                    {
-                        'key': 'Fair',
-                        columns: ['year', 'DVRPC- Fair']
-                    },
-                    {
-                        'key': 'Good',
-                        columns: ['year', 'DVRPC- Good']
-                    }
-                ]
-            },
-            {
-                type: 'stacked bar',
                 container: 'chart3',
-                dataSource: ['Bridge_Conditions_3'],
-                yAxisUnits: 'millions',
+                dataSource: ['Bridge_Conditions_3A','Bridge_Conditions_3B'],
+                context: {
+                    labels: ['Square Feet'],
+                    keepLabels: true,
+                    units: ['millions'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
                     ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],

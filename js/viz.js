@@ -36,7 +36,7 @@ const formatInpus = (source, toggleContext) => {
 
     // regular case w/context: determine if using double toggles or not to index the context obj
     }else if(toggleContext.context) {
-        [labels, units, chartName] = toggleContext.doubleToggle ? formatContext(toggleContext.doubleToggle, true) : formatContext(toggleContext.chartNumber, false)
+        [labels, units, chartName] = toggleContext.doubleToggle > -1 ? formatContext(toggleContext.doubleToggle, true) : formatContext(toggleContext.chartNumber, false)
     
     // regular case no context: just get chartName
     }else {
