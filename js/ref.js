@@ -172,7 +172,10 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['edattainHS'],
-                yAxisUnits: 'percent',
+                context: {
+                    labels: ['Percentage Population Age 25 or Older'],
+                    units: ['percent']
+                },
                 data: [
                     {
                         'key': 'DVRPC',
@@ -244,7 +247,12 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['edattainComprehensive'],
-                yAxisUnits: 'millions',
+                context: {
+                    labels: ['Population Age 25 or Older'],
+                    keepLabels: true,
+                    units: ['millions'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC-Less than High School', 'DVRPC-Some High School', 'DVRPC-Graduated High School', 'DVRPC-Some College', 'DVRPC-Associates Degree', 'DVRPC-Bachelors Degree', 'DVRPC-Graduate/Professional Degree'],
                     ['Philadelphia Subregion-Less than High School', 'Philadelphia Subregion-Some High School', 'Philadelphia Subregion-Graduated High School', 'Philadelphia Subregion-Some College', 'Philadelphia Subregion-Associates Degree', 'Philadelphia Subregion-Bachelors Degree', 'Philadelphia Subregion-Graduate/Professional Degree'],

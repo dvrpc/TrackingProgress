@@ -59,8 +59,8 @@ const formatLabels = (axis, margin, context) => {
     if(context.labels) {
         axis.axisLabel(context.labels)
 
-        // axis label font size is 12, so add 14 to margin 
-        margin.left += 14
+        // give axis label breathing room (note: margin.right adds to the graph itself, need to find a way to add margin right to the labels)
+        margin.left += 20
     }
 }
 
