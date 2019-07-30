@@ -8,6 +8,11 @@ const snippetsRef = {
                 type: 'line and bar',
                 container: 'chart',
                 dataSource: ['aq_yearly'],
+                context: {
+                    labels: ['Days'],
+                    keepLabels: true,
+                    units: false
+                },
                 data: [
                     {
                         'key' : 'Annual',
@@ -28,6 +33,11 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['aq_quarterly'],
+                context: {
+                    labels: ['Days'],
+                    keepLabels: true,
+                    units: false
+                },
                 columnOptions: [
                     ['unhealthySensitiveOzone', 'unhealthyOzone', 'veryUnhealthyOzone'],
                     ['unhealthySensitivePM', 'unhealthyPM', 'veryUnhealthyPM']
@@ -1045,7 +1055,12 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['IncomeQuintileTopBottomGap'],
-                yAxisUnits: 'percent',
+                context: {
+                    labels: false,
+                    keepLabels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region'],
                     ['PASubCos'],
@@ -1070,8 +1085,13 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: ['IncomeQuintilesMean', 'IncomeQuintilesAbs', 'IncomeQuintilesPct']
-                ,
+                dataSource: ['IncomeQuintilesMean', 'IncomeQuintilesAbs', 'IncomeQuintilesPct'],
+                context: {
+                    labels: ['Dollars'],
+                    keepLabels: true,
+                    units: ['singles', 'singles', 'percent'],
+                    keepUnits: false
+                },
                 columnOptions: [
                     ['Region_1st', 'Region_2nd', 'Region_3rd', 'Region_4th', 'Region_5th'],
                     ['PhilCo_1st', 'PhilCo_2nd', 'PhilCo_3rd', 'PhilCo_4th', 'PhilCo_5th'],
@@ -1112,7 +1132,12 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: ['IncomeSegregation'],
-                yAxisUnits: 'percent',
+                context: {
+                    labels: ['Segregation Index'],
+                    keepLabels: true,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 data: [
                     {
                         'key': 'Segregation Index',
