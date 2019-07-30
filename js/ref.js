@@ -608,13 +608,23 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['housing_afford_graph_1'],
                 data: fullGeography,
+                context: {
+                    labels: ['Percent of Households'],
+                    keepLabels: true,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 yAxisUnits: 'percent'
             },
             {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['housing_afford_graph_2'],
-                yAxisUnits: 'millions',
+                context: {
+                    labels: ['Thousands of Households'],
+                    keepLabels: true,
+                    units: false
+                },
                 columnOptions: [
                     ['DVRPC- Below 35%- Own', 'DVRPC- Below 35%- Rent', 'DVRPC- Above 35%- Rent', 'DVRPC- Above 35%- Own','DVRPC- Not Computed- Own', 'DVRPC- Not Computed- Rent'],
                     ['Pennsylvania Suburbs- Below 35%- Own', 'Pennsylvania Suburbs- Below 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Own','Pennsylvania Suburbs- Not Computed- Own', 'Pennsylvania Suburbs- Not Computed- Rent'],
@@ -665,7 +675,11 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: ['housing_afford_graph_3'],
-                yAxisUnits: 'millions',
+                context: {
+                    labels: ['Thousands of Households'],
+                    keepLabels: true,
+                    units: false
+                },
                 columnOptions: [
                     ['DVRPC- 0.0-9.9%', 'DVRPC- 10.0-14.9%', 'DVRPC- 15.0-19.9%', 'DVRPC- 20.0-24.9%', 'DVRPC- 25.0-29.9%', 'DVRPC- 30.0-34.9%', 'DVRPC- 35.0-39.9%', 'DVRPC- 40.0-49.9%', 'DVRPC- 50%+','DVRPC- Not Computed'],
                     ['Pennsylvania Suburbs- 0.0-9.9%', 'Pennsylvania Suburbs- 10.0-14.9%', 'Pennsylvania Suburbs- 15.0-19.9%', 'Pennsylvania Suburbs- 20.0-24.9%', 'Pennsylvania Suburbs- 25.0-29.9%', 'Pennsylvania Suburbs- 30.0-34.9%', 'Pennsylvania Suburbs- 35.0-39.9%', 'Pennsylvania Suburbs- 40.0-49.9%', 'Pennsylvania Suburbs- 50%+', 'Pennsylvania Suburbs- Not Computed'],
