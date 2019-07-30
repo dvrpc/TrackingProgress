@@ -316,6 +316,10 @@ const snippetsRef = {
                 type: 'stacked bar plus line',
                 container: 'chart',
                 dataSource: ['crashesWeb'],
+                context: {
+                    labels: false,
+                    units: false
+                },
                 columnOptions: [
                     ['ksi5yrAvgDVRPC', 'ksiMotorVehicleDVRPC', 'ksiBikePedDVRPC'],
                     ['ksi5yrAvgPASubregion', 'ksiMotorVehiclePASubregion', 'ksiBikePedPASubregion'],
@@ -356,6 +360,11 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['crashesWeb'],
                 yAxisUnits: 'singles',
+                context: {
+                    labels: false,
+                    units: ['thousands'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['ksiPerCap5yrAvgDVRPC', 'ksiMotorVehiclePerCapDVRPC', 'ksiBikePedPerCapDVRPC'],
                     ['ksiPerCap5yrAvgPhillySubregion', 'ksiMotorVehiclePerCapPhillySubregion', 'ksiBikePedPerCapPhillySubregion'],
@@ -395,6 +404,10 @@ const snippetsRef = {
                 type: 'line and bar',
                 container: 'chart3',
                 dataSource: ['crashesWeb'],
+                context: {
+                    labels: false,
+                    units: false
+                },
                 columnOptions: [
                     ['ksiPerVMT5yrAvgDVRPC', 'ksiPerVMTDVRPC'],
                     ['ksiPerVMT5yrAvgPhillySubregion', 'ksiPerVMTPhillySubregion'],
@@ -437,6 +450,11 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart',
                 dataSource: ['PHL_IntlDest'],
+                context: {
+                    labels: ['Year-Round', 'Seasonal'],
+                    keepLabels: false,
+                    units: false
+                },
                 columnOptions: [
                     ['Middle Eastern', 'Mexican', 'Canadian', 'Caribbean', 'European'],
                     ['Middle Eastern (non-seasonal)', 'Mexican (non-seasonal)', 'Canadian (non-seasonal)', 'Canadian (seasonal)', 'Caribbean (non-seasonal)', 'Caribbean (seasonal)', 'European (non-seasonal)', 'European (seasonal)']
