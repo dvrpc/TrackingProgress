@@ -2110,7 +2110,10 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['popGrowth'],
-                yAxisUnits: 'millions',
+                context: {
+                    labels: ['Change in Population', 'Total Population', 'Percent Change in Population'],
+                    units: ['millions', 'thousands', 'percent']
+                },
                 columnOptions: [
                     ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
                     ['Core-count','DevCom-count','GroSub-count','Rural-count','Burlington-count','Camden-count','Gloucester-count','Mercer-count','Bucks-count','Chester-count','Delaware-count','Montgomery-count','Philadelphia-count','NJCnt-count','PASub-count','DVRPC-count'],
@@ -2223,6 +2226,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: ['pop_age_change','pop_age_totals'],
+                context: {
+                    labels: ['Change in Population', 'Total Population'],
+                    units: ['millions'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC_<20','DVRPC_20-34','DVRPC_35-49','DVRPC_50-64','DVRPC_65+'],
                     ['PASub_<20','PASub_20-34','PASub_35-49','PASub_50-64','PASub_65+'],
@@ -2264,7 +2272,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart4',
                 dataSource: ['pop_race_change','pop_race_totals'],
-                yAxisUnits: 'millions',
+                context: {
+                    labels: ['Change in Population', 'Total Population'],
+                    units: ['millions'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC_WA','DVRPC_BA','DVRPC_IA','DVRPC_AA','DVRPC_NA','DVRPC_TOM'],
                     ['PASub_WA','PASub_BA','PASub_IA','PASub_AA','PASub_NA','PASub_TOM'],
@@ -2310,7 +2322,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart5',
                 dataSource: ['pop_hisp_change','pop_hisp_totals'],
-                yAxisUnits: 'millions',
+                context: {
+                    labels: ['Change in Population', 'Total Population'],
+                    units: ['millions'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC_NH','DVRPC_H'],
                     ['PASub_NH','PASub_H'],
