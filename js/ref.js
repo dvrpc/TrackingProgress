@@ -2498,7 +2498,10 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['water_quality_1'],
-                yAxisUnits: 'percent',
+                context: {
+                    labels: ['Percent Impaired'],
+                    units: ['percent']
+                },
                 data: [
                     {
                         'key': 'Pennsylvania',
@@ -2518,6 +2521,10 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['water_quality_2'],
+                context: {
+                    labels: ['Stream Miles'],
+                    units: ['thousands']
+                },
                 data: [
                     {
                         'key': 'Supporting (miles)',
@@ -2537,7 +2544,10 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: [['water_quality_3']],
-                yAxisUnits: 'millions',
+                context: {
+                    labels: ['Subwatershed Acres'],
+                    units: ['thousands']
+                },
                 data: [
                     {
                         'key': 'Supporting (acres)',
