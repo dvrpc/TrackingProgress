@@ -1510,6 +1510,10 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['Exports'],
+                context: {
+                    labels: ['Billions of Dollars (2017)'],
+                    units: ['singles']
+                },
                 data: [
                     {
                         'key': 'DVRPC',
