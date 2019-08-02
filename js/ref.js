@@ -1595,7 +1595,12 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['ResNonSOV','WorkNonSOV'],
-                yAxisUnits: 'percent',
+                context: {
+                    labels: ['Commute Mode Share'],
+                    keepLabels: true,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPCSOV', 'DVRPCNonSOV'],
                     ['PASubSOV', 'PASubNonSOV'],
@@ -1624,8 +1629,13 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: ['ResNonSOV_multi','WorkNonSOV_multi'],
-                yAxisUnits: 'percent',
+                dataSource: ['ResNonSOV_multi','WorkNonSOV_multi'], 
+                context: {
+                    labels: ['Commute Mode Share'],
+                    keepLabels: true,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPCPool', 'DVRPCTransit', 'DVRPCWalk', 'DVRPCBike', 'DVRPCTMO', 'DVRPCWFH', 'DVRPCBus', 'DVRPCRail', 'DVRPCSubw', 'DVRPCTroll', 'DVRPCFerry',  'DVRPCMcyc', 'DVRPCOther', 'DVRPCTaxi'],
                     ['PASubPool', 'PASubTransit', 'PASubWalk', 'PASubBike', 'PASubTMO', 'PASubWFH', 'PASubBus', 'PASubRail', 'PASubSubw', 'PASubTroll', 'PASubFerry',  'PASubMcyc', 'PASubOther', 'PASubTaxi'],
