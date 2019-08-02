@@ -2085,6 +2085,10 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['patents'],
+                context: {
+                    labels: ['Approvals'],
+                    units: ['thousands']
+                },
                 data: [
                     {
                         'key': 'Patent Approvals',
