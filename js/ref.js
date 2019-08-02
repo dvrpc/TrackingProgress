@@ -2895,6 +2895,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['pavement_graph_1'],
+                context: {
+                    labels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC- All', 'New Jersey- All', 'Pennsylvania- All'],
                     ['DVRPC- Interstate', 'New Jersey- Interstate', 'Pennsylvania- Interstate'],
@@ -2902,7 +2907,6 @@ const snippetsRef = {
                     ['DVRPC- Non-NHS, < 2000 ADT', 'New Jersey- Non-NHS, < 2000 ADT', 'Pennsylvania- Non-NHS, < 2000 ADT'],
                     ['DVRPC- Non-NHS, >= 2000 ADT', 'New Jersey- Non-NHS, >= 2000 ADT', 'Pennsylvania- Non-NHS, >= 2000 ADT'],
                 ],
-                yAxisUnits: 'percent',
                 data: [
                     {
                         'key': 'DVRPC',
@@ -2922,6 +2926,10 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['pavement_2_all', 'pavement_2_interstate', 'pavement_2_NHS', 'pavement_2_NoNHS', 'pavement_2_NoNHS2000'],
+                context: {
+                    labels: false,
+                    units: false
+                },
                 columnOptions: [
                     ['DVRPC- Poor', 'DVRPC- Fair', 'DVRPC- Good'],
                     ['New Jersey- Poor', 'New Jersey- Fair', 'New Jersey- Good'],
