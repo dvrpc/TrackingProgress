@@ -756,6 +756,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['jobs_graph1'],
+                context: {
+                    labels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC', 'New Jersey Suburbs', 'Pennsylvania Suburbs', 'Philadelphia Subregion', 'Bucks', 'Burlington', 'Camden', 'Chester', 'Delaware', 'Gloucester', 'Mercer', 'Montgomery', 'Philadelphia'],
                     ['DVRPC-total', 'New Jersey Suburbs-total', 'Pennsylvania Suburbs-total', 'Philadelphia Subregion-total', 'Bucks-total', 'Burlington-total', 'Camden-total', 'Chester-total', 'Delaware-total', 'Gloucester-total', 'Mercer-total', 'Montgomery-total', 'Philadelphia-total']
@@ -900,6 +905,10 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['medIncByRace_wide'],
+                context: {
+                    labels: ['2017 Dollars $'],
+                    units: ['thousands']
+                },
                 data: [
                     {
                         'key': 'DVRPC Region',
@@ -963,6 +972,12 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart2',
                 dataSource: ['medIncByRace_wide'],
+                context: {
+                    labels: ['2017 Dollars $'],
+                    keepLabels: true,
+                    units: ['thousands'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region_minorityInc', 'Region_whtNonHispInc'],
                     ['Philadelphia_minorityInc', 'Philadelphia_whtNonHispInc'],
@@ -987,7 +1002,10 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: ['RaceEthnSegregation'],
-                yAxisUnits: 'percent',
+                context: {
+                    labels: ['Population Needing to Move to Achieve Regional Distribution'],
+                    units: ['percent']
+                },
                 data: [
                     {
                         'key': 'Racial/Ethnic Segregation Index',
@@ -999,7 +1017,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart4',
                 dataSource: ['labForceByRace_wide'],
-                yAxisUnits: 'singles',
+                context: {
+                    labels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -1025,7 +1047,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart5',
                 dataSource: ['labForceByRace_wide'],
-                yAxisUnits: 'singles',
+                context: {
+                    labels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region_labWht', 'Region_labNonWht'],
                     ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
@@ -1055,7 +1081,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart6',
                 dataSource: ['labForceByEth_wide'],
-                yAxisUnits: 'singles',
+                context: {
+                    labels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -1081,7 +1111,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart7',
                 dataSource: ['labForceByEth_wide'],
-                yAxisUnits: 'singles',
+                context: {
+                    labels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region_labWht', 'Region_labHisp'],
                     ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labHisp'],
@@ -1216,6 +1250,12 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['sexInc_wide_difference', 'sexInc_wide_ratio'],
+                context: {
+                    labels: ['2017 dollars($)'],
+                    keepLabels: true,
+                    units: ['thousands'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region'],
                     ['NJ Suburban Counties'],
@@ -1239,6 +1279,12 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart2',
                 dataSource: ['sexInc_wide'],
+                context: {
+                    labels: ['2017 dollars($)'],
+                    keepLabels: true,
+                    units: ['thousands'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region_FemaleMed', 'Region_MaleMed'],
                     ['NJ Suburban Counties_FemaleMed', 'NJ Suburban Counties_MaleMed'],
@@ -1266,7 +1312,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: ['labForceBySex_wide'],
-                yAxisUnits: 'singles',
+                context: {
+                    labels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region_difference'],
                     ['NJ Suburban Counties_difference'],
@@ -1292,7 +1342,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart4',
                 dataSource: ['labForceBySex_wide'],
-                yAxisUnits: 'singles',
+                context: {
+                    labels: false,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Region_labMl', 'Region_labFm'],
                     ['NJ Suburban Counties_labMl', 'NJ Suburban Counties_labFm'],
