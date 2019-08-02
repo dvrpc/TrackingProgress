@@ -1457,7 +1457,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart2',
                 dataSource: ['roadwayreliablilityTOD_Fwy', 'roadwayreliablilityTOD_Local'],
-                yAxisUnits: 'singles',
+                context: {
+                    labels: false,
+                    units: ['singles'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPCAM', 'DVRPCMD', 'DVRPCPM', 'DVRPCNT'],
                     ['PASubCosAM', 'PASubCosMD', 'PASubCosPM', 'PASubCosNT'],
