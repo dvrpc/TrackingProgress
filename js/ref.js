@@ -1965,6 +1965,11 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['transit_conditions_graph_1'],
+                context: {
+                    labels: ['Years Old'],
+                    keepLabels: true,
+                    units: false
+                },
                 columnOptions: [
                     ['All Agencies- All Vehicles', 'All Agencies- Buses', 'All Agencies- Rail Vehicles'],
                     ['NJ Transit- All Vehicles', 'NJ Transit- Buses', 'NJ Transit- Rail Vehicles'],
@@ -1991,6 +1996,11 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['transit_conditions_graph_2'],
+                context: {
+                    labels: ['Number of Vehicles'],
+                    keepLabels: true,
+                    units: false
+                },
                 columnOptions: [
                     [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
                     [ 'NJ Transit- age_0_5', 'NJ Transit- age_6_11', 'NJ Transit- age_12_15', 'NJ Transit- age_16_20', 'NJ Transit- age_21_25', 'NJ Transit- age_25over'],
@@ -2028,6 +2038,11 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: ['transit_conditions_graph_3'],
+                context: {
+                    labels: ['Number of Vehicles'],
+                    keepLabels: true,
+                    units: false
+                },
                 columnOptions: [
                     [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
                     [ 'NJ Transit- age_0_5', 'NJ Transit- age_6_11', 'NJ Transit- age_12_15', 'NJ Transit- age_16_20', 'NJ Transit- age_21_25', 'NJ Transit- age_25over'],
