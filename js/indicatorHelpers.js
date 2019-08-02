@@ -8,25 +8,25 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 const relatedIndicators = document.querySelector('.related-indicators')
 
 // helper function to determine what data viz to make
-const dataVizSwitch = (type, source, doubleToggle) => {
+const dataVizSwitch = (type, source, toggleContext) => {
     switch (type) {
         case 'line and bar':
-            graphs.createLinePlusBarChart(source, doubleToggle)
+            graphs.createLinePlusBarChart(source, toggleContext)
             break;
         case 'stacked bar':
-            graphs.createStackedBarChart(source, doubleToggle)
+            graphs.createStackedBarChart(source, toggleContext)
             break;
         case 'line':
-            graphs.createLineChart(source, doubleToggle)
+            graphs.createLineChart(source, toggleContext)
             break;
         case 'stacked area':
-            graphs.createStackedAreaChart(source, doubleToggle)
+            graphs.createStackedAreaChart(source, toggleContext)
             break;
         case 'stacked bar plus line':
-            graphs.createdStackedBarPlusLine(source, doubleToggle)
+            graphs.createdStackedBarPlusLine(source, toggleContext)
             break;
         case 'line and scatter':
-            graphs.createLineAndScatterChart(source, doubleToggle)
+            graphs.createLineAndScatterChart(source, toggleContext)
             break;
         case 'waterfall':
             //graphs.createWaterfallChart(source, doubleToggle)
@@ -110,8 +110,13 @@ const toggleChart = (selected, dataSets) => {
     // source is the correct dataset with updated column names
     const source = dataSets[setNumber]
 
+    // get label and units context where applicable
+    const context = source.context
+    let toggleContext
+    toggleContext = context ? { doubleToggle, context, chartNumber } : { doubleToggle }
+
     // switch case to determine which kind of vis to make and which dataset to reference
-    dataVizSwitch(source.type, source, doubleToggle)
+    dataVizSwitch(source.type, source, toggleContext)
 }
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
@@ -142,8 +147,11 @@ const getIndicatorSnippet = (grid, snippet) => {
                 // apply toggle functionality to all togglable elements in the snippet, if they exist
                 if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz))
 
+                // initialize default context object for charts
+                const context = 'initial'
+
                 // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
-                hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, 0))
+                hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, context))
             }
 
             // load the default text + add tab click handler

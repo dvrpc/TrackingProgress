@@ -416,6 +416,10 @@ svg.nvd3-svg{
     height: 100%;
     width: 100%;
 }
+/* this doesn't work but look into giving the y-axis-labels right space. also tried .nv-y */
+/* .nv-axisLabel{
+    margin-right: 20px;
+} */
 
 
 /*******************************/

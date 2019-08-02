@@ -3,30 +3,64 @@
 /************************************************************************************/
 
 // input helper function
-const formatInpus = (source, doubleToggle) => {
+const formatInpus = (source, toggleContext) => {
     // the name of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
     
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
     
-    // determine which chart to grab from the array of possibilities
-    let chartName = doubleToggle ? source.dataSource[doubleToggle] : source.dataSource[0]
-    const dataSource = `./data/${chartName}.csv`
+    let labels, units, chartName;
+
+    // abstract context code to keep things DRY
+    const formatContext = (index, hasDouble) => {
+        const formattedName = hasDouble ? source.dataSource[index] : source.dataSource[0]
+        const formatContext = toggleContext.context
+
+        let formattedLabels = formatContext.keepLabels ? formatContext.labels[0] : formatContext.labels[index]
+        let formattedUnits = formatContext.keepUnits ? formatContext.units[0] : formatContext.units[index]
+        
+        return [formattedLabels, formattedUnits, formattedName]
+    }
+
+    // index all at 0 for initial state
+    if(toggleContext === 'initial') {
+        const hasContext = source.context
+
+        if(hasContext) {
+            labels = hasContext.labels[0]
+            units = hasContext.units[0]
+        }
+
+        chartName = source.dataSource[0]
+
+    // regular case w/context: determine if using double toggles or not to index the context obj
+    }else if(toggleContext.context) {
+        [labels, units, chartName] = toggleContext.doubleToggle > -1 ? formatContext(toggleContext.doubleToggle, true) : formatContext(toggleContext.chartNumber, false)
     
-    return [container, dataSource, source]
+    // regular case no context: just get chartName
+    }else {
+        chartName = source.dataSource[0]
+    }
+
+    const dataSource = `./data/${chartName}.csv`
+
+    // if neither labels nor units need updating, make context null so the viz fncs can avoid calling formatLabels
+    let context = labels || units ? {labels, units} : null
+    
+    return [container, dataSource, source, context]
 }
 
 // labelling helper function 
-const formatLabels = (axis, margin, units, label) => {
-    units ? axis.tickFormat(d3.format(axisFormats[units])) : axis.tickFormat(d3.format('.3n'))
+const formatLabels = (axis, margin, context) => {
+    context.units ? axis.tickFormat(d3.format(axisFormats[context.units])) : axis.tickFormat(d3.format('.3n'))
             
     // add axis label & update margin to compensate
-    if(label) {
-        axis.axisLabel(label)
+    if(context.labels) {
+        axis.axisLabel(context.labels)
 
-        // axis label font size is 12, so add 14 to margin 
-        margin.left += 14
+        // give axis label breathing room (note: margin.right adds to the graph itself, need to find a way to add margin right to the labels)
+        margin.left += 20
     }
 }
 
@@ -38,9 +72,9 @@ const axisFormats = {
     'millions': '.3n'
 }
 
-const createStackedBarChart = (source, doubleToggle) => {
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+const createStackedBarChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
     d3.csv(dataSource, rows => {
 
@@ -66,7 +100,7 @@ const createStackedBarChart = (source, doubleToggle) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
+            if(context) formatLabels(chart.yAxis, chart.margin(), context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -77,9 +111,9 @@ const createStackedBarChart = (source, doubleToggle) => {
     })
 }
 
-const createLinePlusBarChart = (source, doubleToggle) => {
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+const createLinePlusBarChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
     
     let barIndex = source.data[0].type === 'bar' ? 0 : 1
     let lineIndex = barIndex === 0 ? 1 : 0
@@ -104,7 +138,7 @@ const createLinePlusBarChart = (source, doubleToggle) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            formatLabels(chart.y1Axis, chart.margin(), source.yAxisUnits, source.axisLabel)
+            if(context) formatLabels(chart.y1Axis, chart.margin(), context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -115,9 +149,9 @@ const createLinePlusBarChart = (source, doubleToggle) => {
     })
 }
 
-const createLineChart = (source, doubleToggle) => {
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+const createLineChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
     d3.csv(dataSource, rows => {
         source.data.forEach(series => {
@@ -139,7 +173,7 @@ const createLineChart = (source, doubleToggle) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            formatLabels(chart.yAxis, chart.margin(), source.yAxisUnits, source.axisLabel)
+            if(context) formatLabels(chart.yAxis, chart.margin(), context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -150,9 +184,9 @@ const createLineChart = (source, doubleToggle) => {
     })
 }
 
-const createLineAndScatterChart = (source, doubleToggle) => {
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+const createLineAndScatterChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
     let scatterIndex = source.data[0].type === 'scatter' ? 0 : 1
     let lineIndex = scatterIndex === 0 ? 1 : 0
@@ -182,7 +216,7 @@ const createLineAndScatterChart = (source, doubleToggle) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            formatLabels(chart.yAxis1, chart.margin(), source.yAxisUnits, source.axisLabel)
+            if(context) formatLabels(chart.yAxis1, chart.margin(), context)
 
             chart.yAxis1.tickFormat(d3.format(','))
             
@@ -196,9 +230,9 @@ const createLineAndScatterChart = (source, doubleToggle) => {
 
 }
 
-const createStackedAreaChart = (source, doubleToggle) => {
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+const createStackedAreaChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
     d3.csv(dataSource, rows => {
 
@@ -225,6 +259,9 @@ const createStackedAreaChart = (source, doubleToggle) => {
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
+
+            // format yAxis units and labels if necessary
+            if(context) formatLabels(chart.yAxis1, chart.margin(), context)
             
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -235,13 +272,13 @@ const createStackedAreaChart = (source, doubleToggle) => {
     })
 }
 
-const createdStackedBarPlusLine = (source, doubleToggle) => {
+const createdStackedBarPlusLine = (source, toggleContext) => {
     let lineMax = 0;
     let barMax = 0;
     let max;
 
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
     d3.csv(dataSource, rows => {
         source.data.forEach(series => {
@@ -274,6 +311,9 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
+
+            // format yAxis units and labels if necessary
+            if(context) formatLabels(chart.yAxis1, chart.margin(), context)
             
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -285,9 +325,9 @@ const createdStackedBarPlusLine = (source, doubleToggle) => {
 }
 
 // waterfall charts are just fancy multi-bar charts. Each "waterfall" is it's own bar
-const createWaterfallChart = (source, doubleToggle) => {
+const createWaterfallChart = (source, toggleContext) => {
     let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, doubleToggle)
+    [container, dataSource, source] = formatInpus(source, toggleContext)
 }
 
 export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createdStackedBarPlusLine, createLineAndScatterChart, createWaterfallChart};
