@@ -489,6 +489,10 @@ footer{
 /**************************************/
 /*********** Media Queries ***********/
 @media all and (min-width: 1366px){
+    .indicators-grid-item {
+        width: 10.5vw;
+        height: 10.5vw;
+    }
     .icon-set-img{
         height: 135px;
         width: 135px;

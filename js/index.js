@@ -1,4 +1,4 @@
-import { toggleIndicators, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
+import { toggleIndicators, indicatorHoverFlip, clickIndicator, toggleGridView } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
 
 
@@ -6,19 +6,14 @@ import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing
 /******************** Set up *********************/
 // get a handle on the splash page elements
 const toGrid = document.getElementById('to-grid')
-const splashPage = document.getElementById('splash-page')
 
 // get a handle on the dashboard elements
-const dashboard = document.getElementById('dashboard')
-const grid = dashboard.children[1]
+const grid = document.querySelector('.indicators-grid')
 const categories = [... document.querySelectorAll('.icon-set')]
 
 // get a handle on the indicator page elements
 const back = document.querySelector('.back-to-dash')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
-
-// keep track of dashboard position
-let dashView = false
 
 
 /**************************************************/
@@ -76,30 +71,6 @@ window.onhashchange = updateView
 // handles refresh (only gets triggered when refreshing an indicator page)
 window.onload = refreshView
 
-// handle dashboard jawn sesh
-const toggleGridView = () => {
-    // short out if user is already in grid
-    if(dashView) return
-
-    const offset = dashboard.getBoundingClientRect().top
-
-    console.log('called toggle grid with offset of ', offset)
-
-    if(offset <= 70) {
-        // hide the splash page
-        splashPage.style.height = 0
-
-        // undo the margin that allows splash page and dash to coexist
-        dashboard.style.marginTop = '8vh'
-
-        // scroll to the top of the page
-        window.scrollTo(0,0)
-
-        // flip dashView bool to limit scroll interactions
-        dashView = true
-    }
-}
-
 // if not already in dash view, listen for scroll events
-// @TODO: remove this event listener when a user loads the indicator pages. It fires but without any purpose
+// @TODO: remove this event listener when a user loads the indicator pages. It listens but with no purpose so better to not
 window.onscroll = toggleGridView

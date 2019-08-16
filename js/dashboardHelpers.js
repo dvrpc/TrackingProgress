@@ -1,8 +1,14 @@
 // get a handle on elements to make/remove the dashboard
-const grid = document.querySelector('.indicators-grid')
+const splashPage = document.getElementById('splash-page')
+const dashboard = document.getElementById('dashboard')
+const grid = dashboard.children[1]
 const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 const categories = [... document.querySelectorAll('.icon-set')]
+
+// keep track of grid position
+let dashView = false
+
 
 // rerence to the clicked category (this has to exist outside the scope of toggleIndicators, otherwise clicking an active category won't reset to all indicators view)
 let clickedRef;
@@ -197,4 +203,26 @@ const getIndicatorDetails = el => {
     return getIndicatorDetails(parent)
 }
 
-export {toggleIndicators, fade, makeDashboard, removeDashboard, indicatorHoverFlip, clickIndicator}
+// handle dashboard jawn sesh
+const toggleGridView = () => {
+    // short out if user is already in grid
+    if(dashView) return
+
+    const offset = dashboard.getBoundingClientRect().top
+
+    if(offset <= 70) {
+        // hide the splash page
+        splashPage.style.height = 0
+
+        // undo the margin that allows splash page and dash to coexist
+        dashboard.style.marginTop = '8vh'
+
+        // scroll to the top of the page
+        window.scrollTo(0,0)
+
+        // flip dashView bool to limit scroll interactions
+        dashView = true
+    }
+}
+
+export {toggleIndicators, fade, makeDashboard, removeDashboard, indicatorHoverFlip, clickIndicator, toggleGridView}

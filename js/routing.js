@@ -1,8 +1,9 @@
 import { makeIndicatorPage } from './indicatorHelpers.js'
 import { makeDashboard, removeDashboard } from './dashboardHelpers.js';
 
-const appWrapper = document.getElementById('dashboard')
-const grid = document.querySelector('.indicators-grid')
+const dashboard = document.getElementById('dashboard')
+const grid = dashboard.children[1]
+const splashPage = document.getElementById('splash-page')
 
 
 // @TODO: update baseURL for production
@@ -38,6 +39,11 @@ const updateView = (transition, hashParam) => {
     let hash = hashParam ? hashParam : sanitizeHash(location.hash)
 
     if(hash){
+        // handle splash page visibility
+        splashPage.style.height = 0
+        dashboard.style.marginTop = '8vh'
+        
+        // create indicator page and hide dash (if needed)
         let hashArray = hash.split('/')
         makeIndicatorPage(hashArray)
         grid.classList.contains('fade-right') ? null : removeDashboard(transition)
@@ -57,7 +63,7 @@ const refreshView = () => {
         updateView(false, hash)
     }
 
-    appWrapper.style.visibility = 'visible'
+    dashboard.style.visibility = 'visible'
 }
 
 export {setIndicatorURL, setIndexURL, refreshView, updateView}
