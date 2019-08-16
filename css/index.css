@@ -59,21 +59,6 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-#nav-header{
-    color: #4fa3a8;
-    font-weight: 100;
-    font-size: 2.2em;
-    letter-spacing: 3px;
-}
-#nav-header-span{
-    letter-spacing: 1px;
-    font-weight: 900;
-    text-shadow: 1px 1px #4fa3a8;
-}
-.nav-imgs{
-    height: 50%;
-    width: 50%;
-}
 #dvrpc-logo{
     display: block;
     float: right;
@@ -393,7 +378,9 @@ nav{
     display: flex;
 }
 .chart-src{
-    margin-left: 5%;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
 }
 
 
@@ -529,10 +516,10 @@ footer{
     }
     #dvrpc-logo{
         border-right: none;
+        width: 75%
     }
-    .nav-imgs{
-        height: 35%;
-        width: 35%;
+    #tp-logo{
+        height: 70%;
     }
     /* Mobile styles for the dashboard page */
     .indicators-wrapper{
