@@ -142,6 +142,7 @@ const fade = (grid, indicatorsNav, categories) => {
     categories.forEach(category => category.classList.add('fade-out'))
 }
 
+// reveal flipside content for indicators
 const indicatorHoverFlip = (indicator, flipTo) => {
     
     // get the target of the mose event
