@@ -18,6 +18,7 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 /**************************************************/
 /**************** Get to Dashboard ****************/
+// @TODO: reconfigure this to work with the splash page now that it has actual content
 toGrid.onclick = e => {
     e.preventDefault()
 

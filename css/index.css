@@ -94,6 +94,10 @@ header{
 details{
     margin-bottom: 2%;
 }
+details[open] summary {
+    color: #4fa3a8;
+    font-weight: 700;
+}
 summary{
     font-size: 1.3rem;
 }
