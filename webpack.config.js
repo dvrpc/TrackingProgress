@@ -18,6 +18,7 @@ const snippets = [
     'jobGrowth',
     'landConsumption',
     'milesDriven',
+    'pavementConditions',
     'populationGrowth',
     'racialAndEthnicDisparities',
     'roadwayReliability',

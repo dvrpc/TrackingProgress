@@ -50,7 +50,7 @@ fieldset{
 
 
 /*******************************/
-/*********** Navbar ***********/
+/*********** Header ************/
 header{
     position: fixed;
     top: 0;
@@ -63,24 +63,71 @@ header{
     align-items: center;
     z-index: 3;
 }
+#tp-logo{
+    max-height: 95%;
+}
 #dvrpc-logo{
     display: block;
     float: right;
+    max-height: 95%;
 }
 
 
 /********************************************/
-/*********** Indicator Dashboard ***********/
+/**************** Splash Page ***************/
 #splash-page{
-    /* add display: block so the transition can work */
-    position: fixed;
-    width: 100%;
-    top: 8vh;
-    height: 50vh;
+    /* position: fixed; */
+    margin-top: 8vh;
+    /* @TODO: fix this with a better jawn */
     padding: 3%;
     background: #e9e9e9
 }
-
+#tp-header{
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 300;
+}
+#tp-header-name{
+    color: #4fa3a8;
+    font-weight: 800;
+}
+details{
+    margin-bottom: 2%;
+}
+summary{
+    font-size: 1.3rem;
+}
+summary:hover{
+    cursor: pointer;
+}
+.gif-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gif-figure{
+    background: #f7f7f7;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    width: 300px;
+}
+.gif-caption{
+    padding: 1% 3%;
+    font-size: 0.8rem;
+    max-width: 100%;
+}
+#to-grid{
+    background: #4fa3a8;
+    padding: 5px 10px;
+    color: #f7f7f7;
+    border-radius: 3px;
+    border: none;
+    font-size: 0.9rem;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+}
+#to-grid:hover{
+    cursor: pointer;
+}
 
 /********************************************/
 /*********** Indicator Dashboard ***********/
@@ -90,11 +137,15 @@ header{
     width: 100%;
     min-height: calc(92vh - 16px);
     border-top: 8px solid white;
-    /* margin: 8px 0; */
     margin-bottom: 8px;
     visibility: hidden;
     background: #fff;
-    margin-top: calc(58vh + 6%);
+    /* 
+        @TODO: once the content on the splash page is finalized and added, a more robust solution to
+        the absolute positioning jawn is to calculate the height of #splash-page on load and set that
+        + 8vh as the margin-top. But that's for later when the content is ready. 
+     */
+    /* margin-top: 50vh; */
 }
 .indicators-nav{
     position: absolute;
