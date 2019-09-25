@@ -116,6 +116,11 @@ summary:hover{
     font-size: 0.8rem;
     max-width: 100%;
 }
+#explore-indicators-p{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
 #to-grid{
     background: #4fa3a8;
     padding: 5px 10px;
