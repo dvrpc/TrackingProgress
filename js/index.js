@@ -24,12 +24,11 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 toGrid.onclick = e => {
     e.preventDefault()
 
-    // get grid distance from top in order to go 8px less than that to account for the top margin 
-    const bounds = grid.getBoundingClientRect()
-    const height = bounds.top - 16
+    // get splash page height + grid padding to trigger the onscroll effect
+    const splashHeight = splash.clientHeight + 10
 
     window.scrollTo({
-        top: height,
+        top: splashHeight,
         behavior: 'smooth'
     })
 }
@@ -39,17 +38,20 @@ document.onscroll = () => {
     if(!splashVisible) return
     
     const top = grid.getBoundingClientRect().top
+    const headerHeight = window.innerHeight * 0.08
 
-    if(top <= 70) {
-        // hide the splash page @todo: better solution?
+    if(top <= headerHeight) {
         splash.style.position = 'fixed'
-        splash.style.height = 0
+        splash.style.visibility = 'collapse'
 
         // undo the margin that allows splash page and dash to coexist
         dashboard.style.marginTop = '8vh'
 
         // scroll to the top of the page
         window.scrollTo(0,0)
+
+        // display the (i) into the header
+        // help.style.visibility = 'visible'
 
         // flip splash state
         splashVisible = false
@@ -62,10 +64,18 @@ document.onscroll = () => {
         // will also scroll to the top of the page
         // ^^ THIS must exist in a separate function because duh
 /*infoJawn.onclick = e => {
-    // reveal the thing
+    // reveal splash page
+    splash.style.position = 'initial'
+    splace.style.visibility = 'visible'
+
+    // scroll to top of the page
+    window.scrollTo(0,0)
 
     // flip the splash bool to listen to scroll events again
     splashVisible = true
+
+    // hide the (i)
+    help.style.visibility = 'collapse'
 }*/
 
 
@@ -97,7 +107,6 @@ grid.onclick = e => {
 
 // return to dashboard view
 back.onclick = () => setIndexURL()
-
 
 
 /*************************************************/
