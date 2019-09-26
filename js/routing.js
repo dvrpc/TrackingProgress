@@ -40,7 +40,8 @@ const updateView = (transition, hashParam) => {
 
     if(hash){
         // handle splash page visibility
-        splashPage.style.height = 0
+        splashPage.style.position = 'fixed'
+        splashPage.style.visibility = 'collapse'
         dashboard.style.marginTop = '8vh'
         
         // create indicator page and hide dash (if needed)
