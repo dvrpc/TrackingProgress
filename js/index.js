@@ -1,11 +1,13 @@
-import { toggleIndicators, indicatorHoverFlip, clickIndicator, toggleGridView } from './dashboardHelpers.js'
+import { toggleIndicators, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
 
 
 /**************************************************/
 /******************** Set up *********************/
 // get a handle on the splash page elements
+const splash = document.getElementById('splash-page')
 const toGrid = document.getElementById('to-grid')
+let splashVisible = true
 
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
@@ -17,8 +19,8 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 
 /**************************************************/
-/**************** Get to Dashboard ****************/
-// @TODO: reconfigure this to work with the splash page now that it has actual content
+/*************** Splash Page events ***************/
+// scroll the grid into view which will trigger the splash page hide function
 toGrid.onclick = e => {
     e.preventDefault()
 
@@ -31,6 +33,40 @@ toGrid.onclick = e => {
         behavior: 'smooth'
     })
 }
+
+// when the splash page is visible, listen to scroll events to know when to hide it
+document.onscroll = () => {
+    if(!splashVisible) return
+    
+    const top = grid.getBoundingClientRect().top
+
+    if(top <= 70) {
+        // hide the splash page @todo: better solution?
+        splash.style.position = 'fixed'
+        splash.style.height = 0
+
+        // undo the margin that allows splash page and dash to coexist
+        dashboard.style.marginTop = '8vh'
+
+        // scroll to the top of the page
+        window.scrollTo(0,0)
+
+        // flip splash state
+        splashVisible = false
+    }
+}
+
+// bring back the splash page
+    // @TODO: add (i) button to bring splash page back. Put it next to the TP icon w/ an attention-grabbing animation
+        // clicking on it will set splash-page height to 100 and display/visibility back
+        // will also scroll to the top of the page
+        // ^^ THIS must exist in a separate function because duh
+/*infoJawn.onclick = e => {
+    // reveal the thing
+
+    // flip the splash bool to listen to scroll events again
+    splashVisible = true
+}*/
 
 
 /**************************************************/
@@ -71,7 +107,3 @@ window.onhashchange = updateView
 
 // handles refresh (only gets triggered when refreshing an indicator page)
 window.onload = refreshView
-
-// if not already in dash view, listen for scroll events
-// @TODO: remove this event listener when a user loads the indicator pages. It listens but with no purpose so better to not
-window.onscroll = toggleGridView

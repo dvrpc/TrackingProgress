@@ -76,20 +76,33 @@ header{
 /********************************************/
 /**************** Splash Page ***************/
 #splash-page{
-    /* position: fixed; */
     margin-top: 8vh;
-    /* @TODO: fix this with a better jawn */
     padding: 3%;
-    background: #e9e9e9
+    /* og grey */
+    /* background: #e9e9e9; */
+    /* lighter version of the main teal... */
+    background: rgba(79,163,168,0.1);
+    visibility: visible;
+    /* transition: visibility 1s;
+    -webkit-transition: visibility 1s;
+    -moz-transition: visibility 1s;
+    -o-transition: visibility 1s;
+    transition-timing-function: linear; */
 }
 #tp-header{
     margin-top: 0;
     font-size: 2rem;
     font-weight: 300;
+    text-align: center;
 }
 #tp-header-name{
     color: #4fa3a8;
     font-weight: 800;
+}
+.splash-text{
+    width: 700px;
+    margin: 2% auto;
+    line-height: 1.7rem;
 }
 details{
     margin-bottom: 2%;
@@ -119,11 +132,6 @@ summary:hover{
     padding: 1% 3%;
     font-size: 0.8rem;
     max-width: 100%;
-}
-#explore-indicators-p{
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 1%;
 }
 #to-grid{
     background: #4fa3a8;
