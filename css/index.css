@@ -83,11 +83,6 @@ header{
     /* lighter version of the main teal... */
     background: rgba(79,163,168,0.1);
     visibility: visible;
-    /* transition: visibility 1s;
-    -webkit-transition: visibility 1s;
-    -moz-transition: visibility 1s;
-    -o-transition: visibility 1s;
-    transition-timing-function: linear; */
 }
 #tp-header{
     margin-top: 0;
@@ -591,6 +586,7 @@ footer{
     body{
         font-size: 14px;
     }
+
     /* Mobile styles for nav */
     #nav-header{
         font-size: 1.3em;
@@ -605,6 +601,34 @@ footer{
     #tp-logo{
         height: 70%;
     }
+
+    /* Mobile styles for the splash page */
+    #tp-header{
+        /* @TODO: force a line break after tp-header-name */
+        font-size: 1.5rem;
+    }
+    #tp-header-name{
+        width: 100%;
+    }
+    .splash-text{
+        width: 90%;
+        line-height: 1.6rem;
+        margin-bottom: 4%;
+    }
+    details{
+        margin-bottom: 4%;
+    }
+    summary{
+        font-size: 1.1rem;
+    }
+    .gif-row{
+        flex-direction: column;
+    }
+    #to-grid{
+        margin-bottom: 2%;
+    }
+
+
     /* Mobile styles for the dashboard page */
     .indicators-wrapper{
         flex-direction: column;
@@ -666,6 +690,7 @@ footer{
         margin-left: 100vw;
         display: none;
     }
+
 
     /* Mobile styles for the indicator subpages */
     .fade-out{
