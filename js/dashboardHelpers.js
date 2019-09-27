@@ -112,7 +112,9 @@ const toggleIndicators = (element, indicators) => {
     })
 
     // get a handle on the id of the clicked div in order to grab its corresponding indicators
-    let category = categoryName+'-indicator'
+
+    // @TODO here
+    //let category = categoryName+'-indicator'
 
     // handle 3 conditions & expected behaviors: 
         // all options visible & user clicks a category --> filters to just that categories indicators
@@ -126,11 +128,15 @@ const toggleIndicators = (element, indicators) => {
         clickedRef = ''
     }else{    
         indicators.forEach(indicator => {
-            if(!indicator.classList.contains(category)) indicator.classList.add('inactive')
+            const categories = indicator.dataset.categories.split(' ')
+            console.log('categories data attribute ', categories)
+            console.log('category name ', categoryName)
+            // @TODO here (replace .classList.contains with .categories.contains(categoryName))
+            if(!categories.includes(categoryName)) indicator.classList.add('inactive')
             else {
                 indicator.classList.remove('inactive')
                 indicator.style.background = catColors[categoryName]
-        }
+            }
         })
         clickedRef = element
     }
@@ -182,7 +188,9 @@ const clickIndicator = e => {
 
     // get the title from it's id
     let title = indicator.id ? indicator.id : null
-    const primaryCategory = indicator.classList[1]
+    //const primaryCategory = indicator.classList[1]
+    // @TODO: here
+    const primaryCategory = indicator.dataset.primary
 
     return [title, primaryCategory]
 }

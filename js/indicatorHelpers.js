@@ -211,15 +211,21 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 
     // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
     indicators.forEach(indicator => {
-
-        if(indicator.classList.contains(primaryCategory)){
+        const indicatorPrimaryCategory = indicator.dataset.primary
+        console.log('indicator primary ', indicatorPrimaryCategory)
+        console.log('primary ', primaryCategory)
+        
+        // @TODO here
+        if(indicatorPrimaryCategory === primaryCategory){
 
             //  create a link to the indicator page that will go on the side bar
             let sideLink = document.createElement('a')
 
             // get a handle on the necessary info
             const linkTitle = indicator.children[1].textContent
-            const indicatorPrimaryCategory = indicator.classList[1]
+
+            // @TODO here
+            //const indicatorPrimaryCategory = indicator.classList[1]
 
             // update basic info + styling
             sideLink.textContent = linkTitle
