@@ -92,7 +92,7 @@ const createStackedBarChart = (source, toggleContext) => {
                 .y((d, i) => d[1])
                 // hide controls b/c were not interested in grouped bar (also it gets cluttered on smaller screens to this is a double win)
                 .showControls(false)
-                .forceY(0)
+                .forceY(source.range || 0)
                 .clipEdge(true)
                 .stacked(true)
             
@@ -130,9 +130,11 @@ const createLinePlusBarChart = (source, toggleContext) => {
                 .margin({top: 35, right: 65, bottom: 35, left: 55})
                 .focusEnable(false)
                 .x(d => d[0])
-                .forceY([0])
                 .y((d, i) => d[1])
 
+            // set yMax
+            chart.lines.forceY(source.range || 0)
+            chart.bars.forceY(source.range || 0)
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)

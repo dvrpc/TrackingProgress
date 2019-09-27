@@ -9,7 +9,7 @@ const snippets = [
     'commuteMode',
     'educationalAttainment',
     'emissions',
-    'exports',
+    'exportedGoods',
     'globalConnectivity',
     'housingActivity',
     'housingAffordability',

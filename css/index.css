@@ -400,8 +400,6 @@ summary:hover{
     margin: 0;
     background: #f9f9f9;
     padding: 3%;
-    /* @TODO: consider removing this box shadow */
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 }
 .back-to-dash{
     color: #f7f7f7;
