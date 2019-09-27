@@ -364,27 +364,27 @@ summary:hover{
 }
 #description-wrapper{
     padding: 3% 0;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
 }
 #description-wrapper-tabs{
     display: flex;
     justify-content: space-between;
 }
-.description-tab-middle{
-    border-right: 2px solid grey;
-    border-left: 2px solid grey;
-}
 .description-wrapper-tab-headers{
-    width: 33%;
+    border-right: 2px solid grey;
+    width: 25%;
     text-align: center;
     margin: 0;
-    padding: 2% 0;
-    font-size: 1.3em;
+    padding: 2% 5px;
+    font-size: 1.2em;
 }
 .description-wrapper-tab-headers:hover{
     cursor: pointer;
     background: #f9f9f9;
+}
+#resource-tab{
+    border-right: none;
 }
 .active-tab{
     background: #f9f9f9;
@@ -453,9 +453,7 @@ summary:hover{
     display: flex;
 }
 .chart-src{
-    display: block;
-    width: 70%;
-    margin: 0 auto;
+    margin-left: 5%;
 }
 
 
