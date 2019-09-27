@@ -111,11 +111,6 @@ const toggleIndicators = (element, indicators) => {
         }
     })
 
-    // get a handle on the id of the clicked div in order to grab its corresponding indicators
-
-    // @TODO here
-    //let category = categoryName+'-indicator'
-
     // handle 3 conditions & expected behaviors: 
         // all options visible & user clicks a category --> filters to just that categories indicators
         // category already clicked & user clicks another one --> filters to just the new categories indicators
@@ -129,9 +124,6 @@ const toggleIndicators = (element, indicators) => {
     }else{
         indicators.forEach(indicator => {
             const categories = indicator.dataset.categories.split(' ')
-            console.log('categories data attribute ', categories)
-            console.log('category name ', categoryName)
-            // @TODO here (replace .classList.contains with .categories.contains(categoryName))
             if(!categories.includes(categoryName)) indicator.classList.add('inactive')
             else {
                 indicator.classList.remove('inactive')
@@ -174,8 +166,6 @@ const indicatorHoverFlip = (indicator, flipTo) => {
         children[1].style.display = 'flex'
         children[2].style.display = 'none'
     }
-    
-    //children[i].style.display === 'none' ? children[i].style.display = 'block' : children[i].style.display = 'none'
 }
 
 // get indicator information from grid click
@@ -188,8 +178,6 @@ const clickIndicator = e => {
 
     // get the title from it's id
     let title = indicator.id ? indicator.id : null
-    //const primaryCategory = indicator.classList[1]
-    // @TODO: here
     const primaryCategory = indicator.dataset.primary
 
     return [title, primaryCategory]

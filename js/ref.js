@@ -1510,8 +1510,8 @@ const snippetsRef = {
             resources: ``
         }
     },
-    'Exports': {
-        file: 'exports.html',
+    'Exported Goods': {
+        file: 'exportedGoods.html',
         d3: [
             {
                 type: 'line',
@@ -1833,7 +1833,7 @@ const snippetsRef = {
             resources: ``
         }
     },
-    'Emissions': {
+    'Greenhouse Gas Emissions': {
         file: 'emissions.html',
         d3: [
             {
