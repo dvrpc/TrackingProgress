@@ -126,7 +126,7 @@ const toggleIndicators = (element, indicators) => {
             indicator.style.background = '#4fa3a8'
         })
         clickedRef = ''
-    }else{    
+    }else{
         indicators.forEach(indicator => {
             const categories = indicator.dataset.categories.split(' ')
             console.log('categories data attribute ', categories)
