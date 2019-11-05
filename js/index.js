@@ -9,6 +9,10 @@ const splash = document.getElementById('splash-page')
 const toGrid = document.getElementById('to-grid')
 const help = document.getElementById('help-btn')
 const infoToggles = document.querySelectorAll('.info-toggle')
+const videosLoaded = {
+    dashSummary: false,
+    indicatorSummary: false
+}
 let splashVisible = true
 
 // get a handle on the dashboard elements
@@ -87,19 +91,25 @@ help.onclick = () => {
 infoToggles.forEach(toggle => toggle.onclick = toggle => loadVideos(toggle))
 
 // loop thru corresponding videos and add .mp4 src
-// @TODO: 
-    // return if not clicking on the summary
-    // return if closing the toggle or if the videos are already loaded
-const loadVideos = toggle => {
-    const figures = toggle.target.nextElementSibling.children
+const loadVideos = toggle => {    
+    let target = toggle.target
+
+    // return if not clicking on summary or if the videos are already loaded
+    if(target.nodeName != 'SUMMARY' || videosLoaded[target.id]) return
+        
+    const figures = target.nextElementSibling.children
     const length = figures.length
     var i = 0
 
+    // add src
     for(i; i < length; i++) {
         const video = figures[i].children[0]
         const videoName = video.id
         video.src = `../vid/${videoName}.mp4`
     }
+
+    // flip videos loaded bool
+    videosLoaded[target.id] = true
 }
 
 
