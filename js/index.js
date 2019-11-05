@@ -7,6 +7,7 @@ import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing
 // get a handle on the splash page elements
 const splash = document.getElementById('splash-page')
 const toGrid = document.getElementById('to-grid')
+const help = document.getElementById('help-btn')
 let splashVisible = true
 
 // get a handle on the dashboard elements
@@ -51,7 +52,7 @@ document.onscroll = () => {
         window.scrollTo(0,0)
 
         // display the (i) into the header
-        // help.style.visibility = 'visible'
+        help.classList.add('fade-in')
 
         // flip splash state
         splashVisible = false
@@ -59,14 +60,17 @@ document.onscroll = () => {
 }
 
 // bring back the splash page
-    // @TODO: add (i) button to bring splash page back. Put it next to the TP icon w/ an attention-grabbing animation
-        // clicking on it will set splash-page height to 100 and display/visibility back
-        // will also scroll to the top of the page
-        // ^^ THIS must exist in a separate function because duh
-/*infoJawn.onclick = e => {
+help.onclick = () => {
+    
+    // handle edge case where user clicks button while it's hidden
+    if(splashVisible) return
+    
     // reveal splash page
     splash.style.position = 'initial'
-    splace.style.visibility = 'visible'
+    splash.style.visibility = 'visible'
+
+    // remove dash margin
+    dashboard.style.marginTop = '0'
 
     // scroll to top of the page
     window.scrollTo(0,0)
@@ -75,8 +79,8 @@ document.onscroll = () => {
     splashVisible = true
 
     // hide the (i)
-    help.style.visibility = 'collapse'
-}*/
+    help.classList.remove('fade-in')
+}
 
 
 /**************************************************/
