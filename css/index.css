@@ -617,17 +617,25 @@ footer{
         border-right: none;
         width: 75%
     }
+    #logo-help-wrapper{
+        width: 50%;
+    }
+    #help-btn{
+        font-size: 1rem;
+        margin-left: 20px;
+        padding: 3px 10px;
+    }
     #tp-logo{
         height: 70%;
     }
 
     /* Mobile styles for the splash page */
     #tp-header{
-        /* @TODO: force a line break after tp-header-name */
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     #tp-header-name{
         width: 100%;
+        display: block;
     }
     .splash-text{
         width: 90%;
@@ -638,7 +646,7 @@ footer{
         margin-bottom: 4%;
     }
     summary{
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .gif-row{
         flex-direction: column;
