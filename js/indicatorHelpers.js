@@ -7,6 +7,40 @@ const grid = document.querySelector('.indicators-grid')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 const relatedIndicators = document.querySelector('.related-indicators')
 
+// colors to change indicator background to on cat filter
+const catLookup = {
+    'econo': {
+        dark:'#bd2756',
+        light: '#f0cfd0',
+        name: 'Economy'
+    },
+    'enviro': {
+        dark: '#7a9c3e',
+        light: '#e0e6cf',
+        name: 'Environment'
+    },
+    'comm': {
+        dark: '#006ba6',
+        light: '#c6d6ea',
+        name: 'Community'
+    },
+    'transpo': {
+        dark: '#dd6e1d',
+        light: '#f9dcc4',
+        name: 'Transportation'
+    },
+    'equity': {
+        dark: '#582267',
+        light: '#c6b7cd',
+        name: 'Equity'
+    },
+    'unset': {
+        light: 'grey',
+        dark: 'black',
+        name: 'unset'
+    }
+}
+
 // helper function to determine what data viz to make
 const dataVizSwitch = (type, source, toggleContext) => {
     switch (type) {
@@ -157,17 +191,31 @@ const getIndicatorSnippet = (grid, snippet) => {
             // load the default text + add tab click handler
             if(hasText){
                 const descriptionContainer = document.getElementById('indicator-description-container')
+                const tabs = document.getElementById('description-wrapper-tabs')
+                const activeTab = document.querySelector('.active-tab')
+                
+                let cat = descriptionContainer.dataset.primary || 'unset'
+                const color = catLookup[cat].dark
+                
                 descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
                 
-                const tabs = document.getElementById('description-wrapper-tabs')
-                tabs.onclick = e => handleTabs(e, hasText, descriptionContainer)
+                // add colors to tab/container based on primary category
+                descriptionContainer.style.border = `2px solid ${color}`
+                activeTab.style.background = color
+                activeTab.style.color = '#f7f7f7'
+                
+                // add tab functionality
+                tabs.onclick = e => handleTabs(e, hasText, descriptionContainer, color)
             }
         })
+    } else{
+        // @TODO: mockup a dummy snippet 404 page that tells the user the URL is invalid and to
+        // go back to the dashboardt
     }
 }
 
 // toggle tabs and text
-const handleTabs = (e, text, wrapper) => {
+const handleTabs = (e, text, wrapper, color) => {
     const clickedTab = e.target
     const oldTab = document.querySelector('.active-tab')
     
@@ -181,18 +229,37 @@ const handleTabs = (e, text, wrapper) => {
 
     // deactivate the old jawn
     oldTab.classList.remove('active-tab')
+    oldTab.style.background = 'initial'
+    oldTab.style.color = 'initial'
 
     // uset the new active tab
     clickedTab.classList.add('active-tab')
+    clickedTab.style.background = color
+    clickedTab.style.color = '#f7f7f7'
 }
 
 const makeRelatedSubheader = cat => {
-    return `
-        <div id="related-indicators-subheader-wrapper">
-            <img id="related-indicators-img" src='./img/sidenav/${cat}.png' alt='${cat} icons' />
-            <h3 id="related-indicators-subheader">Indicators:</h3>
-        </div>
-    `
+    const bg = catLookup[cat].light
+    const name = catLookup[cat].name
+    const frag = document.createDocumentFragment()
+    const wrapper = document.createElement('div')
+    const img = document.createElement('img')
+    const subheader = document.createElement('h3')
+
+    wrapper.id = 'related-indicators-subheader-wrapper'
+    wrapper.style.backgroundColor = bg
+    
+    img.src =  `./img/sidenav/${cat}.png`
+    img.alt = `${cat} icons`
+    
+    subheader.id = 'related-indicators-subheader'
+    subheader.textContent = `${name} Indicators:`
+
+    wrapper.appendChild(img)
+    wrapper.appendChild(subheader)
+    frag.appendChild(wrapper)
+
+    return frag
 }
 
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
@@ -230,7 +297,7 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
         }
     })
 
-    relatedIndicators.insertAdjacentHTML('afterbegin', subheader)
+    relatedIndicators.appendChild(subheader)
     relatedIndicators.appendChild(sideLinks)
 
     // make sideNav list (which was populated in the getIndicatorSnippet function) visible

@@ -342,7 +342,7 @@ summary:hover{
     opacity: 1;
     /* fallback bg for browsers that don't support linear gradient */
     background: #f2f2f2;
-    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(240,240,240,1) 20vh);
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(240,240,240,1) 25vh);
     color: #050709;
     /*15vw for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
     padding-left: 15vw;
@@ -364,7 +364,7 @@ summary:hover{
 .indicator-header{
     text-align: center;
     font-size: 2em;
-    margin-right: 5%;
+    margin: 0 25px 0 0;
 }
 .indicator-content-hr{
     margin: 4% 0 2% 0;
@@ -386,7 +386,7 @@ summary:hover{
     border-radius: 3px;
 }
 #description-wrapper{
-    padding: 3% 0;
+    padding: 17px 0 3% 0;
     width: 75%;
     margin: 0 auto;
 }
@@ -395,7 +395,6 @@ summary:hover{
     justify-content: space-between;
 }
 .description-wrapper-tab-headers{
-    border-right: 2px solid grey;
     width: 25%;
     text-align: center;
     margin: 0;
@@ -404,27 +403,25 @@ summary:hover{
 }
 .description-wrapper-tab-headers:hover{
     cursor: pointer;
-    background: #f9f9f9;
-}
-#resource-tab{
-    border-right: none;
+    text-decoration: underline;
 }
 .active-tab{
     background: #f9f9f9;
-    box-shadow: 1px -2px 3px rgba(0,0,0,0.2);
+    box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.2);
     overflow: hidden;
 }
 #indicator-description-container{
     margin: 0;
     background: #f9f9f9;
-    padding: 3%;
+    padding: 3% 5%;
 }
 .back-to-dash{
-    color: #f7f7f7;
+    color: #222;
     display: none;
     width: 100%;
     text-align: center;
-    padding-top: 1vh;
+    padding: 15px 0;
+    margin: 0;
     font-size: 1.4em;
     cursor: pointer;
 }
@@ -433,22 +430,21 @@ summary:hover{
     border-top: 1px solid #f7f7f7;
     width: 100%;
     text-align: center;
-    color: #f7f7f7;
+    color: #222;
 }
 #related-indicators-subheader-wrapper{
-    font-size: 1.1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 10px 4px;
+    /* @TODO: ideally get height to  align w/tabs bottom */
 }
-#related-indicators-img{
-    border-radius: 3px;
-    margin-right: 10px;
+#related-indicators-subheader{
+    margin: 0;
 }
 .sideLink{
     padding: 10% 2%;
     cursor: pointer;
-    color: #f7f7f7;
+    color: #222;
 }
 .sideLink:hover{
     color: #75b8c8;
@@ -558,7 +554,7 @@ footer{
     margin-left: 100vw;
 }
 .fade-narrow{
-    background: #222222;
+    background: #fcfcfc;
 }
 .notransition {
     -webkit-transition: none !important;

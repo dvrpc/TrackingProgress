@@ -105,7 +105,7 @@ const loadVideos = toggle => {
     for(i; i < length; i++) {
         const video = figures[i].children[0]
         const videoName = video.id
-        video.src = `../vid/${videoName}.mp4`
+        video.src = `./vid/${videoName}.mp4`
     }
 
     // flip videos loaded bool
