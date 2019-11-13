@@ -386,7 +386,7 @@ summary:hover{
     border-radius: 3px;
 }
 #description-wrapper{
-    padding: 17px 0 3% 0;
+    padding: 20px 0 3% 0;
     width: 75%;
     margin: 0 auto;
 }
@@ -407,7 +407,7 @@ summary:hover{
 }
 .active-tab{
     background: #f9f9f9;
-    box-shadow: 1px 0px 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px -1px 4px 1px rgba(0,0,0,0.2);
     overflow: hidden;
 }
 #indicator-description-container{
@@ -420,7 +420,7 @@ summary:hover{
     display: none;
     width: 100%;
     text-align: center;
-    padding: 15px 0;
+    padding: 17px 0;
     margin: 0;
     font-size: 1.4em;
     cursor: pointer;

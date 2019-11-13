@@ -200,7 +200,8 @@ const getIndicatorSnippet = (grid, snippet) => {
                 descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
                 
                 // add colors to tab/container based on primary category
-                descriptionContainer.style.border = `2px solid ${color}`
+                descriptionContainer.style.borderTop = `2px solid ${color}`
+                descriptionContainer.style.borderBottom = `2px solid ${color}`
                 activeTab.style.background = color
                 activeTab.style.color = '#f7f7f7'
                 
