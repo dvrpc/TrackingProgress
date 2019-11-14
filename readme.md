@@ -1,3 +1,3 @@
 # Tracking Progress
 
-Updating the Tracking Progress pages from walls of text to an interactive dashboard with maps, visualizations, and smaller walls of text.
+Tracking Progress is an interactive dashboard for exploring regularly updated data to gauge the region's progress towards long-range plan goals. Regional indicator data are used to better understand where the region is at the start of each plan update, identify successful programs, and align DVRPC's planning and implementation activities to serve as a guide for regional strategies.
