@@ -2,9 +2,9 @@
     <div id="indicator-header-wrapper">
         <h1 class="indicator-header">Affordable Housing</h1>
         <div class="indicator-category-icons">
+            <img class="snippet-categories" src="./img/comm-icon.png" alt="community category icon"/>
             <img class="snippet-categories" src="./img/equity-icon.png" alt="equity category icon"/>
             <img class="snippet-categories" src="./img/econo-icon.png" alt="economy category icon"/>
-            <img class="snippet-categories" src="./img/comm-icon.png" alt="communication category icon"/>
         </div>
     </div>
 
@@ -13,8 +13,9 @@
             <h2 id="why-tab" class="description-wrapper-tab-headers active-tab">Why is it Important?</h2>
             <h2 id="what-tab" class="description-tab-middle description-wrapper-tab-headers">What is it?</h2>
             <h2 id="how-tab" class="description-wrapper-tab-headers">How Are We Doing?</h2>
+            <h2 id="resource-tab" class="description-wrapper-tab-headers">Resources</h2>
         </div>
-        <div id="indicator-description-container"></div>
+        <div id="indicator-description-container" data-primary="comm"></div>
     </section>
 
     <hr class="indicator-header-hr"/>
@@ -23,11 +24,12 @@
     <div class="data-viz chart">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey, DVRPC</em></small>
 
     <hr class="indicator-content-hr" />
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Households' Housing Cost-Burden by Ownership Status</h2>
+        <h2 class="indicator-subheader toggle-subheader">Households' Housing Cost Burden by Ownership Status</h2>
         <span class="toggle-vr">|</span>
         <p>toggle data:</p>
         <form>
@@ -63,6 +65,7 @@
     <div class="data-viz chart2">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey, DVRPC</em></small>
 
     <hr class="indicator-content-hr" />
 
@@ -103,4 +106,5 @@
     <div class="data-viz chart3">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey, DVRPC</em></small>
 </article>
