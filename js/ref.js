@@ -519,9 +519,10 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['permits_graph_1'],
                 context: {
-                    labels: ['Annual','Cumulative'],
-                    keepLabels: false,
-                    units: false
+                    labels: ['Percentage'],
+                    keepLabels: true,
+                    units: ['percent'],
+                    keepUnits: true
                 },
                 columnOptions: [
                     ['ratio_annual'],
@@ -539,7 +540,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['permits_graph_2A','permits_graph_2B'],
                 context: {
-                    labels: ['label'],
+                    labels: ['Permits Issued'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
@@ -580,7 +581,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['permits_graph_3A','permits_graph_3B'],
                 context: {
-                    labels: ['label'],
+                    labels: ['Permits Issued'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
@@ -606,20 +607,37 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Large Multi-Family',
+                        'key': 'Large Multifamily',
                         columns: ['year', 'DVRPC- large multi-family']
                     },
                     {
-                        'key': 'Small Multi-Family',
+                        'key': 'Small Multifamily',
                         columns: ['year', 'DVRPC- small multi-family']
                     },
                     {
-                        'key': 'Single Family',
+                        'key': 'Single-Family',
                         columns: ['year', 'DVRPC- single family']
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: `<p>Residential construction activity can indicate the health of the region's real estate sector and general desirability, and where that construction occurs can also indicate if we are growing in a sustainable manner. The long-range plan seeks growth in appropriate areas for development—where transportation and utility infrastructure can support new development and won't come at the expense of natural habitats and resources.</p>`,
+            what: `<p>Residential construction activity data is derived from current reports and publications compiled by the U.S. Census Bureau's Residential Construction Statistics Division. Municipalities provide the Census Bureau with tabulations of the number of housing units authorized, according to types of structures. In the few cases where municipalities reported building permit activity for some months but not for all 12 months, the Census Bureau estimates the total yearly number of building permits based on past building permit activity.</p><p>The first chart looks at whether residential development activity is happening in desired areas. "Desired areas" is defined using DVRPC's planning areas: Core City, Developed Suburb, Growing Suburb, and Rural Areas. Municipalities classified as Core City or Developed Suburb is what is considered "desired." The chart shows the trendline for percentage of building permits approved since 1980 in these desired areas.</p><p>The second chart shows the count of all permits approved by all four planning areas.</p><p>The third chart presents units authorized by structure category. The following are definitions of categories used:</p><ul><li>Single-Family are single-unit structures, including attached, detached and semi-detached, and row houses, provided the units are separated by a ground-to-roof party wall. Mobile homes are not included.</li><li>Small Multifamily structures are those containing two to four units, including duplexes and triplexes.</li><li>Large Multifamily structures are those with five or more units. Garden apartments, and high-rise buildings are included in this category, as well as condominiums and cooperatively owned apartment buildings.</li></ul><p>All three charts allow you to view these data both annually and cumulatively.</p>`,
+            how: `<p>Since 2012 the annual percentage of residential building permits being approved in preferred growth areas of the region (those in Core City or Developed Suburbs planning areas) has risen back to over 60 percent of approvals—levels not seen since the early 1980s. This figure peaked at 69.3 percent in 2014, but has subsequently remained high with 63.5 percent of units approved in 2018. The late 1990s and early 2000s saw the lowest level of approvals in these smart growth areas, as units built drifted to municipalities categorized as Growing Suburbs and Rural Areas. From 1999's low 2018 had gained 29.8 percent. Historic development patterns brought the cumulative units approved since 1980 in preferred growth areas down below 50 percent by 1996. With a cumulative value of 49.4 percent in 2018, the region is set to flip the approvals since 1980 back to a majority in areas more sustainable for growth. When selecting only single planning areas in chart 2, it's clear that the recent uptick in housing activity in desired areas is largely driven by Core City municipalities—almost entirely from City of Philadelphia growth.</p><p>Total permits approved are seen in charts 2 and 3. The peak year for approving units in the region came in 1986 with close to 30,000 units approved. The most recent recession brought approvals to 20 percent of those peak levels in 2009 with 6,182 approved that year. 2018 had 12,075 units approved showing approvals have doubled since the slowest years, but housing activity is clearly not what it once was in the region.</p><p>Chart 3 shows a waning interest in single-family development which dominated small and large multifamily development structures until more recent years. 2018 saw nearly identical single-family (5,561) and large multifamily (5,562) approvals and an additional 952 small multifamily units. But the cumulative effects of decades of single-family preference means that more than 75 percent of units approved from 1980 to 2018 were single-family.</p>`,
+            resource: `
+            <p>See what DVRPC is doing in the area of livable community building on its <a href="/SmartGrowth/">Smart Growth page</a>.</p>
+            <p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for improving the trendline for smarter residential growth in the region:</p>
+            <ul>
+            <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42ad8e7179a56e2137827">Transit Oriented Development (TOD) Zoning</a></li>
+            <li><a href="/Connections2045/MIT/toolpage.html?tool=5c929a05e7179a0e4089fae5">Revitalization Planning &amp; Programs</a></li>
+            <li><a href="/Connections2045/MIT/toolpage.html?tool=5c929acde7179a0e4089fb5d">Brownfields Redevelopment</a></li>
+            <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42b77e7179a56e2137867">Build Missing Middle Housing</a></li>
+            <li><a href="/Connections2045/MIT/toolpage.html?tool=5c929ecee7179a0e4089fdad">Live/Work Zoning</a></li>
+            <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb7796efb6fc041ab92fe9b">Streamlined Permitting Processes</a></li>
+            </ul>
+            `
+        }
     },
     'Housing Affordability': {
         file: 'housingAffordability.html',
