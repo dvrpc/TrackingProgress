@@ -1857,7 +1857,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['emissions_1'],
                 context: {
-                    labels: ['mmt co2e'],
+                    labels: ['CO2 Equivalent (Millions of Metric Tons)'],
                     keepLabels: true,
                     units: ['singles'],
                     keepUnits: true
@@ -1868,7 +1868,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'mmt co2e',
+                        'key': 'CO2 Equivalent (Millions of Metric Tons)',
                         columns: ['year', 'emissions_total']
                     }
                 ]
@@ -1878,10 +1878,8 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['emissions_2'],
                 context: {
-                    labels: ['mmt co2e'],
-                    keepLabels: true,
+                    labels: ['CO2 Equivalent (Millions of Metric Tons)'],
                     units: ['singles'],
-                    keepUnits: true
                 },
                 data: [
                     {
@@ -1906,6 +1904,10 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: ['emissions_3'],
+                context: {
+                    labels: ['Percent of Energy Generation Mix'],
+                    units: ['percent']
+                },
                 data: [
                     {
                         'key': 'Coal',
@@ -1952,10 +1954,10 @@ const snippetsRef = {
                 dataSource: ['emissions_4'],
                 axisLabel: 'Degrees Farenheit',
                 context: {
-                    labels: ['Degrees Farenheit', 'Precipitation (inches)', 'Precipitation (inches)'],
+                    labels: ['Degrees Farenheit', 'Precipitation (inches)', '% of Precipitation from Severe Storms'],
                     keepLabels: false,
-                    units: ['singles'],
-                    keepUnits: true
+                    units: ['singles', 'singles', 'percent'],
+                    keepUnits: false
                 },
                 columnOptions: [
                     ['Temperature - Farenheit', '30 year trend - Temperature'],
