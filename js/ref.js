@@ -786,16 +786,7 @@ const snippetsRef = {
             why: `<p>Maintaining a diverse supply of housing at all price points helps ensure that all can find a place to live. It  is critical to attracting a sufficient labor force and maintaining economic attractiveness. Households paying greater than 35 percent of their income may have cost-burdens that make other necessary payments more difficult, and limit discretionary funds. Substandard housing conditions, steep home prices, and lower income levels all exacerbate inequities experienced within disadvantaged communities, and can prevent individuals and families from fully accessing the opportunities afforded to others in the region.</p>`,
             what: `<p>A commonly accepted threshold for what housing costs should be to remain affordable is 35 percent of a household's income. This is defined as <em>high cost-burden</em> for households. Fifty percent is thought to be the <em>severe housing cost-burden</em> threshold. The American Community Survey (ACS) reports percent of household income spent on housing by ownership status and in various percentage ranges.</p><p>All data by county and region are from the one-year ACS. Since Planning Areas are made up of sub-county municipal data and one-year data is not reported below county level, only five-year ACS data are available in these cases. In the charts, Planning Areas are represented in the final sample year of the 5-year period estimate. To avoid comparing datasets that use the same sample in common years, only period estimates with distinct sample years are used.</p><p>It is important to note that this indicator only measures cost-burden among the region's households, not the supply of affordable housing. The directionality of cost-burden trends can be impacted by changes in income and housing supply. If lower income households are priced out of the region or a county, that would create a downward trend in cost-burden, but it would not reflect a positive trend for an inclusive housing market.</p>`,
             how: `<p>The percent of households in the region with a high housing cost-burden (those paying over 35 percent of income on housing) has dropped in recent years to levels lower than any point in the period from 2005 to 2017, a 4.2 percent drop. The peak for this period came in the recession years—24.4 percent in 2011—but hovered around 22 percent prior to 2010. The percent dipped to 19.6 percent in 2017.</p><p>Recent years have seen more of the region’s households opting to rent. But while rental cost-burden has shown decreases, it has not been as quick to drop as owner cost-burden. Notably, the region’s Core City Planning Areas have had rather flat rental cost-burden declines, while other Planning Areas have seen increases—especially Rural Areas and Growing Suburbs.</p><p>Among those with a high cost-burden, those with a severe burden (greater than 50 percent of household income) has seen a similar decline. But Developed Communities and Core City Planning Areas have seen steeper declines in severe cost-burden than Growing Suburbs and Rural Areas.</p>`,
-            resource: `
-            <p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for improving housing options in the region:</p>
-            <ul>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42b77e7179a56e2137867">Build Missing Middle Housing</a></li>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42b41e7179a56e2137853">Housing Maintenance &amp; Rehabilitation Programs</a></li>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf43443e7179a56e2137e76">Inclusionary Zoning</a></li>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5c929ecee7179a0e4089fdad">Live/Work Zoning</a></li>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf4341de7179a56e2137e39">Accessory Dwelling Units</a></li>
-            </ul>
-            `
+            resource: `<p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for improving housing options in the region:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42b77e7179a56e2137867">Build Missing Middle Housing</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42b41e7179a56e2137853">Housing Maintenance &amp; Rehabilitation Programs</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf43443e7179a56e2137e76">Inclusionary Zoning</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5c929ecee7179a0e4089fdad">Live/Work Zoning</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf4341de7179a56e2137e39">Accessory Dwelling Units</a></li></ul>`
         }
     },
     'Job Growth': {
@@ -1201,7 +1192,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['IncomeQuintileTopBottomGap'],
                 context: {
-                    labels: false,
+                    labels: ['Growth Rate Difference'],
                     keepLabels: false,
                     units: ['percent'],
                     keepUnits: true
@@ -1232,9 +1223,9 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['IncomeQuintilesMean', 'IncomeQuintilesAbs', 'IncomeQuintilesPct'],
                 context: {
-                    labels: ['Dollars'],
-                    keepLabels: true,
-                    units: ['singles', 'singles', 'percent'],
+                    labels: ['Dollars (2017)', 'Change in Dollars (2017)', 'Percent Change in Dollars (2017)'],
+                    keepLabels: false,
+                    units: ['thousands', 'thousands', 'percent'],
                     keepUnits: false
                 },
                 columnOptions: [
@@ -1278,7 +1269,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['IncomeSegregation'],
                 context: {
-                    labels: ['Segregation Index'],
+                    labels: ['Population Needing to Move to Achieve Regional Distribution'],
                     keepLabels: true,
                     units: ['percent'],
                     keepUnits: true
@@ -1290,7 +1281,13 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: ``,
+            what: ``,
+            how: ``,
+            resource: ``
+        }
     },
     'Sex Disparities': {
         file: 'sexDisparities.html',
