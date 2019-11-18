@@ -12,8 +12,9 @@
             <h2 id="why-tab" class="description-wrapper-tab-headers active-tab">Why is it Important?</h2>
             <h2 id="what-tab" class="description-tab-middle description-wrapper-tab-headers">What is it?</h2>
             <h2 id="how-tab" class="description-wrapper-tab-headers">How Are We Doing?</h2>
+            <h2 id="resource-tab" class="description-wrapper-tab-headers">Resources</h2>
         </div>
-        <div id="indicator-description-container"></div>
+        <div id="indicator-description-container" data-primary="transpo"></div>
     </section>
 
     <hr class="indicator-header-hr"/>
@@ -28,8 +29,7 @@
                     <option value="0">All Roads</option>
                     <option value="1">Interstate</option>
                     <option value="2">NHS, non-interstate</option>
-                    <option value="3">Non-NHS, &#60;2000 ADT</option>
-                    <option value="4">Non-NHS, &#62;= 2000 ADT</option>
+                    <option value="3">Non-NHS</option>
                 </select>
             </fieldset>
         </form>
@@ -37,6 +37,7 @@
     <div class="data-viz chart">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>
 
     <hr class="indicator-content-hr" />
 
@@ -57,8 +58,7 @@
                     <option value="0">All Roads</option>
                     <option value="1">Interstate</option>
                     <option value="2">NHS, Non-Interstate</option>
-                    <option value="3">Non-NHS, &lt; 2000 ADT</option>
-                    <option value="4">Non-NHS, &#8807; 2000 ADT</option>
+                    <option value="3">Non-NHS</option>
                 </select>
             </fieldset>
         </form>
@@ -66,4 +66,5 @@
     <div class="data-viz chart2">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>
 </article>
