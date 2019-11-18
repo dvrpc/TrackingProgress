@@ -2732,62 +2732,77 @@ const snippetsRef = {
                     },
                     {
                         'key': 'NJ Suburbs',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- NJ Suburbs']
                     },
                     {
                         'key': 'PA Suburbs',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- PA Suburbs']
                     },
                     {
                         'key': 'Core City',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Core City']
                     },
                     {
                         'key': 'Developed Community',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Developed Community']
                     },
                     {
                         'key': 'Growing Suburb',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Growing Suburb']
                     },
                     {
                         'key': 'Rural Area',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Rural Area']
                     },
                     {
                         'key': 'Bucks',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Bucks']
                     },
                     {
                         'key': 'Burlington',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Burlington']
                     },
                     {
                         'key': 'Camden',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Camden']
                     },
                     {
                         'key': 'Chester',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Chester']
                     },
                     {
                         'key': 'Delaware',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Delaware']
                     },
                     {
                         'key': 'Gloucester',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Gloucester']
                     },
                     {
                         'key': 'Mercer',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Mercer']
                     },
                     {
                         'key': 'Montgomery',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Montgomery']
                     },
                     {
                         'key': 'Philadelphia',
+                        disabled: true,
                         columns: ['year', 'Total Developed Acres- Philadelphia']
                     }
                 ]
@@ -2906,62 +2921,77 @@ const snippetsRef = {
                     },
                     {
                         'key': 'NJ Suburbs',
+                        disabled: true,
                         columns: ['year', 'NJ Suburbs- Total Acres']
                     },
                     {
                         'key': 'PA Suburbs',
+                        disabled: true,
                         columns: ['year', 'PA Suburbs- Total Acres']
                     },
                     {
                         'key': 'Core City',
+                        disabled: true,
                         columns: ['year', 'Core City- Total Acres']
                     },
                     {
                         'key': 'Developed Community',
+                        disabled: true,
                         columns: ['year', 'Developed Community- Total Acres']
                     },
                     {
                         'key': 'Growing Suburb',
+                        disabled: true,
                         columns: ['year', 'Growing Suburb- Total Acres']
                     },
                     {
                         'key': 'Rural Area',
+                        disabled: true,
                         columns: ['year', 'Rural Area- Total Acres']
                     },
                     {
                         'key': 'Bucks',
+                        disabled: true,
                         columns: ['year', 'Bucks- Total Acres']
                     },
                     {
                         'key': 'Burlington',
+                        disabled: true,
                         columns: ['year', 'Burlington- Total Acres']
                     },
                     {
                         'key': 'Camden',
+                        disabled: true,
                         columns: ['year', 'Camden- Total Acres']
                     },
                     {
                         'key': 'Chester',
+                        disabled: true,
                         columns: ['year', 'Chester- Total Acres']
                     },
                     {
                         'key': 'Delaware',
+                        disabled: true,
                         columns: ['year', 'Delaware- Total Acres']
                     },
                     {
                         'key': 'Gloucester',
+                        disabled: true,
                         columns: ['year', 'Gloucester- Total Acres']
                     },
                     {
                         'key': 'Mercer',
+                        disabled: true,
                         columns: ['year', 'Mercer- Total Acres']
                     },
                     {
                         'key': 'Montgomery',
+                        disabled: true,
                         columns: ['year', 'Montgomery- Total Acres']
                     },
                     {
                         'key': 'Philadelphia',
+                        disabled: true,
                         columns: ['year', 'Philadelphia- Total Acres']
                     }
                 ]
@@ -2978,20 +3008,20 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- Federal','DVRPC- State','DVRPC- County','DVRPC- Municipal','DVRPC- Non-profit','DVRPC- Preserved Farmland'],
-                    ['PA Suburbs- Federal','PA Suburbs- State','PA Suburbs- County','PA Suburbs- Municipal','PA Suburbs- Non-profit','PA Suburbs- Preserved Farmland'],
                     ['NJ Suburbs- Federal','NJ Suburbs- State','NJ Suburbs- County','NJ Suburbs- Municipal','NJ Suburbs- Non-profit','NJ Suburbs- Preserved Farmland'],
+                    ['PA Suburbs- Federal','PA Suburbs- State','PA Suburbs- County','PA Suburbs- Municipal','PA Suburbs- Non-profit','PA Suburbs- Preserved Farmland'],
                     ['Core City- Federal','Core City- State','Core City- County','Core City- Municipal','Core City- Non-profit','Core City- Preserved Farmland'],
                     ['Developed Community- Federal','Developed Community- State','Developed Community- County','Developed Community- Municipal','Developed Community- Non-profit','Developed Community- Preserved Farmland'],
                     ['Growing Suburb- Federal','Growing Suburb- State','Growing Suburb- County','Growing Suburb- Municipal','Growing Suburb- Non-profit','Growing Suburb- Preserved Farmland'],
                     ['Rural Area- Federal','Rural Area- State','Rural Area- County','Rural Area- Municipal','Rural Area- Non-profit','Rural Area- Preserved Farmland'],
                     ['Bucks- Federal','Bucks- State','Bucks- County','Bucks- Municipal','Bucks- Non-profit','Bucks- Preserved Farmland'],
-                    ['Chester- Federal','Chester- State','Chester- County','Chester- Municipal','Chester- Non-profit','Chester- Preserved Farmland'],
-                    ['Delaware- Federal','Delaware- State','Delaware- County','Delaware- Municipal','Delaware- Non-profit','Delaware- Preserved Farmland'],
-                    ['Montgomery- Federal','Montgomery- State','Montgomery- County','Montgomery- Municipal','Montgomery- Non-profit','Montgomery- Preserved Farmland'],
                     ['Burlington- Federal','Burlington- State','Burlington- County','Burlington- Municipal','Burlington- Non-profit','Burlington- Preserved Farmland'],
                     ['Camden- Federal','Camden- State','Camden- County','Camden- Municipal','Camden- Non-profit','Camden- Preserved Farmland'],
+                    ['Chester- Federal','Chester- State','Chester- County','Chester- Municipal','Chester- Non-profit','Chester- Preserved Farmland'],
+                    ['Delaware- Federal','Delaware- State','Delaware- County','Delaware- Municipal','Delaware- Non-profit','Delaware- Preserved Farmland'],
                     ['Gloucester- Federal','Gloucester- State','Gloucester- County','Gloucester- Municipal','Gloucester- Non-profit','Gloucester- Preserved Farmland'],
                     ['Mercer- Federal','Mercer- State','Mercer- County','Mercer- Municipal','Mercer- Non-profit','Mercer- Preserved Farmland'],
+                    ['Montgomery- Federal','Montgomery- State','Montgomery- County','Montgomery- Municipal','Montgomery- Non-profit','Montgomery- Preserved Farmland'],
                     ['Philadelphia- Federal','Philadelphia- State','Philadelphia- County','Philadelphia- Municipal','Philadelphia- Non-profit','Philadelphia- Preserved Farmland'],
                 ],
                 data: [
@@ -3023,10 +3053,10 @@ const snippetsRef = {
             }
         ],
         text: {
-            why: `<p>There is only a finite amount of land available within the region and around the planet to provide homes for people, habitat for animals, grow food, preserve for recreation and natural resources, and to extract resources. Thanks to sprawling development patterns, land consumption in the region has increased at a rate nearly five times more than population growth over the last 75 years. There are many externalities that result from this inefficient land use:</p><ul><li>Increased reliance on motorized transportation and congestion.</li><li>Loss of open space and agricultural land.</li><li>Detrimental impacts to air and water quality.</li><li>Increased need for infrastructure and services.</li></ul>`,
-            what: `<p>This indicator shows how many acres have been developed in the Greater Philadelphia region and how many have been permanently preserved from development. Chart 1 shows how many acres are developed in the region and at subregion levels. Chart 2 provides  detail on the type of development that is using the land both regionally and subregionally. Chart 3 shows how many acres are permanently protected from future development, including by public and private ownership, at the region and subregion levels. Chart 4 shows who is the owner of protected open space (federal, state, or local government; non-profit, or preserved farmland) by a selected regional geography.</p>`,
-            how: `<p>The rapid rate of land development has been unsustainable over the last 25 years, but has slowed over the past decade. From 1990 to 2015, the total number of developed acres in the region has increased by 195,800, or 21 acres per day over this entire period. From 2005 to 2015, the rate of development decreased to just 11 acres per day, though the Great Recession was clearly a major reason for this slowdown and it's not clear that land consumption has entered a permanent slowdown.</p><p>Over the 25-year period, the region lost 78,600 acres of woodlands, a decrease of 9 percent; and 155,600 acres of agricultural lands, a decrease of 25 percent. Land devoted to single-family homes has increased by 22 percent, or 82,600 acres over the past 25 years. Chester County has developed the fastest over this period, with an additional 52,800 acres of development, an increase of 45 percent; followed by Bucks County, with 41,700 more acres developed, an increase of 34 percent; third is Montgomery County, with 35,400 acres developed, an increase of 24 percent.</p><p>The <em>Connections 2045</em> Plan maintains a goal of permanently preserving 1 million total acres in the region. As of 2016, Greater Philadelphia is nearly 60 percent of the way there, with 591,900 acres preserved. Since DVRPC started tracking protected open space in 2004, the total amount of protected land has increased by 170,000 acres or 40 percent. Over the last 12-years, preserved farmland has increased by 67,400 acres; Non-profit protected lands have increased by 57,700 acres, or 123 percent; and state-owned lands by 23,900 acres, or 12 percent.</p><p>Burlington County has the most protected open space in the region, thanks largely to the Pinelands, with 222,800 acres of preserved land in 2016. Chester County is second with 126,200 preserved acres, and Bucks County is third with 77,700 acres preserved. The region's rural areas account for 64 percent of all permanently protected open space, with 376,000 acres.</p>`,
-            resource: ``
+            why: `<p>There is a finite amount of land available within the region, but a variety of land uses that our region must balance to maintain a high quality of life for its residents and visitors. One of the most important land use decisions that our region faces is choosing to develop our open space for housing, business, or industry; or protect it for recreation, water quality, habitat, natural beauty, or the preservation of farmland. Over the past 75 years, land consumption in the region has increased at a rate nearly five times its population growth, resulting in sprawled development patterns that bring new construction to open space rather than to already developed communities. There are many negative effects of this inefficient use of the region's land, including:</p><ul><li>Increased reliance on motorized transportation, which in turn results in the congestion of our roadways and an increased need for new infrastructure to reduce this congestion;</li><li>Increased need for redundant amenities and services as communities become more spread out;</li><li>More time each day spent traveling between destinations, which affects mental and physical health;</li><li>Challenges to, if not loss of, local agricultural economies;</li><li>A weakening of the ability of other species to thrive as their habitat is lost or movement between habitats is prevented; and</li><li>Detrimental impacts to air and water quality.</li></ul>`,
+            what: `<p>DVRPC has tracked regional land use changes and the preservation of land for multiple decades. Since 1970, DVRPC has produced land use files derived from aerial photography in our nine-county region. Starting with the 1990 inventory, these files were produced every five years using Computer Assisted Mapping (CAM) and Geographic Information Systems (GIS) software. Methods and technology were updated again for the 2000 inventory and subsequent releases. While reasonable comparisons can be drawn between DVRPC's land use files produced in 2005 or later, users should be cautious when comparing these later files to earlier land use data, particularly within specific developed land use categories and/or specific municipalities.</p><p>Chart 1 shows how many acres have been developed at the regional and subregional levels since 1970, as well as how many acres of land have been used for agricultural purposes. Chart 2 shows how regional and subregional land uses (for example, commercial land and utilities) and land cover (water and wooded areas) have changed since 1970.</p><p>DVRPC also maintains an inventory of protected public and private open space in the region. The inventory tracks all publicly owned open space, and preserved farmland  and nonprofit-protected open space (both of which are typically still owned by private landowners) . States, counties, municipalities, and nonprofits (such as land trusts or conservancies) may purchase a parcel of land outright for preservation, or only purchase the development rights to the parcel.  Purchase of development rights is common for farmland, enabling the farmer landowner to continue working on the land.  Outright purchase of the parcel (not just development rights but full ownership of the parcel) can be accomplished by public or private entities.  Funding sources for land conservation vary, but public entities typically use public sources, while nonprofits may use a combination of public and private sources.</p><p>Updates to the protected open space inventory follow our four-year long-range plan cycle. Data are available in 2004, 2007, 2011, and 2016. As with the land use data, calculation methods and the accuracy of protected open space data have changed and improved over time.</p><p>Chart 3 shows acreage permanently protected from future development, including by public and private ownership at the regional and subregional levels. Chart 4 shows the type of protected open space (federal, state, or local government; non-profit, or preserved farmland) by a selected regional or subregional geography.</p>`,
+            how: `<p>The rapid rate of land development has been unsustainable over the last 25 years (13 percent increase in acres per capita), but has slowed over the past decade. From 1990 to 2015, the total number of developed acres in the region increased by 195,800, which is equivalent to 21 acres of development per day over this entire period. From 2005 to 2015, the rate of development decreased to 11 acres per day, though the Great Recession was a major reason for this slowdown and it is likely that development rates increased afterward and continue to increase as the regional economy improves.</p><p>From 1990 to 2015, the region lost 78,600 acres of woodlands, a decrease of 9 percent; and 155,600 acres of agricultural lands, a decrease of 25 percent. Over that same time period and on some of the same land, land devoted to single-family homes increased by 22 percent, or 82,600 acres. Chester County developed the fastest over this period, with an additional 52,800 acres of development, an increase of 45 percent; second was Bucks County, with 41,700 more acres developed, an increase of 34 percent; third was Montgomery County, with 35,400 acres developed, an increase of 24 percent.</p><p>The <em>Connections 2045</em> Plan maintains a goal of permanently preserving 1 million total acres in the region. As of 2016, the most recent year of record, Greater Philadelphia was nearly 60 percent of the way there, with 591,900 acres preserved. Since DVRPC's 2004 protected open space inventory, the total amount of protected land increased by 170,000 acres, or 40 percent. During this time, preserved farmland doubled—adding 67,400 acres; non-profit protected lands increased by 57,700 acres, or 123 percent; and state-owned lands by 23,900 acres, or 12 percent.</p><p>As of 2016, Burlington County had the most protected open space in the region, largely because of its overlap with New Jersey's protected Pinelands region, with 222,800 acres of preserved land. Chester County was second, with 126,200 acres preserved, and Bucks County was third, with 77,700 acres preserved. The region's rural areas accounted for 64 percent of all permanently protected open space, with 376,000 acres.</p>`,
+            resource: `<p>For more information on DVRPC's efforts toward land preservation and other "smart growth" practices that tackle sprawled development, see: <ul><li><a href="/SmartGrowth/">Smart Growth</a></li><li><a href="/OpenSpace/">Open Space Planning</a></li></ul><p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for improving the region's trendline for land consumption and open space preservation:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42867e7179a56e21376cc">Official Map</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf428d3e7179a56e2137742">Parkland Dedication and Fee-in-lieu</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42930e7179a56e2137776">Land Acquisition and Conservation Easements</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42958e7179a56e2137787">Dedicated Open Space Funding</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42985e7179a56e2137792">Comprehensive Environmental Protection Ordinances</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf429fde7179a56e21377c7">Agricultural Zoning</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42a0ce7179a56e21377ca">Right-to-Farm Provisions</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5c929acde7179a0e4089fb5d">Brownfields Redevelopment</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42b29e7179a56e2137849">Smart Location of Public Facilities</a></li></ul>`
         }
     },
     'Pavement Conditions': {

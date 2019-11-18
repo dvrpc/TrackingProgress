@@ -388,6 +388,7 @@ summary:hover{
 #description-wrapper{
     padding: 20px 0 3% 0;
     width: 75%;
+    max-width: 900px;
     margin: 0 auto;
 }
 #description-wrapper-tabs{
