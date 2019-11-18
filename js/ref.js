@@ -2716,8 +2716,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['landConsumption1'],
                 context: {
-                    labels: ['Acres'],
-                    keepLabels: true,
+                    labels: ['Acres', 'Acres per Capita', 'Acres', 'Acres per Capita'],
                     units: ['thousands', 'singles', 'thousands', 'singles'],
                 },
                 columnOptions: [
@@ -2798,85 +2797,89 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['landConsumption2'],
                 context: {
-                    labels: ['Acres'],
+                    labels: ['Acres (Thousands)'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPC- agricultural','DVRPC- comm_services','DVRPC- commercial','DVRPC- industrial','DVRPC- military','DVRPC- mining','DVRPC- multi_fam','DVRPC- recreation','DVRPC- single_fam','DVRPC- transportation','DVRPC- utility','DVRPC- vacant','DVRPC- water','DVRPC- wooded'],
-                    ['PA Suburbs- agricultural','PA Suburbs- comm_services','PA Suburbs- commercial','PA Suburbs- industrial','PA Suburbs- military','PA Suburbs- mining','PA Suburbs- multi_fam','PA Suburbs- recreation','PA Suburbs- single_fam','PA Suburbs- transportation','PA Suburbs- utility','PA Suburbs- vacant','PA Suburbs- water','PA Suburbs- wooded'],
-                    ['NJ Suburbs- agricultural','NJ Suburbs- comm_services','NJ Suburbs- commercial','NJ Suburbs- industrial','NJ Suburbs- military','NJ Suburbs- mining','NJ Suburbs- multi_fam','NJ Suburbs- recreation','NJ Suburbs- single_fam','NJ Suburbs- transportation','NJ Suburbs- utility','NJ Suburbs- vacant','NJ Suburbs- water','NJ Suburbs- wooded'],
-                    ['Core City- agricultural','Core City- comm_services','Core City- commercial','Core City- industrial','Core City- military','Core City- mining','Core City- multi_fam','Core City- recreation','Core City- single_fam','Core City- transportation','Core City- utility','Core City- vacant','Core City- water','Core City- wooded'],
-                    ['Developed Community- agricultural','Developed Community- comm_services','Developed Community- commercial','Developed Community- industrial','Developed Community- military','Developed Community- mining','Developed Community- multi_fam','Developed Community- recreation','Developed Community- single_fam','Developed Community- transportation','Developed Community- utility','Developed Community- vacant','Developed Community- water','Developed Community- wooded'],
-                    ['Growing Suburb- agricultural','Growing Suburb- comm_services','Growing Suburb- commercial','Growing Suburb- industrial','Growing Suburb- military','Growing Suburb- mining','Growing Suburb- multi_fam','Growing Suburb- recreation','Growing Suburb- single_fam','Growing Suburb- transportation','Growing Suburb- utility','Growing Suburb- vacant','Growing Suburb- water','Growing Suburb- wooded'],
-                    ['Rural Area- agricultural','Rural Area- comm_services','Rural Area- commercial','Rural Area- industrial','Rural Area- military','Rural Area- mining','Rural Area- multi_fam','Rural Area- recreation','Rural Area- single_fam','Rural Area- transportation','Rural Area- utility','Rural Area- vacant','Rural Area- water','Rural Area- wooded'],
-                    ['Bucks- agricultural','Bucks- comm_services','Bucks- commercial','Bucks- industrial','Bucks- military','Bucks- mining','Bucks- multi_fam','Bucks- recreation','Bucks- single_fam','Bucks- transportation','Bucks- utility','Bucks- vacant','Bucks- water','Bucks- wooded'],
-                    ['Chester- agricultural','Chester- comm_services','Chester- commercial','Chester- industrial','Chester- military','Chester- mining','Chester- multi_fam','Chester- recreation','Chester- single_fam','Chester- transportation','Chester- utility','Chester- vacant','Chester- water','Chester- wooded'],
-                    ['Delaware- agricultural','Delaware- comm_services','Delaware- commercial','Delaware- industrial','Delaware- military','Delaware- mining','Delaware- multi_fam','Delaware- recreation','Delaware- single_fam','Delaware- transportation','Delaware- utility','Delaware- vacant','Delaware- water','Delaware- wooded'],
-                    ['Montgomery- agricultural','Montgomery- comm_services','Montgomery- commercial','Montgomery- industrial','Montgomery- military','Montgomery- mining','Montgomery- multi_fam','Montgomery- recreation','Montgomery- single_fam','Montgomery- transportation','Montgomery- utility','Montgomery- vacant','Montgomery- water','Montgomery- wooded'],
-                    ['Burlington- agricultural','Burlington- comm_services','Burlington- commercial','Burlington- industrial','Burlington- military','Burlington- mining','Burlington- multi_fam','Burlington- recreation','Burlington- single_fam','Burlington- transportation','Burlington- utility','Burlington- vacant','Burlington- water','Burlington- wooded'],
-                    ['Camden- agricultural','Camden- comm_services','Camden- commercial','Camden- industrial','Camden- military','Camden- mining','Camden- multi_fam','Camden- recreation','Camden- single_fam','Camden- transportation','Camden- utility','Camden- vacant','Camden- water','Camden- wooded'],
-                    ['Gloucester- agricultural','Gloucester- comm_services','Gloucester- commercial','Gloucester- industrial','Gloucester- military','Gloucester- mining','Gloucester- multi_fam','Gloucester- recreation','Gloucester- single_fam','Gloucester- transportation','Gloucester- utility','Gloucester- vacant','Gloucester- water','Gloucester- wooded'],
-                    ['Mercer- agricultural','Mercer- comm_services','Mercer- commercial','Mercer- industrial','Mercer- military','Mercer- mining','Mercer- multi_fam','Mercer- recreation','Mercer- single_fam','Mercer- transportation','Mercer- utility','Mercer- vacant','Mercer- water','Mercer- wooded'],
-                    ['Philadelphia- agricultural','Philadelphia- comm_services','Philadelphia- commercial','Philadelphia- industrial','Philadelphia- military','Philadelphia- mining','Philadelphia- multi_fam','Philadelphia- recreation','Philadelphia- single_fam','Philadelphia- transportation','Philadelphia- utility','Philadelphia- vacant','Philadelphia- water','Philadelphia- wooded'],
+                    ['DVRPC- Agriculture','DVRPC- Commercial','DVRPC- Community Services','DVRPC- Manufacturing','DVRPC- Military','DVRPC- Mining','DVRPC- Parking','DVRPC- Recreation','DVRPC- multi-fam','DVRPC- single-fam','DVRPC- Transportation','DVRPC- Utility','DVRPC- Vacant','DVRPC- Water','DVRPC- Wooded'],
+                    ['NJ Suburbs- Agriculture','NJ Suburbs- Commercial','NJ Suburbs- Community Services','NJ Suburbs- Manufacturing','NJ Suburbs- Military','NJ Suburbs- Mining','NJ Suburbs- Parking','NJ Suburbs- Recreation','NJ Suburbs- multi-fam','NJ Suburbs- single-fam','NJ Suburbs- Transportation','NJ Suburbs- Utility','NJ Suburbs- Vacant','NJ Suburbs- Water','NJ Suburbs- Wooded'],
+                    ['PA Suburbs- Agriculture','PA Suburbs- Commercial','PA Suburbs- Community Services','PA Suburbs- Manufacturing','PA Suburbs- Military','PA Suburbs- Mining','PA Suburbs- Parking','PA Suburbs- Recreation','PA Suburbs- multi-fam','PA Suburbs- single-fam','PA Suburbs- Transportation','PA Suburbs- Utility','PA Suburbs- Vacant','PA Suburbs- Water','PA Suburbs- Wooded'],
+                    ['Core City- Agriculture','Core City- Commercial','Core City- Community Services','Core City- Manufacturing','Core City- Military','Core City- Mining','Core City- Parking','Core City- Recreation','Core City- multi-fam','Core City- single-fam','Core City- Transportation','Core City- Utility','Core City- Vacant','Core City- Water','Core City- Wooded'],
+                    ['Developed Community- Agriculture','Developed Community- Commercial','Developed Community- Community Services','Developed Community- Manufacturing','Developed Community- Military','Developed Community- Mining','Developed Community- Parking','Developed Community- Recreation','Developed Community- multi-fam','Developed Community- single-fam','Developed Community- Transportation','Developed Community- Utility','Developed Community- Vacant','Developed Community- Water','Developed Community- Wooded'],
+                    ['Growing Suburb- Agriculture','Growing Suburb- Commercial','Growing Suburb- Community Services','Growing Suburb- Manufacturing','Growing Suburb- Military','Growing Suburb- Mining','Growing Suburb- Parking','Growing Suburb- Recreation','Growing Suburb- multi-fam','Growing Suburb- single-fam','Growing Suburb- Transportation','Growing Suburb- Utility','Growing Suburb- Vacant','Growing Suburb- Water','Growing Suburb- Wooded'],
+                    ['Rural Area- Agriculture','Rural Area- Commercial','Rural Area- Community Services','Rural Area- Manufacturing','Rural Area- Military','Rural Area- Mining','Rural Area- Parking','Rural Area- Recreation','Rural Area- multi-fam','Rural Area- single-fam','Rural Area- Transportation','Rural Area- Utility','Rural Area- Vacant','Rural Area- Water','Rural Area- Wooded'],
+                    ['Bucks- Agriculture','Bucks- Commercial','Bucks- Community Services','Bucks- Manufacturing','Bucks- Military','Bucks- Mining','Bucks- Parking','Bucks- Recreation','Bucks- multi-fam','Bucks- single-fam','Bucks- Transportation','Bucks- Utility','Bucks- Vacant','Bucks- Water','Bucks- Wooded'],
+                    ['Burlington- Agriculture','Burlington- Commercial','Burlington- Community Services','Burlington- Manufacturing','Burlington- Military','Burlington- Mining','Burlington- Parking','Burlington- Recreation','Burlington- multi-fam','Burlington- single-fam','Burlington- Transportation','Burlington- Utility','Burlington- Vacant','Burlington- Water','Burlington- Wooded'],
+                    ['Camden- Agriculture','Camden- Commercial','Camden- Community Services','Camden- Manufacturing','Camden- Military','Camden- Mining','Camden- Parking','Camden- Recreation','Camden- multi-fam','Camden- single-fam','Camden- Transportation','Camden- Utility','Camden- Vacant','Camden- Water','Camden- Wooded'],
+                    ['Chester- Agriculture','Chester- Commercial','Chester- Community Services','Chester- Manufacturing','Chester- Military','Chester- Mining','Chester- Parking','Chester- Recreation','Chester- multi-fam','Chester- single-fam','Chester- Transportation','Chester- Utility','Chester- Vacant','Chester- Water','Chester- Wooded'],
+                    ['Delaware- Agriculture','Delaware- Commercial','Delaware- Community Services','Delaware- Manufacturing','Delaware- Military','Delaware- Mining','Delaware- Parking','Delaware- Recreation','Delaware- multi-fam','Delaware- single-fam','Delaware- Transportation','Delaware- Utility','Delaware- Vacant','Delaware- Water','Delaware- Wooded'],
+                    ['Gloucester- Agriculture','Gloucester- Commercial','Gloucester- Community Services','Gloucester- Manufacturing','Gloucester- Military','Gloucester- Mining','Gloucester- Parking','Gloucester- Recreation','Gloucester- multi-fam','Gloucester- single-fam','Gloucester- Transportation','Gloucester- Utility','Gloucester- Vacant','Gloucester- Water','Gloucester- Wooded'],
+                    ['Mercer- Agriculture','Mercer- Commercial','Mercer- Community Services','Mercer- Manufacturing','Mercer- Military','Mercer- Mining','Mercer- Parking','Mercer- Recreation','Mercer- multi-fam','Mercer- single-fam','Mercer- Transportation','Mercer- Utility','Mercer- Vacant','Mercer- Water','Mercer- Wooded'],
+                    ['Montgomery- Agriculture','Montgomery- Commercial','Montgomery- Community Services','Montgomery- Manufacturing','Montgomery- Military','Montgomery- Mining','Montgomery- Parking','Montgomery- Recreation','Montgomery- multi-fam','Montgomery- single-fam','Montgomery- Transportation','Montgomery- Utility','Montgomery- Vacant','Montgomery- Water','Montgomery- Wooded'],
+                    ['Philadelphia- Agriculture','Philadelphia- Commercial','Philadelphia- Community Services','Philadelphia- Manufacturing','Philadelphia- Military','Philadelphia- Mining','Philadelphia- Parking','Philadelphia- Recreation','Philadelphia- multi-fam','Philadelphia- single-fam','Philadelphia- Transportation','Philadelphia- Utility','Philadelphia- Vacant','Philadelphia- Water','Philadelphia- Wooded'],
                 ],
                 data: [
                     {
                         'key': 'Agricultural',
-                        columns: ['year', 'DVRPC- agricultural']
-                    },
-                    {
-                        'key': 'Comm Services',
-                        columns: ['year', 'DVRPC- comm_services']
+                        columns: ['year', 'DVRPC- Agriculture']
                     },
                     {
                         'key': 'Commercial',
-                        columns: ['year', 'DVRPC- commercial']
+                        columns: ['year', 'DVRPC- Commercial']
                     },
                     {
-                        'key': 'Industrial',
-                        columns: ['year', 'DVRPC- industrial']
+                        'key': 'Comm Services',
+                        columns: ['year', 'DVRPC- Community Services']
+                    },
+                    {
+                        'key': 'Manufacturing',
+                        columns: ['year', 'DVRPC- Manufacturing']
                     },
                     {
                         'key': 'Military',
-                        columns: ['year', 'DVRPC- military']
+                        columns: ['year', 'DVRPC- Military']
                     },
                     {
                         'key': 'Mining',
-                        columns: ['year', 'DVRPC- mining']
+                        columns: ['year', 'DVRPC- Mining']
                     },
                     {
-                        'key': 'Multi Family',
-                        columns: ['year', 'DVRPC- multi_fam']
+                        'key': 'Parking',
+                        columns: ['year', 'DVRPC- Parking']
                     },
                     {
                         'key': 'Recreation',
-                        columns: ['year', 'DVRPC- recreation']
+                        columns: ['year', 'DVRPC- Recreation']
+                    },
+                    {
+                        'key': 'Multi Family',
+                        columns: ['year', 'DVRPC- multi-fam']
                     },
                     {
                         'key': 'Single Family',
-                        columns: ['year', 'DVRPC- single_fam']
+                        columns: ['year', 'DVRPC- single-fam']
                     },
                     {
                         'key': 'Transportation',
-                        columns: ['year', 'DVRPC- transportation']
+                        columns: ['year', 'DVRPC- Transportation']
                     },
                     {
                         'key': 'Utility',
-                        columns: ['year', 'DVRPC- utility']
+                        columns: ['year', 'DVRPC- Utility']
                     },
                     {
                         'key': 'Vacant',
-                        columns: ['year', 'DVRPC- vacant']
+                        columns: ['year', 'DVRPC- Vacant']
                     },
                     {
                         'key': 'Water',
-                        columns: ['year', 'DVRPC- water']
+                        columns: ['year', 'DVRPC- Water']
                     },
                     {
                         'key': 'Wooded',
-                        columns: ['year', 'DVRPC- wooded']
+                        columns: ['year', 'DVRPC- Wooded']
                     },
                 ]
             },
@@ -2885,9 +2888,8 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['landConsumption3'],
                 context: {
-                    labels: ['Acres'],
-                    keepLabels: true,
-                    units: ['thousands', 'percent','thousands', 'percent','thousands', 'percent'],
+                    labels: ['Acres','Percent','Acres','Percent','Acres','Percent'],
+                    units: ['thousands','percent','thousands', 'percent','thousands','percent'],
                 },
                 columnOptions: [
                     ['DVRPC- Total Acres','NJ Suburbs- Total Acres','PA Suburbs- Total Acres','Core City- Total Acres','Developed Community- Total Acres','Growing Suburb- Total Acres','Rural Area- Total Acres','Bucks- Total Acres','Burlington- Total Acres','Camden- Total Acres','Chester- Total Acres','Delaware- Total Acres','Gloucester- Total Acres','Mercer- Total Acres','Montgomery- Total Acres','Philadelphia- Total Acres'],
