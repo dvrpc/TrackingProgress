@@ -1,4 +1,4 @@
-import { fullGeography, lightGeography } from './commonGeographies.js'
+import { fullGeography } from './commonGeographies.js'
 
 const snippetsRef = {
     'Air Quality': {
@@ -797,7 +797,8 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['jobs_graph1'],
                 context: {
-                    labels: false,
+                    labels: ['Growth Rate'],
+                    keepLabels: true,
                     units: ['percent'],
                     keepUnits: true
                 },
@@ -805,13 +806,82 @@ const snippetsRef = {
                     ['DVRPC', 'New Jersey Suburbs', 'Pennsylvania Suburbs', 'Philadelphia Subregion', 'Bucks', 'Burlington', 'Camden', 'Chester', 'Delaware', 'Gloucester', 'Mercer', 'Montgomery', 'Philadelphia'],
                     ['DVRPC-total', 'New Jersey Suburbs-total', 'Pennsylvania Suburbs-total', 'Philadelphia Subregion-total', 'Bucks-total', 'Burlington-total', 'Camden-total', 'Chester-total', 'Delaware-total', 'Gloucester-total', 'Mercer-total', 'Montgomery-total', 'Philadelphia-total']
                 ],
-                data: lightGeography,
+                data:[
+                    {
+                        'key': 'DVRPC',
+                        columns: ['year', 'DVRPC']
+                    },
+                    {
+                        'key': 'New Jersey Suburbs',
+                        disabled: true,
+                        columns: ['year', 'New Jersey Suburbs']
+                    },
+                    {
+                        'key': 'PA Suburbs',
+                        disabled: true,
+                        columns: ['year', 'Pennsylvania Suburbs']
+                    },
+                    {
+                        'key': 'Philadelphia Subregion',
+                        disabled: true,
+                        columns: ['year', 'Philadelphia Subregion']
+                    },
+                    {
+                        'key': 'Bucks County',
+                        disabled: true,
+                        columns: ['year', 'Bucks']
+                    },
+                    {
+                        'key': 'Burlington County',
+                        disabled: true,
+                        columns: ['year', 'Burlington']
+                    },
+                    {
+                        'key': 'Camden County',
+                        disabled: true,
+                        columns: ['year', 'Camden']
+                    },
+                    {
+                        'key': 'Chester County',
+                        disabled: true,
+                        columns: ['year', 'Chester']
+                    },
+                    {
+                        'key': 'Delaware County',
+                        disabled: true,
+                        columns: ['year', 'Delaware']
+                    },
+                    {
+                        'key': 'Gloucester County',
+                        disabled: true,
+                        columns: ['year', 'Gloucester']
+                    },
+                    {
+                        'key': 'Mercer County',
+                        disabled: true,
+                        columns: ['year', 'Mercer']
+                    },
+                    {
+                        'key': 'Montgomery County',
+                        disabled: true,
+                        columns: ['year', 'Montgomery']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        disabled: true,
+                        columns: ['year', 'Philadelphia']
+                    },
+                ],
                 yAxisUnits: 'percent'
             },
             {
                 type: 'stacked bar',
                 container: 'chart2',
                 dataSource: ['jobs_graph2'],
+                context: {
+                    labels: ['Percentage of Region'],
+                    units: ['percent']
+                },
                 data: [
                     {
                         'key': 'Bucks County',
@@ -855,6 +925,12 @@ const snippetsRef = {
                 type: 'stacked bar',
                 container: 'chart3',
                 dataSource: ['jobs_graph3'],
+                context: {
+                    labels: ['Percentage of Total Jobs'],
+                    keepLabels: true,
+                    units: ['percent'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['DVRPC- Accommodation and food services', 'DVRPC- Agriculture, forestry, fishing', 'DVRPC- Arts, entertainment, and recreation', 'DVRPC- Construction and manufacturing', 'DVRPC- Educational services', 'DVRPC- Finance, Insurance, and Real Estate', 'DVRPC- Health care and social assistance', 'DVRPC- Industry not classified', 'DVRPC- Information Technology', 'DVRPC- Management of companies and enterprises', 'DVRPC- Mining and utilities', 'DVRPC- Other services (except public administration)', 'DVRPC- Professional, scientific, and technical services', 'DVRPC- Transportation and warehousing', 'DVRPC- Waste management and remediation services', 'DVRPC- Wholesale and retail trade'],
                     ['Philadelphia Subregion- Accommodation and food services', 'Philadelphia Subregion- Agriculture, forestry, fishing', 'Philadelphia Subregion- Arts, entertainment, and recreation', 'Philadelphia Subregion- Construction and manufacturing', 'Philadelphia Subregion- Educational services', 'Philadelphia Subregion- Finance, Insurance, and Real Estate', 'Philadelphia Subregion- Health care and social assistance', 'Philadelphia Subregion- Industry not classified', 'Philadelphia Subregion- Information Technology', 'Philadelphia Subregion- Management of companies and enterprises', 'Philadelphia Subregion- Mining and utilities', 'Philadelphia Subregion- Other services (except public administration)', 'Philadelphia Subregion- Professional, scientific, and technical services', 'Philadelphia Subregion- Transportation and warehousing', 'Philadelphia Subregion- Waste management and remediation services', 'Philadelphia Subregion- Wholesale and retail trade'],
@@ -936,7 +1012,13 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: `<p>Growth or decline in the total number of jobs is one of the primary tools for measuring the economic strength of the region.  Also important is the geographic distribution of jobs, as well as the distribution of the jobs between different industries. Job growth in one region could indicate a need for more transportation infrastructure to aid workers' commutes, while a decline in jobs in a particular industry might signal a need for investment to help support those businesses or alternatively establishing job retraining programs to transition employees to industries of the future. Job totals alone do not, however, tell you anything about the quality or desirability of those jobs. The total number of jobs may increase, but if higher-paying jobs are being replaced by lower-paying jobs, the economy could still be declining overall. On the other hand, employers concentrating in centers around the region may not change the total number of jobs, but could have other benefits like decreasing commuting costs and priming the region for future growth.</p>`,
+            what: `<p>The U.S. Bureau of Labor Statistics' Quarterly Census of Employment and Wages (QCEW) provides a quarterly count of employment and wages as reported by employers, and covers more than 95 percent of U.S. jobs available. County Business Patterns (CBP) is an annual program of the U.S. Census Bureau that provides economic data by industry at the county level. The CBP data is extracted from the Business Register (BR), a database of all known single and multi-establishment employer companies maintained and updated by the U.S. Census Bureau.</p><p>The first graph below shows the annual growth rate and the overall growth rate since 2001. The second graph shows the percentage of the region's jobs located in each county. The third graph shows the percentage of jobs that occur in various sectors of the region's economy. The first and second graphs are based on QCEW data, and the third graph is based on CBP data.</p>`,
+            how: `<p>Overall, the number of jobs in the region has increased by 6 percent since 2001. However, this growth has not been consistent, and the annual growth rate has varied significantly from a high of 2 percent  between 2015 and 2016 and a low of -3.3 percent between 2008 and 2009 during the recession.</p><p>Job growth has not been evenly distributed around the region. While the four New Jersey counties have about matched the regional average at 5.6 percent, the four suburban Pennsylvania counties saw job growth of 10.3 percent between 2001 and 2017. At the same time, jobs in Philadelphia only increased by 2.2 percent. Jobs are distributed throughout the region's nine counties, but over 40 percent of the jobs are currently located in just two: Philadelphia (25.3 percent of the region's jobs), Montgomery (18.5 percent).</p><p>Since 2001, the regional share of construction and manufacturing jobs has declined from 13.2 percent to 10.4 percent, while the number of nonmanufacturing jobs has increased dramatically. Fast growing service sectors include arts, entertainment, and recreation services, management services; education services, and health-related services. While the region's economy was once dominated by manufacturing, knowledge-based industries are now prominent, with life sciences, information technology, professional services, and chemicals ranking among the region's top industries. Sectors such as education and health services, professional and business services, financial activities, and information technology require highly educated and skilled workers, and now make up over 40 percent of the region's employment.</p>`,
+            resource: `<p>DVRPC works with its planning partners on <a href="/Economic/">economic development and analysis</a> in the region, including our <a href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p><p>Collaborating with our county partners, DVRPC also produced <a href="/Products/ADR023/">county and municipal employment forecasts</a> for the <em>Connections 2045</em> long-range plan that were adopted by the DVRPC Board.</p><p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools to bolster job growth in an inclusive economy:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li></ul>`
+        }
     },
     'Racial Ethnic Disparities':{
         file: 'racialAndEthnicDisparities.html',
@@ -2154,17 +2236,7 @@ const snippetsRef = {
             why: `<p>Innovation is critical for a healthy regional economy. If local industries and economic development entities capitalize on them, goods and services invented in the region can grow into start-ups and job opportunities that stay in the region. Research institutions, and other research and development outfits can play a big role in innovation creation and growth in the region.</p>`,
             what: `<p>Utility patents are patents covering the creation of or improvements to machines, processes, or products. Location data for utility patents have been provided by the US Patent Office, dating back to 1998, but are limited to the residential address of the first named author. If a resident of the region is not named first on a patent with a first named author residing outside the region, that patent will not be allocated in Greater Philadelphia—even if it is relevant to innovation in the region. Street addresses are not provided, only mailing address city and state, making precise patent holder location more difficult. As a result, only regional geography is shown in the chart below.</p>`,
             how: `<p>Among the years for which data is available, patent approvals allocated to the region by residence of first named authors were at a near peak in 2017,  with 2,707 approvals—just 20 fewer than in 2014 and a 28.7 percent increase from 1998. After a dip to 1,373 approval in 2005, regional approvals made their way back to the late 1990s and early 2000s levels in 2010 and has remained above 2,200 since 2012.</p>`,
-            resource: `
-                <p>For more economic indicators and strategies, see the <a href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p>
-                <p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools to help bolster innovation and start-ups in the region:</p>
-                <ul>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42edbe7179a56e2137b04">Economic Development Task Force</a></li>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42f68e7179a56e2137b5f">Broadband (Universal Access)</a></li>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li>
-                </ul>
-            `
+            resource: `<p>For more economic indicators and strategies, see the <a href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p><p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools to help bolster innovation and start-ups in the region:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42edbe7179a56e2137b04">Economic Development Task Force</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42f68e7179a56e2137b5f">Broadband (Universal Access)</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li></ul>`
         }
     },
     'Population Growth': {
