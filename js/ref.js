@@ -2153,8 +2153,18 @@ const snippetsRef = {
         text: {
             why: `<p>Innovation is critical for a healthy regional economy. If local industries and economic development entities capitalize on them, goods and services invented in the region can grow into start-ups and job opportunities that stay in the region. Research institutions, and other research and development outfits can play a big role in innovation creation and growth in the region.</p>`,
             what: `<p>Utility patents are patents covering the creation of or improvements to machines, processes, or products. Location data for utility patents have been provided by the US Patent Office, dating back to 1998, but are limited to the residential address of the first named author. If a resident of the region is not named first on a patent with a first named author residing outside the region, that patent will not be allocated in Greater Philadelphia—even if it is relevant to innovation in the region. Street addresses are not provided, only mailing address city and state, making precise patent holder location more difficult. As a result, only regional geography is shown in the chart below.</p>`,
-            how: `<p>Among the years for which data is available, patent approvals allocated to the region by residence of first named authors were at a near peak in 2017,  with 2,707 approvals—just 20 fewer than in 2014. After a dip to 1,373 approval in 2005, regional approvals made their way back to late 1990s and early 2000s levels in 2010 and has remained above 2,200 since 2012.</p>`,
-            resource: ``
+            how: `<p>Among the years for which data is available, patent approvals allocated to the region by residence of first named authors were at a near peak in 2017,  with 2,707 approvals—just 20 fewer than in 2014 and a 28.7 percent increase from 1998. After a dip to 1,373 approval in 2005, regional approvals made their way back to the late 1990s and early 2000s levels in 2010 and has remained above 2,200 since 2012.</p>`,
+            resource: `
+                <p>For more economic indicators and strategies, see the <a href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p>
+                <p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools to help bolster innovation and start-ups in the region:</p>
+                <ul>
+                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42edbe7179a56e2137b04">Economic Development Task Force</a></li>
+                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li>
+                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42f68e7179a56e2137b5f">Broadband (Universal Access)</a></li>
+                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li>
+                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li>
+                </ul>
+            `
         }
     },
     'Population Growth': {
