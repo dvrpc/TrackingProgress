@@ -471,7 +471,9 @@ summary:hover{
     display: flex;
 }
 .chart-src{
-    margin-left: 5%;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
     font-style: italic;
 }
 
@@ -576,9 +578,6 @@ footer{
     .icon-set-img{
         height: 135px;
         width: 135px;
-    }
-    .data-viz{
-        width: 70%;
     }
     .flipside-img{
         height: 55px;

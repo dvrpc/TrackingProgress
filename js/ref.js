@@ -85,9 +85,9 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['vmtPerCapDVRPC', 'vmtPerCapNJSuburbs', 'vmtPerCapAllPACounties', 'vmtPerCapPASuburbs', 'vmtPerCapPhillySubregion', 'vmtPerCapBucksCo', 'vmtPerCapChesterCo', 'vmtPerCapDelawareCo', 'vmtPerCapMontgomeryCo', 'vmtPerCapPhillyCo', 'vmtPerCapBurlingtonCo', 'vmtPerCapCamdenCo', 'vmtPerCapGloucesterCo', 'vmtPerCapMercerCo'],
-                    ['vmtDVRPC', 'vmtNJSuburbs', 'vmtAllPACounties', 'vmtPASuburbs', 'vmtPhillySubregion', 'vmtBucksCo', 'vmtChesterCo', 'vmtDelawareCo', 'vmtMontgomeryCo', 'vmtPhillyCo', 'vmtBurlingtonCo', 'vmtCamdenCo', 'vmtGloucesterCo', 'vmtMercerCo'],
-                    ['vmtPerVehicleDVRPC', 'vmtPerVehicleNJSuburbs', 'vmtPerVehicleAllPACounties', 'vmtPerVehiclePASuburbs', 'vmtPerVehiclePhillySubregion', 'vmtPerVehicleBucksCo', 'vmtPerVehicleChesterCo', 'vmtPerVehicleDelawareCo', 'vmtPerVehicleMontgomeryCo', 'vmtPerVehiclePhillyCo', 'vmtPerVehicleBurlingtonCo', 'vmtPerVehicleCamdenCo', 'vmtPerVehicleGloucesterCo', 'vmtPerVehicleMercerCo']
+                    ['vmtPerCapDVRPC', 'vmtPerCapNJSuburbs', 'vmtPerCapAllPACounties', 'vmtPerCapPASuburbs', 'vmtPerCapBucksCo', 'vmtPerCapChesterCo', 'vmtPerCapDelawareCo', 'vmtPerCapMontgomeryCo', 'vmtPerCapPhillyCo', 'vmtPerCapBurlingtonCo', 'vmtPerCapCamdenCo', 'vmtPerCapGloucesterCo', 'vmtPerCapMercerCo'],
+                    ['vmtDVRPC', 'vmtNJSuburbs', 'vmtAllPACounties', 'vmtPASuburbs', 'vmtBucksCo', 'vmtChesterCo', 'vmtDelawareCo', 'vmtMontgomeryCo', 'vmtPhillyCo', 'vmtBurlingtonCo', 'vmtCamdenCo', 'vmtGloucesterCo', 'vmtMercerCo'],
+                    ['vmtPerVehicleDVRPC', 'vmtPerVehicleNJSuburbs', 'vmtPerVehicleAllPACounties', 'vmtPerVehiclePASuburbs', 'vmtPerVehicleBucksCo', 'vmtPerVehicleChesterCo', 'vmtPerVehicleDelawareCo', 'vmtPerVehicleMontgomeryCo', 'vmtPerVehiclePhillyCo', 'vmtPerVehicleBurlingtonCo', 'vmtPerVehicleCamdenCo', 'vmtPerVehicleGloucesterCo', 'vmtPerVehicleMercerCo']
                 ],
                 data: [
                     {
@@ -110,51 +110,47 @@ const snippetsRef = {
                         'columns': ['year', 'vmtPerCapPASuburbs']
                     },
                     {
-                        'key' : 'Philadelphia Subregion',
-                        'columns': ['year', 'vmtPerCapPhillySubregion']
-                    },
-                    {
-                        'key' : 'Bucks Co',
+                        'key' : 'Bucks',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapBucksCo']
                     },
                     {
-                        'key' : 'Chester Co',
+                        'key' : 'Chester',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapChesterCo']
                     },
                     {
-                        'key' : 'Delaware Co',
+                        'key' : 'Delaware',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapDelawareCo']
                     },
                     {
-                        'key' : 'Montgomery Co',
+                        'key' : 'Montgomery',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapMontgomeryCo']
                     },
                     {
-                        'key' : 'Philadelphia Co',
+                        'key' : 'Philadelphia',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapPhillyCo']
                     },
                     {
-                        'key' : 'Burlington Co',
+                        'key' : 'Burlington',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapBurlingtonCo']
                     },
                     {
-                        'key' : 'Camden Co',
+                        'key' : 'Camden',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapCamdenCo']
                     },
                     {
-                        'key' : 'Gloucester Co',
+                        'key' : 'Gloucester',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapGloucesterCo']
                     },
                     {
-                        'key' : 'Mercer Co',
+                        'key' : 'Mercer',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapMercerCo']
                     }
@@ -162,10 +158,10 @@ const snippetsRef = {
             }
         ],
         text: {
-            why: `<p>Annual miles driven per capita, or Vehicle Miles Traveled (VMT) is an indicator of travel demand on roads. VMT can be used to understand where funds might be allocated for strained roadways. A negative trend in per capita VMT can indicate a slower economy (i.e. household funds are constrained so fewer discretionary trips are made) or a change in travel mode preference (i.e. populations are increasingly opting for non-auto travel modes).</p>`,
-            what: `<p>Annual Miles driven, or VMT, is a distance-based measure of all vehicle travel on roadways (auto and truck) in a given year. Per capita VMT is the same measure divided by the same area's population for the same year. Per vehicle VMT divides VMT by the number of household vehicles available by residents of that geography.</p>`,
-            how: `<p>Total miles traveled peaked in the region in 2007, with 41.4 billion VMT. Miles traveled declined with the Great Recession, only starting to increase again in 2012 before dipping again slightly in 2013. VMT has been increasing just over 1 percent per year since then, with a slightly higher growth rate in the New Jersey subregion than in the Pennsylvania subregion. When factoring in population growth, 2017 per capita VMT in the region (7,080) remained well below its 2006 peak (7,485).</p>`,
-            resource: ``
+            why: `<p>Annual miles driven per capita, or vehicle miles traveled (VMT) is an indicator of travel demand on roads. VMT can be used to understand where funds might be allocated for strained roadways. However, decreasing VMT growth is a goal in the Connections 2045 Plan. This is a way to reduce infrastructure investment needs and the negative environmental impacts from transportation These environmental impacts include stormwater runoff from roads; air, water, and noise pollution; greenhouse gas emissions; and habitat fragmentation and barriers to wildlife movement. A negative trend in per capita VMT can indicate a slower economy (i.e. household funds are constrained so fewer discretionary trips are made), a change in travel mode preference (i.e. populations are increasingly opting for more space-efficient and environmentally friendly non-auto travel modes), other travel behavior (more carpooling, combining trips, or working from home), or a downturn in the economy or decline in population.</p>`,
+            what: `<p>Annual Miles driven, or VMT, is a distance-based measure of all vehicle travel on roadways (auto, bus, and truck) in a given year. Per capita VMT is the same measure divided by the same area's population for the same year. Per vehicle VMT divides VMT by the number of household vehicles available by residents of that geography in the same year. Geography can be shown for the entire DVRPC region, the Pennsylvania and New Jersey subregions, and each county.</p><p>Normalizing VMT by a county or region's population or by household vehicles is helpful for context, but do not have complete parity with what is measured in VMT estimates. People and vehicles come into the region from other places, just as people and vehicles leave the region to visit other places. VMT per capita compares all miles traveled on the region's roads to the region's population (for all ages) from the Census Bureau's latest population estimates. Vehicle counts for VMT are classified by vehicle types, but not by vehicle ownership. In 2017, statewide estimates for VMT by motorcycles, passenger cars, and two-axle single unit trucks with four wheels made up 88 percent of Pennsylvania's VMT and 95 percent of New Jersey's. These vehicle types are highly likely to be personal vehicles, owned by households, but a slim margin could be fleet vehicles of companies or governments. The remaining VMT is made up of vehicle types like school and commercial buses and trucks with more than two axles, and/or more wheels, so they are highly likely to be commercial vehicles. The VMT per vehicle chart compares all roadway miles traveled to the count of vehicles available to the region's households from the American Community Survey.</p>`,
+            how: `<p>Total miles traveled peaked in the region in 2007, with 41.4 billion VMT. Miles traveled declined with the Great Recession, only starting to increase again in 2012 before dipping again slightly in 2013. VMT has been increasing just over 1 percent per year since then, with a slightly higher growth rate in the New Jersey subregion than in the Pennsylvania subregion. When factoring in population growth, 2017 per capita VMT in the region (7,080) remained well below its 2006 peak (7,485). Per capita VMT in 2017 was just 0.6 percent higher than in 2000.</p>`,
+            resource: `<p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for localities to help decrease VMT growth:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42ad8e7179a56e2137827">Transit-Oriented Development (TOD) Zoning</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf43468e7179a56e2137e9b">Multimodal Transportation Hubs &amp; Connections</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77e73fb6fc041ab9303f5">Shared Mobility Regulatory Framework</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf4350be7179a56e2137f2e">Travel Demand Management</a></li></ul>`
         }
     },
     'Educational Attainment': {
