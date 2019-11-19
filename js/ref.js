@@ -1022,7 +1022,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['medIncByRace_wide'],
+                dataSource: ['medincGapRace'],
                 context: {
                     labels: ['Dollars (2017)'],
                     units: ['thousands']
@@ -1030,66 +1030,66 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'DVRPC Region',
-                        columns: ['year', 'Region_difference']
+                        columns: ['year', 'Region']
                     },
                     {
                         'key': 'Philadelphia',
-                        columns: ['year', 'Philadelphia_difference']
+                        columns: ['year', 'Philadelphia']
                     },
                     {
                         'key': 'PA Suburban Counties',
-                        columns: ['year', 'PA Suburban Counties_difference']
+                        columns: ['year', 'PA Suburban Counties']
                     },
                     {
                         'key': 'NJ Suburban Counties',
-                        columns: ['year', 'NJ Suburban Counties_difference']
+                        columns: ['year', 'NJ Suburban Counties']
                     },
                     {
                         'key': 'Bucks County',
                         disabled: true,
-                        columns: ['year', 'Bucks_difference']
+                        columns: ['year', 'Bucks']
                     },
                     {
                         'key': 'Burlington County',
                         disabled: true,
-                        columns: ['year', 'Burlington_difference']
+                        columns: ['year', 'Burlington']
                     },
                     {
                         'key': 'Camden County',
                         disabled: true,
-                        columns: ['year', 'Camden_difference']
+                        columns: ['year', 'Camden']
                     },
                     {
                         'key': 'Chester County',
                         disabled: true,
-                        columns: ['year', 'Chester_difference']
+                        columns: ['year', 'Chester']
                     },
                     {
                         'key': 'Delaware County',
                         disabled: true,
-                        columns: ['year', 'Delaware_difference']
+                        columns: ['year', 'Delaware']
                     },
                     {
                         'key': 'Gloucester County',
                         disabled: true,
-                        columns: ['year', 'Gloucester_difference']
+                        columns: ['year', 'Gloucester']
                     },
                     {
                         'key': 'Mercer County',
                         disabled: true,
-                        columns: ['year', 'Mercer_difference']
+                        columns: ['year', 'Mercer']
                     },
                     {
                         'key': 'Montgomery County',
                         disabled: true,
-                        columns: ['year', 'Montgomery_difference']
+                        columns: ['year', 'Montgomery']
                     }
                 ]
             },
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: ['medIncByRace_wide'],
+                dataSource: ['medincRace'],
                 context: {
                     labels: ['Dollars (2017)'],
                     keepLabels: true,
@@ -1098,12 +1098,17 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region_minorityInc', 'Region_whtNonHispInc'],
-                    ['Philadelphia_minorityInc', 'Philadelphia_whtNonHispInc'],
+                    ['NJ Suburban Counties_minorityInc', 'NJ Suburban Counties_whtNonHispInc'],
                     ['PA Suburban Counties_minorityInc', 'PA Suburban Counties_whtNonHispInc'],
+                    ['Bucks_minorityInc', 'Bucks_whtNonHispInc'],
                     ['Burlington_minorityInc', 'Burlington_whtNonHispInc'],
                     ['Camden_minorityInc', 'Camden_whtNonHispInc'],
+                    ['Chester_minorityInc', 'Chester_whtNonHispInc'],
+                    ['Delaware_minorityInc', 'Delaware_whtNonHispInc'],
                     ['Gloucester_minorityInc', 'Gloucester_whtNonHispInc'],
-                    ['Mercer_minorityInc', 'Mercer_whtNonHispInc']
+                    ['Mercer_minorityInc', 'Mercer_whtNonHispInc'],
+                    ['Montgomery_minorityInc', 'Montgomery_whtNonHispInc'],
+                    ['Philadelphia_minorityInc', 'Philadelphia_whtNonHispInc']
                 ],
                 data: [
                     {
@@ -1197,7 +1202,13 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: `<p>An equitable, inclusive region means everyone has the opportunity to participate and thrive. But the history of racial and ethnic discrimination in both the country and the region have held generations of residents back from accessing the same opportunities—particularly in the areas of income and employment. Neighborhoods with higher concentrations of people of color are more often adversely impacted by poor conditions in any number of areas, including housing, schools, air quality, crime, and pedestrian and bicycle safety. A less segregated region, with higher incomes and workforce inclusion for people of color, improves the bottom line for all businesses and the lives of all citizens.</p>`,
+            what: `<p><em>People of color</em>, defined as non-white and/or non-Latinx persons using U.S. Census Bureau data, can experience discrimination and be held back from opportunities in many facets of life, but this indicator focuses on trends in income, labor force participation, and segregation of neighborhoods. These topics within the indicator recognize the key issues for inclusion of people of color in the region's economy and addressing barriers and access to opportunity in the region's communities.</p><p>There are some limitations when using U.S. Census Bureau data for racial and ethnic analysis—particularly in the area of ethnicity. The American Community Survey, the Decennial Census, and other Census products only capture one ethnicity in the United States: Hispanic, Latino, or Spanish origin. Though recent attempts have been made to include Middle Eastern or North African (MENA) as an ethnicity, this has not made its way onto Census surveys. For the purpose of simplicity and gender inclusion, this indicator uses the term Latinx or non-Latinx in reference to people in or out of this ethnic group as defined by the U.S. Census Bureau data. Additionally, the race question on the ACS was revised in 2008 to make it consistent with the Census 2010 race question. This makes comparability with earlier years difficult.</p><p>Income was adjusted to 2017 dollars according to <a href="https://www.census.gov/programs-surveys/acs/guidance/comparing-acs-data/2017.html" rel="external">Census Bureau guidance</a> on comparing income data from ACS 1 year values with previous ACS releases and the 2000 decennial. Users should be aware that the 2000 decennial asked about income from 1999 and the ACS asks respondents for income in the past 12 months. This means at least some of respondents' income will likely be received in the year prior to the year the respondent was surveyed.</p><p>In order to estimate median income values at aggregate geographies—the DVRPC region, New Jersey Counties, and Pennsylvania Suburban Counties—weighted averages of groups making up for people of color and white, non-Latinx population were used across component counties.</p><p>While county-level data is presented, counties with higher populations of people of color will be most reliable. Counties with fewer people of color will have larger margins of error and suspect results due to smaller sample sizes. One way this may manifest itself to Tracking Progress users is in volatile trend lines in the charts. Some counties' income gap values are close to or below zero in one year and have larger swings in income gaps in prior and/or subsequent years. These tend to be counties with fewer people of color in their overall population. In 2017, the estimated percentage of people of color are as follows (in order of greatest to least):</p><ol><li>Philadelphia County (65.5%)</li><li>Mercer County (50.8%)</li><li>Camden County (43.7%)</li><li>Delaware County (33.3%)</li><li>Burlington County (32.7%)</li><li>Montgomery County (24.4%)</li><li>Gloucester County (21.6%)</li><li>Chester County (20.6%)</li><li>Bucks County (16.0%)</li></ol><p>The Racial/Ethnic Segregation Index in the third chart is an indicator of how segregated the region's census tracts are, relative to the regional distribution of white, non-Latinx population and people of color and Latinx population. In a given year, it shows how dissimilar the racial and ethic makeup of tracts across the region are to each other and demonstrates the percent of the population that would theoretically need to relocate in order to match the region's racial and ethnic makeup.</p><p>Gaps in <em>labor force participation rates</em> (percent of those 16 to 64 years who are either employed or seeking work relative to all 16 to 64 year-olds) by race are examined in the fourth chart. Similarly, the actual participation rates of whites and people of color are seen in the fifth chart. Here too, the population size of the people of color in each county that the ACS can draw from for a sample is important. It is possible for people of color to have a higher rate than whites, but trendlines that are highly variable from year-to-year are suspect. Gloucester, Bucks, and Chester counties' labor force participation data were not disclosed for these groups in the 2005 ACS 1 year estimates as a result.</p><p>The Latinx population on a county level is so low in our region that labor force participation rates were suppressed for most years in most counties. Therefore Latinx & Non-Latinx are not presented.</p>`,
+            how: `<p>The gap in median income between the region’s residents of color and white, non-Latinx residents is wide—it stood at just over $30,000 in 2017—and it has dropped marginally (a little over $2,000 or 6.8 percent) from 2000 to 2017. On average, people of color’s income was less than two thirds white, non-Latinx income 2017. Regionally, white, non-Latinx workers average $84,352 in yearly income while people of color average $54,233.</p><p>Racial and ethic segregation among neighborhoods in the region is on the decline. Comparing the concentrations of people of color and Latinx vs. white, non-Latinx in each tract relative to the region’s overall racial and ethnic make-up, neighborhoods are diversifying. While theoretical, in 1990, 68.6 percent of the region’s population would have needed to relocate in order to evenly distribute people of color throughout the region. By 2017, the percentage dropped to 54.5. This value still reflects a region where a high percentage of neighborhoods are comprised of persons of the same race and ethnicity. There are wonderful things that occur in neighborhoods that share common cultures, nevertheless diversity has been shown to improve quality of life for everyone.</p><p>The gap in labor force participation between working age whites and people of color is also on the decline. This is due to a slight decline in the white participation rate and slight increase in the rate of people of color. Whites went from 67.2 percent participation in 2005 to 65.4 percent in 2017. People of color went from 61.6 percent to 62.4 percent in 2017.</p>`,
+            resource: `<p>For more on how DVRPC incorporates equity, environmental justice, and complies with federal Title VI and other important statutes protecting communities of concern, see our <a href="/GetInvolved/TitleVI/">Title VI and Environmental Justice page</a>, as well as our <a href="/webmaps/IPD/">Indicators of Potential Disadvantage (IPD) tool</a> and <a href="/ETA/">Equity through Access (ETA) project and tool</a>.<p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for reducing disparities and discrimination in the region:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5c929a05e7179a0e4089fae5">Revitalization Planning and Programs</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42b41e7179a56e2137853">Housing Maintenance and Rehabilitation Programs</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf43443e7179a56e2137e76">Inclusionary Zoning</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf43404e7179a56e2137e25">Community Shuttle Programs</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf43435e7179a56e2137e73">Universal Pre-Kindergarten Programs</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb7840afb6fc041ab93097e">Engaging Underserved Communities</a></li></ul>`
+        }
     },
     'Income Disparities': {
         file: 'incomeDisparities.html',
