@@ -1453,10 +1453,15 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['roadwayreliability24'],
-                yAxisUnits: 'singles',
+                context: {
+                    labels: ['Roadway Reliability Index'],
+                    keepLabels: true,
+                    units: ['singles'],
+                    keepUnits: true
+                },
                 columnOptions: [
-                    ['DVRPCFree24', 'PASubCosFree24', 'PACosFree24', 'NJCosFree24', 'BucFree24', 'ChesFree24', 'DelFree24', 'MontFree24', 'BurlFree24', 'CamFree24', 'GloFree24', 'MerFree24', 'PhilFree24'],
-                    ['DVRPCLoca24', 'PASubCosLoca24', 'PACosLoca24', 'NJCosLoca24', 'BucLoca24', 'ChesLoca24', 'DelLoca24', 'MontLoca24', 'BurlLoca24', 'CamLoca24', 'GloLoca24', 'MerLoca24', 'PhilLoca24']
+                    ['DVRPCFree24', 'PACosFree24', 'NJCosFree24', 'PASubCosFree24', 'BucFree24', 'BurlFree24', 'CamFree24', 'ChesFree24', 'DelFree24', 'GloFree24', 'MerFree24', 'MontFree24', 'PhilFree24'],
+                    ['DVRPCLoca24', 'PACosLoca24', 'NJCosLoca24', 'PASubCosLoca24', 'BucLoca24', 'BurlLoca24', 'CamLoca24', 'ChesLoca24', 'DelLoca24', 'GloLoca24', 'MerLoca24', 'MontLoca24', 'PhilLoca24']
                 ],
                 data: [
                     {
@@ -1464,8 +1469,8 @@ const snippetsRef = {
                         columns: ['Year', 'DVRPCFree24']
                     },
                     {
-                        'key': 'PA Suburban Counties',
-                        columns: ['Year', 'PASubCosFree24'],
+                        'key': 'NJ Counties',
+                        columns: ['Year', 'NJCosFree24'],
                         disabled: true
                     },
                     {
@@ -1474,28 +1479,13 @@ const snippetsRef = {
                         disabled: true
                     },
                     {
-                        'key': 'NJ Counties',
-                        columns: ['Year', 'NJCosFree24'],
+                        'key': 'PA Suburban Counties',
+                        columns: ['Year', 'PASubCosFree24'],
                         disabled: true
                     },
                     {
                         'key': 'Bucks Co',
                         columns: ['Year', 'BucFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Chester Co',
-                        columns: ['Year', 'ChesFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Delaware Co',
-                        columns: ['Year', 'DelFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Montgomery Co',
-                        columns: ['Year', 'MontFree24'],
                         disabled: true
                     },
                     {
@@ -1509,6 +1499,16 @@ const snippetsRef = {
                         disabled: true
                     },
                     {
+                        'key': 'Chester Co',
+                        columns: ['Year', 'ChesFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Delaware Co',
+                        columns: ['Year', 'DelFree24'],
+                        disabled: true
+                    },
+                    {
                         'key': 'Gloucester Co',
                         columns: ['Year', 'GloFree24'],
                         disabled: true
@@ -1516,6 +1516,11 @@ const snippetsRef = {
                     {
                         'key': 'Mercer Co',
                         columns: ['Year', 'MerFree24'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Montgomery Co',
+                        columns: ['Year', 'MontFree24'],
                         disabled: true
                     },
                     {
@@ -1530,23 +1535,24 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['roadwayreliablilityTOD_Fwy', 'roadwayreliablilityTOD_Local'],
                 context: {
-                    labels: false,
+                    labels: ['Roadway Reliability Index'],
+                    keepLabels: true,
                     units: ['singles'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPCAM', 'DVRPCMD', 'DVRPCPM', 'DVRPCNT'],
-                    ['PASubCosAM', 'PASubCosMD', 'PASubCosPM', 'PASubCosNT'],
-                    ['PACosAM', 'PACosMD', 'PACosPM', 'PACosNT'],
                     ['NJCosAM', 'NJCosMD', 'NJCosPM', 'NJCosNT'],
+                    ['PACosAM', 'PACosMD', 'PACosPM', 'PACosNT'],
+                    ['PASubCosAM', 'PASubCosMD', 'PASubCosPM', 'PASubCosNT'],
                     ['BucAM', 'BucMD', 'BucPM', 'BucNT'],
-                    ['ChesAM', 'ChesMD', 'ChesPM', 'ChesNT'],
-                    ['DelAM', 'DelMD', 'DelPM', 'DelNT'],
-                    ['MontAM', 'MontMD', 'MontPM', 'MontNT'],
                     ['BurlAM', 'BurlMD', 'BurlPM', 'BurlNT'],
                     ['CamAM', 'CamMD', 'CamPM', 'CamNT'],
+                    ['ChesAM', 'ChesMD', 'ChesPM', 'ChesNT'],
+                    ['DelAM', 'DelMD', 'DelPM', 'DelNT'],
                     ['GloAM', 'GloMD', 'GloPM', 'GloNT'],
                     ['MerAM', 'MerMD', 'MerPM', 'MerNT'],
+                    ['MontAM', 'MontMD', 'MontPM', 'MontNT'],
                     ['PhilAM', 'PhilMD', 'PhilPM', 'PhilNT']
                 ],
                 data: [
