@@ -1024,7 +1024,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['medIncByRace_wide'],
                 context: {
-                    labels: ['2017 Dollars $'],
+                    labels: ['Dollars (2017)'],
                     units: ['thousands']
                 },
                 data: [
@@ -1091,7 +1091,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['medIncByRace_wide'],
                 context: {
-                    labels: ['2017 Dollars $'],
+                    labels: ['Dollars (2017)'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
@@ -1107,11 +1107,11 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Minority Income',
+                        'key': 'People of Color & Latinx',
                         columns: ['year', 'Region_minorityInc']
                     },
                     {
-                        'key': 'White Non-Hispanic Income',
+                        'key': 'Whites',
                         columns: ['year', 'Region_whtNonHispInc']
                     }
                 ]
@@ -1136,7 +1136,8 @@ const snippetsRef = {
                 container: 'chart4',
                 dataSource: ['labForceByRace_wide'],
                 context: {
-                    labels: false,
+                    labels: ['Percent Participation Gap'],
+                    keepLabels: true,
                     units: ['percent'],
                     keepUnits: true
                 },
@@ -1145,13 +1146,13 @@ const snippetsRef = {
                     ['NJ Suburban Counties_difference'],
                     ['PA Suburban Counties_difference'],
                     ['Bucks_difference'],
-                    ['Chester_difference'],
-                    ['Delaware_difference'],
-                    ['Montgomery_difference'],
                     ['Burlington_difference'],
                     ['Camden_difference'],
+                    ['Chester_difference'],
+                    ['Delaware_difference'],
                     ['Gloucester_difference'],
                     ['Mercer_difference'],
+                    ['Montgomery_difference'],
                     ['Philadelphia_difference']
                 ],
                 data: [
@@ -1166,7 +1167,8 @@ const snippetsRef = {
                 container: 'chart5',
                 dataSource: ['labForceByRace_wide'],
                 context: {
-                    labels: false,
+                    labels: ['Percent Participation'],
+                    keepLabels: true,
                     units: ['percent'],
                     keepUnits: true
                 },
@@ -1175,91 +1177,26 @@ const snippetsRef = {
                     ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
                     ['PA Suburban Counties_labWht', 'PA Suburban Counties_labNonWht'],
                     ['Bucks_labWht', 'Bucks_labNonWht'],
-                    ['Chester_labWht', 'Chester_labNonWht'],
-                    ['Delaware_labWht', 'Delaware_labNonWht'],
-                    ['Montgomery_labWht', 'Montgomery_labNonWht'],
                     ['Burlington_labWht', 'Burlington_labNonWht'],
                     ['Camden_labWht', 'Camden_labNonWht'],
+                    ['Chester_labWht', 'Chester_labNonWht'],
+                    ['Delaware_labWht', 'Delaware_labNonWht'],
                     ['Gloucester_labWht', 'Gloucester_labNonWht'],
                     ['Mercer_labWht', 'Mercer_labNonWht'],
+                    ['Montgomery_labWht', 'Montgomery_labNonWht'],
                     ['Philadelphia_labWht', 'Philadelphia_labNonWht']
                 ],
                 data: [
                     {
-                        'key': 'White',
+                        'key': 'Whites',
                         columns: ['year', 'Region_labWht']
                     },
                     {
-                        'key': 'Non-White',
+                        'key': 'People of Color',
                         columns: ['year', 'Region_labNonWht']
                     }
                 ]
-            },
-            {
-                type: 'line',
-                container: 'chart6',
-                dataSource: ['labForceByEth_wide'],
-                context: {
-                    labels: false,
-                    units: ['percent'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['Region_difference'],
-                    ['NJ Suburban Counties_difference'],
-                    ['PA Suburban Counties_difference'],
-                    ['Bucks_difference'],
-                    ['Chester_difference'],
-                    ['Delaware_difference'],
-                    ['Montgomery_difference'],
-                    ['Burlington_difference'],
-                    ['Camden_difference'],
-                    ['Gloucester_difference'],
-                    ['Mercer_difference'],
-                    ['Philadelphia_difference']
-                ],
-                data: [
-                    {
-                        'key': 'Labor Force Participation Gap',
-                        columns: ['year', 'Region_difference']
-                    }
-                ]
-            },
-            {
-                type: 'line',
-                container: 'chart7',
-                dataSource: ['labForceByEth_wide'],
-                context: {
-                    labels: false,
-                    units: ['percent'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['Region_labWht', 'Region_labHisp'],
-                    ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labHisp'],
-                    ['PA Suburban Counties_labWht', 'PA Suburban Counties_labHisp'],
-                    ['Bucks_labWht', 'Bucks_labHisp'],
-                    ['Chester_labWht', 'Chester_labHisp'],
-                    ['Delaware_labWht', 'Delaware_labHisp'],
-                    ['Montgomery_labWht', 'Montgomery_labHisp'],
-                    ['Burlington_labWht', 'Burlington_labHisp'],
-                    ['Camden_labWht', 'Camden_labHisp'],
-                    ['Gloucester_labWht', 'Gloucester_labHisp'],
-                    ['Mercer_labWht', 'Mercer_labHisp'],
-                    ['Philadelphia_labWht', 'Philadelphia_labHisp']
-                ],
-                data: [
-                    {
-                        'key': 'Non-Latinx',
-                        columns: ['year', 'Region_labWht']
-                    },
-                    {
-                        'key': 'Latinx',
-                        columns: ['year', 'Region_labHisp']
-                    }
-                ]
-            },
-
+            }
         ]
     },
     'Income Disparities': {
