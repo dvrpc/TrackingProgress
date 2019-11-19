@@ -327,9 +327,11 @@ const createdStackedBarPlusLine = (source, toggleContext) => {
 }
 
 // waterfall charts are just fancy multi-bar charts. Each "waterfall" is it's own bar
+// OR make a simplified candlestick that doesn't have ticks...
 const createWaterfallChart = (source, toggleContext) => {
+    console.log('source at create waterfall ', source)
     let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, toggleContext)
+    //[container, dataSource, source] = formatInpus(source, toggleContext)
 }
 
 export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createdStackedBarPlusLine, createLineAndScatterChart, createWaterfallChart};

@@ -63,7 +63,7 @@ const dataVizSwitch = (type, source, toggleContext) => {
             graphs.createLineAndScatterChart(source, toggleContext)
             break;
         case 'waterfall':
-            //graphs.createWaterfallChart(source, doubleToggle)
+            graphs.createWaterfallChart(source, toggleContext)
         default:
             console.log('default')
     }
