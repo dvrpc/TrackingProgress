@@ -2243,8 +2243,8 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['popGrowth'],
                 context: {
-                    labels: ['Change in Population', 'Total Population', 'Percent Change in Population'],
-                    units: ['millions', 'thousands', 'percent']
+                    labels: ['Change in Population', 'Total Population (Thousands)', 'Percent Change in Population'],
+                    units: ['thousands', 'thousands', 'percent']
                 },
                 columnOptions: [
                     ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
@@ -2338,13 +2338,14 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['pop_comp_change'],
                 columnOptions: [
+                    ['DVRPC'],
+                    ['Bucks'],
                     ['Burlington'],
                     ['Camden'],
-                    ['Gloucester'],
-                    ['Mercer'],
-                    ['Bucks'],
                     ['Chester'],
                     ['Delaware'],
+                    ['Gloucester'],
+                    ['Mercer'],
                     ['Montgomery'],
                     ['Philadelphia']
                 ],
@@ -2359,22 +2360,22 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['pop_age_change','pop_age_totals'],
                 context: {
-                    labels: ['Change in Population', 'Total Population'],
-                    units: ['millions'],
+                    labels: ['Change in Population', 'Total Population (Thousands)'],
+                    units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPC_<20','DVRPC_20-34','DVRPC_35-49','DVRPC_50-64','DVRPC_65+'],
-                    ['PASub_<20','PASub_20-34','PASub_35-49','PASub_50-64','PASub_65+'],
                     ['NJCnt_<20','NJCnt_20-34','NJCnt_35-49','NJCnt_50-64','NJCnt_65+'],
-                    ['Chester_<20','Chester_20-34','Chester_35-49','Chester_50-64','Chester_65+'],
-                    ['Delaware_<20','Delaware_20-34','Delaware_35-49','Delaware_50-64','Delaware_65+'],
-                    ['Montgomery_<20','Montgomery_20-34','Montgomery_35-49','Montgomery_50-64','Montgomery_65+'],
+                    ['PASub_<20','PASub_20-34','PASub_35-49','PASub_50-64','PASub_65+'],
+                    ['Bucks_<20','Bucks_20-34','Bucks_35-49','Bucks_50-64','Bucks_65+'],
                     ['Burlington_<20','Burlington_20-34','Burlington_35-49','Burlington_50-64','Burlington_65+'],
                     ['Camden_<20','Camden_20-34','Camden_35-49','Camden_50-64','Camden_65+'],
+                    ['Chester_<20','Chester_20-34','Chester_35-49','Chester_50-64','Chester_65+'],
+                    ['Delaware_<20','Delaware_20-34','Delaware_35-49','Delaware_50-64','Delaware_65+'],
                     ['Gloucester_<20','Gloucester_20-34','Gloucester_35-49','Gloucester_50-64','Gloucester_65+'],
                     ['Mercer_<20','Mercer_20-34','Mercer_35-49','Mercer_50-64','Mercer_65+'],
-                    ['Bucks_<20','Bucks_20-34','Bucks_35-49','Bucks_50-64','Bucks_65+'],
+                    ['Montgomery_<20','Montgomery_20-34','Montgomery_35-49','Montgomery_50-64','Montgomery_65+'],
                     ['Philadelphia_<20','Philadelphia_20-34','Philadelphia_35-49','Philadelphia_50-64','Philadelphia_65+'],
                 ],
                 data: [
@@ -2405,22 +2406,22 @@ const snippetsRef = {
                 container: 'chart4',
                 dataSource: ['pop_race_change','pop_race_totals'],
                 context: {
-                    labels: ['Change in Population', 'Total Population'],
-                    units: ['millions'],
+                    labels: ['Change in Population', 'Total Population (Thousands)'],
+                    units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPC_WA','DVRPC_BA','DVRPC_IA','DVRPC_AA','DVRPC_NA','DVRPC_TOM'],
-                    ['PASub_WA','PASub_BA','PASub_IA','PASub_AA','PASub_NA','PASub_TOM'],
                     ['NJCnt_WA','NJCnt_BA','NJCnt_IA','NJCnt_AA','NJCnt_NA','NJCnt_TOM'],
-                    ['Chester_WA','Chester_BA','Chester_IA','Chester_AA','Chester_NA','Chester_TOM'],
-                    ['Delaware_WA','Delaware_BA','Delaware_IA','Delaware_AA','Delaware_NA','Delaware_TOM'],
-                    ['Montgomery_WA','Montgomery_BA','Montgomery_IA','Montgomery_AA','Montgomery_NA','Montgomery_TOM'],
+                    ['PASub_WA','PASub_BA','PASub_IA','PASub_AA','PASub_NA','PASub_TOM'],
+                    ['Bucks_WA','Bucks_BA','Bucks_IA','Bucks_AA','Bucks_NA','Bucks_TOM'],
                     ['Burlington_WA','Burlington_BA','Burlington_IA','Burlington_AA','Burlington_NA','Burlington_TOM'],
                     ['Camden_WA','Camden_BA','Camden_IA','Camden_AA','Camden_NA','Camden_TOM'],
+                    ['Chester_WA','Chester_BA','Chester_IA','Chester_AA','Chester_NA','Chester_TOM'],
+                    ['Delaware_WA','Delaware_BA','Delaware_IA','Delaware_AA','Delaware_NA','Delaware_TOM'],
                     ['Gloucester_WA','Gloucester_BA','Gloucester_IA','Gloucester_AA','Gloucester_NA','Gloucester_TOM'],
                     ['Mercer_WA','Mercer_BA','Mercer_IA','Mercer_AA','Mercer_NA','Mercer_TOM'],
-                    ['Bucks_WA','Bucks_BA','Bucks_IA','Bucks_AA','Bucks_NA','Bucks_TOM'],
+                    ['Montgomery_WA','Montgomery_BA','Montgomery_IA','Montgomery_AA','Montgomery_NA','Montgomery_TOM'],
                     ['Philadelphia_WA','Philadelphia_BA','Philadelphia_IA','Philadelphia_AA','Philadelphia_NA','Philadelphia_TOM']
                 ],
                 data: [
@@ -2441,7 +2442,7 @@ const snippetsRef = {
                         columns: ['Year', 'DVRPC_AA']
                     },
                     {
-                        'key': 'Native HAwaiian and Other Pacific Islander',
+                        'key': 'Native Hawaiian and Other Pacific Islander',
                         columns: ['Year', 'DVRPC_NA']
                     },
                     {
@@ -2455,36 +2456,42 @@ const snippetsRef = {
                 container: 'chart5',
                 dataSource: ['pop_hisp_change','pop_hisp_totals'],
                 context: {
-                    labels: ['Change in Population', 'Total Population'],
-                    units: ['millions'],
+                    labels: ['Change in Population', 'Total Population (Thousands)'],
+                    units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPC_NH','DVRPC_H'],
-                    ['PASub_NH','PASub_H'],
                     ['NJCnt_NH','NJCnt_H'],
-                    ['Chester_NH','Chester_H'],
-                    ['Delaware_NH','Delaware_H'],
-                    ['Montgomery_NH','Montgomery_H'],
+                    ['PASub_NH','PASub_H'],
+                    ['Bucks_NH','Bucks_H'],
                     ['Burlington_NH','Burlington_H'],
                     ['Camden_NH','Camden_H'],
+                    ['Chester_NH','Chester_H'],
+                    ['Delaware_NH','Delaware_H'],
                     ['Gloucester_NH','Gloucester_H'],
                     ['Mercer_NH','Mercer_H'],
-                    ['Bucks_NH','Bucks_H'],
+                    ['Montgomery_NH','Montgomery_H'],
                     ['Philadelphia_NH','Philadelphia_H'],
                 ],
                 data: [
                     {
-                        'key': 'Non-Hispanic',
+                        'key': 'non-Latinx',
                         columns: ['Year', 'DVRPC_NH']
                     },
                     {
-                        'key': 'Hispanic',
+                        'key': 'Latinx',
                         columns: ['Year', 'DVRPC_H']
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: ``,
+            what: ``,
+            how: ``,
+            resource: ``
+        }
     },
     'Bridge Conditions': {
         file: 'bridgeConditions.html',

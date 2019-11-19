@@ -2,7 +2,7 @@
     <div id="indicator-header-wrapper">
         <h1 class="indicator-header">Population Growth</h1>
         <div class="indicator-category-icons">
-            <img class="snippet-categories" src="./img/comm-icon.png" alt="communication category icon"/>
+            <img class="snippet-categories" src="./img/comm-icon.png" alt="community category icon"/>
             <img class="snippet-categories" src="./img/econo-icon.png" alt="economy category icon"/>
             <img class="snippet-categories" src="./img/enviro-icon.png" alt="environment category icon"/>
         </div>
@@ -13,14 +13,15 @@
             <h2 id="why-tab" class="description-wrapper-tab-headers active-tab">Why is it Important?</h2>
             <h2 id="what-tab" class="description-tab-middle description-wrapper-tab-headers">What is it?</h2>
             <h2 id="how-tab" class="description-wrapper-tab-headers">How Are We Doing?</h2>
+            <h2 id="resource-tab" class="description-wrapper-tab-headers">Resources</h2>
         </div>
-        <div id="indicator-description-container"></div>
+        <div id="indicator-description-container" data-primary="comm"></div>
     </section>
 
     <hr class="indicator-header-hr" />
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Population Growth 2000 - 2017</h2>
+        <h2 class="indicator-subheader toggle-subheader">Population Growth</h2>
         <span class="toggle-vr">|</span>
         <p>toggle data:</p>
         <form>
@@ -28,7 +29,7 @@
                 <select id="viz-0" class="toggle-data-selector">
                     <option value="0">Change</option>
                     <option value="1">Totals</option>
-                    <option value="2">Percent</option>
+                    <option value="2">Percent Change</option>
                 </select>
             </fieldset>
         </form>
@@ -36,25 +37,26 @@
     <div class="data-viz chart">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>
 
     <hr class="indicator-content-hr" />
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Dynamics of County Population Change 2010 - 2017</h2>
+        <h2 class="indicator-subheader toggle-subheader">Dynamics of County Population Change</h2>
         <span class="toggle-vr">|</span>
         <p>toggle data:</p>
         <form class="double-toggle-form">
             <fieldset>
                 <select id="viz-1" class="toggle-data-selector">
                     <option value="0">DVRPC Region</option>
-                    <option value="1">Chester County</option>
-                    <option value="2">Delaware County</option>
-                    <option value="3">Montgomery County</option>
-                    <option value="4">Burlington County</option>
-                    <option value="5">Camden County</option>
+                    <option value="1">Bucks County</option>
+                    <option value="2">Burlington County</option>
+                    <option value="3">Camden County</option>
+                    <option value="4">Chester County</option>
+                    <option value="5">Delaware County</option>
                     <option value="6">Gloucester County</option>
                     <option value="7">Mercer County</option>
-                    <option value="8">Bucks County</option>
+                    <option value="8">Montgomery County</option>
                     <option value="9">Philadelphia County</option>
                 </select>
             </fieldset>
@@ -71,11 +73,12 @@
     <div class="data-viz chart2">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>
 
     <hr class="indicator-content-hr" />
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Change in Age Groups 2010 - 2017</h2>
+        <h2 class="indicator-subheader toggle-subheader">Age Groups</h2>
         <span class="toggle-vr">|</span>
         <p>toggle data:</p>
         <form class="double-toggle-form">
@@ -83,18 +86,18 @@
                 <select id="viz-2" class="toggle-data-selector">
                     <optgroup label="Regional">
                         <option value="0">DVRPC</option>
-                        <option value="1">PA Suburbs</option>
-                        <option value="2">NJ Counties</option>
+                        <option value="1">NJ Counties</option>
+                        <option value="2">PA Suburbs</option>
                     </optgroup>
                     <optgroup label="County">
-                        <option value="3">Chester</option>
-                        <option value="4">Delaware</option>
-                        <option value="5">Montgomery</option>
-                        <option value="6">Burlington</option>
-                        <option value="7">Camden</option>
+                        <option value="3">Bucks</option>
+                        <option value="4">Burlington</option>
+                        <option value="5">Camden</option>
+                        <option value="6">Chester</option>
+                        <option value="7">Delaware</option>
                         <option value="8">Gloucester</option>
                         <option value="9">Mercer</option>
-                        <option value="10">Bucks</option>
+                        <option value="10">Montgomery</option>
                         <option value="11">Philadelphia</option>
                     </optgroup>
                 </select>
@@ -110,11 +113,12 @@
     <div class="data-viz chart3">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>
 
     <hr class="indicator-content-hr" />
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Change in Race 2010 - 2017</h2>
+        <h2 class="indicator-subheader toggle-subheader">Race</h2>
         <span class="toggle-vr">|</span>
         <p>toggle data:</p>
         <form class="double-toggle-form">
@@ -122,18 +126,18 @@
                 <select id="viz-3" class="toggle-data-selector">
                     <optgroup label="Regional">
                         <option value="0">DVRPC</option>
-                        <option value="1">PA Suburbs</option>
-                        <option value="2">NJ Counties</option>
+                        <option value="1">NJ Counties</option>
+                        <option value="2">PA Suburbs</option>
                     </optgroup>
                     <optgroup label="County">
-                        <option value="3">Chester</option>
-                        <option value="4">Delaware</option>
-                        <option value="5">Montgomery</option>
-                        <option value="6">Burlington</option>
-                        <option value="7">Camden</option>
+                        <option value="3">Bucks</option>
+                        <option value="4">Burlington</option>
+                        <option value="5">Camden</option>
+                        <option value="6">Chester</option>
+                        <option value="7">Delaware</option>
                         <option value="8">Gloucester</option>
                         <option value="9">Mercer</option>
-                        <option value="10">Bucks</option>
+                        <option value="10">Montgomery</option>
                         <option value="11">Philadelphia</option>
                     </optgroup>
                 </select>
@@ -149,11 +153,12 @@
     <div class="data-viz chart4">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>
 
     <hr class="indicator-content-hr" />
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Change in Hispanic Origin 2010 - 2017</h2>
+        <h2 class="indicator-subheader toggle-subheader">Ethnicity</h2>
         <span class="toggle-vr">|</span>
         <p>toggle data:</p>
         <form class="double-toggle-form">
@@ -161,18 +166,18 @@
                 <select id="viz-4" class="toggle-data-selector">
                     <optgroup label="Regional">
                         <option value="0">DVRPC</option>
-                        <option value="1">PA Suburbs</option>
-                        <option value="2">NJ Counties</option>
+                        <option value="1">NJ Counties</option>
+                        <option value="2">PA Suburbs</option>
                     </optgroup>
                     <optgroup label="County">
-                        <option value="3">Chester</option>
-                        <option value="4">Delaware</option>
-                        <option value="5">Montgomery</option>
-                        <option value="6">Burlington</option>
-                        <option value="7">Camden</option>
+                        <option value="3">Bucks</option>
+                        <option value="4">Burlington</option>
+                        <option value="5">Camden</option>
+                        <option value="6">Chester</option>
+                        <option value="7">Delaware</option>
                         <option value="8">Gloucester</option>
                         <option value="9">Mercer</option>
-                        <option value="10">Bucks</option>
+                        <option value="10">Montgomery</option>
                         <option value="11">Philadelphia</option>
                     </optgroup>
                 </select>
@@ -188,4 +193,5 @@
     <div class="data-viz chart5">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>
 </article>
