@@ -1298,24 +1298,26 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['sexInc_wide_difference', 'sexInc_wide_ratio'],
+                dataSource: ['sexInc_gap', 'sexInc_percofmale'],
                 context: {
-                    labels: ['2017 dollars($)'],
-                    keepLabels: true,
-                    units: ['thousands'],
-                    keepUnits: true
+                    labels: ['Median Income Gap (2017 Dollars)', 'Female Percentage of Male Median Income (2017 Dollars)'],
+                    keepLabels: false,
+                    units: ['thousands', 'percent'],
+                    keepUnits: false
                 },
                 columnOptions: [
                     ['Region'],
                     ['NJ Suburban Counties'],
+                    ['PA Suburban Counties'],
                     ['Bucks'],
-                    ['Chester'],
-                    ['Delaware'],
-                    ['Montgomery'],
                     ['Burlington'],
                     ['Camden'],
+                    ['Chester'],
+                    ['Delaware'],
                     ['Gloucester'],
-                    ['Mercer']
+                    ['Mercer'],
+                    ['Montgomery'],
+                    ['Philadelphia']
                 ],
                 data: [
                     {
@@ -1327,101 +1329,111 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
-                dataSource: ['sexInc_wide'],
+                dataSource: ['sexInc_median'],
                 context: {
-                    labels: ['2017 dollars($)'],
+                    labels: ['Median Income (2017 Dollars)'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region_FemaleMed', 'Region_MaleMed'],
-                    ['NJ Suburban Counties_FemaleMed', 'NJ Suburban Counties_MaleMed'],
-                    ['Bucks_FemaleMed', 'Bucks_MaleMed'],
-                    ['Chester_FemaleMed', 'Chester_MaleMed'],
-                    ['Delaware_FemaleMed', 'Delaware_MaleMed'],
-                    ['Montgomery_FemaleMed', 'Montgomery_MaleMed'],
-                    ['Burlington_FemaleMed', 'Burlington_MaleMed'],
-                    ['Camden_FemaleMed', 'Camden_MaleMed'],
-                    ['Gloucester_FemaleMed', 'Gloucester_MaleMed'],
-                    ['Mercer_FemaleMed', 'Mercer_MaleMed']
+                    ['Region_Female', 'Region_Male'],
+                    ['NJ Suburban Counties_Female', 'NJ Suburban Counties_Male'],
+                    ['PA Suburban Counties_Female', 'PA Suburban Counties_Male'],
+                    ['Bucks_Female', 'Bucks_Male'],
+                    ['Burlington_Female', 'Burlington_Male'],
+                    ['Camden_Female', 'Camden_Male'],
+                    ['Chester_Female', 'Chester_Male'],
+                    ['Delaware_Female', 'Delaware_Male'],
+                    ['Gloucester_Female', 'Gloucester_Male'],
+                    ['Mercer_Female', 'Mercer_Male'],
+                    ['Montgomery_Female', 'Montgomery_Male'],
+                    ['Philadelphia_Female', 'Philadelphia_Male'],
                 ],
                 data: [
                     {
                         'key': 'Female',
-                        columns: ['year', 'Region_FemaleMed']
+                        columns: ['year', 'Region_Female']
                     },
                     {
                         'key': 'Male',
-                        columns: ['year', 'Region_MaleMed']
+                        columns: ['year', 'Region_Male']
                     }
                 ]
             },
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: ['labForceBySex_wide'],
+                dataSource: ['labForceBySex_gap'],
                 context: {
-                    labels: false,
+                    labels: ['Percent Participation Gap'],
+                    keepLabels: true,
                     units: ['percent'],
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region_difference'],
-                    ['NJ Suburban Counties_difference'],
-                    ['PA Suburban Counties_difference'],
-                    ['Bucks_difference'],
-                    ['Chester_difference'],
-                    ['Delaware_difference'],
-                    ['Montgomery_difference'],
-                    ['Burlington_difference'],
-                    ['Camden_difference'],
-                    ['Gloucester_difference'],
-                    ['Mercer_difference'],
-                    ['Philadelphia_difference']
+                    ['Region'],
+                    ['NJ Suburban Counties'],
+                    ['PA Suburban Counties'],
+                    ['Bucks'],
+                    ['Burlington'],
+                    ['Camden'],
+                    ['Chester'],
+                    ['Delaware'],
+                    ['Gloucester'],
+                    ['Mercer'],
+                    ['Montgomery'],
+                    ['Philadelphia']
                 ],
                 data: [
                     {
                         'key': 'Male to Female Gap',
-                        columns: ['year', 'Region_difference']
+                        columns: ['year', 'Region']
                     }
                 ]
             },
             {
                 type: 'line',
                 container: 'chart4',
-                dataSource: ['labForceBySex_wide'],
+                dataSource: ['labForceBySex_percent'],
                 context: {
-                    labels: false,
+                    labels: ['Percent Participation'],
+                    keepLabels: true,
                     units: ['percent'],
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region_labMl', 'Region_labFm'],
-                    ['NJ Suburban Counties_labMl', 'NJ Suburban Counties_labFm'],
-                    ['PA Suburban Counties_labMl', 'PA Suburban Counties_labFm'],
-                    ['Bucks_labMl', 'Bucks_labFm'],
-                    ['Chester_labMl', 'Chester_labFm'],
-                    ['Delaware_labMl', 'Delaware_labFm'],
-                    ['Montgomery_labMl', 'Montgomery_labFm'],
-                    ['Burlington_labMl', 'Burlington_labFm'],
-                    ['Camden_labMl', 'Camden_labFm'],
-                    ['Gloucester_labMl', 'Gloucester_labFm'],
-                    ['Mercer_labMl', 'Mercer_labFm'],
-                    ['Philadelphia_labMl', 'Philadelphia_labFm'],
+                    ['Region_Male', 'Region_Female'],
+                    ['NJ Suburban Counties_Male', 'NJ Suburban Counties_Female'],
+                    ['PA Suburban Counties_Male', 'PA Suburban Counties_Female'],
+                    ['Bucks_Male', 'Bucks_Female'],
+                    ['Burlington_Male', 'Burlington_Female'],
+                    ['Camden_Male', 'Camden_Female'],
+                    ['Chester_Male', 'Chester_Female'],
+                    ['Delaware_Male', 'Delaware_Female'],
+                    ['Gloucester_Male', 'Gloucester_Female'],
+                    ['Mercer_Male', 'Mercer_Female'],
+                    ['Montgomery_Male', 'Montgomery_Female'],
+                    ['Philadelphia_Male', 'Philadelphia_Female']
                 ],
                 data: [
                     {
                         'key': 'Male',
-                        columns: ['year', 'Region_labMl']
+                        columns: ['year', 'Region_Male']
                     },
                     {
                         'key': 'Female',
-                        columns: ['year', 'Region_labFm']
+                        columns: ['year', 'Region_Female']
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: ``,
+            what: ``,
+            how: ``,
+            resource: ``
+        }
     },
     'Roadway Reliability': {
         file: 'roadwayReliability.html',
