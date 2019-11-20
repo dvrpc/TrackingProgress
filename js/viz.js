@@ -274,58 +274,6 @@ const createStackedAreaChart = (source, toggleContext) => {
     })
 }
 
-const createdStackedBarPlusLine = (source, toggleContext) => {
-    let lineMax = 0;
-    let barMax = 0;
-    let max;
-
-    let container, dataSource, context;
-    [container, dataSource, source, context] = formatInpus(source, toggleContext)
-
-    d3.csv(dataSource, rows => {
-        source.data.forEach(series => {
-            // dynamically create an upper bound that will be the combination of the max line value + the min bar value
-            if(series.type === 'bar') +rows[series.columns[1]] > barMax ? barMax = +rows[series.columns[1]] : null
-            if(series.type === 'line') +rows[series.columns[1]] > lineMax ? lineMax = +rows[series.columns[1]] : null
-
-            series.values.push({
-                x: +rows[series.columns[0]],
-                y: rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
-            })
-        })
-
-    }, csvObj => {
-
-        // kinda hacky but it's the current solution to finding the max (which is generally bar1Max + bar2Max)
-        max = lineMax + (barMax / 2.5)
-        
-        nv.addGraph(() => {
-            let chart = nv.models.multiChart()
-                .margin({top: 35, right: 55, bottom: 35, left: 55})
-                .yDomain1([0, max])
-                .yDomain2([0, max])
-
-            chart.bars1.stacked(true)
-            chart.bars2.stacked(true)
-
-            chart.yAxis1.tickFormat(d3.format(','))
-            chart.yAxis2.tickFormat(d3.format(','))
-
-            // set max legend length to an arbitrarily high number to prevent text cutoff
-            chart.legend.maxKeyLength(100)
-
-            // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis1, chart.margin(), context)
-            
-            d3.select(container).datum(source.data).transition().duration(500).call(chart)
-
-            nv.utils.windowResize(chart.update)
-
-            return chart
-        })
-    })
-}
-
 // waterfall charts are just fancy multi-bar charts. Each "waterfall" is it's own bar
 // OR make a simplified candlestick that doesn't have ticks...
 const createWaterfallChart = (source, toggleContext) => {
@@ -334,4 +282,4 @@ const createWaterfallChart = (source, toggleContext) => {
     //[container, dataSource, source] = formatInpus(source, toggleContext)
 }
 
-export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createdStackedBarPlusLine, createLineAndScatterChart, createWaterfallChart};
+export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createLineAndScatterChart, createWaterfallChart};
