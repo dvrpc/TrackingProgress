@@ -628,7 +628,7 @@ footer{
 
     /* Mobile styles for the splash page */
     #tp-header{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     #tp-header-name{
         width: 100%;
@@ -636,20 +636,17 @@ footer{
     }
     .splash-text{
         width: 90%;
-        line-height: 1.6rem;
+        line-height: 1.4rem;
         margin-bottom: 4%;
     }
     details{
-        margin-bottom: 4%;
+        margin-bottom: 3%;
     }
     summary{
         font-size: 1rem;
     }
     .gif-row{
         flex-direction: column;
-    }
-    #to-grid{
-        margin-bottom: 2%;
     }
 
 
@@ -778,7 +775,7 @@ footer{
         height: 33px;
     }
     #description-wrapper{
-        width: 95%;
+        width: 100%;
     }
     #description-wrapper-tabs{
         font-size: 0.7rem;

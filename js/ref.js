@@ -313,45 +313,68 @@ const snippetsRef = {
         file: 'roadwaySafety.html',
         d3: [
             {
-                type: 'stacked bar plus line',
+                type: 'line',
                 container: 'chart',
-                dataSource: ['crashesWeb'],
+                dataSource: ['crashesWeb1'],
                 context: {
-                    labels: false,
-                    units: false
+                    labels: ['KSI Five-Year Average'],
+                    keepLabels: true,
+                    units: ['thousands'],
+                    keepUnits: true
                 },
                 columnOptions: [
-                    ['ksi5yrAvgDVRPC', 'ksiMotorVehicleDVRPC', 'ksiBikePedDVRPC'],
-                    ['ksi5yrAvgPASubregion', 'ksiMotorVehiclePASubregion', 'ksiBikePedPASubregion'],
-                    ['ksi5yrAvgNJSubregion', 'ksiMotorVehicleNJSubregion', 'ksiBikePedNJSubregion'],
-                    ['ksi5yrAvgPASubregion', 'ksiMotorVehiclePASubregion', 'ksiBikePedPASubregion'],
-                    ['ksi5yrAvgBucksCo', 'ksiMotorVehicleBucksCo', 'ksiBikePedBucksCo'],
-                    ['ksi5yrAvgChesterCo', 'ksiMotorVehicleChesterCo', 'ksiBikePedChesterCo'],
-                    ['ksi5yrAvgDelawareCo', 'ksiMotorVehicleDelawareCo', 'ksiBikePedDelawareCo'],
-                    ['ksi5yrAvgMontgomeryCo', 'ksiMotorVehicleMontgomeryCo', 'ksiBikePedMontgomeryCo'],
-                    ['ksi5yrAvgBurlingtonCo', 'ksiMotorVehicleBurlingtonCo', 'ksiBikePedBurlingtonCo'],
-                    ['ksi5yrAvgCamdenCo', 'ksiMotorVehicleCamdenCo', 'ksiBikePedCamdenCo'],
-                    ['ksi5yrAvgGloucesterCo', 'ksiMotorVehicleGloucesterCo', 'ksiBikePedGloucesterCo'],
-                    ['ksi5yrAvgMercerCo', 'ksiMotorVehicleMercerCo', 'ksiBikePedMercerCo']
+                    ['DVRPC- ksi per capita','NJ Suburbs- ksi per capita','PA Suburbs- ksi per capita','Bucks- ksi per capita','Burlington- ksi per capita','Camden- ksi per capita','Chester- ksi per capita','Delaware- ksi per capita','Gloucester- ksi per capita','Mercer- ksi per capita','Montgomery- ksi per capita','Philadelphia- ksi per capita'],
+                    ['DVRPC- ksi total','NJ Suburbs- ksi total','PA Suburbs- ksi total','Bucks- ksi total','Burlington- ksi total','Camden- ksi total','Chester- ksi total','Delaware- ksi total','Gloucester- ksi total','Mercer- ksi total','Montgomery- ksi total','Philadelphia- ksi total'],
+                    ['DVRPC- ksi per VMT','NJ Suburbs- ksi per VMT','PA Suburbs- ksi per VMT','Bucks- ksi per VMT','Burlington- ksi per VMT','Camden- ksi per VMT','Chester- ksi per VMT','Delaware- ksi per VMT','Gloucester- ksi per VMT','Mercer- ksi per VMT','Montgomery- ksi per VMT','Philadelphia- ksi per VMT']
                 ],
                 data: [
                     {
-                        'key': '5 year avg',
-                        'type': 'line',
-                        'yAxis': 1,
-                        'columns': ['year', 'ksi5yrAvgDVRPC']
+                        'key': 'DVRPC',
+                        'columns': ['year', 'DVRPC- ksi per capita']
                     },
                     {
-                        'key': 'Motor Vehicle',
-                        'type': 'bar',
-                        'yAxis': 2,
-                        'columns': ['year', 'ksiMotorVehicleDVRPC']
+                        'key': 'NJ Suburbs',
+                        'columns': ['year', 'NJ Suburbs- ksi per capita']
                     },
                     {
-                        'key': 'Bike + Ped',
-                        'type': 'bar',
-                        'yAxis': 2,
-                        'columns': ['year', 'ksiBikePedDVRPC']
+                        'key': 'PA Suburbs',
+                        'columns': ['year', 'PA Suburbs- ksi per capita']
+                    },
+                    {
+                        'key': 'Bucks',
+                        'columns': ['year', 'Bucks- ksi per capita']
+                    },
+                    {
+                        'key': 'Burlington',
+                        'columns': ['year', 'Burlington- ksi per capita']
+                    },
+                    {
+                        'key': 'Camden',
+                        'columns': ['year', 'Camden- ksi per capita']
+                    },
+                    {
+                        'key': 'Chester',
+                        'columns': ['year', 'Chester- ksi per capita']
+                    },
+                    {
+                        'key': 'Delaware',
+                        'columns': ['year', 'Delaware- ksi per capita']
+                    },
+                    {
+                        'key': 'Gloucester',
+                        'columns': ['year', 'Gloucester- ksi per capita']
+                    },
+                    {
+                        'key': 'Mercer',
+                        'columns': ['year', 'Mercer- ksi per capita']
+                    },
+                    {
+                        'key': 'Montgomery',
+                        'columns': ['year', 'Montgomery- ksi per capita']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        'columns': ['year', 'Philadelphia- ksi per capita']
                     }
                 ]
             },
