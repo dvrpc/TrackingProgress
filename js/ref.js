@@ -381,32 +381,44 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: ['crashesWeb'],
-                yAxisUnits: 'singles',
+                dataSource: ['crashesWeb2A', 'crashesWeb2B', 'crashesWeb2C'],
                 context: {
-                    labels: false,
+                    labels: ['KSI Per 100,000 People', 'KSI Total', 'KSI Per 100 Million VMT'],
+                    keepLabels: false,
                     units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions: [
+                    ['DVRPC- ksiBikePed', 'DVRPC- ksiMotorVehicle'],
+                    ['NJ Suburbs- ksiBikePed', 'NJ Suburbs- ksiMotorVehicle'],
+                    ['PA Suburbs- ksiBikePed', 'PA Suburbs- ksiMotorVehicle'],
+                    ['Bucks- ksiBikePed', 'Bucks- ksiMotorVehicle'],
+                    ['Burlington- ksiBikePed', 'Burlington- ksiMotorVehicle'],
+                    ['Camden- ksiBikePed', 'Camden- ksiMotorVehicle'],
+                    ['Chester- ksiBikePed', 'Chester- ksiMotorVehicle'],
+                    ['Delaware- ksiBikePed', 'Delaware- ksiMotorVehicle'],
+                    ['Gloucester- ksiBikePed', 'Gloucester- ksiMotorVehicle'],
+                    ['Mercer- ksiBikePed', 'Mercer- ksiMotorVehicle'],
+                    ['Montgomery- ksiBikePed', 'Montgomery- ksiMotorVehicle'],
+                    ['Philadelphia- ksiBikePed', 'Philadelphia- ksiMotorVehicle'],
                 ],
                 data: [
                     {
                         'key': 'Motor Vehicle',
-                        'columns': ['year', 'ksiMotorVehiclePerCapDVRPC']
+                        columns: ['year', 'DVRPC- ksiBikePed']
                     },
                     {
                         'key': 'Bike + Pededestrian',
-                        'columns': ['year', 'ksiBikePedPerCapDVRPC']
+                        columns: ['year', 'DVRPC- ksiMotorVehicle']
                     }
                 ]
             },
         ],
         text: {
-            why: ``,
-            what: ``,
-            how: ``,
-            resource: ``
+            why: `<p>Achieving a more livable region means making our roads safe for all users. Our transportation system must evolve to accommodate all users safely, so that an improving economy (and its accompanying increases in vehicle miles traveled)  does not result in an increase in crash fatalities and injuries as a byproduct. Vehicle crashes are currently the single leading cause of death in the United States for all persons between 8 and 24 years of age. Recently, Philadelphia adopted a Vision Zero policy, joining an international movement that approaches traffic safety from the perspective that no loss of life is acceptable. NJDOT and PennDOT have each adopted Towards Zero Deaths policies.</p><p>Beyond the obvious trauma and sorrow that results from a fatal crash, traffic fatalities also have significant economic costs to the region. The Federal Highway Administration estimates that there is a cost of approximately $11.3 million per fatality and $655,000 per serious injury resulting from a crash. Between 2012 and 2016, there were over 7,000 people killed or seriously injured in the region, totalling over $3.9 billion in economic costs.</p><p>The impacts of crashes are also not felt equally by all residents in the region. Many severe vehicle crashes are focused in areas where roadway design enables high speeds and there are large concentrations of carless households, where people are more likely to travel by foot or by bike. These areas also tend to be where populations of potential disadvantage, such as racial minorities or low-income individuals, live. This puts these populations at higher risk of being killed or seriously injured in a crash. Beyond just reducing the overall instances of crashes resulting in deaths or serious injuries, the region also has an obligation to ensure that potentially disadvantaged communities don’t bear an unequal share of the burden caused by these crashes.</p>`,
+            what: `<p>People killed or seriously injured (KSI) is used as the metric for roadway safety rather than simply fatalities because fatalities alone tend to be random in nature and can obscure long-term trends. Including serious injuries makes the data more robust and better highlights how the region is doing at preventing serious vehicle crashes. This approach has been promoted by the Federal Highway Administration (FHWA) and embraced by both the New Jersey Department of Transportation (NJDOT) and the Pennsylvania Department of Transportation (PennDOT). Because even KSI can be noisy and fluctuate from year to year, five-year averages are used to identify trends. When reporting five-year trends, <em>Tracking Progress</em> uses the final year of the average for reporting the data in the first chart. The data also separates pedestrians and bicyclists from motor vehicle occupants because these users are more vulnerable to death or serious injury when involved in a crash.</p><p>KSI can be looked at as a raw total, or normalized based on population (per capita) or based on vehicle miles driven (per VMT). To align with Vision Zero goals, total KSI is used as the lead indicator, because having no deaths or serious injuries is more important than having fewer relative to the population size or miles driven. Normalizing per 100 million VMT is a federal standard. It can identify where the risk of death or serious injury is especially high or low relative to the amount of driving. Per capita is meant to remove the hidden exposure risk  that can occur when you normalize the number of fatalities by VMT. By identifying fatalities per person rather than per mile driven, it underscores the fact that driving more miles increases the overall risk of being involved in a fatal crash.</p>`,
+            how: `<p>In 2017, the five-year average of people killed or seriously injured in crashes was 1,457. After steadily declining from a high of 1,735 KSI in 2010, the five year average has slightly increased since 2014. Overall, the five-year average dropped by 16 percent from 2010 to 17. The region has seen a similar trend in both KSI per 100,000 people and KSI per 100 million vehicle miles traveled. The five-year per capita average went from 31.1 to 25.5 and the miles driven average decreased from a high of 4.3 in 2010 to a low of 3.6 in 2015 before rising slightly to 3.7 in both 2016 and 2017.</p><p>Examining annual totals, the 1,664 people killed or seriously injured in 2017 was the highest total in the region since 2007. Whether this is the start of an upward trend or just the variation expected in annual data is yet to be seen.</p><p>The rate of crash fatalities and serious injuries is not evenly distributed throughout the region. For instance, the KSI rate per 100 million vehicles miles traveled in Philadelphia in 2017 was 50% higher than in the suburban Pennsylvania counties and more than twice the rate of the suburban New Jersey Counties.</p><p>Because bicyclists and pedestrians are especially vulnerable when involved in crashes, fatalities among those populations are of special concern. Unfortunately, bicyclist and pedestrian KSI is rising in the region. Fatalities and serious injuries suffered by bicyclists and pedestrians have consistently made up between 20 and 22 percent of the regional totals. Although the percentage of bicyclist and pedestrian KSI somewhat decreased between 2010 and 2015, the trend reversed in 2016 and 2017. As the total KSI for the region has increased so has the bicyclist and pedestrian KSI, reaching 2010 levels (350) in 2017. Bicycle and pedestrian KSI is also not evenly distributed throughout the region. In Philadelphia, where biking and walking are more common, bicyclists and pedestrians were 30-37% of the annual KSI, while this rate was only 16-22% in the suburban New Jersey counties, and only 10-18% in the suburban Pennsylvania counties.</p>`,
+            resource: `<p>DVRPC does extensive work analyzing and promoting the safety of the region's transportation system. Find publications, programs, and tools from our <a href="/Transportation/Safety/">Office of Safe Streets</a>. Recent highlights include the <a href="/Reports/18021.pdf">Transportation Safety Analysis and Plan</a> and a report on <a href="/Products/18022/">Crashes and Communities of Concern in the Greater Philadelphia Region</a>.</p><p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for improving the safety of our transportation network:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb8d8dce7179a264cf2c3ca">Vision Zero</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf43495e7179a56e2137ea5">Traffic Calming</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf434aee7179a56e2137eae">Road Safety Audit</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf4345ae7179a56e2137e90">Access Management</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb78214fb6fc041ab93080d">Connected and Automated Vehicle Preparations</a></li></ul>`
         }
     },
     'Global Connectivity': {
