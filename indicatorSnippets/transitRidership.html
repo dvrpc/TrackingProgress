@@ -3,7 +3,6 @@
         <h1 class="indicator-header">Transit Ridership</h1>
         <div class="indicator-category-icons">
             <img class="snippet-categories" src="./img/transpo-icon.png" alt="transportation category icon" />
-            <img class="snippet-categories" src="./img/econo-icon.png" alt="economy category icon" />
             <img class="snippet-categories" src="./img/comm-icon.png" alt="community category icon" />
             <img class="snippet-categories" src="./img/enviro-icon.png" alt="environment category icon" />
         </div>
@@ -14,14 +13,15 @@
             <h2 id="why-tab" class="description-wrapper-tab-headers active-tab">Why is it Important?</h2>
             <h2 id="what-tab" class="description-tab-middle description-wrapper-tab-headers">What is it?</h2>
             <h2 id="how-tab" class="description-wrapper-tab-headers">How Are We Doing?</h2>
+            <h2 id="resource-tab" class="description-wrapper-tab-headers">Resources</h2>
         </div>
-        <div id="indicator-description-container"></div>
+        <div id="indicator-description-container" data-primary="transpo"></div>
     </section>
 
     <hr class="indicator-header-hr"/>
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Total Unlinked Trips</h2>
+        <h2 class="indicator-subheader toggle-subheader">Unlinked Transit Trips</h2>
         <span class="toggle-vr">|</span>
         <p>toggle data:</p>
         <form>
@@ -36,11 +36,12 @@
     <div class="data-viz chart">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>
 
     <hr class="indicator-content-hr" />
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Unlinked Trips, by Mode of Transportation</h2>
+        <h2 class="indicator-subheader toggle-subheader">Unlinked Trips by Mode of Transit</h2>
         <span class="toggle-vr">|</span>
         <p>toggle data:</p>
         <form>
@@ -55,11 +56,12 @@
     <div class="data-viz chart2">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>
 
     <hr class="indicator-content-hr" />
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Unlinked Trips, by Transit Agency</h2>
+        <h2 class="indicator-subheader toggle-subheader">Unlinked Trips by Transit Agency</h2>
         <span class="toggle-vr">|</span>
         <p>toggle data:</p>
         <form>
@@ -74,4 +76,5 @@
     <div class="data-viz chart3">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>
 </article>
