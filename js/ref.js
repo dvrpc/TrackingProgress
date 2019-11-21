@@ -2590,21 +2590,21 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['water_quality_1'],
                 context: {
-                    labels: ['Percent Impaired'],
+                    labels: ['Percentage Impaired'],
                     units: ['percent']
                 },
                 data: [
                     {
-                        'key': 'Pennsylvania',
+                        'key': 'Regional Average',
+                        columns: ['Year', 'Average']
+                    },
+                    {
+                        'key': 'Pennsylvania (miles)',
                         columns: ['Year', 'Pennsylvania']
                     },
                     {
-                        'key': 'New Jersey',
+                        'key': 'New Jersey (acres)',
                         columns: ['Year', 'New Jersey']
-                    },
-                    {
-                        'key': 'Average',
-                        columns: ['Year', 'Average']
                     }
                 ]
             },
@@ -2613,20 +2613,20 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['water_quality_2'],
                 context: {
-                    labels: ['Stream Miles'],
+                    labels: ['Stream Miles Impaired'],
                     units: ['thousands']
                 },
                 data: [
                     {
-                        'key': 'Supporting (miles)',
-                        columns: ['year', 'Supporting']
+                        'key': 'Attaining',
+                        columns: ['year', 'Attaining']
                     },
                     {
-                        'key': 'Not Assessed (miles)',
-                        columns: ['year', 'Not Assessed']
+                        'key': 'Insufficient Data',
+                        columns: ['year', 'Insufficient Data']
                     },
                     {
-                        'key': 'Impaired (miles)',
+                        'key': 'Impaired',
                         columns: ['year', 'Impaired']
                     }
                 ]
@@ -2636,30 +2636,30 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: [['water_quality_3']],
                 context: {
-                    labels: ['Subwatershed Acres'],
+                    labels: ['Subwatershed Acres Impaired (Thousands)'],
                     units: ['thousands']
                 },
                 data: [
                     {
-                        'key': 'Supporting (acres)',
+                        'key': 'Attaining',
                         columns: ['year', 'Attaining']
                     },
                     {
-                        'key': 'Insufficient Data (acres)',
+                        'key': 'Insufficient Data',
                         columns: ['year', 'Insufficient Data']
                     },
                     {
-                        'key': 'Impaired (acres)',
+                        'key': 'Impaired',
                         columns: ['year', 'Impaired']
                     }
                 ]
             }
         ],
         text: {
-            why: ``,
-            what: `<p>The Federal Clean Water Act was established to restore and maintain the chemical, physical, and biological integrity of the nation's waters. Water quality standards have been established by federal and state governments to ensure that waterbodies attain their designated uses. Designated uses are those human uses and ecological conditions that are officially recognized and protected by the Clean Water Act. These uses include aquatic life (general), aquatic life (trout), recreation, drinking water supply, industrial water supply, agricultural water supply, shellfish harvesting, and fish consumption.</p><p>As mandated by the Clean Water Act, water quality in all states is monitored and assessed on a biennial basis. Water quality is assessed based on whether or not a waterbody attains its designated use(s). The designated use of aquatic life (general) is the most indicative of overall water quality and is the most comprehensively monitored across the region. Therefore, aquatic life is used as the indicator of regional water quality.</p><p>Water quality in Pennsylvania is assessed based on stream segments, and attainment is measured by the number of stream miles within the region that support aquatic life. The assessment plan covers the entire state in 10-year increments. Interim evaluations are performed using targeted sampling in each of the state's major subwatersheds every two years.</p>`,
-            how: ``,
-            resource: ``
+            why: `<p>Clean water is a fundamental need for people in our region, as well as other species. It is vital for agriculture, manufacturing and the region’s drinking water supply.  Clean water also serves as the foundation for many of our recreational offerings, notably swimming, boating, and fishing.  And for many species in our region, water is home, and clean water means healthy ponds, lakes, streams, and wetlands.</p>`,
+            what: `<p>The Federal Clean Water Act was established to restore and maintain the chemical, physical, and biological integrity of the nation’s waters. Water quality standards have been established by federal and state governments to ensure that waterbodies attain their <em>designated uses</em>. Designated uses include  human uses and ecological conditions : general aquatic life, trout, recreation, drinking water supply, industrial water supply, agricultural water supply, shellfish harvesting, and fish consumption.</p><p>As mandated by the Clean Water Act, water quality in all states is monitored and assessed every two years During this time, government-employed scientists take samples of water at various waterbody sites and test them to determine whether or not that waterbody has attained its designated use(s). The designated use of general aquatic life is the most indicative of overall water quality and is the most comprehensively monitored across the region. Therefore, aquatic life is used as the indicator of regional water quality.</p><p>Water quality in Pennsylvania is assessed based on stream segments, and attainment (or lack of attainment) of each segment is determined by analyzing the health of aquatic <em>macroinvertabrates</em> (small bugs) present in the stream.  The assessment plan covers the entire state in 10-year increments. Interim evaluations are performed using targeted sampling in each of the state’s major subwatersheds every two years.  New Jersey, on the other hand, assigns attainment or lack of attainment to entire subwatersheds, though as in Pennsylvania, this determination is based on in-stream sampling of <em>macroinvertabrates</em>.   New Jersey’s most recent report for 2014 is based on data collected between 2008 and 2012.</p><p>Because the two states do not report  water quality data using the same criteria (stream miles in PA versus acres of subwatershed in NJ), the percentage of non-attaining water(s) in each state is taken according to its preferred unit, and then the two percentages are averaged together to obtain a regional value.</p><p> The first graph below shows the percentages for each state as well as the overall regional percentage from 2002 to 2016. The second graph shows the number of attaining, non-attaining, and unassessed stream miles in Pennsylvania from 2002 to 2016. The third and final shows the number of attaining and  non-attaining acres of subwatersheds, as well as subwatershed acres with insufficient data, in New Jersey from 2002 to 2016.</p>`,
+            how: `<p>From 2006 to 2014, the regional water quality average declined 8.7 percent. This figure held relatively steady (between 35% and 39%) between 2006 and 2012, before declining more dramatically to 26% in 2014, the last year data is available for both states.  This is primarily due to a recent decrease in attaining streams in Pennsylvania, from  57% in 2012 to 39% in 2014. From 2002 to 2014, the percentage of attaining subwatersheds in New Jersey has held relatively steady between 13% and 18%.</p><p>However, this decline does not necessarily reflect an actual reduction in water quality. Prior to releasing the 2014 report, the Pennsylvania Department of Environmental Protection adopted more stringent biological assessment protocols. As a result, a number of previously attaining streams were downgraded, and this is reflected in the significant drop between the 2012 and 2014 reports. As of 2016, almost all streams have been reassessed with the new protocol, and the overall number of attaining stream miles declined only slightly since 2014 (from 1,507.2 miles to 1,440.5 miles).</p>`,
+            resource: `<p>Go to DVRPC's <a href="/WaterQuality/">Water Quality</a> page to learn more about our work to improve this critical resource.</p><p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for improving the region's water quality trendline:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42985e7179a56e2137792">Comprehensive Environmental Protection Ordinances</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf429a3e7179a56e213779c">Stream Corridor Protection Ordinances</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf429b2e7179a56e21377a6">Stormwater Ordinances</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf429c1e7179a56e21377a9">Stormwater Fees</a></li></ul>`
         }
     },
     'Land Consumption': {
