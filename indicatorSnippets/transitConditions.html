@@ -4,6 +4,7 @@
         <div class="indicator-category-icons">
             <img class="snippet-categories" src="./img/transpo-icon.png" alt="transportation category icon"/>
             <img class="snippet-categories" src="./img/econo-icon.png" alt="economy category icon"/>
+            <img class="snippet-categories" src="./img/equity-icon.png" alt="equity category icon"/>
         </div>
     </div>
 
@@ -12,8 +13,9 @@
             <h2 id="why-tab" class="description-wrapper-tab-headers active-tab">Why is it Important?</h2>
             <h2 id="what-tab" class="description-tab-middle description-wrapper-tab-headers">What is it?</h2>
             <h2 id="how-tab" class="description-wrapper-tab-headers">How Are We Doing?</h2>
+            <h2 id="resource-tab" class="description-wrapper-tab-headers">Resources</h2>
         </div>
-        <div id="indicator-description-container"></div>
+        <div id="indicator-description-container" data-primary="transpo"></div>
     </section>
 
     <hr class="indicator-header-hr"/>
@@ -27,7 +29,7 @@
                 <select id="viz-0" class="toggle-data-selector">
                     <option value="0">All Agencies</option>
                     <option value="1">NJ Transit</option>
-                    <option value="2">PART</option>
+                    <option value="2">PART (Pottstown)</option>
                     <option value="3">PATCO</option>
                     <option value="4">SEPTA</option>
                 </select>
@@ -37,6 +39,7 @@
     <div class="data-viz chart">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>
 
     <hr class="indicator-content-hr" />
 
@@ -58,6 +61,7 @@
     <div class="data-viz chart2">
         <svg></svg>    
     </div>
+    <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>
 
     <hr class="indicator-content-hr" />
 
@@ -70,7 +74,7 @@
                 <select id="viz-2" class="toggle-data-selector">
                     <option value="0">All Agencies</option>
                     <option value="1">NJ Transit</option>
-                    <option value="2">PART</option>
+                    <option value="2">PART (Pottstown)</option>
                     <option value="3">SEPTA</option>
                 </select>
             </fieldset>
@@ -79,4 +83,5 @@
     <div class="data-viz chart3">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>
 </article>

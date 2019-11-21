@@ -2071,9 +2071,10 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['transit_conditions_graph_2'],
                 context: {
-                    labels: ['Number of Vehicles'],
+                    labels: ['Vehicles'],
                     keepLabels: true,
-                    units: false
+                    units: ['thousands'],
+                    keepUnits: true
                 },
                 columnOptions: [
                     [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
@@ -2113,9 +2114,10 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['transit_conditions_graph_3'],
                 context: {
-                    labels: ['Number of Vehicles'],
+                    labels: ['Vehicles'],
                     keepLabels: true,
-                    units: false
+                    units: ['thousands'],
+                    keepUnits: true
                 },
                 columnOptions: [
                     [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
@@ -2150,7 +2152,13 @@ const snippetsRef = {
                     }
                 ]
             }
-        ]
+        ],
+        text: {
+            why: ``,
+            what: ``,
+            how: ``,
+            resource: ``
+        }
     },
     'Innovation': {
         file: 'innovation.html',
