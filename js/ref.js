@@ -2287,7 +2287,12 @@ const snippetsRef = {
             {
                 type: 'waterfall',
                 container: 'chart2',
-                dataSource: ['pop_comp_change'],
+                dataSource: ['pop_comp_change', 'pop_comp_natincrease', 'pop_comp_netmigration'],
+                context: {
+                    labels: ['fist', 'second', 'third'],
+                    units: ['thousands'],
+                    keepUnits: true
+                },
                 columnOptions: [
                     ['Bucks'],
                     ['Burlington'],

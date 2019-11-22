@@ -278,6 +278,16 @@ const createWaterfallChart = (source, toggleContext) => {
     let container, dataSource;
     [container, dataSource, source] = formatInpus(source, toggleContext)
 
+    // hack to identify toggles for this case
+    const len = source.data[0].columns.length - 1
+    const county = source.data[0].columns[len]
+
+    // even bigger hack to clear charts for this case
+    if(len > 0) {
+        const bruh = d3.select(container)[0][0].children;
+        bruh[0].remove()
+    }
+
     let margin = {top: 65, right: 55, bottom: 175, left: 55},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
@@ -287,7 +297,6 @@ const createWaterfallChart = (source, toggleContext) => {
         .rangeRoundBands([0, width], padding);
 
     var y = d3.scale.linear()
-        .domain([-200, 8000])
         .range([height, 0]);
 
     var xAxis = d3.svg.axis()
@@ -304,8 +313,7 @@ const createWaterfallChart = (source, toggleContext) => {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv(dataSource, data => {
-        const county = source.data[0].columns[0]
+    d3.csv(dataSource, data => {        
         let cumulative = 0
 
         for( var i = 0; i < data.length; i++){
@@ -327,7 +335,7 @@ const createWaterfallChart = (source, toggleContext) => {
 
         // @TODO: this doesn't accept non-unique Labels which is a problem
         x.domain(data.map(function(d) { return d.Label; }));
-        y.domain([0, d3.max(data, function(d) { return d.end; })]);
+        y.domain([d3.min(data, function(d) {return d.end;}) , d3.max(data, function(d) { return d.end; })]);
 
         chart.append("g")
             .attr("class", "x axis")
