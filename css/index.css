@@ -476,6 +476,16 @@ summary:hover{
     margin: 0 auto;
     font-style: italic;
 }
+/* custom crap for waterfalls */
+.waterfall-blue{
+    fill: #1f77b4;
+}
+.waterfall-orange{
+    fill: #ff7f0e;
+}
+.waterfall-grey{
+    fill: #c7c7c7;
+}
 
 
 /********************************/

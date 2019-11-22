@@ -2302,7 +2302,7 @@ const snippetsRef = {
                 newKeys: true,
                 data: [
                     {
-                        'key': ''
+                        columns: ['Bucks']
                     }
                 ]
             },

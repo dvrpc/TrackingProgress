@@ -4,7 +4,7 @@
 
 // input helper function
 const formatInpus = (source, toggleContext) => {
-    // the name of the div containing the svg for d3 to paint on
+    // the Period of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
     
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
@@ -274,12 +274,99 @@ const createStackedAreaChart = (source, toggleContext) => {
     })
 }
 
-// waterfall charts are just fancy multi-bar charts. Each "waterfall" is it's own bar
-// OR make a simplified candlestick that doesn't have ticks...
 const createWaterfallChart = (source, toggleContext) => {
-    console.log('source at create waterfall ', source)
     let container, dataSource;
-    //[container, dataSource, source] = formatInpus(source, toggleContext)
+    [container, dataSource, source] = formatInpus(source, toggleContext)
+
+    let margin = {top: 65, right: 55, bottom: 175, left: 55},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom,
+    padding = 0.3
+
+    var x = d3.scale.ordinal()
+        .rangeRoundBands([0, width], padding);
+
+    var y = d3.scale.linear()
+        .domain([-200, 8000])
+        .range([height, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom")
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left")
+
+    var chart = d3.select(container)
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.csv(dataSource, data => {
+        const county = source.data[0].columns[0]
+        let cumulative = 0
+
+        for( var i = 0; i < data.length; i++){
+           if ( i % 3 === 0) {
+               data[i].start = 0
+               data[i].class = 'waterfall-grey'
+           } else  if (i % 2  === 0){
+                data[i].start = cumulative
+                cumulative += parseInt(data[i][county])
+                data[i].class = 'waterfall-blue'
+           } else {
+                data[i].start = cumulative
+                cumulative += parseInt(data[i][county])
+               data[i].class = 'waterfall-orange'
+           }
+
+           data[i].end = cumulative
+        }
+
+        // @TODO: this doesn't accept non-unique Labels which is a problem
+        x.domain(data.map(function(d) { return d.Label; }));
+        y.domain([0, d3.max(data, function(d) { return d.end; })]);
+
+        chart.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis)
+            .selectAll("text")
+            .attr("y", 0)
+            .attr("x", 9)
+            .attr("dy", ".35em")
+            .attr("transform", "rotate(65)")
+            .style("text-anchor", "start");
+  
+        chart.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+    
+        var bar = chart.selectAll(".bar")
+            .data(data)
+            .enter().append("g")
+            .attr("class", function(d) { return "bar " + d.class })
+            .attr("transform", function(d) { return "translate(" + x(d.Label) + ",0)"; });
+    
+        bar.append("rect")
+            .attr("y", function(d) { return y( Math.max(d.start, d.end) ); })
+            .attr("height", function(d) { return Math.abs( y(d.start) - y(d.end) ); })
+            .attr("width", x.rangeBand());
+    
+        bar.append("text")
+            .attr("x", x.rangeBand() / 2)
+            .attr("y", function(d) { return y(d.end) + 5; })
+            .attr("dy", function(d) { return ((d.class=='negative') ? '-' : '') + ".35em" })
+    
+        bar.filter(function(d) { return d.class != "total" }).append("line")
+            .attr("class", "connector")
+            .attr("x1", x.rangeBand() + 5 )
+            .attr("y1", function(d) { return y(d.end) } )
+            .attr("x2", x.rangeBand() / ( 1 - padding) - 5 )
+            .attr("y2", function(d) { return y(d.end) } )
+    });
 }
 
 export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createLineAndScatterChart, createWaterfallChart};
