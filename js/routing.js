@@ -8,6 +8,7 @@ const splashPage = document.getElementById('splash-page')
 
 // @TODO: update baseURL for production
 const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
+// staging: http://staging.dvrpc.org/review/TrackingProgress/
 
 // remove possible special characters from URL by whitelisting alphanumeric characters, - and /
 const sanitizeHash = hash => hash.replace(/[^\w\-\/]/gi, '')
