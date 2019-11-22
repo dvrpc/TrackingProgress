@@ -40,8 +40,8 @@ const snippetsRef = {
                     units: false
                 },
                 columnOptions: [
-                    ['unhealthySensitiveOzone', 'unhealthyOzone', 'veryUnhealthyOzone'],
-                    ['unhealthySensitivePM', 'unhealthyPM', 'veryUnhealthyPM']
+                    ['Unhealthy Sensitive Ozone', 'Unhealthy Ozone', 'Very Unhealthy Ozone'],
+                    ['Unhealthy Sensitive PM', 'Unhealthy PM', 'Very Unhealthy PM']
                 ],
                 newKeys: true,
                 range: [0, 50],
@@ -49,17 +49,17 @@ const snippetsRef = {
                     {
                         'key' : 'Unhealthy for Sensitive Groups',
                         'color': '#de425b',
-                        'columns': ['quarterYear', 'unhealthySensitiveOzone'],
+                        'columns': ['quarterYear', 'Unhealthy Sensitive Ozone'],
                     },
                     {
                         'key': 'Unhealthy',
                         'color': '#b62a38',
-                        'columns': ['quarterYear', 'unhealthyOzone'],
+                        'columns': ['quarterYear', 'Unhealthy Ozone'],
                     },
                     {
                         'key': 'Very Unhealthy',
                         'color': '#750000',
-                        'columns': ['quarterYear', 'veryUnhealthyOzone'],
+                        'columns': ['quarterYear', 'Very Unhealthy Ozone'],
                     }
                 ]
             },
