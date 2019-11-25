@@ -6,9 +6,14 @@ const grid = dashboard.children[1]
 const splashPage = document.getElementById('splash-page')
 
 
-// @TODO: update baseURL for production
-const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
-// staging: http://staging.dvrpc.org/review/TrackingProgress/
+// for development
+//const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
+
+// for review: 
+const baseURL = 'http://staging.dvrpc.org/review/TrackingProgress/'
+
+// for live:
+//const baseURL = 'http://staging.dvrpc.org/TrackingProgress/'
 
 // remove possible special characters from URL by whitelisting alphanumeric characters, - and /
 const sanitizeHash = hash => hash.replace(/[^\w\-\/]/gi, '')
