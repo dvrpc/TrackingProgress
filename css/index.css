@@ -657,6 +657,9 @@ footer{
     .gif-row{
         flex-direction: column;
     }
+    #to-grid{
+        padding: 3px 5px;
+    }
 
 
     /* Mobile styles for the dashboard page */

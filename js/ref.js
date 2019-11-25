@@ -2457,7 +2457,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['Bridge_Conditions_1A','Bridge_Conditions_1B'],
                 context: {
-                    labels: ['% of Deck Area for All Bridges', '% of All Bridges'],
+                    labels: ['Percentage of Deck Area for All Bridges', 'Percentage of All Bridges'],
                     keepLabels: false,
                     units: ['percent'],
                     keepUnits: true
@@ -2503,7 +2503,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Square Feet (Thousands)', 'Bridges'],
                     keepLabels: false,
-                    units: ['singles'],
+                    units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -2543,7 +2543,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Square Feet (Thousands)', 'Bridges'],
                     keepLabels: false,
-                    units: ['millions'],
+                    units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions: [

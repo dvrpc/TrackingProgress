@@ -68,7 +68,7 @@ const formatLabels = (axis, margin, context) => {
 const axisFormats = {
     'percent': '.0%',
     'singles': '.3n',
-    'thousands': ',',
+    'thousands': ',.0f',
     'millions': '.3n'
 }
 
