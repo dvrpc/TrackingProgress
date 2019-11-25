@@ -381,9 +381,8 @@ summary:hover{
     justify-content: center;
 }
 .snippet-categories{
-    margin-right: 2%;
-    height: 46px;
-    border-radius: 3px;
+    margin-right: 3%;
+    height: 36px;
 }
 #description-wrapper{
     padding: 20px 0 3% 0;
