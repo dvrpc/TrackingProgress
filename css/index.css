@@ -342,7 +342,7 @@ summary:hover{
     opacity: 1;
     /* fallback bg for browsers that don't support linear gradient */
     background: #f2f2f2;
-    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(240,240,240,1) 25vh);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 25vh);
     color: #050709;
     /*15vw for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
     padding-left: 15vw;
@@ -632,7 +632,7 @@ footer{
         padding: 3px 10px;
     }
     #tp-logo{
-        height: 70%;
+        height: 42px;
     }
 
     /* Mobile styles for the splash page */
@@ -728,7 +728,6 @@ footer{
     }
     .fade-narrow{
         width: 100%;
-        background: #222222;
     }
     .back-to-dash{
         width: auto;
@@ -750,8 +749,11 @@ footer{
         width: 15px;
     }
     #related-indicators-subheader-wrapper{
-        flex-direction: column;
-        margin: 0 2vw;
+        padding: 0 5px;
+    }
+    #related-indicators-subheader-wrapper img{
+        height: 28px;
+        margin-top: 2px;
     }
     #related-indicators-subheader{
         font-size: 0.8em;
@@ -765,7 +767,6 @@ footer{
     .indicators-snippet{
         width: auto;
         padding: 7% 3% 4% 3%;
-        margin: 0 auto;
     }
     #indicator-header-wrapper{
         padding-bottom: 7%;
@@ -813,6 +814,9 @@ footer{
     }
     footer{
         font-size: 0.7em;
+    }
+    #footer-social-wrapper{
+        width: 100%;
     }
     .footer-social{
         width: 14px;
