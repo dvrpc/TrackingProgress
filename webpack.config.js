@@ -123,6 +123,11 @@ module.exports = {
                     from: './css',
                     to: 'css',
                     toType: 'dir'
+                },
+                {
+                    from: './vid',
+                    to: 'vid',
+                    toType: 'dir'
                 }
             ]
         ),
