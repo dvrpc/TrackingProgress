@@ -856,3 +856,14 @@ footer{
         font-size: 0.67em;
     }
 }
+
+
+/* Print Stylesheet */
+@media print {
+    body :not(.indicators-snippet) {
+        display: none;
+    }
+    .indicators-snippet {
+        padding-left: 0;
+    }
+}
