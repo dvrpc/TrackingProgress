@@ -68,7 +68,7 @@ header{
     align-items: center;
 }
 #tp-logo{
-    max-height: 95%;
+    max-height: 50px;
 }
 #help-btn{
     margin-left: 30px;
