@@ -416,12 +416,14 @@ summary:hover{
     padding: 3% 5%;
 }
 .back-to-dash{
-    color: #222;
+    color: #4fa3a8;
+    background: #fff;
+    border-radius: 3px;
     display: none;
-    width: 100%;
+    width: 85%;
     text-align: center;
-    padding: 17px 0;
-    margin: 0;
+    padding: 10px 0;
+    margin: 7px auto;
     font-size: 1.4em;
     cursor: pointer;
 }
