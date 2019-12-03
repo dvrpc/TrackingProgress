@@ -435,7 +435,7 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Middle Eastern', 'Mexican', 'Canadian', 'Caribbean', 'European'],
-                    ['Middle Eastern (yr)', 'Mexican (yr)', 'Canadian (yr)', 'Canadian (seasonal)', 'Caribbean (yr)', 'Caribbean (seasonal)', 'European (yr)', 'European (seasonal)']
+                    ['Middle Eastern (yr)', 'Mexican (seasonal)', 'Canadian (yr)', 'Canadian (seasonal)', 'Caribbean (yr)', 'Caribbean (seasonal)', 'European (yr)', 'European (seasonal)']
                 ],
                 newKeys: true,
                 data: [
@@ -2464,18 +2464,18 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- All','DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
-                    ['New Jersey Suburbs- All','New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
-                    ['Pennsylvania Suburbs- All','Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
                     ['Pennsylvania All Counties- All','Pennsylvania All Counties- State', 'Pennsylvania All Counties- Local', 'Pennsylvania All Counties- Other'],
+                    ['Pennsylvania Suburbs- All','Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
+                    ['New Jersey Suburbs- All','New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
                     ['Bucks- All','Bucks- State', 'Bucks- Local', 'Bucks- Other'],
-                    ['Chester- All','Chester- State', 'Chester- Local', 'Chester- Other'],
-                    ['Delaware- All','Delaware- State', 'Delaware- Local', 'Delaware- Other'],
-                    ['Montgomery- All','Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
                     ['Burlington- All','Burlington- State', 'Burlington- Local', 'Burlington- Other'],
                     ['Camden- All','Camden- State', 'Camden- Local', 'Camden- Other'],
+                    ['Chester- All','Chester- State', 'Chester- Local', 'Chester- Other'],
+                    ['Delaware- All','Delaware- State', 'Delaware- Local', 'Delaware- Other'],
                     ['Gloucester- All','Gloucester- State', 'Gloucester- Local', 'Gloucester- Other'],
                     ['Mercer- All','Mercer- State', 'Mercer- Local', 'Mercer- Other'],
-                    ['Philadelphia- All','Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other'],
+                    ['Montgomery- All','Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
+                    ['Philadelphia- All','Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other']
                 ],
                 data: [
                     {
@@ -2508,17 +2508,17 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
-                    ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
-                    ['Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
                     ['Pennsylvania All Counties- State', 'Pennsylvania All Counties- Local', 'Pennsylvania All Counties- Other'],
+                    ['Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
+                    ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
                     ['Bucks- State', 'Bucks- Local', 'Bucks- Other'],
-                    ['Chester- State', 'Chester- Local', 'Chester- Other'],
-                    ['Delaware- State', 'Delaware- Local', 'Delaware- Other'],
-                    ['Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
                     ['Burlington- State', 'Burlington- Local', 'Burlington- Other'],
                     ['Camden- State', 'Camden- Local', 'Camden- Other'],
+                    ['Chester- State', 'Chester- Local', 'Chester- Other'],
+                    ['Delaware- State', 'Delaware- Local', 'Delaware- Other'],
                     ['Gloucester- State', 'Gloucester- Local', 'Gloucester- Other'],
                     ['Mercer- State', 'Mercer- Local', 'Mercer- Other'],
+                    ['Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
                     ['Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other'],
                 ],
                 data: [
@@ -2548,16 +2548,17 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
-                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
+                    ['Pennsylvania All Counties- NA','Pennsylvania All Counties- Poor','Pennsylvania All Counties- Fair','Pennsylvania All Counties- Good'],
                     ['Pennsylvania Suburbs- NA','Pennsylvania Suburbs- Poor','Pennsylvania Suburbs- Fair','Pennsylvania Suburbs- Good'],
+                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
                     ['Bucks- NA','Bucks- Poor','Bucks- Fair','Bucks- Good'],
-                    ['Chester- NA','Chester- Poor','Chester- Fair','Chester- Good'],
-                    ['Delaware- NA','Delaware- Poor','Delaware- Fair','Delaware- Good'],
-                    ['Montgomery- NA','Montgomery- Poor','Montgomery- Fair','Montgomery- Good'],
                     ['Burlington- NA','Burlington- Poor','Burlington- Fair','Burlington- Good'],
                     ['Camden- NA','Camden- Poor','Camden- Fair','Camden- Good'],
+                    ['Chester- NA','Chester- Poor','Chester- Fair','Chester- Good'],
+                    ['Delaware- NA','Delaware- Poor','Delaware- Fair','Delaware- Good'],
                     ['Gloucester- NA','Gloucester- Poor','Gloucester- Fair','Gloucester- Good'],
                     ['Mercer- NA','Mercer- Poor','Mercer- Fair','Mercer- Good'],
+                    ['Montgomery- NA','Montgomery- Poor','Montgomery- Fair','Montgomery- Good'],
                     ['Philadelphia- NA','Philadelphia- Poor','Philadelphia- Fair','Philadelphia- Good']
                 ],
                 data: [
@@ -2639,7 +2640,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: [['water_quality_3']],
+                dataSource: ['water_quality_3'],
                 context: {
                     labels: ['Subwatershed Acres Impaired (Thousands)'],
                     units: ['thousands']
