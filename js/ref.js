@@ -1204,18 +1204,18 @@ const snippetsRef = {
                     ['PASubCos'],
                     ['NJCos'],
                     ['BuckCo'],
-                    ['ChesCo'],
-                    ['DelCo'],
-                    ['MontCo'],
                     ['BurlCo'],
                     ['CamdCo'],
+                    ['ChesCo'],
+                    ['DelCo'],
                     ['GloCo'],
                     ['MerCo'],
+                    ['MontCo'],
                     ['PhilCo']
                 ],
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'High/Low Quintile Gap',
                         columns: ['year', 'Region']
                     }
                 ]
@@ -1231,17 +1231,18 @@ const snippetsRef = {
                     keepUnits: false
                 },
                 columnOptions: [
-                    ['Region_1st', 'Region_2nd', 'Region_3rd', 'Region_4th', 'Region_5th'],
-                    ['PhilCo_1st', 'PhilCo_2nd', 'PhilCo_3rd', 'PhilCo_4th', 'PhilCo_5th'],
-                    ['NJCos_1st', 'NJCos_2nd', 'NJCos_3rd', 'NJCos_4th', 'NJCos_5th'],
-                    ['BuckCo_1st', 'BuckCo_2nd', 'BuckCo_3rd', 'BuckCo_4th', 'BuckCo_5th'],
-                    ['ChesCo_1st', 'ChesCo_2nd', 'ChesCo_3rd', 'ChesCo_4th', 'ChesCo_5th'],
-                    ['DelCo_1st', 'DelCo_2nd', 'DelCo_3rd', 'DelCo_4th', 'DelCo_5th'],
-                    ['MontCo_1st', 'MontCo_2nd', 'MontCo_3rd', 'MontCo_4th', 'MontCo_5th'],
-                    ['BurlCo_1st', 'BurlCo_2nd', 'BurlCo_3rd', 'BurlCo_4th', 'BurlCo_5th'],
-                    ['CamdCo_1st', 'CamdCo_2nd', 'CamdCo_3rd', 'CamdCo_4th', 'CamdCo_5th'],
-                    ['GloCo_1st', 'GloCo_2nd', 'GloCo_3rd', 'GloCo_4th', 'GloCo_5th'],
-                    ['MerCo_1st', 'MerCo_2nd', 'MerCo_3rd', 'MerCo_4th', 'MerCo_5th']
+                    ['Region_1st', 'Region_2nd', 'Region_3rd', 'Region_4th', 'Region_5th', 'Region_T5pct'],
+                    ['PASubCos_1st', 'PASubCos_2nd', 'PASubCos_3rd', 'PASubCos_4th', 'PASubCos_5th', 'PASubCos_T5pct'],
+                    ['NJCos_1st', 'NJCos_2nd', 'NJCos_3rd', 'NJCos_4th', 'NJCos_5th', 'NJCos_T5pct'],
+                    ['BuckCo_1st', 'BuckCo_2nd', 'BuckCo_3rd', 'BuckCo_4th', 'BuckCo_5th', 'BuckCo_T5pct'],
+                    ['BurlCo_1st', 'BurlCo_2nd', 'BurlCo_3rd', 'BurlCo_4th', 'BurlCo_5th', 'BurlCo_T5pct'],
+                    ['CamdCo_1st', 'CamdCo_2nd', 'CamdCo_3rd', 'CamdCo_4th', 'CamdCo_5th', 'CamdCo_T5pct'],
+                    ['ChesCo_1st', 'ChesCo_2nd', 'ChesCo_3rd', 'ChesCo_4th', 'ChesCo_5th', 'ChesCo_T5pct'],
+                    ['DelCo_1st', 'DelCo_2nd', 'DelCo_3rd', 'DelCo_4th', 'DelCo_5th', 'DelCo_T5pct'],
+                    ['GloCo_1st', 'GloCo_2nd', 'GloCo_3rd', 'GloCo_4th', 'GloCo_5th', 'GloCo_T5pct'],
+                    ['MerCo_1st', 'MerCo_2nd', 'MerCo_3rd', 'MerCo_4th', 'MerCo_5th', 'MerCo_T5pct'],
+                    ['MontCo_1st', 'MontCo_2nd', 'MontCo_3rd', 'MontCo_4th', 'MontCo_5th', 'MontCo_T5pct'],
+                    ['PhilCo_1st', 'PhilCo_2nd', 'PhilCo_3rd', 'PhilCo_4th', 'PhilCo_5th', 'PhilCo_T5pct']
                 ],
                 data: [
                     {
@@ -1263,6 +1264,10 @@ const snippetsRef = {
                     {
                         'key': '5th Quintile',
                         columns: ['Year', 'Region_5th']
+                    },
+                    {
+                        'key': 'Top 5 Percent',
+                        columns: ['Year', 'Region_T5pct']
                     }
                 ]
             },
