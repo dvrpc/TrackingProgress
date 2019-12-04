@@ -446,7 +446,6 @@ summary:hover{
     font-size: 0.9em;
     margin: 0;
     padding: 10px 4px;
-    /* @TODO: ideally get height to  align w/tabs bottom */
 }
 #related-indicators-subheader{
     margin: 0;

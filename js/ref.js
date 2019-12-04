@@ -520,14 +520,14 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- Core City', 'DVRPC- Developed Community', 'DVRPC- Growing Suburb', 'DVRPC- Rural Area'],
-                    ['Chester County- Core City', 'Chester County- Developed Community', 'Chester County- Growing Suburb', 'Chester County- Rural Area'],
-                    ['Delaware County- Core City', 'Delaware County- Developed Community', 'Delaware County- Growing Suburb', 'Delaware County- Rural Area'],
-                    ['Montgomery County- Core City', 'Montgomery County- Developed Community', 'Montgomery County- Growing Suburb', 'Montgomery County- Rural Area'],
+                    ['Bucks County- Core City', 'Bucks County- Developed Community', 'Bucks County- Growing Suburb', 'Bucks County- Rural Area'],
                     ['Burlington County- Core City', 'Burlington County- Developed Community', 'Burlington County- Growing Suburb', 'Burlington County- Rural Area'],
                     ['Camden County- Core City', 'Camden County- Developed Community', 'Camden County- Growing Suburb', 'Camden County- Rural Area'],
+                    ['Chester County- Core City', 'Chester County- Developed Community', 'Chester County- Growing Suburb', 'Chester County- Rural Area'],
+                    ['Delaware County- Core City', 'Delaware County- Developed Community', 'Delaware County- Growing Suburb', 'Delaware County- Rural Area'],
                     ['Gloucester County- Core City', 'Gloucester County- Developed Community', 'Gloucester County- Growing Suburb', 'Gloucester County- Rural Area'],
                     ['Mercer County- Core City', 'Mercer County- Developed Community', 'Mercer County- Growing Suburb', 'Mercer County- Rural Area'],
-                    ['Bucks County- Core City', 'Bucks County- Developed Community', 'Bucks County- Growing Suburb', 'Bucks County- Rural Area'],
+                    ['Montgomery County- Core City', 'Montgomery County- Developed Community', 'Montgomery County- Growing Suburb', 'Montgomery County- Rural Area'],
                     ['Philadelphia County- Core City', 'Philadelphia County- Developed Community', 'Philadelphia County- Growing Suburb', 'Philadelphia County- Rural Area']
                 ],
                 data: [
@@ -561,22 +561,21 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- large multi-family', 'DVRPC- small multi-family', 'DVRPC- single family'],
+                    ['New Jersey Suburbs- large multi-family', 'New Jersey Suburbs- small multi-family', 'New Jersey Suburbs- single family'],
+                    ['Pennsylvania Suburbs- large multi-family', 'Pennsylvania Suburbs- small multi-family', 'Pennsylvania Suburbs- single family'],
                     ['Core City- large multi-family', 'Core City- small multi-family', 'Core City- single family'],
                     ['Developed Community- large multi-family', 'Developed Community- small multi-family', 'Developed Community- single family'],
                     ['Growing Suburb- large multi-family', 'Growing Suburb- small multi-family', 'Growing Suburb- single family'],
                     ['Rural Area- large multi-family', 'Rural Area- small multi-family', 'Rural Area- single family'],
-                    ['Chester County- large multi-family', 'Chester County- small multi-family', 'Chester County- single family'],
-                    ['Delaware County- large multi-family', 'Delaware County- small multi-family', 'Delaware County- single family'],
-                    ['Montgomery County- large multi-family', 'Montgomery County- small multi-family', 'Montgomery County- single family'],
+                    ['Bucks County- large multi-family', 'Bucks County- small multi-family', 'Bucks County- single family'],
                     ['Burlington County- large multi-family', 'Burlington County- small multi-family', 'Burlington County- single family'],
                     ['Camden County- large multi-family', 'Camden County- small multi-family', 'Camden County- single family'],
+                    ['Chester County- large multi-family', 'Chester County- small multi-family', 'Chester County- single family'],
+                    ['Delaware County- large multi-family', 'Delaware County- small multi-family', 'Delaware County- single family'],
                     ['Gloucester County- large multi-family', 'Gloucester County- small multi-family', 'Gloucester County- single family'],
                     ['Mercer County- large multi-family', 'Mercer County- small multi-family', 'Mercer County- single family'],
-                    ['Bucks County- large multi-family', 'Bucks County- small multi-family', 'Bucks County- single family'],
-                    ['Philadelphia County- large multi-family', 'Philadelphia County- small multi-family', 'Philadelphia County- single family'],
-                    ['New Jersey Suburbs- large multi-family', 'New Jersey Suburbs- small multi-family', 'New Jersey Suburbs- single family'],
-                    ['Pennsylvania Suburbs- large multi-family', 'Pennsylvania Suburbs- small multi-family', 'Pennsylvania Suburbs- single family'],
-                    ['Philadelphia Subregion- large multi-family', 'Philadelphia Subregion- small multi-family', 'Philadelphia Subregion- single family']
+                    ['Montgomery County- large multi-family', 'Montgomery County- small multi-family', 'Montgomery County- single family'],
+                    ['Philadelphia County- large multi-family', 'Philadelphia County- small multi-family', 'Philadelphia County- single family']
                 ],
                 data: [
                     {
