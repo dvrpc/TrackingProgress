@@ -1311,8 +1311,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region'],
-                    ['NJ Suburban Counties'],
                     ['PA Suburban Counties'],
+                    ['NJ Suburban Counties'],
                     ['Bucks'],
                     ['Burlington'],
                     ['Camden'],
@@ -1342,8 +1342,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region_Female', 'Region_Male'],
-                    ['NJ Suburban Counties_Female', 'NJ Suburban Counties_Male'],
                     ['PA Suburban Counties_Female', 'PA Suburban Counties_Male'],
+                    ['NJ Suburban Counties_Female', 'NJ Suburban Counties_Male'],
                     ['Bucks_Female', 'Bucks_Male'],
                     ['Burlington_Female', 'Burlington_Male'],
                     ['Camden_Female', 'Camden_Male'],
@@ -1352,7 +1352,7 @@ const snippetsRef = {
                     ['Gloucester_Female', 'Gloucester_Male'],
                     ['Mercer_Female', 'Mercer_Male'],
                     ['Montgomery_Female', 'Montgomery_Male'],
-                    ['Philadelphia_Female', 'Philadelphia_Male'],
+                    ['Philadelphia_Female', 'Philadelphia_Male']
                 ],
                 data: [
                     {
@@ -1377,8 +1377,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region'],
-                    ['NJ Suburban Counties'],
                     ['PA Suburban Counties'],
+                    ['NJ Suburban Counties'],
                     ['Bucks'],
                     ['Burlington'],
                     ['Camden'],
@@ -1408,8 +1408,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region_Male', 'Region_Female'],
-                    ['NJ Suburban Counties_Male', 'NJ Suburban Counties_Female'],
                     ['PA Suburban Counties_Male', 'PA Suburban Counties_Female'],
+                    ['NJ Suburban Counties_Male', 'NJ Suburban Counties_Female'],
                     ['Bucks_Male', 'Bucks_Female'],
                     ['Burlington_Male', 'Burlington_Female'],
                     ['Camden_Male', 'Camden_Female'],
