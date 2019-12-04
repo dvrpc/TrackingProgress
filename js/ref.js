@@ -1074,8 +1074,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region_minorityInc', 'Region_whtNonHispInc'],
-                    ['NJ Suburban Counties_minorityInc', 'NJ Suburban Counties_whtNonHispInc'],
                     ['PA Suburban Counties_minorityInc', 'PA Suburban Counties_whtNonHispInc'],
+                    ['NJ Suburban Counties_minorityInc', 'NJ Suburban Counties_whtNonHispInc'],
                     ['Bucks_minorityInc', 'Bucks_whtNonHispInc'],
                     ['Burlington_minorityInc', 'Burlington_whtNonHispInc'],
                     ['Camden_minorityInc', 'Camden_whtNonHispInc'],
@@ -1124,8 +1124,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region_difference'],
-                    ['NJ Suburban Counties_difference'],
                     ['PA Suburban Counties_difference'],
+                    ['NJ Suburban Counties_difference'],
                     ['Bucks_difference'],
                     ['Burlington_difference'],
                     ['Camden_difference'],
@@ -1155,8 +1155,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region_labWht', 'Region_labNonWht'],
-                    ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
                     ['PA Suburban Counties_labWht', 'PA Suburban Counties_labNonWht'],
+                    ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
                     ['Bucks_labWht', 'Bucks_labNonWht'],
                     ['Burlington_labWht', 'Burlington_labNonWht'],
                     ['Camden_labWht', 'Camden_labNonWht'],
@@ -2326,8 +2326,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC_<20','DVRPC_20-34','DVRPC_35-49','DVRPC_50-64','DVRPC_65+'],
-                    ['NJCnt_<20','NJCnt_20-34','NJCnt_35-49','NJCnt_50-64','NJCnt_65+'],
                     ['PASub_<20','PASub_20-34','PASub_35-49','PASub_50-64','PASub_65+'],
+                    ['NJCnt_<20','NJCnt_20-34','NJCnt_35-49','NJCnt_50-64','NJCnt_65+'],
                     ['Bucks_<20','Bucks_20-34','Bucks_35-49','Bucks_50-64','Bucks_65+'],
                     ['Burlington_<20','Burlington_20-34','Burlington_35-49','Burlington_50-64','Burlington_65+'],
                     ['Camden_<20','Camden_20-34','Camden_35-49','Camden_50-64','Camden_65+'],
@@ -2372,8 +2372,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC_WA','DVRPC_BA','DVRPC_IA','DVRPC_AA','DVRPC_NA','DVRPC_TOM'],
-                    ['NJCnt_WA','NJCnt_BA','NJCnt_IA','NJCnt_AA','NJCnt_NA','NJCnt_TOM'],
                     ['PASub_WA','PASub_BA','PASub_IA','PASub_AA','PASub_NA','PASub_TOM'],
+                    ['NJCnt_WA','NJCnt_BA','NJCnt_IA','NJCnt_AA','NJCnt_NA','NJCnt_TOM'],
                     ['Bucks_WA','Bucks_BA','Bucks_IA','Bucks_AA','Bucks_NA','Bucks_TOM'],
                     ['Burlington_WA','Burlington_BA','Burlington_IA','Burlington_AA','Burlington_NA','Burlington_TOM'],
                     ['Camden_WA','Camden_BA','Camden_IA','Camden_AA','Camden_NA','Camden_TOM'],
