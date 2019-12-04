@@ -2863,98 +2863,95 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: ['landConsumption3'],
+                dataSource: ['land_consumption_3a','land_consumption_3b'],
                 context: {
-                    labels: ['Acres','Percent','Acres','Percent','Acres','Percent'],
-                    units: ['thousands','percent','thousands', 'percent','thousands','percent'],
+                    labels: ['Acres','Percent'],
+                    units: ['thousands','percent']
                 },
                 columnOptions: [
-                    ['DVRPC- Total Acres','NJ Suburbs- Total Acres','PA Suburbs- Total Acres','Core City- Total Acres','Developed Community- Total Acres','Growing Suburb- Total Acres','Rural Area- Total Acres','Bucks- Total Acres','Burlington- Total Acres','Camden- Total Acres','Chester- Total Acres','Delaware- Total Acres','Gloucester- Total Acres','Mercer- Total Acres','Montgomery- Total Acres','Philadelphia- Total Acres'],
-                    ['DVRPC- Total Percent','NJ Suburbs- Total Percent','PA Suburbs- Total Percent','Core City- Total Percent','Developed Community- Total Percent','Growing Suburb- Total Percent','Rural Area- Total Percent','Bucks- Total Percent','Burlington- Total Percent','Camden- Total Percent','Chester- Total Percent','Delaware- Total Percent','Gloucester- Total Percent','Mercer- Total Percent','Montgomery- Total Percent','Philadelphia- Total Percent'],
-                    ['DVRPC- Public Acres','NJ Suburbs- Public Acres','PA Suburbs- Public Acres','Core City- Public Acres','Developed Community- Public Acres','Growing Suburb- Public Acres','Rural Area- Public Acres','Bucks- Public Acres','Burlington- Public Acres','Camden- Public Acres','Chester- Public Acres','Delaware- Public Acres','Gloucester- Public Acres','Mercer- Public Acres','Montgomery- Public Acres','Philadelphia- Public Acres'],
-                    ['DVRPC- Public Percent','NJ Suburbs- Public Percent','PA Suburbs- Public Percent','Core City- Public Percent','Developed Community- Public Percent','Growing Suburb- Public Percent','Rural Area- Public Percent','Bucks- Public Percent','Burlington- Public Percent','Camden- Public Percent','Chester- Public Percent','Delaware- Public Percent','Gloucester- Public Percent','Mercer- Public Percent','Montgomery- Public Percent','Philadelphia- Public Percent'],
-                    ['DVRPC- Private Acres','NJ Suburbs- Private Acres','PA Suburbs- Private Acres','Core City- Private Acres','Developed Community- Private Acres','Growing Suburb- Private Acres','Rural Area- Private Acres','Bucks- Private Acres','Burlington- Private Acres','Camden- Private Acres','Chester- Private Acres','Delaware- Private Acres','Gloucester- Private Acres','Mercer- Private Acres','Montgomery- Private Acres','Philadelphia- Private Acres'],
-                    ['DVRPC- Private Percent','NJ Suburbs- Private Percent','PA Suburbs- Private Percent','Core City- Private Percent','Developed Community- Private Percent','Growing Suburb- Private Percent','Rural Area- Private Percent','Bucks- Private Percent','Burlington- Private Percent','Camden- Private Percent','Chester- Private Percent','Delaware- Private Percent','Gloucester- Private Percent','Mercer- Private Percent','Montgomery- Private Percent','Philadelphia- Private Percent']
+                    ['DVRPC- Total','NJ Suburbs- Total','PA Suburbs- Total','Core City- Total','Developed Community- Total','Growing Suburb- Total','Rural Area- Total','Bucks- Total','Burlington- Total','Camden- Total','Chester- Total','Delaware- Total','Gloucester- Total','Mercer- Total','Montgomery- Total','Philadelphia- Total'],
+                    ['DVRPC- Public','NJ Suburbs- Public','PA Suburbs- Public','Core City- Public','Developed Community- Public','Growing Suburb- Public','Rural Area- Public','Bucks- Public','Burlington- Public','Camden- Public','Chester- Public','Delaware- Public','Gloucester- Public','Mercer- Public','Montgomery- Public','Philadelphia- Public'],
+                    ['DVRPC- Private','NJ Suburbs- Private','PA Suburbs- Private','Core City- Private','Developed Community- Private','Growing Suburb- Private','Rural Area- Private','Bucks- Private','Burlington- Private','Camden- Private','Chester- Private','Delaware- Private','Gloucester- Private','Mercer- Private','Montgomery- Private','Philadelphia- Private']
                 ],
                 data: [
                     {
                         'key': 'DVRPC',
-                        columns: ['year', 'DVRPC- Total Acres']
+                        columns: ['year', 'DVRPC- Total']
                     },
                     {
                         'key': 'NJ Suburbs',
                         disabled: true,
-                        columns: ['year', 'NJ Suburbs- Total Acres']
+                        columns: ['year', 'NJ Suburbs- Total']
                     },
                     {
                         'key': 'PA Suburbs',
                         disabled: true,
-                        columns: ['year', 'PA Suburbs- Total Acres']
+                        columns: ['year', 'PA Suburbs- Total']
                     },
                     {
                         'key': 'Core City',
                         disabled: true,
-                        columns: ['year', 'Core City- Total Acres']
+                        columns: ['year', 'Core City- Total']
                     },
                     {
                         'key': 'Developed Community',
                         disabled: true,
-                        columns: ['year', 'Developed Community- Total Acres']
+                        columns: ['year', 'Developed Community- Total']
                     },
                     {
                         'key': 'Growing Suburb',
                         disabled: true,
-                        columns: ['year', 'Growing Suburb- Total Acres']
+                        columns: ['year', 'Growing Suburb- Total']
                     },
                     {
                         'key': 'Rural Area',
                         disabled: true,
-                        columns: ['year', 'Rural Area- Total Acres']
+                        columns: ['year', 'Rural Area- Total']
                     },
                     {
                         'key': 'Bucks',
                         disabled: true,
-                        columns: ['year', 'Bucks- Total Acres']
+                        columns: ['year', 'Bucks- Total']
                     },
                     {
                         'key': 'Burlington',
                         disabled: true,
-                        columns: ['year', 'Burlington- Total Acres']
+                        columns: ['year', 'Burlington- Total']
                     },
                     {
                         'key': 'Camden',
                         disabled: true,
-                        columns: ['year', 'Camden- Total Acres']
+                        columns: ['year', 'Camden- Total']
                     },
                     {
                         'key': 'Chester',
                         disabled: true,
-                        columns: ['year', 'Chester- Total Acres']
+                        columns: ['year', 'Chester- Total']
                     },
                     {
                         'key': 'Delaware',
                         disabled: true,
-                        columns: ['year', 'Delaware- Total Acres']
+                        columns: ['year', 'Delaware- Total']
                     },
                     {
                         'key': 'Gloucester',
                         disabled: true,
-                        columns: ['year', 'Gloucester- Total Acres']
+                        columns: ['year', 'Gloucester- Total']
                     },
                     {
                         'key': 'Mercer',
                         disabled: true,
-                        columns: ['year', 'Mercer- Total Acres']
+                        columns: ['year', 'Mercer- Total']
                     },
                     {
                         'key': 'Montgomery',
                         disabled: true,
-                        columns: ['year', 'Montgomery- Total Acres']
+                        columns: ['year', 'Montgomery- Total']
                     },
                     {
                         'key': 'Philadelphia',
                         disabled: true,
-                        columns: ['year', 'Philadelphia- Total Acres']
+                        columns: ['year', 'Philadelphia- Total']
                     }
                 ]
             },
