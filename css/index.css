@@ -400,6 +400,8 @@ summary:hover{
     margin: 0;
     padding: 2% 5px;
     font-size: 1.2em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .description-wrapper-tab-headers:hover{
     cursor: pointer;
@@ -416,15 +418,21 @@ summary:hover{
     padding: 3% 5%;
 }
 .back-to-dash{
+    display: none;
     color: #4fa3a8;
     background: #fff;
-    border-radius: 3px;
-    display: none;
+    border: none;
+    /* with border case:
+    border-radius: 5px;
+    width: 80%;
+    padding: 9px 0;
+    margin: 10px auto 
+     */
     width: 85%;
     text-align: center;
     padding: 10px 0;
-    margin: 7px auto;
-    font-size: 1.4em;
+    margin: 11px auto;
+    font-size: 1.3em;
     cursor: pointer;
 }
 .related-indicators{
