@@ -66,13 +66,13 @@ const snippetsRef = {
         ],
         text: {
             why: `<p>The U.S. Environmental Protection Agency has developed air quality standards for six "criteria" pollutants. Of these six pollutants, the DVRPC has a history of violating the standards for two of those pollutants - ground-level ozone and fine particulate matter (PM<sub>2.5</sub> ). These pollutants have been shown to impede healthy lung development in children and exacerbate breathing disorders in the general population and especially in the elderly. Additionally, exposure to PM<sub>2.5</sub> can aggravate heart conditions. In addition to higher costs for households and the healthcare system, poor air quality's economic implications include more days of missed work and school.</p><p>Air pollution has been shown to have disproportionate effects on persons of color and low income populations. Recent data shows that in our region people of color are 22 percent more likely to be exposed to cancer and non-cancer causing air pollutants than whites. Relative to whites living above the federal poverty level, whites below poverty level had a 19 percent greater risk of exposure and people of color below poverty level had a 32 percent greater risk.</p>`,
-            what: `<p>The DVPRC region currently does not meet federal air quality standards for ground-level ozone and recently did not meet the standards for PM<sub>2.5</sub>.  In order to maintain and improve air quality in the region, the Clean Air Act requires that DVRPC demonstrate that transportation projects included in the Long-range Plan and Transportation Improvement Programs will not worsen air quality or cause future violations of the air quality standards.</p><p>In order to convey the health impacts of air pollution to the general public, the US EPA has created a color-coded scale to identify pollutant levels in simple terms. This scale is referred to as the Air Quality Index (AQI).  AQI levels are directly related to the federal air quality standards and pollutant concentrations in the air. The AQI reports pollutant levels for six different categories based on AQI: Good or green (0 to 50), Moderate or yellow (51 to 100), Unhealthy for Sensitive Groups or orange (101 to 150), Unhealthy or red (151 to 200), Very Unhealthy or purple (201 to 300). <em>Sensitive groups</em> are defined as children, older adults, and those with breathing impairments. When the AQI reaches Code Orange or higher for any of the pollutants, an air quality standard violation has occurred.</p><p>Air quality standards have been revised a number of times since 1997 and the data in these charts is normalized to the current standard.</p><p>The first chart shows the number of days violating air quality standards per year since 2000, along with a five year rolling average, based on the Philadelphia-Camden-Wilmington core based statistical area.</p><p>The second chart shows the number of days per year in each violating category (Unhealthy for Sensitive Populations, Unhealthy, Very Unhealthy, and Hazardous) for both Ozone and PM<sub>2.5</sub>.</p>`,
+            what: `<p>The DVRPC region currently does not meet federal air quality standards for ground-level ozone and recently did not meet the standards for PM<sub>2.5</sub>.  In order to maintain and improve air quality in the region, the Clean Air Act requires that DVRPC demonstrate that transportation projects included in the Long-range Plan and Transportation Improvement Programs will not worsen air quality or cause future violations of the air quality standards.</p><p>In order to convey the health impacts of air pollution to the general public, the US EPA has created a color-coded scale to identify pollutant levels in simple terms. This scale is referred to as the Air Quality Index (AQI).  AQI levels are directly related to the federal air quality standards and pollutant concentrations in the air. The AQI reports pollutant levels for six different categories based on AQI: Good or green (0 to 50), Moderate or yellow (51 to 100), Unhealthy for Sensitive Groups or orange (101 to 150), Unhealthy or red (151 to 200), Very Unhealthy or purple (201 to 300). <em>Sensitive groups</em> are defined as children, older adults, and those with breathing impairments. When the AQI reaches Code Orange or higher for any of the pollutants, an air quality standard violation has occurred.</p><p>Air quality standards have been revised a number of times since 1997 and the data in these charts is normalized to the current standard.</p><p>The first chart shows the number of days violating air quality standards per year since 2000, along with a five year rolling average, based on the Philadelphia-Camden-Wilmington core based statistical area.</p><p>The second chart shows the number of days per year in each violating category (Unhealthy for Sensitive Populations, Unhealthy, Very Unhealthy, and Hazardous) for both Ozone and PM<sub>2.5</sub>.</p>`,
             how: `<p>The latest air quality data from the Environmental Protection Agency shows the region continuing its reduction of ozone and fine particulate matter (PM<sub>2.5</sub>) pollutants. Days violating National Ambient Air Quality Standards (NAAQS) and the severity of those days have declined steadily over the past fifteen years. 2018 saw 68 fewer days per year violating standards than 2000. As seen in the first chart, from 2014 to 2018, the region has averaged just 22 days that would violate the current air quality standards in each of those historical years. Although air quality is greatly influenced by weather conditions, long-term trends show a dramatic decrease in violating days over the last two decades.</p><p>The second chart below shows that concentrations of both pollutants are decreasing in severity. For ozone, the last Very Unhealthy day occurred in 2007, and for PM<sub>2.5</sub>, it was 2008. Ozone violations are more common than PM<sub>2.5</sub> and great strides have been made to reduce PM<sub>2.5</sub> levels through regulations of power plants and diesel powered engines.</p><p>The dramatic declines in unhealthy air quality days of the past few decades show the impact federal emissions standards have had, along with greater public awareness of pollutants and ways to lessen their impact. However, we might expect future declines to slow some. Higher temperatures will increase the potential for forming ground level ozone and climate change will work counter to the progress the nation has made in improving air quality.</p>`,
             resource: `For more resources on air quality and ways DVRPC is working with its partners to combat it, explore DVRPC's <a href="https://www.airqualitypartnership.org/" target="_blank" rel="external">Air Quality Partnership</a>.</p><p>DVRPC's Municipal Implementation Toolbox suggests the following tools for improving air quality in our region:<ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf429e8e7179a56e21377c0">Street Tree Ordinance & Management Plan</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77cbffb6fc041ab930149">GHG Reduction Targets And Climate Action Plans</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77d3efb6fc041ab930194">Alternative Energy Ordinance</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf4350be7179a56e2137f2e">Travel Demand Management</a></li></ul></p>`
         }
     },
     'Miles Driven': {
-        file: 'milesDriven.html',   
+        file: 'milesDriven.html',
         d3: [
             {
                 type: 'line',
@@ -2678,96 +2678,94 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['landConsumption1'],
+                dataSource: ['land_consumption_1a','land_consumption_1b'],
                 context: {
-                    labels: ['Acres', 'Acres per Capita', 'Acres', 'Acres per Capita'],
-                    units: ['thousands', 'singles', 'thousands', 'singles'],
+                    labels: ['Total Acres', 'Acres per Capita'],
+                    units: ['thousands', 'singles'],
                 },
                 columnOptions: [
-                    ['Total Developed Acres- DVRPC','Total Developed Acres- NJ Suburbs','Total Developed Acres- PA Suburbs','Total Developed Acres- Core City','Total Developed Acres- Developed Community','Total Developed Acres- Growing Suburb','Total Developed Acres- Rural Area','Total Developed Acres- Bucks','Total Developed Acres- Burlington','Total Developed Acres- Camden','Total Developed Acres- Chester','Total Developed Acres- Delaware','Total Developed Acres- Gloucester','Total Developed Acres- Mercer','Total Developed Acres- Montgomery','Total Developed Acres- Philadelphia'],
-                    ['Developed Acres per Capita- DVRPC','Developed Acres per Capita- NJ Suburbs','Developed Acres per Capita- PA Suburbs','Developed Acres per Capita- Core City','Developed Acres per Capita- Developed Community','Developed Acres per Capita- Growing Suburb','Developed Acres per Capita- Rural Area','Developed Acres per Capita- Bucks','Developed Acres per Capita- Burlington','Developed Acres per Capita- Camden','Developed Acres per Capita- Chester','Developed Acres per Capita- Delaware','Developed Acres per Capita- Gloucester','Developed Acres per Capita- Mercer','Developed Acres per Capita- Montgomery','Developed Acres per Capita- Philadelphia'],
-                    ['Total Agricultural Acres- DVRPC','Total Agricultural Acres- NJ Suburbs','Total Agricultural Acres- PA Suburbs','Total Agricultural Acres- Core City','Total Agricultural Acres- Developed Community','Total Agricultural Acres- Growing Suburb','Total Agricultural Acres- Rural Area','Total Agricultural Acres- Bucks','Total Agricultural Acres- Burlington','Total Agricultural Acres- Camden','Total Agricultural Acres- Chester','Total Agricultural Acres- Delaware','Total Agricultural Acres- Gloucester','Total Agricultural Acres- Mercer','Total Agricultural Acres- Montgomery','Total Agricultural Acres- Philadelphia'],
-                    ['Agricultural Acres per Capita- DVRPC','Agricultural Acres per Capita- NJ Suburbs','Agricultural Acres per Capita- PA Suburbs','Agricultural Acres per Capita- Core City','Agricultural Acres per Capita- Developed Community','Agricultural Acres per Capita- Growing Suburb','Agricultural Acres per Capita- Rural Area','Agricultural Acres per Capita- Bucks','Agricultural Acres per Capita- Burlington','Agricultural Acres per Capita- Camden','Agricultural Acres per Capita- Chester','Agricultural Acres per Capita- Delaware','Agricultural Acres per Capita- Gloucester','Agricultural Acres per Capita- Mercer','Agricultural Acres per Capita- Montgomery','Agricultural Acres per Capita- Philadelphia']
+                    ['Developed - DVRPC','Developed - New Jersey Suburbs','Developed - Pennsylvania Suburbs','Developed - Core City','Developed - Developed Community','Developed - Growing Suburb','Developed - Rural Area','Developed - Bucks','Developed - Burlington','Developed - Camden','Developed - Chester','Developed - Delaware','Developed - Gloucester','Developed - Mercer','Developed - Montgomery','Developed - Philadelphia'],
+                    ['Agricultural - DVRPC','Agricultural - New Jersey Suburbs','Agricultural - PA Suburbs','Agricultural - Core City','Agricultural - Developed Community','Agricultural - Growing Suburb','Agricultural - Rural Area','Agricultural - Bucks','Agricultural - Burlington','Agricultural - Camden','Agricultural - Chester','Agricultural - Delaware','Agricultural - Gloucester','Agricultural - Mercer','Agricultural - Montgomery','Agricultural - Philadelphia']
                 ],
                 data: [
                     {
                         'key': 'DVRPC',
-                        columns: ['year', 'Total Developed Acres- DVRPC']
+                        columns: ['year', 'Developed - DVRPC']
                     },
                     {
                         'key': 'NJ Suburbs',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- NJ Suburbs']
+                        columns: ['year', 'Developed - New Jersey Suburbs']
                     },
                     {
                         'key': 'PA Suburbs',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- PA Suburbs']
+                        columns: ['year', 'Developed - Pennsylvania Suburbs']
                     },
                     {
                         'key': 'Core City',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Core City']
+                        columns: ['year', 'Developed - Core City']
                     },
                     {
                         'key': 'Developed Community',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Developed Community']
+                        columns: ['year', 'Developed - Developed Community']
                     },
                     {
                         'key': 'Growing Suburb',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Growing Suburb']
+                        columns: ['year', 'Developed - Growing Suburb']
                     },
                     {
                         'key': 'Rural Area',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Rural Area']
+                        columns: ['year', 'Developed - Rural Area']
                     },
                     {
                         'key': 'Bucks',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Bucks']
+                        columns: ['year', 'Developed - Bucks']
                     },
                     {
                         'key': 'Burlington',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Burlington']
+                        columns: ['year', 'Developed - Burlington']
                     },
                     {
                         'key': 'Camden',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Camden']
+                        columns: ['year', 'Developed - Camden']
                     },
                     {
                         'key': 'Chester',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Chester']
+                        columns: ['year', 'Developed - Chester']
                     },
                     {
                         'key': 'Delaware',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Delaware']
+                        columns: ['year', 'Developed - Delaware']
                     },
                     {
                         'key': 'Gloucester',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Gloucester']
+                        columns: ['year', 'Developed - Gloucester']
                     },
                     {
                         'key': 'Mercer',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Mercer']
+                        columns: ['year', 'Developed - Mercer']
                     },
                     {
                         'key': 'Montgomery',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Montgomery']
+                        columns: ['year', 'Developed - Montgomery']
                     },
                     {
                         'key': 'Philadelphia',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Philadelphia']
+                        columns: ['year', 'Developed - Philadelphia']
                     }
                 ]
             },

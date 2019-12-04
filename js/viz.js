@@ -211,7 +211,6 @@ const createLineAndScatterChart = (source, toggleContext) => {
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
                 .margin({top: 35, right: 65, bottom: 35, left: 55})
-                // @TODO: calculate a max instead of just using 65
                 .yDomain1([0, 65])
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
