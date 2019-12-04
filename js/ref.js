@@ -390,8 +390,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- ksiBikePed', 'DVRPC- ksiMotorVehicle'],
-                    ['NJ Suburbs- ksiBikePed', 'NJ Suburbs- ksiMotorVehicle'],
                     ['PA Suburbs- ksiBikePed', 'PA Suburbs- ksiMotorVehicle'],
+                    ['NJ Suburbs- ksiBikePed', 'NJ Suburbs- ksiMotorVehicle'],
                     ['Bucks- ksiBikePed', 'Bucks- ksiMotorVehicle'],
                     ['Burlington- ksiBikePed', 'Burlington- ksiMotorVehicle'],
                     ['Camden- ksiBikePed', 'Camden- ksiMotorVehicle'],
@@ -400,7 +400,7 @@ const snippetsRef = {
                     ['Gloucester- ksiBikePed', 'Gloucester- ksiMotorVehicle'],
                     ['Mercer- ksiBikePed', 'Mercer- ksiMotorVehicle'],
                     ['Montgomery- ksiBikePed', 'Montgomery- ksiMotorVehicle'],
-                    ['Philadelphia- ksiBikePed', 'Philadelphia- ksiMotorVehicle'],
+                    ['Philadelphia- ksiBikePed', 'Philadelphia- ksiMotorVehicle']
                 ],
                 data: [
                     {
