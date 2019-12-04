@@ -1535,9 +1535,9 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPCAM', 'DVRPCMD', 'DVRPCPM', 'DVRPCNT'],
-                    ['NJCosAM', 'NJCosMD', 'NJCosPM', 'NJCosNT'],
                     ['PACosAM', 'PACosMD', 'PACosPM', 'PACosNT'],
                     ['PASubCosAM', 'PASubCosMD', 'PASubCosPM', 'PASubCosNT'],
+                    ['NJCosAM', 'NJCosMD', 'NJCosPM', 'NJCosNT'],
                     ['BucAM', 'BucMD', 'BucPM', 'BucNT'],
                     ['BurlAM', 'BurlMD', 'BurlPM', 'BurlNT'],
                     ['CamAM', 'CamMD', 'CamPM', 'CamNT'],
