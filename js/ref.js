@@ -182,62 +182,77 @@ const snippetsRef = {
                     },
                     {
                         'key': 'NJ Suburbs',
+                        disabled: true,
                         'columns': ['year', 'hsRateNJSuburbs']
                     },
                     {
                         'key': 'PA Suburbs',
+                        disabled: true,
                         'columns': ['year', 'hsRatePASuburbs']
                     },
                     {
                         'key': 'Core',
+                        disabled: true,
                         'columns': ['year', 'hsRateCore']
                     },
                     {
                         'key': 'Developed Communities',
+                        disabled: true,
                         'columns': ['year', 'hsRateDeveloped']
                     },
                     {
                         'key': 'Growing Suburb',
+                        disabled: true,
                         'columns': ['year', 'hsRateGrowing']
                     },
                     {
                         'key': 'Rural Areas',
+                        disabled: true,
                         'columns': ['year', 'hsRateRural']
                     },
                     {
                         'key': 'Bucks',
+                        disabled: true,
                         'columns': ['year', 'hsRateBucksCo']
                     },
                     {
                         'key': 'Burlington',
+                        disabled: true,
                         'columns': ['year', 'hsRateBurlingtonCo']
                     },
                     {
                         'key': 'Camden',
+                        disabled: true,
                         'columns': ['year', 'hsRateCamdenCo']
                     },
                     {
                         'key': 'Chester',
+                        disabled: true,
                         'columns': ['year', 'hsRateChesterCo']
                     },
                     {
                         'key': 'Delaware',
+                        disabled: true,
                         'columns': ['year', 'hsRateDelawareCo']
                     },
                     {
                         'key': 'Gloucester',
+                        disabled: true,
                         'columns': ['year', 'hsRateGloucesterCo']
                     },
                     {
                         'key': 'Mercer',
+                        disabled: true,
                         'columns': ['year', 'hsRateMercerCo']
                     },
                     {
                         'key': 'Montgomery',
+                        disabled: true,
                         'columns': ['year', 'hsRateMontgomeryCo']
                     },
                     {
                         'key': 'Philadelphia',
+                        disabled: true,
                         'columns': ['year', 'hsRatePhiladelphiaCo']
                     }
                 ]
@@ -1917,7 +1932,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'CO2 Equivalent (Millions of Metric Tons)',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'emissions_total']
                     }
                 ]
@@ -2009,14 +2024,14 @@ const snippetsRef = {
                     keepUnits: false
                 },
                 columnOptions: [
-                    ['Temperature - Farenheit', '30 year trend - Temperature'],
-                    ['Precipitation', '30 year trend - Precipitation'],
+                    ['Average Annual Temperature', '30 year trend - Temperature'],
+                    ['Annual Precipitation', '30 year trend - Precipitation'],
                     ['Precipitation from Severe Storms', '30 year trend - Precipitation from Severe Storms']
                 ],
                 data: [
                     {
-                        'key': 'Temperature',
-                        columns: ['year', 'Temperature - Farenheit'],
+                        'key': 'Average Annual Temperature',
+                        columns: ['year', 'Average Annual Temperature'],
                         type: 'scatter',
                         yAxis: 1
                     },
