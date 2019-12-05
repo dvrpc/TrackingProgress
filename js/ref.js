@@ -262,7 +262,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['edattainComprehensive'],
                 context: {
-                    labels: ['Population Age 25 or Older'],
+                    labels: ['Population Age 25 or Older (Thousands)'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
