@@ -650,7 +650,7 @@ const snippetsRef = {
                 dataSource: ['housing_afford_graph_1'],
                 data: fullGeography,
                 context: {
-                    labels: ['Percent of Households'],
+                    labels: ['Percentage of Households'],
                     keepLabels: true,
                     units: ['percent'],
                     keepUnits: true
