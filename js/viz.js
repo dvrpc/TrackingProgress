@@ -219,8 +219,6 @@ const createLineAndScatterChart = (source, toggleContext) => {
 
             // format yAxis units and labels if necessary
             if(context) formatLabels(chart.yAxis1, chart.margin(), context)
-
-            chart.yAxis1.tickFormat(d3.format(','))
             
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 

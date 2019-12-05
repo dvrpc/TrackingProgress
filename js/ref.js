@@ -2040,7 +2040,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Degrees Farenheit', 'Precipitation (inches)', 'Percentage of Precipitation from Severe Storms'],
                     keepLabels: false,
-                    units: ['singles', 'singles', 'percent'],
+                    units: ['thousands', 'thousands', 'percentC'],
                     keepUnits: false
                 },
                 columnOptions: [
