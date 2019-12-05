@@ -645,7 +645,7 @@ footer{
         padding: 3px 10px;
     }
     #tp-logo{
-        height: 42px;
+        height: 37px;
     }
 
     /* Mobile styles for the splash page */
@@ -777,7 +777,6 @@ footer{
     #related-indicators-subheader{
         font-size: 0.8em;
         font-weight: 500;
-        margin: 2px 0 0 0;
     }
     .sideLink{
         padding: 0 2vw;
@@ -788,9 +787,9 @@ footer{
         padding: 7% 3% 4% 3%;
     }
     #indicator-header-wrapper{
-        padding-bottom: 7%;
         justify-content: space-between;
-        max-width: 95%;
+        max-width: none;
+        width: 100%;
     }
     .indicator-header{
         font-size: 1.4em;
@@ -801,7 +800,7 @@ footer{
         font-size: 1.1em;
     }
     .snippet-categories{
-        height: 33px;
+        height: 30px;
     }
     #description-wrapper{
         width: 100%;
@@ -824,8 +823,11 @@ footer{
     .data-viz{
         min-height: 300px;
         max-height: 400px;
-        width: 95%;
+        width: 100%;
         margin-top: 5%;
+    }
+    .chart-src{
+        width: auto;
     }
     .nv-legendWrap{
         width: 95vw !important;
