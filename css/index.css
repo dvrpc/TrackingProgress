@@ -649,6 +649,9 @@ footer{
     }
 
     /* Mobile styles for the splash page */
+    #splash-page{
+        padding: 4% 3%;
+    }
     #tp-header{
         font-size: 1.2rem;
     }
@@ -678,9 +681,9 @@ footer{
     /* Mobile styles for the dashboard page */
     .indicators-wrapper{
         flex-direction: column;
+        border-top: 4px solid white;
     }
     .indicators-nav{
-        height: 11vh;
         background: white;
         position: sticky;
         top: 8vh;
@@ -701,9 +704,10 @@ footer{
         font-size: 0.8em;
     }
     .icon-set{
-        height: 100%;
+        height: 10vh;
         width: calc(20% - 3px);
-        margin-right: 4px
+        margin-right: 4px;
+        margin-bottom: 4px;
     }
     .icon-set-img{
         width: 55px;
@@ -718,7 +722,7 @@ footer{
     }
     .indicators-nav div:last-child{
         margin-right: 0;
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
     .category-active:not(:last-child){
         margin-right: 4px !important;
@@ -756,7 +760,6 @@ footer{
         flex-direction: row !important;
         justify-content: flex-start;
         align-items: center;
-        padding: 1vh 0;
         overflow-x: auto;
     }
     #related-indicators-img{
