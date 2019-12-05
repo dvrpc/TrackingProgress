@@ -128,6 +128,11 @@ module.exports = {
                     from: './vid',
                     to: 'vid',
                     toType: 'dir'
+                },
+                {
+                    from: './pdf',
+                    to: 'pdf',
+                    toType: 'dir'
                 }
             ]
         ),

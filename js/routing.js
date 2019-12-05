@@ -7,10 +7,10 @@ const splashPage = document.getElementById('splash-page')
 
 
 // for development
-const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
+// const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
 
 // for review: 
-// const baseURL = 'http://staging.dvrpc.org/review/TrackingProgress/'
+const baseURL = 'http://staging.dvrpc.org/review/TrackingProgress/'
 
 // for live:
 //const baseURL = 'http://staging.dvrpc.org/TrackingProgress/'
