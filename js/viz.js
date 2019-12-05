@@ -67,9 +67,9 @@ const formatLabels = (axis, margin, context) => {
 // Y-axis formatting lookup table
 const axisFormats = {
     'percent': '.0%',
+    'percentC': '.3p',
     'singles': '.3n',
     'thousands': ',.0f',
-    'millions': '.3n'
 }
 
 const createStackedBarChart = (source, toggleContext) => {

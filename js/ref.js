@@ -2497,7 +2497,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Percentage of Deck Area for All Bridges', 'Percentage of All Bridges'],
                     keepLabels: false,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
