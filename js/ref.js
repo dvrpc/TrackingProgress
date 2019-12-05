@@ -458,7 +458,8 @@ const snippetsRef = {
                 context: {
                     labels: ['Flights'],
                     keepLabels: true,
-                    units: false
+                    units: ['thousands'],
+                    keepUnits: true
                 },
                 columnOptions: [
                     ['Middle Eastern', 'Mexican', 'Canadian', 'Caribbean', 'European'],
@@ -1618,7 +1619,7 @@ const snippetsRef = {
                 dataSource: ['Exports'],
                 context: {
                     labels: ['Billions of Dollars (2018)'],
-                    units: ['singles']
+                    units: ['dollars']
                 },
                 data: [
                     {

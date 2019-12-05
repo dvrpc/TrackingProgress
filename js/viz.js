@@ -70,6 +70,7 @@ const axisFormats = {
     'percentC': '.3p',
     'singles': '.3n',
     'thousands': ',.0f',
+    'dollars': '$.3'
 }
 
 const createStackedBarChart = (source, toggleContext) => {
