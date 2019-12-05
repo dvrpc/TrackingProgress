@@ -2716,7 +2716,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['land_consumption_1a','land_consumption_1b'],
                 context: {
-                    labels: ['Total Acres', 'Acres per Capita'],
+                    labels: ['Total Acres', 'Acres Per Capita'],
                     units: ['thousands', 'singles'],
                 },
                 columnOptions: [
