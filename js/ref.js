@@ -344,51 +344,62 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region',
                         'columns': ['year', 'DVRPC- ksi per capita']
                     },
                     {
                         'key': 'NJ Suburbs',
+                        disabled: true,
                         'columns': ['year', 'NJ Suburbs- ksi per capita']
                     },
                     {
                         'key': 'PA Suburbs',
+                        disabled: true,
                         'columns': ['year', 'PA Suburbs- ksi per capita']
                     },
                     {
                         'key': 'Bucks',
+                        disabled: true,
                         'columns': ['year', 'Bucks- ksi per capita']
                     },
                     {
                         'key': 'Burlington',
+                        disabled: true,
                         'columns': ['year', 'Burlington- ksi per capita']
                     },
                     {
                         'key': 'Camden',
+                        disabled: true,
                         'columns': ['year', 'Camden- ksi per capita']
                     },
                     {
                         'key': 'Chester',
+                        disabled: true,
                         'columns': ['year', 'Chester- ksi per capita']
                     },
                     {
                         'key': 'Delaware',
+                        disabled: true,
                         'columns': ['year', 'Delaware- ksi per capita']
                     },
                     {
                         'key': 'Gloucester',
+                        disabled: true,
                         'columns': ['year', 'Gloucester- ksi per capita']
                     },
                     {
                         'key': 'Mercer',
+                        disabled: true,
                         'columns': ['year', 'Mercer- ksi per capita']
                     },
                     {
                         'key': 'Montgomery',
+                        disabled: true,
                         'columns': ['year', 'Montgomery- ksi per capita']
                     },
                     {
                         'key': 'Philadelphia',
+                        disabled: true,
                         'columns': ['year', 'Philadelphia- ksi per capita']
                     }
                 ]
