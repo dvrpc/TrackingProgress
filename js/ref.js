@@ -174,7 +174,7 @@ const snippetsRef = {
                 dataSource: ['edattainHS'],
                 context: {
                     labels: ['Percentage Population Age 25 or Older'],
-                    units: ['percent']
+                    units: ['percentC']
                 },
                 data: [
                     {
@@ -1705,7 +1705,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Commute Mode Share'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -1740,7 +1740,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Commute Mode Share'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
