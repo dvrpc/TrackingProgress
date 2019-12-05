@@ -1839,7 +1839,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['transit_ridership_graph_1'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips per Capita'],
+                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
                     units: ['thousands', 'singles'],
                 },
                 columnOptions: [
@@ -1858,7 +1858,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['transit_ridership_graph_2'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips per Capita'],
+                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
                     units: ['thousands', 'singles'],
                 },
                 columnOptions: [
@@ -1897,7 +1897,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['transit_ridership_graph_3'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips per Capita'],
+                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
                     units: ['thousands', 'singles'],
                 },
                 columnOptions: [
