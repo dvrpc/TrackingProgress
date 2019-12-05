@@ -461,24 +461,28 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Middle Eastern', 'Mexican', 'Canadian', 'Caribbean', 'European'],
-                    ['Middle Eastern (yr)', 'Mexican (seasonal)', 'Canadian (yr)', 'Canadian (seasonal)', 'Caribbean (yr)', 'Caribbean (seasonal)', 'European (yr)', 'European (seasonal)']
+                    ['Middle Eastern (yr)', 'Mexican (yr)', 'Canadian (yr)', 'Canadian (seasonal)', 'Caribbean (yr)', 'Caribbean (seasonal)', 'European (yr)', 'European (seasonal)']
                 ],
                 newKeys: true,
                 data: [
                     {
                         'key': 'Middle Eastern',
+                        color: '#1f77b4',
                         columns: ['year', 'Middle Eastern']
                     },
                     {
                         'key': 'Mexican',
+                        color: '#ff7f0e',
                         columns: ['year', 'Mexican']
                     },
                     {
                         'key': 'Canadian',
+                        color: '#2ca02c',
                         columns: ['year', 'Canadian']
                     },
                     {
                         'key': 'Caribbean',
+                        color: '#d62728',
                         columns: ['year', 'Caribbean']
                     },
                     {
