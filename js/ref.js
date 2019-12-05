@@ -37,7 +37,8 @@ const snippetsRef = {
                 context: {
                     labels: ['Days'],
                     keepLabels: true,
-                    units: false
+                    units: ['thousands'],
+                    keepUnits: true
                 },
                 columnOptions: [
                     ['Unhealthy Sensitive Ozone', 'Unhealthy Ozone', 'Very Unhealthy Ozone'],
