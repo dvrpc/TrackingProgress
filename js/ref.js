@@ -2036,7 +2036,7 @@ const snippetsRef = {
                 dataSource: ['emissions_4'],
                 axisLabel: 'Degrees Farenheit',
                 context: {
-                    labels: ['Degrees Farenheit', 'Precipitation (inches)', '% of Precipitation from Severe Storms'],
+                    labels: ['Degrees Farenheit', 'Precipitation (inches)', 'Percentage of Precipitation from Severe Storms'],
                     keepLabels: false,
                     units: ['singles', 'singles', 'percent'],
                     keepUnits: false
