@@ -1025,14 +1025,17 @@ const snippetsRef = {
                     },
                     {
                         'key': 'Philadelphia',
+                        disabled: true,
                         columns: ['year', 'Philadelphia']
                     },
                     {
                         'key': 'PA Suburban Counties',
+                        disabled: true,
                         columns: ['year', 'PA Suburban Counties']
                     },
                     {
                         'key': 'NJ Suburban Counties',
+                        disabled: true,
                         columns: ['year', 'NJ Suburban Counties']
                     },
                     {
@@ -1184,12 +1187,12 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Whites',
-                        columns: ['year', 'Region_labWht']
-                    },
-                    {
                         'key': 'People of Color',
                         columns: ['year', 'Region_labNonWht']
+                    },
+                    {
+                        'key': 'Whites',
+                        columns: ['year', 'Region_labWht']
                     }
                 ]
             }
