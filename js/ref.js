@@ -2488,14 +2488,17 @@ const snippetsRef = {
                     },
                     {
                         'key': 'State',
+                        disabled: true,
                         columns: ['year', 'DVRPC- State']
                     },
                     {
                         'key': 'Local',
+                        disabled: true,
                         columns: ['year', 'DVRPC- Local']
                     },
                     {
                         'key': 'Other',
+                        disabled: true,
                         columns: ['year', 'DVRPC- Other']
                     }
                 ]
