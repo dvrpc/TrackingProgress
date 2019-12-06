@@ -335,8 +335,7 @@ const snippetsRef = {
                 context: {
                     labels: ['KSI Five-Year Average'],
                     keepLabels: true,
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC- ksi per capita','NJ Suburbs- ksi per capita','PA Suburbs- ksi per capita','Bucks- ksi per capita','Burlington- ksi per capita','Camden- ksi per capita','Chester- ksi per capita','Delaware- ksi per capita','Gloucester- ksi per capita','Mercer- ksi per capita','Montgomery- ksi per capita','Philadelphia- ksi per capita'],
@@ -412,8 +411,7 @@ const snippetsRef = {
                 context: {
                     labels: ['KSI Per 100,000 People', 'KSI Total', 'KSI Per 100 Million VMT'],
                     keepLabels: false,
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC- ksiBikePed', 'DVRPC- ksiMotorVehicle'],
