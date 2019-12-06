@@ -222,7 +222,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis1, chart.margin(), context)
+            if(context) formatLabels(chart.yAxis1, chart.xAxis, chart.margin(), context)
             
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
