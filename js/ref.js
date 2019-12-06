@@ -2606,7 +2606,7 @@ const snippetsRef = {
                 dataSource: ['water_quality_1'],
                 context: {
                     labels: ['Percentage Impaired'],
-                    units: ['percent']
+                    units: ['percentC']
                 },
                 data: [
                     {
