@@ -38,7 +38,8 @@ const snippetsRef = {
                     labels: ['Days'],
                     keepLabels: true,
                     units: ['thousands'],
-                    keepUnits: true
+                    keepUnits: true,
+                    xLabel: 'Quarter'
                 },
                 columnOptions: [
                     ['Unhealthy Sensitive Ozone', 'Unhealthy Ozone', 'Very Unhealthy Ozone'],
@@ -1933,7 +1934,7 @@ const snippetsRef = {
                 dataSource: ['emissions_2'],
                 context: {
                     labels: ['CO2 Equivalent (Millions of Metric Tons)'],
-                    units: ['singles'],
+                    units: ['singles']
                 },
                 data: [
                     {

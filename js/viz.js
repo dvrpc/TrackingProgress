@@ -10,7 +10,7 @@ const formatInpus = (source, toggleContext) => {
     // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
     source.data.forEach(series => series.values = [])
     
-    let labels, units, chartName;
+    let labels, xLabel, units, chartName;
 
     // abstract context code to keep things DRY
     const formatContext = (index, hasDouble) => {
@@ -30,6 +30,7 @@ const formatInpus = (source, toggleContext) => {
         if(hasContext) {
             labels = hasContext.labels[0]
             units = hasContext.units[0]
+            xLabel = hasContext.xLabel || null
         }
 
         chartName = source.dataSource[0]
@@ -37,6 +38,7 @@ const formatInpus = (source, toggleContext) => {
     // regular case w/context: determine if using double toggles or not to index the context obj
     }else if(toggleContext.context) {
         [labels, units, chartName] = toggleContext.doubleToggle > -1 ? formatContext(toggleContext.doubleToggle, true) : formatContext(toggleContext.chartNumber, false)
+        xLabel = toggleContext.context.xLabel || null
     
     // regular case no context: just get chartName
     }else {
@@ -46,19 +48,22 @@ const formatInpus = (source, toggleContext) => {
     const dataSource = `./data/${chartName}.csv`
 
     // if neither labels nor units need updating, make context null so the viz fncs can avoid calling formatLabels
-    let context = labels || units ? {labels, units} : null
+    let context = labels || units ? {labels, units, xLabel} : null
     
     return [container, dataSource, source, context]
 }
 
 // labelling helper function 
-const formatLabels = (axis, margin, context) => {
-    context.units ? axis.tickFormat(d3.format(axisFormats[context.units])) : axis.tickFormat(d3.format('.3n'))
+const formatLabels = (y, x, margin, context) => {
+    context.units ? y.tickFormat(d3.format(axisFormats[context.units])) : y.tickFormat(d3.format('.3n'))
             
     // add axis label & update margin to compensate
     if(context.labels) {
-        axis.axisLabel(context.labels)
+        y.axisLabel(context.labels)
         margin.left += 20
+
+        // handle edge case where x-axis label isn't 'Year'
+        context.xLabel ? x.axisLabel(context.xLabel) : x.axisLabel('Year')
     }
 }
 
@@ -86,7 +91,7 @@ const createStackedBarChart = (source, toggleContext) => {
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
-                .margin({top: 35, right: 55, bottom: 35, left: 55})
+                .margin({top: 35, right: 55, bottom: 45, left: 55})
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
@@ -100,7 +105,7 @@ const createStackedBarChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis, chart.margin(), context)
+            if(context) formatLabels(chart.yAxis, chart.xAxis, chart.margin(), context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -127,7 +132,7 @@ const createLinePlusBarChart = (source, toggleContext) => {
     }, csvObj => {        
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
-                .margin({top: 35, right: 65, bottom: 35, left: 55})
+                .margin({top: 35, right: 55, bottom: 45, left: 55})
                 .focusEnable(false)
                 .x(d => d[0])
                 .y((d, i) => d[1])
@@ -140,7 +145,7 @@ const createLinePlusBarChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.y1Axis, chart.margin(), context)
+            if(context) formatLabels(chart.y1Axis, chart.xAxis, chart.margin(), context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -163,7 +168,7 @@ const createLineChart = (source, toggleContext) => {
 
         nv.addGraph(() => {
             let chart = nv.models.lineChart()
-                .margin({top: 35, right: 55, bottom: 35, left: 65})
+                .margin({top: 35, right: 55, bottom: 45, left: 55})
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
                 .clipEdge(false)
@@ -175,7 +180,7 @@ const createLineChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis, chart.margin(), context)
+            if(context) formatLabels(chart.yAxis, chart.xAxis, chart.margin(), context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -210,7 +215,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
-                .margin({top: 35, right: 65, bottom: 35, left: 55})
+                .margin({top: 35, right: 55, bottom: 45, left: 55})
                 .yDomain1([0, 65])
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
@@ -247,7 +252,7 @@ const createStackedAreaChart = (source, toggleContext) => {
 
         nv.addGraph(() => {
             let chart = nv.models.stackedAreaChart()
-                .margin({top: 65, right: 55, bottom: 35, left: 55})
+                .margin({top: 35, right: 55, bottom: 45, left: 55})
                 .x(d => d[0])
                 .y(d => d[1])
                 .useInteractiveGuideline(true)
