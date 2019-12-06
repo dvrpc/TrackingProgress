@@ -2206,7 +2206,7 @@ const snippetsRef = {
                 dataSource: ['popGrowth'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)', 'Percent Change in Population'],
-                    units: ['thousands', 'thousands', 'percent']
+                    units: ['thousandsC', 'thousands', 'percentC']
                 },
                 columnOptions: [
                     ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
@@ -2328,8 +2328,7 @@ const snippetsRef = {
                 dataSource: ['pop_age_change','pop_age_totals'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)'],
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC_<20','DVRPC_20-34','DVRPC_35-49','DVRPC_50-64','DVRPC_65+'],
@@ -2374,8 +2373,7 @@ const snippetsRef = {
                 dataSource: ['pop_race_change','pop_race_totals'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)'],
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC_WA','DVRPC_BA','DVRPC_IA','DVRPC_AA','DVRPC_NA','DVRPC_TOM'],
@@ -2424,8 +2422,7 @@ const snippetsRef = {
                 dataSource: ['pop_hisp_change','pop_hisp_totals'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)'],
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC_NH','DVRPC_H'],
