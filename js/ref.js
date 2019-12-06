@@ -1005,7 +1005,7 @@ const snippetsRef = {
                 dataSource: ['medincGapRace'],
                 context: {
                     labels: ['Dollars (2017)'],
-                    units: ['thousands']
+                    units: ['dollars']
                 },
                 data: [
                     {
@@ -1076,7 +1076,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Dollars (2017)'],
                     keepLabels: true,
-                    units: ['thousands'],
+                    units: ['dollars'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -1110,7 +1110,7 @@ const snippetsRef = {
                 dataSource: ['RaceEthnSegregation'],
                 context: {
                     labels: ['Population Needing to Move to Achieve Regional Distribution'],
-                    units: ['percent']
+                    units: ['percentC']
                 },
                 data: [
                     {
@@ -1126,7 +1126,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Percent Participation Gap'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -1157,7 +1157,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Percent Participation'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
