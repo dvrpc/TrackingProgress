@@ -3038,7 +3038,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Percentage of Total Lane Miles'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
