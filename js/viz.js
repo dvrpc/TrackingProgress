@@ -58,8 +58,6 @@ const formatLabels = (axis, margin, context) => {
     // add axis label & update margin to compensate
     if(context.labels) {
         axis.axisLabel(context.labels)
-
-        // give axis label breathing room (note: margin.right adds to the graph itself, need to find a way to add margin right to the labels)
         margin.left += 20
     }
 }
@@ -70,7 +68,7 @@ const axisFormats = {
     'percentC': '.3p',
     'singles': '.3n',
     'thousands': ',.0f',
-    'dollars': '$.3'
+    'dollars': '$,3'
 }
 
 const createStackedBarChart = (source, toggleContext) => {
@@ -164,7 +162,7 @@ const createLineChart = (source, toggleContext) => {
 
         nv.addGraph(() => {
             let chart = nv.models.lineChart()
-                .margin({top: 35, right: 65, bottom: 35, left: 55})
+                .margin({top: 35, right: 55, bottom: 35, left: 65})
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
                 .clipEdge(false)

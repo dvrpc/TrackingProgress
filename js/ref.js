@@ -776,7 +776,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Growth Rate'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -856,7 +856,7 @@ const snippetsRef = {
                 dataSource: ['jobs_graph2'],
                 context: {
                     labels: ['Percentage of Region'],
-                    units: ['percent']
+                    units: ['percentC']
                 },
                 data: [
                     {
@@ -904,7 +904,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Percentage of Total Jobs'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -1203,7 +1203,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Growth Rate Difference'],
                     keepLabels: false,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -1234,7 +1234,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Dollars (2017)', 'Change in Dollars (2017)', 'Percent Change in Dollars (2017)'],
                     keepLabels: false,
-                    units: ['thousands', 'thousands', 'percent'],
+                    units: ['dollars', 'dollars', 'percentC'],
                     keepUnits: false
                 },
                 columnOptions: [
@@ -1285,7 +1285,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Population Needing to Move to Achieve Regional Distribution'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 data: [

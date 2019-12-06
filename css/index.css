@@ -771,12 +771,13 @@ footer{
         padding: 0 9px;
     }
     #related-indicators-subheader-wrapper img{
-        height: 28px;
+        height: 26px;
         margin-top: 2px;
     }
     #related-indicators-subheader{
         font-size: 0.8em;
         font-weight: 500;
+        padding-bottom: 2px;
     }
     .sideLink{
         padding: 0 2vw;
