@@ -2206,11 +2206,11 @@ const snippetsRef = {
                 dataSource: ['popGrowth'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)', 'Percent Change in Population'],
-                    units: ['thousandsC', 'thousands', 'percentC']
+                    units: ['thousands', 'thousandsC', 'percentC']
                 },
                 columnOptions: [
-                    ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
                     ['Core-count','DevCom-count','GroSub-count','Rural-count','Burlington-count','Camden-count','Gloucester-count','Mercer-count','Bucks-count','Chester-count','Delaware-count','Montgomery-count','Philadelphia-count','NJCnt-count','PASub-count','DVRPC-count'],
+                    ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
                     ['Core-perc','DevCom-perc','GroSub-perc','Rural-perc','Burlington-perc','Camden-perc','Gloucester-perc','Mercer-perc','Bucks-perc','Chester-perc','Delaware-perc','Montgomery-perc','Philadelphia-perc','NJCnt-perc','PASub-perc','DVRPC-perc']
                 ],
                 data: [
