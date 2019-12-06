@@ -995,7 +995,7 @@ const snippetsRef = {
             resource: `<p>DVRPC works with its planning partners on <a href="/Economic/">economic development and analysis</a> in the region, including our <a href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p><p>Collaborating with our county partners, DVRPC also produced <a href="/Products/ADR023/">county and municipal employment forecasts</a> for the <em>Connections 2045</em> long-range plan that were adopted by the DVRPC Board.</p><p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools to bolster job growth in an inclusive economy:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li></ul>`
         }
     },
-    'Racial Ethnic Disparities':{
+    'Racial & Ethnic Disparities':{
         file: 'racialAndEthnicDisparities.html',
         d3: [
             {

@@ -30,7 +30,7 @@ const formatInpus = (source, toggleContext) => {
         if(hasContext) {
             labels = hasContext.labels[0]
             units = hasContext.units[0]
-            xLabel = hasContext.xLabel || null
+            xLabel = hasContext.xLabel || 'Year'
         }
 
         chartName = source.dataSource[0]
@@ -38,7 +38,7 @@ const formatInpus = (source, toggleContext) => {
     // regular case w/context: determine if using double toggles or not to index the context obj
     }else if(toggleContext.context) {
         [labels, units, chartName] = toggleContext.doubleToggle > -1 ? formatContext(toggleContext.doubleToggle, true) : formatContext(toggleContext.chartNumber, false)
-        xLabel = toggleContext.context.xLabel || null
+        xLabel = toggleContext.context.xLabel || 'Year'
     
     // regular case no context: just get chartName
     }else {
@@ -62,8 +62,8 @@ const formatLabels = (y, x, margin, context) => {
         y.axisLabel(context.labels)
         margin.left += 20
 
-        // handle edge case where x-axis label isn't 'Year'
-        context.xLabel ? x.axisLabel(context.xLabel) : x.axisLabel('Year')
+        // x label defaults to year except for the two edge cases where it's different (which is handled in format Inputs)
+        x.axisLabel(context.xLabel)
     }
 }
 
