@@ -1311,7 +1311,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Median Income Gap (2017 Dollars)', 'Female Percentage of Male Median Income (2017 Dollars)'],
                     keepLabels: false,
-                    units: ['thousands', 'percent'],
+                    units: ['dollars', 'percentC'],
                     keepUnits: false
                 },
                 columnOptions: [
@@ -1342,7 +1342,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Median Income (2017 Dollars)'],
                     keepLabels: true,
-                    units: ['thousands'],
+                    units: ['dollars'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -1377,7 +1377,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Percent Participation Gap'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -1408,7 +1408,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Percent Participation'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
