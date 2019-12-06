@@ -2786,7 +2786,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Acres (Thousands)'],
                     keepLabels: true,
-                    units: ['thousands'],
+                    units: ['thousandsC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -2876,7 +2876,7 @@ const snippetsRef = {
                 dataSource: ['land_consumption_3a','land_consumption_3b'],
                 context: {
                     labels: ['Acres','Percent'],
-                    units: ['thousands','percent']
+                    units: ['thousands','percentC']
                 },
                 columnOptions: [
                     ['DVRPC- Total','NJ Suburbs- Total','PA Suburbs- Total','Core City- Total','Developed Community- Total','Growing Suburb- Total','Rural Area- Total','Bucks- Total','Burlington- Total','Camden- Total','Chester- Total','Delaware- Total','Gloucester- Total','Mercer- Total','Montgomery- Total','Philadelphia- Total'],
