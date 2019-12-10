@@ -88,19 +88,21 @@ const toggleChart = (selected, dataSets) => {
     if(toggleID.length > 2) {
         doubleToggle = chartNumber
 
-        const firstToggle = selected.parentElement.previousElementSibling.children[0]
+        const firstToggle = selected.parentElement.previousElementSibling.previousElementSibling.children[1]
 
         // grab the state of the first toggle to make sure the correct columns are being assigned to newColumns
         useFirstToggle = firstToggle.options[firstToggle.selectedIndex].value
 
     // handle possible INDIRECT interaction with the second toggle (user hasn't selected the 2nd toggle but its state still needs to be captured in case it's data set needs to be used)
     }else {
-        // get a handle on the double toggle <select> (if it exists)
-        const hasDoubleToggle = selected.parentElement.nextElementSibling || selected.parentElement.previousElementSibling
+        // check for presence of a double toggle (will have sibling fieldset and .vr span)
+        let hasDoubleToggle = selected.parentElement.nextElementSibling || selected.parentElement.previousElementSibling
 
         // if the chart has a double toggle, get the value of the 2nd toggle to pass on to viz.js functions to determine which data csv to use
         if(hasDoubleToggle){
-            const doubleToggleSelect = hasDoubleToggle.children[0]
+            // get a hold on the select (skip the .vr span)
+            hasDoubleToggle = hasDoubleToggle.nextElementSibling || hasDoubleToggle.previousElementSibling
+            const doubleToggleSelect = hasDoubleToggle.children[1]
             doubleToggle = parseInt(doubleToggleSelect.options[doubleToggleSelect.selectedIndex].value)
         }
     }
