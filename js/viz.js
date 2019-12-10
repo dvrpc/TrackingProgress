@@ -74,7 +74,7 @@ const axisFormats = {
     'singles': '.3n',
     'thousands': ',.0f',
     'thousandsC': ',3r',
-    'dollars': '^$,3'
+    'dollars': '$,3'
 }
 
 const createStackedBarChart = (source, toggleContext) => {

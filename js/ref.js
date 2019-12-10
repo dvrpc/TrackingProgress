@@ -473,21 +473,22 @@ const snippetsRef = {
                     },
                     {
                         'key': 'Mexican',
-                        color: '#ff7f0e',
+                        color: '#aec7e8',
                         columns: ['year', 'Mexican']
                     },
                     {
                         'key': 'Canadian',
-                        color: '#2ca02c',
+                        color: '#ff7f0e',
                         columns: ['year', 'Canadian']
                     },
                     {
                         'key': 'Caribbean',
-                        color: '#d62728',
+                        color: '#2ca02c',
                         columns: ['year', 'Caribbean']
                     },
                     {
                         'key': 'European',
+                        color: '#d62728',
                         columns: ['year', 'European']
                     }
                 ]
