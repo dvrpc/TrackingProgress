@@ -464,16 +464,18 @@ summary:hover{
 }
 .toggle-vr {
     color: #141414;
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-weight: 200;
     margin: 0 2%;
 }
 .toggle-wrapper{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 1%;
 }
 .toggle-wrapper p{
     margin: 0 2% 0 0;
@@ -481,6 +483,9 @@ summary:hover{
 }
 .double-toggle-form{
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .chart-src{
     display: block;
