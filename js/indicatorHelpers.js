@@ -143,7 +143,7 @@ const toggleChart = (selected, dataSets) => {
 
     // get label and units context where applicable
     const context = source.context
-    let toggleContext
+    let toggleContext;
     toggleContext = context ? { doubleToggle, context, chartNumber } : { doubleToggle }
 
     // switch case to determine which kind of vis to make and which dataset to reference

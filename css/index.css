@@ -19,6 +19,10 @@ body{
     opacity: 0.5;
     cursor: auto;
 }
+.sm{
+    font-size: 0.9em;
+    color: #bd2556;
+}
 
 
 /************************************/
@@ -68,7 +72,7 @@ header{
     align-items: center;
 }
 #tp-logo{
-    max-height: 95%;
+    max-height: 50px;
 }
 #help-btn{
     margin-left: 30px;
@@ -297,8 +301,8 @@ summary:hover{
 }
 #connections-icon{
     display: block;
-    width: 85%;
-    margin: 30% auto 0;
+    width: 71%;
+    margin: 15% auto 0 auto;
 }
 .indicators-title{
     display: flex;
@@ -400,6 +404,8 @@ summary:hover{
     margin: 0;
     padding: 2% 5px;
     font-size: 1.2em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .description-wrapper-tab-headers:hover{
     cursor: pointer;
@@ -416,13 +422,21 @@ summary:hover{
     padding: 3% 5%;
 }
 .back-to-dash{
-    color: #222;
     display: none;
-    width: 100%;
+    color: #4fa3a8;
+    background: #fff;
+    border: none;
+    /* with border case:
+    border-radius: 5px;
+    width: 80%;
+    padding: 9px 0;
+    margin: 10px auto 
+     */
+    width: 85%;
     text-align: center;
-    padding: 17px 0;
-    margin: 0;
-    font-size: 1.4em;
+    padding: 10px 0;
+    margin: 11px auto;
+    font-size: 1.3em;
     cursor: pointer;
 }
 .related-indicators{
@@ -436,7 +450,6 @@ summary:hover{
     font-size: 0.9em;
     margin: 0;
     padding: 10px 4px;
-    /* @TODO: ideally get height to  align w/tabs bottom */
 }
 #related-indicators-subheader{
     margin: 0;
@@ -632,10 +645,13 @@ footer{
         padding: 3px 10px;
     }
     #tp-logo{
-        height: 42px;
+        height: 37px;
     }
 
     /* Mobile styles for the splash page */
+    #splash-page{
+        padding: 4% 3%;
+    }
     #tp-header{
         font-size: 1.2rem;
     }
@@ -665,9 +681,9 @@ footer{
     /* Mobile styles for the dashboard page */
     .indicators-wrapper{
         flex-direction: column;
+        border-top: 4px solid white;
     }
     .indicators-nav{
-        height: 11vh;
         background: white;
         position: sticky;
         top: 8vh;
@@ -688,9 +704,10 @@ footer{
         font-size: 0.8em;
     }
     .icon-set{
-        height: 100%;
+        height: 10vh;
         width: calc(20% - 3px);
-        margin-right: 4px
+        margin-right: 4px;
+        margin-bottom: 4px;
     }
     .icon-set-img{
         width: 55px;
@@ -705,7 +722,7 @@ footer{
     }
     .indicators-nav div:last-child{
         margin-right: 0;
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
     .category-active:not(:last-child){
         margin-right: 4px !important;
@@ -734,16 +751,15 @@ footer{
     }
     .back-to-dash{
         width: auto;
-        padding: 0 2vw 0 1vw;
+        padding: 0 2px;
         border-right: 1px solid white;
-        font-size: 1em;
+        font-size: 0.9em;
     }
     .related-indicators{
         border-top: none;
         flex-direction: row !important;
         justify-content: flex-start;
         align-items: center;
-        padding: 1vh 0;
         overflow-x: auto;
     }
     #related-indicators-img{
@@ -752,16 +768,16 @@ footer{
         width: 15px;
     }
     #related-indicators-subheader-wrapper{
-        padding: 0 5px;
+        padding: 0 9px;
     }
     #related-indicators-subheader-wrapper img{
-        height: 28px;
+        height: 26px;
         margin-top: 2px;
     }
     #related-indicators-subheader{
         font-size: 0.8em;
         font-weight: 500;
-        margin: 2px 0 0 0;
+        padding-bottom: 2px;
     }
     .sideLink{
         padding: 0 2vw;
@@ -772,9 +788,9 @@ footer{
         padding: 7% 3% 4% 3%;
     }
     #indicator-header-wrapper{
-        padding-bottom: 7%;
         justify-content: space-between;
-        max-width: 95%;
+        max-width: none;
+        width: 100%;
     }
     .indicator-header{
         font-size: 1.4em;
@@ -785,7 +801,7 @@ footer{
         font-size: 1.1em;
     }
     .snippet-categories{
-        height: 33px;
+        height: 30px;
     }
     #description-wrapper{
         width: 100%;
@@ -808,8 +824,11 @@ footer{
     .data-viz{
         min-height: 300px;
         max-height: 400px;
-        width: 95%;
+        width: 100%;
         margin-top: 5%;
+    }
+    .chart-src{
+        width: auto;
     }
     .nv-legendWrap{
         width: 95vw !important;

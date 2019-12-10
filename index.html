@@ -35,9 +35,8 @@
 
     <section id="splash-page">
         <h1 id="tp-header"><span id="tp-header-name">Tracking Progress</span> Indicators Dashboard</h1>
-        <p class="splash-text"><em>Tracking Progress</em> is an interactive dashboard for exploring regularly updated data to gauge the region's progress towards long-range plan goals. Regional indicator data are used to better understand where the region is at the start of each plan update, identify successful programs, and align DVRPC's planning and implementation activities to serve as a guide for regional strategies. You may be interested in these data for any number of reasons. Here's how to get started..</p>
+        <p class="splash-text"><em>Tracking Progress</em> is an interactive dashboard for exploring regularly updated data to gauge the region's progress toward long-range plan goals. Regional indicator data is used to better understand where the region is at the start of each plan update, identify successful programs, and align DVRPC's planning and implementation activities to serve as a guide for regional strategies. You may be interested in this data for any number of reasons. Here's how to get started...</p>
         
-        <!-- HTML5 video (i.e. performant gifs) section mockup -->
         <details class="info-toggle">
             <summary role="button" id="dashSummary">Exploring the Dashboard</summary> 
             <div class="gif-row">
@@ -75,8 +74,8 @@
         </details>
 
         <details>
-            <summary role="button">Exploring the Data</summary>
-            <p class="splash-text"><em>Tracking Progress</em> uses sub-regional geographies to further analyze what drives regional trends and provide data relevant to our communities and planning partners. "NJ Counties" (Burlington, Camden, Gloucester, and Mercer counties) and "PA Suburban Counties" (Bucks, Chester, Delaware, and Montgomery counties) are used as aggregations to pair with "Philadelphia" to draw coarse comparisons of the region's core city and its surrounding counties on either side of the river. Some charts also group "All PA Counties" into one dataset. Many indicators offer individual county trends. Additionally charts may group data by Planning Areas—a coarse typology of the region's municipalities into four classifications: Core City, Developed Communities, Growing Suburbs, and Rural. While these may be useful groupings, there are local nuances within any subgeography that can't always be accounted for.</p>
+            <summary role="button">Exploring Geographic Levels</summary>
+            <p class="splash-text"><em>Tracking Progress</em> uses sub-regional geographies to further analyze what drives regional trends and provide data relevant to our communities and planning partners. "NJ Counties" (Burlington, Camden, Gloucester, and Mercer counties) and "PA Suburban Counties" (Bucks, Chester, Delaware, and Montgomery counties) are used as aggregations to pair with "Philadelphia" to draw coarse comparisons of the region's core city and its surrounding counties on either side of the river. Some charts also group "All PA Counties" into one dataset. Many indicators offer individual county trends. Additionally charts may group data by <a href="./pdf/Planning_Areas_2045.pdf">Planning Areas</a><span class="sm"> [2.6 MB pdf]</span> — a coarse typology of the region's municipalities into four classifications: Core City, Developed Communities, Growing Suburbs, and Rural. While these may be useful groupings, there are local nuances within any subgeography that can't always be accounted for.</p>
         </details>
 
         <button id="to-grid">To Dashboard</button>
@@ -84,7 +83,7 @@
 
     <div class="indicators-wrapper" id="dashboard">
         <nav class="indicators-nav" role="navigation">
-            <h2 class="back-to-dash">Home</h2>
+            <button class="back-to-dash">&larr; Dashboard</button>
             <div class="related-indicators"></div>
             <div id="econo-icon" class="icon-set">
                 <img src="./img/econo-icon.png" alt="economy icon" class="icon-set-img"/>
@@ -178,15 +177,15 @@
                 <p class="indicators-title">Housing Affordability</p>
                 <div class="flipside">
                     <img src="./img/emoji-neutral.png" class="flipside-img" alt="4.2% fewer cost burdened households" />
-                    <p class="flipside-text"><strong>4.2% fewer</strong><br />cost burdened households</p>
+                    <p class="flipside-text"><strong>4.2% fewer</strong><br />cost-burdened households</p>
                 </div>
             </div>
             <div data-primary="equity" data-categories="equity econo comm" class="indicators-grid-item" id="Income Disparities" role="button" tabindex="0">
                 <img src="./img/indicator_icons/income_inequality.png" class="indicators-icons" alt="Income Disparities icon" />
                 <p class="indicators-title">Income Disparities</p>
                 <div class="flipside">
-                    <img src="./img/emoji-bad.png" class="flipside-img" alt="25.6% gap in income growth high to low households" />
-                    <p class="flipside-text"><strong>25.6% gap</strong><br />in income growth: high &amp; low households</p>
+                    <img src="./img/emoji-bad.png" class="flipside-img" alt="25% gap in income growth high to low households" />
+                    <p class="flipside-text"><strong>25% gap</strong><br />in income growth: high &amp; low households</p>
                 </div>
             </div>
             <div data-primary="econo" data-categories="econo" class="indicators-grid-item" id="Innovation" role="button" tabindex="0">
@@ -237,9 +236,9 @@
                     <p class="flipside-text"><strong>6.5% increase</strong><br />in population</p>
                 </div>
             </div>
-            <div data-primary="equity" data-categories="equity comm econo" class="indicators-grid-item" id="Racial Ethnic Disparities" role="button" tabindex="0">
+            <div data-primary="equity" data-categories="equity comm econo" class="indicators-grid-item" id="Racial & Ethnic Disparities" role="button" tabindex="0">
                 <img src="./img/indicator_icons/racial_disparities.png" class="indicators-icons " alt="Racial Ethnic Disparities icon"/>
-                <p class="indicators-title">Racial Ethnic Disparities</p>
+                <p class="indicators-title">Racial &amp; Ethnic Disparities</p>
                 <div class="flipside">
                     <img src="./img/emoji-neutral.png" class="flipside-img" alt="6.8% income gap drop in People of Color vs. White" />
                     <p class="flipside-text"><strong>6.8% income gap drop</strong><br />in People of Color vs. White</p>
@@ -294,7 +293,7 @@
                 </div>
             </div>
             <div data-categories="enviro comm equity econo transpo" class="indicators-grid-item" role="button" tabindex="0">
-                <img src="./img/indicator_icons/connections-faded.png" id="connections-icon" alt="Connections 2045 Logo"/>
+                <img src="./img/indicator_icons/tp_homepage_logo.png" id="connections-icon" alt="Connections 2045 Logo"/>
                 <span></span>
                 <div class="flipside">
                     <a target="blank" rel="external" href="/Connections2045/" class="flispside text"><strong>Connections 2045</strong><br /> Click to explore DVRPC's Long-Range Plan</a>

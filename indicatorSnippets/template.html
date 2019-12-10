@@ -13,9 +13,9 @@
 
     <section id="description-wrapper">
         <div id="description-wrapper-tabs">
-            <h2 id="why-tab" class="description-wrapper-tab-headers active-tab">Why is it Important?</h2>
+            <h2 id="why-tab" class="description-wrapper-tab-headers active-tab">Why is it important?</h2>
             <h2 id="what-tab" class="description-tab-middle description-wrapper-tab-headers">What is it?</h2>
-            <h2 id="how-tab" class="description-wrapper-tab-headers">How Are We Doing?</h2>
+            <h2 id="how-tab" class="description-wrapper-tab-headers">How are we doing?</h2>
             <h2 id="resource-tab" class="description-wrapper-tab-headers">Resources</h2>
         </div>
         <div id="indicator-description-container" data-primary=""></div>
@@ -31,23 +31,53 @@
         <form>
             <fieldset>
                 <select id="viz-0" class="toggle-data-selector">
-                    <optgroup label="Region">
+                    <optgroup label="Regional">
+                        <option value="0">DVRPC Region</option>
+                        <option value="1">All PA Counties</option>
+                        <option value="2">PA Suburban Counties</option>
+                        <option value="3">NJ Counties</option>
+                    </optgroup>
+                    <optgroup label="Planning Areas">
+                        <option value="4">Core City</option>
+                        <option value="5">Developed Community</option>
+                        <option value="6">Growing Suburb</option>
+                        <option value="7">Rural Area</option>
+                    </optgroup>
+                    <optgroup label="Counties">
+                        <option value="8">Bucks</option>
+                        <option value="9">Burlington</option>
+                        <option value="10">Camden</option>
+                        <option value="11">Chester</option>
+                        <option value="12">Delaware</option>
+                        <option value="13">Gloucester</option>
+                        <option value="14">Mercer</option>
+                        <option value="15">Montgomery</option>
+                        <option value="16">Philadelphia</option>
+                    </optgroup>
+                    <!-- Planning areas but without All PA Counties
+                        <optgroup label="Regional">
                             <option value="0">DVRPC Region</option>
-                            <option value="1">Philadelphia Subregion</option>
-                            <option value="2">New Jersey Subregion</option>
-                            <option value="3">PA Subregion</option>
-                    </optgroup>
-                    <optgroup label="County">
-                        <option value="4">Bucks</option>
-                        <option value="5">Burlington</option>
-                        <option value="6">Camden</option>
-                        <option value="7">Chester</option>
-                        <option value="8">Delaware</option>
-                        <option value="9">Gloucester</option>
-                        <option value="10">Mercer</option>
-                        <option value="11">Montgomery</option>
-                        <option value="12">Philadelphia</option>
-                    </optgroup>
+                            <option value="1">PA Suburban Counties</option>
+                            <option value="2">NJ Counties</option>
+                        </optgroup>
+                        <optgroup label="Planning Areas">
+                            <option value="3">Core City</option>
+                            <option value="4">Developed Community</option>
+                            <option value="5">Growing Suburb</option>
+                            <option value="6">Rural Area</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="7">Bucks</option>
+                            <option value="8">Burlington</option>
+                            <option value="9">Camden</option>
+                            <option value="10">Chester</option>
+                            <option value="11">Delaware</option>
+                            <option value="12">Gloucester</option>
+                            <option value="13">Mercer</option>
+                            <option value="14">Montgomery</option>
+                            <option value="15">Philadelphia</option>
+                        </optgroup>
+                     -->
                 </select>
             </fieldset>
         </form>
@@ -67,23 +97,43 @@
         <form class="double-toggle-form">
             <fieldset>
                 <select id="viz-1" class="toggle-data-selector">
-                    <optgroup label="Region">
+                    <optgroup label="Regional">
                         <option value="0">DVRPC Region</option>
-                        <option value="1">PA Suburban Counties</option>
-                        <option value="2">PA Counties</option>
+                        <option value="1">All PA Counties</option>
+                        <option value="2">PA Suburban Counties</option>
                         <option value="3">NJ Counties</option>
                     </optgroup>
-                    <optgroup label="County">
+                    <optgroup label="Counties">
                         <option value="4">Bucks</option>
-                        <option value="5">Chester</option>
-                        <option value="6">Delaware</option>
-                        <option value="7">Montgomery</option>
-                        <option value="8">Burlington</option>
-                        <option value="9">Camden</option>
-                        <option value="10">Gloucester</option>
-                        <option value="11">Mercer</option>
+                        <option value="5">Burlington</option>
+                        <option value="6">Camden</option>
+                        <option value="7">Chester</option>
+                        <option value="8">Delaware</option>
+                        <option value="9">Gloucester</option>
+                        <option value="10">Mercer</option>
+                        <option value="11">Montgomery</option>
                         <option value="12">Philadelphia</option>
                     </optgroup>
+                    <!--  Cases w/o planning counties and All PA counties 
+
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">PA Suburban Counties</option>
+                            <option value="2">NJ Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+
+                     -->
                 </select>
             </fieldset>
             <fieldset>

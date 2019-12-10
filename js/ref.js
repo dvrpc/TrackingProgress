@@ -17,7 +17,7 @@ const snippetsRef = {
                 data: [
                     {
                         'key' : 'Annual',
-                        'color': '#f03b20',
+                        'color': '#9e1a1a',
                         'columns': ['year', 'daysViolating'],
                         type: 'bar',
                         bar: true
@@ -37,7 +37,9 @@ const snippetsRef = {
                 context: {
                     labels: ['Days'],
                     keepLabels: true,
-                    units: false
+                    units: ['thousands'],
+                    keepUnits: true,
+                    xLabel: 'Quarter'
                 },
                 columnOptions: [
                     ['Unhealthy Sensitive Ozone', 'Unhealthy Ozone', 'Very Unhealthy Ozone'],
@@ -48,17 +50,17 @@ const snippetsRef = {
                 data: [
                     {
                         'key' : 'Unhealthy for Sensitive Groups',
-                        'color': '#de425b',
+                        'color': '#ff8e38',
                         'columns': ['quarterYear', 'Unhealthy Sensitive Ozone'],
                     },
                     {
                         'key': 'Unhealthy',
-                        'color': '#b62a38',
+                        'color': '#ffd500',
                         'columns': ['quarterYear', 'Unhealthy Ozone'],
                     },
                     {
                         'key': 'Very Unhealthy',
-                        'color': '#750000',
+                        'color': '#9e1a1a',
                         'columns': ['quarterYear', 'Very Unhealthy Ozone'],
                     }
                 ]
@@ -66,13 +68,13 @@ const snippetsRef = {
         ],
         text: {
             why: `<p>The U.S. Environmental Protection Agency has developed air quality standards for six "criteria" pollutants. Of these six pollutants, the DVRPC has a history of violating the standards for two of those pollutants - ground-level ozone and fine particulate matter (PM<sub>2.5</sub> ). These pollutants have been shown to impede healthy lung development in children and exacerbate breathing disorders in the general population and especially in the elderly. Additionally, exposure to PM<sub>2.5</sub> can aggravate heart conditions. In addition to higher costs for households and the healthcare system, poor air quality's economic implications include more days of missed work and school.</p><p>Air pollution has been shown to have disproportionate effects on persons of color and low income populations. Recent data shows that in our region people of color are 22 percent more likely to be exposed to cancer and non-cancer causing air pollutants than whites. Relative to whites living above the federal poverty level, whites below poverty level had a 19 percent greater risk of exposure and people of color below poverty level had a 32 percent greater risk.</p>`,
-            what: `<p>The DVPRC region currently does not meet federal air quality standards for ground-level ozone and recently did not meet the standards for PM<sub>2.5</sub>.  In order to maintain and improve air quality in the region, the Clean Air Act requires that DVRPC demonstrate that transportation projects included in the Long-range Plan and Transportation Improvement Programs will not worsen air quality or cause future violations of the air quality standards.</p><p>In order to convey the health impacts of air pollution to the general public, the US EPA has created a color-coded scale to identify pollutant levels in simple terms. This scale is referred to as the Air Quality Index (AQI).  AQI levels are directly related to the federal air quality standards and pollutant concentrations in the air. The AQI reports pollutant levels for six different categories based on AQI: Good or green (0 to 50), Moderate or yellow (51 to 100), Unhealthy for Sensitive Groups or orange (101 to 150), Unhealthy or red (151 to 200), Very Unhealthy or purple (201 to 300). <em>Sensitive groups</em> are defined as children, older adults, and those with breathing impairments. When the AQI reaches Code Orange or higher for any of the pollutants, an air quality standard violation has occurred.</p><p>Air quality standards have been revised a number of times since 1997 and the data in these charts is normalized to the current standard.</p><p>The first chart shows the number of days violating air quality standards per year since 2000, along with a five year rolling average, based on the Philadelphia-Camden-Wilmington core based statistical area.</p><p>The second chart shows the number of days per year in each violating category (Unhealthy for Sensitive Populations, Unhealthy, Very Unhealthy, and Hazardous) for both Ozone and PM<sub>2.5</sub>.</p>`,
+            what: `<p>The DVRPC region currently does not meet federal air quality standards for ground-level ozone and recently did not meet the standards for PM<sub>2.5</sub>.  In order to maintain and improve air quality in the region, the Clean Air Act requires that DVRPC demonstrate that transportation projects included in the Long-range Plan and Transportation Improvement Programs will not worsen air quality or cause future violations of the air quality standards.</p><p>In order to convey the health impacts of air pollution to the general public, the US EPA has created a color-coded scale to identify pollutant levels in simple terms. This scale is referred to as the Air Quality Index (AQI).  AQI levels are directly related to the federal air quality standards and pollutant concentrations in the air. The AQI reports pollutant levels for six different categories based on AQI: Good or green (0 to 50), Moderate or yellow (51 to 100), Unhealthy for Sensitive Groups or orange (101 to 150), Unhealthy or red (151 to 200), Very Unhealthy or purple (201 to 300). <em>Sensitive groups</em> are defined as children, older adults, and those with breathing impairments. When the AQI reaches Code Orange or higher for any of the pollutants, an air quality standard violation has occurred.</p><p>Air quality standards have been revised a number of times since 1997 and the data in these charts is normalized to the current standard.</p><p>The first chart shows the number of days violating air quality standards per year since 2000, along with a five year rolling average, based on the Philadelphia-Camden-Wilmington core based statistical area.</p><p>The second chart shows the number of days per year in each violating category (Unhealthy for Sensitive Populations, Unhealthy, Very Unhealthy, and Hazardous) for both Ozone and PM<sub>2.5</sub>.</p>`,
             how: `<p>The latest air quality data from the Environmental Protection Agency shows the region continuing its reduction of ozone and fine particulate matter (PM<sub>2.5</sub>) pollutants. Days violating National Ambient Air Quality Standards (NAAQS) and the severity of those days have declined steadily over the past fifteen years. 2018 saw 68 fewer days per year violating standards than 2000. As seen in the first chart, from 2014 to 2018, the region has averaged just 22 days that would violate the current air quality standards in each of those historical years. Although air quality is greatly influenced by weather conditions, long-term trends show a dramatic decrease in violating days over the last two decades.</p><p>The second chart below shows that concentrations of both pollutants are decreasing in severity. For ozone, the last Very Unhealthy day occurred in 2007, and for PM<sub>2.5</sub>, it was 2008. Ozone violations are more common than PM<sub>2.5</sub> and great strides have been made to reduce PM<sub>2.5</sub> levels through regulations of power plants and diesel powered engines.</p><p>The dramatic declines in unhealthy air quality days of the past few decades show the impact federal emissions standards have had, along with greater public awareness of pollutants and ways to lessen their impact. However, we might expect future declines to slow some. Higher temperatures will increase the potential for forming ground level ozone and climate change will work counter to the progress the nation has made in improving air quality.</p>`,
             resource: `For more resources on air quality and ways DVRPC is working with its partners to combat it, explore DVRPC's <a href="https://www.airqualitypartnership.org/" target="_blank" rel="external">Air Quality Partnership</a>.</p><p>DVRPC's Municipal Implementation Toolbox suggests the following tools for improving air quality in our region:<ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf429e8e7179a56e21377c0">Street Tree Ordinance & Management Plan</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77cbffb6fc041ab930149">GHG Reduction Targets And Climate Action Plans</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77d3efb6fc041ab930194">Alternative Energy Ordinance</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf4350be7179a56e2137f2e">Travel Demand Management</a></li></ul></p>`
         }
     },
     'Miles Driven': {
-        file: 'milesDriven.html',   
+        file: 'milesDriven.html',
         d3: [
             {
                 type: 'line',
@@ -173,7 +175,7 @@ const snippetsRef = {
                 dataSource: ['edattainHS'],
                 context: {
                     labels: ['Percentage Population Age 25 or Older'],
-                    units: ['percent']
+                    units: ['percentC']
                 },
                 data: [
                     {
@@ -182,62 +184,77 @@ const snippetsRef = {
                     },
                     {
                         'key': 'NJ Suburbs',
+                        disabled: true,
                         'columns': ['year', 'hsRateNJSuburbs']
                     },
                     {
                         'key': 'PA Suburbs',
+                        disabled: true,
                         'columns': ['year', 'hsRatePASuburbs']
                     },
                     {
                         'key': 'Core',
+                        disabled: true,
                         'columns': ['year', 'hsRateCore']
                     },
                     {
                         'key': 'Developed Communities',
+                        disabled: true,
                         'columns': ['year', 'hsRateDeveloped']
                     },
                     {
                         'key': 'Growing Suburb',
+                        disabled: true,
                         'columns': ['year', 'hsRateGrowing']
                     },
                     {
                         'key': 'Rural Areas',
+                        disabled: true,
                         'columns': ['year', 'hsRateRural']
                     },
                     {
                         'key': 'Bucks',
+                        disabled: true,
                         'columns': ['year', 'hsRateBucksCo']
                     },
                     {
                         'key': 'Burlington',
+                        disabled: true,
                         'columns': ['year', 'hsRateBurlingtonCo']
                     },
                     {
                         'key': 'Camden',
+                        disabled: true,
                         'columns': ['year', 'hsRateCamdenCo']
                     },
                     {
                         'key': 'Chester',
+                        disabled: true,
                         'columns': ['year', 'hsRateChesterCo']
                     },
                     {
                         'key': 'Delaware',
+                        disabled: true,
                         'columns': ['year', 'hsRateDelawareCo']
                     },
                     {
                         'key': 'Gloucester',
+                        disabled: true,
                         'columns': ['year', 'hsRateGloucesterCo']
                     },
                     {
                         'key': 'Mercer',
+                        disabled: true,
                         'columns': ['year', 'hsRateMercerCo']
                     },
                     {
                         'key': 'Montgomery',
+                        disabled: true,
                         'columns': ['year', 'hsRateMontgomeryCo']
                     },
                     {
                         'key': 'Philadelphia',
+                        disabled: true,
                         'columns': ['year', 'hsRatePhiladelphiaCo']
                     }
                 ]
@@ -247,14 +264,13 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['edattainComprehensive'],
                 context: {
-                    labels: ['Population Age 25 or Older'],
+                    labels: ['Population Age 25 or Older (Thousands)'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPC-Less than High School', 'DVRPC-Some High School', 'DVRPC-Graduated High School', 'DVRPC-Some College', 'DVRPC-Associates Degree', 'DVRPC-Bachelors Degree', 'DVRPC-Graduate/Professional Degree'],
-                    ['Philadelphia Subregion-Less than High School', 'Philadelphia Subregion-Some High School', 'Philadelphia Subregion-Graduated High School', 'Philadelphia Subregion-Some College', 'Philadelphia Subregion-Associates Degree', 'Philadelphia Subregion-Bachelors Degree', 'Philadelphia Subregion-Graduate/Professional Degree'],
                     ['New Jersey Suburbs-Less than High School', 'New Jersey Suburbs-Some High School', 'New Jersey Suburbs-Graduated High School', 'New Jersey Suburbs-Some College', 'New Jersey Suburbs-Associates Degree', 'New Jersey Suburbs-Bachelors Degree', 'New Jersey Suburbs-Graduate/Professional Degree'],
                     ['Pennsylvania Suburbs-Less than High School', 'Pennsylvania Suburbs-Some High School', 'Pennsylvania Suburbs-Graduated High School', 'Pennsylvania Suburbs-Some College', 'Pennsylvania Suburbs-Associates Degree', 'Pennsylvania Suburbs-Bachelors Degree', 'Pennsylvania Suburbs-Graduate/Professional Degree'],
                     ['Core City-Less than High School', 'Core City-Some High School', 'Core City-Graduated High School', 'Core City-Some College', 'Core City-Associates Degree', 'Core City-Bachelors Degree', 'Core City-Graduate/Professional Degree'],
@@ -268,7 +284,8 @@ const snippetsRef = {
                     ['Delaware-Less than High School', 'Delaware-Some High School', 'Delaware-Graduated High School', 'Delaware-Some College', 'Delaware-Associates Degree', 'Delaware-Bachelors Degree', 'Delaware-Graduate/Professional Degree'],
                     ['Gloucester-Less than High School', 'Gloucester-Some High School', 'Gloucester-Graduated High School', 'Gloucester-Some College', 'Gloucester-Associates Degree', 'Gloucester-Bachelors Degree', 'Gloucester-Graduate/Professional Degree'],
                     ['Mercer-Less than High School', 'Mercer-Some High School', 'Mercer-Graduated High School', 'Mercer-Some College', 'Mercer-Associates Degree', 'Mercer-Bachelors Degree', 'Mercer-Graduate/Professional Degree'],
-                    ['Montgomery-Less than High School', 'Montgomery-Some High School', 'Montgomery-Graduated High School', 'Montgomery-Some College', 'Montgomery-Associates Degree', 'Montgomery-Bachelors Degree', 'Montgomery-Graduate/Professional Degree']
+                    ['Montgomery-Less than High School', 'Montgomery-Some High School', 'Montgomery-Graduated High School', 'Montgomery-Some College', 'Montgomery-Associates Degree', 'Montgomery-Bachelors Degree', 'Montgomery-Graduate/Professional Degree'],
+                    ['Philadelphia Subregion-Less than High School', 'Philadelphia Subregion-Some High School', 'Philadelphia Subregion-Graduated High School', 'Philadelphia Subregion-Some College', 'Philadelphia Subregion-Associates Degree', 'Philadelphia Subregion-Bachelors Degree', 'Philadelphia Subregion-Graduate/Professional Degree']
                 ],
                 data: [
                     {
@@ -319,8 +336,7 @@ const snippetsRef = {
                 context: {
                     labels: ['KSI Five-Year Average'],
                     keepLabels: true,
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC- ksi per capita','NJ Suburbs- ksi per capita','PA Suburbs- ksi per capita','Bucks- ksi per capita','Burlington- ksi per capita','Camden- ksi per capita','Chester- ksi per capita','Delaware- ksi per capita','Gloucester- ksi per capita','Mercer- ksi per capita','Montgomery- ksi per capita','Philadelphia- ksi per capita'],
@@ -329,51 +345,62 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region',
                         'columns': ['year', 'DVRPC- ksi per capita']
                     },
                     {
                         'key': 'NJ Suburbs',
+                        disabled: true,
                         'columns': ['year', 'NJ Suburbs- ksi per capita']
                     },
                     {
                         'key': 'PA Suburbs',
+                        disabled: true,
                         'columns': ['year', 'PA Suburbs- ksi per capita']
                     },
                     {
                         'key': 'Bucks',
+                        disabled: true,
                         'columns': ['year', 'Bucks- ksi per capita']
                     },
                     {
                         'key': 'Burlington',
+                        disabled: true,
                         'columns': ['year', 'Burlington- ksi per capita']
                     },
                     {
                         'key': 'Camden',
+                        disabled: true,
                         'columns': ['year', 'Camden- ksi per capita']
                     },
                     {
                         'key': 'Chester',
+                        disabled: true,
                         'columns': ['year', 'Chester- ksi per capita']
                     },
                     {
                         'key': 'Delaware',
+                        disabled: true,
                         'columns': ['year', 'Delaware- ksi per capita']
                     },
                     {
                         'key': 'Gloucester',
+                        disabled: true,
                         'columns': ['year', 'Gloucester- ksi per capita']
                     },
                     {
                         'key': 'Mercer',
+                        disabled: true,
                         'columns': ['year', 'Mercer- ksi per capita']
                     },
                     {
                         'key': 'Montgomery',
+                        disabled: true,
                         'columns': ['year', 'Montgomery- ksi per capita']
                     },
                     {
                         'key': 'Philadelphia',
+                        disabled: true,
                         'columns': ['year', 'Philadelphia- ksi per capita']
                     }
                 ]
@@ -385,13 +412,12 @@ const snippetsRef = {
                 context: {
                     labels: ['KSI Per 100,000 People', 'KSI Total', 'KSI Per 100 Million VMT'],
                     keepLabels: false,
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC- ksiBikePed', 'DVRPC- ksiMotorVehicle'],
-                    ['NJ Suburbs- ksiBikePed', 'NJ Suburbs- ksiMotorVehicle'],
                     ['PA Suburbs- ksiBikePed', 'PA Suburbs- ksiMotorVehicle'],
+                    ['NJ Suburbs- ksiBikePed', 'NJ Suburbs- ksiMotorVehicle'],
                     ['Bucks- ksiBikePed', 'Bucks- ksiMotorVehicle'],
                     ['Burlington- ksiBikePed', 'Burlington- ksiMotorVehicle'],
                     ['Camden- ksiBikePed', 'Camden- ksiMotorVehicle'],
@@ -400,7 +426,7 @@ const snippetsRef = {
                     ['Gloucester- ksiBikePed', 'Gloucester- ksiMotorVehicle'],
                     ['Mercer- ksiBikePed', 'Mercer- ksiMotorVehicle'],
                     ['Montgomery- ksiBikePed', 'Montgomery- ksiMotorVehicle'],
-                    ['Philadelphia- ksiBikePed', 'Philadelphia- ksiMotorVehicle'],
+                    ['Philadelphia- ksiBikePed', 'Philadelphia- ksiMotorVehicle']
                 ],
                 data: [
                     {
@@ -431,7 +457,8 @@ const snippetsRef = {
                 context: {
                     labels: ['Flights'],
                     keepLabels: true,
-                    units: false
+                    units: ['thousands'],
+                    keepUnits: true
                 },
                 columnOptions: [
                     ['Middle Eastern', 'Mexican', 'Canadian', 'Caribbean', 'European'],
@@ -441,22 +468,27 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'Middle Eastern',
+                        color: '#1f77b4',
                         columns: ['year', 'Middle Eastern']
                     },
                     {
                         'key': 'Mexican',
+                        color: '#aec7e8',
                         columns: ['year', 'Mexican']
                     },
                     {
                         'key': 'Canadian',
+                        color: '#ff7f0e',
                         columns: ['year', 'Canadian']
                     },
                     {
                         'key': 'Caribbean',
+                        color: '#2ca02c',
                         columns: ['year', 'Caribbean']
                     },
                     {
                         'key': 'European',
+                        color: '#d62728',
                         columns: ['year', 'European']
                     }
                 ]
@@ -466,22 +498,7 @@ const snippetsRef = {
             why: `<p>International flight offerings from Philadelphia International Airport (PHL) indicate how connected our region is to the rest of the world through commerce and leisure activities. Each day, flights from international destinations bring global business travelers to meetings that maintain and expand business opportunities in our region, along with visitors that boost the region's travel and tourism industry. The growth of direct flights to and from international destinations connects more markets to the region, and the region's market to the globe.</p>`,
             what: `<p>The number of PHL direct flight destinations are available for each year since 2009. The chart can toggle between displaying all flights by general geographic region to distinguishing between which flights are seasonal and which are year-round.</p>`,
             how: `<p>In 2019, the number of direct international destinations from PHL has rebounded back to 2009 levels (40 destinations). The drop in destinations after 2009 was most likely affected by the Great Recession which caused many companies and families to curtail international travel and the airline industry responded by reducing destinations. In 2011 destinations were down to 34 but picked up to 38 by 2014 with an increased number of flights to the Caribbean. Still destinations dropped further in subsequent years to 33 in 2017, but increased by one in 2018 and then by six in 2019.</p><p>This fluctuation in international destinations is not uncommon for the airline industry as airlines add and remove flights to accommodate their entire national and international network. Following the American Airlines and US Airways merger in 2013, one might have expected a greater drop in international destinations as PHLs future position as an American Airlines hub came into question. Instead, over the following years there was a shift as American chose to keep more of their European capital destinations with connectivity out of New York, but has grown their connections to second-tier cities from PHL. In 2018 American added flights to Budapest, Prague, Zurich and in 2019 flights to Halifax, Dubrovnik, Bologna, and Berlin.</p><p>Europe remains the top flight destination, with 23 destinations in 2019. The Carribean (10), Canada (4), Mexico (2) and the Middle East (1) make up less than half the 2019 destinations. Year-round destinations made up 65% of total flights in 2009. They peaked in 2014 at 74% but have since dropped to just 50% in 2019.</p><p>While total destinations have rebounded, the number of seasonal flights may point to a stronger focus on leisure travel from PHL relative to business travel. Without a diversity of consistent, year-round destinations, it is harder for businesses in the region to connect to international markets and for businesses abroad to connect with us.</p>`,
-            resource: `
-                <p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> (MIT) suggests the following tools to attract, retain, and grow business opportunities in the region for those with global connections:</p>
-                <ul>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42edbe7179a56e2137b04">Economic Development Task Force</a></li>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42f68e7179a56e2137b5f">Broadband (Universal Access) Multi-Municipal Comprehensive Plans</a></li>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb7796efb6fc041ab92fe9b">Streamlined Permitting Processes</a></li>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5c92fe3de7179a0e408a2332">Multi-municipal Comprehensive Plan</a></li>
-                </ul>
-                <p>The MIT suggests the following tools to augment the attractiveness of regional destinations and ways foreign travelers and others can access them:</p>
-                <ul>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb8d9c7e7179a264cf2c447">Tourism Improvement District (TID)</a></li>
-                    <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf43468e7179a56e2137e9b">Multi-Modal Transportation Hubs and Connections</a></li>
-                </ul>
-                <p>Successfully implemented economic development strategies and others found in DVRPC's <a href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a> may help make the case for increasing international connections at our airport hub.</p>
-            `
+            resource: `<p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> (MIT) suggests the following tools to attract, retain, and grow business opportunities in the region for those with global connections:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42edbe7179a56e2137b04">Economic Development Task Force</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42f68e7179a56e2137b5f">Broadband (Universal Access) Multi-Municipal Comprehensive Plans</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb7796efb6fc041ab92fe9b">Streamlined Permitting Processes</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5c92fe3de7179a0e408a2332">Multi-municipal Comprehensive Plan</a></li></ul><p>The MIT suggests the following tools to augment the attractiveness of regional destinations and ways foreign travelers and others can access them:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb8d9c7e7179a264cf2c447">Tourism Improvement District (TID)</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf43468e7179a56e2137e9b">Multi-Modal Transportation Hubs and Connections</a></li></ul><p>Successfully implemented economic development strategies and others found in DVRPC's <a href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a> may help make the case for increasing international connections at our airport hub.</p>`
         }
     },
     'Housing Activity': {
@@ -494,7 +511,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Percentage'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -520,14 +537,14 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- Core City', 'DVRPC- Developed Community', 'DVRPC- Growing Suburb', 'DVRPC- Rural Area'],
-                    ['Chester County- Core City', 'Chester County- Developed Community', 'Chester County- Growing Suburb', 'Chester County- Rural Area'],
-                    ['Delaware County- Core City', 'Delaware County- Developed Community', 'Delaware County- Growing Suburb', 'Delaware County- Rural Area'],
-                    ['Montgomery County- Core City', 'Montgomery County- Developed Community', 'Montgomery County- Growing Suburb', 'Montgomery County- Rural Area'],
+                    ['Bucks County- Core City', 'Bucks County- Developed Community', 'Bucks County- Growing Suburb', 'Bucks County- Rural Area'],
                     ['Burlington County- Core City', 'Burlington County- Developed Community', 'Burlington County- Growing Suburb', 'Burlington County- Rural Area'],
                     ['Camden County- Core City', 'Camden County- Developed Community', 'Camden County- Growing Suburb', 'Camden County- Rural Area'],
+                    ['Chester County- Core City', 'Chester County- Developed Community', 'Chester County- Growing Suburb', 'Chester County- Rural Area'],
+                    ['Delaware County- Core City', 'Delaware County- Developed Community', 'Delaware County- Growing Suburb', 'Delaware County- Rural Area'],
                     ['Gloucester County- Core City', 'Gloucester County- Developed Community', 'Gloucester County- Growing Suburb', 'Gloucester County- Rural Area'],
                     ['Mercer County- Core City', 'Mercer County- Developed Community', 'Mercer County- Growing Suburb', 'Mercer County- Rural Area'],
-                    ['Bucks County- Core City', 'Bucks County- Developed Community', 'Bucks County- Growing Suburb', 'Bucks County- Rural Area'],
+                    ['Montgomery County- Core City', 'Montgomery County- Developed Community', 'Montgomery County- Growing Suburb', 'Montgomery County- Rural Area'],
                     ['Philadelphia County- Core City', 'Philadelphia County- Developed Community', 'Philadelphia County- Growing Suburb', 'Philadelphia County- Rural Area']
                 ],
                 data: [
@@ -561,22 +578,21 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- large multi-family', 'DVRPC- small multi-family', 'DVRPC- single family'],
+                    ['New Jersey Suburbs- large multi-family', 'New Jersey Suburbs- small multi-family', 'New Jersey Suburbs- single family'],
+                    ['Pennsylvania Suburbs- large multi-family', 'Pennsylvania Suburbs- small multi-family', 'Pennsylvania Suburbs- single family'],
                     ['Core City- large multi-family', 'Core City- small multi-family', 'Core City- single family'],
                     ['Developed Community- large multi-family', 'Developed Community- small multi-family', 'Developed Community- single family'],
                     ['Growing Suburb- large multi-family', 'Growing Suburb- small multi-family', 'Growing Suburb- single family'],
                     ['Rural Area- large multi-family', 'Rural Area- small multi-family', 'Rural Area- single family'],
-                    ['Chester County- large multi-family', 'Chester County- small multi-family', 'Chester County- single family'],
-                    ['Delaware County- large multi-family', 'Delaware County- small multi-family', 'Delaware County- single family'],
-                    ['Montgomery County- large multi-family', 'Montgomery County- small multi-family', 'Montgomery County- single family'],
+                    ['Bucks County- large multi-family', 'Bucks County- small multi-family', 'Bucks County- single family'],
                     ['Burlington County- large multi-family', 'Burlington County- small multi-family', 'Burlington County- single family'],
                     ['Camden County- large multi-family', 'Camden County- small multi-family', 'Camden County- single family'],
+                    ['Chester County- large multi-family', 'Chester County- small multi-family', 'Chester County- single family'],
+                    ['Delaware County- large multi-family', 'Delaware County- small multi-family', 'Delaware County- single family'],
                     ['Gloucester County- large multi-family', 'Gloucester County- small multi-family', 'Gloucester County- single family'],
                     ['Mercer County- large multi-family', 'Mercer County- small multi-family', 'Mercer County- single family'],
-                    ['Bucks County- large multi-family', 'Bucks County- small multi-family', 'Bucks County- single family'],
-                    ['Philadelphia County- large multi-family', 'Philadelphia County- small multi-family', 'Philadelphia County- single family'],
-                    ['New Jersey Suburbs- large multi-family', 'New Jersey Suburbs- small multi-family', 'New Jersey Suburbs- single family'],
-                    ['Pennsylvania Suburbs- large multi-family', 'Pennsylvania Suburbs- small multi-family', 'Pennsylvania Suburbs- single family'],
-                    ['Philadelphia Subregion- large multi-family', 'Philadelphia Subregion- small multi-family', 'Philadelphia Subregion- single family']
+                    ['Montgomery County- large multi-family', 'Montgomery County- small multi-family', 'Montgomery County- single family'],
+                    ['Philadelphia County- large multi-family', 'Philadelphia County- small multi-family', 'Philadelphia County- single family']
                 ],
                 data: [
                     {
@@ -598,18 +614,7 @@ const snippetsRef = {
             why: `<p>Residential construction activity can indicate the health of the region's real estate sector and general desirability, and where that construction occurs can also indicate if we are growing in a sustainable manner. The long-range plan seeks growth in appropriate areas for development—where transportation and utility infrastructure can support new development and won't come at the expense of natural habitats and resources.</p>`,
             what: `<p>Residential construction activity data is derived from current reports and publications compiled by the U.S. Census Bureau's Residential Construction Statistics Division. Municipalities provide the Census Bureau with tabulations of the number of housing units authorized, according to types of structures. In the few cases where municipalities reported building permit activity for some months but not for all 12 months, the Census Bureau estimates the total yearly number of building permits based on past building permit activity.</p><p>The first chart looks at whether residential development activity is happening in desired areas. "Desired areas" is defined using DVRPC's planning areas: Core City, Developed Suburb, Growing Suburb, and Rural Areas. Municipalities classified as Core City or Developed Suburb is what is considered "desired." The chart shows the trendline for percentage of building permits approved since 1980 in these desired areas.</p><p>The second chart shows the count of all permits approved by all four planning areas.</p><p>The third chart presents units authorized by structure category. The following are definitions of categories used:</p><ul><li>Single-Family are single-unit structures, including attached, detached and semi-detached, and row houses, provided the units are separated by a ground-to-roof party wall. Mobile homes are not included.</li><li>Small Multifamily structures are those containing two to four units, including duplexes and triplexes.</li><li>Large Multifamily structures are those with five or more units. Garden apartments, and high-rise buildings are included in this category, as well as condominiums and cooperatively owned apartment buildings.</li></ul><p>All three charts allow you to view these data both annually and cumulatively.</p>`,
             how: `<p>Since 2012 the annual percentage of residential building permits being approved in preferred growth areas of the region (those in Core City or Developed Suburbs planning areas) has risen back to over 60 percent of approvals—levels not seen since the early 1980s. This figure peaked at 69.3 percent in 2014, but has subsequently remained high with 63.5 percent of units approved in 2018. The late 1990s and early 2000s saw the lowest level of approvals in these smart growth areas, as units built drifted to municipalities categorized as Growing Suburbs and Rural Areas. From 1999's low 2018 had gained 29.8 percent. Historic development patterns brought the cumulative units approved since 1980 in preferred growth areas down below 50 percent by 1996. With a cumulative value of 49.4 percent in 2018, the region is set to flip the approvals since 1980 back to a majority in areas more sustainable for growth. When selecting only single planning areas in chart 2, it's clear that the recent uptick in housing activity in desired areas is largely driven by Core City municipalities—almost entirely from City of Philadelphia growth.</p><p>Total permits approved are seen in charts 2 and 3. The peak year for approving units in the region came in 1986 with close to 30,000 units approved. The most recent recession brought approvals to 20 percent of those peak levels in 2009 with 6,182 approved that year. 2018 had 12,075 units approved showing approvals have doubled since the slowest years, but housing activity is clearly not what it once was in the region.</p><p>Chart 3 shows a waning interest in single-family development which dominated small and large multifamily development structures until more recent years. 2018 saw nearly identical single-family (5,561) and large multifamily (5,562) approvals and an additional 952 small multifamily units. But the cumulative effects of decades of single-family preference means that more than 75 percent of units approved from 1980 to 2018 were single-family.</p>`,
-            resource: `
-            <p>See what DVRPC is doing in the area of livable community building on its <a href="/SmartGrowth/">Smart Growth page</a>.</p>
-            <p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for improving the trendline for smarter residential growth in the region:</p>
-            <ul>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42ad8e7179a56e2137827">Transit Oriented Development (TOD) Zoning</a></li>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5c929a05e7179a0e4089fae5">Revitalization Planning &amp; Programs</a></li>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5c929acde7179a0e4089fb5d">Brownfields Redevelopment</a></li>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42b77e7179a56e2137867">Build Missing Middle Housing</a></li>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5c929ecee7179a0e4089fdad">Live/Work Zoning</a></li>
-            <li><a href="/Connections2045/MIT/toolpage.html?tool=5cb7796efb6fc041ab92fe9b">Streamlined Permitting Processes</a></li>
-            </ul>
-            `
+            resource: `<p>See what DVRPC is doing in the area of livable community building on its <a href="/SmartGrowth/">Smart Growth page</a>.</p><p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools for improving the trendline for smarter residential growth in the region:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42ad8e7179a56e2137827">Transit Oriented Development (TOD) Zoning</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5c929a05e7179a0e4089fae5">Revitalization Planning &amp; Programs</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5c929acde7179a0e4089fb5d">Brownfields Redevelopment</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5bf42b77e7179a56e2137867">Build Missing Middle Housing</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5c929ecee7179a0e4089fdad">Live/Work Zoning</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb7796efb6fc041ab92fe9b">Streamlined Permitting Processes</a></li></ul>`
         }
     },
     'Housing Affordability': {
@@ -621,12 +626,11 @@ const snippetsRef = {
                 dataSource: ['housing_afford_graph_1'],
                 data: fullGeography,
                 context: {
-                    labels: ['Percent of Households'],
+                    labels: ['Percentage of Households'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
-                yAxisUnits: 'percent'
             },
             {
                 type: 'stacked bar',
@@ -639,22 +643,22 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- Below 35%- Own', 'DVRPC- Below 35%- Rent', 'DVRPC- Above 35%- Rent', 'DVRPC- Above 35%- Own','DVRPC- Not Computed- Own', 'DVRPC- Not Computed- Rent'],
+                    ['Philadelphia Subregion- Below 35%- Own', 'Philadelphia Subregion- Below 35%- Rent', 'Philadelphia Subregion- Above 35%- Rent', 'Philadelphia Subregion- Above 35%- Own','Philadelphia Subregion- Not Computed- Own', 'Philadelphia Subregion- Not Computed- Rent'],
                     ['Pennsylvania Suburbs- Below 35%- Own', 'Pennsylvania Suburbs- Below 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Rent', 'Pennsylvania Suburbs- Above 35%- Own','Pennsylvania Suburbs- Not Computed- Own', 'Pennsylvania Suburbs- Not Computed- Rent'],
                     ['New Jersey Suburbs- Below 35%- Own', 'New Jersey Suburbs- Below 35%- Rent', 'New Jersey Suburbs- Above 35%- Rent', 'New Jersey Suburbs- Above 35%- Own','New Jersey Suburbs- Not Computed- Own', 'New Jersey Suburbs- Not Computed- Rent'],
-                    ['Philadelphia Subregion- Below 35%- Own', 'Philadelphia Subregion- Below 35%- Rent', 'Philadelphia Subregion- Above 35%- Rent', 'Philadelphia Subregion- Above 35%- Own','Philadelphia Subregion- Not Computed- Own', 'Philadelphia Subregion- Not Computed- Rent'],
                     ['Core City- Below 35%- Own', 'Core City- Below 35%- Rent', 'Core City- Above 35%- Rent', 'Core City- Above 35%- Own','Core City- Not Computed- Own', 'Core City- Not Computed- Rent'],
                     ['Developed Community- Below 35%- Own', 'Developed Community- Below 35%- Rent', 'Developed Community- Above 35%- Rent', 'Developed Community- Above 35%- Own','Developed Community- Not Computed- Own', 'Developed Community- Not Computed- Rent'],
                     ['Growing Suburb- Below 35%- Own', 'Growing Suburb- Below 35%- Rent', 'Growing Suburb- Above 35%- Rent', 'Growing Suburb- Above 35%- Own','Growing Suburb- Not Computed- Own', 'Growing Suburb- Not Computed- Rent'],
                     ['Rural Area- Below 35%- Own', 'Rural Area- Below 35%- Rent', 'Rural Area- Above 35%- Rent', 'Rural Area- Above 35%- Own','Rural Area- Not Computed- Own', 'Rural Area- Not Computed- Rent'],
                     ['Bucks County- Below 35%- Own', 'Bucks County- Below 35%- Rent', 'Bucks County- Above 35%- Rent', 'Bucks County- Above 35%- Own','Bucks County- Not Computed- Own', 'Bucks County- Not Computed- Rent'],
-                    ['Chester County- Below 35%- Own', 'Chester County- Below 35%- Rent', 'Chester County- Above 35%- Rent', 'Chester County- Above 35%- Own','Chester County- Not Computed- Own', 'Chester County- Not Computed- Rent'],
-                    ['Delaware County- Below 35%- Own', 'Delaware County- Below 35%- Rent', 'Delaware County- Above 35%- Rent', 'Delaware County- Above 35%- Own','Delaware County- Not Computed- Own', 'Delaware County- Not Computed- Rent'],
-                    ['Montgomery County- Below 35%- Own', 'Montgomery County- Below 35%- Rent', 'Montgomery County- Above 35%- Rent', 'Montgomery County- Above 35%- Own','Montgomery County- Not Computed- Own', 'Montgomery County- Not Computed- Rent'],
-                    ['Philadelphia County- Below 35%- Own', 'Philadelphia County- Below 35%- Rent', 'Philadelphia County- Above 35%- Rent', 'Philadelphia County- Above 35%- Own','Philadelphia County- Not Computed- Own', 'Philadelphia County- Not Computed- Rent'],
                     ['Burlington County- Below 35%- Own', 'Burlington County- Below 35%- Rent', 'Burlington County- Above 35%- Rent', 'Burlington County- Above 35%- Own','Burlington County- Not Computed- Own', 'Burlington County- Not Computed- Rent'],
                     ['Camden County- Below 35%- Own', 'Camden County- Below 35%- Rent', 'Camden County- Above 35%- Rent', 'Camden County- Above 35%- Own','Camden County- Not Computed- Own', 'Camden County- Not Computed- Rent'],
+                    ['Chester County- Below 35%- Own', 'Chester County- Below 35%- Rent', 'Chester County- Above 35%- Rent', 'Chester County- Above 35%- Own','Chester County- Not Computed- Own', 'Chester County- Not Computed- Rent'],
+                    ['Delaware County- Below 35%- Own', 'Delaware County- Below 35%- Rent', 'Delaware County- Above 35%- Rent', 'Delaware County- Above 35%- Own','Delaware County- Not Computed- Own', 'Delaware County- Not Computed- Rent'],
                     ['Gloucester County- Below 35%- Own', 'Gloucester County- Below 35%- Rent', 'Gloucester County- Above 35%- Rent', 'Gloucester County- Above 35%- Own','Gloucester County- Not Computed- Own', 'Gloucester County- Not Computed- Rent'],
-                    ['Mercer County- Below 35%- Own', 'Mercer County- Below 35%- Rent', 'Mercer County- Above 35%- Rent', 'Mercer County- Above 35%- Own','Mercer County- Not Computed- Own', 'Mercer County- Not Computed- Rent']
+                    ['Mercer County- Below 35%- Own', 'Mercer County- Below 35%- Rent', 'Mercer County- Above 35%- Rent', 'Mercer County- Above 35%- Own','Mercer County- Not Computed- Own', 'Mercer County- Not Computed- Rent'],
+                    ['Montgomery County- Below 35%- Own', 'Montgomery County- Below 35%- Rent', 'Montgomery County- Above 35%- Rent', 'Montgomery County- Above 35%- Own','Montgomery County- Not Computed- Own', 'Montgomery County- Not Computed- Rent'],
+                    ['Philadelphia County- Below 35%- Own', 'Philadelphia County- Below 35%- Rent', 'Philadelphia County- Above 35%- Rent', 'Philadelphia County- Above 35%- Own','Philadelphia County- Not Computed- Own', 'Philadelphia County- Not Computed- Rent']
                 ],
                 data: [
                     {
@@ -694,22 +698,22 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- 0.0-9.9%', 'DVRPC- 10.0-14.9%', 'DVRPC- 15.0-19.9%', 'DVRPC- 20.0-24.9%', 'DVRPC- 25.0-29.9%', 'DVRPC- 30.0-34.9%', 'DVRPC- 35.0-39.9%', 'DVRPC- 40.0-49.9%', 'DVRPC- 50%+','DVRPC- Not Computed'],
+                    ['Philadelphia Subregion- 0.0-9.9%', 'Philadelphia Subregion- 10.0-14.9%', 'Philadelphia Subregion- 15.0-19.9%', 'Philadelphia Subregion- 20.0-24.9%', 'Philadelphia Subregion- 25.0-29.9%', 'Philadelphia Subregion- 30.0-34.9%', 'Philadelphia Subregion- 35.0-39.9%', 'Philadelphia Subregion- 40.0-49.9%', 'Philadelphia Subregion- 50%+', 'Philadelphia Subregion- Not Computed'],
                     ['Pennsylvania Suburbs- 0.0-9.9%', 'Pennsylvania Suburbs- 10.0-14.9%', 'Pennsylvania Suburbs- 15.0-19.9%', 'Pennsylvania Suburbs- 20.0-24.9%', 'Pennsylvania Suburbs- 25.0-29.9%', 'Pennsylvania Suburbs- 30.0-34.9%', 'Pennsylvania Suburbs- 35.0-39.9%', 'Pennsylvania Suburbs- 40.0-49.9%', 'Pennsylvania Suburbs- 50%+', 'Pennsylvania Suburbs- Not Computed'],
                     ['New Jersey Suburbs- 0.0-9.9%', 'New Jersey Suburbs- 10.0-14.9%', 'New Jersey Suburbs- 15.0-19.9%', 'New Jersey Suburbs- 20.0-24.9%', 'New Jersey Suburbs- 25.0-29.9%', 'New Jersey Suburbs- 30.0-34.9%', 'New Jersey Suburbs- 35.0-39.9%', 'New Jersey Suburbs- 40.0-49.9%', 'New Jersey Suburbs- 50%+', 'New Jersey Suburbs- Not Computed'],
-                    ['Philadelphia Subregion- 0.0-9.9%', 'Philadelphia Subregion- 10.0-14.9%', 'Philadelphia Subregion- 15.0-19.9%', 'Philadelphia Subregion- 20.0-24.9%', 'Philadelphia Subregion- 25.0-29.9%', 'Philadelphia Subregion- 30.0-34.9%', 'Philadelphia Subregion- 35.0-39.9%', 'Philadelphia Subregion- 40.0-49.9%', 'Philadelphia Subregion- 50%+', 'Philadelphia Subregion- Not Computed'],
                     ['Core City- 0.0-9.9%','Core City- 10.0-14.9%', 'Core City- 15.0-19.9%', 'Core City- 20.0-24.9%', 'Core City- 25.0-29.9%', 'Core City- 30.0-34.9%', 'Core City- 35.0-39.9%', 'Core City- 40.0-49.9%', 'Core City- 50%+', 'Core City- Not Computed'],
                     ['Developed Community- 0.0-9.9%', 'Developed Community- 10.0-14.9%', 'Developed Community- 15.0-19.9%', 'Developed Community- 20.0-24.9%', 'Developed Community- 25.0-29.9%', 'Developed Community- 30.0-34.9%', 'Developed Community- 35.0-39.9%', 'Developed Community- 40.0-49.9%', 'Developed Community- 50%+', 'Developed Community- Not Computed'],
                     ['Growing Suburb- 0.0-9.9%', 'Growing Suburb- 10.0-14.9%', 'Growing Suburb- 15.0-19.9%', 'Growing Suburb- 20.0-24.9%', 'Growing Suburb- 25.0-29.9%', 'Growing Suburb- 30.0-34.9%', 'Growing Suburb- 35.0-39.9%', 'Growing Suburb- 40.0-49.9%', 'Growing Suburb- 50%+', 'Growing Suburb- Not Computed'],
                     ['Rural Area- 0.0-9.9%', 'Rural Area- 10.0-14.9%', 'Rural Area- 15.0-19.9%', 'Rural Area- 20.0-24.9%', 'Rural Area- 25.0-29.9%', 'Rural Area- 30.0-34.9%', 'Rural Area- 35.0-39.9%', 'Rural Area- 40.0-49.9%', 'Rural Area- 50%+', 'Rural Area- Not Computed'],
                     ['Bucks County- 0.0-9.9%', 'Bucks County- 10.0-14.9%', 'Bucks County- 15.0-19.9%', 'Bucks County- 20.0-24.9%', 'Bucks County- 25.0-29.9%', 'Bucks County- 30.0-34.9%', 'Bucks County- 35.0-39.9%', 'Bucks County- 40.0-49.9%', 'Bucks County- 50%+', 'Bucks County- Not Computed'],
-                    ['Chester County- 0.0-9.9%', 'Chester County- 10.0-14.9%', 'Chester County- 15.0-19.9%', 'Chester County- 20.0-24.9%', 'Chester County- 25.0-29.9%', 'Chester County- 30.0-34.9%', 'Chester County- 35.0-39.9%', 'Chester County- 40.0-49.9%', 'Chester County- 50%+', 'Chester County- Not Computed'],
-                    ['Delaware County- 0.0-9.9%', 'Delaware County- 10.0-14.9%', 'Delaware County- 15.0-19.9%', 'Delaware County- 20.0-24.9%', 'Delaware County- 25.0-29.9%', 'Delaware County- 30.0-34.9%', 'Delaware County- 35.0-39.9%', 'Delaware County- 40.0-49.9%', 'Delaware County- 50%+', 'Delaware County- Not Computed'],
-                    ['Montgomery County- 0.0-9.9%','Montgomery County- 10.0-14.9%', 'Montgomery County- 15.0-19.9%', 'Montgomery County- 20.0-24.9%', 'Montgomery County- 25.0-29.9%', 'Montgomery County- 30.0-34.9%', 'Montgomery County- 35.0-39.9%', 'Montgomery County- 40.0-49.9%', 'Montgomery County- 50%+', 'Montgomery County- Not Computed'],
-                    ['Philadelphia County- 0.0-9.9%', 'Philadelphia County- 10.0-14.9%', 'Philadelphia County- 15.0-19.9%', 'Philadelphia County- 20.0-24.9%', 'Philadelphia County- 25.0-29.9%', 'Philadelphia County- 30.0-34.9%', 'Philadelphia County- 35.0-39.9%', 'Philadelphia County- 40.0-49.9%', 'Philadelphia County- 50%+', 'Philadelphia County- Not Computed'],
                     ['Burlington County- 0.0-9.9%', 'Burlington County- 10.0-14.9%', 'Burlington County- 15.0-19.9%', 'Burlington County- 20.0-24.9%', 'Burlington County- 25.0-29.9%', 'Burlington County- 30.0-34.9%', 'Burlington County- 35.0-39.9%', 'Burlington County- 40.0-49.9%', 'Burlington County- 50%+', 'Burlington County- Not Computed'],
                     ['Camden County- 0.0-9.9%', 'Camden County- 10.0-14.9%', 'Camden County- 15.0-19.9%', 'Camden County- 20.0-24.9%', 'Camden County- 25.0-29.9%', 'Camden County- 30.0-34.9%', 'Camden County- 35.0-39.9%', 'Camden County- 40.0-49.9%', 'Camden County- 50%+', 'Camden County- Not Computed'],
+                    ['Chester County- 0.0-9.9%', 'Chester County- 10.0-14.9%', 'Chester County- 15.0-19.9%', 'Chester County- 20.0-24.9%', 'Chester County- 25.0-29.9%', 'Chester County- 30.0-34.9%', 'Chester County- 35.0-39.9%', 'Chester County- 40.0-49.9%', 'Chester County- 50%+', 'Chester County- Not Computed'],
+                    ['Delaware County- 0.0-9.9%', 'Delaware County- 10.0-14.9%', 'Delaware County- 15.0-19.9%', 'Delaware County- 20.0-24.9%', 'Delaware County- 25.0-29.9%', 'Delaware County- 30.0-34.9%', 'Delaware County- 35.0-39.9%', 'Delaware County- 40.0-49.9%', 'Delaware County- 50%+', 'Delaware County- Not Computed'],
                     ['Gloucester County- 0.0-9.9%', 'Gloucester County- 10.0-14.9%', 'Gloucester County- 15.0-19.9%', 'Gloucester County- 20.0-24.9%', 'Gloucester County- 25.0-29.9%', 'Gloucester County- 30.0-34.9%', 'Gloucester County- 35.0-39.9%', 'Gloucester County- 40.0-49.9%', 'Gloucester County- 50%+', 'Gloucester County- Not Computed'],
-                    ['Mercer County- 0.0-9.9%', 'Mercer County- 10.0-14.9%', 'Mercer County- 15.0-19.9%', 'Mercer County- 20.0-24.9%', 'Mercer County- 25.0-29.9%', 'Mercer County- 30.0-34.9%', 'Mercer County- 35.0-39.9%', 'Mercer County- 40.0-49.9%', 'Mercer County- 50%+','Mercer County- Not Computed']
+                    ['Mercer County- 0.0-9.9%', 'Mercer County- 10.0-14.9%', 'Mercer County- 15.0-19.9%', 'Mercer County- 20.0-24.9%', 'Mercer County- 25.0-29.9%', 'Mercer County- 30.0-34.9%', 'Mercer County- 35.0-39.9%', 'Mercer County- 40.0-49.9%', 'Mercer County- 50%+','Mercer County- Not Computed'],
+                    ['Montgomery County- 0.0-9.9%','Montgomery County- 10.0-14.9%', 'Montgomery County- 15.0-19.9%', 'Montgomery County- 20.0-24.9%', 'Montgomery County- 25.0-29.9%', 'Montgomery County- 30.0-34.9%', 'Montgomery County- 35.0-39.9%', 'Montgomery County- 40.0-49.9%', 'Montgomery County- 50%+', 'Montgomery County- Not Computed'],
+                    ['Philadelphia County- 0.0-9.9%', 'Philadelphia County- 10.0-14.9%', 'Philadelphia County- 15.0-19.9%', 'Philadelphia County- 20.0-24.9%', 'Philadelphia County- 25.0-29.9%', 'Philadelphia County- 30.0-34.9%', 'Philadelphia County- 35.0-39.9%', 'Philadelphia County- 40.0-49.9%', 'Philadelphia County- 50%+', 'Philadelphia County- Not Computed']
                 ],
                 data: [
                     {
@@ -772,7 +776,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Growth Rate'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -845,7 +849,6 @@ const snippetsRef = {
                         columns: ['year', 'Philadelphia']
                     },
                 ],
-                yAxisUnits: 'percent'
             },
             {
                 type: 'stacked bar',
@@ -853,7 +856,7 @@ const snippetsRef = {
                 dataSource: ['jobs_graph2'],
                 context: {
                     labels: ['Percentage of Region'],
-                    units: ['percent']
+                    units: ['percentC']
                 },
                 data: [
                     {
@@ -901,22 +904,22 @@ const snippetsRef = {
                 context: {
                     labels: ['Percentage of Total Jobs'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPC- Accommodation and food services', 'DVRPC- Agriculture, forestry, fishing', 'DVRPC- Arts, entertainment, and recreation', 'DVRPC- Construction and manufacturing', 'DVRPC- Educational services', 'DVRPC- Finance, Insurance, and Real Estate', 'DVRPC- Health care and social assistance', 'DVRPC- Industry not classified', 'DVRPC- Information Technology', 'DVRPC- Management of companies and enterprises', 'DVRPC- Mining and utilities', 'DVRPC- Other services (except public administration)', 'DVRPC- Professional, scientific, and technical services', 'DVRPC- Transportation and warehousing', 'DVRPC- Waste management and remediation services', 'DVRPC- Wholesale and retail trade'],
-                    ['Philadelphia Subregion- Accommodation and food services', 'Philadelphia Subregion- Agriculture, forestry, fishing', 'Philadelphia Subregion- Arts, entertainment, and recreation', 'Philadelphia Subregion- Construction and manufacturing', 'Philadelphia Subregion- Educational services', 'Philadelphia Subregion- Finance, Insurance, and Real Estate', 'Philadelphia Subregion- Health care and social assistance', 'Philadelphia Subregion- Industry not classified', 'Philadelphia Subregion- Information Technology', 'Philadelphia Subregion- Management of companies and enterprises', 'Philadelphia Subregion- Mining and utilities', 'Philadelphia Subregion- Other services (except public administration)', 'Philadelphia Subregion- Professional, scientific, and technical services', 'Philadelphia Subregion- Transportation and warehousing', 'Philadelphia Subregion- Waste management and remediation services', 'Philadelphia Subregion- Wholesale and retail trade'],
-                    ['New Jersey Suburbs- Accommodation and food services', 'New Jersey Suburbs- Agriculture, forestry, fishing', 'New Jersey Suburbs- Arts, entertainment, and recreation', 'New Jersey Suburbs- Construction and manufacturing', 'New Jersey Suburbs- Educational services', 'New Jersey Suburbs- Finance, Insurance, and Real Estate', 'New Jersey Suburbs- Health care and social assistance', 'New Jersey Suburbs- Industry not classified', 'New Jersey Suburbs- Information Technology', 'New Jersey Suburbs- Management of companies and enterprises', 'New Jersey Suburbs- Mining and utilities', 'New Jersey Suburbs- Other services (except public administration)', 'New Jersey Suburbs- Professional, scientific, and technical services', 'New Jersey Suburbs- Transportation and warehousing', 'New Jersey Suburbs- Waste management and remediation services', 'New Jersey Suburbs- Wholesale and retail trade'],
                     ['Pennsylvania Suburbs- Accommodation and food services', 'Pennsylvania Suburbs- Agriculture, forestry, fishing', 'Pennsylvania Suburbs- Arts, entertainment, and recreation', 'Pennsylvania Suburbs- Construction and manufacturing', 'Pennsylvania Suburbs- Educational services', 'Pennsylvania Suburbs- Finance, Insurance, and Real Estate', 'Pennsylvania Suburbs- Health care and social assistance', 'Pennsylvania Suburbs- Industry not classified', 'Pennsylvania Suburbs- Information Technology', 'Pennsylvania Suburbs- Management of companies and enterprises', 'Pennsylvania Suburbs- Mining and utilities', 'Pennsylvania Suburbs- Other services (except public administration)', 'Pennsylvania Suburbs- Professional, scientific, and technical services', 'Pennsylvania Suburbs- Transportation and warehousing', 'Pennsylvania Suburbs- Waste management and remediation services', 'Pennsylvania Suburbs- Wholesale and retail trade'],
+                    ['New Jersey Suburbs- Accommodation and food services', 'New Jersey Suburbs- Agriculture, forestry, fishing', 'New Jersey Suburbs- Arts, entertainment, and recreation', 'New Jersey Suburbs- Construction and manufacturing', 'New Jersey Suburbs- Educational services', 'New Jersey Suburbs- Finance, Insurance, and Real Estate', 'New Jersey Suburbs- Health care and social assistance', 'New Jersey Suburbs- Industry not classified', 'New Jersey Suburbs- Information Technology', 'New Jersey Suburbs- Management of companies and enterprises', 'New Jersey Suburbs- Mining and utilities', 'New Jersey Suburbs- Other services (except public administration)', 'New Jersey Suburbs- Professional, scientific, and technical services', 'New Jersey Suburbs- Transportation and warehousing', 'New Jersey Suburbs- Waste management and remediation services', 'New Jersey Suburbs- Wholesale and retail trade'],
                     ['Bucks- Accommodation and food services', 'Bucks- Agriculture, forestry, fishing', 'Bucks- Arts, entertainment, and recreation', 'Bucks- Construction and manufacturing', 'Bucks- Educational services', 'Bucks- Finance, Insurance, and Real Estate', 'Bucks- Health care and social assistance', 'Bucks- Industry not classified', 'Bucks- Information Technology', 'Bucks- Management of companies and enterprises', 'Bucks- Mining and utilities', 'Bucks- Other services (except public administration)', 'Bucks- Professional, scientific, and technical services', 'Bucks- Transportation and warehousing', 'Bucks- Waste management and remediation services', 'Bucks- Wholesale and retail trade'],
-                    ['Chester- Accommodation and food services', 'Chester- Agriculture, forestry, fishing', 'Chester- Arts, entertainment, and recreation', 'Chester- Construction and manufacturing', 'Chester- Educational services', 'Chester- Finance, Insurance, and Real Estate', 'Chester- Health care and social assistance', 'Chester- Industry not classified', 'Chester- Information Technology', 'Chester- Management of companies and enterprises', 'Chester- Mining and utilities', 'Chester- Other services (except public administration)', 'Chester- Professional, scientific, and technical services', 'Chester- Transportation and warehousing', 'Chester- Waste management and remediation services', 'Chester- Wholesale and retail trade'],
-                    ['Delaware- Accommodation and food services', 'Delaware- Agriculture, forestry, fishing', 'Delaware- Arts, entertainment, and recreation', 'Delaware- Construction and manufacturing', 'Delaware- Educational services', 'Delaware- Finance, Insurance, and Real Estate', 'Delaware- Health care and social assistance', 'Delaware- Industry not classified', 'Delaware- Information Technology', 'Delaware- Management of companies and enterprises', 'Delaware- Mining and utilities', 'Delaware- Other services (except public administration)', 'Delaware- Professional, scientific, and technical services', 'Delaware- Transportation and warehousing', 'Delaware- Waste management and remediation services', 'Delaware- Wholesale and retail trade'],
-                    ['Montgomery- Accommodation and food services', 'Montgomery- Agriculture, forestry, fishing', 'Montgomery- Arts, entertainment, and recreation', 'Montgomery- Construction and manufacturing', 'Montgomery- Educational services', 'Montgomery- Finance, Insurance, and Real Estate', 'Montgomery- Health care and social assistance', 'Montgomery- Industry not classified', 'Montgomery- Information Technology', 'Montgomery- Management of companies and enterprises', 'Montgomery- Mining and utilities', 'Montgomery- Other services (except public administration)', 'Montgomery- Professional, scientific, and technical services', 'Montgomery- Transportation and warehousing', 'Montgomery- Waste management and remediation services', 'Montgomery- Wholesale and retail trade'],
                     ['Burlington- Accommodation and food services', 'Burlington- Agriculture, forestry, fishing', 'Burlington- Arts, entertainment, and recreation', 'Burlington- Construction and manufacturing', 'Burlington- Educational services', 'Burlington- Finance, Insurance, and Real Estate', 'Burlington- Health care and social assistance', 'Burlington- Industry not classified', 'Burlington- Information Technology', 'Burlington- Management of companies and enterprises', 'Burlington- Mining and utilities', 'Burlington- Other services (except public administration)', 'Burlington- Professional, scientific, and technical services', 'Burlington- Transportation and warehousing', 'Burlington- Waste management and remediation services', 'Burlington- Wholesale and retail trade'],
                     ['Camden- Accommodation and food services', 'Camden- Agriculture, forestry, fishing', 'Camden- Arts, entertainment, and recreation', 'Camden- Construction and manufacturing', 'Camden- Educational services', 'Camden- Finance, Insurance, and Real Estate', 'Camden- Health care and social assistance', 'Camden- Industry not classified', 'Camden- Information Technology', 'Camden- Management of companies and enterprises', 'Camden- Mining and utilities', 'Camden- Other services (except public administration)', 'Camden- Professional, scientific, and technical services', 'Camden- Transportation and warehousing', 'Camden- Waste management and remediation services', 'Camden- Wholesale and retail trade'],
+                    ['Chester- Accommodation and food services', 'Chester- Agriculture, forestry, fishing', 'Chester- Arts, entertainment, and recreation', 'Chester- Construction and manufacturing', 'Chester- Educational services', 'Chester- Finance, Insurance, and Real Estate', 'Chester- Health care and social assistance', 'Chester- Industry not classified', 'Chester- Information Technology', 'Chester- Management of companies and enterprises', 'Chester- Mining and utilities', 'Chester- Other services (except public administration)', 'Chester- Professional, scientific, and technical services', 'Chester- Transportation and warehousing', 'Chester- Waste management and remediation services', 'Chester- Wholesale and retail trade'],
+                    ['Delaware- Accommodation and food services', 'Delaware- Agriculture, forestry, fishing', 'Delaware- Arts, entertainment, and recreation', 'Delaware- Construction and manufacturing', 'Delaware- Educational services', 'Delaware- Finance, Insurance, and Real Estate', 'Delaware- Health care and social assistance', 'Delaware- Industry not classified', 'Delaware- Information Technology', 'Delaware- Management of companies and enterprises', 'Delaware- Mining and utilities', 'Delaware- Other services (except public administration)', 'Delaware- Professional, scientific, and technical services', 'Delaware- Transportation and warehousing', 'Delaware- Waste management and remediation services', 'Delaware- Wholesale and retail trade'],
                     ['Gloucester- Accommodation and food services', 'Gloucester- Agriculture, forestry, fishing', 'Gloucester- Arts, entertainment, and recreation', 'Gloucester- Construction and manufacturing', 'Gloucester- Educational services', 'Gloucester- Finance, Insurance, and Real Estate', 'Gloucester- Health care and social assistance', 'Gloucester- Industry not classified', 'Gloucester- Information Technology', 'Gloucester- Management of companies and enterprises', 'Gloucester- Mining and utilities', 'Gloucester- Other services (except public administration)', 'Gloucester- Professional, scientific, and technical services', 'Gloucester- Transportation and warehousing', 'Gloucester- Waste management and remediation services', 'Gloucester- Wholesale and retail trade'],
-                    ['Mercer- Accommodation and food services', 'Mercer- Agriculture, forestry, fishing', 'Mercer- Arts, entertainment, and recreation', 'Mercer- Construction and manufacturing', 'Mercer- Educational services', 'Mercer- Finance, Insurance, and Real Estate', 'Mercer- Health care and social assistance', 'Mercer- Industry not classified', 'Mercer- Information Technology', 'Mercer- Management of companies and enterprises', 'Mercer- Mining and utilities', 'Mercer- Other services (except public administration)', 'Mercer- Professional, scientific, and technical services', 'Mercer- Transportation and warehousing', 'Mercer- Waste management and remediation services', 'Mercer- Wholesale and retail trade']
+                    ['Mercer- Accommodation and food services', 'Mercer- Agriculture, forestry, fishing', 'Mercer- Arts, entertainment, and recreation', 'Mercer- Construction and manufacturing', 'Mercer- Educational services', 'Mercer- Finance, Insurance, and Real Estate', 'Mercer- Health care and social assistance', 'Mercer- Industry not classified', 'Mercer- Information Technology', 'Mercer- Management of companies and enterprises', 'Mercer- Mining and utilities', 'Mercer- Other services (except public administration)', 'Mercer- Professional, scientific, and technical services', 'Mercer- Transportation and warehousing', 'Mercer- Waste management and remediation services', 'Mercer- Wholesale and retail trade'],
+                    ['Montgomery- Accommodation and food services', 'Montgomery- Agriculture, forestry, fishing', 'Montgomery- Arts, entertainment, and recreation', 'Montgomery- Construction and manufacturing', 'Montgomery- Educational services', 'Montgomery- Finance, Insurance, and Real Estate', 'Montgomery- Health care and social assistance', 'Montgomery- Industry not classified', 'Montgomery- Information Technology', 'Montgomery- Management of companies and enterprises', 'Montgomery- Mining and utilities', 'Montgomery- Other services (except public administration)', 'Montgomery- Professional, scientific, and technical services', 'Montgomery- Transportation and warehousing', 'Montgomery- Waste management and remediation services', 'Montgomery- Wholesale and retail trade'],
+                    ['Philadelphia- Accommodation and food services', 'Philadelphia- Agriculture, forestry, fishing', 'Philadelphia- Arts, entertainment, and recreation', 'Philadelphia- Construction and manufacturing', 'Philadelphia- Educational services', 'Philadelphia- Finance, Insurance, and Real Estate', 'Philadelphia- Health care and social assistance', 'Philadelphia- Industry not classified', 'Philadelphia- Information Technology', 'Philadelphia- Management of companies and enterprises', 'Philadelphia- Mining and utilities', 'Philadelphia- Other services (except public administration)', 'Philadelphia- Professional, scientific, and technical services', 'Philadelphia- Transportation and warehousing', 'Philadelphia- Waste management and remediation services', 'Philadelphia- Wholesale and retail trade']
                 ],
                 data: [
                     {
@@ -993,7 +996,7 @@ const snippetsRef = {
             resource: `<p>DVRPC works with its planning partners on <a href="/Economic/">economic development and analysis</a> in the region, including our <a href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p><p>Collaborating with our county partners, DVRPC also produced <a href="/Products/ADR023/">county and municipal employment forecasts</a> for the <em>Connections 2045</em> long-range plan that were adopted by the DVRPC Board.</p><p>DVRPC's <a href="/Connections2045/MIT/">Municipal Implementation Toolbox</a> suggests the following tools to bolster job growth in an inclusive economy:</p><ul><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a href="/Connections2045/MIT/toolpage.html?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li></ul>`
         }
     },
-    'Racial Ethnic Disparities':{
+    'Racial & Ethnic Disparities':{
         file: 'racialAndEthnicDisparities.html',
         d3: [
             {
@@ -1002,7 +1005,7 @@ const snippetsRef = {
                 dataSource: ['medincGapRace'],
                 context: {
                     labels: ['Dollars (2017)'],
-                    units: ['thousands']
+                    units: ['dollars']
                 },
                 data: [
                     {
@@ -1011,14 +1014,17 @@ const snippetsRef = {
                     },
                     {
                         'key': 'Philadelphia',
+                        disabled: true,
                         columns: ['year', 'Philadelphia']
                     },
                     {
                         'key': 'PA Suburban Counties',
+                        disabled: true,
                         columns: ['year', 'PA Suburban Counties']
                     },
                     {
                         'key': 'NJ Suburban Counties',
+                        disabled: true,
                         columns: ['year', 'NJ Suburban Counties']
                     },
                     {
@@ -1070,13 +1076,13 @@ const snippetsRef = {
                 context: {
                     labels: ['Dollars (2017)'],
                     keepLabels: true,
-                    units: ['thousands'],
+                    units: ['dollars'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['Region_minorityInc', 'Region_whtNonHispInc'],
-                    ['NJ Suburban Counties_minorityInc', 'NJ Suburban Counties_whtNonHispInc'],
                     ['PA Suburban Counties_minorityInc', 'PA Suburban Counties_whtNonHispInc'],
+                    ['NJ Suburban Counties_minorityInc', 'NJ Suburban Counties_whtNonHispInc'],
                     ['Bucks_minorityInc', 'Bucks_whtNonHispInc'],
                     ['Burlington_minorityInc', 'Burlington_whtNonHispInc'],
                     ['Camden_minorityInc', 'Camden_whtNonHispInc'],
@@ -1104,7 +1110,7 @@ const snippetsRef = {
                 dataSource: ['RaceEthnSegregation'],
                 context: {
                     labels: ['Population Needing to Move to Achieve Regional Distribution'],
-                    units: ['percent']
+                    units: ['percentC']
                 },
                 data: [
                     {
@@ -1120,13 +1126,13 @@ const snippetsRef = {
                 context: {
                     labels: ['Percent Participation Gap'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['Region_difference'],
-                    ['NJ Suburban Counties_difference'],
                     ['PA Suburban Counties_difference'],
+                    ['NJ Suburban Counties_difference'],
                     ['Bucks_difference'],
                     ['Burlington_difference'],
                     ['Camden_difference'],
@@ -1151,13 +1157,13 @@ const snippetsRef = {
                 context: {
                     labels: ['Percent Participation'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['Region_labWht', 'Region_labNonWht'],
-                    ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
                     ['PA Suburban Counties_labWht', 'PA Suburban Counties_labNonWht'],
+                    ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
                     ['Bucks_labWht', 'Bucks_labNonWht'],
                     ['Burlington_labWht', 'Burlington_labNonWht'],
                     ['Camden_labWht', 'Camden_labNonWht'],
@@ -1170,12 +1176,12 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Whites',
-                        columns: ['year', 'Region_labWht']
-                    },
-                    {
                         'key': 'People of Color',
                         columns: ['year', 'Region_labNonWht']
+                    },
+                    {
+                        'key': 'Whites',
+                        columns: ['year', 'Region_labWht']
                     }
                 ]
             }
@@ -1197,7 +1203,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Growth Rate Difference'],
                     keepLabels: false,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -1205,18 +1211,18 @@ const snippetsRef = {
                     ['PASubCos'],
                     ['NJCos'],
                     ['BuckCo'],
-                    ['ChesCo'],
-                    ['DelCo'],
-                    ['MontCo'],
                     ['BurlCo'],
                     ['CamdCo'],
+                    ['ChesCo'],
+                    ['DelCo'],
                     ['GloCo'],
                     ['MerCo'],
+                    ['MontCo'],
                     ['PhilCo']
                 ],
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'High/Low Quintile Gap',
                         columns: ['year', 'Region']
                     }
                 ]
@@ -1228,21 +1234,22 @@ const snippetsRef = {
                 context: {
                     labels: ['Dollars (2017)', 'Change in Dollars (2017)', 'Percent Change in Dollars (2017)'],
                     keepLabels: false,
-                    units: ['thousands', 'thousands', 'percent'],
+                    units: ['dollars', 'dollars', 'percentC'],
                     keepUnits: false
                 },
                 columnOptions: [
-                    ['Region_1st', 'Region_2nd', 'Region_3rd', 'Region_4th', 'Region_5th'],
-                    ['PhilCo_1st', 'PhilCo_2nd', 'PhilCo_3rd', 'PhilCo_4th', 'PhilCo_5th'],
-                    ['NJCos_1st', 'NJCos_2nd', 'NJCos_3rd', 'NJCos_4th', 'NJCos_5th'],
-                    ['BuckCo_1st', 'BuckCo_2nd', 'BuckCo_3rd', 'BuckCo_4th', 'BuckCo_5th'],
-                    ['ChesCo_1st', 'ChesCo_2nd', 'ChesCo_3rd', 'ChesCo_4th', 'ChesCo_5th'],
-                    ['DelCo_1st', 'DelCo_2nd', 'DelCo_3rd', 'DelCo_4th', 'DelCo_5th'],
-                    ['MontCo_1st', 'MontCo_2nd', 'MontCo_3rd', 'MontCo_4th', 'MontCo_5th'],
-                    ['BurlCo_1st', 'BurlCo_2nd', 'BurlCo_3rd', 'BurlCo_4th', 'BurlCo_5th'],
-                    ['CamdCo_1st', 'CamdCo_2nd', 'CamdCo_3rd', 'CamdCo_4th', 'CamdCo_5th'],
-                    ['GloCo_1st', 'GloCo_2nd', 'GloCo_3rd', 'GloCo_4th', 'GloCo_5th'],
-                    ['MerCo_1st', 'MerCo_2nd', 'MerCo_3rd', 'MerCo_4th', 'MerCo_5th']
+                    ['Region_1st', 'Region_2nd', 'Region_3rd', 'Region_4th', 'Region_5th', 'Region_T5pct'],
+                    ['PASubCos_1st', 'PASubCos_2nd', 'PASubCos_3rd', 'PASubCos_4th', 'PASubCos_5th', 'PASubCos_T5pct'],
+                    ['NJCos_1st', 'NJCos_2nd', 'NJCos_3rd', 'NJCos_4th', 'NJCos_5th', 'NJCos_T5pct'],
+                    ['BuckCo_1st', 'BuckCo_2nd', 'BuckCo_3rd', 'BuckCo_4th', 'BuckCo_5th', 'BuckCo_T5pct'],
+                    ['BurlCo_1st', 'BurlCo_2nd', 'BurlCo_3rd', 'BurlCo_4th', 'BurlCo_5th', 'BurlCo_T5pct'],
+                    ['CamdCo_1st', 'CamdCo_2nd', 'CamdCo_3rd', 'CamdCo_4th', 'CamdCo_5th', 'CamdCo_T5pct'],
+                    ['ChesCo_1st', 'ChesCo_2nd', 'ChesCo_3rd', 'ChesCo_4th', 'ChesCo_5th', 'ChesCo_T5pct'],
+                    ['DelCo_1st', 'DelCo_2nd', 'DelCo_3rd', 'DelCo_4th', 'DelCo_5th', 'DelCo_T5pct'],
+                    ['GloCo_1st', 'GloCo_2nd', 'GloCo_3rd', 'GloCo_4th', 'GloCo_5th', 'GloCo_T5pct'],
+                    ['MerCo_1st', 'MerCo_2nd', 'MerCo_3rd', 'MerCo_4th', 'MerCo_5th', 'MerCo_T5pct'],
+                    ['MontCo_1st', 'MontCo_2nd', 'MontCo_3rd', 'MontCo_4th', 'MontCo_5th', 'MontCo_T5pct'],
+                    ['PhilCo_1st', 'PhilCo_2nd', 'PhilCo_3rd', 'PhilCo_4th', 'PhilCo_5th', 'PhilCo_T5pct']
                 ],
                 data: [
                     {
@@ -1264,6 +1271,10 @@ const snippetsRef = {
                     {
                         'key': '5th Quintile',
                         columns: ['Year', 'Region_5th']
+                    },
+                    {
+                        'key': 'Top 5 Percent',
+                        columns: ['Year', 'Region_T5pct']
                     }
                 ]
             },
@@ -1274,7 +1285,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Population Needing to Move to Achieve Regional Distribution'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 data: [
@@ -1302,13 +1313,13 @@ const snippetsRef = {
                 context: {
                     labels: ['Median Income Gap (2017 Dollars)', 'Female Percentage of Male Median Income (2017 Dollars)'],
                     keepLabels: false,
-                    units: ['thousands', 'percent'],
+                    units: ['dollars', 'percentC'],
                     keepUnits: false
                 },
                 columnOptions: [
                     ['Region'],
-                    ['NJ Suburban Counties'],
                     ['PA Suburban Counties'],
+                    ['NJ Suburban Counties'],
                     ['Bucks'],
                     ['Burlington'],
                     ['Camden'],
@@ -1333,13 +1344,13 @@ const snippetsRef = {
                 context: {
                     labels: ['Median Income (2017 Dollars)'],
                     keepLabels: true,
-                    units: ['thousands'],
+                    units: ['dollars'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['Region_Female', 'Region_Male'],
-                    ['NJ Suburban Counties_Female', 'NJ Suburban Counties_Male'],
                     ['PA Suburban Counties_Female', 'PA Suburban Counties_Male'],
+                    ['NJ Suburban Counties_Female', 'NJ Suburban Counties_Male'],
                     ['Bucks_Female', 'Bucks_Male'],
                     ['Burlington_Female', 'Burlington_Male'],
                     ['Camden_Female', 'Camden_Male'],
@@ -1348,7 +1359,7 @@ const snippetsRef = {
                     ['Gloucester_Female', 'Gloucester_Male'],
                     ['Mercer_Female', 'Mercer_Male'],
                     ['Montgomery_Female', 'Montgomery_Male'],
-                    ['Philadelphia_Female', 'Philadelphia_Male'],
+                    ['Philadelphia_Female', 'Philadelphia_Male']
                 ],
                 data: [
                     {
@@ -1368,13 +1379,13 @@ const snippetsRef = {
                 context: {
                     labels: ['Percent Participation Gap'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['Region'],
-                    ['NJ Suburban Counties'],
                     ['PA Suburban Counties'],
+                    ['NJ Suburban Counties'],
                     ['Bucks'],
                     ['Burlington'],
                     ['Camden'],
@@ -1399,13 +1410,13 @@ const snippetsRef = {
                 context: {
                     labels: ['Percent Participation'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['Region_Male', 'Region_Female'],
-                    ['NJ Suburban Counties_Male', 'NJ Suburban Counties_Female'],
                     ['PA Suburban Counties_Male', 'PA Suburban Counties_Female'],
+                    ['NJ Suburban Counties_Male', 'NJ Suburban Counties_Female'],
                     ['Bucks_Male', 'Bucks_Female'],
                     ['Burlington_Male', 'Burlington_Female'],
                     ['Camden_Male', 'Camden_Female'],
@@ -1531,9 +1542,9 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPCAM', 'DVRPCMD', 'DVRPCPM', 'DVRPCNT'],
-                    ['NJCosAM', 'NJCosMD', 'NJCosPM', 'NJCosNT'],
                     ['PACosAM', 'PACosMD', 'PACosPM', 'PACosNT'],
                     ['PASubCosAM', 'PASubCosMD', 'PASubCosPM', 'PASubCosNT'],
+                    ['NJCosAM', 'NJCosMD', 'NJCosPM', 'NJCosNT'],
                     ['BucAM', 'BucMD', 'BucPM', 'BucNT'],
                     ['BurlAM', 'BurlMD', 'BurlPM', 'BurlNT'],
                     ['CamAM', 'CamMD', 'CamPM', 'CamNT'],
@@ -1580,7 +1591,7 @@ const snippetsRef = {
                 dataSource: ['Exports'],
                 context: {
                     labels: ['Billions of Dollars (2018)'],
-                    units: ['singles']
+                    units: ['dollars']
                 },
                 data: [
                     {
@@ -1667,22 +1678,22 @@ const snippetsRef = {
                 context: {
                     labels: ['Commute Mode Share'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPCSOV', 'DVRPCNonSOV'],
                     ['PASubSOV', 'PASubNonSOV'],
                     ['NJCosSOV', 'NJCosNonSOV'],
-                    ['ChesSOV', 'ChesNonSOV'],
-                    ['DelSOV', 'DelNonSOV'],
-                    ['MontSOV', 'MontNonSOV'],
+                    ['BuckSOV', 'BuckNonSOV'],
                     ['BurlSOV', 'BurlNonSOV'],
                     ['CamdSOV', 'CamdNonSOV'],
+                    ['ChesSOV', 'ChesNonSOV'],
+                    ['DelSOV', 'DelNonSOV'],
                     ['GlocSOV', 'GlocNonSOV'],
                     ['MercSOV', 'MercNonSOV'],
-                    ['PhilSOV', 'PhilNonSOV'],
-                    ['BuckSOV', 'BuckNonSOV']
+                    ['MontSOV', 'MontNonSOV'],
+                    ['PhilSOV', 'PhilNonSOV']
                 ],
                 data: [
                     {
@@ -1702,22 +1713,22 @@ const snippetsRef = {
                 context: {
                     labels: ['Commute Mode Share'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPCPool', 'DVRPCTransit', 'DVRPCWalk', 'DVRPCBike', 'DVRPCTMO', 'DVRPCWFH', 'DVRPCBus', 'DVRPCRail', 'DVRPCSubw', 'DVRPCTroll', 'DVRPCFerry',  'DVRPCMcyc', 'DVRPCOther', 'DVRPCTaxi'],
                     ['PASubPool', 'PASubTransit', 'PASubWalk', 'PASubBike', 'PASubTMO', 'PASubWFH', 'PASubBus', 'PASubRail', 'PASubSubw', 'PASubTroll', 'PASubFerry',  'PASubMcyc', 'PASubOther', 'PASubTaxi'],
                     ['NJCosPool', 'NJCosTransit', 'NJCosWalk', 'NJCosBike', 'NJCosTMO', 'NJCosWFH', 'NJCosBus', 'NJCosRail', 'NJCosSubw', 'NJCosTroll', 'NJCosFerry',  'NJCosMcyc', 'NJCosOther', 'NJCosTaxi'],
-                    ['ChesPool', 'ChesTransit', 'ChesWalk', 'ChesBike', 'ChesTMO', 'ChesWFH', 'ChesBus', 'ChesRail', 'ChesSubw', 'ChesTroll', 'ChesFerry',  'ChesMcyc', 'ChesOther', 'ChesTaxi'],
-                    ['DelaPool', 'DelaTransit', 'DelaWalk', 'DelaBike', 'DelaTMO', 'DelaWFH', 'DelaBus', 'DelaRail', 'DelaSubw', 'DelaTroll', 'DelaFerry',  'DelaMcyc', 'DelaOther', 'DelaTaxi'],
-                    ['MontPool', 'MontTransit', 'MontWalk', 'MontBike', 'MontTMO', 'MontWFH', 'MontBus', 'MontRail', 'MontSubw', 'MontTroll', 'MontFerry',  'MontMcyc', 'MontOther', 'MontTaxi'],
+                    ['BuckPool', 'BuckTransit', 'BuckWalk', 'BuckBike', 'BuckTMO', 'BuckWFH', 'BuckBus', 'BuckRail', 'BuckSubw', 'BuckTroll', 'BuckFerry',  'BuckMcyc', 'BuckOther', 'BuckTaxi'],
                     ['BurlPool', 'BurlTransit', 'BurlWalk', 'BurlBike', 'BurlTMO', 'BurlWFH', 'BurlBus', 'BurlRail', 'BurlSubw', 'BurlTroll', 'BurlFerry',  'BurlMcyc', 'BurlOther', 'BurlTaxi'],
                     ['CamdPool', 'CamdTransit', 'CamdWalk', 'CamdBike', 'CamdTMO', 'CamdWFH', 'CamdBus', 'CamdRail', 'CamdSubw', 'CamdTroll', 'CamdFerry',  'CamdMcyc', 'CamdOther', 'CamdTaxi'],
+                    ['ChesPool', 'ChesTransit', 'ChesWalk', 'ChesBike', 'ChesTMO', 'ChesWFH', 'ChesBus', 'ChesRail', 'ChesSubw', 'ChesTroll', 'ChesFerry',  'ChesMcyc', 'ChesOther', 'ChesTaxi'],
+                    ['DelaPool', 'DelaTransit', 'DelaWalk', 'DelaBike', 'DelaTMO', 'DelaWFH', 'DelaBus', 'DelaRail', 'DelaSubw', 'DelaTroll', 'DelaFerry',  'DelaMcyc', 'DelaOther', 'DelaTaxi'],
                     ['GlocPool', 'GlocTransit', 'GlocWalk', 'GlocBike', 'GlocTMO', 'GlocWFH', 'GlocBus', 'GlocRail', 'GlocSubw', 'GlocTroll', 'GlocFerry',  'GlocMcyc', 'GlocOther', 'GlocTaxi'],
                     ['MercPool', 'MercTransit', 'MercWalk', 'MercBike', 'MercTMO', 'MercWFH', 'MercBus', 'MercRail', 'MercSubw', 'MercTroll', 'MercFerry',  'MercMcyc', 'MercOther', 'MercTaxi'],
-                    ['PhilPool', 'PhilTransit', 'PhilWalk', 'PhilBike', 'PhilTMO', 'PhilWFH', 'PhilBus', 'PhilRail', 'PhilSubw', 'PhilTroll', 'PhilFerry',  'PhilMcyc', 'PhilOther', 'PhilTaxi'],
-                    ['BuckPool', 'BuckTransit', 'BuckWalk', 'BuckBike', 'BuckTMO', 'BuckWFH', 'BuckBus', 'BuckRail', 'BuckSubw', 'BuckTroll', 'BuckFerry',  'BuckMcyc', 'BuckOther', 'BuckTaxi']
+                    ['MontPool', 'MontTransit', 'MontWalk', 'MontBike', 'MontTMO', 'MontWFH', 'MontBus', 'MontRail', 'MontSubw', 'MontTroll', 'MontFerry',  'MontMcyc', 'MontOther', 'MontTaxi'],
+                    ['PhilPool', 'PhilTransit', 'PhilWalk', 'PhilBike', 'PhilTMO', 'PhilWFH', 'PhilBus', 'PhilRail', 'PhilSubw', 'PhilTroll', 'PhilFerry',  'PhilMcyc', 'PhilOther', 'PhilTaxi']
                 ],
                 data: [
                     {
@@ -1802,7 +1813,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['transit_ridership_graph_1'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips per Capita'],
+                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
                     units: ['thousands', 'singles'],
                 },
                 columnOptions: [
@@ -1821,7 +1832,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['transit_ridership_graph_2'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips per Capita'],
+                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
                     units: ['thousands', 'singles'],
                 },
                 columnOptions: [
@@ -1860,7 +1871,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['transit_ridership_graph_3'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips per Capita'],
+                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
                     units: ['thousands', 'singles'],
                 },
                 columnOptions: [
@@ -1913,7 +1924,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'CO2 Equivalent (Millions of Metric Tons)',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'emissions_total']
                     }
                 ]
@@ -1924,7 +1935,7 @@ const snippetsRef = {
                 dataSource: ['emissions_2'],
                 context: {
                     labels: ['CO2 Equivalent (Millions of Metric Tons)'],
-                    units: ['singles'],
+                    units: ['singles']
                 },
                 data: [
                     {
@@ -1999,20 +2010,20 @@ const snippetsRef = {
                 dataSource: ['emissions_4'],
                 axisLabel: 'Degrees Farenheit',
                 context: {
-                    labels: ['Degrees Farenheit', 'Precipitation (inches)', '% of Precipitation from Severe Storms'],
+                    labels: ['Degrees Farenheit', 'Precipitation (inches)', 'Percentage of Precipitation from Severe Storms'],
                     keepLabels: false,
-                    units: ['singles', 'singles', 'percent'],
+                    units: ['thousands', 'thousands', 'percentC'],
                     keepUnits: false
                 },
                 columnOptions: [
-                    ['Temperature - Farenheit', '30 year trend - Temperature'],
-                    ['Precipitation', '30 year trend - Precipitation'],
+                    ['Average Annual Temperature', '30 year trend - Temperature'],
+                    ['Annual Precipitation', '30 year trend - Precipitation'],
                     ['Precipitation from Severe Storms', '30 year trend - Precipitation from Severe Storms']
                 ],
                 data: [
                     {
-                        'key': 'Temperature',
-                        columns: ['year', 'Temperature - Farenheit'],
+                        'key': 'Average Annual Temperature',
+                        columns: ['year', 'Average Annual Temperature'],
                         type: 'scatter',
                         yAxis: 1
                     },
@@ -2195,11 +2206,11 @@ const snippetsRef = {
                 dataSource: ['popGrowth'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)', 'Percent Change in Population'],
-                    units: ['thousands', 'thousands', 'percent']
+                    units: ['thousands', 'thousandsC', 'percentC']
                 },
                 columnOptions: [
-                    ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
                     ['Core-count','DevCom-count','GroSub-count','Rural-count','Burlington-count','Camden-count','Gloucester-count','Mercer-count','Bucks-count','Chester-count','Delaware-count','Montgomery-count','Philadelphia-count','NJCnt-count','PASub-count','DVRPC-count'],
+                    ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
                     ['Core-perc','DevCom-perc','GroSub-perc','Rural-perc','Burlington-perc','Camden-perc','Gloucester-perc','Mercer-perc','Bucks-perc','Chester-perc','Delaware-perc','Montgomery-perc','Philadelphia-perc','NJCnt-perc','PASub-perc','DVRPC-perc']
                 ],
                 data: [
@@ -2317,13 +2328,12 @@ const snippetsRef = {
                 dataSource: ['pop_age_change','pop_age_totals'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)'],
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC_<20','DVRPC_20-34','DVRPC_35-49','DVRPC_50-64','DVRPC_65+'],
-                    ['NJCnt_<20','NJCnt_20-34','NJCnt_35-49','NJCnt_50-64','NJCnt_65+'],
                     ['PASub_<20','PASub_20-34','PASub_35-49','PASub_50-64','PASub_65+'],
+                    ['NJCnt_<20','NJCnt_20-34','NJCnt_35-49','NJCnt_50-64','NJCnt_65+'],
                     ['Bucks_<20','Bucks_20-34','Bucks_35-49','Bucks_50-64','Bucks_65+'],
                     ['Burlington_<20','Burlington_20-34','Burlington_35-49','Burlington_50-64','Burlington_65+'],
                     ['Camden_<20','Camden_20-34','Camden_35-49','Camden_50-64','Camden_65+'],
@@ -2363,13 +2373,12 @@ const snippetsRef = {
                 dataSource: ['pop_race_change','pop_race_totals'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)'],
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC_WA','DVRPC_BA','DVRPC_IA','DVRPC_AA','DVRPC_NA','DVRPC_TOM'],
-                    ['NJCnt_WA','NJCnt_BA','NJCnt_IA','NJCnt_AA','NJCnt_NA','NJCnt_TOM'],
                     ['PASub_WA','PASub_BA','PASub_IA','PASub_AA','PASub_NA','PASub_TOM'],
+                    ['NJCnt_WA','NJCnt_BA','NJCnt_IA','NJCnt_AA','NJCnt_NA','NJCnt_TOM'],
                     ['Bucks_WA','Bucks_BA','Bucks_IA','Bucks_AA','Bucks_NA','Bucks_TOM'],
                     ['Burlington_WA','Burlington_BA','Burlington_IA','Burlington_AA','Burlington_NA','Burlington_TOM'],
                     ['Camden_WA','Camden_BA','Camden_IA','Camden_AA','Camden_NA','Camden_TOM'],
@@ -2413,8 +2422,7 @@ const snippetsRef = {
                 dataSource: ['pop_hisp_change','pop_hisp_totals'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)'],
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['thousands', 'thousandsC'],
                 },
                 columnOptions: [
                     ['DVRPC_NH','DVRPC_H'],
@@ -2459,23 +2467,23 @@ const snippetsRef = {
                 context: {
                     labels: ['Percentage of Deck Area for All Bridges', 'Percentage of All Bridges'],
                     keepLabels: false,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPC- All','DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
-                    ['New Jersey Suburbs- All','New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
-                    ['Pennsylvania Suburbs- All','Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
                     ['Pennsylvania All Counties- All','Pennsylvania All Counties- State', 'Pennsylvania All Counties- Local', 'Pennsylvania All Counties- Other'],
+                    ['Pennsylvania Suburbs- All','Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
+                    ['New Jersey Suburbs- All','New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
                     ['Bucks- All','Bucks- State', 'Bucks- Local', 'Bucks- Other'],
-                    ['Chester- All','Chester- State', 'Chester- Local', 'Chester- Other'],
-                    ['Delaware- All','Delaware- State', 'Delaware- Local', 'Delaware- Other'],
-                    ['Montgomery- All','Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
                     ['Burlington- All','Burlington- State', 'Burlington- Local', 'Burlington- Other'],
                     ['Camden- All','Camden- State', 'Camden- Local', 'Camden- Other'],
+                    ['Chester- All','Chester- State', 'Chester- Local', 'Chester- Other'],
+                    ['Delaware- All','Delaware- State', 'Delaware- Local', 'Delaware- Other'],
                     ['Gloucester- All','Gloucester- State', 'Gloucester- Local', 'Gloucester- Other'],
                     ['Mercer- All','Mercer- State', 'Mercer- Local', 'Mercer- Other'],
-                    ['Philadelphia- All','Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other'],
+                    ['Montgomery- All','Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
+                    ['Philadelphia- All','Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other']
                 ],
                 data: [
                     {
@@ -2484,14 +2492,17 @@ const snippetsRef = {
                     },
                     {
                         'key': 'State',
+                        disabled: true,
                         columns: ['year', 'DVRPC- State']
                     },
                     {
                         'key': 'Local',
+                        disabled: true,
                         columns: ['year', 'DVRPC- Local']
                     },
                     {
                         'key': 'Other',
+                        disabled: true,
                         columns: ['year', 'DVRPC- Other']
                     }
                 ]
@@ -2508,17 +2519,17 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
-                    ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
-                    ['Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
                     ['Pennsylvania All Counties- State', 'Pennsylvania All Counties- Local', 'Pennsylvania All Counties- Other'],
+                    ['Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
+                    ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
                     ['Bucks- State', 'Bucks- Local', 'Bucks- Other'],
-                    ['Chester- State', 'Chester- Local', 'Chester- Other'],
-                    ['Delaware- State', 'Delaware- Local', 'Delaware- Other'],
-                    ['Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
                     ['Burlington- State', 'Burlington- Local', 'Burlington- Other'],
                     ['Camden- State', 'Camden- Local', 'Camden- Other'],
+                    ['Chester- State', 'Chester- Local', 'Chester- Other'],
+                    ['Delaware- State', 'Delaware- Local', 'Delaware- Other'],
                     ['Gloucester- State', 'Gloucester- Local', 'Gloucester- Other'],
                     ['Mercer- State', 'Mercer- Local', 'Mercer- Other'],
+                    ['Montgomery- State', 'Montgomery- Local', 'Montgomery- Other'],
                     ['Philadelphia- State', 'Philadelphia- Local', 'Philadelphia- Other'],
                 ],
                 data: [
@@ -2548,16 +2559,17 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
-                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
+                    ['Pennsylvania All Counties- NA','Pennsylvania All Counties- Poor','Pennsylvania All Counties- Fair','Pennsylvania All Counties- Good'],
                     ['Pennsylvania Suburbs- NA','Pennsylvania Suburbs- Poor','Pennsylvania Suburbs- Fair','Pennsylvania Suburbs- Good'],
+                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
                     ['Bucks- NA','Bucks- Poor','Bucks- Fair','Bucks- Good'],
-                    ['Chester- NA','Chester- Poor','Chester- Fair','Chester- Good'],
-                    ['Delaware- NA','Delaware- Poor','Delaware- Fair','Delaware- Good'],
-                    ['Montgomery- NA','Montgomery- Poor','Montgomery- Fair','Montgomery- Good'],
                     ['Burlington- NA','Burlington- Poor','Burlington- Fair','Burlington- Good'],
                     ['Camden- NA','Camden- Poor','Camden- Fair','Camden- Good'],
+                    ['Chester- NA','Chester- Poor','Chester- Fair','Chester- Good'],
+                    ['Delaware- NA','Delaware- Poor','Delaware- Fair','Delaware- Good'],
                     ['Gloucester- NA','Gloucester- Poor','Gloucester- Fair','Gloucester- Good'],
                     ['Mercer- NA','Mercer- Poor','Mercer- Fair','Mercer- Good'],
+                    ['Montgomery- NA','Montgomery- Poor','Montgomery- Fair','Montgomery- Good'],
                     ['Philadelphia- NA','Philadelphia- Poor','Philadelphia- Fair','Philadelphia- Good']
                 ],
                 data: [
@@ -2596,7 +2608,7 @@ const snippetsRef = {
                 dataSource: ['water_quality_1'],
                 context: {
                     labels: ['Percentage Impaired'],
-                    units: ['percent']
+                    units: ['percentC']
                 },
                 data: [
                     {
@@ -2639,7 +2651,7 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: [['water_quality_3']],
+                dataSource: ['water_quality_3'],
                 context: {
                     labels: ['Subwatershed Acres Impaired (Thousands)'],
                     units: ['thousands']
@@ -2673,96 +2685,94 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['landConsumption1'],
+                dataSource: ['land_consumption_1a','land_consumption_1b'],
                 context: {
-                    labels: ['Acres', 'Acres per Capita', 'Acres', 'Acres per Capita'],
-                    units: ['thousands', 'singles', 'thousands', 'singles'],
+                    labels: ['Total Acres', 'Acres Per Capita'],
+                    units: ['thousands', 'singles'],
                 },
                 columnOptions: [
-                    ['Total Developed Acres- DVRPC','Total Developed Acres- NJ Suburbs','Total Developed Acres- PA Suburbs','Total Developed Acres- Core City','Total Developed Acres- Developed Community','Total Developed Acres- Growing Suburb','Total Developed Acres- Rural Area','Total Developed Acres- Bucks','Total Developed Acres- Burlington','Total Developed Acres- Camden','Total Developed Acres- Chester','Total Developed Acres- Delaware','Total Developed Acres- Gloucester','Total Developed Acres- Mercer','Total Developed Acres- Montgomery','Total Developed Acres- Philadelphia'],
-                    ['Developed Acres per Capita- DVRPC','Developed Acres per Capita- NJ Suburbs','Developed Acres per Capita- PA Suburbs','Developed Acres per Capita- Core City','Developed Acres per Capita- Developed Community','Developed Acres per Capita- Growing Suburb','Developed Acres per Capita- Rural Area','Developed Acres per Capita- Bucks','Developed Acres per Capita- Burlington','Developed Acres per Capita- Camden','Developed Acres per Capita- Chester','Developed Acres per Capita- Delaware','Developed Acres per Capita- Gloucester','Developed Acres per Capita- Mercer','Developed Acres per Capita- Montgomery','Developed Acres per Capita- Philadelphia'],
-                    ['Total Agricultural Acres- DVRPC','Total Agricultural Acres- NJ Suburbs','Total Agricultural Acres- PA Suburbs','Total Agricultural Acres- Core City','Total Agricultural Acres- Developed Community','Total Agricultural Acres- Growing Suburb','Total Agricultural Acres- Rural Area','Total Agricultural Acres- Bucks','Total Agricultural Acres- Burlington','Total Agricultural Acres- Camden','Total Agricultural Acres- Chester','Total Agricultural Acres- Delaware','Total Agricultural Acres- Gloucester','Total Agricultural Acres- Mercer','Total Agricultural Acres- Montgomery','Total Agricultural Acres- Philadelphia'],
-                    ['Agricultural Acres per Capita- DVRPC','Agricultural Acres per Capita- NJ Suburbs','Agricultural Acres per Capita- PA Suburbs','Agricultural Acres per Capita- Core City','Agricultural Acres per Capita- Developed Community','Agricultural Acres per Capita- Growing Suburb','Agricultural Acres per Capita- Rural Area','Agricultural Acres per Capita- Bucks','Agricultural Acres per Capita- Burlington','Agricultural Acres per Capita- Camden','Agricultural Acres per Capita- Chester','Agricultural Acres per Capita- Delaware','Agricultural Acres per Capita- Gloucester','Agricultural Acres per Capita- Mercer','Agricultural Acres per Capita- Montgomery','Agricultural Acres per Capita- Philadelphia']
+                    ['Developed - DVRPC','Developed - New Jersey Suburbs','Developed - Pennsylvania Suburbs','Developed - Core City','Developed - Developed Community','Developed - Growing Suburb','Developed - Rural Area','Developed - Bucks','Developed - Burlington','Developed - Camden','Developed - Chester','Developed - Delaware','Developed - Gloucester','Developed - Mercer','Developed - Montgomery','Developed - Philadelphia'],
+                    ['Agricultural - DVRPC','Agricultural - New Jersey Suburbs','Agricultural - PA Suburbs','Agricultural - Core City','Agricultural - Developed Community','Agricultural - Growing Suburb','Agricultural - Rural Area','Agricultural - Bucks','Agricultural - Burlington','Agricultural - Camden','Agricultural - Chester','Agricultural - Delaware','Agricultural - Gloucester','Agricultural - Mercer','Agricultural - Montgomery','Agricultural - Philadelphia']
                 ],
                 data: [
                     {
                         'key': 'DVRPC',
-                        columns: ['year', 'Total Developed Acres- DVRPC']
+                        columns: ['year', 'Developed - DVRPC']
                     },
                     {
                         'key': 'NJ Suburbs',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- NJ Suburbs']
+                        columns: ['year', 'Developed - New Jersey Suburbs']
                     },
                     {
                         'key': 'PA Suburbs',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- PA Suburbs']
+                        columns: ['year', 'Developed - Pennsylvania Suburbs']
                     },
                     {
                         'key': 'Core City',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Core City']
+                        columns: ['year', 'Developed - Core City']
                     },
                     {
                         'key': 'Developed Community',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Developed Community']
+                        columns: ['year', 'Developed - Developed Community']
                     },
                     {
                         'key': 'Growing Suburb',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Growing Suburb']
+                        columns: ['year', 'Developed - Growing Suburb']
                     },
                     {
                         'key': 'Rural Area',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Rural Area']
+                        columns: ['year', 'Developed - Rural Area']
                     },
                     {
                         'key': 'Bucks',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Bucks']
+                        columns: ['year', 'Developed - Bucks']
                     },
                     {
                         'key': 'Burlington',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Burlington']
+                        columns: ['year', 'Developed - Burlington']
                     },
                     {
                         'key': 'Camden',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Camden']
+                        columns: ['year', 'Developed - Camden']
                     },
                     {
                         'key': 'Chester',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Chester']
+                        columns: ['year', 'Developed - Chester']
                     },
                     {
                         'key': 'Delaware',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Delaware']
+                        columns: ['year', 'Developed - Delaware']
                     },
                     {
                         'key': 'Gloucester',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Gloucester']
+                        columns: ['year', 'Developed - Gloucester']
                     },
                     {
                         'key': 'Mercer',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Mercer']
+                        columns: ['year', 'Developed - Mercer']
                     },
                     {
                         'key': 'Montgomery',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Montgomery']
+                        columns: ['year', 'Developed - Montgomery']
                     },
                     {
                         'key': 'Philadelphia',
                         disabled: true,
-                        columns: ['year', 'Total Developed Acres- Philadelphia']
+                        columns: ['year', 'Developed - Philadelphia']
                     }
                 ]
             },
@@ -2773,13 +2783,13 @@ const snippetsRef = {
                 context: {
                     labels: ['Acres (Thousands)'],
                     keepLabels: true,
-                    units: ['thousands'],
+                    units: ['thousandsC'],
                     keepUnits: true
                 },
                 columnOptions: [
                     ['DVRPC- Agriculture','DVRPC- Commercial','DVRPC- Community Services','DVRPC- Manufacturing','DVRPC- Military','DVRPC- Mining','DVRPC- Parking','DVRPC- Recreation','DVRPC- multi-fam','DVRPC- single-fam','DVRPC- Transportation','DVRPC- Utility','DVRPC- Vacant','DVRPC- Water','DVRPC- Wooded'],
-                    ['NJ Suburbs- Agriculture','NJ Suburbs- Commercial','NJ Suburbs- Community Services','NJ Suburbs- Manufacturing','NJ Suburbs- Military','NJ Suburbs- Mining','NJ Suburbs- Parking','NJ Suburbs- Recreation','NJ Suburbs- multi-fam','NJ Suburbs- single-fam','NJ Suburbs- Transportation','NJ Suburbs- Utility','NJ Suburbs- Vacant','NJ Suburbs- Water','NJ Suburbs- Wooded'],
                     ['PA Suburbs- Agriculture','PA Suburbs- Commercial','PA Suburbs- Community Services','PA Suburbs- Manufacturing','PA Suburbs- Military','PA Suburbs- Mining','PA Suburbs- Parking','PA Suburbs- Recreation','PA Suburbs- multi-fam','PA Suburbs- single-fam','PA Suburbs- Transportation','PA Suburbs- Utility','PA Suburbs- Vacant','PA Suburbs- Water','PA Suburbs- Wooded'],
+                    ['NJ Suburbs- Agriculture','NJ Suburbs- Commercial','NJ Suburbs- Community Services','NJ Suburbs- Manufacturing','NJ Suburbs- Military','NJ Suburbs- Mining','NJ Suburbs- Parking','NJ Suburbs- Recreation','NJ Suburbs- multi-fam','NJ Suburbs- single-fam','NJ Suburbs- Transportation','NJ Suburbs- Utility','NJ Suburbs- Vacant','NJ Suburbs- Water','NJ Suburbs- Wooded'],
                     ['Core City- Agriculture','Core City- Commercial','Core City- Community Services','Core City- Manufacturing','Core City- Military','Core City- Mining','Core City- Parking','Core City- Recreation','Core City- multi-fam','Core City- single-fam','Core City- Transportation','Core City- Utility','Core City- Vacant','Core City- Water','Core City- Wooded'],
                     ['Developed Community- Agriculture','Developed Community- Commercial','Developed Community- Community Services','Developed Community- Manufacturing','Developed Community- Military','Developed Community- Mining','Developed Community- Parking','Developed Community- Recreation','Developed Community- multi-fam','Developed Community- single-fam','Developed Community- Transportation','Developed Community- Utility','Developed Community- Vacant','Developed Community- Water','Developed Community- Wooded'],
                     ['Growing Suburb- Agriculture','Growing Suburb- Commercial','Growing Suburb- Community Services','Growing Suburb- Manufacturing','Growing Suburb- Military','Growing Suburb- Mining','Growing Suburb- Parking','Growing Suburb- Recreation','Growing Suburb- multi-fam','Growing Suburb- single-fam','Growing Suburb- Transportation','Growing Suburb- Utility','Growing Suburb- Vacant','Growing Suburb- Water','Growing Suburb- Wooded'],
@@ -2860,98 +2870,95 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: ['landConsumption3'],
+                dataSource: ['land_consumption_3a','land_consumption_3b'],
                 context: {
-                    labels: ['Acres','Percent','Acres','Percent','Acres','Percent'],
-                    units: ['thousands','percent','thousands', 'percent','thousands','percent'],
+                    labels: ['Acres','Percent'],
+                    units: ['thousands','percentC']
                 },
                 columnOptions: [
-                    ['DVRPC- Total Acres','NJ Suburbs- Total Acres','PA Suburbs- Total Acres','Core City- Total Acres','Developed Community- Total Acres','Growing Suburb- Total Acres','Rural Area- Total Acres','Bucks- Total Acres','Burlington- Total Acres','Camden- Total Acres','Chester- Total Acres','Delaware- Total Acres','Gloucester- Total Acres','Mercer- Total Acres','Montgomery- Total Acres','Philadelphia- Total Acres'],
-                    ['DVRPC- Total Percent','NJ Suburbs- Total Percent','PA Suburbs- Total Percent','Core City- Total Percent','Developed Community- Total Percent','Growing Suburb- Total Percent','Rural Area- Total Percent','Bucks- Total Percent','Burlington- Total Percent','Camden- Total Percent','Chester- Total Percent','Delaware- Total Percent','Gloucester- Total Percent','Mercer- Total Percent','Montgomery- Total Percent','Philadelphia- Total Percent'],
-                    ['DVRPC- Public Acres','NJ Suburbs- Public Acres','PA Suburbs- Public Acres','Core City- Public Acres','Developed Community- Public Acres','Growing Suburb- Public Acres','Rural Area- Public Acres','Bucks- Public Acres','Burlington- Public Acres','Camden- Public Acres','Chester- Public Acres','Delaware- Public Acres','Gloucester- Public Acres','Mercer- Public Acres','Montgomery- Public Acres','Philadelphia- Public Acres'],
-                    ['DVRPC- Public Percent','NJ Suburbs- Public Percent','PA Suburbs- Public Percent','Core City- Public Percent','Developed Community- Public Percent','Growing Suburb- Public Percent','Rural Area- Public Percent','Bucks- Public Percent','Burlington- Public Percent','Camden- Public Percent','Chester- Public Percent','Delaware- Public Percent','Gloucester- Public Percent','Mercer- Public Percent','Montgomery- Public Percent','Philadelphia- Public Percent'],
-                    ['DVRPC- Private Acres','NJ Suburbs- Private Acres','PA Suburbs- Private Acres','Core City- Private Acres','Developed Community- Private Acres','Growing Suburb- Private Acres','Rural Area- Private Acres','Bucks- Private Acres','Burlington- Private Acres','Camden- Private Acres','Chester- Private Acres','Delaware- Private Acres','Gloucester- Private Acres','Mercer- Private Acres','Montgomery- Private Acres','Philadelphia- Private Acres'],
-                    ['DVRPC- Private Percent','NJ Suburbs- Private Percent','PA Suburbs- Private Percent','Core City- Private Percent','Developed Community- Private Percent','Growing Suburb- Private Percent','Rural Area- Private Percent','Bucks- Private Percent','Burlington- Private Percent','Camden- Private Percent','Chester- Private Percent','Delaware- Private Percent','Gloucester- Private Percent','Mercer- Private Percent','Montgomery- Private Percent','Philadelphia- Private Percent']
+                    ['DVRPC- Total','NJ Suburbs- Total','PA Suburbs- Total','Core City- Total','Developed Community- Total','Growing Suburb- Total','Rural Area- Total','Bucks- Total','Burlington- Total','Camden- Total','Chester- Total','Delaware- Total','Gloucester- Total','Mercer- Total','Montgomery- Total','Philadelphia- Total'],
+                    ['DVRPC- Public','NJ Suburbs- Public','PA Suburbs- Public','Core City- Public','Developed Community- Public','Growing Suburb- Public','Rural Area- Public','Bucks- Public','Burlington- Public','Camden- Public','Chester- Public','Delaware- Public','Gloucester- Public','Mercer- Public','Montgomery- Public','Philadelphia- Public'],
+                    ['DVRPC- Private','NJ Suburbs- Private','PA Suburbs- Private','Core City- Private','Developed Community- Private','Growing Suburb- Private','Rural Area- Private','Bucks- Private','Burlington- Private','Camden- Private','Chester- Private','Delaware- Private','Gloucester- Private','Mercer- Private','Montgomery- Private','Philadelphia- Private']
                 ],
                 data: [
                     {
                         'key': 'DVRPC',
-                        columns: ['year', 'DVRPC- Total Acres']
+                        columns: ['year', 'DVRPC- Total']
                     },
                     {
                         'key': 'NJ Suburbs',
                         disabled: true,
-                        columns: ['year', 'NJ Suburbs- Total Acres']
+                        columns: ['year', 'NJ Suburbs- Total']
                     },
                     {
                         'key': 'PA Suburbs',
                         disabled: true,
-                        columns: ['year', 'PA Suburbs- Total Acres']
+                        columns: ['year', 'PA Suburbs- Total']
                     },
                     {
                         'key': 'Core City',
                         disabled: true,
-                        columns: ['year', 'Core City- Total Acres']
+                        columns: ['year', 'Core City- Total']
                     },
                     {
                         'key': 'Developed Community',
                         disabled: true,
-                        columns: ['year', 'Developed Community- Total Acres']
+                        columns: ['year', 'Developed Community- Total']
                     },
                     {
                         'key': 'Growing Suburb',
                         disabled: true,
-                        columns: ['year', 'Growing Suburb- Total Acres']
+                        columns: ['year', 'Growing Suburb- Total']
                     },
                     {
                         'key': 'Rural Area',
                         disabled: true,
-                        columns: ['year', 'Rural Area- Total Acres']
+                        columns: ['year', 'Rural Area- Total']
                     },
                     {
                         'key': 'Bucks',
                         disabled: true,
-                        columns: ['year', 'Bucks- Total Acres']
+                        columns: ['year', 'Bucks- Total']
                     },
                     {
                         'key': 'Burlington',
                         disabled: true,
-                        columns: ['year', 'Burlington- Total Acres']
+                        columns: ['year', 'Burlington- Total']
                     },
                     {
                         'key': 'Camden',
                         disabled: true,
-                        columns: ['year', 'Camden- Total Acres']
+                        columns: ['year', 'Camden- Total']
                     },
                     {
                         'key': 'Chester',
                         disabled: true,
-                        columns: ['year', 'Chester- Total Acres']
+                        columns: ['year', 'Chester- Total']
                     },
                     {
                         'key': 'Delaware',
                         disabled: true,
-                        columns: ['year', 'Delaware- Total Acres']
+                        columns: ['year', 'Delaware- Total']
                     },
                     {
                         'key': 'Gloucester',
                         disabled: true,
-                        columns: ['year', 'Gloucester- Total Acres']
+                        columns: ['year', 'Gloucester- Total']
                     },
                     {
                         'key': 'Mercer',
                         disabled: true,
-                        columns: ['year', 'Mercer- Total Acres']
+                        columns: ['year', 'Mercer- Total']
                     },
                     {
                         'key': 'Montgomery',
                         disabled: true,
-                        columns: ['year', 'Montgomery- Total Acres']
+                        columns: ['year', 'Montgomery- Total']
                     },
                     {
                         'key': 'Philadelphia',
                         disabled: true,
-                        columns: ['year', 'Philadelphia- Total Acres']
+                        columns: ['year', 'Philadelphia- Total']
                     }
                 ]
             },
@@ -2967,8 +2974,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- Federal','DVRPC- State','DVRPC- County','DVRPC- Municipal','DVRPC- Non-profit','DVRPC- Preserved Farmland'],
-                    ['NJ Suburbs- Federal','NJ Suburbs- State','NJ Suburbs- County','NJ Suburbs- Municipal','NJ Suburbs- Non-profit','NJ Suburbs- Preserved Farmland'],
                     ['PA Suburbs- Federal','PA Suburbs- State','PA Suburbs- County','PA Suburbs- Municipal','PA Suburbs- Non-profit','PA Suburbs- Preserved Farmland'],
+                    ['NJ Suburbs- Federal','NJ Suburbs- State','NJ Suburbs- County','NJ Suburbs- Municipal','NJ Suburbs- Non-profit','NJ Suburbs- Preserved Farmland'],
                     ['Core City- Federal','Core City- State','Core City- County','Core City- Municipal','Core City- Non-profit','Core City- Preserved Farmland'],
                     ['Developed Community- Federal','Developed Community- State','Developed Community- County','Developed Community- Municipal','Developed Community- Non-profit','Developed Community- Preserved Farmland'],
                     ['Growing Suburb- Federal','Growing Suburb- State','Growing Suburb- County','Growing Suburb- Municipal','Growing Suburb- Non-profit','Growing Suburb- Preserved Farmland'],
@@ -2981,7 +2988,7 @@ const snippetsRef = {
                     ['Gloucester- Federal','Gloucester- State','Gloucester- County','Gloucester- Municipal','Gloucester- Non-profit','Gloucester- Preserved Farmland'],
                     ['Mercer- Federal','Mercer- State','Mercer- County','Mercer- Municipal','Mercer- Non-profit','Mercer- Preserved Farmland'],
                     ['Montgomery- Federal','Montgomery- State','Montgomery- County','Montgomery- Municipal','Montgomery- Non-profit','Montgomery- Preserved Farmland'],
-                    ['Philadelphia- Federal','Philadelphia- State','Philadelphia- County','Philadelphia- Municipal','Philadelphia- Non-profit','Philadelphia- Preserved Farmland'],
+                    ['Philadelphia- Federal','Philadelphia- State','Philadelphia- County','Philadelphia- Municipal','Philadelphia- Non-profit','Philadelphia- Preserved Farmland']
                 ],
                 data: [
                     {
@@ -3028,7 +3035,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Percentage of Total Lane Miles'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentC'],
                     keepUnits: true
                 },
                 columnOptions: [
