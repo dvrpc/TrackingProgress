@@ -15,8 +15,8 @@ const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
 // for live:
 //const baseURL = 'http://staging.dvrpc.org/TrackingProgress/'
 
-// remove possible special characters from URL by whitelisting alphanumeric characters, - and /
-const sanitizeHash = hash => hash.replace(/[^\w\-\/]/gi, '')
+// remove possible special characters from URL by whitelisting alphanumeric characters, -, / and &
+const sanitizeHash = hash => hash.replace(/[^\w\-\/\&]/gi, '')
 
 const setIndexURL = () => {
     // update the URL state
