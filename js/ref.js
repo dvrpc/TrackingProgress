@@ -17,7 +17,7 @@ const snippetsRef = {
                 data: [
                     {
                         'key' : 'Annual',
-                        'color': '#9e1a1a',
+                        'color': '#8f3f98',
                         'columns': ['year', 'daysViolating'],
                         type: 'bar',
                         bar: true
@@ -50,17 +50,17 @@ const snippetsRef = {
                 data: [
                     {
                         'key' : 'Unhealthy for Sensitive Groups',
-                        'color': '#ff8e38',
+                        'color': '#ff7e00',
                         'columns': ['quarterYear', 'Unhealthy Sensitive Ozone'],
                     },
                     {
                         'key': 'Unhealthy',
-                        'color': '#ffd500',
+                        'color': '#fe0000',
                         'columns': ['quarterYear', 'Unhealthy Ozone'],
                     },
                     {
                         'key': 'Very Unhealthy',
-                        'color': '#9e1a1a',
+                        'color': '#8f3f98',
                         'columns': ['quarterYear', 'Very Unhealthy Ozone'],
                     }
                 ]
