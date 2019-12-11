@@ -60,7 +60,7 @@ const formatLabels = (y, x, margin, context) => {
     // add axis label & update margin to compensate
     if(context.labels) {
         y.axisLabel(context.labels)
-        margin.left += 20
+        y.axisLabelDistance(15)
 
         // x label defaults to year except for the two edge cases where it's different (which is handled in format Inputs)
         x.axisLabel(context.xLabel)
@@ -91,7 +91,7 @@ const createStackedBarChart = (source, toggleContext) => {
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
-                .margin({top: 35, right: 55, bottom: 45, left: 55})
+                .margin({top: 40, right: 45, bottom: 45, left: 85})
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
@@ -132,7 +132,7 @@ const createLinePlusBarChart = (source, toggleContext) => {
     }, csvObj => {        
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
-                .margin({top: 35, right: 55, bottom: 45, left: 55})
+                .margin({top: 40, right: 45, bottom: 45, left: 85})
                 .focusEnable(false)
                 .x(d => d[0])
                 .y((d, i) => d[1])
@@ -168,7 +168,7 @@ const createLineChart = (source, toggleContext) => {
 
         nv.addGraph(() => {
             let chart = nv.models.lineChart()
-                .margin({top: 35, right: 55, bottom: 45, left: 55})
+                .margin({top: 40, right: 45, bottom: 45, left: 85})
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
                 .clipEdge(false)
@@ -215,7 +215,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
-                .margin({top: 35, right: 55, bottom: 45, left: 55})
+                .margin({top: 40, right: 45, bottom: 45, left: 85})
                 .yDomain1([0, 65])
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
@@ -252,7 +252,7 @@ const createStackedAreaChart = (source, toggleContext) => {
 
         nv.addGraph(() => {
             let chart = nv.models.stackedAreaChart()
-                .margin({top: 35, right: 55, bottom: 45, left: 55})
+                .margin({top: 40, right: 45, bottom: 45, left: 85})
                 .x(d => d[0])
                 .y(d => d[1])
                 .useInteractiveGuideline(true)
@@ -290,7 +290,7 @@ const createWaterfallChart = (source, toggleContext) => {
         bruh[0].remove()
     }
 
-    let margin = {top: 65, right: 55, bottom: 175, left: 55},
+    let margin = {top: 65, right: 45, bottom: 175, left: 85},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     padding = 0.3
