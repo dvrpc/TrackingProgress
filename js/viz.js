@@ -209,9 +209,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
     d3.csv(dataSource, rows => {
         source.data[scatterIndex].values.push({
             x: +rows[scatterSource[0]],
-            y: rows[scatterSource[1]] === 'NA' ? null : +rows[scatterSource[1]],
-            size: 1.5,
-            shape: 'circle'
+            y: rows[scatterSource[1]] === 'NA' ? null : +rows[scatterSource[1]]
         })
         source.data[lineIndex].values.push({
             x: +rows[lineSource[0]],
