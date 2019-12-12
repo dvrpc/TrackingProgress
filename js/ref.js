@@ -213,47 +213,47 @@ const snippetsRef = {
                         'columns': ['year', 'hsRateRural']
                     },
                     {
-                        'key': 'Bucks County',
+                        'key': 'Bucks**',
                         disabled: true,
                         'columns': ['year', 'hsRateBucksCo']
                     },
                     {
-                        'key': 'Burlington County',
+                        'key': 'Burlington**',
                         disabled: true,
                         'columns': ['year', 'hsRateBurlingtonCo']
                     },
                     {
-                        'key': 'Camden County',
+                        'key': 'Camden**',
                         disabled: true,
                         'columns': ['year', 'hsRateCamdenCo']
                     },
                     {
-                        'key': 'Chester County',
+                        'key': 'Chester**',
                         disabled: true,
                         'columns': ['year', 'hsRateChesterCo']
                     },
                     {
-                        'key': 'Delaware County',
+                        'key': 'Delaware**',
                         disabled: true,
                         'columns': ['year', 'hsRateDelawareCo']
                     },
                     {
-                        'key': 'Gloucester County',
+                        'key': 'Gloucester**',
                         disabled: true,
                         'columns': ['year', 'hsRateGloucesterCo']
                     },
                     {
-                        'key': 'Mercer County',
+                        'key': 'Mercer**',
                         disabled: true,
                         'columns': ['year', 'hsRateMercerCo']
                     },
                     {
-                        'key': 'Montgomery County',
+                        'key': 'Montgomery**',
                         disabled: true,
                         'columns': ['year', 'hsRateMontgomeryCo']
                     },
                     {
-                        'key': 'Philadelphia County',
+                        'key': 'Philadelphia**',
                         disabled: true,
                         'columns': ['year', 'hsRatePhiladelphiaCo']
                     }
