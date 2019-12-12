@@ -73,7 +73,7 @@ const axisFormats = {
     'percentC': '.3p',
     'singles': '.3n',
     'thousands': ',.0f',
-    'thousandsC': ',3r',
+    'thousandsC': ',.3r',
     'dollars': '$,3'
 }
 
