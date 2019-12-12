@@ -179,81 +179,81 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region*',
                         'columns': ['year', 'hsRateDVRPC']
                     },
                     {
-                        'key': 'NJ Suburbs',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         'columns': ['year', 'hsRateNJSuburbs']
                     },
                     {
-                        'key': 'PA Suburbs',
+                        'key': 'PA Suburban Counties*',
                         disabled: true,
                         'columns': ['year', 'hsRatePASuburbs']
                     },
                     {
-                        'key': 'Core',
+                        'key': 'Core Cities^',
                         disabled: true,
                         'columns': ['year', 'hsRateCore']
                     },
                     {
-                        'key': 'Developed Communities',
+                        'key': 'Developed Communities^',
                         disabled: true,
                         'columns': ['year', 'hsRateDeveloped']
                     },
                     {
-                        'key': 'Growing Suburb',
+                        'key': 'Growing Suburbs^',
                         disabled: true,
                         'columns': ['year', 'hsRateGrowing']
                     },
                     {
-                        'key': 'Rural Areas',
+                        'key': 'Rural Areas^',
                         disabled: true,
                         'columns': ['year', 'hsRateRural']
                     },
                     {
-                        'key': 'Bucks',
+                        'key': 'Bucks County',
                         disabled: true,
                         'columns': ['year', 'hsRateBucksCo']
                     },
                     {
-                        'key': 'Burlington',
+                        'key': 'Burlington County',
                         disabled: true,
                         'columns': ['year', 'hsRateBurlingtonCo']
                     },
                     {
-                        'key': 'Camden',
+                        'key': 'Camden County',
                         disabled: true,
                         'columns': ['year', 'hsRateCamdenCo']
                     },
                     {
-                        'key': 'Chester',
+                        'key': 'Chester County',
                         disabled: true,
                         'columns': ['year', 'hsRateChesterCo']
                     },
                     {
-                        'key': 'Delaware',
+                        'key': 'Delaware County',
                         disabled: true,
                         'columns': ['year', 'hsRateDelawareCo']
                     },
                     {
-                        'key': 'Gloucester',
+                        'key': 'Gloucester County',
                         disabled: true,
                         'columns': ['year', 'hsRateGloucesterCo']
                     },
                     {
-                        'key': 'Mercer',
+                        'key': 'Mercer County',
                         disabled: true,
                         'columns': ['year', 'hsRateMercerCo']
                     },
                     {
-                        'key': 'Montgomery',
+                        'key': 'Montgomery County',
                         disabled: true,
                         'columns': ['year', 'hsRateMontgomeryCo']
                     },
                     {
-                        'key': 'Philadelphia',
+                        'key': 'Philadelphia County',
                         disabled: true,
                         'columns': ['year', 'hsRatePhiladelphiaCo']
                     }
@@ -349,12 +349,12 @@ const snippetsRef = {
                         'columns': ['year', 'DVRPC- ksi per capita']
                     },
                     {
-                        'key': 'NJ Suburbs',
+                        'key': 'NJ Counties',
                         disabled: true,
                         'columns': ['year', 'NJ Suburbs- ksi per capita']
                     },
                     {
-                        'key': 'PA Suburbs',
+                        'key': 'PA Suburban Counties',
                         disabled: true,
                         'columns': ['year', 'PA Suburbs- ksi per capita']
                     },
@@ -549,7 +549,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Core City',
+                        'key': 'Core Cities',
                         columns: ['year', 'DVRPC- Core City']
                     },
                     {
@@ -557,7 +557,7 @@ const snippetsRef = {
                         columns: ['year', 'DVRPC- Developed Community']
                     },
                     {
-                        'key': 'Growing Suburb',
+                        'key': 'Growing Suburbs',
                         columns: ['year', 'DVRPC- Growing Suburb']
                     },
                     {
@@ -785,7 +785,7 @@ const snippetsRef = {
                 ],
                 data:[
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'DVRPC']
                     },
                     {
@@ -794,7 +794,7 @@ const snippetsRef = {
                         columns: ['year', 'New Jersey Suburbs']
                     },
                     {
-                        'key': 'PA Suburbs',
+                        'key': 'PA Suburban Counties',
                         disabled: true,
                         columns: ['year', 'Pennsylvania Suburbs']
                     },
@@ -1465,7 +1465,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region',
                         columns: ['Year', 'DVRPCFree24']
                     },
                     {
@@ -1595,7 +1595,7 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'DVRPC']
                     },
                     {
@@ -2215,11 +2215,11 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region',
                         columns: ['Year', 'DVRPC']
                     },
                     {
-                        'key': 'PA Suburbs',
+                        'key': 'PA Suburban Counties',
                         disabled: true,
                         columns: ['Year', 'PASub']
                     },
@@ -2229,7 +2229,7 @@ const snippetsRef = {
                         columns: ['Year', 'NJCnt']
                     },
                     {
-                        'key': 'Core City',
+                        'key': 'Core Cities',
                         disabled: true,
                         columns: ['Year', 'Core']
                     },
@@ -2239,7 +2239,7 @@ const snippetsRef = {
                         columns: ['Year', 'DevCom']
                     },
                     {
-                        'key': 'Growing Suburb',
+                        'key': 'Growing Suburbs',
                         disabled: true,
                         columns: ['Year', 'GroSub']
                     },
@@ -2696,21 +2696,21 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'Developed - DVRPC']
                     },
                     {
-                        'key': 'NJ Suburbs',
+                        'key': 'NJ Counties',
                         disabled: true,
                         columns: ['year', 'Developed - New Jersey Suburbs']
                     },
                     {
-                        'key': 'PA Suburbs',
+                        'key': 'PA Suburban Counties',
                         disabled: true,
                         columns: ['year', 'Developed - Pennsylvania Suburbs']
                     },
                     {
-                        'key': 'Core City',
+                        'key': 'Core Cities',
                         disabled: true,
                         columns: ['year', 'Developed - Core City']
                     },
@@ -2720,7 +2720,7 @@ const snippetsRef = {
                         columns: ['year', 'Developed - Developed Community']
                     },
                     {
-                        'key': 'Growing Suburb',
+                        'key': 'Growing Suburbs',
                         disabled: true,
                         columns: ['year', 'Developed - Growing Suburb']
                     },
@@ -2882,21 +2882,21 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'DVRPC- Total']
                     },
                     {
-                        'key': 'NJ Suburbs',
+                        'key': 'NJ Counties',
                         disabled: true,
                         columns: ['year', 'NJ Suburbs- Total']
                     },
                     {
-                        'key': 'PA Suburbs',
+                        'key': 'PA Suburban Counties',
                         disabled: true,
                         columns: ['year', 'PA Suburbs- Total']
                     },
                     {
-                        'key': 'Core City',
+                        'key': 'Core Cities',
                         disabled: true,
                         columns: ['year', 'Core City- Total']
                     },
@@ -2906,7 +2906,7 @@ const snippetsRef = {
                         columns: ['year', 'Developed Community- Total']
                     },
                     {
-                        'key': 'Growing Suburb',
+                        'key': 'Growing Suburbs',
                         disabled: true,
                         columns: ['year', 'Growing Suburb- Total']
                     },
@@ -3046,7 +3046,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'DVRPC- All']
                     },
                     {
