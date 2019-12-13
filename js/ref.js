@@ -2465,7 +2465,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['Bridge_Conditions_1A','Bridge_Conditions_1B'],
                 context: {
-                    labels: ['Percentage of Deck Area for All Bridges', 'Percentage of All Bridges'],
+                    labels: ['Percentage of Deck Area', 'Percentage of Bridges'],
                     keepLabels: false,
                     units: ['percentC'],
                     keepUnits: true
@@ -2630,7 +2630,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['water_quality_2'],
                 context: {
-                    labels: ['Stream Miles Impaired'],
+                    labels: ['Stream Miles'],
                     units: ['thousands']
                 },
                 data: [
@@ -2653,7 +2653,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['water_quality_3'],
                 context: {
-                    labels: ['Subwatershed Acres Impaired (Thousands)'],
+                    labels: ['Subwatershed Acres (Thousands)'],
                     units: ['thousands']
                 },
                 data: [
