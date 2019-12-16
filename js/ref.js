@@ -345,61 +345,61 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         'columns': ['year', 'DVRPC- ksi per capita']
                     },
                     {
-                        'key': 'NJ Counties',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         'columns': ['year', 'NJ Suburbs- ksi per capita']
                     },
                     {
-                        'key': 'PA Suburban Counties',
+                        'key': 'PA Suburban Counties*',
                         disabled: true,
                         'columns': ['year', 'PA Suburbs- ksi per capita']
                     },
                     {
-                        'key': 'Bucks',
+                        'key': 'Bucks**',
                         disabled: true,
                         'columns': ['year', 'Bucks- ksi per capita']
                     },
                     {
-                        'key': 'Burlington',
+                        'key': 'Burlington**',
                         disabled: true,
                         'columns': ['year', 'Burlington- ksi per capita']
                     },
                     {
-                        'key': 'Camden',
+                        'key': 'Camden**',
                         disabled: true,
                         'columns': ['year', 'Camden- ksi per capita']
                     },
                     {
-                        'key': 'Chester',
+                        'key': 'Chester**',
                         disabled: true,
                         'columns': ['year', 'Chester- ksi per capita']
                     },
                     {
-                        'key': 'Delaware',
+                        'key': 'Delaware**',
                         disabled: true,
                         'columns': ['year', 'Delaware- ksi per capita']
                     },
                     {
-                        'key': 'Gloucester',
+                        'key': 'Gloucester**',
                         disabled: true,
                         'columns': ['year', 'Gloucester- ksi per capita']
                     },
                     {
-                        'key': 'Mercer',
+                        'key': 'Mercer**',
                         disabled: true,
                         'columns': ['year', 'Mercer- ksi per capita']
                     },
                     {
-                        'key': 'Montgomery',
+                        'key': 'Montgomery**',
                         disabled: true,
                         'columns': ['year', 'Montgomery- ksi per capita']
                     },
                     {
-                        'key': 'Philadelphia',
+                        'key': 'Philadelphia**',
                         disabled: true,
                         'columns': ['year', 'Philadelphia- ksi per capita']
                     }
@@ -1595,68 +1595,68 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         columns: ['year', 'DVRPC']
                     },
                     {
-                        'key': 'PA Counties',
+                        'key': 'All PA Counties*',
                         disabled: true,
                         columns: ['year', 'PA Counties']
                     },
                     {
-                        'key': 'Suburban PA',
+                        'key': 'PA Suburban Counties*',
                         disabled: true,
                         columns: ['year', 'Suburban PA']
                     },
                     {
-                        'key': 'NJ Counties',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         columns: ['year', 'NJ Counties']
                     },
                     {
-                        'key': 'Philadelphia',
-                        disabled: true,
-                        columns: ['year', 'Philadelphia']
-                    },
-                    {
-                        'key': 'Montgomery County',
-                        disabled: true,
-                        columns: ['year', 'Montgomery']
-                    },
-                    {
-                        'key': 'Delaware County',
-                        disabled: true,
-                        columns: ['year', 'Delaware']
-                    },
-                    {
-                        'key': 'Chester County',
-                        disabled: true,
-                        columns: ['year', 'Chester']
-                    },
-                    {
-                        'key': 'Bucks County',
+                        'key': 'Bucks**',
                         disabled: true,
                         columns: ['year', 'Bucks']
                     },
                     {
-                        'key': 'Mercer County',
+                        'key': 'Burlington**',
                         disabled: true,
-                        columns: ['year', 'Mercer']
+                        columns: ['year', 'Burlington']
                     },
                     {
-                        'key': 'Gloucester County',
-                        disabled: true,
-                        columns: ['year', 'Gloucester']
-                    },
-                    {
-                        'key': 'Camden County',
+                        'key': 'Camden**',
                         disabled: true,
                         columns: ['year', 'Camden']
                     },
                     {
-                        'key': 'Burlington County',
+                        'key': 'Chester**',
                         disabled: true,
-                        columns: ['year', 'Burlington']
+                        columns: ['year', 'Chester']
+                    },
+                    {
+                        'key': 'Delaware**',
+                        disabled: true,
+                        columns: ['year', 'Delaware']
+                    },
+                    {
+                        'key': 'Gloucester**',
+                        disabled: true,
+                        columns: ['year', 'Gloucester']
+                    },
+                    {
+                        'key': 'Mercer**',
+                        disabled: true,
+                        columns: ['year', 'Mercer']
+                    },
+                    {
+                        'key': 'Montgomery**',
+                        disabled: true,
+                        columns: ['year', 'Montgomery']
+                    },
+                    {
+                        'key': 'Philadelphia**',
+                        disabled: true,
+                        columns: ['year', 'Philadelphia']
                     }
                 ]
             }
