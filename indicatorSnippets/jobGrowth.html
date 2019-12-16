@@ -20,13 +20,13 @@
     <hr class="indicator-header-hr"/>
 
     <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Job Growth Rate</h2>
+        <h2 class="indicator-subheader toggle-subheader">Job Growth Rate by Geography</h2>
         <form>
             <fieldset>
-                <label for="viz-0">Select Value: </label>
+                <label for="viz-0">Select Value Type: </label>
                 <select id="viz-0" class="toggle-data-selector">
                     <option value="0">Annual</option>
-                    <option value="1">Cumulative</option>
+                    <option value="1">Since Base Year</option>
                 </select>
             </fieldset>
         </form>
@@ -34,6 +34,7 @@
     <div class="data-viz chart">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
     <small class="chart-src"><em>Source: U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages</em></small>
 
     <hr class="indicator-content-hr" />
@@ -42,6 +43,7 @@
     <div class="data-viz chart2">
         <svg></svg>
     </div>
+    <small class="chart-src"><em>Geography: ** County</em></small>
     <small class="chart-src"><em>Source: U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages</em></small>
 
     <hr class="indicator-content-hr" />

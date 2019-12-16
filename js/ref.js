@@ -87,74 +87,74 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['vmtPerCapDVRPC', 'vmtPerCapNJSuburbs', 'vmtPerCapAllPACounties', 'vmtPerCapPASuburbs', 'vmtPerCapBucksCo', 'vmtPerCapChesterCo', 'vmtPerCapDelawareCo', 'vmtPerCapMontgomeryCo', 'vmtPerCapPhillyCo', 'vmtPerCapBurlingtonCo', 'vmtPerCapCamdenCo', 'vmtPerCapGloucesterCo', 'vmtPerCapMercerCo'],
-                    ['vmtDVRPC', 'vmtNJSuburbs', 'vmtAllPACounties', 'vmtPASuburbs', 'vmtBucksCo', 'vmtChesterCo', 'vmtDelawareCo', 'vmtMontgomeryCo', 'vmtPhillyCo', 'vmtBurlingtonCo', 'vmtCamdenCo', 'vmtGloucesterCo', 'vmtMercerCo'],
-                    ['vmtPerVehicleDVRPC', 'vmtPerVehicleNJSuburbs', 'vmtPerVehicleAllPACounties', 'vmtPerVehiclePASuburbs', 'vmtPerVehicleBucksCo', 'vmtPerVehicleChesterCo', 'vmtPerVehicleDelawareCo', 'vmtPerVehicleMontgomeryCo', 'vmtPerVehiclePhillyCo', 'vmtPerVehicleBurlingtonCo', 'vmtPerVehicleCamdenCo', 'vmtPerVehicleGloucesterCo', 'vmtPerVehicleMercerCo']
+                    ['vmtPerCapDVRPC', 'vmtPerCapNJSuburbs', 'vmtPerCapAllPACounties', 'vmtPerCapPASuburbs', 'vmtPerCapBucksCo', 'vmtPerCapBurlingtonCo', 'vmtPerCapCamdenCo', 'vmtPerCapChesterCo', 'vmtPerCapDelawareCo', 'vmtPerCapGloucesterCo', 'vmtPerCapMercerCo', 'vmtPerCapMontgomeryCo', 'vmtPerCapPhillyCo'],
+                    ['vmtDVRPC', 'vmtNJSuburbs', 'vmtAllPACounties', 'vmtPASuburbs', 'vmtBucksCo', 'vmtBurlingtonCo', 'vmtCamdenCo', 'vmtChesterCo', 'vmtDelawareCo', 'vmtGloucesterCo', 'vmtMercerCo', 'vmtMontgomeryCo', 'vmtPhillyCo'],
+                    ['vmtPerVehicleDVRPC', 'vmtPerVehicleNJSuburbs', 'vmtPerVehicleAllPACounties', 'vmtPerVehiclePASuburbs', 'vmtPerVehicleBucksCo', 'vmtPerVehicleBurlingtonCo', 'vmtPerVehicleCamdenCo', 'vmtPerVehicleChesterCo', 'vmtPerVehicleDelawareCo', 'vmtPerVehicleGloucesterCo', 'vmtPerVehicleMercerCo', 'vmtPerVehicleMontgomeryCo', 'vmtPerVehiclePhillyCo']
                 ],
                 data: [
                     {
-                        'key' : 'DVRPC Region',
+                        'key' : 'DVRPC Region*',
                         'columns': ['year', 'vmtPerCapDVRPC']
                     },
                     {
-                        'key' : 'NJ Suburbs',
+                        'key' : 'NJ Counties*',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapNJSuburbs']
                     },
                     {
-                        'key': 'All PA Counties',
+                        'key': 'All PA Counties*',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapAllPACounties']
                     },
                     {
-                        'key' : 'PA Suburbs',
+                        'key' : 'PA Suburban Counties*',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapPASuburbs']
                     },
                     {
-                        'key' : 'Bucks',
+                        'key' : 'Bucks**',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapBucksCo']
                     },
                     {
-                        'key' : 'Chester',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerCapChesterCo']
-                    },
-                    {
-                        'key' : 'Delaware',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerCapDelawareCo']
-                    },
-                    {
-                        'key' : 'Montgomery',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerCapMontgomeryCo']
-                    },
-                    {
-                        'key' : 'Philadelphia',
-                        'disabled': true,
-                        'columns': ['year', 'vmtPerCapPhillyCo']
-                    },
-                    {
-                        'key' : 'Burlington',
+                        'key' : 'Burlington**',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapBurlingtonCo']
                     },
                     {
-                        'key' : 'Camden',
+                        'key' : 'Camden**',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapCamdenCo']
                     },
                     {
-                        'key' : 'Gloucester',
+                        'key' : 'Chester**',
+                        'disabled': true,
+                        'columns': ['year', 'vmtPerCapChesterCo']
+                    },
+                    {
+                        'key' : 'Gloucester**',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapGloucesterCo']
                     },
                     {
-                        'key' : 'Mercer',
+                        'key' : 'Mercer**',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapMercerCo']
+                    },
+                    {
+                        'key' : 'Delaware**',
+                        'disabled': true,
+                        'columns': ['year', 'vmtPerCapDelawareCo']
+                    },
+                    {
+                        'key' : 'Montgomery**',
+                        'disabled': true,
+                        'columns': ['year', 'vmtPerCapMontgomeryCo']
+                    },
+                    {
+                        'key' : 'Philadelphia**',
+                        'disabled': true,
+                        'columns': ['year', 'vmtPerCapPhillyCo']
                     }
                 ]
             }
@@ -345,61 +345,61 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         'columns': ['year', 'DVRPC- ksi per capita']
                     },
                     {
-                        'key': 'NJ Counties',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         'columns': ['year', 'NJ Suburbs- ksi per capita']
                     },
                     {
-                        'key': 'PA Suburban Counties',
+                        'key': 'PA Suburban Counties*',
                         disabled: true,
                         'columns': ['year', 'PA Suburbs- ksi per capita']
                     },
                     {
-                        'key': 'Bucks',
+                        'key': 'Bucks**',
                         disabled: true,
                         'columns': ['year', 'Bucks- ksi per capita']
                     },
                     {
-                        'key': 'Burlington',
+                        'key': 'Burlington**',
                         disabled: true,
                         'columns': ['year', 'Burlington- ksi per capita']
                     },
                     {
-                        'key': 'Camden',
+                        'key': 'Camden**',
                         disabled: true,
                         'columns': ['year', 'Camden- ksi per capita']
                     },
                     {
-                        'key': 'Chester',
+                        'key': 'Chester**',
                         disabled: true,
                         'columns': ['year', 'Chester- ksi per capita']
                     },
                     {
-                        'key': 'Delaware',
+                        'key': 'Delaware**',
                         disabled: true,
                         'columns': ['year', 'Delaware- ksi per capita']
                     },
                     {
-                        'key': 'Gloucester',
+                        'key': 'Gloucester**',
                         disabled: true,
                         'columns': ['year', 'Gloucester- ksi per capita']
                     },
                     {
-                        'key': 'Mercer',
+                        'key': 'Mercer**',
                         disabled: true,
                         'columns': ['year', 'Mercer- ksi per capita']
                     },
                     {
-                        'key': 'Montgomery',
+                        'key': 'Montgomery**',
                         disabled: true,
                         'columns': ['year', 'Montgomery- ksi per capita']
                     },
                     {
-                        'key': 'Philadelphia',
+                        'key': 'Philadelphia**',
                         disabled: true,
                         'columns': ['year', 'Philadelphia- ksi per capita']
                     }
@@ -780,75 +780,70 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPC', 'New Jersey Suburbs', 'Pennsylvania Suburbs', 'Philadelphia Subregion', 'Bucks', 'Burlington', 'Camden', 'Chester', 'Delaware', 'Gloucester', 'Mercer', 'Montgomery', 'Philadelphia'],
-                    ['DVRPC-total', 'New Jersey Suburbs-total', 'Pennsylvania Suburbs-total', 'Philadelphia Subregion-total', 'Bucks-total', 'Burlington-total', 'Camden-total', 'Chester-total', 'Delaware-total', 'Gloucester-total', 'Mercer-total', 'Montgomery-total', 'Philadelphia-total']
+                    ['DVRPC', 'New Jersey Suburbs', 'Pennsylvania Suburbs', 'Bucks', 'Burlington', 'Camden', 'Chester', 'Delaware', 'Gloucester', 'Mercer', 'Montgomery', 'Philadelphia'],
+                    ['DVRPC-total', 'New Jersey Suburbs-total', 'Pennsylvania Suburbs-total', 'Bucks-total', 'Burlington-total', 'Camden-total', 'Chester-total', 'Delaware-total', 'Gloucester-total', 'Mercer-total', 'Montgomery-total', 'Philadelphia-total']
                 ],
                 data:[
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         columns: ['year', 'DVRPC']
                     },
                     {
-                        'key': 'New Jersey Suburbs',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         columns: ['year', 'New Jersey Suburbs']
                     },
                     {
-                        'key': 'PA Suburban Counties',
+                        'key': 'PA Suburban Counties*',
                         disabled: true,
                         columns: ['year', 'Pennsylvania Suburbs']
                     },
                     {
-                        'key': 'Philadelphia Subregion',
-                        disabled: true,
-                        columns: ['year', 'Philadelphia Subregion']
-                    },
-                    {
-                        'key': 'Bucks County',
+                        'key': 'Bucks**',
                         disabled: true,
                         columns: ['year', 'Bucks']
                     },
                     {
-                        'key': 'Burlington County',
+                        'key': 'Burlington**',
                         disabled: true,
                         columns: ['year', 'Burlington']
                     },
                     {
-                        'key': 'Camden County',
+                        'key': 'Camden**',
                         disabled: true,
                         columns: ['year', 'Camden']
                     },
                     {
-                        'key': 'Chester County',
+                        'key': 'Chester**',
                         disabled: true,
                         columns: ['year', 'Chester']
                     },
                     {
-                        'key': 'Delaware County',
+                        'key': 'Delaware**',
                         disabled: true,
                         columns: ['year', 'Delaware']
                     },
                     {
-                        'key': 'Gloucester County',
+                        'key': 'Gloucester**',
                         disabled: true,
                         columns: ['year', 'Gloucester']
                     },
                     {
-                        'key': 'Mercer County',
+                        'key': 'Mercer**',
                         disabled: true,
                         columns: ['year', 'Mercer']
                     },
                     {
-                        'key': 'Montgomery County',
+                        'key': 'Montgomery**',
                         disabled: true,
                         columns: ['year', 'Montgomery']
                     },
                     {
-                        'key': 'Philadelphia',
+                        'key': 'Philadelphia**',
                         disabled: true,
                         columns: ['year', 'Philadelphia']
-                    },
-                ],
+                    }
+                ]
             },
             {
                 type: 'stacked bar',
@@ -860,41 +855,41 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'Bucks County',
+                        'key': 'Bucks**',
                         columns: ['year', 'Bucks']
                     },
                     {
-                        'key': 'Burlington County',
+                        'key': 'Burlington**',
                         columns: ['year', 'Burlington']
                     },
                     {
-                        'key': 'Camden County',
+                        'key': 'Camden**',
                         columns: ['year', 'Camden']
                     },
                     {
-                        'key': 'Chester County',
+                        'key': 'Chester**',
                         columns: ['year', 'Chester']
                     },
                     {
-                        'key': 'Delaware County',
+                        'key': 'Delaware**',
                         columns: ['year', 'Delaware']
                     },
                     {
-                        'key': 'Gloucester County',
+                        'key': 'Gloucester**',
                         columns: ['year', 'Gloucester']
                     },
                     {
-                        'key': 'Mercer County',
+                        'key': 'Mercer**',
                         columns: ['year', 'Mercer']
                     },
                     {
-                        'key': 'Montgomery County',
+                        'key': 'Montgomery**',
                         columns: ['year', 'Montgomery']
                     },
                     {
-                        'key': 'Philadelphia County',
+                        'key': 'Philadelphia**',
                         columns: ['year', 'Philadelphia']
-                    },
+                    }
                 ]
             },
             {
@@ -1009,63 +1004,63 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         columns: ['year', 'Region']
                     },
                     {
-                        'key': 'Philadelphia',
-                        disabled: true,
-                        columns: ['year', 'Philadelphia']
-                    },
-                    {
-                        'key': 'PA Suburban Counties',
-                        disabled: true,
-                        columns: ['year', 'PA Suburban Counties']
-                    },
-                    {
-                        'key': 'NJ Suburban Counties',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         columns: ['year', 'NJ Suburban Counties']
                     },
                     {
-                        'key': 'Bucks County',
+                        'key': 'PA Suburban Counties*',
+                        disabled: true,
+                        columns: ['year', 'PA Suburban Counties']
+                    },
+                    {
+                        'key': 'Bucks**',
                         disabled: true,
                         columns: ['year', 'Bucks']
                     },
                     {
-                        'key': 'Burlington County',
+                        'key': 'Burlington**',
                         disabled: true,
                         columns: ['year', 'Burlington']
                     },
                     {
-                        'key': 'Camden County',
+                        'key': 'Camden**',
                         disabled: true,
                         columns: ['year', 'Camden']
                     },
                     {
-                        'key': 'Chester County',
+                        'key': 'Chester**',
                         disabled: true,
                         columns: ['year', 'Chester']
                     },
                     {
-                        'key': 'Delaware County',
+                        'key': 'Delaware**',
                         disabled: true,
                         columns: ['year', 'Delaware']
                     },
                     {
-                        'key': 'Gloucester County',
+                        'key': 'Gloucester**',
                         disabled: true,
                         columns: ['year', 'Gloucester']
                     },
                     {
-                        'key': 'Mercer County',
+                        'key': 'Mercer**',
                         disabled: true,
                         columns: ['year', 'Mercer']
                     },
                     {
-                        'key': 'Montgomery County',
+                        'key': 'Montgomery**',
                         disabled: true,
                         columns: ['year', 'Montgomery']
+                    },
+                    {
+                        'key': 'Philadelphia**',
+                        disabled: true,
+                        columns: ['year', 'Philadelphia']
                     }
                 ]
             },
@@ -1114,7 +1109,7 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'Racial/Ethnic Segregation Index',
+                        'key': 'Index Value',
                         columns: ['year', 'PeopleofColor']
                     }
                 ]
@@ -1290,7 +1285,7 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'Segregation Index',
+                        'key': 'Index Value',
                         columns: ['year', 'LowIncome']
                     }
                 ]
@@ -1460,71 +1455,71 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPCFree24', 'PACosFree24', 'NJCosFree24', 'PASubCosFree24', 'BucFree24', 'BurlFree24', 'CamFree24', 'ChesFree24', 'DelFree24', 'GloFree24', 'MerFree24', 'MontFree24', 'PhilFree24'],
-                    ['DVRPCLoca24', 'PACosLoca24', 'NJCosLoca24', 'PASubCosLoca24', 'BucLoca24', 'BurlLoca24', 'CamLoca24', 'ChesLoca24', 'DelLoca24', 'GloLoca24', 'MerLoca24', 'MontLoca24', 'PhilLoca24']
+                    ['DVRPCFree24', 'NJCosFree24', 'PACosFree24', 'PASubCosFree24', 'BucFree24', 'BurlFree24', 'CamFree24', 'ChesFree24', 'DelFree24', 'GloFree24', 'MerFree24', 'MontFree24', 'PhilFree24'],
+                    ['DVRPCLoca24', 'NJCosLoca24', 'PACosLoca24', 'PASubCosLoca24', 'BucLoca24', 'BurlLoca24', 'CamLoca24', 'ChesLoca24', 'DelLoca24', 'GloLoca24', 'MerLoca24', 'MontLoca24', 'PhilLoca24']
                 ],
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         columns: ['Year', 'DVRPCFree24']
                     },
                     {
-                        'key': 'NJ Counties',
+                        'key': 'NJ Counties*',
                         columns: ['Year', 'NJCosFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'PA Counties',
+                        'key': 'All PA Counties*',
                         columns: ['Year', 'PACosFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'PA Suburban Counties',
+                        'key': 'PA Suburban Counties*',
                         columns: ['Year', 'PASubCosFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'Bucks Co',
+                        'key': 'Bucks**',
                         columns: ['Year', 'BucFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'Burlington Co',
+                        'key': 'Burlington**',
                         columns: ['Year', 'BurlFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'Camden Co',
+                        'key': 'Camden**',
                         columns: ['Year', 'CamFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'Chester Co',
+                        'key': 'Chester**',
                         columns: ['Year', 'ChesFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'Delaware Co',
+                        'key': 'Delaware**',
                         columns: ['Year', 'DelFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'Gloucester Co',
+                        'key': 'Gloucester**',
                         columns: ['Year', 'GloFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'Mercer Co',
+                        'key': 'Mercer**',
                         columns: ['Year', 'MerFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'Montgomery Co',
+                        'key': 'Montgomery**',
                         columns: ['Year', 'MontFree24'],
                         disabled: true
                     },
                     {
-                        'key': 'Philadelphia Co',
+                        'key': 'Philadelphia**',
                         columns: ['Year', 'PhilFree24'],
                         disabled: true
                     }
@@ -1595,68 +1590,68 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         columns: ['year', 'DVRPC']
                     },
                     {
-                        'key': 'PA Counties',
-                        disabled: true,
-                        columns: ['year', 'PA Counties']
-                    },
-                    {
-                        'key': 'Suburban PA',
-                        disabled: true,
-                        columns: ['year', 'Suburban PA']
-                    },
-                    {
-                        'key': 'NJ Counties',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         columns: ['year', 'NJ Counties']
                     },
                     {
-                        'key': 'Philadelphia',
+                        'key': 'All PA Counties*',
                         disabled: true,
-                        columns: ['year', 'Philadelphia']
+                        columns: ['year', 'PA Counties']
                     },
                     {
-                        'key': 'Montgomery County',
+                        'key': 'PA Suburban Counties*',
                         disabled: true,
-                        columns: ['year', 'Montgomery']
+                        columns: ['year', 'Suburban PA']
                     },
                     {
-                        'key': 'Delaware County',
-                        disabled: true,
-                        columns: ['year', 'Delaware']
-                    },
-                    {
-                        'key': 'Chester County',
-                        disabled: true,
-                        columns: ['year', 'Chester']
-                    },
-                    {
-                        'key': 'Bucks County',
+                        'key': 'Bucks**',
                         disabled: true,
                         columns: ['year', 'Bucks']
                     },
                     {
-                        'key': 'Mercer County',
+                        'key': 'Burlington**',
                         disabled: true,
-                        columns: ['year', 'Mercer']
+                        columns: ['year', 'Burlington']
                     },
                     {
-                        'key': 'Gloucester County',
-                        disabled: true,
-                        columns: ['year', 'Gloucester']
-                    },
-                    {
-                        'key': 'Camden County',
+                        'key': 'Camden**',
                         disabled: true,
                         columns: ['year', 'Camden']
                     },
                     {
-                        'key': 'Burlington County',
+                        'key': 'Chester**',
                         disabled: true,
-                        columns: ['year', 'Burlington']
+                        columns: ['year', 'Chester']
+                    },
+                    {
+                        'key': 'Delaware**',
+                        disabled: true,
+                        columns: ['year', 'Delaware']
+                    },
+                    {
+                        'key': 'Gloucester**',
+                        disabled: true,
+                        columns: ['year', 'Gloucester']
+                    },
+                    {
+                        'key': 'Mercer**',
+                        disabled: true,
+                        columns: ['year', 'Mercer']
+                    },
+                    {
+                        'key': 'Montgomery**',
+                        disabled: true,
+                        columns: ['year', 'Montgomery']
+                    },
+                    {
+                        'key': 'Philadelphia**',
+                        disabled: true,
+                        columns: ['year', 'Philadelphia']
                     }
                 ]
             }
@@ -1822,7 +1817,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Unlinked Trips',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'unlinkedTrips']
                     }
                 ]
@@ -2184,7 +2179,7 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'Patent Approvals',
+                        'key': 'Approvals',
                         columns: ['Year', 'DVRPC']
                     }
                 ]
@@ -2209,87 +2204,87 @@ const snippetsRef = {
                     units: ['thousands', 'thousandsC', 'percentC']
                 },
                 columnOptions: [
-                    ['Core-count','DevCom-count','GroSub-count','Rural-count','Burlington-count','Camden-count','Gloucester-count','Mercer-count','Bucks-count','Chester-count','Delaware-count','Montgomery-count','Philadelphia-count','NJCnt-count','PASub-count','DVRPC-count'],
-                    ['Core','DevCom','GroSub','Rural','Burlington','Camden','Gloucester','Mercer','Bucks','Chester','Delaware','Montgomery','Philadelphia','NJCnt','PASub','DVRPC'],
-                    ['Core-perc','DevCom-perc','GroSub-perc','Rural-perc','Burlington-perc','Camden-perc','Gloucester-perc','Mercer-perc','Bucks-perc','Chester-perc','Delaware-perc','Montgomery-perc','Philadelphia-perc','NJCnt-perc','PASub-perc','DVRPC-perc']
+                    ['DVRPC-count','NJCnt-count','PASub-count','Core-count','DevCom-count','GroSub-count','Rural-count','Bucks-count','Burlington-count','Camden-count','Chester-count','Delaware-count','Gloucester-count','Mercer-count','Montgomery-count','Philadelphia-count'],
+                    ['DVRPC','NJCnt','PASub','Core','DevCom','GroSub','Rural','Bucks','Burlington','Camden','Chester','Delaware','Gloucester','Mercer','Montgomery','Philadelphia'],
+                    ['DVRPC-perc','NJCnt-perc','PASub-perc','Core-perc','DevCom-perc','GroSub-perc','Rural-perc','Bucks-perc','Burlington-perc','Camden-perc','Chester-perc','Delaware-perc','Gloucester-perc','Mercer-perc','Montgomery-perc','Philadelphia-perc',]
                 ],
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         columns: ['Year', 'DVRPC']
                     },
                     {
-                        'key': 'PA Suburban Counties',
-                        disabled: true,
-                        columns: ['Year', 'PASub']
-                    },
-                    {
-                        'key': 'NJ Counties',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         columns: ['Year', 'NJCnt']
                     },
                     {
-                        'key': 'Core Cities',
+                        'key': 'PA Suburban Counties*',
+                        disabled: true,
+                        columns: ['Year', 'PASub']
+                    },
+                    {
+                        'key': 'Core Cities^',
                         disabled: true,
                         columns: ['Year', 'Core']
                     },
                     {
-                        'key': 'Developed Community',
+                        'key': 'Developed Communities^',
                         disabled: true,
                         columns: ['Year', 'DevCom']
                     },
                     {
-                        'key': 'Growing Suburbs',
+                        'key': 'Growing Suburbs^',
                         disabled: true,
                         columns: ['Year', 'GroSub']
                     },
                     {
-                        'key': 'Rural Area',
+                        'key': 'Rural Areas^',
                         disabled: true,
                         columns: ['Year', 'Rural']
                     },
                     {
-                        'key': 'Burlington',
+                        'key': 'Burlington**',
                         disabled: true,
                         columns: ['Year', 'Burlington']
                     },
                     {
-                        'key': 'Camden',
+                        'key': 'Camden**',
                         disabled: true,
                         columns: ['Year', 'Camden']
                     },
                     {
-                        'key': 'Gloucester',
+                        'key': 'Gloucester**',
                         disabled: true,
                         columns: ['Year', 'Gloucester']
                     },
                     {
-                        'key': 'Mercer',
+                        'key': 'Mercer**',
                         disabled: true,
                         columns: ['Year', 'Mercer']
                     },
                     {
-                        'key': 'Bucks',
+                        'key': 'Bucks**',
                         disabled: true,
                         columns: ['Year', 'Bucks']
                     },
                     {
-                        'key': 'Delaware',
+                        'key': 'Delaware**',
                         disabled: true,
                         columns: ['Year', 'Delaware']
                     },
                     {
-                        'key': 'Chester',
+                        'key': 'Chester**',
                         disabled: true,
                         columns: ['Year', 'Chester']
                     },
                     {
-                        'key': 'Montgomery',
+                        'key': 'Montgomery**',
                         disabled: true,
                         columns: ['Year', 'Montgomery']
                     },
                     {
-                        'key': 'Philadelphia',
+                        'key': 'Philadelphia**',
                         disabled: true,
                         columns: ['Year', 'Philadelphia']
                     }
@@ -2465,7 +2460,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['Bridge_Conditions_1A','Bridge_Conditions_1B'],
                 context: {
-                    labels: ['Percentage of Deck Area for All Bridges', 'Percentage of All Bridges'],
+                    labels: ['Percentage of Deck Area', 'Percentage of Bridges'],
                     keepLabels: false,
                     units: ['percentC'],
                     keepUnits: true
@@ -2574,7 +2569,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'NA',
+                        'key': 'No Data',
                         columns: ['year', 'DVRPC- NA']
                     },
                     {
@@ -2630,7 +2625,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['water_quality_2'],
                 context: {
-                    labels: ['Stream Miles Impaired'],
+                    labels: ['Stream Miles'],
                     units: ['thousands']
                 },
                 data: [
@@ -2653,7 +2648,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['water_quality_3'],
                 context: {
-                    labels: ['Subwatershed Acres Impaired (Thousands)'],
+                    labels: ['Subwatershed Acres (Thousands)'],
                     units: ['thousands']
                 },
                 data: [
@@ -2696,81 +2691,81 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         columns: ['year', 'Developed - DVRPC']
                     },
                     {
-                        'key': 'NJ Counties',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         columns: ['year', 'Developed - New Jersey Suburbs']
                     },
                     {
-                        'key': 'PA Suburban Counties',
+                        'key': 'PA Suburban Counties*',
                         disabled: true,
                         columns: ['year', 'Developed - Pennsylvania Suburbs']
                     },
                     {
-                        'key': 'Core Cities',
+                        'key': 'Core Cities^',
                         disabled: true,
                         columns: ['year', 'Developed - Core City']
                     },
                     {
-                        'key': 'Developed Community',
+                        'key': 'Developed Communities^',
                         disabled: true,
                         columns: ['year', 'Developed - Developed Community']
                     },
                     {
-                        'key': 'Growing Suburbs',
+                        'key': 'Growing Suburbs^',
                         disabled: true,
                         columns: ['year', 'Developed - Growing Suburb']
                     },
                     {
-                        'key': 'Rural Area',
+                        'key': 'Rural Areas^',
                         disabled: true,
                         columns: ['year', 'Developed - Rural Area']
                     },
                     {
-                        'key': 'Bucks',
+                        'key': 'Bucks**',
                         disabled: true,
                         columns: ['year', 'Developed - Bucks']
                     },
                     {
-                        'key': 'Burlington',
+                        'key': 'Burlington**',
                         disabled: true,
                         columns: ['year', 'Developed - Burlington']
                     },
                     {
-                        'key': 'Camden',
+                        'key': 'Camden**',
                         disabled: true,
                         columns: ['year', 'Developed - Camden']
                     },
                     {
-                        'key': 'Chester',
+                        'key': 'Chester**',
                         disabled: true,
                         columns: ['year', 'Developed - Chester']
                     },
                     {
-                        'key': 'Delaware',
+                        'key': 'Delaware**',
                         disabled: true,
                         columns: ['year', 'Developed - Delaware']
                     },
                     {
-                        'key': 'Gloucester',
+                        'key': 'Gloucester**',
                         disabled: true,
                         columns: ['year', 'Developed - Gloucester']
                     },
                     {
-                        'key': 'Mercer',
+                        'key': 'Mercer**',
                         disabled: true,
                         columns: ['year', 'Developed - Mercer']
                     },
                     {
-                        'key': 'Montgomery',
+                        'key': 'Montgomery**',
                         disabled: true,
                         columns: ['year', 'Developed - Montgomery']
                     },
                     {
-                        'key': 'Philadelphia',
+                        'key': 'Philadelphia**',
                         disabled: true,
                         columns: ['year', 'Developed - Philadelphia']
                     }
@@ -2882,81 +2877,81 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'DVRPC Region',
+                        'key': 'DVRPC Region*',
                         columns: ['year', 'DVRPC- Total']
                     },
                     {
-                        'key': 'NJ Counties',
+                        'key': 'NJ Counties*',
                         disabled: true,
                         columns: ['year', 'NJ Suburbs- Total']
                     },
                     {
-                        'key': 'PA Suburban Counties',
+                        'key': 'PA Suburban Counties*',
                         disabled: true,
                         columns: ['year', 'PA Suburbs- Total']
                     },
                     {
-                        'key': 'Core Cities',
+                        'key': 'Core Cities^',
                         disabled: true,
                         columns: ['year', 'Core City- Total']
                     },
                     {
-                        'key': 'Developed Community',
+                        'key': 'Developed Communities^',
                         disabled: true,
                         columns: ['year', 'Developed Community- Total']
                     },
                     {
-                        'key': 'Growing Suburbs',
+                        'key': 'Growing Suburbs^',
                         disabled: true,
                         columns: ['year', 'Growing Suburb- Total']
                     },
                     {
-                        'key': 'Rural Area',
+                        'key': 'Rural Areas^',
                         disabled: true,
                         columns: ['year', 'Rural Area- Total']
                     },
                     {
-                        'key': 'Bucks',
+                        'key': 'Bucks**',
                         disabled: true,
                         columns: ['year', 'Bucks- Total']
                     },
                     {
-                        'key': 'Burlington',
+                        'key': 'Burlington**',
                         disabled: true,
                         columns: ['year', 'Burlington- Total']
                     },
                     {
-                        'key': 'Camden',
+                        'key': 'Camden**',
                         disabled: true,
                         columns: ['year', 'Camden- Total']
                     },
                     {
-                        'key': 'Chester',
+                        'key': 'Chester**',
                         disabled: true,
                         columns: ['year', 'Chester- Total']
                     },
                     {
-                        'key': 'Delaware',
+                        'key': 'Delaware**',
                         disabled: true,
                         columns: ['year', 'Delaware- Total']
                     },
                     {
-                        'key': 'Gloucester',
+                        'key': 'Gloucester**',
                         disabled: true,
                         columns: ['year', 'Gloucester- Total']
                     },
                     {
-                        'key': 'Mercer',
+                        'key': 'Mercer**',
                         disabled: true,
                         columns: ['year', 'Mercer- Total']
                     },
                     {
-                        'key': 'Montgomery',
+                        'key': 'Montgomery**',
                         disabled: true,
                         columns: ['year', 'Montgomery- Total']
                     },
                     {
-                        'key': 'Philadelphia',
+                        'key': 'Philadelphia**',
                         disabled: true,
                         columns: ['year', 'Philadelphia- Total']
                     }
