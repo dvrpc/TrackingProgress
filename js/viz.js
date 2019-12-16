@@ -175,6 +175,7 @@ const createLineChart = (source, toggleContext) => {
                 .forceY(0)
                 .x(d => d[0])
                 .y((d, i) => d[1])
+            // @TODO: try out line.defined() to interpolate null values and create the dotted line that connects blanks
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)

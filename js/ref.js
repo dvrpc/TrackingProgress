@@ -2574,7 +2574,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'NA',
+                        'key': 'No Data',
                         columns: ['year', 'DVRPC- NA']
                     },
                     {
