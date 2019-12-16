@@ -1114,7 +1114,7 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'Racial/Ethnic Segregation Index',
+                        'key': 'Index Value',
                         columns: ['year', 'PeopleofColor']
                     }
                 ]
@@ -1290,7 +1290,7 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'Segregation Index',
+                        'key': 'Index Value',
                         columns: ['year', 'LowIncome']
                     }
                 ]
@@ -1822,7 +1822,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Unlinked Trips',
+                        'key': 'DVRPC Region',
                         columns: ['year', 'unlinkedTrips']
                     }
                 ]
@@ -2184,7 +2184,7 @@ const snippetsRef = {
                 },
                 data: [
                     {
-                        'key': 'Patent Approvals',
+                        'key': 'Approvals',
                         columns: ['Year', 'DVRPC']
                     }
                 ]
