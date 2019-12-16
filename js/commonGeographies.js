@@ -40,21 +40,6 @@ const fullGeography = [
         disabled: true
     },
     {
-        'key': 'Chester**',
-        columns: ['year', 'Chester County'],
-        disabled: true
-    },
-    {
-        'key': 'Delaware**',
-        columns: ['year', 'Delaware County'],
-        disabled: true
-    },
-    {
-        'key': 'Montgomery**',
-        columns: ['year', 'Montgomery County'],
-        disabled: true
-    },
-    {
         'key': 'Burlington**',
         columns: ['year', 'Burlington County'],
         disabled: true
@@ -65,6 +50,16 @@ const fullGeography = [
         disabled: true
     },
     {
+        'key': 'Chester**',
+        columns: ['year', 'Chester County'],
+        disabled: true
+    },
+    {
+        'key': 'Delaware**',
+        columns: ['year', 'Delaware County'],
+        disabled: true
+    },
+    {
         'key': 'Gloucester**',
         columns: ['year', 'Gloucester County'],
         disabled: true
@@ -72,6 +67,11 @@ const fullGeography = [
     {
         'key': 'Mercer**',
         columns: ['year', 'Mercer County'],
+        disabled: true
+    },
+    {
+        'key': 'Montgomery**',
+        columns: ['year', 'Montgomery County'],
         disabled: true
     },
     {
