@@ -294,10 +294,10 @@ const createWaterfallChart = (source, toggleContext) => {
         bruh[0].remove()
     }
 
-    let margin = {top: 65, right: 55, bottom: 200, left: 85},
+    let margin = {top: 25, right: 55, bottom: 250, left: 75},
     width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
-    padding = 0.3
+    height = 550 - margin.top - margin.bottom,
+    padding = 0.1
 
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], padding);
@@ -350,7 +350,7 @@ const createWaterfallChart = (source, toggleContext) => {
             .selectAll("text")
             .attr("y", 0)
             .attr("x", 9)
-            .attr("dy", "10px")
+            .attr("dy", "0.35em")
             .attr("transform", "rotate(90)")
             .style("text-anchor", "start");
   
@@ -372,7 +372,7 @@ const createWaterfallChart = (source, toggleContext) => {
         bar.append("text")
             .attr("x", x.rangeBand() / 2)
             .attr("y", function(d) { return y(d.end) + 5; })
-            .attr("dy", function(d) { return ((d.class=='negative') ? '-' : '') + "10px" })
+            .attr("dy", function(d) { return ((d.class=='negative') ? '-' : '') + "0.35em" })
     
         bar.filter(function(d) { return d.class != "total" }).append("line")
             .attr("class", "connector")

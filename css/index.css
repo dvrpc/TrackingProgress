@@ -494,6 +494,9 @@ summary:hover{
     font-style: italic;
 }
 /* custom crap for waterfalls */
+.tick{
+    font-size: 12px;
+}
 .waterfall-blue{
     fill: #1f77b4;
 }
