@@ -493,10 +493,17 @@ summary:hover{
     margin: 0 auto;
     font-style: italic;
 }
-/* custom crap for waterfalls */
-.tick{
-    font-size: 12px;
+
+/* custom styles for waterfalls */
+.waterfallAxis {
+    stroke: lightgrey;
 }
+.waterfallAxis .tick text {
+    font-size: 12px;
+    stroke-width: 0;
+    stroke: #050709;
+}
+/* custom waterfall colors */
 .waterfall-blue{
     fill: #1f77b4;
 }

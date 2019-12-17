@@ -280,6 +280,7 @@ const createStackedAreaChart = (source, toggleContext) => {
     })
 }
 
+// @TODO: resize listener to update chart width and height
 const createWaterfallChart = (source, toggleContext) => {
     let container, dataSource;
     [container, dataSource, source] = formatInpus(source, toggleContext)
@@ -305,13 +306,9 @@ const createWaterfallChart = (source, toggleContext) => {
     var y = d3.scale.linear()
         .range([height, 0]);
 
-    var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom")
-
-    var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left")
+    // function to handle grid lines and x/y axes
+    var xAxis = () => d3.svg.axis().scale(x).orient("bottom").ticks(20).tickSize(-height, 0, 0)
+    var yAxis = () => d3.svg.axis().scale(y).orient("left").ticks(8).tickSize(-width, 0, 0)
 
     var chart = d3.select(container)
         .attr("width", width + margin.left + margin.right)
@@ -344,19 +341,20 @@ const createWaterfallChart = (source, toggleContext) => {
         y.domain([d3.min(data, function(d) {return d.end;}) , d3.max(data, function(d) { return d.end; })]);
 
         chart.append("g")
-            .attr("class", "x axis")
+            .attr("class", "waterfallAxis")
             .attr("transform", "translate(0," + height + ")")
-            .call(xAxis)
+            .call(xAxis())
             .selectAll("text")
-            .attr("y", 0)
-            .attr("x", 9)
-            .attr("dy", "0.35em")
-            .attr("transform", "rotate(90)")
-            .style("text-anchor", "start");
+                .attr("y", 0)
+                .attr("x", 9)
+                .attr("transform", "rotate(90)")
+                .style("text-anchor", "start");
   
         chart.append("g")
-            .attr("class", "y axis")
-            .call(yAxis);
+            .attr("class", "waterfallAxis")
+            .call(yAxis())
+            .selectAll("text")
+                .attr("x", -5);
     
         var bar = chart.selectAll(".bar")
             .data(data)
