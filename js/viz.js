@@ -280,10 +280,15 @@ const createStackedAreaChart = (source, toggleContext) => {
     })
 }
 
-// @TODO: resize listener to update chart width and height
 const createWaterfallChart = (source, toggleContext) => {
+    console.log('called waterfall function')
     let container, dataSource;
     [container, dataSource, source] = formatInpus(source, toggleContext)
+
+    // get a handle on the chart container element for resizing function
+    const chartDiv = container.split(' ')[0]
+    const waterfallContainer = document.querySelector(chartDiv)
+    const widthNoMargin = waterfallContainer.clientWidth
 
     // hack to identify toggles for this case
     const len = source.data[0].columns.length - 1
@@ -296,7 +301,7 @@ const createWaterfallChart = (source, toggleContext) => {
     }
 
     let margin = {top: 25, right: 55, bottom: 250, left: 75},
-    width = 960 - margin.left - margin.right,
+    width = widthNoMargin - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom,
     padding = 0.1
 
@@ -379,6 +384,17 @@ const createWaterfallChart = (source, toggleContext) => {
             .attr("x2", x.rangeBand() / ( 1 - padding) - 5 )
             .attr("y2", function(d) { return y(d.end) } )
     });
+
+    //nv.utils.windowResize(createWaterfallChart(source, toggleContext))
+    // resize listener
+    window.onresize = () => {
+        // remove jawns
+        const bruh = d3.select(container)[0][0].children;
+        bruh[0].remove()
+
+        // create jawn
+        createWaterfallChart(source, toggleContext)
+    }
 }
 
 export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createLineAndScatterChart, createWaterfallChart};

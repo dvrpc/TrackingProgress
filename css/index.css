@@ -426,12 +426,6 @@ summary:hover{
     color: #4fa3a8;
     background: #fff;
     border: none;
-    /* with border case:
-    border-radius: 5px;
-    width: 80%;
-    padding: 9px 0;
-    margin: 10px auto 
-     */
     width: 85%;
     text-align: center;
     padding: 10px 0;
