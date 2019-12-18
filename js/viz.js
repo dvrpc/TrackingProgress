@@ -55,6 +55,7 @@ const formatInpus = (source, toggleContext) => {
 
 // labelling helper function 
 const formatLabels = (y, x, context) => {
+    console.log('y is ', y)
     context.units ? y.tickFormat(d3.format(axisFormats[context.units])) : y.tickFormat(d3.format('.3n'))
             
     // add axis label & update margin to compensate
@@ -343,7 +344,9 @@ const createWaterfallChart = (source, toggleContext) => {
             .attr("y2", function(d) { return y(d.end) } )
     });
 
-    //nv.utils.windowResize(createWaterfallChart(source, toggleContext))
+    // format yAxis units and labels if necessary
+    //if(context) formatLabels(yAxis(), null, context)
+
     // resize listener
     window.onresize = () => {
         // remove jawns
