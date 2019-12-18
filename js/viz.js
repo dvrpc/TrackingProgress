@@ -54,7 +54,7 @@ const formatInpus = (source, toggleContext) => {
 }
 
 // labelling helper function 
-const formatLabels = (y, x, margin, context) => {
+const formatLabels = (y, x, context) => {
     context.units ? y.tickFormat(d3.format(axisFormats[context.units])) : y.tickFormat(d3.format('.3n'))
             
     // add axis label & update margin to compensate
@@ -105,7 +105,7 @@ const createStackedBarChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis, chart.xAxis, chart.margin(), context)
+            if(context) formatLabels(chart.yAxis, chart.xAxis, context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -145,7 +145,7 @@ const createLinePlusBarChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.y1Axis, chart.xAxis, chart.margin(), context)
+            if(context) formatLabels(chart.y1Axis, chart.xAxis, context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -181,7 +181,7 @@ const createLineChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis, chart.xAxis, chart.margin(), context)
+            if(context) formatLabels(chart.yAxis, chart.xAxis, context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -226,50 +226,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis1, chart.xAxis, chart.margin(), context)
-            
-            d3.select(container).datum(source.data).transition().duration(500).call(chart)
-
-            nv.utils.windowResize(chart.update)
-
-            return chart
-        })
-    })
-
-}
-
-const createStackedAreaChart = (source, toggleContext) => {
-    let container, dataSource, context;
-    [container, dataSource, source, context] = formatInpus(source, toggleContext)
-
-    d3.csv(dataSource, rows => {
-
-        // extract information from the columns set in the snippetsRef lookup table
-        source.data.forEach(series => {
-            series.values.push([
-                +rows[series.columns[0]],
-                rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
-            ])
-        })
-
-    }, csvObj => {
-
-        nv.addGraph(() => {
-            let chart = nv.models.stackedAreaChart()
-                .margin({top: 40, right: 55, bottom: 45, left: 85})
-                .x(d => d[0])
-                .y(d => d[1])
-                .useInteractiveGuideline(true)
-                .clipEdge(true)
-                .showControls(false)
-                // use the style method to set the default to expand
-                .style('expand')
-
-            // set max legend length to an arbitrarily high number to prevent text cutoff
-            chart.legend.maxKeyLength(100)
-
-            // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis1, chart.margin(), context)
+            if(context) formatLabels(chart.yAxis1, chart.xAxis, context)
             
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -282,13 +239,14 @@ const createStackedAreaChart = (source, toggleContext) => {
 
 const createWaterfallChart = (source, toggleContext) => {
     console.log('called waterfall function')
-    let container, dataSource;
-    [container, dataSource, source] = formatInpus(source, toggleContext)
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
     // get a handle on the chart container element for resizing function
     const chartDiv = container.split(' ')[0]
     const waterfallContainer = document.querySelector(chartDiv)
     const widthNoMargin = waterfallContainer.clientWidth
+    console.log('width is ', widthNoMargin)
 
     // hack to identify toggles for this case
     const len = source.data[0].columns.length - 1
@@ -300,7 +258,7 @@ const createWaterfallChart = (source, toggleContext) => {
         bruh[0].remove()
     }
 
-    let margin = {top: 25, right: 55, bottom: 250, left: 75},
+    let margin = {top: 25, right: 55, bottom: 250, left: 60},
     width = widthNoMargin - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom,
     padding = 0.1
@@ -397,4 +355,4 @@ const createWaterfallChart = (source, toggleContext) => {
     }
 }
 
-export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createLineAndScatterChart, createWaterfallChart};
+export {createStackedBarChart, createLinePlusBarChart, createLineChart, createLineAndScatterChart, createWaterfallChart};

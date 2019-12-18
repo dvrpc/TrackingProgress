@@ -2295,7 +2295,8 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['pop_comp_change', 'pop_comp_natincrease', 'pop_comp_netmigration'],
                 context: {
-                    labels: ['fist', 'second', 'third'],
+                    labels: ['Change in Population'],
+                    keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
                 },
