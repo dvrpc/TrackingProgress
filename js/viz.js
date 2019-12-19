@@ -256,7 +256,7 @@ const createWaterfallChart = (source, toggleContext) => {
         bruh[0].remove()
     }
 
-    let margin = {top: 25, right: 45, bottom: 260, left: 70},
+    let margin = {top: 25, right: 55, bottom: 260, left: 85},
     width = widthNoMargin - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom,
     padding = 0.1
