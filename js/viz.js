@@ -342,14 +342,6 @@ const createWaterfallChart = (source, toggleContext) => {
             .attr("y", d => y(d.end) + (d.end > d.start ? -5 : 10))
             .attr('font-size', '10px')
             .text(d => (d.class === 'negative' ? '-' : '' + d.end))
-        
-        // add connector lines
-        bar.filter(d => { return d.class != "total" }).append("line")
-            .attr("class", "connector")
-            .attr("x1", x.rangeBand() + 5 )
-            .attr("y1", d => y(d.end))
-            .attr("x2", x.rangeBand() / ( 1 - padding) - 5 )
-            .attr("y2", d => y(d.end))
     });
 
     // resize listener

@@ -507,10 +507,7 @@ summary:hover{
 .waterfall-grey{
     fill: #c7c7c7;
 }
-.connector{
-    stroke: #050709;
-    stroke-width: 1;
-}
+
 
 /********************************/
 /*********** D3 Views **********/
