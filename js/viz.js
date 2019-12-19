@@ -256,7 +256,7 @@ const createWaterfallChart = (source, toggleContext) => {
         bruh[0].remove()
     }
 
-    let margin = {top: 25, right: 55, bottom: 250, left: 60},
+    let margin = {top: 25, right: 55, bottom: 260, left: 60},
     width = widthNoMargin - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom,
     padding = 0.1
@@ -307,10 +307,10 @@ const createWaterfallChart = (source, toggleContext) => {
             .call(xAxis())
             .selectAll("text")
                 .attr("y", 0)
-                .attr("x", 9)
+                .attr("x", 16)
                 .attr("transform", "rotate(90)")
                 .style("text-anchor", "start");
-  
+        
         chart.append("g")
             .attr("class", "waterfallAxis")
             .call(yAxis())
@@ -320,32 +320,36 @@ const createWaterfallChart = (source, toggleContext) => {
         var bar = chart.selectAll(".bar")
             .data(data)
             .enter().append("g")
-            .attr("class", function(d) { return "bar " + d.class })
-            .attr("transform", function(d) { return "translate(" + x(d.Label) + ",0)"; });
+            .attr("class", d => "bar " + d.class )
+            .attr("transform", d => "translate(" + x(d.Label) + ",0)");
     
         bar.append("rect")
-            .attr("y", function(d) { return y( Math.max(d.start, d.end) ); })
-            .attr("height", function(d) { return Math.abs( y(d.start) - y(d.end) ); })
+            .attr("y", d => y( Math.max(d.start, d.end) ))
+            .attr("height", d => Math.abs( y(d.start) - y(d.end) ))
             .attr("width", x.rangeBand());
-    
+        
+        // add values on top of or underneath each bar
         bar.append("text")
-            .attr("x", x.rangeBand() / 5)
-            .attr("y", function(d) { return y(d.end) - 10; })
+            .attr("x", d => d.end > 1000 || d.end < -1000 ? 0 : 6)
+            // determine if the value should be placed above (trending up) or below (trending down) the bar
+            .attr("y", d => y(d.end) + (d.end > d.start ? - 10 : 10))
             .attr('font-size', '11px')
-            .text(function(d) {return (d.class === 'negative' ? '-' : '' + d.end)})
-    
-        bar.filter(function(d) { return d.class != "total" }).append("line")
+            .text(d => (d.class === 'negative' ? '-' : '' + d.end))
+        
+        // add connector lines
+        bar.filter(d => { return d.class != "total" }).append("line")
             .attr("class", "connector")
             .attr("x1", x.rangeBand() + 5 )
-            .attr("y1", function(d) { return y(d.end) } )
+            .attr("y1", d => y(d.end))
             .attr("x2", x.rangeBand() / ( 1 - padding) - 5 )
-            .attr("y2", function(d) { return y(d.end) } )
+            .attr("y2", d => y(d.end))
     });
 
     // resize listener
     window.onresize = () => {
         // remove jawns
         const bruh = d3.select(container)[0][0].children;
+        console.log('bruh on resize ', bruh)
         bruh[0].remove()
 
         // create jawn
