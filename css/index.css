@@ -839,10 +839,6 @@ footer{
     .chart-src{
         width: auto;
     }
-    .nv-legendWrap{
-        width: 95vw !important;
-        display: flex !important;
-    }
     footer{
         font-size: 0.7em;
     }

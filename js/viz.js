@@ -2,6 +2,7 @@
 /************************ D3 Content for Indicators *********************************/
 /************************************************************************************/
 
+/************************ Helper Functions *********************************/
 // input helper function
 const formatInpus = (source, toggleContext) => {
     // the Period of the div containing the svg for d3 to paint on
@@ -77,6 +78,9 @@ const axisFormats = {
     'dollars': '$,3'
 }
 
+
+
+/************************ Charting Functions *********************************/
 const createStackedBarChart = (source, toggleContext) => {
     let container, dataSource, context;
     [container, dataSource, source, context] = formatInpus(source, toggleContext)
