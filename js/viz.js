@@ -55,7 +55,6 @@ const formatInpus = (source, toggleContext) => {
 
 // labelling helper function 
 const formatLabels = (y, x, context) => {
-    console.log('y is ', y)
     context.units ? y.tickFormat(d3.format(axisFormats[context.units])) : y.tickFormat(d3.format('.3n'))
             
     // add axis label & update margin to compensate
@@ -239,7 +238,6 @@ const createLineAndScatterChart = (source, toggleContext) => {
 }
 
 const createWaterfallChart = (source, toggleContext) => {
-    console.log('called waterfall function')
     let container, dataSource, context;
     [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
@@ -247,7 +245,6 @@ const createWaterfallChart = (source, toggleContext) => {
     const chartDiv = container.split(' ')[0]
     const waterfallContainer = document.querySelector(chartDiv)
     const widthNoMargin = waterfallContainer.clientWidth
-    console.log('width is ', widthNoMargin)
 
     // hack to identify toggles for this case
     const len = source.data[0].columns.length - 1
@@ -332,9 +329,10 @@ const createWaterfallChart = (source, toggleContext) => {
             .attr("width", x.rangeBand());
     
         bar.append("text")
-            .attr("x", x.rangeBand() / 2)
-            .attr("y", function(d) { return y(d.end) + 5; })
-            .attr("dy", function(d) { return ((d.class=='negative') ? '-' : '') + "0.35em" })
+            .attr("x", x.rangeBand() / 5)
+            .attr("y", function(d) { return y(d.end) - 10; })
+            .attr('font-size', '11px')
+            .text(function(d) {return (d.class === 'negative' ? '-' : '' + d.end)})
     
         bar.filter(function(d) { return d.class != "total" }).append("line")
             .attr("class", "connector")
@@ -343,9 +341,6 @@ const createWaterfallChart = (source, toggleContext) => {
             .attr("x2", x.rangeBand() / ( 1 - padding) - 5 )
             .attr("y2", function(d) { return y(d.end) } )
     });
-
-    // format yAxis units and labels if necessary
-    //if(context) formatLabels(yAxis(), null, context)
 
     // resize listener
     window.onresize = () => {
