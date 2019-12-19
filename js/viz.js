@@ -256,7 +256,7 @@ const createWaterfallChart = (source, toggleContext) => {
         bruh[0].remove()
     }
 
-    let margin = {top: 25, right: 55, bottom: 260, left: 60},
+    let margin = {top: 25, right: 45, bottom: 260, left: 70},
     width = widthNoMargin - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom,
     padding = 0.1
@@ -316,7 +316,14 @@ const createWaterfallChart = (source, toggleContext) => {
             .call(yAxis())
             .selectAll("text")
                 .attr("x", -5);
-    
+
+        // add y-label
+        chart.append("text")
+            .attr("text-anchor", "middle")
+            .attr("transform", "translate("+ (-margin.left/1.3) +","+(height/2)+")rotate(-90)")
+            .text("Change in Population")
+            .attr('font-size', '12px');
+
         var bar = chart.selectAll(".bar")
             .data(data)
             .enter().append("g")
@@ -332,8 +339,8 @@ const createWaterfallChart = (source, toggleContext) => {
         bar.append("text")
             .attr("x", d => d.end > 1000 || d.end < -1000 ? 0 : 6)
             // determine if the value should be placed above (trending up) or below (trending down) the bar
-            .attr("y", d => y(d.end) + (d.end > d.start ? - 10 : 10))
-            .attr('font-size', '11px')
+            .attr("y", d => y(d.end) + (d.end > d.start ? -5 : 10))
+            .attr('font-size', '10px')
             .text(d => (d.class === 'negative' ? '-' : '' + d.end))
         
         // add connector lines
@@ -349,7 +356,6 @@ const createWaterfallChart = (source, toggleContext) => {
     window.onresize = () => {
         // remove jawns
         const bruh = d3.select(container)[0][0].children;
-        console.log('bruh on resize ', bruh)
         bruh[0].remove()
 
         // create jawn
