@@ -61,6 +61,7 @@ const dataVizSwitch = (type, source, toggleContext) => {
             break;
         case 'waterfall':
             graphs.createWaterfallChart(source, toggleContext)
+            break;
         default:
             console.log('default')
     }

@@ -426,12 +426,6 @@ summary:hover{
     color: #4fa3a8;
     background: #fff;
     border: none;
-    /* with border case:
-    border-radius: 5px;
-    width: 80%;
-    padding: 9px 0;
-    margin: 10px auto 
-     */
     width: 85%;
     text-align: center;
     padding: 10px 0;
@@ -493,7 +487,17 @@ summary:hover{
     margin: 0 auto;
     font-style: italic;
 }
-/* custom crap for waterfalls */
+
+/* custom styles for waterfalls */
+.waterfallAxis {
+    stroke: lightgrey;
+}
+.waterfallAxis .tick text {
+    font-size: 12px;
+    stroke-width: 0;
+    stroke: #050709;
+}
+/* custom waterfall colors */
 .waterfall-blue{
     fill: #1f77b4;
 }
@@ -599,16 +603,16 @@ footer{
 /*********** Media Queries ***********/
 @media all and (min-width: 1366px){
     .indicators-grid-item {
-        width: 10.5vw;
-        height: 10.5vw;
+        width: 8.5vw;
+        height: 8.5vw;
     }
     .icon-set-img{
         height: 135px;
         width: 135px;
     }
     .flipside-img{
-        height: 55px;
-        width: 55px;
+        height: 45px;
+        width: 45px;
     }
 }
 /* height query for the category icons situation */
@@ -806,7 +810,7 @@ footer{
         font-size: 1.1em;
     }
     .snippet-categories{
-        height: 30px;
+        height: 26px;
     }
     #description-wrapper{
         width: 100%;
@@ -834,10 +838,6 @@ footer{
     }
     .chart-src{
         width: auto;
-    }
-    .nv-legendWrap{
-        width: 95vw !important;
-        display: flex !important;
     }
     footer{
         font-size: 0.7em;

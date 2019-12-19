@@ -2,6 +2,7 @@
 /************************ D3 Content for Indicators *********************************/
 /************************************************************************************/
 
+/************************ Helper Functions *********************************/
 // input helper function
 const formatInpus = (source, toggleContext) => {
     // the Period of the div containing the svg for d3 to paint on
@@ -54,7 +55,7 @@ const formatInpus = (source, toggleContext) => {
 }
 
 // labelling helper function 
-const formatLabels = (y, x, margin, context) => {
+const formatLabels = (y, x, context) => {
     context.units ? y.tickFormat(d3.format(axisFormats[context.units])) : y.tickFormat(d3.format('.3n'))
             
     // add axis label & update margin to compensate
@@ -77,6 +78,9 @@ const axisFormats = {
     'dollars': '$,3'
 }
 
+
+
+/************************ Charting Functions *********************************/
 const createStackedBarChart = (source, toggleContext) => {
     let container, dataSource, context;
     [container, dataSource, source, context] = formatInpus(source, toggleContext)
@@ -105,7 +109,7 @@ const createStackedBarChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis, chart.xAxis, chart.margin(), context)
+            if(context) formatLabels(chart.yAxis, chart.xAxis, context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -145,7 +149,7 @@ const createLinePlusBarChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.y1Axis, chart.xAxis, chart.margin(), context)
+            if(context) formatLabels(chart.y1Axis, chart.xAxis, context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -181,7 +185,7 @@ const createLineChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis, chart.xAxis, chart.margin(), context)
+            if(context) formatLabels(chart.yAxis, chart.xAxis, context)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -226,50 +230,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis1, chart.xAxis, chart.margin(), context)
-            
-            d3.select(container).datum(source.data).transition().duration(500).call(chart)
-
-            nv.utils.windowResize(chart.update)
-
-            return chart
-        })
-    })
-
-}
-
-const createStackedAreaChart = (source, toggleContext) => {
-    let container, dataSource, context;
-    [container, dataSource, source, context] = formatInpus(source, toggleContext)
-
-    d3.csv(dataSource, rows => {
-
-        // extract information from the columns set in the snippetsRef lookup table
-        source.data.forEach(series => {
-            series.values.push([
-                +rows[series.columns[0]],
-                rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
-            ])
-        })
-
-    }, csvObj => {
-
-        nv.addGraph(() => {
-            let chart = nv.models.stackedAreaChart()
-                .margin({top: 40, right: 55, bottom: 45, left: 85})
-                .x(d => d[0])
-                .y(d => d[1])
-                .useInteractiveGuideline(true)
-                .clipEdge(true)
-                .showControls(false)
-                // use the style method to set the default to expand
-                .style('expand')
-
-            // set max legend length to an arbitrarily high number to prevent text cutoff
-            chart.legend.maxKeyLength(100)
-
-            // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.yAxis1, chart.margin(), context)
+            if(context) formatLabels(chart.yAxis1, chart.xAxis, context)
             
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
@@ -284,6 +245,11 @@ const createWaterfallChart = (source, toggleContext) => {
     let container, dataSource;
     [container, dataSource, source] = formatInpus(source, toggleContext)
 
+    // get a handle on the chart container element for resizing function
+    const chartDiv = container.split(' ')[0]
+    const waterfallContainer = document.querySelector(chartDiv)
+    const widthNoMargin = waterfallContainer.clientWidth
+
     // hack to identify toggles for this case
     const len = source.data[0].columns.length - 1
     const county = source.data[0].columns[len]
@@ -294,10 +260,10 @@ const createWaterfallChart = (source, toggleContext) => {
         bruh[0].remove()
     }
 
-    let margin = {top: 65, right: 55, bottom: 200, left: 85},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
-    padding = 0.3
+    let margin = {top: 25, right: 55, bottom: 260, left: 85},
+    width = widthNoMargin - margin.left - margin.right,
+    height = 550 - margin.top - margin.bottom,
+    padding = 0.1
 
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], padding);
@@ -305,13 +271,9 @@ const createWaterfallChart = (source, toggleContext) => {
     var y = d3.scale.linear()
         .range([height, 0]);
 
-    var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom")
-
-    var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left")
+    // function to handle grid lines and x/y axes
+    var xAxis = () => d3.svg.axis().scale(x).orient("bottom").ticks(20).tickSize(-height, 0, 0)
+    var yAxis = () => d3.svg.axis().scale(y).orient("left").ticks(8).tickSize(-width, 0, 0)
 
     var chart = d3.select(container)
         .attr("width", width + margin.left + margin.right)
@@ -339,48 +301,61 @@ const createWaterfallChart = (source, toggleContext) => {
            data[i].end = cumulative
         }
 
-        // @TODO: this doesn't accept non-unique Labels which is a problem
         x.domain(data.map(function(d) { return d.Label; }));
         y.domain([d3.min(data, function(d) {return d.end;}) , d3.max(data, function(d) { return d.end; })]);
 
         chart.append("g")
-            .attr("class", "x axis")
+            .attr("class", "waterfallAxis")
             .attr("transform", "translate(0," + height + ")")
-            .call(xAxis)
+            .call(xAxis())
             .selectAll("text")
-            .attr("y", 0)
-            .attr("x", 9)
-            .attr("dy", "10px")
-            .attr("transform", "rotate(90)")
-            .style("text-anchor", "start");
-  
+                .attr("y", 0)
+                .attr("x", 16)
+                .attr("transform", "rotate(90)")
+                .style("text-anchor", "start");
+        
         chart.append("g")
-            .attr("class", "y axis")
-            .call(yAxis);
-    
+            .attr("class", "waterfallAxis")
+            .call(yAxis())
+            .selectAll("text")
+                .attr("x", -5);
+
+        // add y-label
+        chart.append("text")
+            .attr("text-anchor", "middle")
+            .attr("transform", "translate("+ (-margin.left/1.3) +","+(height/2)+")rotate(-90)")
+            .text("Change in Population")
+            .attr('font-size', '12px');
+
         var bar = chart.selectAll(".bar")
             .data(data)
             .enter().append("g")
-            .attr("class", function(d) { return "bar " + d.class })
-            .attr("transform", function(d) { return "translate(" + x(d.Label) + ",0)"; });
+            .attr("class", d => "bar " + d.class )
+            .attr("transform", d => "translate(" + x(d.Label) + ",0)");
     
         bar.append("rect")
-            .attr("y", function(d) { return y( Math.max(d.start, d.end) ); })
-            .attr("height", function(d) { return Math.abs( y(d.start) - y(d.end) ); })
+            .attr("y", d => y( Math.max(d.start, d.end) ))
+            .attr("height", d => Math.abs( y(d.start) - y(d.end) ))
             .attr("width", x.rangeBand());
-    
+        
+        // add values on top of or underneath each bar
         bar.append("text")
-            .attr("x", x.rangeBand() / 2)
-            .attr("y", function(d) { return y(d.end) + 5; })
-            .attr("dy", function(d) { return ((d.class=='negative') ? '-' : '') + "10px" })
-    
-        bar.filter(function(d) { return d.class != "total" }).append("line")
-            .attr("class", "connector")
-            .attr("x1", x.rangeBand() + 5 )
-            .attr("y1", function(d) { return y(d.end) } )
-            .attr("x2", x.rangeBand() / ( 1 - padding) - 5 )
-            .attr("y2", function(d) { return y(d.end) } )
+            .attr("x", d => d.end > 1000 || d.end < -1000 ? 0 : 6)
+            // determine if the value should be placed above (trending up) or below (trending down) the bar
+            .attr("y", d => y(d.end) + (d.end > d.start ? -5 : 10))
+            .attr('font-size', '10px')
+            .text(d => (d.class === 'negative' ? '-' : '' + d.end))
     });
+
+    // resize listener
+    window.onresize = () => {
+        // remove jawns
+        const bruh = d3.select(container)[0][0].children;
+        bruh[0].remove()
+
+        // create jawn
+        createWaterfallChart(source, toggleContext)
+    }
 }
 
-export {createStackedBarChart, createLinePlusBarChart, createLineChart, createStackedAreaChart, createLineAndScatterChart, createWaterfallChart};
+export {createStackedBarChart, createLinePlusBarChart, createLineChart, createLineAndScatterChart, createWaterfallChart};
