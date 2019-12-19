@@ -9,7 +9,7 @@ const splashPage = document.getElementById('splash-page')
 // for development
 const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
 
-// for review: 
+// for review:
 // const baseURL = 'http://staging.dvrpc.org/review/TrackingProgress/'
 
 // for live:

@@ -344,7 +344,7 @@ const createWaterfallChart = (source, toggleContext) => {
             // determine if the value should be placed above (trending up) or below (trending down) the bar
             .attr("y", d => y(d.end) + (d.end > d.start ? -5 : 10))
             .attr('font-size', '10px')
-            .text(d => (d.class === 'negative' ? '-' : '' + d.end))
+            .text(d => (d.class === 'negative' ? '-' : '' + d.end));
     });
 
     // resize listener
