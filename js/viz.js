@@ -242,8 +242,8 @@ const createLineAndScatterChart = (source, toggleContext) => {
 }
 
 const createWaterfallChart = (source, toggleContext) => {
-    let container, dataSource, context;
-    [container, dataSource, source, context] = formatInpus(source, toggleContext)
+    let container, dataSource;
+    [container, dataSource, source] = formatInpus(source, toggleContext)
 
     // get a handle on the chart container element for resizing function
     const chartDiv = container.split(' ')[0]
@@ -301,7 +301,6 @@ const createWaterfallChart = (source, toggleContext) => {
            data[i].end = cumulative
         }
 
-        // @TODO: this doesn't accept non-unique Labels which is a problem
         x.domain(data.map(function(d) { return d.Label; }));
         y.domain([d3.min(data, function(d) {return d.end;}) , d3.max(data, function(d) { return d.end; })]);
 
