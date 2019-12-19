@@ -528,10 +528,7 @@ svg.nvd3-svg{
     height: 100%;
     width: 100%;
 }
-/* this doesn't work but look into giving the y-axis-labels right space. also tried .nv-y */
-/* .nv-axisLabel{
-    margin-right: 20px;
-} */
+
 
 
 /*******************************/
@@ -823,6 +820,9 @@ footer{
         margin: 3% 0;
         width: auto;
     }
+    select{
+        font-size: 0.9em;
+    }
     .toggle-subheader{
         border-right: none;
         padding-right: 0;
@@ -839,6 +839,10 @@ footer{
     .chart-src{
         width: auto;
     }
+
+
+
+    /* Mobile styles for the footer */
     footer{
         font-size: 0.7em;
     }
