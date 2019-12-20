@@ -339,8 +339,8 @@ const snippetsRef = {
                     units: ['thousands', 'thousandsC', 'thousandsC'],
                 },
                 columnOptions: [
-                    ['DVRPC- ksi per capita','NJ Suburbs- ksi per capita','PA Suburbs- ksi per capita','Bucks- ksi per capita','Burlington- ksi per capita','Camden- ksi per capita','Chester- ksi per capita','Delaware- ksi per capita','Gloucester- ksi per capita','Mercer- ksi per capita','Montgomery- ksi per capita','Philadelphia- ksi per capita'],
                     ['DVRPC- ksi total','NJ Suburbs- ksi total','PA Suburbs- ksi total','Bucks- ksi total','Burlington- ksi total','Camden- ksi total','Chester- ksi total','Delaware- ksi total','Gloucester- ksi total','Mercer- ksi total','Montgomery- ksi total','Philadelphia- ksi total'],
+                    ['DVRPC- ksi per capita','NJ Suburbs- ksi per capita','PA Suburbs- ksi per capita','Bucks- ksi per capita','Burlington- ksi per capita','Camden- ksi per capita','Chester- ksi per capita','Delaware- ksi per capita','Gloucester- ksi per capita','Mercer- ksi per capita','Montgomery- ksi per capita','Philadelphia- ksi per capita'],
                     ['DVRPC- ksi per VMT','NJ Suburbs- ksi per VMT','PA Suburbs- ksi per VMT','Bucks- ksi per VMT','Burlington- ksi per VMT','Camden- ksi per VMT','Chester- ksi per VMT','Delaware- ksi per VMT','Gloucester- ksi per VMT','Mercer- ksi per VMT','Montgomery- ksi per VMT','Philadelphia- ksi per VMT']
                 ],
                 data: [
