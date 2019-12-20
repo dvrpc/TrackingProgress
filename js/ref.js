@@ -1313,8 +1313,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region'],
-                    ['PA Suburban Counties'],
                     ['NJ Suburban Counties'],
+                    ['PA Suburban Counties'],
                     ['Bucks'],
                     ['Burlington'],
                     ['Camden'],
@@ -1344,8 +1344,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region_Female', 'Region_Male'],
-                    ['PA Suburban Counties_Female', 'PA Suburban Counties_Male'],
                     ['NJ Suburban Counties_Female', 'NJ Suburban Counties_Male'],
+                    ['PA Suburban Counties_Female', 'PA Suburban Counties_Male'],
                     ['Bucks_Female', 'Bucks_Male'],
                     ['Burlington_Female', 'Burlington_Male'],
                     ['Camden_Female', 'Camden_Male'],
@@ -1379,8 +1379,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region'],
-                    ['PA Suburban Counties'],
                     ['NJ Suburban Counties'],
+                    ['PA Suburban Counties'],
                     ['Bucks'],
                     ['Burlington'],
                     ['Camden'],
@@ -1410,8 +1410,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region_Male', 'Region_Female'],
-                    ['PA Suburban Counties_Male', 'PA Suburban Counties_Female'],
                     ['NJ Suburban Counties_Male', 'NJ Suburban Counties_Female'],
+                    ['PA Suburban Counties_Male', 'PA Suburban Counties_Female'],
                     ['Bucks_Male', 'Bucks_Female'],
                     ['Burlington_Male', 'Burlington_Female'],
                     ['Camden_Male', 'Camden_Female'],
