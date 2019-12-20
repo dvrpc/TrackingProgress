@@ -54,6 +54,7 @@ const formatInpus = (source, toggleContext) => {
     return [container, dataSource, source, context]
 }
 
+
 // labelling helper function 
 const formatLabels = (y, x, context) => {
     context.units ? y.tickFormat(d3.format(axisFormats[context.units])) : y.tickFormat(d3.format('.3n'))
@@ -61,7 +62,7 @@ const formatLabels = (y, x, context) => {
     // add axis label & update margin to compensate
     if(context.labels) {
         y.axisLabel(context.labels)
-        y.axisLabelDistance(15)
+        y.axisLabelDistance( isMobile ? 8 : 15)
 
         // x label defaults to year except for the two edge cases where it's different (which is handled in format Inputs)
         x.axisLabel(context.xLabel)
@@ -78,6 +79,10 @@ const axisFormats = {
     'dollars': '$,3'
 }
 
+// margin object for desktop/mobile
+let isMobile = window.innerWidth > 415 ? false : true
+const standardMargin = isMobile ? {top: 40, right: 20, bottom: 50, left: 70} : {top: 40, right: 55, bottom: 45, left: 85}
+const waterfallMargin = isMobile ? {top: 25, right: 20, bottom: 312, left: 65} : {top: 25, right: 55, bottom: 260, left: 85}
 
 
 /************************ Charting Functions *********************************/
@@ -95,7 +100,7 @@ const createStackedBarChart = (source, toggleContext) => {
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
-                .margin({top: 40, right: 55, bottom: 45, left: 85})
+                .margin(standardMargin)
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
@@ -136,7 +141,7 @@ const createLinePlusBarChart = (source, toggleContext) => {
     }, csvObj => {        
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
-                .margin({top: 40, right: 55, bottom: 45, left: 85})
+                .margin(standardMargin)
                 .focusEnable(false)
                 .x(d => d[0])
                 .y((d, i) => d[1])
@@ -172,7 +177,7 @@ const createLineChart = (source, toggleContext) => {
 
         nv.addGraph(() => {
             let chart = nv.models.lineChart()
-                .margin({top: 40, right: 55, bottom: 45, left: 85})
+                .margin(standardMargin)
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
                 .clipEdge(false)
@@ -223,7 +228,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
-                .margin({top: 40, right: 55, bottom: 45, left: 85})
+                .margin(standardMargin)
                 .yDomain1(yDomain)
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
@@ -260,7 +265,7 @@ const createWaterfallChart = (source, toggleContext) => {
         bruh[0].remove()
     }
 
-    let margin = {top: 25, right: 55, bottom: 260, left: 85},
+    let margin = waterfallMargin,
     width = widthNoMargin - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom,
     padding = 0.1

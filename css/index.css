@@ -106,9 +106,6 @@ header{
 #splash-page{
     margin-top: 8vh;
     padding: 3%;
-    /* og grey */
-    /* background: #e9e9e9; */
-    /* lighter version of the main teal... */
     background: rgba(79,163,168,0.1);
     visibility: visible;
 }
@@ -528,10 +525,7 @@ svg.nvd3-svg{
     height: 100%;
     width: 100%;
 }
-/* this doesn't work but look into giving the y-axis-labels right space. also tried .nv-y */
-/* .nv-axisLabel{
-    margin-right: 20px;
-} */
+
 
 
 /*******************************/
@@ -643,7 +637,7 @@ footer{
     }
     #dvrpc-logo{
         border-right: none;
-        width: 75%
+        width: 75%;
     }
     #logo-help-wrapper{
         width: 50%;
@@ -823,12 +817,15 @@ footer{
         margin: 3% 0;
         width: auto;
     }
+    .double-toggle-form fieldset:last-child{
+        text-align: right;
+    }
+    select{
+        font-size: 0.9em;
+    }
     .toggle-subheader{
         border-right: none;
         padding-right: 0;
-    }
-    .toggle-vr {
-        display: none;
     }
     .data-viz{
         min-height: 300px;
@@ -839,6 +836,12 @@ footer{
     .chart-src{
         width: auto;
     }
+    .nv-series text{
+        font-size: 9px;
+    }
+
+
+    /* Mobile styles for the footer */
     footer{
         font-size: 0.7em;
     }
