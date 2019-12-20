@@ -606,10 +606,6 @@ footer{
     .indicators-title{
         height: 32%;
     }
-    .icon-set-img{
-        /* height: 110px;
-        width: 110px; */
-    }
 }
 /* height query for the category icons situation */
 @media all and (max-height: 700px){

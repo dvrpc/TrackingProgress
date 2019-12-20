@@ -174,7 +174,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['edattainHS'],
                 context: {
-                    labels: ['Percentage Population Age 25 or Older'],
+                    labels: ['Percentage Population Over 24 years'],
                     units: ['percentC']
                 },
                 data: [
@@ -264,7 +264,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['edattainComprehensive'],
                 context: {
-                    labels: ['Population Age 25 or Older (Thousands)'],
+                    labels: ['Population Over 24 years (Thousands)'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
@@ -670,12 +670,12 @@ const snippetsRef = {
                         columns: ['year', 'DVRPC- Below 35%- Rent']
                     },
                     {
-                        'key': 'Above 35% - Rent',
-                        columns: ['year', 'DVRPC- Above 35%- Rent']
-                    },
-                    {
                         'key': 'Above 35% - Own',
                         columns: ['year', 'DVRPC- Above 35%- Own']
+                    },
+                    {
+                        'key': 'Above 35% - Rent',
+                        columns: ['year', 'DVRPC- Above 35%- Rent']
                     },
                     {
                         'key': 'Not Computed - Own',
@@ -2211,82 +2211,82 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'DVRPC Region*',
-                        columns: ['Year', 'DVRPC']
+                        columns: ['Year', 'DVRPC-count']
                     },
                     {
                         'key': 'NJ Counties*',
                         disabled: true,
-                        columns: ['Year', 'NJCnt']
+                        columns: ['Year', 'NJCnt-count']
                     },
                     {
                         'key': 'PA Suburban Counties*',
                         disabled: true,
-                        columns: ['Year', 'PASub']
+                        columns: ['Year', 'PASub-count']
                     },
                     {
                         'key': 'Core Cities^',
                         disabled: true,
-                        columns: ['Year', 'Core']
+                        columns: ['Year', 'Core-count']
                     },
                     {
                         'key': 'Developed Communities^',
                         disabled: true,
-                        columns: ['Year', 'DevCom']
+                        columns: ['Year', 'DevCom-count']
                     },
                     {
                         'key': 'Growing Suburbs^',
                         disabled: true,
-                        columns: ['Year', 'GroSub']
+                        columns: ['Year', 'GroSub-count']
                     },
                     {
                         'key': 'Rural Areas^',
                         disabled: true,
-                        columns: ['Year', 'Rural']
+                        columns: ['Year', 'Rural-count']
                     },
                     {
                         'key': 'Burlington**',
                         disabled: true,
-                        columns: ['Year', 'Burlington']
+                        columns: ['Year', 'Burlington-count']
                     },
                     {
                         'key': 'Camden**',
                         disabled: true,
-                        columns: ['Year', 'Camden']
+                        columns: ['Year', 'Camden-count']
                     },
                     {
                         'key': 'Gloucester**',
                         disabled: true,
-                        columns: ['Year', 'Gloucester']
+                        columns: ['Year', 'Gloucester-count']
                     },
                     {
                         'key': 'Mercer**',
                         disabled: true,
-                        columns: ['Year', 'Mercer']
+                        columns: ['Year', 'Mercer-count']
                     },
                     {
                         'key': 'Bucks**',
                         disabled: true,
-                        columns: ['Year', 'Bucks']
+                        columns: ['Year', 'Bucks-count']
                     },
                     {
                         'key': 'Delaware**',
                         disabled: true,
-                        columns: ['Year', 'Delaware']
+                        columns: ['Year', 'Delaware-count']
                     },
                     {
                         'key': 'Chester**',
                         disabled: true,
-                        columns: ['Year', 'Chester']
+                        columns: ['Year', 'Chester-count']
                     },
                     {
                         'key': 'Montgomery**',
                         disabled: true,
-                        columns: ['Year', 'Montgomery']
+                        columns: ['Year', 'Montgomery-count']
                     },
                     {
                         'key': 'Philadelphia**',
                         disabled: true,
-                        columns: ['Year', 'Philadelphia']
+                        columns: ['Year', 'Philadelphia-count']
                     }
                 ]
             },
@@ -2322,7 +2322,7 @@ const snippetsRef = {
                 dataSource: ['pop_age_change','pop_age_totals'],
                 context: {
                     labels: ['Change in Population', 'Total Population (Thousands)'],
-                    units: ['thousands', 'thousandsC'],
+                    units: ['thousands', 'thousandsC']
                 },
                 columnOptions: [
                     ['DVRPC_<20','DVRPC_20-34','DVRPC_35-49','DVRPC_50-64','DVRPC_65+'],
