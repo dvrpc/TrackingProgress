@@ -294,7 +294,6 @@ summary:hover{
     width: 71%;
     height: 71%;
     margin: 0 auto;
-    font-size: 0.6em;
 }
 #connections-icon{
     display: block;
@@ -597,16 +596,19 @@ footer{
 /*********** Media Queries ***********/
 @media all and (min-width: 1366px){
     .indicators-grid-item {
-        width: 8.5vw;
-        height: 8.5vw;
+        width: 8.7vw;
+        height: 8.7vw;
+    }
+    .indicators-icons{
+        width: 68%;
+        height: 68%;
+    }
+    .indicators-title{
+        height: 32%;
     }
     .icon-set-img{
-        height: 135px;
-        width: 135px;
-    }
-    .flipside-img{
-        height: 45px;
-        width: 45px;
+        /* height: 110px;
+        width: 110px; */
     }
 }
 /* height query for the category icons situation */
@@ -614,12 +616,6 @@ footer{
     .icon-set-img{
         height: 70px;
         width: 70px;
-    }
-}
-@media all and (max-width: 1100px){
-    .indicators-grid-item{
-        width: 12vh;
-        height: 12vh;
     }
 }
 @media all and (max-width: 800px){
