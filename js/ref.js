@@ -2466,9 +2466,9 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- All','DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
+                    ['New Jersey Suburbs- All','New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
                     ['Pennsylvania All Counties- All','Pennsylvania All Counties- State', 'Pennsylvania All Counties- Local', 'Pennsylvania All Counties- Other'],
                     ['Pennsylvania Suburbs- All','Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
-                    ['New Jersey Suburbs- All','New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
                     ['Bucks- All','Bucks- State', 'Bucks- Local', 'Bucks- Other'],
                     ['Burlington- All','Burlington- State', 'Burlington- Local', 'Burlington- Other'],
                     ['Camden- All','Camden- State', 'Camden- Local', 'Camden- Other'],
@@ -2513,9 +2513,9 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- State', 'DVRPC- Local', 'DVRPC- Other'],
+                    ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
                     ['Pennsylvania All Counties- State', 'Pennsylvania All Counties- Local', 'Pennsylvania All Counties- Other'],
                     ['Pennsylvania Suburbs- State', 'Pennsylvania Suburbs- Local', 'Pennsylvania Suburbs- Other'],
-                    ['New Jersey Suburbs- State', 'New Jersey Suburbs- Local', 'New Jersey Suburbs- Other'],
                     ['Bucks- State', 'Bucks- Local', 'Bucks- Other'],
                     ['Burlington- State', 'Burlington- Local', 'Burlington- Other'],
                     ['Camden- State', 'Camden- Local', 'Camden- Other'],
@@ -2553,9 +2553,9 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
+                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
                     ['Pennsylvania All Counties- NA','Pennsylvania All Counties- Poor','Pennsylvania All Counties- Fair','Pennsylvania All Counties- Good'],
                     ['Pennsylvania Suburbs- NA','Pennsylvania Suburbs- Poor','Pennsylvania Suburbs- Fair','Pennsylvania Suburbs- Good'],
-                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
                     ['Bucks- NA','Bucks- Poor','Bucks- Fair','Bucks- Good'],
                     ['Burlington- NA','Burlington- Poor','Burlington- Fair','Burlington- Good'],
                     ['Camden- NA','Camden- Poor','Camden- Fair','Camden- Good'],
