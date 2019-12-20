@@ -15,22 +15,22 @@ const fullGeography = [
         disabled: true
     },
     {
-        'key': 'Core City^',
+        'key': 'Core Cities^',
         columns: ['year', 'Core City'],
         disabled: true
     },
     {
-        'key': 'Developed Community^',
+        'key': 'Developed Communities^',
         columns: ['year', 'Developed Community'],
         disabled: true
     },
     {
-        'key': 'Growing Suburb^',
+        'key': 'Growing Suburbs^',
         columns: ['year', 'Growing Suburb'],
         disabled: true
     },
     {
-        'key': 'Rural Area^',
+        'key': 'Rural Areas^',
         columns: ['year', 'Rural Area'],
         disabled: true
     },
@@ -81,59 +81,4 @@ const fullGeography = [
     }
 ]
 
-const lightGeography = [
-    {
-        'key': 'DVRPC',
-        columns: ['year', 'DVRPC']
-    },
-    {
-        'key': 'Pennsylvania Suburbs',
-        columns: ['year', 'Pennsylvania Suburbs']
-    },
-    {
-        'key': 'New Jersey Suburbs',
-        columns: ['year', 'New Jersey Suburbs']
-    },
-    {
-        'key': 'Philadelphia Subregion',
-        columns: ['year', 'Philadelphia Subregion']
-    },
-    {
-        'key': 'Bucks County',
-        columns: ['year', 'Bucks']
-    },
-    {
-        'key': 'Chester County',
-        columns: ['year', 'Chester']
-    },
-    {
-        'key': 'Delaware County',
-        columns: ['year', 'Delaware']
-    },
-    {
-        'key': 'Montgomery County',
-        columns: ['year', 'Montgomery']
-    },
-    {
-        'key': 'Burlington County',
-        columns: ['year', 'Burlington']
-    },
-    {
-        'key': 'Camden County',
-        columns: ['year', 'Camden']
-    },
-    {
-        'key': 'Gloucester County',
-        columns: ['year', 'Gloucester']
-    },
-    {
-        'key': 'Mercer County',
-        columns: ['year', 'Mercer']
-    },
-    {
-        'key': 'Philadelphia County',
-        columns: ['year', 'Philadelphia']
-    }
-]
-
-export { fullGeography, lightGeography }
+export { fullGeography }
