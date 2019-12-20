@@ -820,15 +820,9 @@ footer{
         margin: 3% 0;
         width: auto;
     }
-    /* @todo: fix this */
-    .double-toggle-form{
-        justify-content: space-around;
+    .double-toggle-form fieldset:last-child{
+        text-align: right;
     }
-    /* somehow this applies to BOTH fieldsets, so even the hack to align them doesn't work */
-    .double-toggle-form:last-child{
-        /* text-align: right; */
-    }
-    /* @ todo: ^ fix that */
     select{
         font-size: 0.9em;
     }
