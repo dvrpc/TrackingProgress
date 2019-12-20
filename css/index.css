@@ -640,7 +640,7 @@ footer{
     }
     #dvrpc-logo{
         border-right: none;
-        width: 75%
+        width: 75%;
     }
     #logo-help-wrapper{
         width: 50%;
@@ -820,15 +820,21 @@ footer{
         margin: 3% 0;
         width: auto;
     }
+    /* @todo: fix this */
+    .double-toggle-form{
+        justify-content: space-around;
+    }
+    /* somehow this applies to BOTH fieldsets, so even the hack to align them doesn't work */
+    .double-toggle-form:last-child{
+        /* text-align: right; */
+    }
+    /* @ todo: ^ fix that */
     select{
         font-size: 0.9em;
     }
     .toggle-subheader{
         border-right: none;
         padding-right: 0;
-    }
-    .toggle-vr {
-        display: none;
     }
     .data-viz{
         min-height: 300px;

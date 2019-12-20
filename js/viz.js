@@ -81,11 +81,8 @@ const axisFormats = {
 
 // margin object for desktop/mobile
 let isMobile = window.innerWidth > 415 ? false : true
-
-const defaultMargin = {top: 40, right: 55, bottom: 45, left: 85}
-const mobileMargin = {top: 40, right: 20, bottom: 50, left: 70}
-const waterfallMargin = {top: 25, right: 55, bottom: 260, left: 85}
-const waterfallMobileMargin = {top: 25, right: 20, bottom: 312, left: 65}
+const standardMargin = isMobile ? {top: 40, right: 20, bottom: 50, left: 70} : {top: 40, right: 55, bottom: 45, left: 85}
+const waterfallMargin = isMobile ? {top: 25, right: 55, bottom: 260, left: 85} : {top: 25, right: 20, bottom: 312, left: 65}
 
 
 /************************ Charting Functions *********************************/
@@ -103,7 +100,7 @@ const createStackedBarChart = (source, toggleContext) => {
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
-                .margin(isMobile ? mobileMargin : defaultMargin)
+                .margin(standardMargin)
                 // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
@@ -144,7 +141,7 @@ const createLinePlusBarChart = (source, toggleContext) => {
     }, csvObj => {        
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
-                .margin(isMobile ? mobileMargin : defaultMargin)
+                .margin(standardMargin)
                 .focusEnable(false)
                 .x(d => d[0])
                 .y((d, i) => d[1])
@@ -180,7 +177,7 @@ const createLineChart = (source, toggleContext) => {
 
         nv.addGraph(() => {
             let chart = nv.models.lineChart()
-                .margin(isMobile ? mobileMargin : defaultMargin)
+                .margin(standardMargin)
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
                 .clipEdge(false)
@@ -231,7 +228,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiChart()
-                .margin(isMobile ? mobileMargin : defaultMargin)
+                .margin(standardMargin)
                 .yDomain1(yDomain)
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
@@ -268,7 +265,7 @@ const createWaterfallChart = (source, toggleContext) => {
         bruh[0].remove()
     }
 
-    let margin = isMobile ? waterfallMobileMargin : waterfallMargin,
+    let margin = waterfallMargin,
     width = widthNoMargin - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom,
     padding = 0.1
