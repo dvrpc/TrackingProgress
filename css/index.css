@@ -836,6 +836,9 @@ footer{
     .chart-src{
         width: auto;
     }
+    .nv-series text{
+        font-size: 9px;
+    }
 
 
     /* Mobile styles for the footer */
