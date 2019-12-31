@@ -689,6 +689,8 @@ footer{
     }
     .indicators-grid-item{
         margin: 1.5%;
+        width: 22vw;
+        height: 22vw;
     }
     .indicators-icons{
         width: 60%;

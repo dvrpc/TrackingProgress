@@ -6,7 +6,7 @@ const grid = dashboard.children[1]
 const splashPage = document.getElementById('splash-page')
 
 
-// for development
+// for development/live
 const baseURL =  '/TrackingProgress/'
 
 // for review:
