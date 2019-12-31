@@ -161,58 +161,51 @@ const getIndicatorSnippet = (grid, snippet) => {
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippet.file
 
-    // make sure snippetFile exists before going any further
-    if(snippetFile){
+    // get a handle on data viz metadata and text content
+    hasDataViz = snippet.d3
+    hasText = snippet.text
 
-        // get a handle on data viz metadata and text content
-        hasDataViz = snippet.d3
-        hasText = snippet.text
+    let page = `./indicatorSnippets/${snippetFile}`
 
-        let page = `./indicatorSnippets/${snippetFile}`
+    fetch(page).then(response => response.text()).then(snippet =>{
 
-        fetch(page).then(response => response.text()).then(snippet =>{
+        // insert the HTML to update the structure & put the map and/or data viz components in place
+        grid.insertAdjacentHTML('beforebegin', snippet)
 
-            // insert the HTML to update the structure & put the map and/or data viz components in place
-            grid.insertAdjacentHTML('beforebegin', snippet)
+        if(hasDataViz){
+            const dataToggles = document.querySelectorAll('.toggle-data-selector')
+            
+            // apply toggle functionality to all togglable elements in the snippet, if they exist
+            if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz))
 
-            if(hasDataViz){
-                const dataToggles = document.querySelectorAll('.toggle-data-selector')
-                
-                // apply toggle functionality to all togglable elements in the snippet, if they exist
-                if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz))
+            // initialize default context object for charts
+            const context = 'initial'
 
-                // initialize default context object for charts
-                const context = 'initial'
+            // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
+            hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, context))
+        }
 
-                // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
-                hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, context))
-            }
-
-            // load the default text + add tab click handler
-            if(hasText){
-                const descriptionContainer = document.getElementById('indicator-description-container')
-                const tabs = document.getElementById('description-wrapper-tabs')
-                const activeTab = document.querySelector('.active-tab')
-                
-                let cat = descriptionContainer.dataset.primary || 'unset'
-                const color = catLookup[cat].dark
-                
-                descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
-                
-                // add colors to tab/container based on primary category
-                descriptionContainer.style.borderTop = `2px solid ${color}`
-                descriptionContainer.style.borderBottom = `2px solid ${color}`
-                activeTab.style.background = color
-                activeTab.style.color = '#f7f7f7'
-                
-                // add tab functionality
-                tabs.onclick = e => handleTabs(e, hasText, descriptionContainer, color)
-            }
-        })
-    } else{
-        // @TODO: mockup a dummy snippet 404 page that tells the user the URL is invalid and to
-        // go back to the dashboardt
-    }
+        // load the default text + add tab click handler
+        if(hasText){
+            const descriptionContainer = document.getElementById('indicator-description-container')
+            const tabs = document.getElementById('description-wrapper-tabs')
+            const activeTab = document.querySelector('.active-tab')
+            
+            let cat = descriptionContainer.dataset.primary || 'unset'
+            const color = catLookup[cat].dark
+            
+            descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
+            
+            // add colors to tab/container based on primary category
+            descriptionContainer.style.borderTop = `2px solid ${color}`
+            descriptionContainer.style.borderBottom = `2px solid ${color}`
+            activeTab.style.background = color
+            activeTab.style.color = '#f7f7f7'
+            
+            // add tab functionality
+            tabs.onclick = e => handleTabs(e, hasText, descriptionContainer, color)
+        }
+    })
 }
 
 // toggle tabs and text
@@ -311,18 +304,21 @@ const makeIndicatorPage = hashArray => {
     const title = hashArray[0].replace(/-/g, ' ')
     const snippet = snippetsRef[title]
 
-    // make sure the snippet exists before proceeding
-    if(snippet){
+    // remove an existing indicator page before continuing
+    const oldIndicator = document.querySelector('.indicators-snippet')
+    if(oldIndicator) oldIndicator.remove()
 
-        // remove an existing indicator page before continuing
-        const oldIndicator = document.querySelector('.indicators-snippet')
-        if(oldIndicator) oldIndicator.remove()
+    // create the indicator page if it exists
+    if(snippet){
         
         const primaryCategory = hashArray[1]
         generateSideNav(indicators, relatedIndicators, primaryCategory)
         getIndicatorSnippet(grid, snippet, graphs)
+
+    // create the Indicator Not Found page if not
     }else{
-        alert('invalid indicator snippet - @TODO: make an invalid request template')
+        let page = './indicatorSnippets/notFound.html'
+        fetch(page).then(response => response.text().then(snippet => grid.insertAdjacentHTML('beforebegin', snippet)))
     }
 }
 
