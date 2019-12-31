@@ -7,13 +7,10 @@ const splashPage = document.getElementById('splash-page')
 
 
 // for development
-const baseURL =  'http://dev.dvrpc.org/TrackingProgress/'
+const baseURL =  '/TrackingProgress/'
 
 // for review:
-// const baseURL = 'http://staging.dvrpc.org/review/TrackingProgress/'
-
-// for live:
-//const baseURL = 'http://staging.dvrpc.org/TrackingProgress/'
+// const baseURL = '/review/TrackingProgress/'
 
 // remove possible special characters from URL by whitelisting alphanumeric characters, -, / and &
 const sanitizeHash = hash => hash.replace(/[^\w\-\/\&]/gi, '')
