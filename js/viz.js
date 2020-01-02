@@ -76,6 +76,7 @@ const axisFormats = {
     'singles': '.3n',
     'thousands': ',.0f',
     'thousandsC': ',.3r',
+    'millions': ',4r',
     'dollars': '$,3'
 }
 

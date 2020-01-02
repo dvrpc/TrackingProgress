@@ -1808,8 +1808,8 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['transit_ridership_graph_1'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
-                    units: ['thousands', 'singles'],
+                    labels: ['Trips (Millions)', 'Trips Per Capita'],
+                    units: ['millions', 'singles'],
                 },
                 columnOptions: [
                     ['unlinkedTrips'],
@@ -1827,8 +1827,8 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['transit_ridership_graph_2'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
-                    units: ['thousands', 'singles'],
+                    labels: ['Trips (Millions)', 'Trips Per Capita'],
+                    units: ['millions', 'singles'],
                 },
                 columnOptions: [
                     ['Bus', 'Commuter Rail', 'Light Rail', 'Non-Scheduled Services', 'Subway', 'Trolleybus'],
@@ -1866,8 +1866,8 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['transit_ridership_graph_3'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
-                    units: ['thousands', 'singles'],
+                    labels: ['Trips (Millions)', 'Trips Per Capita'],
+                    units: ['millions', 'singles'],
                 },
                 columnOptions: [
                     ['New Jersey Transit', 'PATCO', 'Pottstown Area Rapid Transit', 'SEPTA'],
