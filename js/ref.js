@@ -346,62 +346,62 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'DVRPC Region*',
-                        'columns': ['year', 'DVRPC- ksi total']
+                        'columns': ['year', 'DVRPC- ksi per capita']
                     },
                     {
                         'key': 'NJ Counties*',
                         disabled: true,
-                        'columns': ['year', 'NJ Suburbs- ksi total']
+                        'columns': ['year', 'NJ Suburbs- ksi per capita']
                     },
                     {
                         'key': 'PA Suburban Counties*',
                         disabled: true,
-                        'columns': ['year', 'PA Suburbs- ksi total']
+                        'columns': ['year', 'PA Suburbs- ksi per capita']
                     },
                     {
                         'key': 'Bucks**',
                         disabled: true,
-                        'columns': ['year', 'Bucks- ksi total']
+                        'columns': ['year', 'Bucks- ksi per capita']
                     },
                     {
                         'key': 'Burlington**',
                         disabled: true,
-                        'columns': ['year', 'Burlington- ksi total']
+                        'columns': ['year', 'Burlington- ksi per capita']
                     },
                     {
                         'key': 'Camden**',
                         disabled: true,
-                        'columns': ['year', 'Camden- ksi total']
+                        'columns': ['year', 'Camden- ksi per capita']
                     },
                     {
                         'key': 'Chester**',
                         disabled: true,
-                        'columns': ['year', 'Chester- ksi total']
+                        'columns': ['year', 'Chester- ksi per capita']
                     },
                     {
                         'key': 'Delaware**',
                         disabled: true,
-                        'columns': ['year', 'Delaware- ksi total']
+                        'columns': ['year', 'Delaware- ksi per capita']
                     },
                     {
                         'key': 'Gloucester**',
                         disabled: true,
-                        'columns': ['year', 'Gloucester- ksi total']
+                        'columns': ['year', 'Gloucester- ksi per capita']
                     },
                     {
                         'key': 'Mercer**',
                         disabled: true,
-                        'columns': ['year', 'Mercer- ksi total']
+                        'columns': ['year', 'Mercer- ksi per capita']
                     },
                     {
                         'key': 'Montgomery**',
                         disabled: true,
-                        'columns': ['year', 'Montgomery- ksi total']
+                        'columns': ['year', 'Montgomery- ksi per capita']
                     },
                     {
                         'key': 'Philadelphia**',
                         disabled: true,
-                        'columns': ['year', 'Philadelphia- ksi total']
+                        'columns': ['year', 'Philadelphia- ksi per capita']
                     }
                 ]
             },
@@ -455,7 +455,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['PHL_IntlDest'],
                 context: {
-                    labels: ['Flights'],
+                    labels: ['Airports'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
@@ -2601,7 +2601,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['water_quality_1'],
                 context: {
-                    labels: ['Percentage Impaired'],
+                    labels: ['Percentage Attaining Quality Standards for Designated Uses'],
                     units: ['percentC']
                 },
                 data: [
@@ -2681,7 +2681,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['land_consumption_1a','land_consumption_1b'],
                 context: {
-                    labels: ['Total Acres', 'Acres Per Capita'],
+                    labels: ['Acres (Thousands)', 'Acres Per Capita'],
                     units: ['thousands', 'singles'],
                 },
                 columnOptions: [
@@ -2866,7 +2866,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['land_consumption_3a','land_consumption_3b'],
                 context: {
-                    labels: ['Acres','Percent'],
+                    labels: ['Acres (Thousands)','Percent'],
                     units: ['thousands','percentC']
                 },
                 columnOptions: [
