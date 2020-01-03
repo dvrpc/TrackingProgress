@@ -334,9 +334,10 @@ const createWaterfallChart = (source, toggleContext) => {
             .attr('font-size', '12px');
 
         // add x-label
+        let xLabelMargin = isMobile ? margin.bottom/1.8 : margin.bottom/1.5
         chart.append("text")
             .attr("text-anchor", "middle")
-            .attr("transform", "translate("+ (width/2) +","+(height + margin.bottom/1.5)+")")
+            .attr("transform", "translate("+ (width/2) +","+(height + xLabelMargin)+")")
             .text("Change Components")
             .attr('font-size', '12px');
 
