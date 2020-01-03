@@ -76,13 +76,14 @@ const axisFormats = {
     'singles': '.3n',
     'thousands': ',.0f',
     'thousandsC': ',.3r',
+    'millions': ',4r',
     'dollars': '$,3'
 }
 
 // margin object for desktop/mobile
 let isMobile = window.innerWidth > 415 ? false : true
 const standardMargin = isMobile ? {top: 40, right: 20, bottom: 50, left: 70} : {top: 40, right: 55, bottom: 45, left: 85}
-const waterfallMargin = isMobile ? {top: 25, right: 20, bottom: 312, left: 65} : {top: 25, right: 55, bottom: 260, left: 85}
+const waterfallMargin = isMobile ? {top: 25, right: 20, bottom: 325, left: 65} : {top: 25, right: 55, bottom: 275, left: 85}
 
 
 /************************ Charting Functions *********************************/
@@ -262,12 +263,12 @@ const createWaterfallChart = (source, toggleContext) => {
     // even bigger hack to clear charts for this case
     if(len > 0) {
         const bruh = d3.select(container)[0][0].children;
-        bruh[0].remove()
+        if(bruh[0]) bruh[0].remove()
     }
 
     let margin = waterfallMargin,
     width = widthNoMargin - margin.left - margin.right,
-    height = 550 - margin.top - margin.bottom,
+    height = 545 - margin.top - margin.bottom,
     padding = 0.1
 
     var x = d3.scale.ordinal()
@@ -332,6 +333,14 @@ const createWaterfallChart = (source, toggleContext) => {
             .text("Change in Population")
             .attr('font-size', '12px');
 
+        // add x-label
+        let xLabelMargin = isMobile ? margin.bottom/1.8 : margin.bottom/1.5
+        chart.append("text")
+            .attr("text-anchor", "middle")
+            .attr("transform", "translate("+ (width/2) +","+(height + xLabelMargin)+")")
+            .text("Change Components")
+            .attr('font-size', '12px');
+
         var bar = chart.selectAll(".bar")
             .data(data)
             .enter().append("g")
@@ -355,11 +364,16 @@ const createWaterfallChart = (source, toggleContext) => {
     // resize listener
     window.onresize = () => {
         // remove jawns
-        const bruh = d3.select(container)[0][0].children;
-        bruh[0].remove()
+        const churt = d3.select(container)[0][0].children
+        const bruh = churt[0]
 
-        // create jawn
-        createWaterfallChart(source, toggleContext)
+        // handle edge case where active toggles sometimes throw undefined at churt
+        if(bruh){
+            bruh.remove()
+    
+            // re-create jawn
+            createWaterfallChart(source, toggleContext)
+        }
     }
 }
 

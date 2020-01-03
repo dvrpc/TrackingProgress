@@ -455,7 +455,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['PHL_IntlDest'],
                 context: {
-                    labels: ['Flights'],
+                    labels: ['Airports'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
@@ -1000,68 +1000,29 @@ const snippetsRef = {
                 dataSource: ['medincGapRace'],
                 context: {
                     labels: ['Dollars (2017)'],
-                    units: ['dollars']
+                    keepLabels: true,
+                    units: ['dollars'],
+                    keepUnits: true
                 },
+                columnOptions: [
+                    ['Region'],
+                    ['NJ Suburban Counties'],
+                    ['PA Suburban Counties'],
+                    ['Bucks'],
+                    ['Burlington'],
+                    ['Camden'],
+                    ['Chester'],
+                    ['Delaware'],
+                    ['Gloucester'],
+                    ['Mercer'],
+                    ['Montgomery'],
+                    ['Philadelphia']
+                ],
                 data: [
                     {
-                        'key': 'DVRPC Region*',
+                        'key': 'Income Gap',
                         columns: ['year', 'Region']
                     },
-                    {
-                        'key': 'NJ Counties*',
-                        disabled: true,
-                        columns: ['year', 'NJ Suburban Counties']
-                    },
-                    {
-                        'key': 'PA Suburban Counties*',
-                        disabled: true,
-                        columns: ['year', 'PA Suburban Counties']
-                    },
-                    {
-                        'key': 'Bucks**',
-                        disabled: true,
-                        columns: ['year', 'Bucks']
-                    },
-                    {
-                        'key': 'Burlington**',
-                        disabled: true,
-                        columns: ['year', 'Burlington']
-                    },
-                    {
-                        'key': 'Camden**',
-                        disabled: true,
-                        columns: ['year', 'Camden']
-                    },
-                    {
-                        'key': 'Chester**',
-                        disabled: true,
-                        columns: ['year', 'Chester']
-                    },
-                    {
-                        'key': 'Delaware**',
-                        disabled: true,
-                        columns: ['year', 'Delaware']
-                    },
-                    {
-                        'key': 'Gloucester**',
-                        disabled: true,
-                        columns: ['year', 'Gloucester']
-                    },
-                    {
-                        'key': 'Mercer**',
-                        disabled: true,
-                        columns: ['year', 'Mercer']
-                    },
-                    {
-                        'key': 'Montgomery**',
-                        disabled: true,
-                        columns: ['year', 'Montgomery']
-                    },
-                    {
-                        'key': 'Philadelphia**',
-                        disabled: true,
-                        columns: ['year', 'Philadelphia']
-                    }
                 ]
             },
             {
@@ -1808,8 +1769,8 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['transit_ridership_graph_1'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
-                    units: ['thousands', 'singles'],
+                    labels: ['Trips (Millions)', 'Trips Per Capita'],
+                    units: ['millions', 'singles'],
                 },
                 columnOptions: [
                     ['unlinkedTrips'],
@@ -1827,8 +1788,8 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['transit_ridership_graph_2'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
-                    units: ['thousands', 'singles'],
+                    labels: ['Trips (Millions)', 'Trips Per Capita'],
+                    units: ['millions', 'singles'],
                 },
                 columnOptions: [
                     ['Bus', 'Commuter Rail', 'Light Rail', 'Non-Scheduled Services', 'Subway', 'Trolleybus'],
@@ -1866,8 +1827,8 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['transit_ridership_graph_3'],
                 context: {
-                    labels: ['Trips (Thousands)', 'Trips Per Capita'],
-                    units: ['thousands', 'singles'],
+                    labels: ['Trips (Millions)', 'Trips Per Capita'],
+                    units: ['millions', 'singles'],
                 },
                 columnOptions: [
                     ['New Jersey Transit', 'PATCO', 'Pottstown Area Rapid Transit', 'SEPTA'],
@@ -2601,7 +2562,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['water_quality_1'],
                 context: {
-                    labels: ['Percentage Impaired'],
+                    labels: ['Percentage Attaining Quality Standards for Designated Uses'],
                     units: ['percentC']
                 },
                 data: [
@@ -2610,11 +2571,11 @@ const snippetsRef = {
                         columns: ['Year', 'Average']
                     },
                     {
-                        'key': 'Pennsylvania (miles)',
+                        'key': 'Pennsylvania Counties (miles)',
                         columns: ['Year', 'Pennsylvania']
                     },
                     {
-                        'key': 'New Jersey (acres)',
+                        'key': 'New Jersey Counties (acres)',
                         columns: ['Year', 'New Jersey']
                     }
                 ]
@@ -2622,9 +2583,9 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: ['water_quality_2'],
+                dataSource: ['water_quality_3'],
                 context: {
-                    labels: ['Stream Miles'],
+                    labels: ['Subwatershed Acres (Thousands)'],
                     units: ['thousands']
                 },
                 data: [
@@ -2645,9 +2606,9 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: ['water_quality_3'],
+                dataSource: ['water_quality_2'],
                 context: {
-                    labels: ['Subwatershed Acres (Thousands)'],
+                    labels: ['Stream Miles'],
                     units: ['thousands']
                 },
                 data: [
@@ -2681,7 +2642,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['land_consumption_1a','land_consumption_1b'],
                 context: {
-                    labels: ['Total Acres', 'Acres Per Capita'],
+                    labels: ['Acres (Thousands)', 'Acres Per Capita'],
                     units: ['thousands', 'singles'],
                 },
                 columnOptions: [
@@ -2866,7 +2827,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['land_consumption_3a','land_consumption_3b'],
                 context: {
-                    labels: ['Acres','Percent'],
+                    labels: ['Acres (Thousands)','Percent'],
                     units: ['thousands','percentC']
                 },
                 columnOptions: [
@@ -3044,12 +3005,12 @@ const snippetsRef = {
                         columns: ['year', 'DVRPC- All']
                     },
                     {
-                        'key': 'New Jersey',
+                        'key': 'New Jersey Counties',
                         disabled: true,
                         columns: ['year', 'New Jersey- All']
                     },
                     {
-                        'key': 'Pennsylvania',
+                        'key': 'Pennsylvania Counties',
                         disabled: true,
                         columns: ['year', 'Pennsylvania- All']
                     }
