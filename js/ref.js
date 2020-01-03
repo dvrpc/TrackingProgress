@@ -1000,68 +1000,29 @@ const snippetsRef = {
                 dataSource: ['medincGapRace'],
                 context: {
                     labels: ['Dollars (2017)'],
-                    units: ['dollars']
+                    keepLabels: true,
+                    units: ['dollars'],
+                    keepUnits: true
                 },
+                columnOptions: [
+                    ['Region'],
+                    ['NJ Suburban Counties'],
+                    ['PA Suburban Counties'],
+                    ['Bucks'],
+                    ['Burlington'],
+                    ['Camden'],
+                    ['Chester'],
+                    ['Delaware'],
+                    ['Gloucester'],
+                    ['Mercer'],
+                    ['Montgomery'],
+                    ['Philadelphia']
+                ],
                 data: [
                     {
-                        'key': 'DVRPC Region*',
+                        'key': 'Income Gap',
                         columns: ['year', 'Region']
                     },
-                    {
-                        'key': 'NJ Counties*',
-                        disabled: true,
-                        columns: ['year', 'NJ Suburban Counties']
-                    },
-                    {
-                        'key': 'PA Suburban Counties*',
-                        disabled: true,
-                        columns: ['year', 'PA Suburban Counties']
-                    },
-                    {
-                        'key': 'Bucks**',
-                        disabled: true,
-                        columns: ['year', 'Bucks']
-                    },
-                    {
-                        'key': 'Burlington**',
-                        disabled: true,
-                        columns: ['year', 'Burlington']
-                    },
-                    {
-                        'key': 'Camden**',
-                        disabled: true,
-                        columns: ['year', 'Camden']
-                    },
-                    {
-                        'key': 'Chester**',
-                        disabled: true,
-                        columns: ['year', 'Chester']
-                    },
-                    {
-                        'key': 'Delaware**',
-                        disabled: true,
-                        columns: ['year', 'Delaware']
-                    },
-                    {
-                        'key': 'Gloucester**',
-                        disabled: true,
-                        columns: ['year', 'Gloucester']
-                    },
-                    {
-                        'key': 'Mercer**',
-                        disabled: true,
-                        columns: ['year', 'Mercer']
-                    },
-                    {
-                        'key': 'Montgomery**',
-                        disabled: true,
-                        columns: ['year', 'Montgomery']
-                    },
-                    {
-                        'key': 'Philadelphia**',
-                        disabled: true,
-                        columns: ['year', 'Philadelphia']
-                    }
                 ]
             },
             {
