@@ -2610,11 +2610,11 @@ const snippetsRef = {
                         columns: ['Year', 'Average']
                     },
                     {
-                        'key': 'Pennsylvania (miles)',
+                        'key': 'Pennsylvania Counties (miles)',
                         columns: ['Year', 'Pennsylvania']
                     },
                     {
-                        'key': 'New Jersey (acres)',
+                        'key': 'New Jersey Counties (acres)',
                         columns: ['Year', 'New Jersey']
                     }
                 ]
@@ -2622,9 +2622,9 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: ['water_quality_2'],
+                dataSource: ['water_quality_3'],
                 context: {
-                    labels: ['Stream Miles'],
+                    labels: ['Subwatershed Acres (Thousands)'],
                     units: ['thousands']
                 },
                 data: [
@@ -2645,9 +2645,9 @@ const snippetsRef = {
             {
                 type: 'stacked bar',
                 container: 'chart3',
-                dataSource: ['water_quality_3'],
+                dataSource: ['water_quality_2'],
                 context: {
-                    labels: ['Subwatershed Acres (Thousands)'],
+                    labels: ['Stream Miles'],
                     units: ['thousands']
                 },
                 data: [
@@ -3044,12 +3044,12 @@ const snippetsRef = {
                         columns: ['year', 'DVRPC- All']
                     },
                     {
-                        'key': 'New Jersey',
+                        'key': 'New Jersey Counties',
                         disabled: true,
                         columns: ['year', 'New Jersey- All']
                     },
                     {
-                        'key': 'Pennsylvania',
+                        'key': 'Pennsylvania Counties',
                         disabled: true,
                         columns: ['year', 'Pennsylvania- All']
                     }
