@@ -263,7 +263,7 @@ const createWaterfallChart = (source, toggleContext) => {
     // even bigger hack to clear charts for this case
     if(len > 0) {
         const bruh = d3.select(container)[0][0].children;
-        bruh[0].remove()
+        if(bruh[0]) bruh[0].remove()
     }
 
     let margin = waterfallMargin,
@@ -363,11 +363,16 @@ const createWaterfallChart = (source, toggleContext) => {
     // resize listener
     window.onresize = () => {
         // remove jawns
-        const bruh = d3.select(container)[0][0].children;
-        bruh[0].remove()
+        const churt = d3.select(container)[0][0].children
+        const bruh = churt[0]
 
-        // create jawn
-        createWaterfallChart(source, toggleContext)
+        // handle edge case where active toggles sometimes throw undefined at churt
+        if(bruh){
+            bruh.remove()
+    
+            // re-create jawn
+            createWaterfallChart(source, toggleContext)
+        }
     }
 }
 
