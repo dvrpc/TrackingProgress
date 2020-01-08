@@ -82,7 +82,7 @@ const axisFormats = {
 
 // margin object for desktop/mobile
 let isMobile = window.innerWidth > 415 ? false : true
-const standardMargin = isMobile ? {top: 40, right: 20, bottom: 50, left: 70} : {top: 40, right: 55, bottom: 45, left: 85}
+const standardMargin = isMobile ? {top: 40, right: 25, bottom: 50, left: 65} : {top: 40, right: 55, bottom: 45, left: 85}
 const waterfallMargin = isMobile ? {top: 25, right: 20, bottom: 325, left: 65} : {top: 25, right: 55, bottom: 275, left: 85}
 
 

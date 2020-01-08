@@ -2205,6 +2205,11 @@ const snippetsRef = {
                         columns: ['Year', 'Rural-count']
                     },
                     {
+                        'key': 'Bucks**',
+                        disabled: true,
+                        columns: ['Year', 'Bucks-count']
+                    },
+                    {
                         'key': 'Burlington**',
                         disabled: true,
                         columns: ['Year', 'Burlington-count']
@@ -2215,6 +2220,16 @@ const snippetsRef = {
                         columns: ['Year', 'Camden-count']
                     },
                     {
+                        'key': 'Chester**',
+                        disabled: true,
+                        columns: ['Year', 'Chester-count']
+                    },
+                    {
+                        'key': 'Delaware**',
+                        disabled: true,
+                        columns: ['Year', 'Delaware-count']
+                    },
+                    {
                         'key': 'Gloucester**',
                         disabled: true,
                         columns: ['Year', 'Gloucester-count']
@@ -2223,21 +2238,6 @@ const snippetsRef = {
                         'key': 'Mercer**',
                         disabled: true,
                         columns: ['Year', 'Mercer-count']
-                    },
-                    {
-                        'key': 'Bucks**',
-                        disabled: true,
-                        columns: ['Year', 'Bucks-count']
-                    },
-                    {
-                        'key': 'Delaware**',
-                        disabled: true,
-                        columns: ['Year', 'Delaware-count']
-                    },
-                    {
-                        'key': 'Chester**',
-                        disabled: true,
-                        columns: ['Year', 'Chester-count']
                     },
                     {
                         'key': 'Montgomery**',
