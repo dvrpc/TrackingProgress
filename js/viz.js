@@ -91,11 +91,6 @@ const createStackedBarChart = (source, toggleContext) => {
     let container, dataSource, context;
     [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
-    // extra step to clear tooltips for stacked bar charts
-    // const tooltip = document.querySelector('.nvtooltip')
-    //if(tooltip) tooltip.remove()
-    // NOTE: ^ does not work. It removes the tooltip but still does not generate another one for a toggled multibar chart.
-
     d3.csv(dataSource, rows => {
 
         // create a values field based on the desired column as defined in the reference object
