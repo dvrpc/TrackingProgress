@@ -91,25 +91,29 @@ const createStackedBarChart = (source, toggleContext) => {
     let container, dataSource, context;
     [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
+    // extra step to clear tooltips for stacked bar charts
+    // const tooltip = document.querySelector('.nvtooltip')
+    //if(tooltip) tooltip.remove()
+    // NOTE: ^ does not work. It removes the tooltip but still does not generate another one for a toggled multibar chart.
+
     d3.csv(dataSource, rows => {
 
         // create a values field based on the desired column as defined in the reference object
         source.data.forEach(series => {
-            series.values.push([rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]])
+            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
         })
 
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
                 .margin(standardMargin)
-                // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
-                // hide controls b/c were not interested in grouped bar (also it gets cluttered on smaller screens to this is a double win)
                 .showControls(false)
                 .forceY(source.range || 0)
                 .clipEdge(true)
                 .stacked(true)
+                .useInteractiveGuideline(true)
             
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
