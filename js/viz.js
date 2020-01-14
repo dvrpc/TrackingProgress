@@ -54,7 +54,6 @@ const formatInpus = (source, toggleContext) => {
     return [container, dataSource, source, context]
 }
 
-
 // labelling helper function 
 const formatLabels = (y, x, context) => {
     context.units ? y.tickFormat(d3.format(axisFormats[context.units])) : y.tickFormat(d3.format('.3n'))
@@ -95,21 +94,20 @@ const createStackedBarChart = (source, toggleContext) => {
 
         // create a values field based on the desired column as defined in the reference object
         source.data.forEach(series => {
-            series.values.push([rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]])
+            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
         })
 
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
                 .margin(standardMargin)
-                // each series has format [year, values] so set the axes accordingly
                 .x(d => d[0])
                 .y((d, i) => d[1])
-                // hide controls b/c were not interested in grouped bar (also it gets cluttered on smaller screens to this is a double win)
                 .showControls(false)
                 .forceY(source.range || 0)
                 .clipEdge(true)
                 .stacked(true)
+                .useInteractiveGuideline(true)
             
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
@@ -172,12 +170,13 @@ const createLineChart = (source, toggleContext) => {
 
     d3.csv(dataSource, rows => {
         source.data.forEach(series => {
-            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
+            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? 'undefined' : +rows[series.columns[1]] ])
         })
     }, csvObj => {
 
         nv.addGraph(() => {
             let chart = nv.models.lineChart()
+                .defined(d => d[1] !== null) // handle incomeplete datasets (ed attain and housing afford chart 1)
                 .margin(standardMargin)
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
@@ -185,7 +184,6 @@ const createLineChart = (source, toggleContext) => {
                 .forceY(0)
                 .x(d => d[0])
                 .y((d, i) => d[1])
-            // @TODO: try out line.defined() to interpolate null values and create the dotted line that connects blanks
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
