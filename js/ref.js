@@ -553,7 +553,7 @@ const snippetsRef = {
                         columns: ['year', 'DVRPC- Core City']
                     },
                     {
-                        'key': 'Developed Suburb',
+                        'key': 'Developed Communities',
                         columns: ['year', 'DVRPC- Developed Community']
                     },
                     {
@@ -561,7 +561,7 @@ const snippetsRef = {
                         columns: ['year', 'DVRPC- Growing Suburb']
                     },
                     {
-                        'key': 'Rural Area',
+                        'key': 'Rural Areas',
                         columns: ['year', 'DVRPC- Rural Area']
                     }
                 ]
