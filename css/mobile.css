@@ -148,11 +148,11 @@ summary{
     width: 15px;
 }
 #related-indicators-subheader-wrapper{
-    padding: 0 9px;
+    display: flex;
+    align-items: center;
 }
 #related-indicators-subheader-wrapper img{
     height: 26px;
-    margin-top: 2px;
 }
 #related-indicators-subheader{
     font-size: 0.8em;
@@ -175,7 +175,6 @@ summary{
 .indicator-header{
     font-size: 1.4em;
     margin: 0;
-    text-align: left;
 }
 .indicator-subheader{
     font-size: 1.1em;
@@ -208,7 +207,6 @@ select{
     min-height: 300px;
     max-height: 400px;
     width: 100%;
-    margin-top: 5%;
 }
 .chart-src{
     width: auto;

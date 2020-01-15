@@ -81,7 +81,7 @@ const axisFormats = {
 
 // margin object for desktop/mobile
 let isMobile = window.innerWidth > 415 ? false : true
-const standardMargin = isMobile ? {top: 40, right: 25, bottom: 50, left: 65} : {top: 40, right: 55, bottom: 45, left: 85}
+const standardMargin = isMobile ? {top: 40, right: 25, bottom: 50, left: 70} : {top: 40, right: 55, bottom: 45, left: 85}
 const waterfallMargin = isMobile ? {top: 25, right: 20, bottom: 325, left: 65} : {top: 25, right: 55, bottom: 275, left: 85}
 
 
@@ -218,7 +218,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
     d3.csv(dataSource, rows => {
         source.data[scatterIndex].values.push({
             x: +rows[scatterSource[0]],
-            y: rows[scatterSource[1]] === 'NA' ? null : +rows[scatterSource[1]]
+            y: rows[scatterSource[1]] === 'NA' ? -1 : +rows[scatterSource[1]] // -1 + a yMin of 0 as a hack to avoid plotting NA values
         })
         source.data[lineIndex].values.push({
             x: +rows[lineSource[0]],
