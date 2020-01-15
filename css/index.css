@@ -81,7 +81,7 @@ header{
     border-radius: 50%;
     background: none;
     font-size: 1.3rem;
-    font-weight: 900;
+    font-weight: 500;
     padding: 4px 14px;
     opacity: 0;
     transition: opacity 1s;
@@ -117,7 +117,7 @@ header{
 }
 #tp-header-name{
     color: #4fa3a8;
-    font-weight: 800;
+    font-weight: 700;
 }
 .splash-text{
     width: 700px;
@@ -364,6 +364,7 @@ summary:hover{
 .indicator-header{
     text-align: center;
     font-size: 2em;
+    font-weight: 400;
     margin: 0 25px 0 0;
 }
 .indicator-content-hr{
@@ -372,6 +373,7 @@ summary:hover{
 .indicator-subheader{
     text-align: center;
     font-size: 1.3em;
+    font-weight: 400;
 }
 .indicator-header-hr{
     margin: 1% 0;
@@ -400,6 +402,7 @@ summary:hover{
     margin: 0;
     padding: 2% 5px;
     font-size: 1.2em;
+    font-weight: 500;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -443,6 +446,7 @@ summary:hover{
 }
 #related-indicators-subheader{
     margin: 0;
+    font-weight: 500;
 }
 .sideLink{
     padding: 10% 2%;
