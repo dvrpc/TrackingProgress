@@ -7,7 +7,7 @@ const splashPage = document.getElementById('splash-page')
 
 
 // for development/live
- const baseURL =  '/TrackingProgress/'
+const baseURL =  '/TrackingProgress/'
 
 // for review:
 // const baseURL = '/review/TrackingProgress/'

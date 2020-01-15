@@ -1,0 +1,7 @@
+/* Print Stylesheet */
+body :not(.indicators-snippet) {
+    display: none;
+}
+.indicators-snippet {
+    padding-left: 0;
+}
