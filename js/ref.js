@@ -334,8 +334,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['crashesWeb1'],
                 context: {
-                    labels: ['KSI Five-Year Average'],
-                    keepLabels: true,
+                    labels: ['KSI Total', 'KSI Per 100,000 People', 'KSI Per 100 Million VMT'],
                     units: ['thousands', 'thousandsC', 'thousandsC'],
                 },
                 columnOptions: [
@@ -410,7 +409,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['crashesWeb2A', 'crashesWeb2B', 'crashesWeb2C'],
                 context: {
-                    labels: ['KSI Per 100,000 People', 'KSI Total', 'KSI Per 100 Million VMT'],
+                    labels: ['KSI Total', 'KSI Per 100,000 People', 'KSI Per 100 Million VMT'],
                     keepLabels: false,
                     units: ['thousands', 'thousandsC', 'thousandsC'],
                 },
@@ -1288,7 +1287,7 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Difference',
+                        'key': 'Male to Female Gap',
                         columns: ['year', 'Region']
                     }
                 ]
