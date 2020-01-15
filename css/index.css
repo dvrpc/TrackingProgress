@@ -72,6 +72,7 @@ header{
     align-items: center;
 }
 #tp-logo{
+    display: block;
     max-height: 50px;
 }
 #help-btn{

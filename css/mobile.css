@@ -12,7 +12,7 @@ body{
 }
 #dvrpc-logo{
     border-right: none;
-    width: 75%;
+    width: 65%;
 }
 #logo-help-wrapper{
     width: 50%;
@@ -23,7 +23,7 @@ body{
     padding: 3px 10px;
 }
 #tp-logo{
-    height: 37px;
+    height: 35px;
 }
 
 /* Mobile styles for the splash page */
