@@ -285,24 +285,28 @@ const createWaterfallChart = (source, toggleContext) => {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv(dataSource, data => {        
+    d3.csv(dataSource, data => {
         let cumulative = 0
+        let diff = 0
 
-        for( var i = 0; i < data.length; i++){
-           if ( i % 3 === 0) {
-               data[i].start = 0
-               data[i].class = 'waterfall-grey'
-           } else  if (i % 2  === 0){
-                data[i].start = cumulative
-                cumulative += parseInt(data[i][county])
-                data[i].class = 'waterfall-blue'
-           } else {
-                data[i].start = cumulative
-                cumulative += parseInt(data[i][county])
-               data[i].class = 'waterfall-orange'
-           }
+        for( var i = 1; i < data.length; i++){
+            const val = parseInt(data[i][county])
 
-           data[i].end = cumulative
+            // handle values for the bars
+            if ( i % 3 === 0) { // total
+                data[i].start = 0
+                data[i].class = 'waterfall-grey'
+            } else  if (i % 2  === 0){ // change
+                data[i].start = cumulative
+                cumulative += val
+                val > 0 ? data[i].class = 'waterfall-blue' : data[i].class = 'waterfall-orange' // stylize if positive or negative
+            } else { // migration
+                data[i].start = cumulative
+                cumulative += val
+                val > 0 ? data[i].class = 'waterfall-blue' : data[i].class = 'waterfall-orange' // stylize if positive or negative
+            }
+
+            data[i].end = cumulative
         }
 
         x.domain(data.map(function(d) { return d.Label; }));
