@@ -83,7 +83,7 @@ header{
     background: none;
     font-size: 1.3rem;
     font-weight: 500;
-    padding: 4px 14px;
+    padding: 4px 12px;
     opacity: 0;
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
