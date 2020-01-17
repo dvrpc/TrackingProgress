@@ -288,6 +288,7 @@ const createWaterfallChart = (source, toggleContext) => {
     d3.csv(dataSource, data => {
         let cumulative = 0
 
+        // start at one b/c we're skipping the 2010 base year row
         for( var i = 1; i < data.length; i++){
             const val = parseInt(data[i][county])
 
@@ -307,7 +308,7 @@ const createWaterfallChart = (source, toggleContext) => {
         }
 
         x.domain(data.map(function(d) { return d.Label; }));
-        y.domain([d3.min(data, function(d) {return d.end;}) , d3.max(data, function(d) { return d.end; })]);
+        y.domain([d3.min(data, function(d) {return d.start;}) , d3.max(data, function(d) { return d.end; })]);
 
         chart.append("g")
             .attr("class", "waterfallAxis")
