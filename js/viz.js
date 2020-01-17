@@ -326,18 +326,37 @@ const createWaterfallChart = (source, toggleContext) => {
             .selectAll("text")
                 .attr("x", -5);
 
-        // add legend
-        // @TODO: append multiple items in groups of <g><circle><text></g> without nesting everything..
-        // chart.append("g")
-        //     .append("g")
-        //         .attr("class", "nv-series")
-        //         .attr("transform", "translate("+ (width/2.5) +",-16)")
-        //         // .append("circle")
-        //         //     .attr("class", "nv-legend-symbol")
-        //         //     .style("fill: orange")
-        //         .append("text")
-        //             .text("Increase")
-        //             .attr("font-size", "12px")
+        // add legend @TODO: a better way 
+
+        // increasing
+        chart.append("circle")
+            .attr("transform", "translate("+ (width/3.5) +",-30)")
+            .attr("r", 6)
+            .style("fill", "#1f77b4")
+        chart.append("text")
+            .attr("transform", "translate("+ (width/3.5 + 8) +",-26)")
+            .text("Increasing")
+            .style("font-size", "12px")
+
+        // decreasing
+        chart.append("circle")
+            .attr("transform", "translate("+ (width/2.5) +",-30)")
+            .attr("r", 6)
+            .style("fill", "#ff7f0e")
+        chart.append("text")
+            .attr("transform", "translate("+ (width/2.5 + 8) +",-26)")
+            .text("Decreasing")
+            .style("font-size", "12px")
+
+        // total
+        chart.append("circle")
+            .attr("transform", "translate("+ (width/1.93) +",-30)")
+            .attr("r", 6)
+            .style("fill", "#8e8e8e")
+        chart.append("text")
+            .attr("transform", "translate("+ (width/1.93 + 8) +",-26)")
+            .text("Total")
+            .style("font-size", "12px")
 
         // add y-label
         chart.append("text")
