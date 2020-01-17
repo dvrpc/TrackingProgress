@@ -51,6 +51,12 @@ summary{
 .gif-row{
     flex-direction: column;
 }
+#emojis-row{
+    flex-wrap: wrap;
+}
+.emoji-figure{
+    width: 25%;
+}
 #to-grid{
     padding: 3px 5px;
 }
