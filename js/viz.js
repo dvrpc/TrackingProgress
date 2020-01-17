@@ -82,7 +82,7 @@ const axisFormats = {
 // margin object for desktop/mobile
 let isMobile = window.innerWidth > 415 ? false : true
 const standardMargin = isMobile ? {top: 40, right: 25, bottom: 50, left: 70} : {top: 40, right: 55, bottom: 45, left: 85}
-const waterfallMargin = isMobile ? {top: 25, right: 20, bottom: 325, left: 65} : {top: 25, right: 55, bottom: 275, left: 85}
+const waterfallMargin = isMobile ? {top: 35, right: 20, bottom: 325, left: 65} : {top: 40, right: 55, bottom: 275, left: 85}
 
 
 /************************ Charting Functions *********************************/
@@ -266,7 +266,7 @@ const createWaterfallChart = (source, toggleContext) => {
 
     let margin = waterfallMargin,
     width = widthNoMargin - margin.left - margin.right,
-    height = 545 - margin.top - margin.bottom,
+    height = 590 - margin.top - margin.bottom,
     padding = 0.1
 
     var x = d3.scale.ordinal()
@@ -287,20 +287,17 @@ const createWaterfallChart = (source, toggleContext) => {
 
     d3.csv(dataSource, data => {
         let cumulative = 0
-        let diff = 0
 
         for( var i = 1; i < data.length; i++){
             const val = parseInt(data[i][county])
 
-            // handle values for the bars
-            if ( i % 3 === 0) { // total
+            // cumulative case 
+            if ( i % 3 === 0) {
                 data[i].start = 0
                 data[i].class = 'waterfall-grey'
-            } else  if (i % 2  === 0){ // change
-                data[i].start = cumulative
-                cumulative += val
-                val > 0 ? data[i].class = 'waterfall-blue' : data[i].class = 'waterfall-orange' // stylize if positive or negative
-            } else { // migration
+
+            // change cases
+            } else {
                 data[i].start = cumulative
                 cumulative += val
                 val > 0 ? data[i].class = 'waterfall-blue' : data[i].class = 'waterfall-orange' // stylize if positive or negative
@@ -327,6 +324,19 @@ const createWaterfallChart = (source, toggleContext) => {
             .call(yAxis())
             .selectAll("text")
                 .attr("x", -5);
+
+        // add legend
+        // @TODO: append multiple items in groups of <g><circle><text></g> without nesting everything..
+        // chart.append("g")
+        //     .append("g")
+        //         .attr("class", "nv-series")
+        //         .attr("transform", "translate("+ (width/2.5) +",-16)")
+        //         // .append("circle")
+        //         //     .attr("class", "nv-legend-symbol")
+        //         //     .style("fill: orange")
+        //         .append("text")
+        //             .text("Increase")
+        //             .attr("font-size", "12px")
 
         // add y-label
         chart.append("text")
@@ -356,11 +366,11 @@ const createWaterfallChart = (source, toggleContext) => {
         
         // add values on top of or underneath each bar
         bar.append("text")
-            .attr("x", d => d.end > 1000 || d.end < -1000 ? 0 : 6)
+            .attr("x", d => d.end > 1000 || d.end < -1000 ? 0 : 3)
             // determine if the value should be placed above (trending up) or below (trending down) the bar
             .attr("y", d => y(d.end) + (d.end > d.start ? -5 : 10))
             .attr('font-size', '10px')
-            .text(d => (d.class === 'negative' ? '-' : '' + d.end));
+            .text(d => (d.class === 'negative' ? '-' : '' + (d.end - d.start || '')));
     });
 
     // resize listener
