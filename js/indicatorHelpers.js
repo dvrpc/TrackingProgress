@@ -306,7 +306,10 @@ const makeIndicatorPage = hashArray => {
 
     // remove an existing indicator page before continuing
     const oldIndicator = document.querySelector('.indicators-snippet')
-    if(oldIndicator) oldIndicator.remove()
+    if(oldIndicator) {
+        while(oldIndicator.children[0]) oldIndicator.children[0].remove()
+        oldIndicator.remove()
+    }
 
     // create the indicator page if it exists
     if(snippet){
