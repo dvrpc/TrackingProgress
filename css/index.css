@@ -154,23 +154,31 @@ summary:hover{
     font-size: 0.8rem;
     max-width: 100%;
 }
+#info-toggle-hr{
+    width: 94%;
+}
 #emojis-description{
     text-align: center;
 }
 #emojis-row{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .emoji-figure{
-    width: 10%;
-    text-align: center;
-    padding: 10px 3px;
+    width: 11%;
+    padding: 10px;
     border-radius: 3px;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
     background: #4fa3a8;
     color: #f7f7f7;
     font-size: 0.8em;
+}
+.emoji-figure img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 0.5em 0.5em 0;
 }
 #to-grid{
     background: #4fa3a8;
