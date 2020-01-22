@@ -68,6 +68,7 @@ const removeDashboard = transition => {
 }
 
 // function to display/hide indicators based on which category is clicked
+// @TODO: add condition for emoji toggle state
 const toggleIndicators = (element, indicators) => {
 
     // mark the category as active & remove it from another element (if applicable)
@@ -93,6 +94,7 @@ const toggleIndicators = (element, indicators) => {
             }
 
         // toggle selected category
+        // @TODO: make the variable names more generalized - might not need to refactor this function all thatm uch it's already pretty general...
         }else{
             element.classList.toggle('category-active')
             

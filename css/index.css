@@ -221,6 +221,12 @@ summary:hover{
     transition-timing-function: linear;
     overflow-y: auto;
 }
+#filter-type-form{
+    width: 100%;
+    color: #4fa3a8;
+    text-align: center;
+    padding: 0 0 5px 0;
+}
 .category-active{
     margin-right: 0 !important;
     color: #f7f7f7 !important;
@@ -232,7 +238,9 @@ summary:hover{
     justify-content: center;
     margin-bottom: 8px;
     margin-right: 16px;
-    height: 20%;
+
+    /* @TODO: emoji filter update */
+    height: calc(20% - 1px);
     width: 100%;
     text-align: center;
     opacity: 1;

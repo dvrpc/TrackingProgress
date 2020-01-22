@@ -114,6 +114,18 @@
         <nav class="indicators-nav" role="navigation">
             <button class="back-to-dash">&larr; Dashboard</button>
             <div class="related-indicators"></div>
+            
+            <!-- @TODO: emojis/cat filter toggle -->
+            <form id="filter-type-form">
+                <fieldset>
+                    <label for="filter-type">filter by: </label>
+                    <select>
+                        <option value="category">category</option>
+                        <option value="emoji">emoji</option>
+                    </select>
+                </fieldset>
+            </form>
+            
             <div id="econo-icon" class="icon-set">
                 <img src="./img/econo-icon.png" alt="economy icon" class="icon-set-img"/>
                 <p class="icon-set-p">Economy</p>
