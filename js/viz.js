@@ -304,8 +304,8 @@ const createWaterfallChart = (source, toggleContext) => {
 
             data[i].end = cumulative
         }
-
-        x.domain(data.map(function(d) { return d.Label; }));
+        
+        x.domain(data.map(function(d) { return d.Label }));
         y.domain([d3.min(data, function(d) {return d.start;}) , d3.max(data, function(d) { return d.end; })]);
 
         chart.append("g")
