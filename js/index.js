@@ -18,9 +18,12 @@ let splashVisible = true
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
 const filterState = document.getElementById('filter-type-form')
-
-// @TODO: update this to include the emoji jawns too
-const categories = [... document.querySelectorAll('.icon-set')]
+// get all icon-sets for click events
+const filters = [... document.querySelectorAll('.icon-set')]
+let catFilters = []
+let emojiFilters = []
+// populate cat/emoji filter arrays
+filters.forEach(filter => filter.classList.contains('emoji-set') ? emojiFilters.push(filter) : catFilters.push(filter))
 let filterType = 'category'
 
 // get a handle on the indicator page elements
@@ -127,10 +130,27 @@ filterState.onchange = e => {
 
     // update filterType
     filterType = e.target.value
+
+    // show/hide relevant icon-set
+    let oldFilters, newFilters
+    if(filterType === 'category') {
+        oldFilters = emojiFilters
+        newFilters = catFilters
+    }else {
+        oldFilters = catFilters
+        newFilters = emojiFilters
+    }
+
+    replaceFilter(oldFilters, newFilters)
+}
+
+const replaceFilter = (oldFilters, newFilters) => {
+    oldFilters.forEach(filter => filter.style.display = 'none')
+    newFilters.forEach(filter => filter.style.display = 'flex')
 }
 
 // apply filter toggle to each category
-categories.forEach(category => category.onclick = () => toggleIndicators(category, indicators, filterType))
+filters.forEach(filter => filter.onclick = () => toggleIndicators(filter, indicators, filterType))
 
 //  add flip handler
 indicators.forEach(indicator => {
