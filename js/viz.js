@@ -203,12 +203,10 @@ const createLineChart = (source, toggleContext) => {
 const createLineAndScatterChart = (source, toggleContext) => {
     let container, dataSource, context;
     [container, dataSource, source, context] = formatInpus(source, toggleContext)
-
-    // force the precipitation chart to display a range from 0-1 b/c it's expressed in percent. 
-    // There's only one line/scatter chart so this hack is fine but for future reference if another one gets added and the y domain starts acting up, this is why
+    
     const precipitationToggle = toggleContext.chartNumber || 0
     let yDomain = precipitationToggle < 2 ? [0, 65] : [0, 1]
-
+    
     let scatterIndex = source.data[0].type === 'scatter' ? 0 : 1
     let lineIndex = scatterIndex === 0 ? 1 : 0
 
