@@ -126,13 +126,15 @@ const loadVideos = toggle => {
 // listen to filter state in order to show the correct set
 filterState.onchange = e => {
     // reset to unfiltered view
-    //clearFilter()
+    clearIndicators()
+    //clearFilters()
 
     // update filterType
     filterType = e.target.value
 
     // show/hide relevant icon-set
-    let oldFilters, newFilters
+    let oldFilters, newFilters;
+
     if(filterType === 'category') {
         oldFilters = emojiFilters
         newFilters = catFilters
@@ -144,10 +146,18 @@ filterState.onchange = e => {
     replaceFilter(oldFilters, newFilters)
 }
 
+// functions to reset all indicators to default view
 const replaceFilter = (oldFilters, newFilters) => {
     oldFilters.forEach(filter => filter.style.display = 'none')
     newFilters.forEach(filter => filter.style.display = 'flex')
 }
+const clearIndicators = () => indicators.forEach(indicator => {
+    indicator.classList.remove('inactive')
+    indicator.style.background = '#4fa3a8'
+})
+
+// @TODO: fix this. It needs more information when resetting icon-sets to their default view. Possibly refactor toggleIndicators too
+const clearFilters = filters.forEach(filter => filter.classList.remove('active'))
 
 // apply filter toggle to each category
 filters.forEach(filter => filter.onclick = () => toggleIndicators(filter, indicators, filterType))
