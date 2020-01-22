@@ -527,12 +527,15 @@ summary:hover{
 /* custom waterfall colors */
 .waterfall-blue{
     fill: #1f77b4;
+    font-weight: 800;
 }
 .waterfall-orange{
     fill: #ff7f0e;
+    font-weight: 800;
 }
 .waterfall-grey{
     fill: #8e8e8e;
+    font-weight: 800;
 }
 
 

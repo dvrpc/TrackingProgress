@@ -316,8 +316,9 @@ const createWaterfallChart = (source, toggleContext) => {
                 .attr("y", 0)
                 .attr("x", 16)
                 .attr("transform", "rotate(90)")
-                .style("text-anchor", "start");
-        
+                .style("text-anchor", "start")
+                .style("font-weight", d => d[0] === '2' ? 700 : 400); // hack to bold the cumulative value labels. This works because they all start with the year 2***
+
         chart.append("g")
             .attr("class", "waterfallAxis")
             .call(yAxis())
@@ -325,7 +326,6 @@ const createWaterfallChart = (source, toggleContext) => {
                 .attr("x", -5);
 
         // add legend @TODO: a better way 
-
         // increasing
         chart.append("circle")
             .attr("transform", "translate("+ (width/3.5) +",-30)")
