@@ -17,7 +17,11 @@ let splashVisible = true
 
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
+const filterState = document.getElementById('filter-type-form')
+
+// @TODO: update this to include the emoji jawns too
 const categories = [... document.querySelectorAll('.icon-set')]
+let filterType = 'category'
 
 // get a handle on the indicator page elements
 const back = document.querySelector('.back-to-dash')
@@ -115,8 +119,18 @@ const loadVideos = toggle => {
 
 /**************************************************/
 /**************** Dashboard Events ****************/
+
+// listen to filter state in order to show the correct set
+filterState.onchange = e => {
+    // reset to unfiltered view
+    //clearFilter()
+
+    // update filterType
+    filterType = e.target.value
+}
+
 // apply filter toggle to each category
-categories.forEach(category => category.onclick = () => toggleIndicators(category, indicators))
+categories.forEach(category => category.onclick = () => toggleIndicators(category, indicators, filterType))
 
 //  add flip handler
 indicators.forEach(indicator => {
