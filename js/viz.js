@@ -203,12 +203,10 @@ const createLineChart = (source, toggleContext) => {
 const createLineAndScatterChart = (source, toggleContext) => {
     let container, dataSource, context;
     [container, dataSource, source, context] = formatInpus(source, toggleContext)
-
-    // force the precipitation chart to display a range from 0-1 b/c it's expressed in percent. 
-    // There's only one line/scatter chart so this hack is fine but for future reference if another one gets added and the y domain starts acting up, this is why
+    
     const precipitationToggle = toggleContext.chartNumber || 0
     let yDomain = precipitationToggle < 2 ? [0, 65] : [0, 1]
-
+    
     let scatterIndex = source.data[0].type === 'scatter' ? 0 : 1
     let lineIndex = scatterIndex === 0 ? 1 : 0
 
@@ -288,6 +286,7 @@ const createWaterfallChart = (source, toggleContext) => {
     d3.csv(dataSource, data => {
         let cumulative = 0
 
+        // start at one b/c we're skipping the 2010 base year row
         for( var i = 1; i < data.length; i++){
             const val = parseInt(data[i][county])
 
@@ -305,9 +304,9 @@ const createWaterfallChart = (source, toggleContext) => {
 
             data[i].end = cumulative
         }
-
-        x.domain(data.map(function(d) { return d.Label; }));
-        y.domain([d3.min(data, function(d) {return d.end;}) , d3.max(data, function(d) { return d.end; })]);
+        
+        x.domain(data.map(function(d) { return d.Label }));
+        y.domain([d3.min(data, function(d) {return d.start;}) , d3.max(data, function(d) { return d.end; })]);
 
         chart.append("g")
             .attr("class", "waterfallAxis")
@@ -317,26 +316,45 @@ const createWaterfallChart = (source, toggleContext) => {
                 .attr("y", 0)
                 .attr("x", 16)
                 .attr("transform", "rotate(90)")
-                .style("text-anchor", "start");
-        
+                .style("text-anchor", "start")
+                .style("font-weight", d => d[0] === '2' ? 700 : 400); // hack to bold the cumulative value labels. This works because they all start with the year 2***
+
         chart.append("g")
             .attr("class", "waterfallAxis")
             .call(yAxis())
             .selectAll("text")
                 .attr("x", -5);
 
-        // add legend
-        // @TODO: append multiple items in groups of <g><circle><text></g> without nesting everything..
-        // chart.append("g")
-        //     .append("g")
-        //         .attr("class", "nv-series")
-        //         .attr("transform", "translate("+ (width/2.5) +",-16)")
-        //         // .append("circle")
-        //         //     .attr("class", "nv-legend-symbol")
-        //         //     .style("fill: orange")
-        //         .append("text")
-        //             .text("Increase")
-        //             .attr("font-size", "12px")
+        // add legend @TODO: a better way 
+        // increasing
+        chart.append("circle")
+            .attr("transform", "translate("+ (width/3.5) +",-30)")
+            .attr("r", 6)
+            .style("fill", "#1f77b4")
+        chart.append("text")
+            .attr("transform", "translate("+ (width/3.5 + 8) +",-26)")
+            .text("Increasing")
+            .style("font-size", "12px")
+
+        // decreasing
+        chart.append("circle")
+            .attr("transform", "translate("+ (width/2.5) +",-30)")
+            .attr("r", 6)
+            .style("fill", "#ff7f0e")
+        chart.append("text")
+            .attr("transform", "translate("+ (width/2.5 + 8) +",-26)")
+            .text("Decreasing")
+            .style("font-size", "12px")
+
+        // total
+        chart.append("circle")
+            .attr("transform", "translate("+ (width/1.93) +",-30)")
+            .attr("r", 6)
+            .style("fill", "#8e8e8e")
+        chart.append("text")
+            .attr("transform", "translate("+ (width/1.93 + 8) +",-26)")
+            .text("Total")
+            .style("font-size", "12px")
 
         // add y-label
         chart.append("text")
