@@ -69,21 +69,9 @@ const removeDashboard = transition => {
 
 // function to display/hide indicators based on which category is clicked
 const toggleIndicators = (element, indicators, filterType) => {
+    // @TODO: either pre-filter or filter iconSets here to only include the 5 relevant icon-sets for the filterType
+    let iconSets = [... element.parentNode.children]
 
-    // mark the category as active & remove it from another element (if applicable)
-    // @TODO: filter this down to just the relevent divs based on filterType.
-        // might make sense to just do this in the if/else that starts on line 96. 
-    const allCategories = [... element.parentNode.children]
-
-    console.log('all categories ', allCategories)
-    
-    /* IDEA:
-        Create two functions - one for toggling cat filter state and one for toggling emoji filter state. Invoke based on filterType
-        use filterType to extract the correct set of 
-        filterType === 'category' ? toggleCategoryIcons() : toggleEmojiIcons()
-    */
-   
-    // @TODO: THIS PART will need to change for emoji vs category 
     // get a handle on the elements info
     const elID = element.id
     let categoryName;
@@ -93,16 +81,12 @@ const toggleIndicators = (element, indicators, filterType) => {
         categoryName = elID.split('-')[0]
         const img = element.children[0]
         const filterOptions = { elID, img, categoryName }
-        allCategories.forEach(category => toggleCatIcons(category, element, filterOptions))
+        iconSets.forEach(filter => toggleCatIcons(filter, element, filterOptions))
     } else{
         categoryName = elID.split('-')[1]
-        const filterOptions = {}
-        allCategories.forEach(category => toggleEmojiIcons(category, element, filterOptions))
+        iconSets.forEach(filter => toggleEmojiIcons(filter, element))
     }
 
-    // @TODO: end part that needs to change between emoji and category 
-
-    // THIS part can stay the same between emoji and category filter state
     // handle 3 conditions & expected behaviors: 
         // all options visible & user clicks a category --> filters to just that categories indicators
         // category already clicked & user clicks another one --> filters to just the new categories indicators
@@ -127,20 +111,20 @@ const toggleIndicators = (element, indicators, filterType) => {
 }
 
 // helpers for toggling icon-sets
-const toggleCatIcons = (category, element, options) => {
+const toggleCatIcons = (filter, element, options) => {
     const {elID, img, categoryName} = {... options}
 
-    if(category != element){
+    if(filter != element){
             
         // check if another category is active and set it back to default
-        if(category.classList.contains('category-active')){
-            const categoryID = category.id
-            const img = category.children[0]
-            const previousCategoryName = categoryID.split('-')[0]+'-default'
+        if(filter.classList.contains('category-active')){
+            const filterID = filter.id
+            const img = filter.children[0]
+            const previousFilterName = filterID.split('-')[0]+'-default'
 
-            img.src = `./img/${categoryID}.png`
-            category.classList.remove('category-active')
-            category.style.background = catColors[previousCategoryName]
+            img.src = `./img/${filterID}.png`
+            filter.classList.remove('category-active')
+            filter.style.background = catColors[previousFilterName]
         }
 
     // toggle selected category
@@ -161,11 +145,30 @@ const toggleCatIcons = (category, element, options) => {
         }
     }
 }
-const toggleEmojiIcons = () => {
-    // emoji-set changes for active state:
-        // bg changes to: #4fa3a8
-        // text color changes to #f7f7f7
-        // toggle category-active state
+const toggleEmojiIcons = (filter, element) => {
+    if(filter != element){
+        
+        // check if another category is active and set it back to default
+        if(filter.classList.contains('category-active')){
+            filter.classList.remove('category-active')
+            filter.style.background = '#e9e9e9'
+        }
+
+    // toggle selected category
+    }else{
+        element.classList.toggle('category-active')
+        
+        // set active styles
+        if(element.classList.contains('category-active')){
+            // update bg and text color
+            element.style.background = '#4fa3a8'
+            
+        // set default styles
+        }else{
+            element.style.color = '#4fa3a8'
+            element.style.background = '#e9e9e9'
+        }
+    }
 }
 
 // fade/slide out elements

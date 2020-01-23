@@ -135,7 +135,7 @@ filterState.onchange = e => {
     // show/hide relevant icon-set
     filterType === 'category' ? replaceFilter(emojiFilters, catFilters) : replaceFilter(catFilters, emojiFilters)
     
-    // @TODO: clicking on an indicator keeps the active icon-set and the filter form on the sidebar. 
+    // @TODO: clicking on an indicator keeps the active icon-set (emoji-set only) and the filter form on the sidebar. 
     // make sure to hide those and only show the related-indicators jawn
 }
 
