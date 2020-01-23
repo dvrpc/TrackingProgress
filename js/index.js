@@ -133,17 +133,10 @@ filterState.onchange = e => {
     filterType = e.target.value
 
     // show/hide relevant icon-set
-    let oldFilters, newFilters;
-
-    if(filterType === 'category') {
-        oldFilters = emojiFilters
-        newFilters = catFilters
-    }else {
-        oldFilters = catFilters
-        newFilters = emojiFilters
-    }
-
-    replaceFilter(oldFilters, newFilters)
+    filterType === 'category' ? replaceFilter(emojiFilters, catFilters) : replaceFilter(catFilters, emojiFilters)
+    
+    // @TODO: clicking on an indicator keeps the active icon-set and the filter form on the sidebar. 
+    // make sure to hide those and only show the related-indicators jawn
 }
 
 // functions to reset all indicators to default view
