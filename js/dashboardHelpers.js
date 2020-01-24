@@ -99,11 +99,14 @@ const toggleIndicators = (element, indicators, filterType) => {
         clickedRef = ''
     }else{
         indicators.forEach(indicator => {
-            const categories = indicator.dataset.categories.split(' ')
-            if(!categories.includes(categoryName)) indicator.classList.add('inactive')
+            let filterSet = filterType === 'category' ? indicator.dataset.categories.split(' ') : indicator.dataset.emoji
+
+            if(!filterSet.includes(categoryName)) indicator.classList.add('inactive')
             else {
                 indicator.classList.remove('inactive')
-                indicator.style.background = catColors[categoryName]
+
+                // update tile background to category background for category filter (ignore for emojis)
+                if(filterType === 'category') indicator.style.background = catColors[categoryName]
             }
         })
         clickedRef = element
