@@ -4,6 +4,7 @@ const grid = dashboard.children[1]
 const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
 const categories = [... document.querySelectorAll('.icon-set')]
+const filterToggle = document.getElementById('filter-type-form')
 
 // rerence to the clicked category (this has to exist outside the scope of toggleIndicators, otherwise clicking an active category won't reset to all indicators view)
 let clickedRef;
@@ -40,10 +41,10 @@ const makeDashboard = relatedIndicators => {
     // reveal the indicators grid, widen the sideNav and reveal the categories
     indicatorsNav.classList.add('notransition')
     grid.classList.add('notransition')
-
     indicatorsNav.classList.remove('fade-narrow')
     grid.classList.remove('fade-right')
     categories.forEach(category => category.classList.remove('fade-out'))
+    filterToggle.classList.remove('fade-out')
 
     // reveal the homepage elements
     indicatorsNav.style.justifyContent = 'space-between'
@@ -60,7 +61,7 @@ const removeDashboard = transition => {
     }
 
     // transition animation from dash to indicator page
-    fade(grid, indicatorsNav, categories)
+    fade()
 
     // adjust side nav display
     back.style.display = 'block'
@@ -175,10 +176,11 @@ const toggleEmojiIcons = (filter, element) => {
 }
 
 // fade/slide out elements
-const fade = (grid, indicatorsNav, categories) => {
+const fade = () => {
     grid.classList.add('fade-right')
     indicatorsNav.classList.add('fade-narrow')
     categories.forEach(category => category.classList.add('fade-out'))
+    filterToggle.classList.add('fade-out')
 }
 
 // reveal flipside content for indicators
