@@ -221,6 +221,12 @@ summary:hover{
     transition-timing-function: linear;
     overflow-y: auto;
 }
+#filter-type-form{
+    width: 100%;
+    color: #4fa3a8;
+    text-align: center;
+    padding: 0 0 5px 0;
+}
 .category-active{
     margin-right: 0 !important;
     color: #f7f7f7 !important;
@@ -232,7 +238,7 @@ summary:hover{
     justify-content: center;
     margin-bottom: 8px;
     margin-right: 16px;
-    height: 20%;
+    height: calc(20% - 1px);
     width: 100%;
     text-align: center;
     opacity: 1;
@@ -243,8 +249,10 @@ summary:hover{
     transition-timing-function: linear;
     overflow-y: hidden;
 }
-.icon-set:last-child{
-    margin-bottom: none;
+.emoji-set{
+    display: none;
+    background: #e9e9e9;
+    color: #4fa3a8;
 }
 #econo-icon{
     background: #f0cfd0;
@@ -265,14 +273,20 @@ summary:hover{
 #equity-icon{
     background: #c6b7cd;
     color: #582267;
+    margin-bottom: 0;
 }
-.indicators-nav div:last-child{
+#emoji-bad{
     margin-bottom: 0;
 }
 .icon-set-img{
     align-self: center;
     height: 100px;
     width: 100px;
+}
+.emoji-set-img{
+    align-self: center;
+    width: 60px;
+    height: 60px;
 }
 .icon-set:hover{
     cursor: pointer;
@@ -608,9 +622,6 @@ footer{
 
 /************************************/
 /*********** Transitions ***********/
-.fade-out{
-    display: none;
-}
 .fade-in{
     opacity: 1 !important;
 }

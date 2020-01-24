@@ -76,6 +76,12 @@ summary{
     justify-content: center;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
 }
+
+/* @TODO: a better solution to handling the form on mobile */
+#filter-type-form{
+    max-width: 80px;
+    font-size: 0.8em;
+}
 .indicators-grid-item{
     margin: 1.5%;
     width: 22vw;
@@ -129,9 +135,6 @@ summary{
 
 
 /* Mobile styles for the indicator subpages */
-.fade-out{
-    display: none;
-}
 .fade-narrow{
     width: 100%;
 }
