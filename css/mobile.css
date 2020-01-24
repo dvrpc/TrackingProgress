@@ -135,9 +135,6 @@ summary{
 
 
 /* Mobile styles for the indicator subpages */
-.fade-out{
-    display: none;
-}
 .fade-narrow{
     width: 100%;
 }

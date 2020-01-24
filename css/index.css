@@ -622,9 +622,6 @@ footer{
 
 /************************************/
 /*********** Transitions ***********/
-.fade-out{
-    display: none;
-}
 .fade-in{
     opacity: 1 !important;
 }
