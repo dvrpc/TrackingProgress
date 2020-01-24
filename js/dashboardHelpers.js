@@ -129,8 +129,8 @@ const toggleCatIcons = (filter, element, options) => {
             const previousFilterName = filterID.split('-')[0]+'-default'
 
             img.src = `./img/${filterID}.png`
-            filter.classList.remove('category-active')
             filter.style.background = catColors[previousFilterName]
+            filter.classList.remove('category-active')
         }
 
     // toggle selected category

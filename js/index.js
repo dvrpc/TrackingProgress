@@ -26,6 +26,15 @@ let emojiFilters = []
 filters.forEach(filter => filter.classList.contains('emoji-set') ? emojiFilters.push(filter) : catFilters.push(filter))
 let filterType = 'category'
 
+// get default category colors to revert to on filter change
+const catColors = {
+    'econo': '#f0cfd0',
+    'enviro': '#e0e6cf',
+    'comm': '#c6d6ea',
+    'transpo': '#f9dcc4',
+    'equity': '#c6b7cd'
+}
+
 // get a handle on the indicator page elements
 const back = document.querySelector('.back-to-dash')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
@@ -125,12 +134,12 @@ const loadVideos = toggle => {
 
 // listen to filter state in order to show the correct set
 filterState.onchange = e => {
-    // reset to unfiltered view
-    clearIndicators()
-    //clearFilters()
-
     // update filterType
     filterType = e.target.value
+    
+    // reset to unfiltered view
+    clearIndicators()
+    resetFilters(filterType)
 
     // show/hide relevant icon-set
     filterType === 'category' ? replaceFilter(emojiFilters, catFilters) : replaceFilter(catFilters, emojiFilters)
@@ -146,8 +155,30 @@ const clearIndicators = () => indicators.forEach(indicator => {
     indicator.style.background = '#4fa3a8'
 })
 
-// @TODO: fix this. It needs more information when resetting icon-sets to their default view. Possibly refactor toggleIndicators too
-const clearFilters = filters.forEach(filter => filter.classList.remove('active'))
+// reset icon-sets to their default state
+const resetFilters = type => {
+    if(type === 'category') {
+        emojiFilters.forEach(filter => {
+            if(filter.classList.contains('category-active')){
+                filter.classList.remove('category-active')
+                filter.style.color = '#4fa3a8'
+                filter.style.background = '#e9e9e9'
+            }
+        })
+    }else {
+        catFilters.forEach(filter => {
+            if(filter.classList.contains('category-active')){
+                const filterID = filter.id
+                const img = filter.children[0]
+                const defaultColor = filterID.split('-')[0]
+    
+                img.src = `./img/${filterID}.png`
+                filter.style.background = catColors[defaultColor]
+                filter.classList.remove('category-active')
+            }
+        })
+    }
+} 
 
 // apply filter toggle to each category
 filters.forEach(filter => filter.onclick = () => toggleIndicators(filter, indicators, filterType))
