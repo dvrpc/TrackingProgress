@@ -2921,7 +2921,7 @@ const snippetsRef = {
                 container: 'chart4',
                 dataSource: ['landConsumption4'],
                 context: {
-                    labels: ['Acres (thousands)'],
+                    labels: ['Acres (Thousands)'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
