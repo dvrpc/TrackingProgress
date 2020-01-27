@@ -1401,15 +1401,15 @@ const snippetsRef = {
             resource: `<p>For more on how DVRPC incorporates equity and environmental justice, and complies with federal Title VI and other important statutes protecting communities of concern, see our <a target="_blank" href="https://www.dvrpc.org/GetInvolved/TitleVI/">Title VI and Environmental Justice</a> page, as well as our <a target="_blank" href="https://www.dvrpc.org/webmaps/IPD/">Indicators of Potential Disadvantage</a> tool and <a target="_blank" href="https://www.dvrpc.org/ETA/">Equity through Access</a> project and tool.</p><p>DVRPC's <a target="_blank" href="https://www.dvrpc.org/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools for reducing disparities between sexes in the region:</p><ul><li><a target="_blank" href="https://www.dvrpc.org/Connections2045/MIT/toolpage.html?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a target="_blank" href="https://www.dvrpc.org/Connections2045/MIT/toolpage.html?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li><li><a target="_blank" href="https://www.dvrpc.org/Connections2045/MIT/toolpage.html?tool=5bf43435e7179a56e2137e73">Universal Pre-Kindergarten Programs</a></li><li><a target="_blank" href="https://www.dvrpc.org/Connections2045/MIT/toolpage.html?tool=5cb7840afb6fc041ab93097e">Engaging Underserved Communities</a></li></ul>`
         }
     },
-    'Roadway Reliability': {
-        file: 'roadwayReliability.html',
+    'Congestion': {
+        file: 'congestion.html',
         d3: [
             {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['roadwayreliability24'],
                 context: {
-                    labels: ['Roadway Reliability Index'],
+                    labels: ['Planning Time Index'],
                     keepLabels: true,
                     units: ['singles'],
                     keepUnits: true
@@ -1490,7 +1490,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['roadwayreliablilityTOD_Fwy', 'roadwayreliablilityTOD_Local'],
                 context: {
-                    labels: ['Roadway Reliability Index'],
+                    labels: ['Planning Time Index'],
                     keepLabels: true,
                     units: ['singles'],
                     keepUnits: true
