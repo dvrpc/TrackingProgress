@@ -176,7 +176,6 @@ const createLineChart = (source, toggleContext) => {
 
         nv.addGraph(() => {
             let chart = nv.models.lineChart()
-                .defined(d => d[1] !== null) // handle incomeplete datasets (ed attain and housing afford chart 1)
                 .margin(standardMargin)
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
@@ -185,6 +184,40 @@ const createLineChart = (source, toggleContext) => {
                 .x(d => d[0])
                 .y((d, i) => d[1])
 
+            // set max legend length to an arbitrarily high number to prevent text cutoff
+            chart.legend.maxKeyLength(100)
+
+            // format yAxis units and labels if necessary
+            if(context) formatLabels(chart.yAxis, chart.xAxis, context)
+
+            d3.select(container).datum(source.data).transition().duration(500).call(chart)
+
+            nv.utils.windowResize(chart.update)
+
+            return chart
+        })
+    })
+}
+
+const createBarChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
+
+    d3.csv(dataSource, rows => {
+        source.data.forEach(series => {
+            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
+        })
+    }, csvObj => {
+        nv.addGraph(() => {
+            let chart = nv.models.multiBarChart()
+                .margin(standardMargin)
+                .x(d => d[0])
+                .y((d, i) => d[1])
+                .showControls(false)
+                .forceY(0)
+                .clipEdge(true)
+                .stacked(false)
+            
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
 
@@ -407,4 +440,4 @@ const createWaterfallChart = (source, toggleContext) => {
     }
 }
 
-export {createStackedBarChart, createLinePlusBarChart, createLineChart, createLineAndScatterChart, createWaterfallChart};
+export {createStackedBarChart, createLinePlusBarChart, createLineChart, createBarChart, createLineAndScatterChart, createWaterfallChart};

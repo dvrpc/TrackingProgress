@@ -193,26 +193,6 @@ const snippetsRef = {
                         'columns': ['year', 'hsRatePASuburbs']
                     },
                     {
-                        'key': 'Core Cities^',
-                        disabled: true,
-                        'columns': ['year', 'hsRateCore']
-                    },
-                    {
-                        'key': 'Developed Communities^',
-                        disabled: true,
-                        'columns': ['year', 'hsRateDeveloped']
-                    },
-                    {
-                        'key': 'Growing Suburbs^',
-                        disabled: true,
-                        'columns': ['year', 'hsRateGrowing']
-                    },
-                    {
-                        'key': 'Rural Areas^',
-                        disabled: true,
-                        'columns': ['year', 'hsRateRural']
-                    },
-                    {
                         'key': 'Bucks**',
                         disabled: true,
                         'columns': ['year', 'hsRateBucksCo']
@@ -260,8 +240,35 @@ const snippetsRef = {
                 ]
             },
             {
-                type: 'stacked bar',
+                type: 'bar',
                 container: 'chart2',
+                dataSource: ['edattainHS'],
+                context: {
+                    labels: ['Percentage Population Over 24 years'],
+                    units: ['percentC']
+                },
+                data: [
+                    {
+                        'key': 'Core Cities',
+                        'columns': ['year', 'hsRateCore']
+                    },
+                    {
+                        'key': 'Developed Communities',
+                        'columns': ['year', 'hsRateDeveloped']
+                    },
+                    {
+                        'key': 'Growing Suburbs',
+                        'columns': ['year', 'hsRateGrowing']
+                    },
+                    {
+                        'key': 'Rural Areas',
+                        'columns': ['year', 'hsRateRural']
+                    },
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart3',
                 dataSource: ['edattainComprehensive'],
                 context: {
                     labels: ['Population Over 24 years (Thousands)'],
