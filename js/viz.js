@@ -205,17 +205,16 @@ const createBarChart = (source, toggleContext) => {
 
     d3.csv(dataSource, rows => {
         source.data.forEach(series => {
-            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
+            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? -1 : +rows[series.columns[1]] ]) // set -1 to hide null values
         })
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
                 .margin(standardMargin)
                 .x(d => d[0])
-                .y((d, i) => d[1])
+                .y((d => d[1] ))
                 .showControls(false)
-                .forceY(0)
-                .clipEdge(true)
+                .yDomain([0, 1])
                 .stacked(false)
             
             // set max legend length to an arbitrarily high number to prevent text cutoff
