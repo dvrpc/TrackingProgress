@@ -581,42 +581,50 @@ svg.nvd3-svg{
 /*******************************/
 /*********** Footer ***********/
 footer{
-    height: 25vh;
-    padding: 1% 2.5%;
-    background: #545454;
+    padding: 3% 15.5%;
+    background: #636363;
     color: #f7f7f7;
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: space-between;
+    font-size: 0.9rem;
+}
+address{
+    font-style: normal;
 }
 #footer-logo{
-    height: 30px;
     width: 85px;
 }
-#footer-words{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 70%;
+#footer-contact-wrapper{
+    align-self: center;
 }
-#footer-links{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 70%;
+#footer-contact-wrapper h3{
+    padding-bottom: 5px;
+    margin: 0;
+    letter-spacing: 0.1rem;
 }
 #footer-social-wrapper{
-    width: 70%;
     display: flex;
-    justify-content: space-around;
-
+}
+.vr{
+    display: block;
+    border-right: 1px solid #f7f7f7;
+    margin: 0 3%;
 }
 .footer-social{
-    height: 20px;
-    width: 22px;
+    height: 19px;
+    width: 21px;
+    padding: 0 5px;
+}
+#email-icon{
+    height: 17px;
+    width: 25px;
+}
+#youtube-icon{
+    width: 25px;
+}
+.footer-social-link{
+    align-self: center;
 }
 
 
