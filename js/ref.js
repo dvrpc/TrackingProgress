@@ -1,5 +1,3 @@
-import { fullGeography } from './commonGeographies.js'
-
 const snippetsRef = {
     'Air Quality': {
         file: 'airQuality.html',
@@ -630,7 +628,67 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['housing_afford_graph_1'],
-                data: fullGeography,
+                data: [
+                    {
+                        'key': 'DVRPC Region*',
+                        columns: ['year', 'DVRPC']
+                    },
+                    {
+                        'key': 'NJ Counties*',
+                        columns: ['year', 'New Jersey Suburbs'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'PA Suburban Counties*',
+                        columns: ['year', 'Pennsylvania Suburbs'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Bucks**',
+                        columns: ['year', 'Bucks County'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Burlington**',
+                        columns: ['year', 'Burlington County'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Camden**',
+                        columns: ['year', 'Camden County'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Chester**',
+                        columns: ['year', 'Chester County'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Delaware**',
+                        columns: ['year', 'Delaware County'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Gloucester**',
+                        columns: ['year', 'Gloucester County'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Mercer**',
+                        columns: ['year', 'Mercer County'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Montgomery**',
+                        columns: ['year', 'Montgomery County'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Philadelphia**',
+                        columns: ['year', 'Philadelphia County'],
+                        disabled: true
+                    }
+                ],
                 context: {
                     labels: ['Percentage of Households'],
                     keepLabels: true,
@@ -639,8 +697,35 @@ const snippetsRef = {
                 },
             },
             {
-                type: 'stacked bar',
+                type: 'bar',
                 container: 'chart2',
+                dataSource: ['housing_afford_graph_1'],
+                context: {
+                    labels: ['Percentage of Households'],
+                    units: ['percentC']
+                },
+                data: [
+                    {
+                        'key': 'Core Cities',
+                        columns: ['year', 'Core City'],
+                    },
+                    {
+                        'key': 'Developed Communities',
+                        columns: ['year', 'Developed Community'],
+                    },
+                    {
+                        'key': 'Growing Suburbs',
+                        columns: ['year', 'Growing Suburb'],
+                    },
+                    {
+                        'key': 'Rural Areas',
+                        columns: ['year', 'Rural Area'],
+                    }
+                ]
+            },
+            {
+                type: 'stacked bar',
+                container: 'chart3',
                 dataSource: ['housing_afford_graph_2'],
                 context: {
                     labels: ['Households (Thousands)'],
@@ -695,7 +780,7 @@ const snippetsRef = {
             },
             {
                 type: 'stacked bar',
-                container: 'chart3',
+                container: 'chart4',
                 dataSource: ['housing_afford_graph_3'],
                 context: {
                     labels: ['Households (Thousands)'],

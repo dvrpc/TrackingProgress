@@ -212,7 +212,7 @@ const createBarChart = (source, toggleContext) => {
             let chart = nv.models.multiBarChart()
                 .margin(standardMargin)
                 .x(d => d[0])
-                .y((d => d[1] ))
+                .y((d => d[1]))
                 .showControls(false)
                 .yDomain([0, 1])
                 .stacked(false)
