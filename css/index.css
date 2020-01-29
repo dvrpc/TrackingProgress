@@ -280,13 +280,11 @@ summary:hover{
 }
 .icon-set-img{
     align-self: center;
-    height: 100px;
-    width: 100px;
+    width: 32%;
 }
 .emoji-set-img{
     align-self: center;
-    width: 60px;
-    height: 60px;
+    width: 23%;
 }
 .icon-set:hover{
     cursor: pointer;
