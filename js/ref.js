@@ -434,11 +434,11 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'Motor Vehicle',
+                        'key': 'Bike + Pededestrian',
                         columns: ['year', 'DVRPC- ksiBikePed']
                     },
                     {
-                        'key': 'Bike + Pededestrian',
+                        'key': 'Motor Vehicle',
                         columns: ['year', 'DVRPC- ksiMotorVehicle']
                     }
                 ]
