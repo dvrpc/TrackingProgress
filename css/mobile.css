@@ -51,11 +51,25 @@ summary{
 .gif-row{
     flex-direction: column;
 }
+.gif-figure{
+    margin-bottom: 5%;
+}
+#emojis-description{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+}
 #emojis-row{
     flex-wrap: wrap;
+    justify-content: center;
 }
 .emoji-figure{
-    width: 45%;
+    width: 50%;
+    margin-bottom: 5%;
+}
+.emoji-figure img{
+    width: 30px;
+    height: 30px;
 }
 #to-grid{
     padding: 3px 5px;
