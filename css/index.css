@@ -474,6 +474,19 @@ summary:hover{
     background: #f9f9f9;
     padding: 3% 5%;
 }
+.indicator-emoji-context{
+    /* width and margin to compensate for wrapper padding of 3% 5% */
+    width: 110%;
+    margin: 3% -5% -3% -5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4fa3a8;
+    background: #f3fcfc;
+}
+.indicator-emoji-context-img{
+    margin-right: 10px;
+}
 .back-to-dash{
     display: none;
     color: #4fa3a8;

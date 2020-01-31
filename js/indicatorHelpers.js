@@ -219,8 +219,14 @@ const handleTabs = (e, text, wrapper, color) => {
     // short out if clicking on the already active tab
     if(oldTab.id === clickedTab.id) return
 
-    // update the text
-    while(wrapper.firstChild) wrapper.removeChild(wrapper.firstChild)
+    // clear the text (ignoring the last element)
+    var i = 0;
+    var length = (wrapper.children.length) - 1
+    for(i; i < length; i++) {
+        wrapper.removeChild(wrapper.firstChild)
+    }
+    
+    // add new text
     const textSection = clickedTab.id.split('-')[0]
     wrapper.insertAdjacentHTML('afterbegin', text[textSection])
 
