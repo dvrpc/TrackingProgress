@@ -51,11 +51,25 @@ summary{
 .gif-row{
     flex-direction: column;
 }
+.gif-figure{
+    margin-bottom: 5%;
+}
+#emojis-description{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
+}
 #emojis-row{
     flex-wrap: wrap;
+    justify-content: center;
 }
 .emoji-figure{
-    width: 45%;
+    width: 50%;
+    margin-bottom: 5%;
+}
+.emoji-figure img{
+    width: 30px;
+    height: 30px;
 }
 #to-grid{
     padding: 3px 5px;
@@ -73,13 +87,13 @@ summary{
     top: 8vh;
     width: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
 }
 
-/* @TODO: a better solution to handling the form on mobile */
 #filter-type-form{
-    max-width: 80px;
+    width: 100%;
     font-size: 0.8em;
 }
 .indicators-grid-item{
@@ -97,7 +111,7 @@ summary{
 }
 .icon-set{
     height: 10vh;
-    width: calc(20% - 3px);
+    width: calc(20% - 4px);
     margin-right: 4px;
     margin-bottom: 4px;
 }
@@ -139,12 +153,13 @@ summary{
     width: 100%;
 }
 .back-to-dash{
-    width: auto;
+    width: 17%;
     padding: 0 2px;
     border-right: 1px solid white;
     font-size: 0.9em;
 }
 .related-indicators{
+    width: 81%;
     border-top: none;
     flex-direction: row !important;
     justify-content: flex-start;
@@ -155,6 +170,10 @@ summary{
     margin-left: 5px;
     margin-right: 5px;
     width: 15px;
+}
+.emoji-set-img{
+    width: 25px;
+    height: 25px;
 }
 #related-indicators-subheader-wrapper{
     display: flex;
@@ -202,11 +221,11 @@ summary{
     margin: 3% 0;
     width: auto;
 }
+.toggle-wrapper form, select{
+    font-size: 0.8em;
+}
 .double-toggle-form fieldset:last-child{
     text-align: right;
-}
-select{
-    font-size: 0.9em;
 }
 .toggle-subheader{
     border-right: none;
@@ -219,6 +238,7 @@ select{
 }
 .chart-src{
     width: auto;
+    font-size: 0.8em;
 }
 .nv-series text{
     font-size: 9px;
@@ -227,16 +247,28 @@ select{
 
 /* Mobile styles for the footer */
 footer{
+    padding: 10% 0;
+    flex-direction: column;
+    align-items: center;
     font-size: 0.7em;
 }
-#footer-social-wrapper{
-    width: 100%;
+#footer-logo{
+    width: 65px;
+}
+#footer-words{
+    margin-bottom: 6%;
+}
+#footer-contact-wrapper{
+    width: 60%;
+    text-align: center;
 }
 .footer-social{
-    width: 14px;
+    width: 15px;
     height: 15px;
 }
-#footer-logo{
-    height: 25px;
-    width: 80px;
+#email-icon{
+    height: 14px;
+}
+#email-icon, #youtube-icon{
+    width: 20px;
 }

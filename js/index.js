@@ -113,7 +113,7 @@ const loadVideos = toggle => {
     // return if not clicking on summary or if the videos are already loaded
     if(target.nodeName != 'SUMMARY' || videosLoaded[target.id]) return
         
-    const figures = target.nextElementSibling.children
+    const figures = target.nextElementSibling.children[0].children
     const length = figures.length
     var i = 0
 

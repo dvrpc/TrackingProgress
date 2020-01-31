@@ -176,7 +176,6 @@ const createLineChart = (source, toggleContext) => {
 
         nv.addGraph(() => {
             let chart = nv.models.lineChart()
-                .defined(d => d[1] !== null) // handle incomeplete datasets (ed attain and housing afford chart 1)
                 .margin(standardMargin)
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
@@ -185,6 +184,39 @@ const createLineChart = (source, toggleContext) => {
                 .x(d => d[0])
                 .y((d, i) => d[1])
 
+            // set max legend length to an arbitrarily high number to prevent text cutoff
+            chart.legend.maxKeyLength(100)
+
+            // format yAxis units and labels if necessary
+            if(context) formatLabels(chart.yAxis, chart.xAxis, context)
+
+            d3.select(container).datum(source.data).transition().duration(500).call(chart)
+
+            nv.utils.windowResize(chart.update)
+
+            return chart
+        })
+    })
+}
+
+const createBarChart = (source, toggleContext) => {
+    let container, dataSource, context;
+    [container, dataSource, source, context] = formatInpus(source, toggleContext)
+
+    d3.csv(dataSource, rows => {
+        source.data.forEach(series => {
+            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? -1 : +rows[series.columns[1]] ]) // set -1 to hide null values
+        })
+    }, csvObj => {
+        nv.addGraph(() => {
+            let chart = nv.models.multiBarChart()
+                .margin(standardMargin)
+                .x(d => d[0])
+                .y((d => d[1]))
+                .showControls(false)
+                .yDomain([0, 1])
+                .stacked(false)
+            
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
 
@@ -317,7 +349,7 @@ const createWaterfallChart = (source, toggleContext) => {
                 .attr("x", 16)
                 .attr("transform", "rotate(90)")
                 .style("text-anchor", "start")
-                .style("font-weight", d => d[0] === '2' ? 700 : 400); // hack to bold the cumulative value labels. This works because they all start with the year 2***
+                .style("font-weight", (d, i) => i % 3 === 0 ? 700 : 400); // bold the cumulative value labels
 
         chart.append("g")
             .attr("class", "waterfallAxis")
@@ -325,7 +357,7 @@ const createWaterfallChart = (source, toggleContext) => {
             .selectAll("text")
                 .attr("x", -5);
 
-        // add legend @TODO: a better way 
+        // add legend
         // increasing
         chart.append("circle")
             .attr("transform", "translate("+ (width/3.5) +",-30)")
@@ -388,7 +420,7 @@ const createWaterfallChart = (source, toggleContext) => {
             // determine if the value should be placed above (trending up) or below (trending down) the bar
             .attr("y", d => y(d.end) + (d.end > d.start ? -5 : 10))
             .attr('font-size', '10px')
-            .text(d => (d.class === 'negative' ? '-' : '' + (d.end - d.start || '')));
+            .text((d, i) => !i ? '' : (d.class === 'negative' ? '-' : '' + ((d.end - d.start).toLocaleString())));
     });
 
     // resize listener
@@ -407,4 +439,4 @@ const createWaterfallChart = (source, toggleContext) => {
     }
 }
 
-export {createStackedBarChart, createLinePlusBarChart, createLineChart, createLineAndScatterChart, createWaterfallChart};
+export {createStackedBarChart, createLinePlusBarChart, createLineChart, createBarChart, createLineAndScatterChart, createWaterfallChart};

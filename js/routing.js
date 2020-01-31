@@ -4,6 +4,7 @@ import { makeDashboard, removeDashboard } from './dashboardHelpers.js';
 const dashboard = document.getElementById('dashboard')
 const grid = dashboard.children[1]
 const splashPage = document.getElementById('splash-page')
+const filterState = document.getElementById('filter-type-form')
 
 
 // for development/live
@@ -60,6 +61,9 @@ const updateView = (transition, hashParam) => {
 // refreshing an indicator page renders it w/o triggering the normal transitions
 const refreshView = () => {
     let hash = location.hash
+
+    // reset filter state to default
+    filterState[1].value = 'category'
 
     // only update the view if refreshing an indicator page
     if(hash.length) {
