@@ -537,7 +537,7 @@ summary:hover{
     justify-content: center;
     width: 90%;
     margin: 0 auto;
-    padding-bottom: 1%;
+    padding-bottom: 5px;
 }
 .toggle-wrapper p{
     margin: 0 2% 0 0;
