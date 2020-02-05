@@ -428,9 +428,10 @@ summary:hover{
     text-align: center;
     font-size: 1.3em;
     font-weight: 400;
+    margin: 0;
 }
 .indicator-header-hr{
-    margin: 1% 0;
+    margin: 2% 0;
 }
 .indicator-category-icons{
     display: flex;
@@ -441,20 +442,22 @@ summary:hover{
     height: 36px;
 }
 #description-wrapper{
-    padding: 20px 0 3% 0;
-    width: 75%;
-    max-width: 900px;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    background: #f9f9f9;
+    margin: 20px auto 0 auto;
 }
 #description-wrapper-tabs{
     display: flex;
     justify-content: space-between;
+    background: transparent;
+
 }
 .description-wrapper-tab-headers{
     width: 25%;
     text-align: center;
     margin: 0;
-    padding: 2% 5px;
+    padding: 2% 0;
     font-size: 1.2em;
     font-weight: 500;
     border-top-left-radius: 5px;
@@ -470,14 +473,12 @@ summary:hover{
     overflow: hidden;
 }
 #indicator-description-container{
-    margin: 0;
-    background: #f9f9f9;
-    padding: 3% 5%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 1%;
 }
 .indicator-emoji-context{
     /* width and margin to compensate for wrapper padding of 3% 5% */
-    width: 110%;
-    margin: 3% -5% -3% -5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -490,7 +491,7 @@ summary:hover{
 .back-to-dash{
     display: none;
     color: #4fa3a8;
-    background: #fff;
+    background: transparent;
     border: none;
     width: 85%;
     text-align: center;
@@ -551,6 +552,7 @@ summary:hover{
 .chart-src{
     display: block;
     width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
     font-style: italic;
 }
@@ -582,8 +584,9 @@ summary:hover{
 /********************************/
 /*********** D3 Views **********/
 .data-viz{
-    height: 450px; /* @TODO: add a class to waterfalls and give them a custom height*/
+    height: 450px;
     width: 90%;
+    max-width: 1000px;
     margin: 0 auto;
     background: #f9f9f9;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
