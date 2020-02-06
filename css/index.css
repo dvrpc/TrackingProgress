@@ -136,6 +136,7 @@ header{
     color: #4fa3a8;
     margin: 0;
     padding-bottom: 6px;
+    font-weight: 500;
 }
 summary{
     font-size: 1.2rem;
