@@ -472,27 +472,22 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'Middle Eastern',
-                        color: '#1f77b4',
                         columns: ['year', 'Middle Eastern']
                     },
                     {
                         'key': 'Mexican',
-                        color: '#aec7e8',
                         columns: ['year', 'Mexican']
                     },
                     {
                         'key': 'Canadian',
-                        color: '#ff7f0e',
                         columns: ['year', 'Canadian']
                     },
                     {
                         'key': 'Caribbean',
-                        color: '#2ca02c',
                         columns: ['year', 'Caribbean']
                     },
                     {
                         'key': 'European',
-                        color: '#d62728',
                         columns: ['year', 'European']
                     }
                 ]
