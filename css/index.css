@@ -106,7 +106,7 @@ header{
 /**************** Splash Page ***************/
 #splash-page{
     margin-top: 8vh;
-    padding: 3%;
+    padding: 2% 3%;
     background: rgba(79,163,168,0.1);
     visibility: visible;
 }
@@ -122,11 +122,18 @@ header{
 }
 .splash-text{
     width: 700px;
-    margin: 2% auto;
+    margin: 0 auto;
     line-height: 1.7rem;
 }
+#splash-text-list{
+    width: 700px;
+    margin: 1% auto;
+}
+#splash-text-list strong{
+    color: #4fa3a8;
+}
 details{
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 details[open] summary {
     color: #4fa3a8;
@@ -137,6 +144,9 @@ summary{
 }
 summary:hover{
     cursor: pointer;
+}
+#dashSummary{
+    margin-top: 1%;
 }
 .details-content-wrapper{
     background: #f3fcfc;
