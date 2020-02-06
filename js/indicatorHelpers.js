@@ -53,9 +53,6 @@ const dataVizSwitch = (type, source, toggleContext) => {
         case 'line':
             graphs.createLineChart(source, toggleContext)
             break;
-        case 'stacked area':
-            graphs.createStackedAreaChart(source, toggleContext)
-            break;
         case 'line and scatter':
             graphs.createLineAndScatterChart(source, toggleContext)
             break;
