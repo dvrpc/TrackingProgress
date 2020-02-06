@@ -28,27 +28,26 @@ body{
 
 /* Mobile styles for the splash page */
 #splash-page{
-    padding: 4% 3%;
+    padding: 2% 3%;
 }
 #tp-header{
     font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
 }
 #tp-header-name{
     width: 100%;
     display: block;
 }
 .splash-text{
-    width: 90%;
+    width: 100%;
     line-height: 1.4rem;
-    margin-bottom: 4%;
 }
 #splash-text-list{
     width: 90%;
+    margin: 1% auto;
 }
-details{
-    margin-bottom: 3%;
-}
-summary{
+summary, #get-started, #to-grid{
     font-size: 1rem;
 }
 .gif-row{
@@ -76,6 +75,7 @@ summary{
 }
 #to-grid{
     padding: 3px 5px;
+    margin-bottom: 6px;
 }
 
 
