@@ -42,6 +42,9 @@ body{
     line-height: 1.4rem;
     margin-bottom: 4%;
 }
+#splash-text-list{
+    width: 90%;
+}
 details{
     margin-bottom: 3%;
 }
@@ -116,8 +119,8 @@ summary{
     margin-bottom: 4px;
 }
 .icon-set-img{
-    width: 53px;
-    height: 53px;
+    width: 42px;
+    height: 42px;
 }
 .icon-set-p{
     font-size: 0.77em;
