@@ -216,6 +216,12 @@ summary{
 #description-wrapper-tabs{
     font-size: 0.7rem;
 }
+#indicator-description-container{
+    padding: 0 4%;
+}
+.indicator-emoji-context p {
+    width: 80%;
+}
 .toggle-wrapper{
     flex-direction: column;
     margin: 3% 0;

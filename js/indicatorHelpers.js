@@ -192,6 +192,7 @@ const getIndicatorSnippet = (grid, snippet) => {
         if(hasText){
             const descriptionContainer = document.getElementById('indicator-description-container')
             const tabs = document.getElementById('description-wrapper-tabs')
+            const descriptionWrapper = document.getElementById('description-wrapper')
             const activeTab = document.querySelector('.active-tab')
             
             let cat = descriptionContainer.dataset.primary || 'unset'
@@ -200,8 +201,8 @@ const getIndicatorSnippet = (grid, snippet) => {
             descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
             
             // add colors to tab/container based on primary category
-            descriptionContainer.style.borderTop = `2px solid ${color}`
-            descriptionContainer.style.borderBottom = `2px solid ${color}`
+            descriptionWrapper.style.borderBottom = `2px solid ${color}`
+            tabs.style.borderBottom = `2px solid ${color}`
             activeTab.style.background = color
             activeTab.style.color = '#f7f7f7'
             
@@ -219,8 +220,10 @@ const handleTabs = (e, text, wrapper, color) => {
     // short out if clicking on the already active tab
     if(oldTab.id === clickedTab.id) return
 
-    // update the text
+    // clear the text
     while(wrapper.firstChild) wrapper.removeChild(wrapper.firstChild)
+    
+    // add new text
     const textSection = clickedTab.id.split('-')[0]
     wrapper.insertAdjacentHTML('afterbegin', text[textSection])
 
