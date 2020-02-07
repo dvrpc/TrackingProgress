@@ -3141,14 +3141,4 @@ const snippetsRef = {
     }
 }
 
-// @TODO: rebuild column options in the following way:
-    // columnOptions: {
-    //     DVRPC: ['DVRPC - Core City', 'DVRPC - Developed Community'],
-    //     ChesterCo: ['etc', 'etc', 'etc']
-    // }
-// Toggle values need to be renamed for this to work. 
-// It lets chart# not rely on the order of columnOptions being the same as the toggle.
-// ensures the right data is grabbed everytime and is more robust/easier to manage, update, etc.
-// also faster b/c object indexing instead of array..
-
 export default snippetsRef
