@@ -145,7 +145,6 @@ summary:hover{
     cursor: pointer;
 }
 .details-content-wrapper{
-    background: #f3fcfc;
     padding: 18px 0;
 }
 .gif-row{
@@ -485,12 +484,13 @@ summary:hover{
     padding-top: 1%;
 }
 .indicator-emoji-context{
-    /* width and margin to compensate for wrapper padding of 3% 5% */
+    width: 700px;
+    border-top: 2px solid #4fa3a8;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #4fa3a8;
-    background: #f3fcfc;
 }
 .indicator-emoji-context-img{
     margin-right: 10px;
