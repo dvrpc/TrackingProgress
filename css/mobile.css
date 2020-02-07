@@ -28,24 +28,26 @@ body{
 
 /* Mobile styles for the splash page */
 #splash-page{
-    padding: 4% 3%;
+    padding: 2% 3%;
 }
 #tp-header{
     font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
 }
 #tp-header-name{
     width: 100%;
     display: block;
 }
 .splash-text{
-    width: 90%;
+    width: 100%;
     line-height: 1.4rem;
-    margin-bottom: 4%;
 }
-details{
-    margin-bottom: 3%;
+#splash-text-list{
+    width: 90%;
+    margin: 1% auto;
 }
-summary{
+summary, #get-started, #to-grid{
     font-size: 1rem;
 }
 .gif-row{
@@ -73,6 +75,7 @@ summary{
 }
 #to-grid{
     padding: 3px 5px;
+    margin-bottom: 6px;
 }
 
 
@@ -116,8 +119,8 @@ summary{
     margin-bottom: 4px;
 }
 .icon-set-img{
-    width: 53px;
-    height: 53px;
+    width: 42px;
+    height: 42px;
 }
 .icon-set-p{
     font-size: 0.77em;
