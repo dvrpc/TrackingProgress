@@ -8,7 +8,7 @@ const filterState = document.getElementById('filter-type-form')
 
 
 // for development/live
-const baseURL =  '/TrackingProgress/'
+const baseURL = '/TrackingProgress/'
 
 // for review:
 // const baseURL = '/review/TrackingProgress/'

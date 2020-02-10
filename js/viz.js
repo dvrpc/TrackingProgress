@@ -94,15 +94,17 @@ const createStackedBarChart = (source, toggleContext) => {
 
         // create a values field based on the desired column as defined in the reference object
         source.data.forEach(series => {
-            series.values.push([ rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
+            const x = +rows[series.columns[0]]
+            const y = rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] 
+            series.values.push({x, y})
         })
 
     }, csvObj => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
                 .margin(standardMargin)
-                .x(d => d[0])
-                .y((d, i) => d[1])
+                .x(d => d.x)
+                .y((d, i) => d.y)
                 .showControls(false)
                 .forceY(source.range || 0)
                 .clipEdge(true)
@@ -114,7 +116,7 @@ const createStackedBarChart = (source, toggleContext) => {
 
             // format yAxis units and labels if necessary
             if(context) formatLabels(chart.yAxis, chart.xAxis, context)
-
+            
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
             nv.utils.windowResize(chart.update)
