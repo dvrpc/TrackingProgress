@@ -314,7 +314,6 @@ const makeIndicatorPage = hashArray => {
 
     // create the indicator page if it exists
     if(snippet){
-        
         const primaryCategory = hashArray[1]
         generateSideNav(indicators, relatedIndicators, primaryCategory)
         getIndicatorSnippet(grid, snippet, graphs)
