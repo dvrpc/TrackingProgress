@@ -8,8 +8,10 @@ const formatInpus = (source, toggleContext) => {
     // the Period of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
     
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
-    source.data.forEach(series => series.values = [])
+    // create the values field to be populated by each charting function
+    source.data.forEach(series => {
+        series.values = []
+    })
     
     let labels, xLabel, units, chartName;
 
@@ -26,6 +28,7 @@ const formatInpus = (source, toggleContext) => {
 
     // index all at 0 for initial state
     if(toggleContext === 'initial') {
+        
         const hasContext = source.context
 
         if(hasContext) {
