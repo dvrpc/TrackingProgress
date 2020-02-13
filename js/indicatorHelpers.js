@@ -163,6 +163,7 @@ const getIndicatorSnippet = (grid, snippet) => {
         const dataVizClone = Object.assign({}, chart)
         return dataVizClone
     })
+
     const hasText = snippet.text
 
     let page = `./indicatorSnippets/${snippetFile}`
@@ -308,7 +309,8 @@ const makeIndicatorPage = hashArray => {
     // remove an existing indicator page before continuing
     const oldIndicator = document.querySelector('.indicators-snippet')
     if(oldIndicator) {
-        while(oldIndicator.children[0]) oldIndicator.children[0].remove()
+        // use d3 to destroy the charts to ensure no leftovers when rebuilding an indicator page
+        d3.selectAll('svg').remove()
         oldIndicator.remove()
     }
 

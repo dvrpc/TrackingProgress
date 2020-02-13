@@ -406,6 +406,7 @@ summary:hover{
     color: #050709;
     /*15vw for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
     padding-left: 15vw;
+    padding-bottom: 15px;
     width: 100%;
     overflow-y: auto;
     transition: opacity 1s;
@@ -562,7 +563,6 @@ summary:hover{
     max-width: 1000px;
     margin: 0 auto;
     font-style: italic;
-    padding-bottom: 2%;
 }
 
 /* custom styles for waterfalls */
