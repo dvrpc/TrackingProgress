@@ -157,16 +157,14 @@ const toggleChart = (selected, dataSets) => {
 const getIndicatorSnippet = (grid, snippet) => {    
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippet.file
+    let page = `./indicatorSnippets/${snippetFile}`
 
-    // clone the chart context objects to avoid polluting the main ref.js object with references to toggled data sets
+    // deep clone the chart context objects to avoid polluting the main ref.js object with references to toggled data sets
     const hasDataViz = snippet.d3.map(chart => {
-        const dataVizClone = Object.assign({}, chart)
+        const dataVizClone = JSON.parse(JSON.stringify(chart))
         return dataVizClone
     })
-
     const hasText = snippet.text
-
-    let page = `./indicatorSnippets/${snippetFile}`
 
     fetch(page).then(response => response.text()).then(snippet =>{
 
@@ -308,11 +306,7 @@ const makeIndicatorPage = hashArray => {
 
     // remove an existing indicator page before continuing
     const oldIndicator = document.querySelector('.indicators-snippet')
-    if(oldIndicator) {
-        // use d3 to destroy the charts to ensure no leftovers when rebuilding an indicator page
-        d3.selectAll('svg').remove()
-        oldIndicator.remove()
-    }
+    if(oldIndicator) oldIndicator.remove()
 
     // create the indicator page if it exists
     if(snippet){

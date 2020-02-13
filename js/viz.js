@@ -26,7 +26,6 @@ const formatInpus = (source, toggleContext) => {
 
     // index all at 0 for initial state
     if(toggleContext === 'initial') {
-        
         const hasContext = source.context
 
         if(hasContext) {
