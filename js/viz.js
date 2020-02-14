@@ -95,11 +95,11 @@ const createStackedBarChart = (source, toggleContext) => {
         // create a values field based on the desired column as defined in the reference object
         source.data.forEach(series => {
             const x = rows[series.columns[0]]
-            const y = rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] 
+            const y = rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
             series.values.push({x, y})
         })
 
-    }, csvObj => {
+    }, () => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
                 .margin(standardMargin)
@@ -111,14 +111,17 @@ const createStackedBarChart = (source, toggleContext) => {
                 .stacked(true)
                 .useInteractiveGuideline(true)
             
+            // This should be the solution to adding formatting back to the tooltips, but setting .userInteractiveGuideline(true) seems to break all other tooltip methods...
+            // const units = axisFormats[context.units]
+            // chart.tooltip.valueFormatter(d => {
+            //     return d3.format(units)
+            // })
+            
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
             if(context) formatLabels(chart.yAxis, chart.xAxis, context)
-
-            const units = axisFormats[context.units]
-            chart.tooltip.valueFormatter(d3.format(units))
             
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
