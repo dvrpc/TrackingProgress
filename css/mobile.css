@@ -222,6 +222,9 @@ summary, #get-started, #to-grid{
 #indicator-description-container{
     padding: 0 4%;
 }
+.indicator-emoji-context{
+    width: 95%;
+}
 .indicator-emoji-context p {
     width: 80%;
 }

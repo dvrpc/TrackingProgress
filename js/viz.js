@@ -8,7 +8,7 @@ const formatInpus = (source, toggleContext) => {
     // the Period of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
     
-    // purge the old data (or create the empty arrays if its the 1st time rendering) to prevent the weird double line situation from happening
+    // create or reset the values field to be populated by each charting function
     source.data.forEach(series => series.values = [])
     
     let labels, xLabel, units, chartName;
@@ -94,12 +94,12 @@ const createStackedBarChart = (source, toggleContext) => {
 
         // create a values field based on the desired column as defined in the reference object
         source.data.forEach(series => {
-            const x = +rows[series.columns[0]]
-            const y = rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] 
+            const x = rows[series.columns[0]]
+            const y = rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
             series.values.push({x, y})
         })
 
-    }, csvObj => {
+    }, () => {
         nv.addGraph(() => {
             let chart = nv.models.multiBarChart()
                 .margin(standardMargin)

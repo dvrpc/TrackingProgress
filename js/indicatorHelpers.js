@@ -154,18 +154,17 @@ const toggleChart = (selected, dataSets) => {
 }
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
-const getIndicatorSnippet = (grid, snippet) => {
-    let hasDataViz;
-    let hasText;
-
+const getIndicatorSnippet = (grid, snippet) => {    
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippet.file
-
-    // get a handle on data viz metadata and text content
-    hasDataViz = snippet.d3
-    hasText = snippet.text
-
     let page = `./indicatorSnippets/${snippetFile}`
+
+    // deep clone the chart context objects to avoid polluting the main ref.js object with references to toggled data sets
+    const hasDataViz = snippet.d3.map(chart => {
+        const dataVizClone = JSON.parse(JSON.stringify(chart))
+        return dataVizClone
+    })
+    const hasText = snippet.text
 
     fetch(page).then(response => response.text()).then(snippet =>{
 
@@ -307,10 +306,7 @@ const makeIndicatorPage = hashArray => {
 
     // remove an existing indicator page before continuing
     const oldIndicator = document.querySelector('.indicators-snippet')
-    if(oldIndicator) {
-        while(oldIndicator.children[0]) oldIndicator.children[0].remove()
-        oldIndicator.remove()
-    }
+    if(oldIndicator) oldIndicator.remove()
 
     // create the indicator page if it exists
     if(snippet){
