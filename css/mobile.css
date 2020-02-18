@@ -20,7 +20,7 @@ body{
 #help-btn{
     font-size: 1rem;
     margin-left: 20px;
-    padding: 3px 10px;
+    padding: 4px 10px;
 }
 #tp-logo{
     height: 35px;
@@ -48,7 +48,7 @@ body{
     margin: 1% auto;
 }
 summary, #get-started, #to-grid{
-    font-size: 1rem;
+    font-size: 1em;
 }
 .gif-row{
     flex-direction: column;
