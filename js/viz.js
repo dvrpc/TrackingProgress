@@ -111,12 +111,6 @@ const createStackedBarChart = (source, toggleContext) => {
                 .stacked(true)
                 .useInteractiveGuideline(true)
             
-            // This should be the solution to adding formatting back to the tooltips, but setting .userInteractiveGuideline(true) seems to break all other tooltip methods...
-            // const units = axisFormats[context.units]
-            // chart.tooltip.valueFormatter(d => {
-            //     return d3.format(units)
-            // })
-            
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
 
