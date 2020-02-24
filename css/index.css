@@ -476,8 +476,13 @@ summary:hover{
 }
 .active-tab{
     background: #f9f9f9;
-    box-shadow: 1px -1px 4px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 0px 4px rgba(0,0,0,0.3);
     overflow: hidden;
+}
+#description-content-wrapper{
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 #indicator-description-container{
     max-width: 700px;
