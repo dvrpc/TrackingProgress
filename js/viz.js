@@ -61,7 +61,7 @@ const formatLabels = (y, x, context) => {
     // add axis label & update margin to compensate
     if(context.labels) {
         y.axisLabel(context.labels)
-        y.axisLabelDistance( isMobile ? 8 : 15)
+        y.axisLabelDistance( isMobile ? 5 : 15)
 
         // x label defaults to year except for the two edge cases where it's different (which is handled in format Inputs)
         x.axisLabel(context.xLabel)
@@ -81,8 +81,8 @@ const axisFormats = {
 
 // margin object for desktop/mobile
 let isMobile = window.innerWidth > 415 ? false : true
-const standardMargin = isMobile ? {top: 40, right: 25, bottom: 50, left: 70} : {top: 40, right: 55, bottom: 45, left: 85}
-const waterfallMargin = isMobile ? {top: 35, right: 20, bottom: 325, left: 65} : {top: 40, right: 55, bottom: 275, left: 85}
+const standardMargin = isMobile ? {top: 40, right: 25, bottom: 50, left: 67} : {top: 40, right: 55, bottom: 45, left: 85}
+const waterfallMargin = isMobile ? {top: 35, right: 20, bottom: 295, left: 55} : {top: 40, right: 55, bottom: 275, left: 85}
 
 
 /************************ Charting Functions *********************************/
@@ -298,8 +298,10 @@ const createWaterfallChart = (source, toggleContext) => {
 
     let margin = waterfallMargin,
     width = widthNoMargin - margin.left - margin.right,
-    height = 590 - margin.top - margin.bottom,
-    padding = 0.1
+    // OLD WAY: 580 for desktpo
+    //height = 580 - margin.top - margin.bottom,
+    height = 280,
+    padding = 0
 
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], padding);
