@@ -476,7 +476,7 @@ summary:hover{
 }
 .active-tab{
     background: #f9f9f9;
-    box-shadow: 1px 0px 4px rgba(0,0,0,0.3);
+    box-shadow: 2px 0px 3px rgba(0,0,0,0.3);
     overflow: hidden;
 }
 #description-content-wrapper{
