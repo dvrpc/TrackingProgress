@@ -82,7 +82,7 @@ const axisFormats = {
 // margin object for desktop/mobile
 let isMobile = window.innerWidth > 415 ? false : true
 const standardMargin = isMobile ? {top: 40, right: 25, bottom: 50, left: 67} : {top: 40, right: 55, bottom: 45, left: 85}
-const waterfallMargin = isMobile ? {top: 35, right: 20, bottom: 295, left: 55} : {top: 40, right: 55, bottom: 275, left: 85}
+const waterfallMargin = isMobile ? {top: 38, right: 20, bottom: 330, left: 58} : {top: 40, right: 55, bottom: 275, left: 85}
 
 
 /************************ Charting Functions *********************************/
@@ -298,10 +298,9 @@ const createWaterfallChart = (source, toggleContext) => {
 
     let margin = waterfallMargin,
     width = widthNoMargin - margin.left - margin.right,
-    // OLD WAY: 580 for desktpo
-    //height = 580 - margin.top - margin.bottom,
-    height = 280,
-    padding = 0
+    height = isMobile ? 170 : 280,
+    padding = 0,
+    waterfallLegendFont = isMobile ? "10px" : "12px";
 
     var x = d3.scale.ordinal()
         .rangeRoundBands([0, width], padding);
@@ -363,41 +362,44 @@ const createWaterfallChart = (source, toggleContext) => {
 
         // add legend
         // increasing
+        let legend1 = isMobile ? width : 3.5
         chart.append("circle")
-            .attr("transform", "translate("+ (width/3.5) +",-30)")
+            .attr("transform", "translate("+ (width/legend1) +",-30)")
             .attr("r", 6)
             .style("fill", "#1f77b4")
         chart.append("text")
-            .attr("transform", "translate("+ (width/3.5 + 8) +",-26)")
+            .attr("transform", "translate("+ (width/legend1 + 8) +",-26)")
             .text("Increasing")
-            .style("font-size", "12px")
+            .style("font-size", waterfallLegendFont)
 
         // decreasing
+        let legend2 = 2.5
         chart.append("circle")
-            .attr("transform", "translate("+ (width/2.5) +",-30)")
+            .attr("transform", "translate("+ (width/legend2) +",-30)")
             .attr("r", 6)
             .style("fill", "#ff7f0e")
         chart.append("text")
-            .attr("transform", "translate("+ (width/2.5 + 8) +",-26)")
+            .attr("transform", "translate("+ (width/legend2 + 8) +",-26)")
             .text("Decreasing")
-            .style("font-size", "12px")
+            .style("font-size", waterfallLegendFont)
 
         // total
+        let legend3 = isMobile ? 1.2 : 1.93
         chart.append("circle")
-            .attr("transform", "translate("+ (width/1.93) +",-30)")
+            .attr("transform", "translate("+ (width/legend3) +",-30)")
             .attr("r", 6)
             .style("fill", "#8e8e8e")
         chart.append("text")
-            .attr("transform", "translate("+ (width/1.93 + 8) +",-26)")
+            .attr("transform", "translate("+ (width/legend3 + 8) +",-26)")
             .text("Total")
-            .style("font-size", "12px")
+            .style("font-size", waterfallLegendFont)
 
         // add y-label
         chart.append("text")
             .attr("text-anchor", "middle")
             .attr("transform", "translate("+ (-margin.left/1.3) +","+(height/2)+")rotate(-90)")
             .text("Change in Population")
-            .attr('font-size', '12px');
+            .attr('font-size', "12px");
 
         // add x-label
         let xLabelMargin = isMobile ? margin.bottom/1.8 : margin.bottom/1.5
@@ -405,7 +407,7 @@ const createWaterfallChart = (source, toggleContext) => {
             .attr("text-anchor", "middle")
             .attr("transform", "translate("+ (width/2) +","+(height + xLabelMargin)+")")
             .text("Change Components")
-            .attr('font-size', '12px');
+            .attr('font-size', "12px");
 
         var bar = chart.selectAll(".bar")
             .data(data)
@@ -418,13 +420,15 @@ const createWaterfallChart = (source, toggleContext) => {
             .attr("height", d => Math.abs( y(d.start) - y(d.end) ))
             .attr("width", x.rangeBand());
         
-        // add values on top of or underneath each bar
-        bar.append("text")
-            .attr("x", d => d.end > 1000 || d.end < -1000 ? 0 : 3)
-            // determine if the value should be placed above (trending up) or below (trending down) the bar
-            .attr("y", d => y(d.end) + (d.end > d.start ? -5 : 10))
-            .attr('font-size', '10px')
-            .text((d, i) => !i ? '' : (d.class === 'negative' ? '-' : '' + ((d.end - d.start).toLocaleString())));
+        // add values on top of or underneath each bar (desktop only - no way to make this legible on mobile)
+        if(!isMobile) {
+            bar.append("text")
+                .attr("x", d => d.end > 1000 || d.end < -1000 ? 0 : 3)
+                // determine if the value should be placed above (trending up) or below (trending down) the bar
+                .attr("y", d => y(d.end) + (d.end > d.start ? -5 : 10))
+                .attr('font-size', "10px")
+                .text((d, i) => !i ? '' : (d.class === 'negative' ? '-' : '' + ((d.end - d.start).toLocaleString())));
+        }
     });
 
     // resize listener
