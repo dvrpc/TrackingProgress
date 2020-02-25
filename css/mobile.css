@@ -220,7 +220,7 @@ summary, #get-started, #to-grid{
     font-size: 0.7rem;
 }
 #indicator-description-container{
-    padding: 0 4%;
+    padding: 1% 4% 0 4%
 }
 .indicator-emoji-context{
     width: 95%;
