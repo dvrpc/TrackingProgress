@@ -30,6 +30,9 @@ body{
 #splash-page{
     padding: 2% 3%;
 }
+#splash-map-wrapper{
+    width: 100%;
+}
 #tp-header{
     font-size: 1.2rem;
     width: 100%;
@@ -38,6 +41,9 @@ body{
 #tp-header-name{
     width: 100%;
     display: block;
+}
+#region-map{
+    display: none;
 }
 .splash-text{
     width: 100%;

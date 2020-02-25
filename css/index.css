@@ -110,6 +110,16 @@ fieldset{
     background: rgba(79,163,168,0.1);
     visibility: visible;
 }
+#splash-map-wrapper{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+#region-map{
+    width: 95%;
+}
 #tp-header{
     margin: 0 auto;
     font-size: 2rem;
