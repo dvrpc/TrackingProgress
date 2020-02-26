@@ -2732,7 +2732,7 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Developed - DVRPC','Developed - New Jersey Suburbs','Developed - Pennsylvania Suburbs','Developed - Core City','Developed - Developed Community','Developed - Growing Suburb','Developed - Rural Area','Developed - Bucks','Developed - Burlington','Developed - Camden','Developed - Chester','Developed - Delaware','Developed - Gloucester','Developed - Mercer','Developed - Montgomery','Developed - Philadelphia'],
-                    ['Agricultural - DVRPC','Agricultural - New Jersey Suburbs','Agricultural - PA Suburbs','Agricultural - Core City','Agricultural - Developed Community','Agricultural - Growing Suburb','Agricultural - Rural Area','Agricultural - Bucks','Agricultural - Burlington','Agricultural - Camden','Agricultural - Chester','Agricultural - Delaware','Agricultural - Gloucester','Agricultural - Mercer','Agricultural - Montgomery','Agricultural - Philadelphia']
+                    ['Agricultural - DVRPC','Agricultural - New Jersey Suburbs','Agricultural - Pennsylvania Suburbs','Agricultural - Core City','Agricultural - Developed Community','Agricultural - Growing Suburb','Agricultural - Rural Area','Agricultural - Bucks','Agricultural - Burlington','Agricultural - Camden','Agricultural - Chester','Agricultural - Delaware','Agricultural - Gloucester','Agricultural - Mercer','Agricultural - Montgomery','Agricultural - Philadelphia']
                 ],
                 data: [
                     {

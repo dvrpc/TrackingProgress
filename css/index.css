@@ -112,9 +112,8 @@ fieldset{
 }
 #splash-map-wrapper{
     display: flex;
-    width: 90%;
+    width: 88%;
     justify-content: space-around;
-    align-items: center;
     margin: 0 auto;
 }
 #region-map{
