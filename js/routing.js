@@ -10,9 +10,6 @@ const filterState = document.getElementById('filter-type-form')
 // for development/live
 const baseURL = '/TrackingProgress/'
 
-// for review:
-// const baseURL = '/review/TrackingProgress/'
-
 // remove possible special characters from URL by whitelisting alphanumeric characters, -, / and &
 const sanitizeHash = hash => hash.replace(/[^\w\-\/\&]/gi, '')
 
