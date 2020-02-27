@@ -261,6 +261,9 @@ summary, #get-started, #to-grid{
 .nv-series text{
     font-size: 9px;
 }
+#to-top-btn{
+    display: none;
+}
 
 
 /* Mobile styles for the footer */
