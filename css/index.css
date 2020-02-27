@@ -578,6 +578,16 @@ summary:hover{
     margin: 0 auto;
     font-style: italic;
 }
+#to-top-btn{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #4fa3a8;
+    background: none;
+}
 
 /* custom styles for waterfalls */
 .waterfallAxis {

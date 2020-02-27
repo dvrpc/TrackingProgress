@@ -203,6 +203,12 @@ const getIndicatorSnippet = (grid, snippet) => {
             // add tab functionality
             tabs.onclick = e => handleTabs(e, hasText, descriptionContainer, color)
         }
+
+        // append the to-top button
+        const toTopBtn = makeTopTopBtn()
+        const newIndicator = document.querySelector('.indicators-snippet')
+        console.log('new indicator ', newIndicator)
+        newIndicator.appendChild(toTopBtn)
     })
 }
 
@@ -341,5 +347,18 @@ const updateLinks = () => {
 // listen for changes to sideNav and update the links 
 const observer = new MutationObserver(updateLinks)
 observer.observe(relatedIndicators, mutationConfig)
+
+// add button to allow users to quickly scroll back to the top of an indicator page
+const makeTopTopBtn = () => {
+    const btn = document.createElement('button')
+    
+    btn.setAttribute('type', 'button')
+    btn.setAttribute('name', '^')
+    btn.id = 'to-top-btn'
+    
+    btn.onclick = () => window.scrollTo({top: 0,behavior: 'smooth'})
+
+    return btn
+}
 
 export { makeIndicatorPage }
