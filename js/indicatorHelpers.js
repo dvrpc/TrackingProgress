@@ -353,7 +353,8 @@ const makeTopTopBtn = () => {
     const btn = document.createElement('button')
     
     btn.setAttribute('type', 'button')
-    btn.setAttribute('name', '^')
+    btn.setAttribute('name', 'to top')
+    btn.textContent = '^ top'
     btn.id = 'to-top-btn'
     
     btn.onclick = () => window.scrollTo({top: 0,behavior: 'smooth'})

@@ -413,7 +413,6 @@ summary:hover{
     background: #f2f2f2;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 25vh);
     color: #050709;
-    /*15vw for the width of the sidebar (for some reason this isn't a flex situation? what?)*/
     padding-left: 15vw;
     padding-bottom: 15px;
     width: 100%;
@@ -581,12 +580,14 @@ summary:hover{
 #to-top-btn{
     position: fixed;
     bottom: 15px;
-    right: 15px;
-    width: 30px;
-    height: 30px;
+    right: 0.9%;
+    width: 33px;
+    height: 33px;
     border-radius: 50%;
     border: 1px solid #4fa3a8;
     background: none;
+    font-size: 0.65rem;
+    cursor: pointer
 }
 
 /* custom styles for waterfalls */
