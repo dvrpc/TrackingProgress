@@ -207,7 +207,6 @@ const getIndicatorSnippet = (grid, snippet) => {
         // append the to-top button
         const toTopBtn = makeTopTopBtn()
         const newIndicator = document.querySelector('.indicators-snippet')
-        console.log('new indicator ', newIndicator)
         newIndicator.appendChild(toTopBtn)
     })
 }
