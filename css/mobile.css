@@ -12,7 +12,7 @@ body{
 }
 #dvrpc-logo{
     border-right: none;
-    width: 65%;
+    height: 29px;
 }
 #logo-help-wrapper{
     width: 50%;
@@ -131,9 +131,8 @@ summary, #get-started, #to-grid{
 .icon-set-p{
     font-size: 0.77em;
 }
-.flipside-img{
-    height: 25px;
-    width: 25px;
+.flipside{
+    display: none;
 }
 .indicators-nav div:last-child{
     margin-right: 0;

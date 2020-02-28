@@ -73,7 +73,7 @@ fieldset{
 }
 #tp-logo{
     display: block;
-    max-height: 50px;
+    height: 44px;
 }
 #help-btn{
     margin-left: 30px;
@@ -83,7 +83,8 @@ fieldset{
     background: none;
     font-size: 1.3rem;
     font-weight: 500;
-    padding: 4px 12px;
+    padding: 3px 11px;
+    cursor: pointer;
     opacity: 0;
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
@@ -91,14 +92,13 @@ fieldset{
     transition-timing-function: linear;
 }
 #help-btn:hover{
-    cursor: pointer;
     background: #4fa3a8;
     color: #f7f7f7;
 }
 #dvrpc-logo{
     display: block;
     float: right;
-    max-height: 95%;
+    height: 38px;
 }
 
 
@@ -149,8 +149,6 @@ fieldset{
 }
 summary{
     font-size: 1.1rem;
-}
-summary:hover{
     cursor: pointer;
 }
 .details-content-wrapper{
@@ -218,10 +216,9 @@ summary:hover{
     font-size: 1rem;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
     margin-top: 1%;
-}
-#to-grid:hover{
     cursor: pointer;
 }
+
 
 /********************************************/
 /*********** Indicator Dashboard ***********/
@@ -270,6 +267,7 @@ summary:hover{
     margin-right: 16px;
     height: calc(20% - 1px);
     width: 100%;
+    cursor: pointer;
     text-align: center;
     opacity: 1;
     transition: opacity 1s;
@@ -317,7 +315,6 @@ summary:hover{
     width: 23%;
 }
 .icon-set:hover{
-    cursor: pointer;
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
     border-bottom: hidden;
 }
@@ -350,9 +347,9 @@ summary:hover{
     margin: 1%;
     width: 12vw;
     height: 12vw;
+    cursor: pointer;
 }
 .indicators-grid-item:hover{
-    cursor: pointer;
     box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7);
 }
 .indicators-grid-item:active{
@@ -396,8 +393,8 @@ summary:hover{
     font-size: 0.8em;
 }
 .flipside-img{
-    height: 35px;
-    width: 35px;
+    height: 22%;
+    width: 22%;
     margin: 0 auto;
 }
 .flipside-text{
@@ -454,10 +451,10 @@ summary:hover{
 }
 .snippet-categories{
     margin-right: 3%;
-    height: 36px;
+    height: 33px;
 }
 #description-wrapper{
-    width: 90%;
+    width: 80%;
     max-width: 1000px;
     background: #f9f9f9;
     margin: 20px auto 0 auto;
@@ -477,9 +474,9 @@ summary:hover{
     font-weight: 500;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    cursor: pointer;
 }
 .description-wrapper-tab-headers:hover{
-    cursor: pointer;
     text-decoration: underline;
 }
 .active-tab{
@@ -556,7 +553,7 @@ summary:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     padding-bottom: 5px;
 }
@@ -572,7 +569,7 @@ summary:hover{
 }
 .chart-src{
     display: block;
-    width: 90%;
+    width: 80%;
     max-width: 1000px;
     margin: 0 auto;
     font-style: italic;
@@ -580,7 +577,7 @@ summary:hover{
 #to-top-btn{
     position: fixed;
     bottom: 15px;
-    right: 0.9%;
+    right: 1.5%;
     width: 33px;
     height: 33px;
     border-radius: 50%;
@@ -618,7 +615,7 @@ summary:hover{
 /*********** D3 Views **********/
 .data-viz{
     height: 450px;
-    width: 90%;
+    width: 80%;
     max-width: 1000px;
     margin: 0 auto;
     background: #f9f9f9;
