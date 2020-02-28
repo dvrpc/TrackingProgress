@@ -91,7 +91,7 @@ fieldset{
     -moz-transition: opacity 1s;
     transition-timing-function: linear;
 }
-#help-btn:hover{
+#help-btn:hover, #to-top-btn:hover{
     background: #4fa3a8;
     color: #f7f7f7;
 }
@@ -584,7 +584,9 @@ summary{
     border: 1px solid #4fa3a8;
     background: none;
     font-size: 0.65rem;
-    cursor: pointer
+    cursor: pointer;
+    color: #4fa3a8;
+    font-weight: 500;
 }
 
 /* custom styles for waterfalls */
