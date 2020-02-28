@@ -9,5 +9,4 @@ Due to how this project was initially outlined, Tracking Process combines a Sing
 - From root run `npm build`
 - In the build folder, move all HTML files *except* for `index.html` into the indicatorSnippets folder (create it if it doesn't exist)
 - In `index.html`, change the `<script>` tag in the `<head>` to: `<script defer src="bundle.js" type="text/javascript"></script>`. Delete the reference to `bundle.js` at the bottom of the file.
-- Update `baseURL` in `routing.js` to the appropriate path. The build process should detect a dev and production environment and do that automatically, I just haven't set it up yet. Feel free to update it and then delete this line. 
-- Copy files to /review/TrackingProgress/ or, for launch, /TrackingProgress/
+- Copy files to /TrackingProgress/
