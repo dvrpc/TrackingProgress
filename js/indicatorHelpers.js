@@ -209,6 +209,9 @@ const getIndicatorSnippet = (grid, snippet) => {
         const newIndicator = document.querySelector('.indicators-snippet')
         newIndicator.appendChild(toTopBtn)
     })
+
+    // send user to the top of the indicator page
+    window.scrollTo(0,0)
 }
 
 // toggle tabs and text
