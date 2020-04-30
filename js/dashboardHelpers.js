@@ -41,7 +41,6 @@ const makeDashboard = relatedIndicators => {
     // reveal the indicators grid, widen the sideNav and reveal the categories
     indicatorsNav.classList.add('notransition')
     grid.classList.add('notransition')
-    indicatorsNav.classList.remove('fade-narrow')
     grid.classList.remove('fade-right')
     filterToggle.style.display = 'initial'
     
@@ -180,7 +179,6 @@ const toggleEmojiIcons = (filter, element) => {
 // fade/slide out elements
 const fade = () => {
     grid.classList.add('fade-right')
-    indicatorsNav.classList.add('fade-narrow')
     filterToggle.style.display = 'none'
     
     const activeIcons = getActiveIcons()

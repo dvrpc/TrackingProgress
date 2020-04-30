@@ -236,23 +236,21 @@ summary{
     position: absolute;
     height: 100%;
     width: 15vw;
+    background-color: #fff;
     z-index: 2;
+    border-right: 3px inset #b2b2b2; /* @BORDER */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: width 1s;
-    -webkit-transition:  width 1s;
-    -moz-transition:  width 1s;
-    -o-transition:  width 1s;
-    transition-timing-function: linear;
     overflow-y: auto;
 }
 #filter-type-form{
     width: 100%;
     color: #4fa3a8;
     text-align: center;
-    padding: 0 0 5px 0;
+    padding: 10px 0;
+    margin: 11px auto;
 }
 .category-active{
     margin-right: 0 !important;
@@ -269,12 +267,6 @@ summary{
     width: 100%;
     cursor: pointer;
     text-align: center;
-    opacity: 1;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition-timing-function: linear;
     overflow-y: hidden;
 }
 .emoji-set{
@@ -333,10 +325,10 @@ summary{
     align-items: center;
     overflow-y: auto;
     margin-left: 15vw;
-    transition: margin-left 1s;
-    -webkit-transition: margin-left 1s;
-    -moz-transition: margin-left 1s;
-    -o-transition: margin-left 1s;
+    transition: margin-left 2s;
+    -webkit-transition: margin-left 2s;
+    -moz-transition: margin-left 2s;
+    -o-transition: margin-left 2s;
     transition-timing-function: linear;
 }
 .indicators-grid-item{
@@ -410,8 +402,7 @@ summary{
     background: #f2f2f2;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 25vh);
     color: #050709;
-    padding-left: 15vw;
-    padding-bottom: 15px;
+    padding: 15px 0 15px 15vw; 
     width: 100%;
     overflow-y: auto;
     transition: opacity 1s;
@@ -698,9 +689,6 @@ address{
 .fade-right{
     position: absolute;
     margin-left: 100vw;
-}
-.fade-narrow{
-    background: #fcfcfc;
 }
 .notransition {
     -webkit-transition: none !important;
