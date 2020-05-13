@@ -445,7 +445,7 @@ summary{
     height: 33px;
 }
 #description-wrapper{
-    width: 80%;
+    width: 75%;
     max-width: 1000px;
     background: #f9f9f9;
     margin: 20px auto 0 auto;
@@ -544,7 +544,7 @@ summary{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
     padding-bottom: 5px;
 }
@@ -560,7 +560,7 @@ summary{
 }
 .chart-src{
     display: block;
-    width: 80%;
+    width: 75%;
     max-width: 1000px;
     margin: 0 auto;
     font-style: italic;
@@ -608,7 +608,7 @@ summary{
 /*********** D3 Views **********/
 .data-viz{
     height: 450px;
-    width: 80%;
+    width: 75%;
     max-width: 1000px;
     margin: 0 auto;
     background: #f9f9f9;
