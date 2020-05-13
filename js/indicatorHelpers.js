@@ -285,7 +285,7 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
         if(indicatorPrimaryCategory === primaryCategory){
 
             //  create a link to the indicator page that will go on the side bar
-            let sideLink = document.createElement('a')
+            let sideLink = document.createElement('span')
 
             // get a handle on the necessary info
             const linkTitle = indicator.children[1].textContent

@@ -103,6 +103,7 @@ summary, #get-started, #to-grid{
 
 #filter-type-form{
     width: 100%;
+    padding: 0;
     font-size: 0.8em;
 }
 .indicators-grid-item{

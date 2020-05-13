@@ -238,7 +238,6 @@ summary{
     width: 15vw;
     background-color: #fff;
     z-index: 2;
-    border-right: 3px inset #b2b2b2; /* @BORDER */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
