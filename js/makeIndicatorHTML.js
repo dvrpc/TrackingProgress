@@ -4,9 +4,22 @@
 const makeIndicatorHTML = ref => {
     // create local variables
     const dataPrimary = ref.categories[0]
+
+    // @UPDATE: trend obj
+    /*
+    const trend = {
+        status: 'awesome',
+        text: {
+            stat: 54% drop,
+            text: ' in bridge deck area rated deficient since a 2003 peak of 18%' 
+        }
+    }
+    */
+
     const trend = ref.trend
     const trendStatus = trend.status
     const trendText = trend.text
+
 
     // create the elements
     const frag = document.createDocumentFragment()
@@ -25,12 +38,12 @@ const makeIndicatorHTML = ref => {
     const resourceTab = document.createElement('h2')
     const descriptionContentWrapper = document.createElement('div')
     const description = document.createElement('section')
-    
     const contextWrapper = document.createElement('aside')
     const contextImg = document.createElement('img')
-    const context = document.createElement('p')
+    const contextText = makeTrendText(trendText)
 
     const hr = document.createElement('hr')
+
 
     // add classes, id's and data-* attributes
     snippet.classList.add('indicators-snippet')
@@ -59,11 +72,32 @@ const makeIndicatorHTML = ref => {
 
     // append jawns
     catIconsWrapper.appendChild(catIcons)
+    headerWrapper.appendChild(header)
+    headerWrapper.appendChild(catIconsWrapper)
 
+    tabsWrapper.appendChild(whyTab)
+    tabsWrapper.appendChild(whatTab)
+    tabsWrapper.appendChild(howTab)
+    tabsWrapper.appendChild(resourceTab)
+    contextWrapper.appendChild(contextImg)
+    contextWrapper.appendChild(contextText)
+    descriptionContentWrapper.appendChild(description)
+    descriptionContentWrapper.appendChild(contextWrapper)
+    descriptionWrapper.appendChild(tabsWrapper)
+    descriptionWrapper.appendChild(descriptionContentWrapper)
+
+    snippet.appendChild(headerWrapper)
+    snippet.appendChild(descriptionWrapper)
+    snippet.appendChild(hr)
+
+    
     // add chart info
     // @UPDATE: create and import all chartStrings as an object. Insert/append to frag after everything else is added
     // const chartString = chartStrings[snippet.id / snippet.name / snippet.key]// get chartString
-    // indicator.insertAdjacentHTML('beforeend', chartString)
+    // snippet.insertAdjacentHTML('beforeend', chartString) (or appendChild or insertHTMLElement or whatever)
+    
+    frag.appendChild(snippet)
+    return frag
 }
 
 // iterate over categories array and create imgs
@@ -79,6 +113,20 @@ const makeIconImgs = icons => {
     })
 
     frag.appendChild(imgs)
+    return frag
+}
+
+const makeTrendText = text => {
+    const frag = document.createDocumentFragment()
+    const p = document.createElement('p')
+    const strong = document.createElement('strong')
+    
+    // tbd on the order of this. Desired output is <p><strong>stats text</strong> rest of text</p>
+    p.appendChild(strong)
+    strong.textContent = text.stat
+    p.textContent = text.text
+
+    frag.appendChild(p)
     return frag
 }
 
