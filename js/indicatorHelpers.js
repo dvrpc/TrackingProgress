@@ -155,9 +155,12 @@ const toggleChart = (selected, dataSets) => {
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
 const getIndicatorSnippet = (grid, snippet) => {    
+
+    // @UPDATE: remove 
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippet.file
     let page = `./indicatorSnippets/${snippetFile}`
+    // @UPDATE END
 
     // deep clone the chart context objects to avoid polluting the main ref.js object with references to toggled data sets
     const hasDataViz = snippet.d3.map(chart => {
@@ -166,10 +169,16 @@ const getIndicatorSnippet = (grid, snippet) => {
     })
     const hasText = snippet.text
 
+    // @UPDATE: replace this fetch with a function that creates the indicator snippet
+    // const indicator = makeIndicatorHTML(snippet)
+    // note: remove the 'file' field from the ref entries
     fetch(page).then(response => response.text()).then(snippet =>{
+    // @UPDATE END
 
+        // @UPDATE: insert the return from makeIndicatorHTML here 
         // insert the HTML to update the structure & put the map and/or data viz components in place
         grid.insertAdjacentHTML('beforebegin', snippet)
+        // @UPDATE END
 
         if(hasDataViz){
             const dataToggles = document.querySelectorAll('.toggle-data-selector')
