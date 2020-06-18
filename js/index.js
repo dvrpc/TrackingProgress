@@ -67,7 +67,7 @@ document.onscroll = () => {
         splash.style.visibility = 'collapse'
 
         // undo the margin that allows splash page and dash to coexist
-        dashboard.style.marginTop = '8vh'
+        dashboard.style.marginTop = '6vh'
 
         // scroll to the top of the page
         window.scrollTo(0,0)

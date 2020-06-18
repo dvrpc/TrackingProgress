@@ -4,11 +4,8 @@ body{
 }
 
 /* Mobile styles for nav */
-#nav-header{
-    font-size: 1.3em;
-}
-#nav-social-media a:not(:first-child){
-    display: none;
+#header{
+    height: 6vh;
 }
 #dvrpc-logo{
     border-right: none;
@@ -28,6 +25,7 @@ body{
 
 /* Mobile styles for the splash page */
 #splash-page{
+    margin-top: 6vh;
     padding: 2% 3%;
 }
 .tp-header{
@@ -37,11 +35,16 @@ body{
     width: 100%;
     display: block;
 }
-#region-map{
+.splash-map-wrapper, .details-text-content{
+    flex-direction: column;
+    padding: 0;
+}
+.splash-map-figure{
     display: none;
 }
 .splash-text{
     width: 100%;
+    margin: 1% auto;
     line-height: 1.4rem;
 }
 summary, #get-started, #to-grid{
@@ -79,12 +82,13 @@ summary, #get-started, #to-grid{
 /* Mobile styles for the dashboard page */
 .indicators-wrapper{
     flex-direction: column;
-    border-top: 4px solid white;
+    border-top: none;
+    min-height: calc(94vh - 16px);
 }
 .indicators-nav{
     background: white;
     position: sticky;
-    top: 8vh;
+    top: 6vh;
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -95,6 +99,7 @@ summary, #get-started, #to-grid{
 #filter-type-form{
     width: 100%;
     padding: 0;
+    margin: 9px auto;
     font-size: 0.8em;
 }
 .indicators-grid-item{
@@ -111,7 +116,7 @@ summary, #get-started, #to-grid{
     font-size: 0.8em;
 }
 .icon-set{
-    height: 10vh;
+    height: 62px;
     width: calc(20% - 4px);
     margin-right: 4px;
     margin-bottom: 4px;
@@ -122,6 +127,9 @@ summary, #get-started, #to-grid{
 }
 .icon-set-p{
     font-size: 0.77em;
+}
+#equity-icon{
+    margin-bottom: auto;
 }
 .flipside{
     display: none;

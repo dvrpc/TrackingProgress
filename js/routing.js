@@ -43,7 +43,7 @@ const updateView = (transition, hashParam) => {
         // handle splash page visibility
         splashPage.style.position = 'fixed'
         splashPage.style.visibility = 'collapse'
-        dashboard.style.marginTop = '8vh'
+        dashboard.style.marginTop = '6vh'
         
         // create indicator page and hide dash (if needed)
         let hashArray = hash.split('/')
