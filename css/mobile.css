@@ -30,13 +30,8 @@ body{
 #splash-page{
     padding: 2% 3%;
 }
-#splash-map-wrapper{
-    width: 100%;
-}
-#tp-header{
+.tp-header{
     font-size: 1.2rem;
-    width: 100%;
-    text-align: center;
 }
 #tp-header-name{
     width: 100%;

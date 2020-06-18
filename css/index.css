@@ -125,20 +125,29 @@ fieldset{
     background: rgba(79,163,168,0.1);
     visibility: visible;
 }
-#splash-map-wrapper{
+.splash-map-wrapper, .details-text-content{
+    width: 100%;
     display: flex;
-    width: 88%;
-    justify-content: space-around;
-    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0;
 }
-#region-map{
-    width: 95%;
+.splash-map-figure{
+    width: 14%;
+    text-align: center;
+    font-size: 0.8rem;
 }
-#tp-header{
+.region-map{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
+.tp-header{
+    width: 100%;
     margin: 0 auto;
     font-size: 2rem;
     font-weight: 300;
-    width: 700px;
+    text-align: center;
 }
 #tp-header-name{
     color: #4fa3a8;
@@ -146,7 +155,6 @@ fieldset{
 }
 .splash-text{
     width: 700px;
-    margin: 0 auto;
     line-height: 1.7rem;
 }
 #get-started{
@@ -343,8 +351,8 @@ summary{
     height: 12vw;
     cursor: pointer;
 }
-.indicators-grid-item:hover{
-    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.7);
+.indicators-grid-item:hover, .region-map:hover{
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
 }
 .indicators-grid-item:active{
     box-shadow: none;
