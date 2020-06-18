@@ -23,6 +23,21 @@ body{
     font-size: 0.9em;
     color: #bd2556;
 }
+.econo-accent{
+    color: #bd2556;
+}
+.enviro-accent{
+    color: #7b9d3e;
+}
+.comm-accent{
+    color: #006ba6;
+}
+.transpo-accent{
+    color: #de6e1d;
+}
+.equity-accent{
+    color: #582267;
+}
 
 
 /************************************/
@@ -275,23 +290,18 @@ summary{
 }
 #econo-icon{
     background: #f0cfd0;
-    color: #bd2556;
 }
 #enviro-icon{
     background: #e0e6cf;
-    color: #7b9d3e;
 }
 #comm-icon{
     background: #c6d6ea;
-    color: #006ba6;
 }
 #transpo-icon{
     background: #f9dcc4;
-    color: #de6e1d;
 }
 #equity-icon{
     background: #c6b7cd;
-    color: #582267;
     margin-bottom: 0;
 }
 #emoji-bad{
