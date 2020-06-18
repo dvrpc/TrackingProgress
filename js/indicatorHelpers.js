@@ -155,7 +155,7 @@ const toggleChart = (selected, dataSets) => {
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
 const getIndicatorSnippet = (grid, snippet) => {    
-
+    console.log('snippet at getIndicatorSnippet ', snippet)
     // @UPDATE: remove  file field from ref
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippet.file
@@ -319,6 +319,7 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 // helper function for the routing
 const makeIndicatorPage = hashArray => {
     const title = hashArray[0].replace(/-/g, ' ')
+    console.log('title at makeindicatorPage ', title)
     const snippet = snippetsRef[title]
 
     // remove an existing indicator page before continuing
@@ -329,12 +330,14 @@ const makeIndicatorPage = hashArray => {
     if(snippet){
         const primaryCategory = hashArray[1]
         generateSideNav(indicators, relatedIndicators, primaryCategory)
-        getIndicatorSnippet(grid, snippet, graphs)
+        getIndicatorSnippet(grid, snippet)
 
     // create the Indicator Not Found page if not
     }else{
+        // @UPDATE: replace with function that makes a 404 page
         let page = './indicatorSnippets/notFound.html'
         fetch(page).then(response => response.text().then(snippet => grid.insertAdjacentHTML('beforebegin', snippet)))
+        // @UPDATE END
     }
 }
 

@@ -1,6 +1,14 @@
 const snippetsRef = {
     'Air Quality': {
         file: 'airQuality.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line and bar',

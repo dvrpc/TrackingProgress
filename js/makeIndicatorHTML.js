@@ -1,6 +1,12 @@
 // create a generic indicator page and loop through the ref.js entry to populate it with the specifics.
 // desired output:
 
+/* Needs:
+    - indicator title
+    - ref.categories
+    - ref.trend
+    ... needs snippet, period
+*/
 const makeIndicatorHTML = ref => {
     // create local variables
     const dataPrimary = ref.categories[0]
