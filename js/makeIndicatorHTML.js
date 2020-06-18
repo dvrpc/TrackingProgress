@@ -2,13 +2,68 @@
 // desired output:
 
 const makeIndicatorHTML = ref => {
+    // create local variables
+    const dataPrimary = ref.categories[0]
+    const trend = ref.trend
+    const trendStatus = trend.status
+    const trendText = trend.text
 
     // create the elements
     const frag = document.createDocumentFragment()
+
     const snippet = document.createElement('article')
+    const headerWrapper = document.createElement('div')
     const header = document.createElement('h1')
     const catIconsWrapper = document.createElement('div')
-    const catIcons 
+    const catIcons = makeIconImgs(ref.categories)
+
+    const descriptionWrapper = document.createElement('article')
+    const tabsWrapper = document.createElement('header')
+    const whyTab = document.createElement('h2')
+    const whatTab = document.createElement('h2')
+    const howTab = document.createElement('h2')
+    const resourceTab = document.createElement('h2')
+    const descriptionContentWrapper = document.createElement('div')
+    const description = document.createElement('section')
+    
+    const contextWrapper = document.createElement('aside')
+    const contextImg = document.createElement('img')
+    const context = document.createElement('p')
+
+    const hr = document.createElement('hr')
+
+    // add classes, id's and data-* attributes
+    snippet.classList.add('indicators-snippet')
+    headerWrapper.id = 'indicator-header-wrapper'
+    header.classList.add('indicator-header')
+    catIconsWrapper.classList.add('indicator-category-icons')
+
+    descriptionWrapper.id = 'description-wrapper'
+    tabsWrapper.id = 'description-wrapper-tabs'
+    whyTab.id = 'why-tab'
+    whatTab.id = 'what-tab'
+    howTab.id = 'how-tab'
+    resourceTab.id = 'resource-tab'
+
+    descriptionContentWrapper.id = 'description-content-wrapper'
+    description.id = 'indicator-description-container'
+    description.datasets['data-primary'] = dataPrimary
+
+    contextWrapper.classList.add('indicator-emoji-context')
+    contextImg.classList.add('indicator.emoji-context-img')
+    contextImg.src = `./img/emoji-${trendStatus}.png`
+    contextImg.alt = `${trendStatus} emoji`
+
+    hr.classList.add('indicator-header-hr')
+
+
+    // append jawns
+    catIconsWrapper.appendChild(catIcons)
+
+    // add chart info
+    // @UPDATE: create and import all chartStrings as an object. Insert/append to frag after everything else is added
+    // const chartString = chartStrings[snippet.id / snippet.name / snippet.key]// get chartString
+    // indicator.insertAdjacentHTML('beforeend', chartString)
 }
 
 // iterate over categories array and create imgs
@@ -17,6 +72,7 @@ const makeIconImgs = icons => {
 
     const imgs = icons.map(icon => {
         const img = document.createElement('img')
+
         img.src = `./img/indicator_headers/${icon}-icon.png`
         img.alt = `${icon} category icon`
         img.classList.add('snippet-categories')
@@ -50,7 +106,7 @@ const makeIconImgs = icons => {
         </header>
         <div id="description-content-wrapper">
 
-            // @UPDATE: switch from hard coded to iterating over a "categories" field on the ref object (ex. categories: ['transpo', 'enviro'])
+            // @UPDATE: switch from hard coded to extracting primary from the categories array (ex. categories: = ['transpo', 'enviro'], primary = categories[0])
             <section id="indicator-description-container" data-primary="transpo"></section>
             // @UPDATE END
 

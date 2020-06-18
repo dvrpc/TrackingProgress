@@ -156,7 +156,7 @@ const toggleChart = (selected, dataSets) => {
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
 const getIndicatorSnippet = (grid, snippet) => {    
 
-    // @UPDATE: remove 
+    // @UPDATE: remove  file field from ref
     // using the indicator title, get the corresponding snippet for that indicator page
     const snippetFile = snippet.file
     let page = `./indicatorSnippets/${snippetFile}`
@@ -171,7 +171,7 @@ const getIndicatorSnippet = (grid, snippet) => {
 
     // @UPDATE: replace this fetch with a function that creates the indicator snippet
     // const indicator = makeIndicatorHTML(snippet)
-    // note: remove the 'file' field from the ref entries
+
     fetch(page).then(response => response.text()).then(snippet =>{
     // @UPDATE END
 
