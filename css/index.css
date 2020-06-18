@@ -149,13 +149,6 @@ fieldset{
     margin: 0 auto;
     line-height: 1.7rem;
 }
-#splash-text-list{
-    width: 700px;
-    margin: 1% auto;
-}
-#splash-text-list strong{
-    color: #4fa3a8;
-}
 #get-started{
     color: #4fa3a8;
     margin: 0;

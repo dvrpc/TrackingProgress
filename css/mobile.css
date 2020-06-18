@@ -49,10 +49,6 @@ body{
     width: 100%;
     line-height: 1.4rem;
 }
-#splash-text-list{
-    width: 90%;
-    margin: 1% auto;
-}
 summary, #get-started, #to-grid{
     font-size: 1em;
 }
