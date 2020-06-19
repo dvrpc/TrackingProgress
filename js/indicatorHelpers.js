@@ -1,6 +1,7 @@
 // get a handle on the necessary elements to create indicator subpages
 import * as graphs from './viz.js'
 import snippetsRef from './ref.js'
+import { makeIndicatorHTML } from './makeIndicatorHTML.js'
 import { setIndicatorURL } from './routing.js'
 
 const grid = document.querySelector('.indicators-grid')
@@ -8,6 +9,7 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 const relatedIndicators = document.querySelector('.related-indicators')
 
 // colors to change indicator background to on cat filter
+// @UPDATE: move this to makeIndicatorHTML
 const catLookup = {
     'econo': {
         dark:'#bd2756',
@@ -40,6 +42,7 @@ const catLookup = {
         name: 'unset'
     }
 }
+// @UPDATE END
 
 // helper function to determine what data viz to make
 const dataVizSwitch = (type, source, toggleContext) => {
@@ -154,76 +157,81 @@ const toggleChart = (selected, dataSets) => {
 }
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
-const getIndicatorSnippet = (grid, snippet) => {    
-    console.log('snippet at getIndicatorSnippet ', snippet)
+const getIndicatorSnippet = (ref, indicatorParams) => {    
+    console.log('ref at getIndicatorSnippet ', ref)
+    console.log('headers at getIndicatorSnippet ', indicatorParams)
     // @UPDATE: remove  file field from ref
     // using the indicator title, get the corresponding snippet for that indicator page
-    const snippetFile = snippet.file
-    let page = `./indicatorSnippets/${snippetFile}`
+    // const snippetFile = snippet.file
+    // let page = `./indicatorSnippets/${snippetFile}`
     // @UPDATE END
 
+    // get text and chart content
     // deep clone the chart context objects to avoid polluting the main ref.js object with references to toggled data sets
-    const hasDataViz = snippet.d3.map(chart => {
+    const hasDataViz = ref.d3.map(chart => {
         const dataVizClone = JSON.parse(JSON.stringify(chart))
         return dataVizClone
     })
-    const hasText = snippet.text
+    const hasText = ref.text
 
-    // @UPDATE: replace this fetch with a function that creates the indicator snippet
-    // const indicator = makeIndicatorHTML(snippet)
+    const snippet = makeIndicatorHTML(indicatorParams)
+    console.log('returned snippet ', snippet)
 
-    fetch(page).then(response => response.text()).then(snippet =>{
+    // insert the HTML to update the structure & put the map and/or data viz components in place
+    //grid.insertAdjacentHTML('beforebegin', snippet)
+    grid.appendChild(snippet)
+
+    // @UPDATE: remove
+    return
+
+    if(hasDataViz){
+        const dataToggles = document.querySelectorAll('.toggle-data-selector')
+        
+        // apply toggle functionality to all togglable elements in the snippet, if they exist
+        if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz))
+
+        // initialize default context object for charts
+        const context = 'initial'
+
+        // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
+        hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, context))
+    }
+
+    // load the default text + add tab click handler
+    // @UPDATE: move all of this into makeIndicatorHTML
+    if(hasText){
+        // @UPDATE don't grab this. Auto-populate it w/whyText on build
+        const descriptionContainer = document.getElementById('indicator-description-container')
+        const tabs = document.getElementById('description-wrapper-tabs')
+        const activeTab = document.querySelector('.active-tab')
+        
+        let cat = indicatorParams.categories[0] || 'unset'
+        const color = catLookup[cat].dark
+        
+        // @UPDATE: improve this. load the hasText.why in the default build of the text container at makeIndicatorHTML
+        descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
+        
+        // add colors to tab/container based on primary category
+        tabs.style.borderBottom = `1px solid ${color}`
+        activeTab.style.background = color
+        activeTab.style.color = '#f7f7f7'
+        
+        // add tab functionality
+        tabs.onclick = e => handleTabs(e, hasText, descriptionContainer, color)
+    }
     // @UPDATE END
 
-        // @UPDATE: insert the return from makeIndicatorHTML here 
-        // insert the HTML to update the structure & put the map and/or data viz components in place
-        grid.insertAdjacentHTML('beforebegin', snippet)
-        // @UPDATE END
-
-        if(hasDataViz){
-            const dataToggles = document.querySelectorAll('.toggle-data-selector')
-            
-            // apply toggle functionality to all togglable elements in the snippet, if they exist
-            if(dataToggles.length) dataToggles.forEach(select => select.onchange = () => toggleChart(select, hasDataViz))
-
-            // initialize default context object for charts
-            const context = 'initial'
-
-            // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
-            hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, context))
-        }
-
-        // load the default text + add tab click handler
-        if(hasText){
-            const descriptionContainer = document.getElementById('indicator-description-container')
-            const tabs = document.getElementById('description-wrapper-tabs')
-            const activeTab = document.querySelector('.active-tab')
-            
-            let cat = descriptionContainer.dataset.primary || 'unset'
-            const color = catLookup[cat].dark
-            
-            descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
-            
-            // add colors to tab/container based on primary category
-            tabs.style.borderBottom = `1px solid ${color}`
-            activeTab.style.background = color
-            activeTab.style.color = '#f7f7f7'
-            
-            // add tab functionality
-            tabs.onclick = e => handleTabs(e, hasText, descriptionContainer, color)
-        }
-
-        // append the to-top button
-        const toTopBtn = makeTopTopBtn()
-        const newIndicator = document.querySelector('.indicators-snippet')
-        newIndicator.appendChild(toTopBtn)
-    })
+    // append the to-top button
+    const toTopBtn = makeTopTopBtn()
+    const newIndicator = document.querySelector('.indicators-snippet')
+    newIndicator.appendChild(toTopBtn)
 
     // send user to the top of the indicator page
     window.scrollTo(0,0)
 }
 
 // toggle tabs and text
+// @UPDATE: move this to the makeIndicatorHTML page
 const handleTabs = (e, text, wrapper, color) => {
     const clickedTab = e.target
     const oldTab = document.querySelector('.active-tab')
@@ -248,6 +256,7 @@ const handleTabs = (e, text, wrapper, color) => {
     clickedTab.style.background = color
     clickedTab.style.color = '#f7f7f7'
 }
+// @UPDATE END
 
 const makeRelatedSubheader = cat => {
     const bg = catLookup[cat].light
@@ -319,18 +328,22 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 // helper function for the routing
 const makeIndicatorPage = hashArray => {
     const title = hashArray[0].replace(/-/g, ' ')
-    console.log('title at makeindicatorPage ', title)
-    const snippet = snippetsRef[title]
+    const ref = snippetsRef[title]
 
     // remove an existing indicator page before continuing
     const oldIndicator = document.querySelector('.indicators-snippet')
     if(oldIndicator) oldIndicator.remove()
 
     // create the indicator page if it exists
-    if(snippet){
-        const primaryCategory = hashArray[1]
+    if(ref){
+        const categories = ref.categories
+        const primaryCategory = categories[0]
+        const trend = ref.trend
+        const text = ref.text
+        const indicatorParams = {title, categories, trend, text}
+
         generateSideNav(indicators, relatedIndicators, primaryCategory)
-        getIndicatorSnippet(grid, snippet)
+        getIndicatorSnippet(ref, indicatorParams)
 
     // create the Indicator Not Found page if not
     }else{

@@ -1,6 +1,5 @@
 const snippetsRef = {
     'Air Quality': {
-        file: 'airQuality.html',
         categories: ['enviro', 'equity', 'transpo'],
         trend: {
             status: 'good',

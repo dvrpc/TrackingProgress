@@ -1,30 +1,68 @@
+// lookups
+const catLookup = {
+    'econo': {
+        dark:'#bd2756',
+        light: '#f0cfd0',
+        name: 'Economy'
+    },
+    'enviro': {
+        dark: '#7a9c3e',
+        light: '#e0e6cf',
+        name: 'Environment'
+    },
+    'comm': {
+        dark: '#006ba6',
+        light: '#c6d6ea',
+        name: 'Community'
+    },
+    'transpo': {
+        dark: '#dd6e1d',
+        light: '#f9dcc4',
+        name: 'Transportation'
+    },
+    'equity': {
+        dark: '#582267',
+        light: '#c6b7cd',
+        name: 'Equity'
+    },
+    'unset': {
+        light: 'grey',
+        dark: 'black',
+        name: 'unset'
+    }
+}
+
+
 // create a generic indicator page and loop through the ref.js entry to populate it with the specifics.
-// desired output:
-
-/* Needs:
-    - indicator title
-    - ref.categories
-    - ref.trend
-    ... needs snippet, period
-*/
-const makeIndicatorHTML = ref => {
+const makeIndicatorHTML = params => {
     // create local variables
-    const dataPrimary = ref.categories[0]
-
-    // @UPDATE: trend obj
-    /*
-    const trend = {
-        status: 'awesome',
-        text: {
-            stat: 54% drop,
-            text: ' in bridge deck area rated deficient since a 2003 peak of 18%' 
-        }
+    console.log('params passed to makeIndicatorHTML ', params)
+    /* @PARAMS
+    {
+        "title": "Air Quality",
+        "categories": [
+            "enviro",
+            "equity",
+            "transpo"
+        ],
+        "trend": {
+            "status": "good",
+            "text": {
+            "stat": "109 fewer",
+            "text": "days annually violating air quality standards since 2009's 5-year average"
+            }
+        },
+        text: {textObj}
     }
     */
 
-    const trend = ref.trend
+    // pull info from params
+    const trend = params.trend
     const trendStatus = trend.status
     const trendText = trend.text
+    const cat = params.categories[0] || 'unset'
+    const tabColor = catLookup[cat].dark
+    const defaultText = params.text.why
 
 
     // create the elements
@@ -34,7 +72,7 @@ const makeIndicatorHTML = ref => {
     const headerWrapper = document.createElement('div')
     const header = document.createElement('h1')
     const catIconsWrapper = document.createElement('div')
-    const catIcons = makeIconImgs(ref.categories)
+    const catIcons = makeIconImgs(params.categories)
 
     const descriptionWrapper = document.createElement('article')
     const tabsWrapper = document.createElement('header')
@@ -66,7 +104,6 @@ const makeIndicatorHTML = ref => {
 
     descriptionContentWrapper.id = 'description-content-wrapper'
     description.id = 'indicator-description-container'
-    description.datasets['data-primary'] = dataPrimary
 
     contextWrapper.classList.add('indicator-emoji-context')
     contextImg.classList.add('indicator.emoji-context-img')
@@ -76,6 +113,17 @@ const makeIndicatorHTML = ref => {
     hr.classList.add('indicator-header-hr')
 
 
+    // add styles
+    tabsWrapper.style.borderBottom = `1px solid ${tabColor}`
+    whyTab.style.background = tabColor
+    whyTab.style.color = '#f7f7f7'
+
+
+    // add content
+    header.textContent = params.title
+    whyTab.textContent = defaultText
+
+    
     // append jawns
     catIconsWrapper.appendChild(catIcons)
     headerWrapper.appendChild(header)
@@ -110,15 +158,16 @@ const makeIndicatorHTML = ref => {
 const makeIconImgs = icons => {
     const frag = document.createDocumentFragment()
 
-    const imgs = icons.map(icon => {
+    icons.forEach(icon => {
         const img = document.createElement('img')
 
         img.src = `./img/indicator_headers/${icon}-icon.png`
         img.alt = `${icon} category icon`
         img.classList.add('snippet-categories')
+        
+        frag.appendChild(img)
     })
 
-    frag.appendChild(imgs)
     return frag
 }
 
@@ -136,6 +185,45 @@ const makeTrendText = text => {
     return frag
 }
 
+
+// NEEDS: primary category, description-wrapper-tabs, indicator-description-container
+const setDefaultTab = tabsInfo => {
+    const { cat, defaultTab, tabs} = {...tabsInfo}
+
+    // add colors to tab/container based on primary category
+    tabs.style.borderBottom = `1px solid ${color}`
+    defaultTab.style.background = color
+    defaultTab.style.color = '#f7f7f7'
+    
+    // add tab functionality
+    tabs.onclick = e => handleTabs(e, text, description, color)
+}
+
+const handleTabs = (e, text, wrapper, color) => {
+    const clickedTab = e.target
+    const oldTab = document.querySelector('.active-tab')
+    
+    // short out if clicking on the already active tab
+    if(oldTab.id === clickedTab.id) return
+
+    // clear the text
+    while(wrapper.firstChild) wrapper.removeChild(wrapper.firstChild)
+    
+    // add new text
+    const textSection = clickedTab.id.split('-')[0]
+    wrapper.insertAdjacentHTML('afterbegin', text[textSection])
+
+    // deactivate the old jawn
+    oldTab.classList.remove('active-tab')
+    oldTab.style.background = 'initial'
+    oldTab.style.color = 'initial'
+
+    // uset the new active tab
+    clickedTab.classList.add('active-tab')
+    clickedTab.style.background = color
+    clickedTab.style.color = '#f7f7f7'
+}
+
 {/* <article class="indicators-snippet">
     <div id="indicator-header-wrapper">
 
@@ -143,7 +231,7 @@ const makeTrendText = text => {
         <h1 class="indicator-header">Bridge Conditions</h1>
         // @UPDATE END
 
-        // @UPDATE: switch from hard coded to iterating over a "categories" field on the ref object (ex. categories: ['transpo', 'enviro'])
+        // @UPDATE: switch from hard coded to iterating over a "categories" field on the params object (ex. categories: ['transpo', 'enviro'])
         <div class="indicator-category-icons">
             <img class="snippet-categories" src="./img/indicator_headers/transpo-icon.png" alt="transportation category icon"/>
         </div>
@@ -177,7 +265,7 @@ const makeTrendText = text => {
     <hr class="indicator-header-hr"/>
 
     // @UPDATE: consider storing these as 'chart-strings' and just pop an insertadjacentHTML('beforeend') on the indicator fragment
-    // iterating over ref.js and creating extra fields w/the form content (options) and src etc might not be a good idea b/c there's so much difference
+    // iterating over params.js and creating extra fields w/the form content (options) and src etc might not be a good idea b/c there's so much difference
     <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Percentage of Deficient Bridges by Ownership Type</h2>
         <form class="double-toggle-form">
@@ -302,3 +390,5 @@ const makeTrendText = text => {
     </div>
     <small class="chart-src"><em>Source: National Bridge Inventory (NBI)</em></small>
 </article> */}
+
+export { makeIndicatorHTML }
