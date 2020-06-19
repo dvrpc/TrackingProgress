@@ -158,13 +158,6 @@ const toggleChart = (selected, dataSets) => {
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
 const getIndicatorSnippet = (ref, indicatorParams) => {    
-    console.log('ref at getIndicatorSnippet ', ref)
-    console.log('headers at getIndicatorSnippet ', indicatorParams)
-    // @UPDATE: remove  file field from ref
-    // using the indicator title, get the corresponding snippet for that indicator page
-    // const snippetFile = snippet.file
-    // let page = `./indicatorSnippets/${snippetFile}`
-    // @UPDATE END
 
     // get text and chart content
     // deep clone the chart context objects to avoid polluting the main ref.js object with references to toggled data sets
@@ -172,10 +165,8 @@ const getIndicatorSnippet = (ref, indicatorParams) => {
         const dataVizClone = JSON.parse(JSON.stringify(chart))
         return dataVizClone
     })
-    const hasText = ref.text
 
     const snippet = makeIndicatorHTML(indicatorParams)
-    console.log('returned snippet ', snippet)
 
     // insert the HTML to update the structure & put the map and/or data viz components in place
     //grid.insertAdjacentHTML('beforebegin', snippet)
@@ -195,35 +186,6 @@ const getIndicatorSnippet = (ref, indicatorParams) => {
         // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
         hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, context))
     }
-
-    // load the default text + add tab click handler
-    // @UPDATE: move all of this into makeIndicatorHTML
-    // if(hasText){
-    //     // @UPDATE don't grab this. Auto-populate it w/whyText on build
-    //     const descriptionContainer = document.getElementById('indicator-description-container')
-    //     const tabs = document.getElementById('description-wrapper-tabs')
-    //     const activeTab = document.querySelector('.active-tab')
-        
-    //     let cat = indicatorParams.categories[0] || 'unset'
-    //     const color = catLookup[cat].dark
-        
-    //     // @UPDATE: improve this. load the hasText.why in the default build of the text container at makeIndicatorHTML
-    //     descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
-        
-    //     // add colors to tab/container based on primary category
-    //     tabs.style.borderBottom = `1px solid ${color}`
-    //     activeTab.style.background = color
-    //     activeTab.style.color = '#f7f7f7'
-        
-    //     // add tab functionality
-    //     tabs.onclick = e => handleTabs(e, hasText, descriptionContainer, color)
-    // }
-    // @UPDATE END
-
-    // append the to-top button
-    const toTopBtn = makeTopTopBtn()
-    const newIndicator = document.querySelector('.indicators-snippet')
-    newIndicator.appendChild(toTopBtn)
 
     // send user to the top of the indicator page
     window.scrollTo(0,0)
@@ -373,19 +335,5 @@ const updateLinks = () => {
 // listen for changes to sideNav and update the links 
 const observer = new MutationObserver(updateLinks)
 observer.observe(relatedIndicators, mutationConfig)
-
-// add button to allow users to quickly scroll back to the top of an indicator page
-const makeTopTopBtn = () => {
-    const btn = document.createElement('button')
-    
-    btn.setAttribute('type', 'button')
-    btn.setAttribute('name', 'to top')
-    btn.textContent = '^ top'
-    btn.id = 'to-top-btn'
-    
-    btn.onclick = () => window.scrollTo({top: 0,behavior: 'smooth'})
-
-    return btn
-}
 
 export { makeIndicatorPage }

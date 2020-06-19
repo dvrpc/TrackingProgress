@@ -35,28 +35,7 @@ const catLookup = {
 
 // create a generic indicator page and loop through the ref.js entry to populate it with the specifics.
 const makeIndicatorHTML = params => {
-    // create local variables
-    console.log('params passed to makeIndicatorHTML ', params)
-    /* @PARAMS
-    {
-        "title": "Air Quality",
-        "categories": [
-            "enviro",
-            "equity",
-            "transpo"
-        ],
-        "trend": {
-            "status": "good",
-            "text": {
-                "stat": "109 fewer",
-                "text": "days annually violating air quality standards since 2009's 5-year average"
-            }
-        },
-        text: {textObj}
-    }
-    */
-
-    // pull info from params
+    // extract info from params
     const trend = params.trend
     const trendStatus = trend.status
     const trendText = trend.text
@@ -88,6 +67,8 @@ const makeIndicatorHTML = params => {
     const contextText = makeTrendText(trendText)
 
     const hr = document.createElement('hr')
+
+    const toTopBtn = makeToTopBtn()
 
 
     // add classes, id's and data-* attributes
@@ -156,6 +137,7 @@ const makeIndicatorHTML = params => {
     snippet.appendChild(headerWrapper)
     snippet.appendChild(descriptionWrapper)
     snippet.appendChild(hr)
+    snippet.appendChild(toTopBtn)
 
     
     // add chart info
@@ -190,7 +172,7 @@ const makeTrendText = text => {
     const p = document.createElement('p')
     const strong = document.createElement('strong')
     
-    strong.textContent = `${text.stat} `
+    strong.textContent = ` ${text.stat} `
     p.textContent = text.text
     p.insertAdjacentElement('afterbegin', strong)
 
@@ -221,6 +203,20 @@ const handleTabs = (e, text, wrapper, color) => {
     clickedTab.classList.add('active-tab')
     clickedTab.style.background = color
     clickedTab.style.color = '#f7f7f7'
+}
+
+// add button to allow users to quickly scroll back to the top of an indicator page
+const makeToTopBtn = () => {
+    const btn = document.createElement('button')
+    
+    btn.setAttribute('type', 'button')
+    btn.setAttribute('name', 'to top')
+    btn.textContent = '^ top'
+    btn.id = 'to-top-btn'
+    
+    btn.onclick = () => window.scrollTo({top: 0,behavior: 'smooth'})
+
+    return btn
 }
 
 {/* <article class="indicators-snippet">
