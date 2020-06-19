@@ -421,6 +421,9 @@ summary{
     -o-transition: opacity 1s;
     transition-timing-function: linear;
 }
+#description-wrapper, .toggle-wrapper, .chart-src, .data-viz{
+    width: 70%;
+}
 #indicator-header-wrapper{
     max-width: 70%;
     display: flex;
@@ -456,7 +459,6 @@ summary{
     height: 33px;
 }
 #description-wrapper{
-    width: 75%;
     max-width: 1000px;
     background: #f9f9f9;
     margin: 20px auto 0 auto;
@@ -555,7 +557,6 @@ summary{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 75%;
     margin: 0 auto;
     padding-bottom: 5px;
 }
@@ -571,7 +572,6 @@ summary{
 }
 .chart-src{
     display: block;
-    width: 75%;
     max-width: 1000px;
     margin: 0 auto;
     font-style: italic;
@@ -619,7 +619,6 @@ summary{
 /*********** D3 Views **********/
 .data-viz{
     height: 450px;
-    width: 75%;
     max-width: 1000px;
     margin: 0 auto;
     background: #f9f9f9;
