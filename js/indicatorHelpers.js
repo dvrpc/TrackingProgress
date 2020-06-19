@@ -179,12 +179,11 @@ const getIndicatorSnippet = (ref, indicatorParams) => {
 
     // insert the HTML to update the structure & put the map and/or data viz components in place
     //grid.insertAdjacentHTML('beforebegin', snippet)
-    grid.appendChild(snippet)
-
-    // @UPDATE: remove
-    return
+    grid.insertAdjacentElement('beforebegin', snippet)
 
     if(hasDataViz){
+        // @UPDATE: remove
+        return
         const dataToggles = document.querySelectorAll('.toggle-data-selector')
         
         // apply toggle functionality to all togglable elements in the snippet, if they exist
@@ -199,26 +198,26 @@ const getIndicatorSnippet = (ref, indicatorParams) => {
 
     // load the default text + add tab click handler
     // @UPDATE: move all of this into makeIndicatorHTML
-    if(hasText){
-        // @UPDATE don't grab this. Auto-populate it w/whyText on build
-        const descriptionContainer = document.getElementById('indicator-description-container')
-        const tabs = document.getElementById('description-wrapper-tabs')
-        const activeTab = document.querySelector('.active-tab')
+    // if(hasText){
+    //     // @UPDATE don't grab this. Auto-populate it w/whyText on build
+    //     const descriptionContainer = document.getElementById('indicator-description-container')
+    //     const tabs = document.getElementById('description-wrapper-tabs')
+    //     const activeTab = document.querySelector('.active-tab')
         
-        let cat = indicatorParams.categories[0] || 'unset'
-        const color = catLookup[cat].dark
+    //     let cat = indicatorParams.categories[0] || 'unset'
+    //     const color = catLookup[cat].dark
         
-        // @UPDATE: improve this. load the hasText.why in the default build of the text container at makeIndicatorHTML
-        descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
+    //     // @UPDATE: improve this. load the hasText.why in the default build of the text container at makeIndicatorHTML
+    //     descriptionContainer.insertAdjacentHTML('afterbegin', hasText.why)
         
-        // add colors to tab/container based on primary category
-        tabs.style.borderBottom = `1px solid ${color}`
-        activeTab.style.background = color
-        activeTab.style.color = '#f7f7f7'
+    //     // add colors to tab/container based on primary category
+    //     tabs.style.borderBottom = `1px solid ${color}`
+    //     activeTab.style.background = color
+    //     activeTab.style.color = '#f7f7f7'
         
-        // add tab functionality
-        tabs.onclick = e => handleTabs(e, hasText, descriptionContainer, color)
-    }
+    //     // add tab functionality
+    //     tabs.onclick = e => handleTabs(e, hasText, descriptionContainer, color)
+    // }
     // @UPDATE END
 
     // append the to-top button

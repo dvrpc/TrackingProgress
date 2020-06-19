@@ -48,8 +48,8 @@ const makeIndicatorHTML = params => {
         "trend": {
             "status": "good",
             "text": {
-            "stat": "109 fewer",
-            "text": "days annually violating air quality standards since 2009's 5-year average"
+                "stat": "109 fewer",
+                "text": "days annually violating air quality standards since 2009's 5-year average"
             }
         },
         text: {textObj}
@@ -66,6 +66,7 @@ const makeIndicatorHTML = params => {
 
 
     // create the elements
+    // @TODO: once this is all working, pull each section out into its own function
     const frag = document.createDocumentFragment()
 
     const snippet = document.createElement('article')
@@ -97,9 +98,13 @@ const makeIndicatorHTML = params => {
 
     descriptionWrapper.id = 'description-wrapper'
     tabsWrapper.id = 'description-wrapper-tabs'
+    whyTab.classList.add('description-wrapper-tab-headers', 'active-tab')
     whyTab.id = 'why-tab'
+    whatTab.classList.add('description-wrapper-tab-headers')
     whatTab.id = 'what-tab'
+    howTab.classList.add('description-wrapper-tab-headers')
     howTab.id = 'how-tab'
+    resourceTab.classList.add('description-wrapper-tab-headers')
     resourceTab.id = 'resource-tab'
 
     descriptionContentWrapper.id = 'description-content-wrapper'
@@ -107,7 +112,7 @@ const makeIndicatorHTML = params => {
 
     contextWrapper.classList.add('indicator-emoji-context')
     contextImg.classList.add('indicator.emoji-context-img')
-    contextImg.src = `./img/emoji-${trendStatus}.png`
+    contextImg.src = `./img/emoji-${trendStatus}-teal.png`
     contextImg.alt = `${trendStatus} emoji`
 
     hr.classList.add('indicator-header-hr')
@@ -121,9 +126,17 @@ const makeIndicatorHTML = params => {
 
     // add content
     header.textContent = params.title
-    whyTab.textContent = defaultText
+    whyTab.textContent = 'Why'
+    whatTab.textContent = 'What'
+    howTab.textContent = 'How'
+    resourceTab.textContent = 'Resources'
+    description.innerHTML = defaultText
 
-    
+
+    // add interactivity
+    tabsWrapper.onclick = e => handleTabs(e, params.text, description, tabColor)
+
+
     // append jawns
     catIconsWrapper.appendChild(catIcons)
     headerWrapper.appendChild(header)
@@ -150,8 +163,9 @@ const makeIndicatorHTML = params => {
     // const chartString = chartStrings[snippet.id / snippet.name / snippet.key]// get chartString
     // snippet.insertAdjacentHTML('beforeend', chartString) (or appendChild or insertHTMLElement or whatever)
     
-    frag.appendChild(snippet)
-    return frag
+    // frag doesn't seem to work with insertAdjacentElement @TBD
+    //frag.appendChild(snippet)
+    return snippet
 }
 
 // iterate over categories array and create imgs
@@ -176,27 +190,12 @@ const makeTrendText = text => {
     const p = document.createElement('p')
     const strong = document.createElement('strong')
     
-    // tbd on the order of this. Desired output is <p><strong>stats text</strong> rest of text</p>
-    p.appendChild(strong)
-    strong.textContent = text.stat
+    strong.textContent = `${text.stat} `
     p.textContent = text.text
+    p.insertAdjacentElement('afterbegin', strong)
 
     frag.appendChild(p)
     return frag
-}
-
-
-// NEEDS: primary category, description-wrapper-tabs, indicator-description-container
-const setDefaultTab = tabsInfo => {
-    const { cat, defaultTab, tabs} = {...tabsInfo}
-
-    // add colors to tab/container based on primary category
-    tabs.style.borderBottom = `1px solid ${color}`
-    defaultTab.style.background = color
-    defaultTab.style.color = '#f7f7f7'
-    
-    // add tab functionality
-    tabs.onclick = e => handleTabs(e, text, description, color)
 }
 
 const handleTabs = (e, text, wrapper, color) => {
