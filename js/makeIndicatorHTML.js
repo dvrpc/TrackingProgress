@@ -1,4 +1,4 @@
-// lookups
+// START lookups
 const catLookup = {
     'econo': {
         dark:'#bd2756',
@@ -31,7 +31,7 @@ const catLookup = {
         name: 'unset'
     }
 }
-
+// END lookups
 
 // create a generic indicator page and loop through the ref.js entry to populate it with the specifics.
 const makeIndicatorHTML = params => {
@@ -45,14 +45,13 @@ const makeIndicatorHTML = params => {
 
 
     // create the elements
-    // @TODO: once this is all working, pull each section out into its own function
-    const frag = document.createDocumentFragment()
-
+    // NEW: call functions to create blocks
     const snippet = document.createElement('article')
-    const headerWrapper = document.createElement('div')
-    const header = document.createElement('h1')
-    const catIconsWrapper = document.createElement('div')
-    const catIcons = makeIconImgs(params.categories)
+    const headerFrag = makeHeader(params.title, params.categories)
+    const textFrag = makeTextSection()
+    const toTopBtn = makeToTopBtn()
+    // END NEW
+
 
     const descriptionWrapper = document.createElement('article')
     const tabsWrapper = document.createElement('header')
@@ -68,15 +67,8 @@ const makeIndicatorHTML = params => {
 
     const hr = document.createElement('hr')
 
-    const toTopBtn = makeToTopBtn()
-
-
-    // add classes, id's and data-* attributes
+    // add classes and ids
     snippet.classList.add('indicators-snippet')
-    headerWrapper.id = 'indicator-header-wrapper'
-    header.classList.add('indicator-header')
-    catIconsWrapper.classList.add('indicator-category-icons')
-
     descriptionWrapper.id = 'description-wrapper'
     tabsWrapper.id = 'description-wrapper-tabs'
     whyTab.classList.add('description-wrapper-tab-headers', 'active-tab')
@@ -106,7 +98,6 @@ const makeIndicatorHTML = params => {
 
 
     // add content
-    header.textContent = params.title
     whyTab.textContent = 'Why'
     whatTab.textContent = 'What'
     howTab.textContent = 'How'
@@ -119,10 +110,6 @@ const makeIndicatorHTML = params => {
 
 
     // append jawns
-    catIconsWrapper.appendChild(catIcons)
-    headerWrapper.appendChild(header)
-    headerWrapper.appendChild(catIconsWrapper)
-
     tabsWrapper.appendChild(whyTab)
     tabsWrapper.appendChild(whatTab)
     tabsWrapper.appendChild(howTab)
@@ -134,7 +121,8 @@ const makeIndicatorHTML = params => {
     descriptionWrapper.appendChild(tabsWrapper)
     descriptionWrapper.appendChild(descriptionContentWrapper)
 
-    snippet.appendChild(headerWrapper)
+    // @HEADERS
+    snippet.appendChild(headerFrag)
     snippet.appendChild(descriptionWrapper)
     snippet.appendChild(hr)
     snippet.appendChild(toTopBtn)
@@ -150,7 +138,32 @@ const makeIndicatorHTML = params => {
     return snippet
 }
 
-// iterate over categories array and create imgs
+
+// START header
+const makeHeader = (title, categories) => {
+    // make elements
+    const headerFrag = document.createDocumentFragment()
+    const headerWrapper = document.createElement('div')
+    const header = document.createElement('h1')
+    const catIconsWrapper = document.createElement('div')
+    const catIcons = makeIconImgs(categories)
+
+    // add classes/ids
+    headerWrapper.id = 'indicator-header-wrapper'
+    header.classList.add('indicator-header')
+    catIconsWrapper.classList.add('indicator-category-icons')
+
+    // add content
+    header.textContent = title
+
+    // append and return
+    catIconsWrapper.appendChild(catIcons)
+    headerWrapper.appendChild(header)
+    headerWrapper.appendChild(catIconsWrapper)
+    headerFrag.appendChild(headerWrapper)
+
+    return headerFrag
+}
 const makeIconImgs = icons => {
     const frag = document.createDocumentFragment()
 
@@ -166,7 +179,15 @@ const makeIconImgs = icons => {
 
     return frag
 }
+// END header
 
+
+// START text
+const makeTextSection = () => {
+    const textFrag = document.createDocumentFragment()
+
+    return textFrag
+}
 const makeTrendText = text => {
     const frag = document.createDocumentFragment()
     const p = document.createElement('p')
@@ -179,7 +200,6 @@ const makeTrendText = text => {
     frag.appendChild(p)
     return frag
 }
-
 const handleTabs = (e, text, wrapper, color) => {
     const clickedTab = e.target
     const oldTab = document.querySelector('.active-tab')
@@ -204,8 +224,10 @@ const handleTabs = (e, text, wrapper, color) => {
     clickedTab.style.background = color
     clickedTab.style.color = '#f7f7f7'
 }
+// END text
 
-// add button to allow users to quickly scroll back to the top of an indicator page
+
+// START to top button
 const makeToTopBtn = () => {
     const btn = document.createElement('button')
     
@@ -218,6 +240,8 @@ const makeToTopBtn = () => {
 
     return btn
 }
+// END to top button
+
 
 {/* <article class="indicators-snippet">
     <div id="indicator-header-wrapper">
