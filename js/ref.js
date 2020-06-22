@@ -79,7 +79,14 @@ const snippetsRef = {
         }
     },
     'Miles Driven': {
-        file: 'milesDriven.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -172,7 +179,14 @@ const snippetsRef = {
         }
     },
     'Educational Attainment': {
-        file: 'educationalAttainment.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -339,7 +353,14 @@ const snippetsRef = {
         }
     },
     'Roadway Safety': {
-        file: 'roadwaySafety.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -459,7 +480,14 @@ const snippetsRef = {
         }
     },
     'Global Connectivity': {
-        file: 'globalConnectivity.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'stacked bar',
@@ -508,7 +536,14 @@ const snippetsRef = {
         }
     },
     'Housing Activity': {
-        file: 'housingActivity.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -624,7 +659,14 @@ const snippetsRef = {
         }
     },
     'Housing Affordability': {
-        file: 'housingAffordability.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -859,7 +901,14 @@ const snippetsRef = {
         }
     },
     'Job Growth': {
-        file: 'jobGrowth.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1084,7 +1133,14 @@ const snippetsRef = {
         }
     },
     'Racial & Ethnic Disparities':{
-        file: 'racialAndEthnicDisparities.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1242,7 +1298,14 @@ const snippetsRef = {
         }
     },
     'Income Disparities': {
-        file: 'incomeDisparities.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1352,7 +1415,14 @@ const snippetsRef = {
         }
     },
     'Sex Disparities': {
-        file: 'sexDisparities.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1495,7 +1565,14 @@ const snippetsRef = {
         }
     },
     'Congestion': {
-        file: 'congestion.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1631,7 +1708,14 @@ const snippetsRef = {
         }
     },
     'Exported Goods': {
-        file: 'exportedGoods.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1717,7 +1801,14 @@ const snippetsRef = {
         }
     },
     'Commute Mode': {
-        file: 'commuteMode.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1854,7 +1945,14 @@ const snippetsRef = {
         }
     },
     'Transit Ridership': {
-        file: 'transitRidership.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1954,7 +2052,14 @@ const snippetsRef = {
         }
     },
     'Greenhouse Gas Emissions': {
-        file: 'emissions.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2092,7 +2197,14 @@ const snippetsRef = {
         }
     },
     'Transit Conditions': {
-        file: 'transitConditions.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2220,7 +2332,14 @@ const snippetsRef = {
         }
     },
     'Innovation': {
-        file: 'innovation.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2246,7 +2365,14 @@ const snippetsRef = {
         }
     },
     'Population Growth': {
-        file: 'populationGrowth.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2505,7 +2631,14 @@ const snippetsRef = {
         }
     },
     'Bridge Conditions': {
-        file: 'bridgeConditions.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2647,7 +2780,14 @@ const snippetsRef = {
         }
     },
     'Water Quality': {
-        file: 'waterQuality.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2727,7 +2867,14 @@ const snippetsRef = {
         }
     },
     'Land Consumption': {
-        file: 'landConsumption.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -3073,7 +3220,14 @@ const snippetsRef = {
         }
     },
     'Pavement Conditions': {
-        file: 'pavementConditions.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line',
