@@ -33,100 +33,46 @@ const catLookup = {
 }
 // END lookups
 
-// create a generic indicator page and loop through the ref.js entry to populate it with the specifics.
+
+// START main
+// create an indicator page using content from it's entry in ref.js
 const makeIndicatorHTML = params => {
     // extract info from params
-    const trend = params.trend
-    const trendStatus = trend.status
-    const trendText = trend.text
-    const cat = params.categories[0] || 'unset'
-    const tabColor = catLookup[cat].dark
+    const title = params.title
+    const categories = params.categories
+    const catPrimary = params.categories[0] || 'unset'
+    const mainText = params.text
     const defaultText = params.text.why
+    const trend = params.trend
+    const tabColor = catLookup[catPrimary].dark
 
-
-    // create the elements
-    // NEW: call functions to create blocks
+    // create parent/non-content elements
     const snippet = document.createElement('article')
-    const headerFrag = makeHeader(params.title, params.categories)
-    const textFrag = makeTextSection()
-    const toTopBtn = makeToTopBtn()
-    // END NEW
-
-
-    const descriptionWrapper = document.createElement('article')
-    const tabsWrapper = document.createElement('header')
-    const whyTab = document.createElement('h2')
-    const whatTab = document.createElement('h2')
-    const howTab = document.createElement('h2')
-    const resourceTab = document.createElement('h2')
-    const descriptionContentWrapper = document.createElement('div')
-    const description = document.createElement('section')
-    const contextWrapper = document.createElement('aside')
-    const contextImg = document.createElement('img')
-    const contextText = makeTrendText(trendText)
-
+    const allContentFrag = document.createDocumentFragment()
+    const descriptionWrapper = document.createElement('div')
     const hr = document.createElement('hr')
 
-    // add classes and ids
+    // identify parent elements
     snippet.classList.add('indicators-snippet')
-    descriptionWrapper.id = 'description-wrapper'
-    tabsWrapper.id = 'description-wrapper-tabs'
-    whyTab.classList.add('description-wrapper-tab-headers', 'active-tab')
-    whyTab.id = 'why-tab'
-    whatTab.classList.add('description-wrapper-tab-headers')
-    whatTab.id = 'what-tab'
-    howTab.classList.add('description-wrapper-tab-headers')
-    howTab.id = 'how-tab'
-    resourceTab.classList.add('description-wrapper-tab-headers')
-    resourceTab.id = 'resource-tab'
-
-    descriptionContentWrapper.id = 'description-content-wrapper'
-    description.id = 'indicator-description-container'
-
-    contextWrapper.classList.add('indicator-emoji-context')
-    contextImg.classList.add('indicator.emoji-context-img')
-    contextImg.src = `./img/emoji-${trendStatus}-teal.png`
-    contextImg.alt = `${trendStatus} emoji`
-
+    descriptionWrapper.id="description-wrapper"
     hr.classList.add('indicator-header-hr')
 
+    // create content 
+    const headerFrag = makeHeader(title, categories)
+    const {descriptionFrag, description} = {...makeDescription(defaultText, trend)}
+    const tabs = makeTabs(tabColor, mainText, description)
+    const toTopBtn = makeToTopBtn()
 
-    // add styles
-    tabsWrapper.style.borderBottom = `1px solid ${tabColor}`
-    whyTab.style.background = tabColor
-    whyTab.style.color = '#f7f7f7'
+    // append
+    allContentFrag.appendChild(headerFrag)
+    descriptionWrapper.appendChild(tabs)
+    descriptionWrapper.appendChild(descriptionFrag)
+    allContentFrag.appendChild(descriptionWrapper)
+    allContentFrag.appendChild(hr)
+    allContentFrag.appendChild(toTopBtn)
+    snippet.appendChild(allContentFrag)
 
-
-    // add content
-    whyTab.textContent = 'Why'
-    whatTab.textContent = 'What'
-    howTab.textContent = 'How'
-    resourceTab.textContent = 'Resources'
-    description.innerHTML = defaultText
-
-
-    // add interactivity
-    tabsWrapper.onclick = e => handleTabs(e, params.text, description, tabColor)
-
-
-    // append jawns
-    tabsWrapper.appendChild(whyTab)
-    tabsWrapper.appendChild(whatTab)
-    tabsWrapper.appendChild(howTab)
-    tabsWrapper.appendChild(resourceTab)
-    contextWrapper.appendChild(contextImg)
-    contextWrapper.appendChild(contextText)
-    descriptionContentWrapper.appendChild(description)
-    descriptionContentWrapper.appendChild(contextWrapper)
-    descriptionWrapper.appendChild(tabsWrapper)
-    descriptionWrapper.appendChild(descriptionContentWrapper)
-
-    // @HEADERS
-    snippet.appendChild(headerFrag)
-    snippet.appendChild(descriptionWrapper)
-    snippet.appendChild(hr)
-    snippet.appendChild(toTopBtn)
-
+    return snippet
     
     // add chart info
     // @UPDATE: create and import all chartStrings as an object. Insert/append to frag after everything else is added
@@ -135,8 +81,9 @@ const makeIndicatorHTML = params => {
     
     // frag doesn't seem to work with insertAdjacentElement @TBD
     //frag.appendChild(snippet)
-    return snippet
+    //return snippet
 }
+// END main
 
 
 // START header
@@ -183,23 +130,51 @@ const makeIconImgs = icons => {
 
 
 // START text
-const makeTextSection = () => {
-    const textFrag = document.createDocumentFragment()
+// returns the text tabs as a document fragment
+const makeTabs = (tabColor, text, description) => {
+    // make elements
+    const tabsFrag = document.createDocumentFragment()
+    const tabsWrapper = document.createElement('header')
+    const whyTab = document.createElement('h2')
+    const whatTab = document.createElement('h2')
+    const howTab = document.createElement('h2')
+    const resourceTab = document.createElement('h2')
 
-    return textFrag
-}
-const makeTrendText = text => {
-    const frag = document.createDocumentFragment()
-    const p = document.createElement('p')
-    const strong = document.createElement('strong')
-    
-    strong.textContent = ` ${text.stat} `
-    p.textContent = text.text
-    p.insertAdjacentElement('afterbegin', strong)
+    // add classes/ids
+    tabsWrapper.id = 'description-wrapper-tabs'
+    whyTab.classList.add('description-wrapper-tab-headers', 'active-tab')
+    whyTab.id = 'why-tab'
+    whatTab.classList.add('description-wrapper-tab-headers')
+    whatTab.id = 'what-tab'
+    howTab.classList.add('description-wrapper-tab-headers')
+    howTab.id = 'how-tab'
+    resourceTab.classList.add('description-wrapper-tab-headers')
+    resourceTab.id = 'resource-tab'
 
-    frag.appendChild(p)
-    return frag
+    // add content
+    whyTab.textContent = 'Why is it important?'
+    whatTab.textContent = 'What is it?'
+    howTab.textContent = 'How are we doing?'
+    resourceTab.textContent = 'Resources'
+
+    // add style
+    tabsWrapper.style.borderBottom = `1px solid ${tabColor}`
+    whyTab.style.background = tabColor
+    whyTab.style.color = '#f7f7f7'
+
+    // add interactivity
+    tabsWrapper.onclick = e => handleTabs(e, text, description, tabColor)
+
+    // append jawns
+    tabsWrapper.appendChild(whyTab)
+    tabsWrapper.appendChild(whatTab)
+    tabsWrapper.appendChild(howTab)
+    tabsWrapper.appendChild(resourceTab)
+    tabsFrag.appendChild(tabsWrapper)
+
+    return tabsFrag
 }
+// handle cycling through tabs and replacing content
 const handleTabs = (e, text, wrapper, color) => {
     const clickedTab = e.target
     const oldTab = document.querySelector('.active-tab')
@@ -224,6 +199,56 @@ const handleTabs = (e, text, wrapper, color) => {
     clickedTab.style.background = color
     clickedTab.style.color = '#f7f7f7'
 }
+// returns main text content fragment + the main text wrapper element
+const makeDescription = (defaultText, trend) => {
+    // create elements
+    const descriptionFrag = document.createDocumentFragment()
+    const descriptionWrapper = document.createElement('article')
+    const description = document.createElement('section')
+    const trendFrag = makeTrendText(trend)
+
+    // add classes/ids
+    descriptionWrapper.id = 'description-content-wrapper'
+    description.id = 'indicator-description-container'
+
+    // add content
+    description.innerHTML = defaultText
+
+    // append
+    descriptionWrapper.appendChild(description)
+    descriptionWrapper.appendChild(trendFrag)
+    descriptionFrag.appendChild(descriptionWrapper)
+
+    return {descriptionFrag, description}
+}
+// returns the trend section as a document fragment
+const makeTrendText = trend => {
+    const text = trend.text
+    const status = trend.status
+
+    const frag = document.createDocumentFragment()
+    const contextWrapper = document.createElement('aside')
+    const contextImg = document.createElement('img')
+    const p = document.createElement('p')
+    const strong = document.createElement('strong')
+
+    // identify elements
+    contextWrapper.classList.add('indicator-emoji-context')
+    contextImg.classList.add('indicator-emoji-context-img')
+
+    // add content
+    contextImg.src = `./img/emoji-${status}-teal.png`
+    contextImg.alt = `${status} emoji`
+    strong.textContent = ` ${text.stat} `
+    p.textContent = text.text
+    p.insertAdjacentElement('afterbegin', strong)
+
+    // append
+    contextWrapper.appendChild(contextImg)
+    contextWrapper.appendChild(p)
+    frag.appendChild(contextWrapper)
+    return frag
+}
 // END text
 
 
@@ -244,47 +269,7 @@ const makeToTopBtn = () => {
 
 
 {/* <article class="indicators-snippet">
-    <div id="indicator-header-wrapper">
-
-    /   // @UPDATE: insert category name here
-        <h1 class="indicator-header">Bridge Conditions</h1>
-        // @UPDATE END
-
-        // @UPDATE: switch from hard coded to iterating over a "categories" field on the params object (ex. categories: ['transpo', 'enviro'])
-        <div class="indicator-category-icons">
-            <img class="snippet-categories" src="./img/indicator_headers/transpo-icon.png" alt="transportation category icon"/>
-        </div>
-        // @UPDATE END
-
-    </div>
-
-    <article id="description-wrapper">
-        <header id="description-wrapper-tabs">
-            <h2 id="why-tab" class="description-wrapper-tab-headers active-tab">Why is it important?</h2>
-            <h2 id="what-tab" class="description-wrapper-tab-headers">What is it?</h2>
-            <h2 id="how-tab" class="description-wrapper-tab-headers">How are we doing?</h2>
-            <h2 id="resource-tab" class="description-wrapper-tab-headers">Resources</h2>
-        </header>
-        <div id="description-content-wrapper">
-
-            // @UPDATE: switch from hard coded to extracting primary from the categories array (ex. categories: = ['transpo', 'enviro'], primary = categories[0])
-            <section id="indicator-description-container" data-primary="transpo"></section>
-            // @UPDATE END
-
-            // @UPDATE: switch from hard coded to a "trend" field (ex. trend: {status: 'awesome', text: strong>54% drop</strong> in bridge deck area rated deficient since a 2003 peak of 18%})
-            <aside class="indicator-emoji-context">
-                <img class="indicator-emoji-context-img" src="./img/emoji-awesome-teal.png" alt="very good emoji" />
-                <p><strong>54% drop</strong> in bridge deck area rated deficient since a 2003 peak of 18%</p>
-            </aside>
-            // @UPDATE END
-
-        </div>
-    </article>
-
-    <hr class="indicator-header-hr"/>
-
-    // @UPDATE: consider storing these as 'chart-strings' and just pop an insertadjacentHTML('beforeend') on the indicator fragment
-    // iterating over params.js and creating extra fields w/the form content (options) and src etc might not be a good idea b/c there's so much difference
+    // @UPDATE: for now, store these as 'chart-strings' and just pop an insertadjacentHTML('beforeend') on the snippet before returning
     <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Percentage of Deficient Bridges by Ownership Type</h2>
         <form class="double-toggle-form">

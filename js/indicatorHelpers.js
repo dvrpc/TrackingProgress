@@ -169,7 +169,6 @@ const getIndicatorSnippet = (ref, indicatorParams) => {
     const snippet = makeIndicatorHTML(indicatorParams)
 
     // insert the HTML to update the structure & put the map and/or data viz components in place
-    //grid.insertAdjacentHTML('beforebegin', snippet)
     grid.insertAdjacentElement('beforebegin', snippet)
 
     if(hasDataViz){
