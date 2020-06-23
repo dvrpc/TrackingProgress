@@ -3,46 +3,12 @@ import * as graphs from './viz.js'
 import snippetsRef from './ref.js'
 import { makeIndicatorHTML } from './makeIndicatorHTML.js'
 import { setIndicatorURL } from './routing.js'
+import { catLookup } from './utils.js'
 
 const grid = document.querySelector('.indicators-grid')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 const relatedIndicators = document.querySelector('.related-indicators')
 
-// colors to change indicator background to on cat filter
-// @UPDATE: move this to utils and import it here and to makeIndicatorHTML.js
-const catLookup = {
-    'econo': {
-        dark:'#bd2756',
-        light: '#f0cfd0',
-        name: 'Economy'
-    },
-    'enviro': {
-        dark: '#7a9c3e',
-        light: '#e0e6cf',
-        name: 'Environment'
-    },
-    'comm': {
-        dark: '#006ba6',
-        light: '#c6d6ea',
-        name: 'Community'
-    },
-    'transpo': {
-        dark: '#dd6e1d',
-        light: '#f9dcc4',
-        name: 'Transportation'
-    },
-    'equity': {
-        dark: '#582267',
-        light: '#c6b7cd',
-        name: 'Equity'
-    },
-    'unset': {
-        light: 'grey',
-        dark: 'black',
-        name: 'unset'
-    }
-}
-// @UPDATE END
 
 // helper function to determine what data viz to make
 const dataVizSwitch = (type, source, toggleContext) => {
