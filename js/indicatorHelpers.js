@@ -1,7 +1,7 @@
 // get a handle on the necessary elements to create indicator subpages
 import * as graphs from './viz.js'
 import snippetsRef from './ref.js'
-import { makeIndicatorHTML } from './makeIndicatorHTML.js'
+import { makeIndicatorHTML, make404 } from './makeIndicatorHTML.js'
 import { setIndicatorURL } from './routing.js'
 import { catLookup } from './utils.js'
 
@@ -243,10 +243,8 @@ const makeIndicatorPage = hashArray => {
 
     // create the Indicator Not Found page if not
     }else{
-        // @UPDATE: replace with function that makes a 404 page
-        let page = './indicatorSnippets/notFound.html'
-        fetch(page).then(response => response.text().then(snippet => grid.insertAdjacentHTML('beforebegin', snippet)))
-        // @UPDATE END
+        const notFound = make404()
+        grid.insertAdjacentElement('beforebegin', notFound)
     }
 }
 

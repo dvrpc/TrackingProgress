@@ -49,6 +49,40 @@ const makeIndicatorHTML = params => {
 
     return snippet
 }
+const make404 = () => {
+   // create elements
+   const snippet = document.createElement('article')
+   const headerWrapper = document.createElement('div')
+   const header = document.createElement('h1')
+   const catWrapper = document.createElement('div')
+   const allImgs = makeIconImgs(['transpo','econo','comm','enviro','equity'])
+   const descriptionWrapper = document.createElement('section')
+   const description = document.createElement('div')
+   const text = document.createElement('p')
+
+   // identify elements
+   snippet.classList.add('indicators-snippet')
+   headerWrapper.id = 'indicator-header-wrapper'
+   header.classList.add('indicator-header')
+   catWrapper.classList.add('indicator-category-icons')
+   descriptionWrapper.id = 'description-wrapper'
+   description.id = 'indicator-desription-container'
+   
+   // add content
+   header.textContent = 'Indicator Not Found'
+   text.innerHTML = 'Sorry! The requested indicator page was not found. Please <a href="/TrackingProgress/">click here</a> to navigate back to the dashboard.'
+
+   // append
+   headerWrapper.appendChild(header)
+   headerWrapper.appendChild(catWrapper)
+   catWrapper.appendChild(allImgs)
+   descriptionWrapper.appendChild(description)
+   description.appendChild(text)
+   snippet.appendChild(headerWrapper)
+   snippet.appendChild(descriptionWrapper)
+
+   return snippet
+}
 // END main
 
 
@@ -233,4 +267,4 @@ const makeToTopBtn = () => {
 }
 // END to top button
 
-export { makeIndicatorHTML }
+export { makeIndicatorHTML, make404 }
