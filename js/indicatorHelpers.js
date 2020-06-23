@@ -9,7 +9,7 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 const relatedIndicators = document.querySelector('.related-indicators')
 
 // colors to change indicator background to on cat filter
-// @UPDATE: move this to makeIndicatorHTML
+// @UPDATE: move this to utils and import it here and to makeIndicatorHTML.js
 const catLookup = {
     'econo': {
         dark:'#bd2756',
@@ -172,8 +172,6 @@ const getIndicatorSnippet = (ref, indicatorParams) => {
     grid.insertAdjacentElement('beforebegin', snippet)
 
     if(hasDataViz){
-        // @UPDATE: remove
-        return
         const dataToggles = document.querySelectorAll('.toggle-data-selector')
         
         // apply toggle functionality to all togglable elements in the snippet, if they exist
@@ -189,34 +187,6 @@ const getIndicatorSnippet = (ref, indicatorParams) => {
     // send user to the top of the indicator page
     window.scrollTo(0,0)
 }
-
-// toggle tabs and text
-// @UPDATE: move this to the makeIndicatorHTML page
-const handleTabs = (e, text, wrapper, color) => {
-    const clickedTab = e.target
-    const oldTab = document.querySelector('.active-tab')
-    
-    // short out if clicking on the already active tab
-    if(oldTab.id === clickedTab.id) return
-
-    // clear the text
-    while(wrapper.firstChild) wrapper.removeChild(wrapper.firstChild)
-    
-    // add new text
-    const textSection = clickedTab.id.split('-')[0]
-    wrapper.insertAdjacentHTML('afterbegin', text[textSection])
-
-    // deactivate the old jawn
-    oldTab.classList.remove('active-tab')
-    oldTab.style.background = 'initial'
-    oldTab.style.color = 'initial'
-
-    // uset the new active tab
-    clickedTab.classList.add('active-tab')
-    clickedTab.style.background = color
-    clickedTab.style.color = '#f7f7f7'
-}
-// @UPDATE END
 
 const makeRelatedSubheader = cat => {
     const bg = catLookup[cat].light

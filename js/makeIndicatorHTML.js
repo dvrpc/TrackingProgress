@@ -1,3 +1,5 @@
+import chartStrings from './indicatorChartStrings.js'
+
 // START lookups
 const catLookup = {
     'econo': {
@@ -72,16 +74,14 @@ const makeIndicatorHTML = params => {
     allContentFrag.appendChild(toTopBtn)
     snippet.appendChild(allContentFrag)
 
+    // add charts
+    const charts = chartStrings[title]
+    snippet.insertAdjacentHTML('beforeend', charts)
+    
+    // possible alternative: dynamically import the one string needed
+    //import(`./indicatorChartStrings`)
+
     return snippet
-    
-    // add chart info
-    // @UPDATE: create and import all chartStrings as an object. Insert/append to frag after everything else is added
-    // const chartString = chartStrings[snippet.id / snippet.name / snippet.key]// get chartString
-    // snippet.insertAdjacentHTML('beforeend', chartString) (or appendChild or insertHTMLElement or whatever)
-    
-    // frag doesn't seem to work with insertAdjacentElement @TBD
-    //frag.appendChild(snippet)
-    //return snippet
 }
 // END main
 
@@ -266,133 +266,5 @@ const makeToTopBtn = () => {
     return btn
 }
 // END to top button
-
-
-{/* <article class="indicators-snippet">
-    // @UPDATE: for now, store these as 'chart-strings' and just pop an insertadjacentHTML('beforeend') on the snippet before returning
-    <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Percentage of Deficient Bridges by Ownership Type</h2>
-        <form class="double-toggle-form">
-            <fieldset>
-                <label for="viz-0">Select Geography: </label>
-                <select id="viz-0" class="toggle-data-selector">
-                    <optgroup label="Regional">
-                        <option value="0">DVRPC Region</option>
-                        <option value="1">NJ Counties</option>
-                        <option value="2">All PA Counties</option>
-                        <option value="3">PA Suburban Counties</option>
-                    </optgroup>
-                    <optgroup label="Counties">
-                        <option value="4">Bucks</option>
-                        <option value="5">Burlington</option>
-                        <option value="6">Camden</option>
-                        <option value="7">Chester</option>
-                        <option value="8">Delaware</option>
-                        <option value="9">Gloucester</option>
-                        <option value="10">Mercer</option>
-                        <option value="11">Montgomery</option>
-                        <option value="12">Philadelphia</option>
-                    </optgroup>
-                </select>
-            </fieldset>
-            <span class="toggle-vr">|</span>
-            <fieldset>
-                <label for="viz-0-b">Select Value Type: </label>
-                <select id="viz-0-b" class="toggle-data-selector">
-                    <option value="0">Share of Total Bridge Deck Area</option>
-                    <option value="1">Share of Total Bridges</option>
-                </select>
-            </fieldset>
-        </form>
-    </div>
-    <div class="data-viz chart">
-        <svg></svg>
-    </div>
-    <small class="chart-src"><em>Source: National Bridge Inventory (NBI)</em></small>
-
-    <hr class="indicator-content-hr" />
-
-    <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Deficient Bridges by Ownership Type</h2>
-        <form class="double-toggle-form">
-            <fieldset>
-                <label for="viz-1">Select Geography: </label>
-                <select id="viz-1" class="toggle-data-selector">
-                    <optgroup label="Regional">
-                        <option value="0">DVRPC Region</option>
-                        <option value="1">NJ Counties</option>
-                        <option value="2">All PA Counties</option>
-                        <option value="3">PA Suburban Counties</option>
-                    </optgroup>
-                    <optgroup label="Counties">
-                        <option value="4">Bucks</option>
-                        <option value="5">Burlington</option>
-                        <option value="6">Camden</option>
-                        <option value="7">Chester</option>
-                        <option value="8">Delaware</option>
-                        <option value="9">Gloucester</option>
-                        <option value="10">Mercer</option>
-                        <option value="11">Montgomery</option>
-                        <option value="12">Philadelphia</option>
-                    </optgroup>
-                </select>
-            </fieldset>
-            <span class="toggle-vr">|</span>
-            <fieldset>
-                <label for="viz-1-b">Select Value Type: </label>
-                <select id="viz-1-b" class="toggle-data-selector">
-                    <option value="0">Bridge Deck Area</option>
-                    <option value="1">Number of Bridges</option>
-                </select>
-            </fieldset>
-        </form>
-    </div>
-    <div class="data-viz chart2">
-        <svg></svg>
-    </div>
-    <small class="chart-src"><em>Source: National Bridge Inventory (NBI)</em></small>
-
-    <hr class="indicator-content-hr" />
-
-    <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Bridges by Condition</h2>
-        <form class="double-toggle-form">
-            <fieldset>
-                <label for="viz-2">Select Geography: </label>
-                <select id="viz-2" class="toggle-data-selector">
-                    <optgroup label="Regional">
-                        <option value="0">DVRPC Region</option>
-                        <option value="1">NJ Counties</option>
-                        <option value="2">All PA Counties</option>
-                        <option value="3">PA Suburban Counties</option>
-                    </optgroup>
-                    <optgroup label="Counties">
-                        <option value="4">Bucks</option>
-                        <option value="5">Burlington</option>
-                        <option value="6">Camden</option>
-                        <option value="7">Chester</option>
-                        <option value="8">Delaware</option>
-                        <option value="9">Gloucester</option>
-                        <option value="10">Mercer</option>
-                        <option value="11">Montgomery</option>
-                        <option value="12">Philadelphia</option>
-                    </optgroup>
-                </select>
-            </fieldset>
-            <span class="toggle-vr">|</span>
-            <fieldset>
-                <label for="viz-2-b">Select Value Type: </label>
-                <select id="viz-2-b" class="toggle-data-selector">
-                    <option value="0">Bridge Deck Area</option>
-                    <option value="1">Number of Bridges</option>
-                </select>
-            </fieldset>
-        </form>
-    </div>
-    <div class="data-viz chart3">
-        <svg></svg>
-    </div>
-    <small class="chart-src"><em>Source: National Bridge Inventory (NBI)</em></small>
-</article> */}
 
 export { makeIndicatorHTML }

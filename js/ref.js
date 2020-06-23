@@ -79,12 +79,12 @@ const snippetsRef = {
         }
     },
     'Miles Driven': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['transpo','enviro'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '0.6% more',
+                text: `miles driven annually per person since 2000`
             }
         },
         d3: [
@@ -179,12 +179,12 @@ const snippetsRef = {
         }
     },
     'Educational Attainment': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['comm', 'enviro', 'equity'],
         trend: {
             status: 'good',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '8.6% rise',
+                text: `in population over 24 with high school diploma since 2000`
             }
         },
         d3: [
@@ -353,12 +353,12 @@ const snippetsRef = {
         }
     },
     'Roadway Safety': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['transpo','equity'],
         trend: {
-            status: 'good',
+            status: 'not-great',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '2.5% increase',
+                text: `in fatalities and severe injuries since 2014`
             }
         },
         d3: [
@@ -480,12 +480,12 @@ const snippetsRef = {
         }
     },
     'Global Connectivity': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['econo', 'transpo'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '0% change',
+                text: `in PHL's international destinations since 2009`
             }
         },
         d3: [
@@ -536,12 +536,12 @@ const snippetsRef = {
         }
     },
     'Housing Activity': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['comm', 'econo', 'enviro'],
         trend: {
             status: 'good',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '30% more',
+                text: `permits in Core Cities and Developed Communities since 1999`
             }
         },
         d3: [
@@ -659,12 +659,12 @@ const snippetsRef = {
         }
     },
     'Housing Affordability': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['comm', 'equity', 'econo'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '4.2% fewer',
+                text: `cost-burdened households since 2005`
             }
         },
         d3: [
@@ -901,12 +901,12 @@ const snippetsRef = {
         }
     },
     'Job Growth': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['econo', 'comm'],
         trend: {
             status: 'good',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '6% increase',
+                text: `in jobs since 2001`
             }
         },
         d3: [
@@ -1133,12 +1133,12 @@ const snippetsRef = {
         }
     },
     'Racial & Ethnic Disparities':{
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['equity','comm','econo'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '6.8% drop',
+                text: `in income gap between People of Color and White since 2000`
             }
         },
         d3: [
@@ -1298,12 +1298,12 @@ const snippetsRef = {
         }
     },
     'Income Disparities': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['equity','econo','comm'],
         trend: {
-            status: 'good',
+            status: 'bad',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '25% wider',
+                text: `gap between highest and lowest household income quintiles since 2006`
             }
         },
         d3: [
@@ -1415,12 +1415,12 @@ const snippetsRef = {
         }
     },
     'Sex Disparities': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['equity','econo','comm'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '30% smaller',
+                text: `income gap between male and female workers since 2000`
             }
         },
         d3: [
@@ -1565,12 +1565,12 @@ const snippetsRef = {
         }
     },
     'Congestion': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['transpo', 'econo', 'comm'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '2.3% greater',
+                text: `reliability on region's freeways during weekdays since 2011`
             }
         },
         d3: [
@@ -1708,12 +1708,12 @@ const snippetsRef = {
         }
     },
     'Exported Goods': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['econo'],
         trend: {
-            status: 'good',
+            status: 'not-great',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '8.9% decrease',
+                text: `in value of exported goods since 2012`
             }
         },
         d3: [
@@ -1801,12 +1801,12 @@ const snippetsRef = {
         }
     },
     'Commute Mode': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['transpo','enviro','comm'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '1.5% fewer',
+                text: `residents drive alone to work since 2006`
             }
         },
         d3: [
@@ -1945,12 +1945,12 @@ const snippetsRef = {
         }
     },
     'Transit Ridership': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['transpo','comm','enviro'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '1.1% decrease',
+                text: `in transit trips per person since 2000`
             }
         },
         d3: [
@@ -2052,12 +2052,12 @@ const snippetsRef = {
         }
     },
     'Greenhouse Gas Emissions': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['enviro','comm','equity'],
         trend: {
             status: 'good',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '21% reduction',
+                text: `in greenhouse gas emissions since 2005`
             }
         },
         d3: [
@@ -2197,12 +2197,12 @@ const snippetsRef = {
         }
     },
     'Transit Conditions': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['transpo'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '14% increase',
+                text: `in average transit fleet age since 2000`
             }
         },
         d3: [
@@ -2332,12 +2332,12 @@ const snippetsRef = {
         }
     },
     'Innovation': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['econo'],
         trend: {
             status: 'good',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '29% increase',
+                text: `in patent approvals since 1998`
             }
         },
         d3: [
@@ -2365,12 +2365,12 @@ const snippetsRef = {
         }
     },
     'Population Growth': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['comm','econo','enviro'],
         trend: {
             status: 'good',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '6.5% increase',
+                text: `in population since 2000`
             }
         },
         d3: [
@@ -2631,12 +2631,12 @@ const snippetsRef = {
         }
     },
     'Bridge Conditions': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['transpo'],
         trend: {
-            status: 'good',
+            status: 'awesome',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '54% drop',
+                text: `in bridge deck area rated deficient since a 2003 peak of 18%`
             }
         },
         d3: [
@@ -2780,12 +2780,12 @@ const snippetsRef = {
         }
     },
     'Water Quality': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['enviro'],
         trend: {
-            status: 'good',
+            status: 'not-great',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '8.7% decrease',
+                text: `in water supporting aquatic life since 2006`
             }
         },
         d3: [
@@ -2867,12 +2867,12 @@ const snippetsRef = {
         }
     },
     'Land Consumption': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['enviro', 'comm'],
         trend: {
             status: 'good',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '62% drop',
+                text: `in land consumption rate from 2005-2015 compared to 1990-2005`
             }
         },
         d3: [
@@ -3220,12 +3220,12 @@ const snippetsRef = {
         }
     },
     'Pavement Conditions': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['transpo'],
         trend: {
-            status: 'good',
+            status: 'bad',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '5.3% more',
+                text: `road segment miles in poor condition since 2010`
             }
         },
         d3: [
