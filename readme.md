@@ -1,12 +1,10 @@
 # Tracking Progress
+Tracking Progress is an interactive dashboard for exploring regularly updated data to gauge The DVRPC region's progress towards long-range plan goals. Regional indicator data are used to better understand where the region is at the start of each plan update, identify successful programs, and align DVRPC's planning and implementation activities to serve as a guide for regional strategies.
 
-Tracking Progress is an interactive dashboard for exploring regularly updated data to gauge the region's progress towards long-range plan goals. Regional indicator data are used to better understand where the region is at the start of each plan update, identify successful programs, and align DVRPC's planning and implementation activities to serve as a guide for regional strategies.
+## Development
+Tracking Progress is built primarily with native web technologies. The charts are built with D3, using <a href="http://nvd3.org/">NVD3</a> as a wrapper for most cases. Everything else is vanilla HTML, CSS and Javascript. The website functions as a Single Page Application with custom built routing to simulate links and persistent navigation. The code is transpiled and prepared for production with a custom <a href="https://webpack.js.org/">Webpack</a> config. 
 
 ## Build Process
-
-Due to how this project was initially outlined, Tracking Process combines a Single Page App with a traditional HTML/CSS/JS architecture. As a result, the Webpack build process requires a couple extra steps beyond `npm build`:
-
 - From root run `npm build`
-- In the build folder, move all HTML files *except* for `index.html` into the indicatorSnippets folder (create it if it doesn't exist)
 - In `index.html`, change the `<script>` tag in the `<head>` to: `<script defer src="bundle.js" type="text/javascript"></script>`. Delete the reference to `bundle.js` at the bottom of the file.
 - Copy files to /TrackingProgress/

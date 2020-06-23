@@ -227,9 +227,6 @@ summary, #get-started, #to-grid{
 .indicator-emoji-context{
     width: 95%;
 }
-.indicator-emoji-context p {
-    width: 80%;
-}
 .toggle-wrapper{
     flex-direction: column;
     margin: 3% 0;

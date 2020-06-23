@@ -1,6 +1,13 @@
 const snippetsRef = {
     'Air Quality': {
-        file: 'airQuality.html',
+        categories: ['enviro', 'equity', 'transpo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '109 fewer',
+                text: `days annually violating air quality standards since 2009's 5-year average`
+            }
+        },
         d3: [
             {
                 type: 'line and bar',
@@ -72,7 +79,14 @@ const snippetsRef = {
         }
     },
     'Miles Driven': {
-        file: 'milesDriven.html',
+        categories: ['transpo','enviro'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '0.6% more',
+                text: `miles driven annually per person since 2000`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -165,7 +179,14 @@ const snippetsRef = {
         }
     },
     'Educational Attainment': {
-        file: 'educationalAttainment.html',
+        categories: ['comm', 'enviro', 'equity'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '8.6% rise',
+                text: `in population over 24 with high school diploma since 2000`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -332,7 +353,14 @@ const snippetsRef = {
         }
     },
     'Roadway Safety': {
-        file: 'roadwaySafety.html',
+        categories: ['transpo','equity'],
+        trend: {
+            status: 'not-great',
+            text: {
+                stat: '2.5% increase',
+                text: `in fatalities and severe injuries since 2014`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -452,7 +480,14 @@ const snippetsRef = {
         }
     },
     'Global Connectivity': {
-        file: 'globalConnectivity.html',
+        categories: ['econo', 'transpo'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '0% change',
+                text: `in PHL's international destinations since 2009`
+            }
+        },
         d3: [
             {
                 type: 'stacked bar',
@@ -501,7 +536,14 @@ const snippetsRef = {
         }
     },
     'Housing Activity': {
-        file: 'housingActivity.html',
+        categories: ['comm', 'econo', 'enviro'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '30% more',
+                text: `permits in Core Cities and Developed Communities since 1999`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -617,7 +659,14 @@ const snippetsRef = {
         }
     },
     'Housing Affordability': {
-        file: 'housingAffordability.html',
+        categories: ['comm', 'equity', 'econo'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '4.2% fewer',
+                text: `cost-burdened households since 2005`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -852,7 +901,14 @@ const snippetsRef = {
         }
     },
     'Job Growth': {
-        file: 'jobGrowth.html',
+        categories: ['econo', 'comm'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '6% increase',
+                text: `in jobs since 2001`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1077,7 +1133,14 @@ const snippetsRef = {
         }
     },
     'Racial & Ethnic Disparities':{
-        file: 'racialAndEthnicDisparities.html',
+        categories: ['equity','comm','econo'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '6.8% drop',
+                text: `in income gap between People of Color and White since 2000`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1235,7 +1298,14 @@ const snippetsRef = {
         }
     },
     'Income Disparities': {
-        file: 'incomeDisparities.html',
+        categories: ['equity','econo','comm'],
+        trend: {
+            status: 'bad',
+            text: {
+                stat: '25% wider',
+                text: `gap between highest and lowest household income quintiles since 2006`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1345,7 +1415,14 @@ const snippetsRef = {
         }
     },
     'Sex Disparities': {
-        file: 'sexDisparities.html',
+        categories: ['equity','econo','comm'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '30% smaller',
+                text: `income gap between male and female workers since 2000`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1488,7 +1565,14 @@ const snippetsRef = {
         }
     },
     'Congestion': {
-        file: 'congestion.html',
+        categories: ['transpo', 'econo', 'comm'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '2.3% greater',
+                text: `reliability on region's freeways during weekdays since 2011`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1624,7 +1708,14 @@ const snippetsRef = {
         }
     },
     'Exported Goods': {
-        file: 'exportedGoods.html',
+        categories: ['econo'],
+        trend: {
+            status: 'not-great',
+            text: {
+                stat: '8.9% decrease',
+                text: `in value of exported goods since 2012`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1710,7 +1801,14 @@ const snippetsRef = {
         }
     },
     'Commute Mode': {
-        file: 'commuteMode.html',
+        categories: ['transpo','enviro','comm'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '1.5% fewer',
+                text: `residents drive alone to work since 2006`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1847,7 +1945,14 @@ const snippetsRef = {
         }
     },
     'Transit Ridership': {
-        file: 'transitRidership.html',
+        categories: ['transpo','comm','enviro'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '1.1% decrease',
+                text: `in transit trips per person since 2000`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -1947,7 +2052,14 @@ const snippetsRef = {
         }
     },
     'Greenhouse Gas Emissions': {
-        file: 'emissions.html',
+        categories: ['enviro','comm','equity'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '21% reduction',
+                text: `in greenhouse gas emissions since 2005`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2085,7 +2197,14 @@ const snippetsRef = {
         }
     },
     'Transit Conditions': {
-        file: 'transitConditions.html',
+        categories: ['transpo'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '14% increase',
+                text: `in average transit fleet age since 2000`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2213,7 +2332,14 @@ const snippetsRef = {
         }
     },
     'Innovation': {
-        file: 'innovation.html',
+        categories: ['econo'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '29% increase',
+                text: `in patent approvals since 1998`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2239,7 +2365,14 @@ const snippetsRef = {
         }
     },
     'Population Growth': {
-        file: 'populationGrowth.html',
+        categories: ['comm','econo','enviro'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '6.5% increase',
+                text: `in population since 2000`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2498,7 +2631,14 @@ const snippetsRef = {
         }
     },
     'Bridge Conditions': {
-        file: 'bridgeConditions.html',
+        categories: ['transpo'],
+        trend: {
+            status: 'awesome',
+            text: {
+                stat: '54% drop',
+                text: `in bridge deck area rated deficient since a 2003 peak of 18%`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2640,7 +2780,14 @@ const snippetsRef = {
         }
     },
     'Water Quality': {
-        file: 'waterQuality.html',
+        categories: ['enviro'],
+        trend: {
+            status: 'not-great',
+            text: {
+                stat: '8.7% decrease',
+                text: `in water supporting aquatic life since 2006`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -2720,7 +2867,14 @@ const snippetsRef = {
         }
     },
     'Land Consumption': {
-        file: 'landConsumption.html',
+        categories: ['enviro', 'comm'],
+        trend: {
+            status: 'good',
+            text: {
+                stat: '62% drop',
+                text: `in land consumption rate from 2005-2015 compared to 1990-2005`
+            }
+        },
         d3: [
             {
                 type: 'line',
@@ -3066,7 +3220,14 @@ const snippetsRef = {
         }
     },
     'Pavement Conditions': {
-        file: 'pavementConditions.html',
+        categories: ['transpo'],
+        trend: {
+            status: 'bad',
+            text: {
+                stat: '5.3% more',
+                text: `road segment miles in poor condition since 2010`
+            }
+        },
         d3: [
             {
                 type: 'line',

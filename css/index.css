@@ -91,7 +91,7 @@ fieldset{
     height: 44px;
 }
 #help-btn{
-    margin-left: 30px;
+    margin-left: 42px;
     color: #4fa3a8;
     border: 1px solid #4fa3a8;
     border-radius: 50%;
@@ -242,7 +242,7 @@ summary{
     position: relative;
     display: flex;
     width: 100%;
-    min-height: calc(92vh - 16px);
+    min-height: calc(94vh - 16px);
     border-top: 8px solid white;
     margin-bottom: 8px;
     visibility: hidden;
@@ -326,7 +326,7 @@ summary{
     font-size: 1.2rem;
 }
 .indicators-grid{
-    height: calc(92vh - 16px);;
+    height: calc(94vh - 16px);
     width: 88%;
     background: #e9e9e9;
     display: flex;
@@ -421,6 +421,9 @@ summary{
     -o-transition: opacity 1s;
     transition-timing-function: linear;
 }
+#description-wrapper, .toggle-wrapper, .chart-src, .data-viz{
+    width: 70%;
+}
 #indicator-header-wrapper{
     max-width: 70%;
     display: flex;
@@ -456,7 +459,6 @@ summary{
     height: 33px;
 }
 #description-wrapper{
-    width: 75%;
     max-width: 1000px;
     background: #f9f9f9;
     margin: 20px auto 0 auto;
@@ -555,7 +557,6 @@ summary{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 75%;
     margin: 0 auto;
     padding-bottom: 5px;
 }
@@ -571,7 +572,6 @@ summary{
 }
 .chart-src{
     display: block;
-    width: 75%;
     max-width: 1000px;
     margin: 0 auto;
     font-style: italic;
@@ -619,7 +619,6 @@ summary{
 /*********** D3 Views **********/
 .data-viz{
     height: 450px;
-    width: 75%;
     max-width: 1000px;
     margin: 0 auto;
     background: #f9f9f9;
