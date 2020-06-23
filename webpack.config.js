@@ -2,49 +2,6 @@ const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-// update this array with each new snippet
-const snippets = [
-    'airQuality',
-    'bridgeConditions',
-    'commuteMode',
-    'congestion',
-    'educationalAttainment',
-    'emissions',
-    'exportedGoods',
-    'globalConnectivity',
-    'housingActivity',
-    'housingAffordability',
-    'incomeDisparities',
-    'innovation',
-    'jobGrowth',
-    'landConsumption',
-    'milesDriven',
-    'pavementConditions',
-    'populationGrowth',
-    'racialAndEthnicDisparities',
-    'roadwaySafety',
-    'sexDisparities',
-    'transitConditions',
-    'transitRidership',
-    'waterQuality'
-]
-
-// configure snippets
-const snippetPlugins = snippets.map(snippet => {
-    return new HtmlWebpackPlugin({
-        filename: snippet + '.html',
-        template: path.resolve(__dirname + `/indicatorSnippets/${snippet}.html`),
-        minify: {
-            collapseWhitespace: true,
-            removeComments: true,
-            removeRedundantAttributes: true,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            useShortDoctype: true
-        }
-    })
-})
-
 // configure index.html
 let indexConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname + "/index.html"),
@@ -138,5 +95,5 @@ module.exports = {
         ),
     // HtmlWebpackPlugin
         indexConfig
-    ].concat(snippetPlugins)
+    ]
 }

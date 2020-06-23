@@ -2,7 +2,7 @@
 Tracking Progress is an interactive dashboard for exploring regularly updated data to gauge The DVRPC region's progress towards long-range plan goals. Regional indicator data are used to better understand where the region is at the start of each plan update, identify successful programs, and align DVRPC's planning and implementation activities to serve as a guide for regional strategies.
 
 ## Development
-Tracking Progress is built primarily with native web technologies. The charts are built with D3, using <a href="http://nvd3.org/">NVD3</a> as a wrapper for most cases. Everything else is vanilla HTML, CSS and Javascript. Tracking Progress functions as a Single Page Applications with custom built routing to simulate links and persistent navigation. The code is transpiled and prepared for production with a custom <a href="https://webpack.js.org/">Webpack config</a>. 
+Tracking Progress is built primarily with native web technologies. The charts are built with D3, using <a href="http://nvd3.org/">NVD3</a> as a wrapper for most cases. Everything else is vanilla HTML, CSS and Javascript. The website functions as a Single Page Application with custom built routing to simulate links and persistent navigation. The code is transpiled and prepared for production with a custom <a href="https://webpack.js.org/">Webpack</a> config. 
 
 ## Build Process
 - From root run `npm build`
