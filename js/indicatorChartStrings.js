@@ -921,21 +921,707 @@ const chartStrings = {
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's American Community Survey &amp; Population Estimates Program</em></small>`,
     'Pavement Conditions':`
-    `,
-    '':`
-    `,
-    '':`
-    `,
-    '':`
-    `,
-    '':`
-    `,
-    '':`
-    `,
-    '':`
-    `,
-    '':`
-    `,
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Percentage of Pavement in Deficient Condition by Geography</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-0">Select Road Type: </label>
+                    <select id="viz-0" class="toggle-data-selector">
+                        <option value="0">All Roads</option>
+                        <option value="1">Interstate</option>
+                        <option value="2">NHS, Non-Interstate</option>
+                        <option value="3">Non-NHS</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Roadways by Pavement Condition</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label for="viz-1">Select Geography: </label>
+                    <select id="viz-1" class="toggle-data-selector">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">New Jersey Counties</option>
+                            <option value="2">Pennsylvania Counties</option>
+                    </select>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label for="viz-1-b">Select Road Type: </label>
+                    <select id="viz-1-b" class="toggle-data-selector">
+                        <option value="0">All Roads</option>
+                        <option value="1">Interstate</option>
+                        <option value="2">NHS, Non-Interstate</option>
+                        <option value="3">Non-NHS</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>`,
+    'Population Growth':`
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Population by Geography</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-0">Select Value Type: </label>
+                    <select id="viz-0" class="toggle-data-selector">
+                        <option value="0">Change Since Base Year</option>
+                        <option value="1">Total Population</option>
+                        <option value="2">Percent Change</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Geography: * Regional, ^ Planning Area, ** County</em></small>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Population Change by Change Components</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label fo="viz-1">Select County: </label>
+                    <select id="viz-1" class="toggle-data-selector">
+                        <option value="0">Bucks</option>
+                        <option value="1">Burlington</option>
+                        <option value="2">Camden</option>
+                        <option value="3">Chester</option>
+                        <option value="4">Delaware</option>
+                        <option value="5">Gloucester</option>
+                        <option value="6">Mercer</option>
+                        <option value="7">Montgomery</option>
+                        <option value="8">Philadelphia</option>
+                    </select>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label fo="viz-1-b">Select Change Type: </label>
+                    <select id="viz-1-b" class="toggle-data-selector">
+                        <option value="0">Net Change</option>
+                        <option value="1">Natural Increase</option>
+                        <option value="2">Net Migration</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz waterfall-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Population by Age Group</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label for="viz-2">Select Geography: </label>
+                    <select id="viz-2" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label for="viz-2-b">Select Value Type: </label>
+                    <select id="viz-2-b" class="toggle-data-selector">
+                        <option value="0">Change Since Base Year</option>
+                        <option value="1">Total Population</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Population by Race</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label for="viz-3">Select Geography: </label>
+                    <select id="viz-3" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label for="viz-3-b">Select Value Type: </label>
+                    <select id="viz-3-b" class="toggle-data-selector">
+                        <option value="0">Change Since Base Year</option>
+                        <option value="1">Total Population</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart4">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Population by Ethnicity</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label for="viz-4">Select Geography: </label>
+                    <select id="viz-4" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label for="viz-4-b">Select Value Type: </label>
+                    <select id="viz-4-b" class="toggle-data-selector">
+                        <option value="0">Change Since Base Year</option>
+                        <option value="1">Total Population</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
+    'Racial & Ethnic Disparities':`
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Median Income Gap between People of Color &amp; Latinx Populations vs. White, non-Latinx Population</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-0">Select Geography: </label>
+                    <select id="viz-0" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
+        
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Median Income by People of Color &amp; Latinx Populations vs. White, non-Latinx Population</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-1">Select Geography: </label>
+                    <select id="viz-1" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <h2 class="indicator-subheader">Racial/Ethnic Segregation Index</h2>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between People of Color &amp; Whites</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-3">Select Geography: </label>
+                    <select id="viz-3" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart4">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by People of Color &amp; Whites</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-4">Select Geography: </label>
+                    <select id="viz-4" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
+    'Roadway Safety':`
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-0">Select Value Type: </label>
+                    <select id="viz-0" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                        <option value="2">Per Vehicle Miles Traveled</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Mode (Annual)</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label for="viz-1">Select Geography: </label>
+                    <select id="viz-1" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label for="viz-1-b">Select Value Type: </label>
+                    <select id="viz-1-b" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                        <option value="2">Per Vehicle Miles Traveled</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's Population Estimates Program</em></small>`,
+    'Sex Disparities':`
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Median Income Gap between Sexes</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label for="viz-0">Select Geography: </label>
+                    <select id="viz-0" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label for="viz-0-b">Select Value Type: </label>
+                    <select id="viz-0-b" class="toggle-data-selector">
+                        <option value="0">Gap</option>
+                        <option value="1">Percent Gap</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: U.S. Census Bureau’s Decennial Census & American Community Survey, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+        
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Median Income by Sex</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-1">Select Geography: </label>
+                    <select id="viz-1" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: U.S. Census Bureau’s Decennial Census & American Community Survey, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+        
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-2">Select Geography: </label>
+                    <select id="viz-2" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau’s American Community Survey</em></small>
+
+        <hr class="indicator-content-hr" />
+        
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Sex</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-3">Select Geography: </label>
+                    <select id="viz-3" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart4">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau’s American Community Survey</em></small>`,
+    'Transit Conditions':`
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Average Vehicle Age by Vehicle Type</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-0">Select Transit Agency: </label>
+                    <select id="viz-0" class="toggle-data-selector">
+                        <option value="0">All Agencies</option>
+                        <option value="1">NJ Transit</option>
+                        <option value="2">PART (Pottstown)</option>
+                        <option value="3">PATCO</option>
+                        <option value="4">SEPTA</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Rail Vehicles by Age Group</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-1">Select Transit Agency: </label>
+                    <select id="viz-1" class="toggle-data-selector">
+                        <option value="0">All Agencies</option>
+                        <option value="1">NJ Transit</option>
+                        <option value="2">PATCO</option>
+                        <option value="3">SEPTA</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart2">
+            <svg></svg>    
+        </div>
+        <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Buses by Age Group</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-2">Select Transit Agency: </label>
+                    <select id="viz-2" class="toggle-data-selector">
+                        <option value="0">All Agencies</option>
+                        <option value="1">NJ Transit</option>
+                        <option value="2">PART (Pottstown)</option>
+                        <option value="3">SEPTA</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>`,
+    'Transit Ridership':`
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Transit Trips</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-0">Select Value Type: </label>
+                    <select id="viz-0" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Mode</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-1">Select Value Type: </label>
+                    <select id="viz-1" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Agency</h2>
+            <form>
+                <fieldset>
+                    <label for="viz-2">Select Value Type: </label>
+                    <select id="viz-2" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>`,
+    'Water Quality':`
+        <h2 class="indicator-subheader">Waterbodies Attaining Quality Standards by Geography</h2>
+        <div class="data-viz chart">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Environmental Protection, Pennsylvania Department of Environmental Protection, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <h2 class="indicator-subheader">New Jersey Counties' Subwatershed Area by Condition Type</h2>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: New Jersey Department of Environmental Protection</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <h2 class="indicator-subheader">Pennsylvania Counties' Stream Miles by Condition Type</h2>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: Pennsylvania Department of Environmental Protection</em></small>`,
 }
 
 export default chartStrings
