@@ -19,6 +19,13 @@ body{
     opacity: 0.5;
     cursor: auto;
 }
+.hover-btn:hover{
+    box-shadow: 2px 4px 6px rgba(0,0,0,0.3) !important;
+    filter: hue-rotate(350deg);
+  }
+.hover-text:hover, .info-toggle[open]{
+    filter: drop-shadow(1px 2px 0px rgba(0,0,0,0.2));
+}
 .sm{
     font-size: 0.9em;
     color: #bd2556;
@@ -230,7 +237,8 @@ summary{
     border-radius: 3px;
     border: none;
     font-size: 1rem;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    /* @UPDATE try w/o box-shadow */
+    /* box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3); */
     margin-top: 1%;
     cursor: pointer;
 }
@@ -260,15 +268,21 @@ summary{
     align-items: center;
     overflow-y: auto;
 }
+.nav-wrapper{
+	height: calc(100% - 81px);
+	width: calc(100% - 16px);
+}
 #filter-type-form{
     width: 100%;
     color: #4fa3a8;
     text-align: center;
-    padding: 10px 0;
-    margin: 11px auto;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+#filter-select{
+    cursor:pointer;
 }
 .category-active{
-    margin-right: 0 !important;
     color: #f7f7f7 !important;
 }
 .icon-set{
@@ -351,7 +365,7 @@ summary{
     height: 12vw;
     cursor: pointer;
 }
-.indicators-grid-item:hover, .region-map:hover{
+.region-map:hover{
     box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
 }
 .indicators-grid-item:active{

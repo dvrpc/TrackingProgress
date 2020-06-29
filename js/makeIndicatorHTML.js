@@ -260,6 +260,7 @@ const makeToTopBtn = () => {
     btn.setAttribute('name', 'to top')
     btn.textContent = '^ top'
     btn.id = 'to-top-btn'
+    btn.classList.add('hover-btn')
     
     btn.onclick = () => window.scrollTo({top: 0,behavior: 'smooth'})
 

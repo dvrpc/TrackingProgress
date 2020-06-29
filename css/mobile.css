@@ -9,18 +9,18 @@ body{
 }
 #dvrpc-logo{
     border-right: none;
-    height: 29px;
+    height: 26px;
 }
 #logo-help-wrapper{
     width: 50%;
 }
 #help-btn{
     font-size: 1rem;
-    margin-left: 20px;
-    padding: 4px 10px;
+    margin-left: 15px;
+    padding: 3px 9px;
 }
 #tp-logo{
-    height: 35px;
+    height: 30px;
 }
 
 /* Mobile styles for the splash page */
@@ -98,8 +98,7 @@ summary, #get-started, #to-grid{
 
 #filter-type-form{
     width: 100%;
-    padding: 0;
-    margin: 9px auto;
+    padding: 10px 0;
     font-size: 0.8em;
 }
 .indicators-grid-item{

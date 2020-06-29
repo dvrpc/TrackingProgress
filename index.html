@@ -34,7 +34,7 @@
     <header id="header">
         <div id="logo-help-wrapper">
             <a href="/TrackingProgress/"><img id="tp-logo" src="./img/header/TP-logo.png" alt="Tracking Progress project logo" /></a>
-            <button id="help-btn" type="button">?</button>
+            <button id="help-btn" class="hover-btn" type="button">?</button>
         </div>
         <a href="https://www.dvrpc.org">
             <img id="dvrpc-logo" src="./img/header/logo.png" alt="dvrpc logo" />
@@ -58,7 +58,7 @@
 
         <h3 id="get-started">Here's how to get started...</h3>
         <details class="info-toggle">
-            <summary role="button" id="dashSummary">Exploring the Dashboard</summary>
+            <summary role="button" id="dashSummary" class="hover-text">Exploring the Dashboard</summary>
             <div class="details-content-wrapper">
                 <div class="gif-row">
                     <figure class="gif-figure">
@@ -102,7 +102,7 @@
         </details>
 
         <details class="info-toggle">
-            <summary role="button" id="indicatorSummary">Exploring Indicator Pages</summary>
+            <summary role="button" id="indicatorSummary" class="hover-text">Exploring Indicator Pages</summary>
             <div class="details-content-wrapper">
                 <div class="gif-row">
                     <figure class="gif-figure">
@@ -122,7 +122,7 @@
         </details>
 
         <details>
-            <summary role="button">Exploring Geographic Levels</summary>
+            <summary role="button" class="hover-text">Exploring Geographic Levels</summary>
             <div class="details-content-wrapper details-text-content">
                 <p class="splash-text"><em>Tracking Progress</em> uses subregional geographies to further analyze what drives regional trends and provide data relevant to our communities, member governments, and planning partners. "NJ Counties" (Burlington, Camden, Gloucester, and Mercer counties) and "PA Suburban Counties" (Bucks, Chester, Delaware, and Montgomery counties) are used as aggregations to pair with "Philadelphia" to draw broad comparisons of Philadelphia and its surrounding counties on either side of the river.</p>
                 <figure class="splash-map-figure">
@@ -135,7 +135,7 @@
             </div>
         </details>
 
-        <button id="to-grid">To Dashboard</button>
+        <button id="to-grid" class="hover-btn">To Dashboard</button>
     </section>
 
     <div class="indicators-wrapper" id="dashboard">
@@ -143,63 +143,66 @@
             <button class="back-to-dash">&larr; Dashboard</button>
             <div class="related-indicators"></div>
             
-            <form id="filter-type-form">
-                <fieldset>
-                    <label for="filter-type">filter by: </label>
-                    <select>
-                        <option value="category" selected>category</option>
-                        <option value="emoji">trend</option>
-                    </select>
-                </fieldset>
-            </form>
-            
-            <!-- category filters -->
-            <div id="econo-icon" class="icon-set econo-accent">
-                <img src="./img/econo-icon.png" alt="economy icon" class="icon-set-img"/>
-                <p class="icon-set-p">Economy</p>
-            </div>
-            <div id="enviro-icon" class="icon-set enviro-accent">
-                <img src="./img/enviro-icon.png" alt="environment icon"  class="icon-set-img"/>
-                <p class="icon-set-p">Environment</p>
-            </div>
-            <div id="comm-icon" class="icon-set comm-accent">
-                <img src="./img/comm-icon.png" alt="community icon" class="icon-set-img"/>
-                <p class="icon-set-p">Community</p>
-            </div>
-            <div id="transpo-icon" class="icon-set transpo-accent">
-                <img src="./img/transpo-icon.png" alt="commerce icon"  class="icon-set-img"/>
-                <p class="icon-set-p">Transportation</p>
-            </div>
-            <div id="equity-icon" class="icon-set equity-accent">
-                <img src="./img/equity-icon.png" alt=" equity icon"  class="icon-set-img"/>
-                <p class="icon-set-p">Equity</p>
-            </div>
-
-            <!-- emoji filters -->
-            <div id="emoji-awesome" class="icon-set emoji-set">
-                <img src="./img/emoji-awesome.png" alt="awesome emoji" class="emoji-set-img"/>
-                <p class="icon-set-p">Very Good</p>
-            </div>
-            <div id="emoji-good" class="icon-set emoji-set">
-                <img src="./img/emoji-good.png" alt="good emoji"  class="emoji-set-img"/>
-                <p class="icon-set-p">Good</p>
-            </div>
-            <div id="emoji-neutral" class="icon-set emoji-set">
-                <img src="./img/emoji-neutral.png" alt="neutral emoji" class="emoji-set-img"/>
-                <p class="icon-set-p">Neutral</p>
-            </div>
-            <div id="emoji-not-great" class="icon-set emoji-set">
-                <img src="./img/emoji-not-great.png" alt="bad emoji"  class="emoji-set-img"/>
-                <p class="icon-set-p">Not Good</p>
-            </div>
-            <div id="emoji-bad" class="icon-set emoji-set">
-                <img src="./img/emoji-bad.png" alt="terrible emoji"  class="emoji-set-img"/>
-                <p class="icon-set-p">Poor</p>
-            </div>
+            <!-- @UPDATE: finish this -->
+            <!-- <div class="nav-wrapper"> -->
+                <form id="filter-type-form">
+                    <fieldset>
+                        <label for="filter-type">filter by: </label>
+                        <select class="hover-btn" id="filter-select">
+                            <option value="category" selected>category</option>
+                            <option value="emoji">trend</option>
+                        </select>
+                    </fieldset>
+                </form>
+                <!-- category filters -->
+                <div id="econo-icon" class="icon-set econo-accent hover-btn">
+                    <img src="./img/econo-icon.png" alt="economy icon" class="icon-set-img"/>
+                    <p class="icon-set-p">Economy</p>
+                </div>
+                <div id="enviro-icon" class="icon-set enviro-accent hover-btn">
+                    <img src="./img/enviro-icon.png" alt="environment icon"  class="icon-set-img"/>
+                    <p class="icon-set-p">Environment</p>
+                </div>
+                <div id="comm-icon" class="icon-set comm-accent hover-btn">
+                    <img src="./img/comm-icon.png" alt="community icon" class="icon-set-img"/>
+                    <p class="icon-set-p">Community</p>
+                </div>
+                <div id="transpo-icon" class="icon-set transpo-accent hover-btn">
+                    <img src="./img/transpo-icon.png" alt="commerce icon"  class="icon-set-img"/>
+                    <p class="icon-set-p">Transportation</p>
+                </div>
+                <div id="equity-icon" class="icon-set equity-accent hover-btn">
+                    <img src="./img/equity-icon.png" alt=" equity icon"  class="icon-set-img"/>
+                    <p class="icon-set-p">Equity</p>
+                </div>
+    
+                <!-- emoji filters -->
+                <div id="emoji-awesome" class="icon-set emoji-set hover-btn">
+                    <img src="./img/emoji-awesome.png" alt="awesome emoji" class="emoji-set-img"/>
+                    <p class="icon-set-p">Very Good</p>
+                </div>
+                <div id="emoji-good" class="icon-set emoji-set hover-btn">
+                    <img src="./img/emoji-good.png" alt="good emoji"  class="emoji-set-img"/>
+                    <p class="icon-set-p">Good</p>
+                </div>
+                <div id="emoji-neutral" class="icon-set emoji-set hover-btn">
+                    <img src="./img/emoji-neutral.png" alt="neutral emoji" class="emoji-set-img"/>
+                    <p class="icon-set-p">Neutral</p>
+                </div>
+                <div id="emoji-not-great" class="icon-set emoji-set hover-btn">
+                    <img src="./img/emoji-not-great.png" alt="bad emoji"  class="emoji-set-img"/>
+                    <p class="icon-set-p">Not Good</p>
+                </div>
+                <div id="emoji-bad" class="icon-set emoji-set hover-btn">
+                    <img src="./img/emoji-bad.png" alt="terrible emoji"  class="emoji-set-img"/>
+                    <p class="icon-set-p">Poor</p>
+                </div>
+            <!-- </div> -->
+            <!-- @UPDATE END -->
         </nav>
 
         <main class="indicators-grid">
-            <div data-primary="enviro" data-emoji="good" data-categories="enviro equity transpo" class="indicators-grid-item" id="Air Quality" role="button" tabindex="0">
+            <div data-primary="enviro" data-emoji="good" data-categories="enviro equity transpo" class="indicators-grid-item hover-btn" id="Air Quality" role="button" tabindex="0">
                 <img src="./img/indicator_icons/air_quality.png" class="indicators-icons" alt="air quality icon" />
                 <p class="indicators-title">Air Quality</p>
                 <div class="flipside">
@@ -207,7 +210,7 @@
                     <p class="flipside-text"><strong>109 fewer</strong><br />unhealthy air quality days per year</p>
                 </div>
             </div>
-            <div data-primary="transpo" data-emoji="awesome" data-categories="transpo" class="indicators-grid-item" id="Bridge Conditions" role="button" tabindex="0">
+            <div data-primary="transpo" data-emoji="awesome" data-categories="transpo" class="indicators-grid-item hover-btn" id="Bridge Conditions" role="button" tabindex="0">
                 <img src="./img/indicator_icons/bridge_conditions.png" class="indicators-icons" alt="bridge conditions icon" />
                 <p class="indicators-title">Bridge Conditions</p>
                 <div class="flipside">
@@ -215,7 +218,7 @@
                     <p class="flipside-text"><strong>54% drop </strong><br />in deficient bridge deck area</p>
                 </div>
             </div>
-            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo enviro comm" class="indicators-grid-item" id="Commute Mode" role="button" tabindex="0">
+            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo enviro comm" class="indicators-grid-item hover-btn" id="Commute Mode" role="button" tabindex="0">
                 <img src="./img/indicator_icons/nonSOV_mode_share.png" class="indicators-icons" alt="nonSOV mode share icon"/>
                 <p class="indicators-title">Commute Mode</p>
                 <div class="flipside">
@@ -223,7 +226,7 @@
                     <p class="flipside-text"><strong>1.5% fewer</strong><br />residents drive alone to work</p>
                 </div>
             </div>
-            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo econo comm" class="indicators-grid-item" id="Congestion" role="button" tabindex="0">
+            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo econo comm" class="indicators-grid-item hover-btn" id="Congestion" role="button" tabindex="0">
                 <img src="./img/indicator_icons/roadway_reliability.png" class="indicators-icons" alt="Congestion icon" />
                 <p class="indicators-title">Congestion</p>
                 <div class="flipside">
@@ -231,7 +234,7 @@
                     <p class="flipside-text"><strong>2.3% greater</strong><br />reliability on region's freeways</p>
                 </div>
             </div>
-            <div data-primary="comm" data-emoji="good" data-categories="comm econo equity" class="indicators-grid-item" id="Educational Attainment" role="button" tabindex="0">
+            <div data-primary="comm" data-emoji="good" data-categories="comm econo equity" class="indicators-grid-item hover-btn" id="Educational Attainment" role="button" tabindex="0">
                 <img src="./img/indicator_icons/educational_attainment.png" class="indicators-icons" alt="educational attainment icon" />
                 <p class="indicators-title">Educational Attainment</p>
                 <div class="flipside">
@@ -239,7 +242,7 @@
                     <p class="flipside-text"><strong>8.6% rise</strong><br />in population over 24 with high school diploma</p>
                 </div>
             </div>
-            <div data-primary="econo" data-emoji="not-great" data-categories="econo" class="indicators-grid-item" id="Exported Goods" role="button" tabindex="0">
+            <div data-primary="econo" data-emoji="not-great" data-categories="econo" class="indicators-grid-item hover-btn" id="Exported Goods" role="button" tabindex="0">
                 <img src="./img/indicator_icons/exports.png" class="indicators-icons" alt="Exports icon"/>
                 <p class="indicators-title">Exported Goods</p>
                 <div class="flipside">
@@ -247,7 +250,7 @@
                     <p class="flipside-text"><strong>8.9% decrease</strong><br />in value of exported goods</p>
                 </div>
             </div>
-            <div data-primary="econo" data-emoji="neutral" data-categories="econo transpo" class="indicators-grid-item" id="Global Connectivity" role="button" tabindex="0">
+            <div data-primary="econo" data-emoji="neutral" data-categories="econo transpo" class="indicators-grid-item hover-btn" id="Global Connectivity" role="button" tabindex="0">
                 <img src="./img/indicator_icons/global_connectivity.png" class="indicators-icons" alt="Global Connectivity icon"/>
                 <p class="indicators-title">Global Connectivity</p>
                 <div class="flipside">
@@ -255,7 +258,7 @@
                     <p class="flipside-text"><strong>0% change</strong><br />in PHL's international destinations</p>
                 </div>
             </div>
-            <div data-primary="enviro" data-emoji="good" data-categories="enviro comm equity" class="indicators-grid-item" id="Greenhouse Gas Emissions" role="button" tabindex="0">
+            <div data-primary="enviro" data-emoji="good" data-categories="enviro comm equity" class="indicators-grid-item hover-btn" id="Greenhouse Gas Emissions" role="button" tabindex="0">
                 <img src="./img/indicator_icons/emissions.png" class="indicators-icons" alt="emissions icon"/>
                 <p class="indicators-title">Greenhouse Gas Emissions</p>
                 <div class="flipside">
@@ -263,7 +266,7 @@
                     <p class="flipside-text"><strong>21% reduction</strong><br />in greenhouse gas emissions</p>
                 </div>
             </div>
-            <div data-primary="comm" data-emoji="good" data-categories="comm econo enviro" class="indicators-grid-item" id="Housing Activity" role="button" tabindex="0">
+            <div data-primary="comm" data-emoji="good" data-categories="comm econo enviro" class="indicators-grid-item hover-btn" id="Housing Activity" role="button" tabindex="0">
                 <img src="./img/indicator_icons/housing_activity.png" class="indicators-icons" alt="housing activity icon"/>
                 <p class="indicators-title">Housing Activity</p>
                 <div class="flipside">
@@ -271,7 +274,7 @@
                     <p class="flipside-text"><strong>30% more</strong><br />permits in appropriate development areas</p>
                 </div>
             </div>
-            <div data-primary="comm" data-emoji="neutral" data-categories="comm equity econo" class="indicators-grid-item" id="Housing Affordability" role="button" tabindex="0">
+            <div data-primary="comm" data-emoji="neutral" data-categories="comm equity econo" class="indicators-grid-item hover-btn" id="Housing Affordability" role="button" tabindex="0">
                 <img src="./img/indicator_icons/affordable_housing.png" class="indicators-icons" alt="affordable housing icon" />
                 <p class="indicators-title">Housing Affordability</p>
                 <div class="flipside">
@@ -279,7 +282,7 @@
                     <p class="flipside-text"><strong>4.2% fewer</strong><br />cost-burdened households</p>
                 </div>
             </div>
-            <div data-primary="equity" data-emoji="bad" data-categories="equity econo comm" class="indicators-grid-item" id="Income Disparities" role="button" tabindex="0">
+            <div data-primary="equity" data-emoji="bad" data-categories="equity econo comm" class="indicators-grid-item hover-btn" id="Income Disparities" role="button" tabindex="0">
                 <img src="./img/indicator_icons/income_inequality.png" class="indicators-icons" alt="Income Disparities icon" />
                 <p class="indicators-title">Income Disparities</p>
                 <div class="flipside">
@@ -287,7 +290,7 @@
                     <p class="flipside-text"><strong>25% wider</strong><br />gap between high &amp; low household income</p>
                 </div>
             </div>
-            <div data-primary="econo" data-emoji="good" data-categories="econo" class="indicators-grid-item" id="Innovation" role="button" tabindex="0">
+            <div data-primary="econo" data-emoji="good" data-categories="econo" class="indicators-grid-item hover-btn" id="Innovation" role="button" tabindex="0">
                 <img src="./img/indicator_icons/innovation.png" class="indicators-icons" alt="Innovation icon"/>
                 <p class="indicators-title">Innovation</p>
                 <div class="flipside">
@@ -295,7 +298,7 @@
                     <p class="flipside-text"><strong>29% increase</strong><br />in patent approvals</p>
                 </div>
             </div>
-            <div data-primary="econo" data-emoji="good" data-categories="econo comm" class="indicators-grid-item" id="Job Growth" role="button" tabindex="0">
+            <div data-primary="econo" data-emoji="good" data-categories="econo comm" class="indicators-grid-item hover-btn" id="Job Growth" role="button" tabindex="0">
                 <img src="./img/indicator_icons/job_growth.png" class="indicators-icons" alt="Job Growth icon"/>
                 <p class="indicators-title">Job Growth</p>
                 <div class="flipside">
@@ -303,7 +306,7 @@
                     <p class="flipside-text"><strong>6% increase</strong><br />in jobs</p>
                 </div>
             </div>
-            <div data-primary="enviro" data-emoji="good" data-categories="enviro comm" class="indicators-grid-item" id="Land Consumption" role="button" tabindex="0">
+            <div data-primary="enviro" data-emoji="good" data-categories="enviro comm" class="indicators-grid-item hover-btn" id="Land Consumption" role="button" tabindex="0">
                 <img src="./img/indicator_icons/land_consumption.png" class="indicators-icons" alt="land consumption icon"/>
                 <p class="indicators-title">Land Consumption</p>
                 <div class="flipside">
@@ -311,7 +314,7 @@
                     <p class="flipside-text"><strong>62% drop</strong><br />in land consumption rate</p>
                 </div>
             </div>
-            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo enviro" class="indicators-grid-item" id="Miles Driven" role="button" tabindex="0">
+            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo enviro" class="indicators-grid-item hover-btn" id="Miles Driven" role="button" tabindex="0">
                 <img src="./img/indicator_icons/vmt.png" class="indicators-icons" alt="miles driven icon"/>
                 <p class="indicators-title">Miles Driven</p>
                 <div class="flipside">
@@ -319,7 +322,7 @@
                     <p class="flipside-text"><strong>0.6% more</strong><br />miles driven annually per person</p>
                 </div>
             </div>
-            <div data-primary="transpo" data-emoji="bad" data-categories="transpo" class="indicators-grid-item" id="Pavement Conditions" role="button" tabindex="0">
+            <div data-primary="transpo" data-emoji="bad" data-categories="transpo" class="indicators-grid-item hover-btn" id="Pavement Conditions" role="button" tabindex="0">
                 <img src="./img/indicator_icons/pavement_conditions.png" class="indicators-icons" alt="pavement conditions icon"/>
                 <p class="indicators-title">Pavement Conditions</p>
                 <div class="flipside">
@@ -327,7 +330,7 @@
                     <p class="flipside-text"><strong>5.3% more</strong><br />road segment miles in poor condition</p>
                 </div>
             </div>
-            <div data-primary="comm" data-emoji="good" data-categories="comm econo enviro" class="indicators-grid-item" id="Population Growth" role="button" tabindex="0">
+            <div data-primary="comm" data-emoji="good" data-categories="comm econo enviro" class="indicators-grid-item hover-btn" id="Population Growth" role="button" tabindex="0">
                 <img src="./img/indicator_icons/population_growth.png" class="indicators-icons" alt="population growth icon"/>
                 <p class="indicators-title">Population Growth</p>
                 <div class="flipside">
@@ -335,7 +338,7 @@
                     <p class="flipside-text"><strong>6.5% increase</strong><br />in population</p>
                 </div>
             </div>
-            <div data-primary="equity" data-emoji="neutral" data-categories="equity comm econo" class="indicators-grid-item" id="Racial & Ethnic Disparities" role="button" tabindex="0">
+            <div data-primary="equity" data-emoji="neutral" data-categories="equity comm econo" class="indicators-grid-item hover-btn" id="Racial & Ethnic Disparities" role="button" tabindex="0">
                 <img src="./img/indicator_icons/racial_disparities.png" class="indicators-icons " alt="Racial Ethnic Disparities icon"/>
                 <p class="indicators-title">Racial &amp; Ethnic Disparities</p>
                 <div class="flipside">
@@ -343,7 +346,7 @@
                     <p class="flipside-text"><strong>6.8% drop</strong><br />in income gap between People of Color &amp; White</p>
                 </div>
             </div>
-            <div data-primary="transpo" data-emoji="not-great" data-categories="transpo equity" class="indicators-grid-item" id="Roadway Safety" role="button" tabindex="0">
+            <div data-primary="transpo" data-emoji="not-great" data-categories="transpo equity" class="indicators-grid-item hover-btn" id="Roadway Safety" role="button" tabindex="0">
                 <img src="./img/indicator_icons/vehicle_crashes.png" class="indicators-icons" alt="roadway safety icon" />
                 <p class="indicators-title">Roadway Safety</p>
                 <div class="flipside">
@@ -351,7 +354,7 @@
                     <p class="flipside-text"><strong>2.5% increase</strong><br />in fatalities and severe injuries</p>
                 </div>
             </div>
-            <div data-primary="equity" data-emoji="neutral" data-categories="equity econo comm" class="indicators-grid-item" id="Sex Disparities" role="button" tabindex="0">
+            <div data-primary="equity" data-emoji="neutral" data-categories="equity econo comm" class="indicators-grid-item hover-btn" id="Sex Disparities" role="button" tabindex="0">
                 <img src="./img/indicator_icons/sex_disparities.png" class="indicators-icons " alt="Sex Disparities icon"/>
                 <p class="indicators-title">Sex Disparities</p>
                 <div class="flipside">
@@ -359,7 +362,7 @@
                     <p class="flipside-text"><strong>30% smaller</strong><br />income gap between male &amp; female workers</p>
                 </div>
             </div>        
-            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo" class="indicators-grid-item" id="Transit Conditions" role="button" tabindex="0">
+            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo" class="indicators-grid-item hover-btn" id="Transit Conditions" role="button" tabindex="0">
                 <img src="./img/indicator_icons/transit_conditions.png" class="indicators-icons" alt="transit conditions icon"/>
                 <p class="indicators-title">Transit Conditions</p>
                 <div class="flipside">
@@ -367,7 +370,7 @@
                     <p class="flipside-text"><strong>14% increase</strong><br />in average transit fleet age</p>
                 </div>
             </div>
-            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo comm enviro" class="indicators-grid-item" id="Transit Ridership" role="button" tabindex="0">
+            <div data-primary="transpo" data-emoji="neutral" data-categories="transpo comm enviro" class="indicators-grid-item hover-btn" id="Transit Ridership" role="button" tabindex="0">
                 <img src="./img/indicator_icons/transit_ridership.png" class="indicators-icons" alt="Transit Ridership icon"/>
                 <p class="indicators-title">Transit Ridership</p>
                 <div class="flipside">
@@ -375,7 +378,7 @@
                     <p class="flipside-text"><strong>1.1% decrease</strong><br />in transit trips per person</p>
                 </div>
             </div>
-            <div data-primary="enviro" data-emoji="not-great" data-categories="enviro" class="indicators-grid-item" id="Water Quality" role="button" tabindex="0">
+            <div data-primary="enviro" data-emoji="not-great" data-categories="enviro" class="indicators-grid-item hover-btn" id="Water Quality" role="button" tabindex="0">
                 <img src="./img/indicator_icons/water_quality.png" class="indicators-icons" alt="water quality icon"/>
                 <p class="indicators-title">Water Quality</p>
                 <div class="flipside">
@@ -383,7 +386,7 @@
                     <p class="flipside-text"><strong>8.7% decrease</strong><br />in water supporting aquatic life</p>
                 </div>
             </div>
-            <div data-categories="enviro comm equity econo transpo" data-emoji="na" class="indicators-grid-item" role="button" tabindex="0">
+            <div data-categories="enviro comm equity econo transpo" data-emoji="na" class="indicators-grid-item hover-btn" role="button" tabindex="0">
                 <img src="./img/indicator_icons/tp_homepage_logo.png" id="connections-icon" alt="Connections 2045 Logo"/>
                 <span></span>
                 <div class="flipside">
