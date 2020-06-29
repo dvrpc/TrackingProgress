@@ -163,7 +163,7 @@ summary, #get-started, #to-grid{
     font-size: 0.9em;
 }
 .related-indicators{
-    width: 81%;
+    width: 82%;
     border-top: none;
     flex-direction: row !important;
     justify-content: flex-start;
@@ -183,8 +183,9 @@ summary, #get-started, #to-grid{
     display: flex;
     align-items: center;
 }
-#related-indicators-subheader-wrapper img{
-    height: 26px;
+#related-indicators-subheader-img{
+    width: 25px;
+    height: auto;
 }
 #related-indicators-subheader{
     font-size: 0.8em;

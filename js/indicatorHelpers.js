@@ -155,7 +155,7 @@ const getIndicatorSnippet = (ref, indicatorParams) => {
 }
 
 const makeRelatedSubheader = cat => {
-    const bg = catLookup[cat].light
+    const accentColor = catLookup[cat].dark
     const name = catLookup[cat].name
     const frag = document.createDocumentFragment()
     const wrapper = document.createElement('div')
@@ -163,10 +163,11 @@ const makeRelatedSubheader = cat => {
     const subheader = document.createElement('h3')
 
     wrapper.id = 'related-indicators-subheader-wrapper'
-    wrapper.style.backgroundColor = bg
+    wrapper.style.color = accentColor
     
     img.src =  `./img/sidenav/${cat}.png`
     img.alt = `${cat} icons`
+    img.id="related-indicators-subheader-img"
     
     subheader.id = 'related-indicators-subheader'
     subheader.textContent = `${name} Indicators:`

@@ -533,7 +533,7 @@ summary{
     text-align: center;
     padding: 10px 0;
     margin: 11px auto;
-    font-size: 1.3em;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 .related-indicators{
@@ -546,11 +546,21 @@ summary{
 #related-indicators-subheader-wrapper{
     font-size: 0.9em;
     margin: 0;
-    padding: 10px 4px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#related-indicators-subheader-img{
+    max-width: 20%;
+    height: auto;
+    border-radius: 50%;
 }
 #related-indicators-subheader{
     margin: 0;
     font-weight: 500;
+    width: 70%;
 }
 .sideLink{
     padding: 10%;
