@@ -185,6 +185,8 @@ summary, #get-started, #to-grid{
 }
 #related-indicators-subheader-img{
     width: 25px;
+    margin: 0 5px;
+    max-width: none;
     height: auto;
 }
 #related-indicators-subheader{
