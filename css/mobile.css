@@ -3,6 +3,11 @@ body{
     font-size: 14px;
 }
 
+/* Hide elements */
+.emoji-spacer, .splash-map-figure, .flipside, .fade-right, #to-top-btn{
+    display: none;
+}
+
 /* Mobile styles for nav */
 #header{
     height: 6vh;
@@ -39,13 +44,13 @@ body{
     flex-direction: column;
     padding: 0;
 }
-.splash-map-figure{
-    display: none;
-}
 .splash-text{
     width: 100%;
     margin: 1% auto;
     line-height: 1.4rem;
+}
+.text-right{
+    text-align: left;
 }
 summary, #get-started, #to-grid{
     font-size: 1em;
@@ -66,8 +71,7 @@ summary, #get-started, #to-grid{
     justify-content: center;
 }
 .emoji-figure{
-    width: 50%;
-    margin-bottom: 5%;
+    width: 20%;
 }
 .emoji-figure img{
     width: 30px;
@@ -130,9 +134,6 @@ summary, #get-started, #to-grid{
 #equity-icon{
     margin-bottom: auto;
 }
-.flipside{
-    display: none;
-}
 .indicators-nav div:last-child{
     margin-right: 0;
     margin-bottom: 4px;
@@ -151,7 +152,6 @@ summary, #get-started, #to-grid{
 }
 .fade-right{
     margin-left: 100vw;
-    display: none;
 }
 
 
@@ -255,9 +255,6 @@ summary, #get-started, #to-grid{
 }
 .nv-series text{
     font-size: 9px;
-}
-#to-top-btn{
-    display: none;
 }
 
 
