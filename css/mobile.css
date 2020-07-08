@@ -147,7 +147,6 @@ summary, #get-started, #to-grid{
 .indicators-grid{
     position: initial;
     width: 100%;
-    display: flex;
     margin-left: 0;
 }
 .fade-right{
