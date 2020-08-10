@@ -43,9 +43,6 @@ const makeIndicatorHTML = params => {
     // add charts
     const charts = chartStrings[title]
     snippet.insertAdjacentHTML('beforeend', charts)
-    
-    // possible alternative: dynamically import the one string needed
-    //import(`./indicatorChartStrings`)
 
     return snippet
 }
@@ -247,6 +244,7 @@ const makeTrendText = trend => {
     contextWrapper.appendChild(contextImg)
     contextWrapper.appendChild(p)
     frag.appendChild(contextWrapper)
+    
     return frag
 }
 // END text
