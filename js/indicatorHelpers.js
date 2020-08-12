@@ -54,26 +54,24 @@ const toggleChart = (selected, dataSets) => {
         // firstToggleValue is the state of the first toggle and is used to get the correct column names when the 2nd toggle is set and the 1st is changing
     let doubleToggle;
     let useFirstToggle;
+    const form = selected.parentElement.parentElement.parentElement
+    const formLast = (form.children.length -1)
     
     // handle DIRECT interaction with the second toggle (toggleID.length > 2 means the user has selected the 2nd toggle)
     if(toggleID.length > 2) {
         doubleToggle = chartNumber
 
-        const firstToggle = selected.parentElement.previousElementSibling.previousElementSibling.children[1]
+        // const firstToggle = selected.parentElement.previousElementSibling.previousElementSibling.children[1]
+        const firstToggle = form.children[0].children[0].children[0]
 
         // grab the state of the first toggle to make sure the correct columns are being assigned to newColumns
         useFirstToggle = firstToggle.options[firstToggle.selectedIndex].value
 
     // handle possible INDIRECT interaction with the second toggle (user hasn't selected the 2nd toggle but its state still needs to be captured in case it's data set needs to be used)
     }else {
-        // check for presence of a double toggle (will have sibling fieldset and .vr span)
-        let hasDoubleToggle = selected.parentElement.nextElementSibling || selected.parentElement.previousElementSibling
-
         // if the chart has a double toggle, get the value of the 2nd toggle to pass on to viz.js functions to determine which data csv to use
-        if(hasDoubleToggle){
-            // get a hold on the select (skip the .vr span)
-            hasDoubleToggle = hasDoubleToggle.nextElementSibling || hasDoubleToggle.previousElementSibling
-            const doubleToggleSelect = hasDoubleToggle.children[1]
+        if(formLast){
+            const doubleToggleSelect = form.children[formLast].children[0].children[0] || form.children[0].children[0].children[0]
             doubleToggle = parseInt(doubleToggleSelect.options[doubleToggleSelect.selectedIndex].value)
         }
     }
