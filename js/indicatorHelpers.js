@@ -27,9 +27,7 @@ const dataVizSwitch = (type, source, toggleContext) => {
             break;
         case 'waterfall':
             // quick fix to handle initial waterfall size being too small
-            window.setTimeout(() => {
-                graphs.createWaterfallChart(source, toggleContext)
-            }, 100)
+            window.setTimeout(graphs.createWaterfallChart, 100, source, toggleContext)
             break;
         case 'bar': 
             graphs.createBarChart(source, toggleContext)

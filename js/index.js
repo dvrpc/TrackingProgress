@@ -72,6 +72,8 @@ document.onscroll = () => {
         // undo the margin that allows splash page and dash to coexist
         dashboard.style.marginTop = '6vh'
 
+        window.scrollTo(0,0)
+
         // flip splash state
         splashVisible = false
     }
@@ -198,16 +200,18 @@ grid.onclick = e => {
     if(node != 'MAIN'){
         // get title and primary category from the clicked element
         [title, primaryCategory] = [... clickIndicator(e)]
+        
+        // scroll
+        if(!help.classList.contains('fade-in')){
+            const gridOffset = (grid.getBoundingClientRect().top + window.scrollY)
+            window.scrollTo({
+                top: gridOffset,
+                behavior: 'smooth'
+            })
+        }
 
-        // scrollto
-        // @NOTE: finish
-        window.scrollTo({
-            location: (grid.offsetTop + 2),
-            behavior: 'smooth'
-        })
-    
-        // update the URL which in turn hydrates the indicator page
-        setIndicatorURL(title, primaryCategory, true)
+        // after scrolling, update the URL to create the indicator page
+        window.setTimeout(setIndicatorURL, 250, title, primaryCategory, true)
     }
 }
 
