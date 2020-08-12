@@ -273,13 +273,9 @@ footer{
     width: 60%;
     text-align: center;
 }
-.footer-social{
-    width: 15px;
+.vr, .footer-social{
     height: 15px;
 }
 #email-icon{
     height: 14px;
-}
-#email-icon, #youtube-icon{
-    width: 20px;
 }

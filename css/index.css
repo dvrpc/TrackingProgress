@@ -698,16 +698,13 @@ address{
     margin: 0 3%;
 }
 .footer-social{
-    height: 19px;
-    width: 21px;
     padding: 0 5px;
 }
-#email-icon{
-    height: 17px;
-    width: 25px;
+.vr, .footer-social{
+    height: 20px;
 }
-#youtube-icon{
-    width: 25px;
+#email-icon{
+    height: 18px;
 }
 .footer-social-link{
     align-self: center;
