@@ -23,7 +23,7 @@ body{
     box-shadow: 2px 4px 6px rgba(0,0,0,0.3) !important;
     filter: hue-rotate(350deg);
   }
-.hover-text:hover, .info-toggle[open]{
+.hover-text:hover{
     filter: drop-shadow(1px 2px 0px rgba(0,0,0,0.2));
 }
 .sm{
@@ -74,7 +74,6 @@ fieldset{
     padding: 0;
     margin: 0;
     border: 0;
-    min-width: 0;
 }
 
 
@@ -227,10 +226,10 @@ summary{
 }
 .emoji-figure img{
     width: 40px;
-    height: 40px;
     margin-right: 5px;
     background: #4fa3a8;
     border-radius: 50%;
+    filter: drop-shadow(1px 2px 0px rgba(0,0,0,0.2));
 }
 .emoji-spacer{
     border-top: 2px solid #4fa3a8;

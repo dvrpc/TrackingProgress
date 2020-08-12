@@ -18,10 +18,11 @@ let splashVisible = true
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
 const filterState = document.getElementById('filter-type-form')
-// get all icon-sets for click events
 const filters = [... document.querySelectorAll('.icon-set')]
+const headerHeight = window.innerHeight * 0.08
 let catFilters = []
 let emojiFilters = []
+
 // populate cat/emoji filter arrays
 filters.forEach(filter => filter.classList.contains('emoji-set') ? emojiFilters.push(filter) : catFilters.push(filter))
 let filterType = 'category'
@@ -60,20 +61,16 @@ document.onscroll = () => {
     if(!splashVisible) return
     
     const top = grid.getBoundingClientRect().top
-    const headerHeight = window.innerHeight * 0.08
 
-    if(top <= headerHeight) {
+    if(top < headerHeight) {
+        // display the (i) into the header
+        help.classList.add('fade-in')
+
         splash.style.position = 'fixed'
-        splash.style.visibility = 'collapse'
+        splash.style.visibility = 'hidden'
 
         // undo the margin that allows splash page and dash to coexist
         dashboard.style.marginTop = '6vh'
-
-        // scroll to the top of the page
-        window.scrollTo(0,0)
-
-        // display the (i) into the header
-        help.classList.add('fade-in')
 
         // flip splash state
         splashVisible = false
@@ -94,7 +91,10 @@ help.onclick = () => {
     dashboard.style.marginTop = '0'
 
     // scroll to top of the page
-    window.scrollTo(0,0)
+    window.scrollTo({
+        top: 0,
+        behvaior: 'smooth'
+    })
 
     // flip the splash bool to listen to scroll events again
     splashVisible = true
@@ -198,6 +198,13 @@ grid.onclick = e => {
     if(node != 'MAIN'){
         // get title and primary category from the clicked element
         [title, primaryCategory] = [... clickIndicator(e)]
+
+        // scrollto
+        // @NOTE: finish
+        window.scrollTo({
+            location: (grid.offsetTop + 2),
+            behavior: 'smooth'
+        })
     
         // update the URL which in turn hydrates the indicator page
         setIndicatorURL(title, primaryCategory, true)

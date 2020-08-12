@@ -12,11 +12,13 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Quarterly Unhealthy Days by Air Quality Index Level</h2>
             <form>
                 <fieldset>
-                    <label for="viz-1">Select Pollutant: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <option value="0">Ozone</option>
-                        <option value="1">Particulate Matter</option>
-                    </select>
+                    <label>
+                        Select Pollutant:
+                        <select class="toggle-data-selector">
+                            <option value="0">Ozone</option>
+                            <option value="1">Particulate Matter</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -30,34 +32,38 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Percentage of Deficient Bridges by Ownership Type</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-0">Select Geography: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">All PA Counties</option>
-                            <option value="3">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="4">Bucks</option>
-                            <option value="5">Burlington</option>
-                            <option value="6">Camden</option>
-                            <option value="7">Chester</option>
-                            <option value="8">Delaware</option>
-                            <option value="9">Gloucester</option>
-                            <option value="10">Mercer</option>
-                            <option value="11">Montgomery</option>
-                            <option value="12">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography:
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">All PA Counties</option>
+                                <option value="3">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="4">Bucks</option>
+                                <option value="5">Burlington</option>
+                                <option value="6">Camden</option>
+                                <option value="7">Chester</option>
+                                <option value="8">Delaware</option>
+                                <option value="9">Gloucester</option>
+                                <option value="10">Mercer</option>
+                                <option value="11">Montgomery</option>
+                                <option value="12">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-0-b">Select Value Type: </label>
-                    <select id="viz-0-b" class="toggle-data-selector">
-                        <option value="0">Share of Total Bridge Deck Area</option>
-                        <option value="1">Share of Total Bridges</option>
-                    </select>
+                    <label>
+                        Select Value Type:
+                        <select class="toggle-data-selector">
+                            <option value="0">Share of Total Bridge Deck Area</option>
+                            <option value="1">Share of Total Bridges</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -72,34 +78,38 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Deficient Bridges by Ownership Type</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">All PA Counties</option>
-                            <option value="3">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="4">Bucks</option>
-                            <option value="5">Burlington</option>
-                            <option value="6">Camden</option>
-                            <option value="7">Chester</option>
-                            <option value="8">Delaware</option>
-                            <option value="9">Gloucester</option>
-                            <option value="10">Mercer</option>
-                            <option value="11">Montgomery</option>
-                            <option value="12">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography:
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">All PA Counties</option>
+                                <option value="3">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="4">Bucks</option>
+                                <option value="5">Burlington</option>
+                                <option value="6">Camden</option>
+                                <option value="7">Chester</option>
+                                <option value="8">Delaware</option>
+                                <option value="9">Gloucester</option>
+                                <option value="10">Mercer</option>
+                                <option value="11">Montgomery</option>
+                                <option value="12">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-1-b">Select Value Type: </label>
-                    <select id="viz-1-b" class="toggle-data-selector">
-                        <option value="0">Bridge Deck Area</option>
-                        <option value="1">Number of Bridges</option>
-                    </select>
+                    <label>
+                        Select Value Type:    
+                        <select class="toggle-data-selector">
+                            <option value="0">Bridge Deck Area</option>
+                            <option value="1">Number of Bridges</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -114,34 +124,38 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Bridges by Condition</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-2">Select Geography: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">All PA Counties</option>
-                            <option value="3">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="4">Bucks</option>
-                            <option value="5">Burlington</option>
-                            <option value="6">Camden</option>
-                            <option value="7">Chester</option>
-                            <option value="8">Delaware</option>
-                            <option value="9">Gloucester</option>
-                            <option value="10">Mercer</option>
-                            <option value="11">Montgomery</option>
-                            <option value="12">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography:
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">All PA Counties</option>
+                                <option value="3">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="4">Bucks</option>
+                                <option value="5">Burlington</option>
+                                <option value="6">Camden</option>
+                                <option value="7">Chester</option>
+                                <option value="8">Delaware</option>
+                                <option value="9">Gloucester</option>
+                                <option value="10">Mercer</option>
+                                <option value="11">Montgomery</option>
+                                <option value="12">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-2-b">Select Value Type: </label>
-                    <select id="viz-2-b" class="toggle-data-selector">
-                        <option value="0">Bridge Deck Area</option>
-                        <option value="1">Number of Bridges</option>
-                    </select>
+                    <label>
+                        Select Value Type:
+                        <select class="toggle-data-selector">
+                            <option value="0">Bridge Deck Area</option>
+                            <option value="1">Number of Bridges</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -155,33 +169,37 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Share of Workers by Drive-Alone Status</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-0">Select Geography: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography:
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-0-b">Select Point of Origin: </label>
-                    <select id="viz-0-b" class="toggle-data-selector">
-                        <option value="0">Residence</option>
-                        <option value="1">Workplace</option>
-                    </select>
+                    <label>
+                        Select Point of Origin
+                        <select class="toggle-data-selector">
+                            <option value="0">Residence</option>
+                            <option value="1">Workplace</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>    
         </div>
@@ -196,33 +214,37 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Non-Drive-Alone Workers by Means of Transportation to Work</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-1-b">Select Point of Origin: </label>
-                    <select id="viz-1-b" class="toggle-data-selector">
-                        <option value="0">Residence</option>
-                        <option value="1">Workplace</option>
-                    </select>
+                    <label>
+                        Select Point of Origin
+                        <select class="toggle-data-selector">
+                            <option value="0">Residence</option>
+                            <option value="1">Workplace</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -235,11 +257,13 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Planning Time Index by Geography (Annual Weekday Average)</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Road Type: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Freeways</option>
-                        <option value="1">Local</option>
-                    </select>
+                    <label>
+                        Select Road Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Freeways</option>
+                            <option value="1">Local</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -255,34 +279,38 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Planning Time Index by Time Period (Annual Weekday Average)</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">All PA Counties</option>
-                            <option value="3">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="4">Bucks</option>
-                            <option value="5">Burlington</option>
-                            <option value="6">Camden</option>
-                            <option value="7">Chester</option>
-                            <option value="8">Delaware</option>
-                            <option value="9">Gloucester</option>
-                            <option value="10">Mercer</option>
-                            <option value="11">Montgomery</option>
-                            <option value="12">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography:
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">All PA Counties</option>
+                                <option value="3">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="4">Bucks</option>
+                                <option value="5">Burlington</option>
+                                <option value="6">Camden</option>
+                                <option value="7">Chester</option>
+                                <option value="8">Delaware</option>
+                                <option value="9">Gloucester</option>
+                                <option value="10">Mercer</option>
+                                <option value="11">Montgomery</option>
+                                <option value="12">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-1-b">Select Road Type: </label>
-                    <select id="viz-1-b" class="toggle-data-selector">
-                        <option value="0">Freeways</option>
-                        <option value="1">Local</option>
-                    </select>
+                    <label>
+                        Select Road Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Freeways</option>
+                            <option value="1">Local</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -312,31 +340,33 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Population Over 24 by Educational Attainment</h2>
             <form>
                 <fieldset>
-                    <label for="viz-2">Select Geography: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Planning Areas">
-                            <option value="3">Core Cities</option>
-                            <option value="4">Developed Communities</option>
-                            <option value="5">Growing Suburbs</option>
-                            <option value="6">Rural Areas</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="7">Bucks</option>
-                            <option value="8">Burlington</option>
-                            <option value="9">Camden</option>
-                            <option value="10">Chester</option>
-                            <option value="11">Delaware</option>
-                            <option value="12">Gloucester</option>
-                            <option value="13">Mercer</option>
-                            <option value="14">Montgomery</option>
-                            <option value="15">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Planning Areas">
+                                <option value="3">Core Cities</option>
+                                <option value="4">Developed Communities</option>
+                                <option value="5">Growing Suburbs</option>
+                                <option value="6">Rural Areas</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="7">Bucks</option>
+                                <option value="8">Burlington</option>
+                                <option value="9">Camden</option>
+                                <option value="10">Chester</option>
+                                <option value="11">Delaware</option>
+                                <option value="12">Gloucester</option>
+                                <option value="13">Mercer</option>
+                                <option value="14">Montgomery</option>
+                                <option value="15">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -356,11 +386,13 @@ const chartStrings = {
         <h2 class="indicator-subheader toggle-subheader">Destinations of Flights from Philadelphia International Airport (PHL) by Airport Location</h2>
         <form>
             <fieldset>
-                <label for="viz-0">Select Type: </label>
-                <select id="viz-0" class="toggle-data-selector">
-                    <option value="0">Total</option>
-                    <option value="1">Year-Round/Seasonal</option>
-                </select>
+                <label>
+                    Select Type
+                    <select class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Year-Round/Seasonal</option>
+                    </select>
+                </label>
             </fieldset>
         </form>
         </div>
@@ -373,11 +405,13 @@ const chartStrings = {
         <h2 class="indicator-subheader toggle-subheader">Greenhouse Gas Emissions</h2>
         <form>
             <fieldset>
-                <label for="viz-0">Select Value Type: </label>
-                <select id="viz-0" class="toggle-data-selector">
-                    <option value="0">Total Emissions</option>
-                    <option value="1">Emissions per Capita</option>
-                </select>
+                <label>
+                    Select Value Type
+                    <select class="toggle-data-selector">
+                        <option value="0">Total Emissions</option>
+                        <option value="1">Emissions per Capita</option>
+                    </select>
+                </label>
             </fieldset>
         </form>
         </div>
@@ -409,12 +443,14 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Regional Climate Data by Value Type</h2>
             <form>
                 <fieldset>
-                    <label for="viz-3">Select Weather Type: </label>
-                    <select id="viz-3" class="toggle-data-selector">
-                        <option value="0">Temperature</option>
-                        <option value="1">Precipitation</option>
-                        <option value="2">Precipitation from Severe Storms</option>
-                    </select>
+                    <label>
+                        Select Weather Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Temperature</option>
+                            <option value="1">Precipitation</option>
+                            <option value="2">Precipitation from Severe Storms</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -427,11 +463,13 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Percentage of Building Permits Issued in Core Cities or Developed Communities</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Value Type: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Annual</option>
-                        <option value="1">Since Base Year</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Annual</option>
+                            <option value="1">Since Base Year</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -446,31 +484,35 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Total Building Permits Issued by Planning Area</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="1">Bucks</option>
-                            <option value="2">Burlington</option>
-                            <option value="3">Camden</option>
-                            <option value="4">Chester</option>
-                            <option value="5">Delaware</option>
-                            <option value="6">Gloucester</option>
-                            <option value="7">Mercer</option>
-                            <option value="8">Montgomery</option>
-                            <option value="9">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="1">Bucks</option>
+                                <option value="2">Burlington</option>
+                                <option value="3">Camden</option>
+                                <option value="4">Chester</option>
+                                <option value="5">Delaware</option>
+                                <option value="6">Gloucester</option>
+                                <option value="7">Mercer</option>
+                                <option value="8">Montgomery</option>
+                                <option value="9">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-1-b">Select Value Type: </label>
-                    <select id="viz-1-b" class="toggle-data-selector">
-                        <option value="0">Annual</option>
-                        <option value="1">Since Base Year</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Annual</option>
+                            <option value="1">Since Base Year</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -485,39 +527,43 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Total Building Permits Issued by Type</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-2">Select Geography: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Planning Areas">
-                            <option value="3">Core Cities</option>
-                            <option value="4">Developed Communities</option>
-                            <option value="5">Growing Suburbs</option>
-                            <option value="6">Rural Areas</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="7">Bucks</option>
-                            <option value="8">Burlington</option>
-                            <option value="9">Camden</option>
-                            <option value="10">Chester</option>
-                            <option value="11">Delaware</option>
-                            <option value="12">Gloucester</option>
-                            <option value="13">Mercer</option>
-                            <option value="14">Montgomery</option>
-                            <option value="15">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Planning Areas">
+                                <option value="3">Core Cities</option>
+                                <option value="4">Developed Communities</option>
+                                <option value="5">Growing Suburbs</option>
+                                <option value="6">Rural Areas</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="7">Bucks</option>
+                                <option value="8">Burlington</option>
+                                <option value="9">Camden</option>
+                                <option value="10">Chester</option>
+                                <option value="11">Delaware</option>
+                                <option value="12">Gloucester</option>
+                                <option value="13">Mercer</option>
+                                <option value="14">Montgomery</option>
+                                <option value="15">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-2-b">Select Value Type: </label>
-                    <select id="viz-2-b" class="toggle-data-selector">
-                        <option value="0">Annual</option>
-                        <option value="1">Since Base Year</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Annual</option>
+                            <option value="1">Since Base Year</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -547,31 +593,33 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Households' Housing Cost Burden by Ownership Status</h2>
             <form>
                 <fieldset>
-                    <label for="viz-2">Select Geography: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Planning Areas">
-                            <option value="3">Core Cities</option>
-                            <option value="4">Developed Communities</option>
-                            <option value="5">Growing Suburbs</option>
-                            <option value="6">Rural Areas</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="7">Bucks</option>
-                            <option value="8">Burlington</option>
-                            <option value="9">Camden</option>
-                            <option value="10">Chester</option>
-                            <option value="11">Delaware</option>
-                            <option value="12">Gloucester</option>
-                            <option value="13">Mercer</option>
-                            <option value="14">Montgomery</option>
-                            <option value="15">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Planning Areas">
+                                <option value="3">Core Cities</option>
+                                <option value="4">Developed Communities</option>
+                                <option value="5">Growing Suburbs</option>
+                                <option value="6">Rural Areas</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="7">Bucks</option>
+                                <option value="8">Burlington</option>
+                                <option value="9">Camden</option>
+                                <option value="10">Chester</option>
+                                <option value="11">Delaware</option>
+                                <option value="12">Gloucester</option>
+                                <option value="13">Mercer</option>
+                                <option value="14">Montgomery</option>
+                                <option value="15">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -586,32 +634,34 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Households by Percent of Income Spent on Housing</h2>
             <form>
                 <fieldset>
-                    <label for="viz-3">Select Geography: </label>
-                    <select id="viz-3" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">All PA Counties</option>
-                            <option value="3">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Planning Areas">
-                            <option value="4">Core Cities</option>
-                            <option value="5">Developed Communities</option>
-                            <option value="6">Growing Suburbs</option>
-                            <option value="7">Rural Areas</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="8">Bucks</option>
-                            <option value="9">Burlington</option>
-                            <option value="10">Camden</option>
-                            <option value="11">Chester</option>
-                            <option value="12">Delaware</option>
-                            <option value="13">Gloucester</option>
-                            <option value="14">Mercer</option>
-                            <option value="15">Montgomery</option>
-                            <option value="16">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">All PA Counties</option>
+                                <option value="3">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Planning Areas">
+                                <option value="4">Core Cities</option>
+                                <option value="5">Developed Communities</option>
+                                <option value="6">Growing Suburbs</option>
+                                <option value="7">Rural Areas</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="8">Bucks</option>
+                                <option value="9">Burlington</option>
+                                <option value="10">Camden</option>
+                                <option value="11">Chester</option>
+                                <option value="12">Delaware</option>
+                                <option value="13">Gloucester</option>
+                                <option value="14">Mercer</option>
+                                <option value="15">Montgomery</option>
+                                <option value="16">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -624,25 +674,27 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Income Growth Gap between Highest Quintile &amp; Lowest Quintile Households</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Geography: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -657,34 +709,38 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Average Income by Household Income Grouping</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-1-b">Select Value Type: </label>
-                    <select id="viz-1-b" class="toggle-data-selector">
-                        <option value="0">Averages</option>
-                        <option value="1">Change (Absolute)</option>
-                        <option value="2">Change (Percentage)</option>                       
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Averages</option>
+                            <option value="1">Change (Absolute)</option>
+                            <option value="2">Change (Percentage)</option>                       
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -711,11 +767,13 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Job Growth Rate by Geography</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Value Type: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Annual</option>
-                        <option value="1">Since Base Year</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Annual</option>
+                            <option value="1">Since Base Year</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -741,25 +799,27 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Job Distribution by Industry</h2>
             <form>
                 <fieldset>
-                    <label for="viz-2">Select Geography: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -773,19 +833,23 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Developed and Agricultural Land by Geography</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-0">Select General Use: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Developed Land</option>
-                        <option value="1">Agricultural Land</option>
-                    </select>
+                    <label>
+                        Select General Use
+                        <select class="toggle-data-selector">
+                            <option value="0">Developed Land</option>
+                            <option value="1">Agricultural Land</option>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-0-b">Select Value Type: </label>
-                    <select id="viz-0-b" class="toggle-data-selector">
-                        <option value="0">Total Acres</option>
-                        <option value="1">Acres Per Capita</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Total Acres</option>
+                            <option value="1">Acres Per Capita</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -801,31 +865,33 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Land Use by Type</h2>
             <form>
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Planning Areas">
-                            <option value="3">Core Cities</option>
-                            <option value="4">Developed Communities</option>
-                            <option value="5">Growing Suburbs</option>
-                            <option value="6">Rural Areas</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="7">Bucks</option>
-                            <option value="8">Burlington</option>
-                            <option value="9">Camden</option>
-                            <option value="10">Chester</option>
-                            <option value="11">Delaware</option>
-                            <option value="12">Gloucester</option>
-                            <option value="13">Mercer</option>
-                            <option value="14">Montgomery</option>
-                            <option value="15">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Planning Areas">
+                                <option value="3">Core Cities</option>
+                                <option value="4">Developed Communities</option>
+                                <option value="5">Growing Suburbs</option>
+                                <option value="6">Rural Areas</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="7">Bucks</option>
+                                <option value="8">Burlington</option>
+                                <option value="9">Camden</option>
+                                <option value="10">Chester</option>
+                                <option value="11">Delaware</option>
+                                <option value="12">Gloucester</option>
+                                <option value="13">Mercer</option>
+                                <option value="14">Montgomery</option>
+                                <option value="15">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -840,20 +906,24 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Public &amp; Private Protected Open Space by Geography</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-2">Select Ownership Type: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <option value="0">Total Protected Open Space</option>
-                        <option value="1">Publicly Protected Open Space</option>
-                        <option value="2">Privately Protected Open Space</option>
-                    </select>
+                    <label>
+                        Select Ownership Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Total Protected Open Space</option>
+                            <option value="1">Publicly Protected Open Space</option>
+                            <option value="2">Privately Protected Open Space</option>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-2-b">Select Value Type: </label>
-                    <select id="viz-2-b" class="toggle-data-selector">
-                        <option value="0">Total Acres</option>
-                        <option value="1">Percent</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Total Acres</option>
+                            <option value="1">Percent</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -869,31 +939,33 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Protected Open Space by Ownership Type</h2>
             <form>
                 <fieldset>
-                    <label for="viz-3">Select Geography: </label>
-                    <select id="viz-3" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Planning Areas">
-                            <option value="3">Core Cities</option>
-                            <option value="4">Developed Communities</option>
-                            <option value="5">Growing Suburbs</option>
-                            <option value="6">Rural Areas</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="7">Bucks</option>
-                            <option value="8">Burlington</option>
-                            <option value="9">Camden</option>
-                            <option value="10">Chester</option>
-                            <option value="11">Delaware</option>
-                            <option value="12">Gloucester</option>
-                            <option value="13">Mercer</option>
-                            <option value="14">Montgomery</option>
-                            <option value="15">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Planning Areas">
+                                <option value="3">Core Cities</option>
+                                <option value="4">Developed Communities</option>
+                                <option value="5">Growing Suburbs</option>
+                                <option value="6">Rural Areas</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="7">Bucks</option>
+                                <option value="8">Burlington</option>
+                                <option value="9">Camden</option>
+                                <option value="10">Chester</option>
+                                <option value="11">Delaware</option>
+                                <option value="12">Gloucester</option>
+                                <option value="13">Mercer</option>
+                                <option value="14">Montgomery</option>
+                                <option value="15">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -906,12 +978,14 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Vehicle Miles Traveled (VMT) by Geography</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Value Type: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Per Capita</option>
-                        <option value="1">Total</option>
-                        <option value="2">Per Vehicle</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Per Capita</option>
+                            <option value="1">Total</option>
+                            <option value="2">Per Vehicle</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -925,13 +999,15 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Percentage of Pavement in Deficient Condition by Geography</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Road Type: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">All Roads</option>
-                        <option value="1">Interstate</option>
-                        <option value="2">NHS, Non-Interstate</option>
-                        <option value="3">Non-NHS</option>
-                    </select>
+                    <label>
+                        Select Road Type
+                        <select class="toggle-data-selector">
+                            <option value="0">All Roads</option>
+                            <option value="1">Interstate</option>
+                            <option value="2">NHS, Non-Interstate</option>
+                            <option value="3">Non-NHS</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -946,22 +1022,26 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Roadways by Pavement Condition</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">New Jersey Counties</option>
-                            <option value="2">Pennsylvania Counties</option>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">New Jersey Counties</option>
+                                <option value="2">Pennsylvania Counties</option>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-1-b">Select Road Type: </label>
-                    <select id="viz-1-b" class="toggle-data-selector">
-                        <option value="0">All Roads</option>
-                        <option value="1">Interstate</option>
-                        <option value="2">NHS, Non-Interstate</option>
-                        <option value="3">Non-NHS</option>
-                    </select>
+                    <label>
+                        Select Road Type
+                        <select class="toggle-data-selector">
+                            <option value="0">All Roads</option>
+                            <option value="1">Interstate</option>
+                            <option value="2">NHS, Non-Interstate</option>
+                            <option value="3">Non-NHS</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -974,12 +1054,14 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Population by Geography</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Value Type: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Change Since Base Year</option>
-                        <option value="1">Total Population</option>
-                        <option value="2">Percent Change</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Change Since Base Year</option>
+                            <option value="1">Total Population</option>
+                            <option value="2">Percent Change</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -995,27 +1077,31 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Population Change by Change Components</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label fo="viz-1">Select County: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <option value="0">Bucks</option>
-                        <option value="1">Burlington</option>
-                        <option value="2">Camden</option>
-                        <option value="3">Chester</option>
-                        <option value="4">Delaware</option>
-                        <option value="5">Gloucester</option>
-                        <option value="6">Mercer</option>
-                        <option value="7">Montgomery</option>
-                        <option value="8">Philadelphia</option>
-                    </select>
+                    <label>
+                        Select County:
+                        <select class="toggle-data-selector">
+                            <option value="0">Bucks</option>
+                            <option value="1">Burlington</option>
+                            <option value="2">Camden</option>
+                            <option value="3">Chester</option>
+                            <option value="4">Delaware</option>
+                            <option value="5">Gloucester</option>
+                            <option value="6">Mercer</option>
+                            <option value="7">Montgomery</option>
+                            <option value="8">Philadelphia</option>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label fo="viz-1-b">Select Change Type: </label>
-                    <select id="viz-1-b" class="toggle-data-selector">
-                        <option value="0">Net Change</option>
-                        <option value="1">Natural Increase</option>
-                        <option value="2">Net Migration</option>
-                    </select>
+                    <label>
+                        Select Change Type:
+                        <select class="toggle-data-selector">
+                            <option value="0">Net Change</option>
+                            <option value="1">Natural Increase</option>
+                            <option value="2">Net Migration</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1030,33 +1116,36 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Population by Age Group</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-2">Select Geography: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography:
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-2-b">Select Value Type: </label>
-                    <select id="viz-2-b" class="toggle-data-selector">
-                        <option value="0">Change Since Base Year</option>
-                        <option value="1">Total Population</option>
-                    </select>
+                    <label>
+                        Select Value Type:
+                        <select class="toggle-data-selector">
+                            <option value="0">Change Since Base Year</option>
+                            <option value="1">Total Population</option>
+                        </select>
                 </fieldset>
             </form>
         </div>
@@ -1071,33 +1160,37 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Population by Race</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-3">Select Geography: </label>
-                    <select id="viz-3" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-3-b">Select Value Type: </label>
-                    <select id="viz-3-b" class="toggle-data-selector">
-                        <option value="0">Change Since Base Year</option>
-                        <option value="1">Total Population</option>
-                    </select>
+                    <label>
+                        Select Value Type:
+                        <select class="toggle-data-selector">
+                            <option value="0">Change Since Base Year</option>
+                            <option value="1">Total Population</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1112,33 +1205,37 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Population by Ethnicity</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-4">Select Geography: </label>
-                    <select id="viz-4" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography:
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-4-b">Select Value Type: </label>
-                    <select id="viz-4-b" class="toggle-data-selector">
-                        <option value="0">Change Since Base Year</option>
-                        <option value="1">Total Population</option>
-                    </select>
+                    <label>
+                        Select Value Type:
+                        <select class="toggle-data-selector">
+                            <option value="0">Change Since Base Year</option>
+                            <option value="1">Total Population</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1151,25 +1248,27 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Median Income Gap between People of Color &amp; Latinx Populations vs. White, non-Latinx Population</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Geography: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1184,25 +1283,27 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Median Income by People of Color &amp; Latinx Populations vs. White, non-Latinx Population</h2>
             <form>
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1225,25 +1326,27 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between People of Color &amp; Whites</h2>
             <form>
                 <fieldset>
-                    <label for="viz-3">Select Geography: </label>
-                    <select id="viz-3" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1258,25 +1361,27 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by People of Color &amp; Whites</h2>
             <form>
                 <fieldset>
-                    <label for="viz-4">Select Geography: </label>
-                    <select id="viz-4" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography:
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1289,12 +1394,14 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Value Type: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
-                        <option value="2">Per Vehicle Miles Traveled</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Per Capita</option>
+                            <option value="2">Per Vehicle Miles Traveled</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1310,34 +1417,38 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Mode (Annual)</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-1-b">Select Value Type: </label>
-                    <select id="viz-1-b" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
-                        <option value="2">Per Vehicle Miles Traveled</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Per Capita</option>
+                            <option value="2">Per Vehicle Miles Traveled</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1350,33 +1461,37 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Median Income Gap between Sexes</h2>
             <form class="double-toggle-form">
                 <fieldset>
-                    <label for="viz-0">Select Geography: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
-                    <label for="viz-0-b">Select Value Type: </label>
-                    <select id="viz-0-b" class="toggle-data-selector">
-                        <option value="0">Gap</option>
-                        <option value="1">Percent Gap</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Gap</option>
+                            <option value="1">Percent Gap</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1391,25 +1506,27 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Median Income by Sex</h2>
             <form>
                 <fieldset>
-                    <label for="viz-1">Select Geography: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1424,25 +1541,27 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes</h2>
             <form>
                 <fieldset>
-                    <label for="viz-2">Select Geography: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1457,25 +1576,27 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Sex</h2>
             <form>
                 <fieldset>
-                    <label for="viz-3">Select Geography: </label>
-                    <select id="viz-3" class="toggle-data-selector">
-                        <optgroup label="Regional">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">PA Suburban Counties</option>
-                        </optgroup>
-                        <optgroup label="Counties">
-                            <option value="3">Bucks</option>
-                            <option value="4">Burlington</option>
-                            <option value="5">Camden</option>
-                            <option value="6">Chester</option>
-                            <option value="7">Delaware</option>
-                            <option value="8">Gloucester</option>
-                            <option value="9">Mercer</option>
-                            <option value="10">Montgomery</option>
-                            <option value="11">Philadelphia</option>
-                        </optgroup>
-                    </select>
+                    <label>
+                        Select Geography
+                        <select class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1488,14 +1609,16 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Average Vehicle Age by Vehicle Type</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Transit Agency: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">All Agencies</option>
-                        <option value="1">NJ Transit</option>
-                        <option value="2">PART (Pottstown)</option>
-                        <option value="3">PATCO</option>
-                        <option value="4">SEPTA</option>
-                    </select>
+                    <label>
+                        Select Transit Agency
+                        <select class="toggle-data-selector">
+                            <option value="0">All Agencies</option>
+                            <option value="1">NJ Transit</option>
+                            <option value="2">PART (Pottstown)</option>
+                            <option value="3">PATCO</option>
+                            <option value="4">SEPTA</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1510,13 +1633,15 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Rail Vehicles by Age Group</h2>
             <form>
                 <fieldset>
-                    <label for="viz-1">Select Transit Agency: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <option value="0">All Agencies</option>
-                        <option value="1">NJ Transit</option>
-                        <option value="2">PATCO</option>
-                        <option value="3">SEPTA</option>
-                    </select>
+                    <label>
+                        Select Transit Agency
+                        <select class="toggle-data-selector">
+                            <option value="0">All Agencies</option>
+                            <option value="1">NJ Transit</option>
+                            <option value="2">PATCO</option>
+                            <option value="3">SEPTA</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1531,13 +1656,15 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Buses by Age Group</h2>
             <form>
                 <fieldset>
-                    <label for="viz-2">Select Transit Agency: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <option value="0">All Agencies</option>
-                        <option value="1">NJ Transit</option>
-                        <option value="2">PART (Pottstown)</option>
-                        <option value="3">SEPTA</option>
-                    </select>
+                    <label>
+                        Select Transit Agency
+                        <select class="toggle-data-selector">
+                            <option value="0">All Agencies</option>
+                            <option value="1">NJ Transit</option>
+                            <option value="2">PART (Pottstown)</option>
+                            <option value="3">SEPTA</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1550,11 +1677,13 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Transit Trips</h2>
             <form>
                 <fieldset>
-                    <label for="viz-0">Select Value Type: </label>
-                    <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Per Capita</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1569,11 +1698,13 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Mode</h2>
             <form>
                 <fieldset>
-                    <label for="viz-1">Select Value Type: </label>
-                    <select id="viz-1" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Per Capita</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
@@ -1588,11 +1719,13 @@ const chartStrings = {
             <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Agency</h2>
             <form>
                 <fieldset>
-                    <label for="viz-2">Select Value Type: </label>
-                    <select id="viz-2" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
-                    </select>
+                    <label>
+                        Select Value Type
+                        <select class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Per Capita</option>
+                        </select>
+                    </label>
                 </fieldset>
             </form>
         </div>
