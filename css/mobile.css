@@ -168,6 +168,7 @@ summary, #get-started, #to-grid{
     justify-content: flex-start;
     align-items: center;
     overflow-x: auto;
+    text-align: left;
 }
 #related-indicators-img{
     margin-left: 5px;
@@ -224,6 +225,13 @@ summary, #get-started, #to-grid{
 }
 #indicator-description-container{
     padding: 1% 4% 0 4%
+}
+.indicator-emoji-context{
+    padding: 0 4%;
+}
+.indicator-emoji-context-img{
+    width: 24px;
+    margin-right: 4%;
 }
 .toggle-wrapper{
     flex-direction: column;
