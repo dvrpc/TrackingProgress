@@ -4,7 +4,7 @@ body{
 }
 
 /* Hide elements */
-.emoji-spacer, .splash-map-figure, .flipside, .fade-right, #to-top-btn{
+.emoji-spacer, .splash-map-figure, .fade-right, #to-top-btn{
     display: none;
 }
 
@@ -99,7 +99,6 @@ summary, #get-started, #to-grid{
     justify-content: center;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
 }
-
 #filter-type-form{
     width: 100%;
     padding: 10px 0;
@@ -123,8 +122,14 @@ summary, #get-started, #to-grid{
     margin-right: 4px;
     margin-bottom: 4px;
 }
+.icon-set-img{
+    height: 40px;
+}
 .icon-set-p{
     font-size: 0.77em;
+}
+.flipside-img{
+    display: none;
 }
 #equity-icon{
     margin-bottom: auto;
@@ -219,9 +224,6 @@ summary, #get-started, #to-grid{
 }
 #indicator-description-container{
     padding: 1% 4% 0 4%
-}
-.indicator-emoji-context{
-    width: 95%;
 }
 .toggle-wrapper{
     flex-direction: column;
