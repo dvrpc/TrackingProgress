@@ -52,7 +52,7 @@ body{
 .text-right{
     text-align: left;
 }
-summary, #get-started, #to-grid{
+summary, #get-started, .homepage-btn{
     font-size: 1em;
 }
 .gif-row{
@@ -77,9 +77,12 @@ summary, #get-started, #to-grid{
     width: 30px;
     height: 30px;
 }
-#to-grid{
-    padding: 3px 5px;
+.homepage-btn{
+    padding: 5px 10px;
     margin-bottom: 6px;
+}
+#view-how-to {
+    float: right;
 }
 
 
