@@ -73,6 +73,14 @@ viewHowTo.onclick = e => {
     viewHowTo.classList.add('btn-disabled')
     viewHowTo.classList.remove('hover-btn')
 
+    const head = infoToggles[0].previousElementSibling
+    const offset = head.offsetTop - 65
+
+    window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+    })
+
     viewHowTo.disabled = true
 }
 

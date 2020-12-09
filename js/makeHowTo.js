@@ -1,20 +1,20 @@
 const makeHowTo = () => {
     return `
         <h3 id="get-started">Here's how to get started...</h3>
-        <details class="info-toggle">
+        <details class="info-toggle" open>
             <summary role="button" id="dashSummary" class="hover-text">Exploring the Dashboard</summary>
             <div class="details-content-wrapper">
                 <div class="gif-row">
                     <figure class="gif-figure">
-                        <video controls width="300" height="215" id="hover-tiles" type="video/mp4"></video>
+                        <video controls width="300" height="215" id="hover-tiles" src="./vid/hover-tiles.mp4" type="video/mp4"></video>
                         <figcaption class="gif-caption">Mouse-over the tiles for a quick glimpse of how we're doing based on the latest data.</figcaption>
                     </figure>
                     <figure class="gif-figure">
-                        <video controls width="300" height="215" id="toggle-filters" type="video/mp4"></video>
+                        <video controls width="300" height="215" id="toggle-filters" src="./vid/toggle-filters.mp4" type="video/mp4"></video>
                         <figcaption class="gif-caption">Click filters to sort indicators by <em>Connections 2045</em> Plan category or historic trend.</figcaption>
                     </figure>
                     <figure class="gif-figure">
-                        <video controls width="300" height="215" id="click-indicator" type="video/mp4"></video>
+                        <video controls width="300" height="215" id="click-indicator" src="./vid/click-indicator.mp4" type="video/mp4"></video>
                         <figcaption class="gif-caption">Click any tile to take a closer look at a specific indicator.</figcaption>
                     </figure>
                 </div>
