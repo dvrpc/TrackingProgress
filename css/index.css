@@ -515,12 +515,13 @@ summary{
     margin: 0 auto;
     padding: 0 3%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     color: #4fa3a8;
 }
 .indicator-emoji-context-img{
     width: 30px;
+    margin-right: 10px;
 }
 .back-to-dash{
     display: none;
