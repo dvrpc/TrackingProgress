@@ -1,5 +1,6 @@
 import { toggleIndicators, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
+import makeHowTo from './makeHowTo.js'
 
 
 /**************************************************/
@@ -7,8 +8,9 @@ import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing
 // get a handle on the splash page elements
 const splash = document.getElementById('splash-page')
 const toGrid = document.getElementById('to-grid')
+const viewHowTo = document.getElementById('view-how-to')
 const help = document.getElementById('help-btn')
-const infoToggles = document.querySelectorAll('.info-toggle')
+let viewClicked = false
 const videosLoaded = {
     dashSummary: false,
     indicatorSummary: false
@@ -54,6 +56,24 @@ toGrid.onclick = e => {
         top: splashHeight,
         behavior: 'smooth'
     })
+}
+viewHowTo.onclick = e => {
+    e.preventDefault()
+
+    const howTo = makeHowTo()
+
+    toGrid.insertAdjacentHTML('beforebegin', howTo)
+
+    const infoToggles = document.querySelectorAll('.info-toggle')
+
+    // lazy load the videos 
+    infoToggles.forEach(toggle => toggle.onclick = toggle => loadVideos(toggle))
+
+    // style the button 
+    viewHowTo.classList.add('btn-disabled')
+    viewHowTo.classList.remove('hover-btn')
+
+    viewHowTo.disabled = true
 }
 
 // when the splash page is visible, listen to scroll events to know when to hide it
@@ -104,9 +124,6 @@ help.onclick = () => {
     // hide the (i)
     help.classList.remove('fade-in')
 }
-
-// lazy load the videos 
-infoToggles.forEach(toggle => toggle.onclick = toggle => loadVideos(toggle))
 
 // loop thru corresponding videos and add .mp4 src
 const loadVideos = toggle => {    
