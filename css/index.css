@@ -113,7 +113,7 @@ fieldset{
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
-    transition-timing-function: linear;
+    transition-timing-function: ease-in;
 }
 #help-btn:hover, #to-top-btn:hover{
     background: #4fa3a8;
@@ -440,7 +440,7 @@ summary{
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     -o-transition: opacity 1s;
-    transition-timing-function: linear;
+    transition-timing-function: ease-in;
 }
 #description-wrapper, .toggle-wrapper, .chart-src, .data-viz{
     width: 70%;
