@@ -10,7 +10,6 @@ const splash = document.getElementById('splash-page')
 const toGrid = document.getElementById('to-grid')
 const viewHowTo = document.getElementById('view-how-to')
 const help = document.getElementById('help-btn')
-let viewClicked = false
 const videosLoaded = {
     dashSummary: false,
     indicatorSummary: false
@@ -219,24 +218,25 @@ indicators.forEach(indicator => {
 // load the selected indicator page & transition to it
 grid.onclick = e => {
     let title, primaryCategory;
-    const node = e.target.nodeName
 
     // only setIndicator if the user clicked on a valid tile
-    if(node != 'MAIN'){
+    if(e.target.nodeName != 'MAIN'){
         // get title and primary category from the clicked element
         [title, primaryCategory] = [... clickIndicator(e)]
         
-        // scroll
+        // scroll & load
         if(!help.classList.contains('fade-in')){
             const gridOffset = (grid.getBoundingClientRect().top + window.scrollY)
+            
+            window.setTimeout(setIndicatorURL, 250, title, primaryCategory, true)
+
             window.scrollTo({
                 top: gridOffset,
                 behavior: 'smooth'
             })
+        } else {
+            setIndicatorURL(title, primaryCategory, true)
         }
-
-        // after scrolling, update the URL to create the indicator page
-        window.setTimeout(setIndicatorURL, 250, title, primaryCategory, true)
     }
 }
 
