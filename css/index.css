@@ -361,7 +361,7 @@ summary{
     -webkit-transition: margin-left 2s;
     -moz-transition: margin-left 2s;
     -o-transition: margin-left 2s;
-    transition-timing-function: linear;
+    transition-timing-function: ease-in;
 }
 .indicators-grid-item{
     position: relative;
