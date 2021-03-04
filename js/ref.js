@@ -179,7 +179,7 @@ const snippetsRef = {
         }
     },
     'Educational Attainment': {
-        categories: ['comm', 'enviro', 'equity'],
+        categories: ['comm', 'econo', 'equity'],
         trend: {
             status: 'good',
             text: {
