@@ -3,60 +3,61 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
-body{
+body {
     margin: 0;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
     font-size: 16px;
     line-height: 1.5;
 }
-.hidden{
+.hidden {
     display: none;
 }
-.inactive{
+.inactive {
     background: #dadada !important;
     pointer-events: none;
     opacity: 0.5;
     cursor: auto;
 }
-.hover-btn:hover{
+.hover-btn:hover {
     box-shadow: 2px 4px 6px rgba(0,0,0,0.3) !important;
     filter: hue-rotate(350deg);
   }
-.hover-text:hover{
+.hover-text:hover {
     filter: drop-shadow(1px 2px 0px rgba(0,0,0,0.2));
 }
-.sm{
+.sm {
     font-size: 0.9em;
     color: #bd2556;
 }
-.econo-accent{
+.econo-accent {
     color: #bd2556;
 }
-.enviro-accent{
+.enviro-accent {
     color: #7b9d3e;
 }
-.comm-accent{
+.comm-accent {
     color: #006ba6;
 }
-.transpo-accent{
+.transpo-accent {
     color: #de6e1d;
 }
-.equity-accent{
+.equity-accent {
     color: #582267;
 }
-.text-right{
+.text-right {
     text-align: right;
 }
 
 
+
 /************************************/
 /*********** subpage.css************/
-a{
+a {
     background-color: transparent;
     color: inherit;
 }
-hr{
+hr {
     border: 0;
     border-top: 1px solid #ddd;
     height: 0;
@@ -64,22 +65,23 @@ hr{
     box-sizing: content-box;
     clear: both;
 }
-select{
+select {
     margin: 0;
     font: inherit;
     color: inherit;
     text-transform: none;
 }
-fieldset{
+fieldset {
     padding: 0;
     margin: 0;
     border: 0;
 }
 
 
+
 /*******************************/
 /*********** Header ************/
-#header{
+#header {
     position: fixed;
     top: 0;
     padding: 0 3%;
@@ -91,15 +93,15 @@ fieldset{
     align-items: center;
     z-index: 3;
 }
-#logo-help-wrapper{
+#logo-help-wrapper {
     display: inherit;
     align-items: center;
 }
-#tp-logo{
+#tp-logo {
     display: block;
     height: 44px;
 }
-#help-btn{
+#help-btn {
     margin-left: 42px;
     color: #4fa3a8;
     border: 1px solid #4fa3a8;
@@ -115,98 +117,99 @@ fieldset{
     -moz-transition: opacity 1s;
     transition-timing-function: ease-out;
 }
-#help-btn:hover, #to-top-btn:hover{
+#help-btn:hover, #to-top-btn:hover {
     background: #4fa3a8;
     color: #f7f7f7;
 }
-#dvrpc-logo{
+#dvrpc-logo {
     display: block;
     float: right;
     height: 38px;
 }
 
 
+
 /********************************************/
 /**************** Splash Page ***************/
-#splash-page{
+#splash-page {
     margin-top: 8vh;
     padding: 2% 3%;
     background: rgba(79,163,168,0.1);
     visibility: visible;
 }
-.splash-map-wrapper, .details-text-content{
+.splash-map-wrapper, .details-text-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0;
 }
-.splash-map-figure{
+.splash-map-figure {
     width: 14%;
     text-align: center;
     font-size: 0.8rem;
 }
-.region-map{
+.region-map {
     width: 100%;
     height: auto;
     border-radius: 3px;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 }
-.tp-header{
+.tp-header {
     width: 100%;
     margin: 0 auto;
     font-size: 2rem;
     font-weight: 300;
     text-align: center;
 }
-#tp-header-name{
+#tp-header-name {
     color: #4fa3a8;
     font-weight: 700;
 }
-.splash-text{
+.splash-text {
     width: 700px;
     line-height: 1.7rem;
 }
-#get-started{
+#get-started {
     color: #4fa3a8;
     margin: 0;
     padding-bottom: 6px;
     font-weight: 500;
 }
-summary{
+summary {
     font-size: 1.1rem;
     cursor: pointer;
 }
-.details-content-wrapper{
+.details-content-wrapper {
     padding: 18px 0;
 }
-.gif-row{
+.gif-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 94%;
     margin: 0 auto;
 }
-.gif-figure{
+.gif-figure {
     background: #f7f7f7;
     border-radius: 3px;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
     width: 300px;
     margin: 0;
 }
-.gif-caption{
+.gif-caption {
     padding: 1% 3%;
     font-size: 0.8rem;
     max-width: 100%;
 }
-#info-toggle-hr{
+#info-toggle-hr {
     width: 94%;
     margin: 2% auto;
 }
-#emojis-description{
+#emojis-description {
     width: 20%;
     margin: 0;
 }
-#emojis-row{
+#emojis-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -214,7 +217,7 @@ summary{
     width: 94%;
     margin: 0 auto;
 }
-.emoji-figure{
+.emoji-figure {
     min-width: 50px;
     width: 7%;
     color: #4fa3a8;
@@ -224,14 +227,14 @@ summary{
     justify-content: center;
     margin: 0;
 }
-.emoji-figure img{
+.emoji-figure img {
     width: 40px;
     margin-right: 5px;
     background: #4fa3a8;
     border-radius: 50%;
     filter: drop-shadow(1px 2px 0px rgba(0,0,0,0.2));
 }
-.emoji-spacer{
+.emoji-spacer {
     border-top: 2px solid #4fa3a8;
     width: 3%;
     border-radius: 50%;
@@ -258,9 +261,10 @@ summary{
 }
 
 
+
 /********************************************/
 /*********** Indicator Dashboard ***********/
-.indicators-wrapper{
+.indicators-wrapper {
     position: relative;
     display: flex;
     width: 100%;
@@ -270,7 +274,7 @@ summary{
     visibility: hidden;
     background: #fff;
 }
-.indicators-nav{
+.indicators-nav {
     position: absolute;
     height: 100%;
     width: 12vw;
@@ -294,20 +298,20 @@ summary{
     padding: 0 10px;
     width: 15vw;
 }
-#filter-type-form{
+#filter-type-form {
     width: 100%;
     color: #4fa3a8;
     text-align: center;
     padding: 15px 0;
     margin: 0 auto;
 }
-#filter-select{
+#filter-select {
     cursor:pointer;
 }
-.category-active{
+.category-active {
     color: #f7f7f7 !important;
 }
-.icon-set{
+.icon-set {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -320,46 +324,46 @@ summary{
     text-align: center;
     overflow-y: hidden;
 }
-.emoji-set{
+.emoji-set {
     display: none;
     background: #e9e9e9;
     color: #4fa3a8;
 }
-#econo-icon{
+#econo-icon {
     background: #f0cfd0;
 }
-#enviro-icon{
+#enviro-icon {
     background: #e0e6cf;
 }
-#comm-icon{
+#comm-icon {
     background: #c6d6ea;
 }
-#transpo-icon{
+#transpo-icon {
     background: #f9dcc4;
 }
-#equity-icon{
+#equity-icon {
     background: #c6b7cd;
     margin-bottom: 0;
 }
-.icon-set-img{
+.icon-set-img {
     align-self: center;
 }
-.emoji-set-img{
+.emoji-set-img {
     align-self: center;
     width: 23%;
     background: rgba(79,163,168,.8);
     border-radius: 50%;
 }
-.icon-set:hover{
+.icon-set:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
     border-bottom: hidden;
 }
-.icon-set-p{
+.icon-set-p {
     margin: 0;
     padding: 0;
     font-size: 1.2rem;
 }
-.indicators-grid{
+.indicators-grid {
     height: calc(94vh - 16px);
     width: 88%;
     background: #e9e9e9;
@@ -375,7 +379,7 @@ summary{
     -o-transition: margin-left 2s;
     transition-timing-function: ease-out;
 }
-.indicators-grid-item{
+.indicators-grid-item {
     position: relative;
     border-radius: 3px;
     background: #4fa3a8;
@@ -385,24 +389,24 @@ summary{
     height: 12vw;
     cursor: pointer;
 }
-.region-map:hover{
+.region-map:hover {
     box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
 }
-.indicators-grid-item:active{
+.indicators-grid-item:active {
     box-shadow: none;
 }
-.indicators-icons{
+.indicators-icons {
     display: block;
     width: 71%;
     height: 71%;
     margin: 0 auto;
 }
-#connections-icon{
+#connections-icon {
     display: block;
     width: 71%;
     margin: 15% auto 0 auto;
 }
-.indicators-title{
+.indicators-title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -416,7 +420,7 @@ summary{
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px
 }
-.flipside{
+.flipside {
     display: none;
     height: 100%;
     width: 100%;
@@ -426,20 +430,21 @@ summary{
     color: #f7f7f7;
     font-size: 0.8em;
 }
-.flipside-img{
+.flipside-img {
     height: 21%;
     width: 21%;
     margin: 0 auto;
     margin-bottom: -10px;
 }
-.flipside-text{
+.flipside-text {
     padding: 0 2%;
 }
 
 
+
 /****************************************/
 /*********** Indicator Pages ***********/
-.indicators-snippet{
+.indicators-snippet {
     opacity: 1;
     /* fallback bg for browsers that don't support linear gradient */
     background: #f2f2f2;
@@ -454,54 +459,54 @@ summary{
     -o-transition: opacity 1s;
     transition-timing-function: ease-out;
 }
-#description-wrapper, .toggle-wrapper, .chart-src, .data-viz{
+#description-wrapper, .toggle-wrapper, .chart-src, .data-viz {
     width: 70%;
 }
-#indicator-header-wrapper{
+#indicator-header-wrapper {
     max-width: 70%;
     display: flex;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
-.indicator-header{
+.indicator-header {
     text-align: center;
     font-size: 2em;
     font-weight: 400;
     margin: 0 25px 0 0;
 }
-.indicator-subheader{
+.indicator-subheader {
     width: 100%;
     text-align: center;
     font-size: 1.3em;
     font-weight: 400;
     margin: 0 auto;
 }
-.indicator-header-hr{
+.indicator-header-hr {
     margin: 3% 0 2% 0;
 }
-.indicator-content-hr{
+.indicator-content-hr {
     margin: 5% 0;
 }
-.indicator-category-icons{
+.indicator-category-icons {
     display: flex;
     justify-content: center;
 }
-.snippet-categories{
+.snippet-categories {
     margin-right: 3%;
     height: 33px;
 }
-#description-wrapper{
+#description-wrapper {
     max-width: 1000px;
     margin: 20px auto 0 auto;
 }
-#description-wrapper-tabs{
+#description-wrapper-tabs {
     display: flex;
     justify-content: space-between;
     background: transparent;
 
 }
-.description-wrapper-tab-headers{
+.description-wrapper-tab-headers {
     width: 25%;
     text-align: center;
     margin: 0;
@@ -512,26 +517,26 @@ summary{
     border-top-right-radius: 5px;
     cursor: pointer;
 }
-.description-wrapper-tab-headers:hover{
+.description-wrapper-tab-headers:hover {
     text-decoration: underline;
 }
-.active-tab{
+.active-tab {
     background: #f9f9f9;
     box-shadow: 2px 0px 3px rgba(0,0,0,0.3);
     overflow: hidden;
 }
-#description-content-wrapper{
+#description-content-wrapper {
     box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     background: #f9f9f9;
 }
-#indicator-description-container{
+#indicator-description-container {
     max-width: 700px;
     margin: 0 auto;
     padding: 1% 3%;
 }
-.indicator-emoji-context{
+.indicator-emoji-context {
     max-width: 700px;
     border-top: 1px solid #4fa3a8;
     margin: 0 auto;
@@ -541,11 +546,11 @@ summary{
     align-items: center;
     color: #4fa3a8;
 }
-.indicator-emoji-context-img{
+.indicator-emoji-context-img {
     width: 30px;
     margin-right: 10px;
 }
-.back-to-dash{
+.back-to-dash {
     display: none;
     color: #f7f7f7;
     border: none;
@@ -555,7 +560,7 @@ summary{
     font-size: 1.1rem;
     cursor: pointer;
 }
-.related-indicators{
+.related-indicators {
     display: none;
     min-height: calc(92vh - 40px - 1rem);
     width: 100%;
@@ -563,7 +568,7 @@ summary{
     padding: 0 10px;
     color: #f7f7f7;
 }
-#related-indicators-subheader-wrapper{
+#related-indicators-subheader-wrapper {
     font-size: 1em;
     margin: 0;
     padding: 20px 0;
@@ -572,22 +577,21 @@ summary{
     justify-content: space-between;
     width: 100%;
 }
-#related-indicators-subheader-img{
+#related-indicators-subheader-img {
     max-width: 25%;
     height: auto;
     border-radius: 50%;
 }
-#related-indicators-subheader{
+#related-indicators-subheader {
     margin: 0;
     font-weight: 500;
 }
-.sideLink{
+.sideLink {
     padding: 5% 0;
     cursor: pointer;
     color: #f7f7f7;
-    /* text-align: left; */
 }
-.sideLink:hover{
+.sideLink:hover {
     color: #75b8c8;
 }
 .toggle-vr {
@@ -596,7 +600,7 @@ summary{
     font-weight: 200;
     margin: 0 2%;
 }
-.toggle-wrapper{
+.toggle-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -604,23 +608,23 @@ summary{
     margin: 0 auto;
     padding-bottom: 5px;
 }
-.toggle-wrapper p{
+.toggle-wrapper p {
     margin: 0 2% 0 0;
     font-size: 1em;
 }
-.double-toggle-form{
+.double-toggle-form {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
-.chart-src{
+.chart-src {
     display: block;
     max-width: 1000px;
     margin: 0 auto;
     font-style: italic;
 }
-#to-top-btn{
+#to-top-btn {
     position: fixed;
     bottom: 15px;
     right: 1.5%;
@@ -634,7 +638,6 @@ summary{
     color: #4fa3a8;
     font-weight: 500;
 }
-
 /* custom styles for waterfalls */
 .waterfallAxis {
     stroke: lightgrey;
@@ -645,23 +648,24 @@ summary{
     stroke: #050709;
 }
 /* custom waterfall colors */
-.waterfall-blue{
+.waterfall-blue {
     fill: #1f77b4;
     font-weight: 700;
 }
-.waterfall-orange{
+.waterfall-orange {
     fill: #ff7f0e;
     font-weight: 700;
 }
-.waterfall-grey{
+.waterfall-grey {
     fill: #8e8e8e;
     font-weight: 700;
 }
 
 
+
 /********************************/
 /*********** D3 Views **********/
-.data-viz{
+.data-viz {
     height: 450px;
     max-width: 1000px;
     margin: 0 auto;
@@ -670,13 +674,13 @@ summary{
     border-radius: 5px;
     padding: 1% 0;
 }
-.waterfall-viz{
+.waterfall-viz {
     height: 500px;
 }
-.data-viz:last-child{
+.data-viz:last-child {
     margin-bottom: 5%;
 }
-svg.nvd3-svg{
+svg.nvd3-svg {
     display: block;
     height: 100%;
     width: 100%;
@@ -686,7 +690,7 @@ svg.nvd3-svg{
 
 /*******************************/
 /*********** Footer ***********/
-footer{
+footer {
     padding: 4% 15.5%;
     background: #636363;
     color: #f7f7f7;
@@ -695,48 +699,49 @@ footer{
     justify-content: space-between;
     font-size: 0.9rem;
 }
-address{
+address {
     font-style: normal;
 }
-#footer-logo{
+#footer-logo {
     width: 85px;
 }
-#footer-contact-wrapper{
+#footer-contact-wrapper {
     align-self: center;
 }
-#footer-contact-wrapper h3{
+#footer-contact-wrapper h3 {
     padding-bottom: 5px;
     margin: 0;
     letter-spacing: 0.1rem;
 }
-#footer-social-wrapper{
+#footer-social-wrapper {
     display: flex;
 }
-.vr{
+.vr {
     display: block;
     border-right: 1px solid #f7f7f7;
     margin: 0 3%;
 }
-.footer-social{
+.footer-social {
     padding: 0 5px;
 }
-.vr, .footer-social{
+.vr, .footer-social {
     height: 20px;
 }
-#email-icon{
+#email-icon {
     height: 18px;
 }
-.footer-social-link{
+.footer-social-link {
     align-self: center;
 }
 
 
+
 /************************************/
 /*********** Transitions ***********/
-.fade-in{
+.fade-in {
     opacity: 1 !important;
 }
-.fade-right{
+.fade-right {
     position: absolute;
     margin-left: 100vw;
 }
