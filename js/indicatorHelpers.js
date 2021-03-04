@@ -162,17 +162,17 @@ const makeRelatedSubheader = cat => {
     const subheader = document.createElement('h3')
 
     wrapper.id = 'related-indicators-subheader-wrapper'
-    wrapper.style.color = accentColor
+    relatedIndicators.style.backgroundColor = accentColor
     
     img.src =  `./img/sidenav/${cat}.png`
     img.alt = `${cat} icons`
     img.id="related-indicators-subheader-img"
     
     subheader.id = 'related-indicators-subheader'
-    subheader.textContent = `${name} Indicators:`
+    subheader.textContent = `${name} Indicators`
 
-    wrapper.appendChild(img)
     wrapper.appendChild(subheader)
+    wrapper.appendChild(img)
     frag.appendChild(wrapper)
 
     return frag

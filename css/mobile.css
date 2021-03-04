@@ -160,12 +160,15 @@ summary, #get-started, .homepage-btn{
 /* Mobile styles for the indicator subpages */
 .back-to-dash{
     width: 17%;
+    height: 100%;
     padding: 0 2px;
     border-right: 1px solid white;
     font-size: 0.9em;
 }
 .related-indicators{
-    width: 82%;
+    min-height: unset;
+    width: 78%;
+    padding: 5px 10px;
     border-top: none;
     flex-direction: row !important;
     justify-content: flex-start;
@@ -185,6 +188,8 @@ summary, #get-started, .homepage-btn{
 #related-indicators-subheader-wrapper{
     display: flex;
     align-items: center;
+    padding: 0;
+    width: auto;
 }
 #related-indicators-subheader-img{
     width: 25px;

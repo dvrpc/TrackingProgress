@@ -1,7 +1,10 @@
 import { makeIndicatorPage } from './indicatorHelpers.js'
 import { makeDashboard, removeDashboard } from './dashboardHelpers.js';
+import { catLookup } from './utils.js'
 
 const dashboard = document.getElementById('dashboard')
+const nav = dashboard.children[0]
+const backBtn = nav.children[0]
 const grid = dashboard.children[1]
 const splashPage = document.getElementById('splash-page')
 const filterState = document.getElementById('filter-type-form')
@@ -47,10 +50,16 @@ const updateView = (transition, hashParam) => {
         
         // create indicator page and hide dash (if needed)
         let hashArray = hash.split('/')
+        const accentColor = catLookup[hashArray[1]].dark
+        backBtn.style.backgroundColor = accentColor
+
+        if( window.innerWidth > 800 ) nav.classList.add('indicators-nav-indicators-page')
         makeIndicatorPage(hashArray)
+
         grid.classList.contains('fade-right') ? null : removeDashboard(transition)
     }else{
         const relatedIndicators = document.querySelector('.related-indicators')
+        nav.classList.remove('indicators-nav-indicators-page')
         makeDashboard(relatedIndicators)
     }
 }
