@@ -159,7 +159,7 @@ summary, #get-started, .homepage-btn{
 
 /* Mobile styles for the indicator subpages */
 .back-to-dash{
-    width: 17%;
+    width: calc(18% - 4px);
     height: 100%;
     padding: 0 2px;
     border-right: 1px solid white;
@@ -167,7 +167,7 @@ summary, #get-started, .homepage-btn{
 }
 .related-indicators{
     min-height: unset;
-    width: 78%;
+    width: calc(82% - 20px);
     padding: 5px 10px;
     border-top: none;
     flex-direction: row !important;
