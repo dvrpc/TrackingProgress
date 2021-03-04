@@ -113,7 +113,7 @@ fieldset{
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
 }
 #help-btn:hover, #to-top-btn:hover{
     background: #4fa3a8;
@@ -270,7 +270,6 @@ summary{
     visibility: hidden;
     background: #fff;
 }
-/* @TODO: transition from 12vw to 15vw from dashboard to indicator page. Create a transition animation for the width change */
 .indicators-nav{
     position: absolute;
     height: 100%;
@@ -281,6 +280,12 @@ summary{
     justify-content: space-between;
     align-items: center;
     overflow-y: auto;
+    /* width transition */
+    transition: width 2s;
+    -webkit-transition: width 2s;
+    -moz-transition: width 2s;
+    -o-transition: width 2s;
+    transition-timing-function: ease-out;
 }
 .indicators-nav-indicators-page {
     position: sticky;
@@ -368,7 +373,7 @@ summary{
     -webkit-transition: margin-left 2s;
     -moz-transition: margin-left 2s;
     -o-transition: margin-left 2s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
 }
 .indicators-grid-item{
     position: relative;
