@@ -169,7 +169,7 @@ const makeRelatedSubheader = cat => {
     img.id="related-indicators-subheader-img"
     
     subheader.id = 'related-indicators-subheader'
-    subheader.textContent = `${name} Indicators`
+    subheader.innerHTML = `${name} <br /> Indicators`
 
     wrapper.appendChild(subheader)
     wrapper.appendChild(img)
