@@ -143,6 +143,9 @@ fieldset {
     justify-content: space-between;
     padding: 0;
 }
+.splash-map-wrapper {
+    align-items: center;
+}
 .splash-map-figure {
     width: 14%;
     text-align: center;
@@ -155,13 +158,13 @@ fieldset {
     box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 }
 .tp-header {
-    width: 100%;
-    margin: 0 auto;
-    font-size: 2rem;
+    display: block;
+    margin: 1rem 0;
+    font-size: 3rem;
     font-weight: 300;
     text-align: center;
 }
-#tp-header-name {
+.tp-header-main {
     color: #4fa3a8;
     font-weight: 700;
 }
