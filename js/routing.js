@@ -21,11 +21,11 @@ const setIndexURL = () => {
     history.pushState({page: 'home'}, 'Tracking Progress', baseURL)
     
     // update the view (onhashchange doesnt get triggered so have to manually invoke updateView)
-    updateView(false, false)
+    updateView(false)
 }
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
-const setIndicatorURL = (title, primaryCategory, transition) => {
+const setIndicatorURL = (title, primaryCategory) => {
 
     // pull relevant info from the URL
     const formattedTitle = title.trim().replace(/\s+/g, '-')
@@ -35,11 +35,11 @@ const setIndicatorURL = (title, primaryCategory, transition) => {
     history.pushState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
 
     // update the view (onhashchange doesnt get triggered so have to manually invoke updateView)
-    updateView(transition, newHash)
+    updateView(newHash)
 }
 
 // parses the URL hash and hydrates the page with the appropriate information
-const updateView = (transition, hashParam) => {
+const updateView = hashParam => {
     let hash = hashParam ? hashParam : sanitizeHash(location.hash)
 
     if(hash){
@@ -56,7 +56,7 @@ const updateView = (transition, hashParam) => {
         if( window.innerWidth > 800 ) nav.classList.add('indicators-nav-indicators-page')
         makeIndicatorPage(hashArray)
 
-        grid.classList.contains('fade-right') ? null : removeDashboard(transition)
+        grid.classList.contains('fade-right') ? null : removeDashboard()
     }else{
         const relatedIndicators = document.querySelector('.related-indicators')
         nav.classList.remove('indicators-nav-indicators-page')
@@ -74,7 +74,7 @@ const refreshView = () => {
     // only update the view if refreshing an indicator page
     if(hash.length) {
         hash = sanitizeHash(hash)
-        updateView(false, hash)
+        updateView(hash)
     }
 
     dashboard.style.visibility = 'visible'

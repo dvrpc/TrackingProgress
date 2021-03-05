@@ -24,43 +24,41 @@ const catColors = {
 }
 
 const makeDashboard = relatedIndicators => {
-    
-    // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
     const indicator = document.querySelector('.indicators-snippet')
-    if(indicator) indicator.remove()
+
+    // keep snippet in place while transitioning & constrain height to grid so cat nav imgs don't get stretched
+    indicator.style.paddingLeft = '15vw'
+    indicator.style.height = 'calc(94vh - 48px)'
+    indicator.style.overflowY = 'none'
+
+    // reveal the indicators grid, widen the sideNav and reveal the categories
+    grid.classList.remove('fade-right')
+    filterToggle.style.display = 'initial'
+
+    // // reveal the homepage elements
+    indicatorsNav.style.justifyContent = 'space-between'
     
-    // clear the relatedIndicators div of all it's children
+    // remove un-needed elements
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
-    
-    // remove un-needed elements
     relatedIndicators.style.display = 'none'
     back.style.display = 'none'
-    
-    // reveal the indicators grid, widen the sideNav and reveal the categories
-    indicatorsNav.classList.add('notransition')
-    grid.classList.add('notransition')
-    grid.classList.remove('fade-right')
-    filterToggle.style.display = 'initial'
-    
-    const activeIcons = getActiveIcons()
-    activeIcons.forEach(icon => icon.style.display = 'flex')
 
-    // reveal the homepage elements
-    indicatorsNav.style.justifyContent = 'space-between'
-}
-
-const removeDashboard = transition => {
-    // toggle transition depending on when/where removeDashboard gets called
-    if(transition){
-        grid.classList.remove('notransition')
-        indicatorsNav.classList.remove('notransition')
-    }else{
-        grid.classList.add('notransition')
-        indicatorsNav.classList.add('notransition')
+    // remove snippet after grid has returned (handle mobile w/no fade)
+    if(window.innerWidth > 800) {
+        window.setTimeout(() => {
+            if(indicator) indicator.remove()
+        }, 2000)
+    }else {
+        if(indicator) indicator.remove()
     }
 
+    const activeIcons = getActiveIcons()
+    activeIcons.forEach(icon => icon.style.display = 'flex')
+}
+
+const removeDashboard = () => {
     // transition animation from dash to indicator page
     fade()
 
@@ -71,7 +69,6 @@ const removeDashboard = transition => {
 
 // function to display/hide indicators based on which category is clicked
 const toggleIndicators = (element, indicators, filterType) => {
-    // @TODO: either pre-filter or filter iconSets here to only include the 5 relevant icon-sets for the filterType
     let iconSets = [... element.parentNode.children]
 
     // get a handle on the elements info

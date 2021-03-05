@@ -229,14 +229,14 @@ grid.onclick = e => {
         if(!help.classList.contains('fade-in')){
             const gridOffset = (grid.getBoundingClientRect().top + window.scrollY)
             
-            window.setTimeout(setIndicatorURL, 250, title, primaryCategory, true)
+            window.setTimeout(setIndicatorURL, 250, title, primaryCategory)
 
             window.scrollTo({
                 top: gridOffset,
                 behavior: 'smooth'
             })
         } else {
-            setIndicatorURL(title, primaryCategory, true)
+            setIndicatorURL(title, primaryCategory)
         }
     }
 }
