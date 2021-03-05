@@ -69,7 +69,6 @@ const removeDashboard = () => {
 
 // function to display/hide indicators based on which category is clicked
 const toggleIndicators = (element, indicators, filterType) => {
-    // @TODO: either pre-filter or filter iconSets here to only include the 5 relevant icon-sets for the filterType
     let iconSets = [... element.parentNode.children]
 
     // get a handle on the elements info
