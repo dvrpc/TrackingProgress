@@ -260,7 +260,7 @@ const updateLinks = () => {
             const primaryCategory = sideLink.classList[1]
 
             // update the URL which in turn hydrates the new indicator page
-            setIndicatorURL(title, primaryCategory, false)
+            setIndicatorURL(title, primaryCategory)
         }
     })
 }

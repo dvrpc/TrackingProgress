@@ -27,8 +27,8 @@ const makeDashboard = relatedIndicators => {
     // reveal the indicators grid, widen the sideNav and reveal the categories
     grid.classList.remove('fade-right')
     filterToggle.style.display = 'initial'
-    
-    // clear the relatedIndicators div of all it's children
+
+    // // clear the relatedIndicators div of all it's children
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
@@ -40,12 +40,14 @@ const makeDashboard = relatedIndicators => {
     const activeIcons = getActiveIcons()
     activeIcons.forEach(icon => icon.style.display = 'flex')
 
-    // reveal the homepage elements
+    // // reveal the homepage elements
     indicatorsNav.style.justifyContent = 'space-between'
 
-    // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
-    const indicator = document.querySelector('.indicators-snippet')
-    if(indicator) indicator.remove()
+    // wait until grid has mostly returned before removing indicator snippet. Looks cleaner. 
+    // window.setTimeout(() => {
+        const indicator = document.querySelector('.indicators-snippet')
+        if(indicator) indicator.remove()
+    // }, 1900)
 }
 
 const removeDashboard = () => {
