@@ -33,8 +33,12 @@ body {
     margin-top: 6vh;
     padding: 2% 3%;
 }
+.header-wrapper {
+    flex-direction: column;
+}
 .tp-header {
     font-size: 1.2rem;
+    margin: initial;
 }
 #tp-header-name {
     width: 100%;
