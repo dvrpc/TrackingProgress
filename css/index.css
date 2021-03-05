@@ -21,7 +21,7 @@ body {
 }
 .hover-btn:hover {
     box-shadow: 2px 4px 6px rgba(0,0,0,0.3) !important;
-    filter: hue-rotate(350deg);
+    filter: brightness(101%);
   }
 .hover-text:hover {
     filter: drop-shadow(1px 2px 0px rgba(0,0,0,0.2));
@@ -137,16 +137,26 @@ fieldset {
     background: rgba(79,163,168,0.1);
     visibility: visible;
 }
-.splash-map-wrapper, .details-text-content {
+.details-text-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0;
 }
+.splash-map-wrapper {
+    align-items: center;
+}
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .splash-map-figure {
     width: 14%;
     text-align: center;
     font-size: 0.8rem;
+    margin: 0 2rem 0 0;
 }
 .region-map {
     width: 100%;
@@ -155,19 +165,23 @@ fieldset {
     box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 }
 .tp-header {
-    width: 100%;
-    margin: 0 auto;
+    display: block;
+    margin: 0;
     font-size: 2rem;
     font-weight: 300;
-    text-align: center;
 }
-#tp-header-name {
+.tp-header-main {
     color: #4fa3a8;
     font-weight: 700;
+    margin-right: 1rem;
 }
 .splash-text {
-    width: 700px;
+    width: 70ch;
     line-height: 1.7rem;
+    margin-right: 1.5rem;
+}
+.header-btns {
+    justify-content: flex-end;
 }
 #get-started {
     color: #4fa3a8;

@@ -60,8 +60,9 @@ viewHowTo.onclick = e => {
     e.preventDefault()
 
     const howTo = makeHowTo()
+    const wrapper = toGrid.parentElement
 
-    toGrid.insertAdjacentHTML('beforebegin', howTo)
+    wrapper.insertAdjacentHTML('afterend', howTo)
 
     const infoToggles = document.querySelectorAll('.info-toggle')
 
