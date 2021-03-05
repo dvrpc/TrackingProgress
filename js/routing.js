@@ -39,6 +39,7 @@ const setIndicatorURL = (title, primaryCategory, transition) => {
 }
 
 // parses the URL hash and hydrates the page with the appropriate information
+// @UPDATE remove transition bool, update accordingly
 const updateView = (transition, hashParam) => {
     let hash = hashParam ? hashParam : sanitizeHash(location.hash)
 
@@ -56,7 +57,7 @@ const updateView = (transition, hashParam) => {
         if( window.innerWidth > 800 ) nav.classList.add('indicators-nav-indicators-page')
         makeIndicatorPage(hashArray)
 
-        grid.classList.contains('fade-right') ? null : removeDashboard(transition)
+        grid.classList.contains('fade-right') ? null : removeDashboard()
     }else{
         const relatedIndicators = document.querySelector('.related-indicators')
         nav.classList.remove('indicators-nav-indicators-page')

@@ -24,10 +24,9 @@ const catColors = {
 }
 
 const makeDashboard = relatedIndicators => {
-    
-    // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
-    const indicator = document.querySelector('.indicators-snippet')
-    if(indicator) indicator.remove()
+    // reveal the indicators grid, widen the sideNav and reveal the categories
+    grid.classList.remove('fade-right')
+    filterToggle.style.display = 'initial'
     
     // clear the relatedIndicators div of all it's children
     while(relatedIndicators.firstChild){
@@ -38,29 +37,18 @@ const makeDashboard = relatedIndicators => {
     relatedIndicators.style.display = 'none'
     back.style.display = 'none'
     
-    // reveal the indicators grid, widen the sideNav and reveal the categories
-    indicatorsNav.classList.add('notransition')
-    grid.classList.add('notransition')
-    grid.classList.remove('fade-right')
-    filterToggle.style.display = 'initial'
-    
     const activeIcons = getActiveIcons()
     activeIcons.forEach(icon => icon.style.display = 'flex')
 
     // reveal the homepage elements
     indicatorsNav.style.justifyContent = 'space-between'
+
+    // remove the indicator snippet from the DOM tree // again, check if it exists b/c most of the times it wont for now since the tiles are all blank
+    const indicator = document.querySelector('.indicators-snippet')
+    if(indicator) indicator.remove()
 }
 
-const removeDashboard = transition => {
-    // toggle transition depending on when/where removeDashboard gets called
-    if(transition){
-        grid.classList.remove('notransition')
-        indicatorsNav.classList.remove('notransition')
-    }else{
-        grid.classList.add('notransition')
-        indicatorsNav.classList.add('notransition')
-    }
-
+const removeDashboard = () => {
     // transition animation from dash to indicator page
     fade()
 
