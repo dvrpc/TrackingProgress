@@ -24,30 +24,38 @@ const catColors = {
 }
 
 const makeDashboard = relatedIndicators => {
+    const indicator = document.querySelector('.indicators-snippet')
+
+    // keep snippet in place while transitioning & constrain height to grid so cat nav imgs don't get stretched
+    indicator.style.paddingLeft = '15vw'
+    indicator.style.height = 'calc(94vh - 48px)'
+    indicator.style.overflowY = 'none'
+
     // reveal the indicators grid, widen the sideNav and reveal the categories
     grid.classList.remove('fade-right')
     filterToggle.style.display = 'initial'
 
-    // // clear the relatedIndicators div of all it's children
+    // // reveal the homepage elements
+    indicatorsNav.style.justifyContent = 'space-between'
+    
+    // remove un-needed elements
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
-    
-    // remove un-needed elements
     relatedIndicators.style.display = 'none'
     back.style.display = 'none'
-    
+
+    // remove snippet after grid has returned (handle mobile w/no fade)
+    if(window.innerWidth > 800) {
+        window.setTimeout(() => {
+            if(indicator) indicator.remove()
+        }, 2000)
+    }else {
+        if(indicator) indicator.remove()
+    }
+
     const activeIcons = getActiveIcons()
     activeIcons.forEach(icon => icon.style.display = 'flex')
-
-    // // reveal the homepage elements
-    indicatorsNav.style.justifyContent = 'space-between'
-
-    // wait until grid has mostly returned before removing indicator snippet. Looks cleaner. 
-    // window.setTimeout(() => {
-        const indicator = document.querySelector('.indicators-snippet')
-        if(indicator) indicator.remove()
-    // }, 1900)
 }
 
 const removeDashboard = () => {
