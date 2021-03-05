@@ -33,6 +33,10 @@ body {
     margin-top: 6vh;
     padding: 2% 3%;
 }
+.header-btns {
+    flex-direction: row !important;
+    justify-content: space-between;
+}
 .header-wrapper {
     flex-direction: column;
 }
