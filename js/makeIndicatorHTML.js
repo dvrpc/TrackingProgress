@@ -234,7 +234,7 @@ const makeTrendText = trend => {
     contextImg.classList.add('indicator-emoji-context-img')
 
     // add content
-    contextImg.src = `./img/emoji-${status}-teal.png`
+    contextImg.src = `./img/emoji-${status}.png`
     contextImg.alt = `${status} emoji`
     strong.textContent = ` ${text.stat} `
     p.textContent = text.text

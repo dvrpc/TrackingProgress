@@ -563,6 +563,8 @@ summary {
 .indicator-emoji-context-img {
     width: 30px;
     margin-right: 10px;
+    background-color: #4fa3a8;
+    border-radius: 50%;
 }
 .back-to-dash {
     display: none;
