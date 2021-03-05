@@ -21,7 +21,7 @@ body {
 }
 .hover-btn:hover {
     box-shadow: 2px 4px 6px rgba(0,0,0,0.3) !important;
-    filter: hue-rotate(350deg);
+    filter: brightness(101%);
   }
 .hover-text:hover {
     filter: drop-shadow(1px 2px 0px rgba(0,0,0,0.2));
@@ -149,14 +149,14 @@ fieldset {
 .header-wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .splash-map-figure {
     width: 14%;
     text-align: center;
     font-size: 0.8rem;
-    margin: 0 1.5rem 0 0;
+    margin: 0 2rem 0 0;
 }
 .region-map {
     width: 100%;
