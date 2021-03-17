@@ -23,39 +23,40 @@ const catColors = {
     'equity-default': '#c6b7cd'
 }
 
+const handleDashboardTransition = (relatedIndicators, indicator) => {
+    // remove un-needed elements
+    while(relatedIndicators.firstChild){
+        relatedIndicators.removeChild(relatedIndicators.firstChild)
+    }
+    
+    if(indicator) indicator.remove()
+    back.style.display = 'none'
+    relatedIndicators.style.display = 'none'
+    
+    filterToggle.style.display = 'initial'
+    const activeIcons = getActiveIcons()
+    activeIcons.forEach(icon => icon.style.display = 'flex')
+}
+
 const makeDashboard = relatedIndicators => {
     const indicator = document.querySelector('.indicators-snippet')
 
     // keep snippet in place while transitioning & constrain height to grid so cat nav imgs don't get stretched
     indicator.style.paddingLeft = '15vw'
-    indicator.style.height = 'calc(94vh - 48px)'
-    indicator.style.overflowY = 'none'
+    indicator.style.height = 'calc(94vh - 16px)'
 
     // reveal the indicators grid, widen the sideNav and reveal the categories
     grid.classList.remove('fade-right')
-    filterToggle.style.display = 'initial'
-
-    // // reveal the homepage elements
-    indicatorsNav.style.justifyContent = 'space-between'
-    
-    // remove un-needed elements
-    while(relatedIndicators.firstChild){
-        relatedIndicators.removeChild(relatedIndicators.firstChild)
-    }
-    relatedIndicators.style.display = 'none'
-    back.style.display = 'none'
-
+        
     // remove snippet after grid has returned (handle mobile w/no fade)
     if(window.innerWidth > 800) {
         window.setTimeout(() => {
-            if(indicator) indicator.remove()
+            handleDashboardTransition(relatedIndicators, indicator)
         }, 2000)
-    }else {
-        if(indicator) indicator.remove()
-    }
 
-    const activeIcons = getActiveIcons()
-    activeIcons.forEach(icon => icon.style.display = 'flex')
+    }else {
+        handleDashboardTransition(relatedIndicators, indicator)
+    }
 }
 
 const removeDashboard = () => {

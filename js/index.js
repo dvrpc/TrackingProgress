@@ -242,7 +242,24 @@ grid.onclick = e => {
 }
 
 // return to dashboard view
-back.onclick = () => setIndexURL()
+back.onclick = () => {
+    if(splashVisible) {
+        // get splash page height + grid padding to trigger the onscroll effect
+        const splashHeight = splash.clientHeight + 10
+    
+        window.scrollTo({
+            top: splashHeight,
+            behavior: 'smooth'
+        })
+    
+    } else {
+        window.scrollTo({
+            top: 0
+        })
+    }
+
+    setIndexURL()
+}
 
 
 /*************************************************/

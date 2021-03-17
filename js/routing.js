@@ -60,6 +60,7 @@ const updateView = hashParam => {
     }else{
         const relatedIndicators = document.querySelector('.related-indicators')
         nav.classList.remove('indicators-nav-indicators-page')
+        nav.style.overflow = 'hidden'
         makeDashboard(relatedIndicators)
     }
 }
