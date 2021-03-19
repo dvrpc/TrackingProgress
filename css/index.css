@@ -8,7 +8,7 @@ body {
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.45;
 }
 .hidden {
     display: none;
@@ -326,14 +326,14 @@ summary {
     color: #f7f7f7 !important;
 }
 .icon-set {
+    height: 20%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 0;
     margin-right: 16px;
-    height: calc(20% - 1px);
-    width: 100%;
     cursor: pointer;
     text-align: center;
     overflow-y: hidden;

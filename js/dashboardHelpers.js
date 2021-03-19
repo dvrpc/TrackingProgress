@@ -29,13 +29,13 @@ const handleDashboardTransition = (relatedIndicators, indicator) => {
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
     
-    if(indicator) indicator.remove()
+    // if(indicator) indicator.remove()
+
     back.style.display = 'none'
     relatedIndicators.style.display = 'none'
     
     filterToggle.style.display = 'initial'
-    const activeIcons = getActiveIcons()
-    activeIcons.forEach(icon => icon.style.display = 'flex')
+    getActiveIcons().forEach(icon => icon.style.display = 'flex')
 }
 
 const makeDashboard = relatedIndicators => {
@@ -43,19 +43,22 @@ const makeDashboard = relatedIndicators => {
 
     // keep snippet in place while transitioning & constrain height to grid so cat nav imgs don't get stretched
     indicator.style.paddingLeft = '15vw'
-    indicator.style.height = 'calc(94vh - 16px)'
+    indicator.style.height = 'calc(94vh - 46px)'
 
     // reveal the indicators grid, widen the sideNav and reveal the categories
     grid.classList.remove('fade-right')
-        
-    // remove snippet after grid has returned (handle mobile w/no fade)
+    indicator.style.opacity = '30%'
+
+    handleDashboardTransition(relatedIndicators, indicator)
+
+    // remove grid after transition (desktop) or immediately (mobile)
     if(window.innerWidth > 800) {
         window.setTimeout(() => {
-            handleDashboardTransition(relatedIndicators, indicator)
+            if(indicator) indicator.remove()
         }, 2000)
 
     }else {
-        handleDashboardTransition(relatedIndicators, indicator)
+        if(indicator) indicator.remove()
     }
 }
 

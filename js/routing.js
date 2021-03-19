@@ -48,6 +48,8 @@ const updateView = hashParam => {
         splashPage.style.visibility = 'collapse'
         dashboard.style.marginTop = '6vh'
         
+        if(!grid.classList.contains('fade-right')) removeDashboard()
+        
         // create indicator page and hide dash (if needed)
         let hashArray = hash.split('/')
         const accentColor = catLookup[hashArray[1]].dark
@@ -56,11 +58,9 @@ const updateView = hashParam => {
         if( window.innerWidth > 800 ) nav.classList.add('indicators-nav-indicators-page')
         makeIndicatorPage(hashArray)
 
-        grid.classList.contains('fade-right') ? null : removeDashboard()
     }else{
         const relatedIndicators = document.querySelector('.related-indicators')
         nav.classList.remove('indicators-nav-indicators-page')
-        nav.style.overflow = 'hidden'
         makeDashboard(relatedIndicators)
     }
 }
