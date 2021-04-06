@@ -326,13 +326,13 @@ summary {
     color: #f7f7f7 !important;
 }
 .icon-set {
-    height: 20%;
+    height: calc(20% - 8px);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     margin-right: 16px;
     cursor: pointer;
     text-align: center;
@@ -550,6 +550,10 @@ summary {
     max-width: 700px;
     margin: 0 auto;
     padding: 1% 3%;
+}
+#indicator-description-container p {
+    max-width: 70ch;
+    margin: 5% auto;
 }
 .indicator-emoji-context {
     max-width: 700px;
