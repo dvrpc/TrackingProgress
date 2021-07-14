@@ -358,7 +358,7 @@ const snippetsRef = {
             status: 'not-great',
             text: {
                 stat: '2.5% increase',
-                text: `in fatalities and severe injuries since 2014`
+                text: `in fatalities and severe injuries since 2015`
             }
         },
         d3: [
