@@ -40,13 +40,12 @@ const setIndicatorURL = (title, primaryCategory) => {
 
 // parses the URL hash and hydrates the page with the appropriate information
 const updateView = () => {
-    console.log('hashParma at updateView ', hashParam)
-
     // let hash = hashParam ? hashParam : sanitizeHash(location.hash)
     const hash = location.hash ? sanitizeHash(location.hash) : false
-    console.log('hash ', hash)
-
+    
     if(hash){
+        console.log('hash ', hash)
+
         // handle splash page visibility
         splashPage.style.position = 'fixed'
         splashPage.style.visibility = 'collapse'
@@ -54,7 +53,6 @@ const updateView = () => {
         
         if(!grid.classList.contains('fade-right')) removeDashboard()
         
-        console.log('tf hash ', hash)
         // create indicator page and hide dash (if needed)
         let hashArray = hash.split('/')
         const accentColor = catLookup[hashArray[1]].dark
@@ -79,8 +77,7 @@ const refreshView = () => {
 
     // only update the view if refreshing an indicator page
     if(hash.length) {
-        hash = sanitizeHash(hash)
-        updateView(hash)
+        updateView()
     }
 
     dashboard.style.visibility = 'visible'
