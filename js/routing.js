@@ -21,7 +21,7 @@ const setIndexURL = () => {
     history.pushState({page: 'home'}, 'Tracking Progress', baseURL)
     
     // update the view (onhashchange doesnt get triggered so have to manually invoke updateView)
-    updateView(false)
+    updateView()
 }
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
@@ -39,8 +39,12 @@ const setIndicatorURL = (title, primaryCategory) => {
 }
 
 // parses the URL hash and hydrates the page with the appropriate information
-const updateView = hashParam => {
-    let hash = hashParam ? hashParam : sanitizeHash(location.hash)
+const updateView = () => {
+    console.log('hashParma at updateView ', hashParam)
+
+    // let hash = hashParam ? hashParam : sanitizeHash(location.hash)
+    const hash = location.hash ? sanitizeHash(location.hash) : false
+    console.log('hash ', hash)
 
     if(hash){
         // handle splash page visibility
@@ -50,6 +54,7 @@ const updateView = hashParam => {
         
         if(!grid.classList.contains('fade-right')) removeDashboard()
         
+        console.log('tf hash ', hash)
         // create indicator page and hide dash (if needed)
         let hashArray = hash.split('/')
         const accentColor = catLookup[hashArray[1]].dark
