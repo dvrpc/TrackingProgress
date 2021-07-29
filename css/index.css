@@ -297,7 +297,6 @@ summary {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    overflow-y: auto;
     /* width transition */
     transition: width 2s;
     -webkit-transition: width 2s;

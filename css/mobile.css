@@ -103,6 +103,7 @@ summary, #get-started, .homepage-btn {
 .indicators-nav {
     background: white;
     position: sticky;
+    overflow-y: auto;
     top: 6vh;
     width: 100%;
     flex-direction: row;
