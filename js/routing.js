@@ -21,7 +21,7 @@ const setIndexURL = () => {
     history.pushState({page: 'home'}, 'Tracking Progress', baseURL)
     
     // update the view (onhashchange doesnt get triggered so have to manually invoke updateView)
-    updateView(false)
+    updateView()
 }
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
@@ -39,10 +39,13 @@ const setIndicatorURL = (title, primaryCategory) => {
 }
 
 // parses the URL hash and hydrates the page with the appropriate information
-const updateView = hashParam => {
-    let hash = hashParam ? hashParam : sanitizeHash(location.hash)
-
+const updateView = () => {
+    // let hash = hashParam ? hashParam : sanitizeHash(location.hash)
+    const hash = location.hash ? sanitizeHash(location.hash) : false
+    
     if(hash){
+        console.log('hash ', hash)
+
         // handle splash page visibility
         splashPage.style.position = 'fixed'
         splashPage.style.visibility = 'collapse'
@@ -74,8 +77,7 @@ const refreshView = () => {
 
     // only update the view if refreshing an indicator page
     if(hash.length) {
-        hash = sanitizeHash(hash)
-        updateView(hash)
+        updateView()
     }
 
     dashboard.style.visibility = 'visible'
