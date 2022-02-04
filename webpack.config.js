@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 let indexConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname + "/index.html"),
     file: 'index.html',
-    inject: 'body',
+    inject: false,
     minify: {
         collapseWhitespace: true,
         removeComments: true,

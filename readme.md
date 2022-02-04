@@ -7,6 +7,5 @@ Tracking Progress is built primarily with native web technologies. The charts ar
 ## Build Process
 Source code is transpiled and prepared for production with a custom <a href="https://webpack.js.org/">Webpack</a> config. 
 - `npm install` (first time only)
-- From root run `npm build`
-- In `index.html`, change the `<script>` tag in the `<head>` to: `<script defer src="bundle.js" type="text/javascript"></script>`. Delete the reference to `bundle.js` at the bottom of the file.
+- From root run `npm run build`
 - Copy files to /TrackingProgress/
