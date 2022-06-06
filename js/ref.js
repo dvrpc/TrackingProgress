@@ -1900,7 +1900,7 @@ const snippetsRef = {
                         disabled: true
                     },
                     {
-                        'key': 'Railroad',
+                        'key': 'Rail',
                         columns: ['year', 'DVRPCRail'],
                         disabled: true
                     },
@@ -1910,7 +1910,7 @@ const snippetsRef = {
                         disabled: true
                     },
                     {
-                        'key': 'Streetcar or Trolley',
+                        'key': 'Trolley or Light Rail',
                         columns: ['year', 'DVRPCTroll'],
                         disabled: true
                     },
