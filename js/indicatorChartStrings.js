@@ -781,7 +781,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
-        <small class="chart-src"><em>Source: U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages</em></small>
+        <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
 
         <hr class="indicator-content-hr" />
 
@@ -790,7 +790,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Geography: ** County</em></small>
-        <small class="chart-src"><em>Source: U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages</em></small>
+        <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
         <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>
 
         <hr class="indicator-content-hr" />
@@ -826,7 +826,7 @@ const chartStrings = {
         <div class="data-viz chart3">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: U.S. Census Bureau County Business Patterns</em></small>
+        <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
         <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>`,
     'Land Consumption':`
         <div class="toggle-wrapper">
