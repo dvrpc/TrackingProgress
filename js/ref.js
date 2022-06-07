@@ -1837,11 +1837,11 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'Drove Alone',
-                        columns: ['year', 'DVRPCSOV']
+                        columns: ['Year', 'DVRPCSOV']
                     },
                     {
                         'key': 'Other Means',
-                        columns: ['year', 'DVRPCNonSOV']
+                        columns: ['Year', 'DVRPCNonSOV']
                     }
                 ]
             },
@@ -1872,66 +1872,66 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'Carpool',
-                        columns: ['year', 'DVRPCPool']
+                        columns: ['Year', 'DVRPCPool']
                     },
                     {
                         'key': 'Public Transit',
-                        columns: ['year', 'DVRPCTransit']
+                        columns: ['Year', 'DVRPCTransit']
                     },
                     {
                         'key': 'Walked',
-                        columns: ['year', 'DVRPCWalk']
+                        columns: ['Year', 'DVRPCWalk']
                     },
                     {
                         'key': 'Biked',
-                        columns: ['year', 'DVRPCBike']
+                        columns: ['Year', 'DVRPCBike']
                     },
                     {
                         'key': 'Taxi, Motorcycle or Other',
-                        columns: ['year', 'DVRPCTMO']
+                        columns: ['Year', 'DVRPCTMO']
                     },
                     {
                         'key': 'Worked from Home',
-                        columns: ['year', 'DVRPCWFH']
+                        columns: ['Year', 'DVRPCWFH']
                     },
                     {
                         'key': 'Bus',
-                        columns: ['year', 'DVRPCBus'],
+                        columns: ['Year', 'DVRPCBus'],
                         disabled: true
                     },
                     {
-                        'key': 'Railroad',
-                        columns: ['year', 'DVRPCRail'],
+                        'key': 'Rail',
+                        columns: ['Year', 'DVRPCRail'],
                         disabled: true
                     },
                     {
                         'key': 'Subway',
-                        columns: ['year', 'DVRPCSubw'],
+                        columns: ['Year', 'DVRPCSubw'],
                         disabled: true
                     },
                     {
-                        'key': 'Streetcar or Trolley',
-                        columns: ['year', 'DVRPCTroll'],
+                        'key': 'Trolley or Light Rail',
+                        columns: ['Year', 'DVRPCTroll'],
                         disabled: true
                     },
                     {
                         'key': 'Ferryboat',
-                        columns: ['year', 'DVRPCFerry'],
+                        columns: ['Year', 'DVRPCFerry'],
                         disabled: true
                     },
                     {
                         'key': 'Motorcycle',
-                        columns: ['year', 'DVRPCMcyc'],
+                        columns: ['Year', 'DVRPCMcyc'],
                         disabled: true
                     },
                     {
                         'key': 'Other Means',
-                        columns: ['year', 'DVRPCOther'],
+                        columns: ['Year', 'DVRPCOther'],
                         disabled: true
                     },
                     {
                         'key': 'Taxi',
-                        columns: ['year', 'DVRPCTaxi'],
+                        columns: ['Year', 'DVRPCTaxi'],
                         disabled: true
                     }
                 ]
