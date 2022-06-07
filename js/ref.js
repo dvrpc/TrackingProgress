@@ -1007,83 +1007,79 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPC- Accommodation and food services', 'DVRPC- Agriculture, forestry, fishing', 'DVRPC- Arts, entertainment, and recreation', 'DVRPC- Construction and manufacturing', 'DVRPC- Educational services', 'DVRPC- Finance, Insurance, and Real Estate', 'DVRPC- Health care and social assistance', 'DVRPC- Industry not classified', 'DVRPC- Information Technology', 'DVRPC- Management of companies and enterprises', 'DVRPC- Mining and utilities', 'DVRPC- Other services (except public administration)', 'DVRPC- Professional, scientific, and technical services', 'DVRPC- Transportation and warehousing', 'DVRPC- Waste management and remediation services', 'DVRPC- Wholesale and retail trade'],
-                    ['Pennsylvania Suburbs- Accommodation and food services', 'Pennsylvania Suburbs- Agriculture, forestry, fishing', 'Pennsylvania Suburbs- Arts, entertainment, and recreation', 'Pennsylvania Suburbs- Construction and manufacturing', 'Pennsylvania Suburbs- Educational services', 'Pennsylvania Suburbs- Finance, Insurance, and Real Estate', 'Pennsylvania Suburbs- Health care and social assistance', 'Pennsylvania Suburbs- Industry not classified', 'Pennsylvania Suburbs- Information Technology', 'Pennsylvania Suburbs- Management of companies and enterprises', 'Pennsylvania Suburbs- Mining and utilities', 'Pennsylvania Suburbs- Other services (except public administration)', 'Pennsylvania Suburbs- Professional, scientific, and technical services', 'Pennsylvania Suburbs- Transportation and warehousing', 'Pennsylvania Suburbs- Waste management and remediation services', 'Pennsylvania Suburbs- Wholesale and retail trade'],
-                    ['New Jersey Suburbs- Accommodation and food services', 'New Jersey Suburbs- Agriculture, forestry, fishing', 'New Jersey Suburbs- Arts, entertainment, and recreation', 'New Jersey Suburbs- Construction and manufacturing', 'New Jersey Suburbs- Educational services', 'New Jersey Suburbs- Finance, Insurance, and Real Estate', 'New Jersey Suburbs- Health care and social assistance', 'New Jersey Suburbs- Industry not classified', 'New Jersey Suburbs- Information Technology', 'New Jersey Suburbs- Management of companies and enterprises', 'New Jersey Suburbs- Mining and utilities', 'New Jersey Suburbs- Other services (except public administration)', 'New Jersey Suburbs- Professional, scientific, and technical services', 'New Jersey Suburbs- Transportation and warehousing', 'New Jersey Suburbs- Waste management and remediation services', 'New Jersey Suburbs- Wholesale and retail trade'],
-                    ['Bucks- Accommodation and food services', 'Bucks- Agriculture, forestry, fishing', 'Bucks- Arts, entertainment, and recreation', 'Bucks- Construction and manufacturing', 'Bucks- Educational services', 'Bucks- Finance, Insurance, and Real Estate', 'Bucks- Health care and social assistance', 'Bucks- Industry not classified', 'Bucks- Information Technology', 'Bucks- Management of companies and enterprises', 'Bucks- Mining and utilities', 'Bucks- Other services (except public administration)', 'Bucks- Professional, scientific, and technical services', 'Bucks- Transportation and warehousing', 'Bucks- Waste management and remediation services', 'Bucks- Wholesale and retail trade'],
-                    ['Burlington- Accommodation and food services', 'Burlington- Agriculture, forestry, fishing', 'Burlington- Arts, entertainment, and recreation', 'Burlington- Construction and manufacturing', 'Burlington- Educational services', 'Burlington- Finance, Insurance, and Real Estate', 'Burlington- Health care and social assistance', 'Burlington- Industry not classified', 'Burlington- Information Technology', 'Burlington- Management of companies and enterprises', 'Burlington- Mining and utilities', 'Burlington- Other services (except public administration)', 'Burlington- Professional, scientific, and technical services', 'Burlington- Transportation and warehousing', 'Burlington- Waste management and remediation services', 'Burlington- Wholesale and retail trade'],
-                    ['Camden- Accommodation and food services', 'Camden- Agriculture, forestry, fishing', 'Camden- Arts, entertainment, and recreation', 'Camden- Construction and manufacturing', 'Camden- Educational services', 'Camden- Finance, Insurance, and Real Estate', 'Camden- Health care and social assistance', 'Camden- Industry not classified', 'Camden- Information Technology', 'Camden- Management of companies and enterprises', 'Camden- Mining and utilities', 'Camden- Other services (except public administration)', 'Camden- Professional, scientific, and technical services', 'Camden- Transportation and warehousing', 'Camden- Waste management and remediation services', 'Camden- Wholesale and retail trade'],
-                    ['Chester- Accommodation and food services', 'Chester- Agriculture, forestry, fishing', 'Chester- Arts, entertainment, and recreation', 'Chester- Construction and manufacturing', 'Chester- Educational services', 'Chester- Finance, Insurance, and Real Estate', 'Chester- Health care and social assistance', 'Chester- Industry not classified', 'Chester- Information Technology', 'Chester- Management of companies and enterprises', 'Chester- Mining and utilities', 'Chester- Other services (except public administration)', 'Chester- Professional, scientific, and technical services', 'Chester- Transportation and warehousing', 'Chester- Waste management and remediation services', 'Chester- Wholesale and retail trade'],
-                    ['Delaware- Accommodation and food services', 'Delaware- Agriculture, forestry, fishing', 'Delaware- Arts, entertainment, and recreation', 'Delaware- Construction and manufacturing', 'Delaware- Educational services', 'Delaware- Finance, Insurance, and Real Estate', 'Delaware- Health care and social assistance', 'Delaware- Industry not classified', 'Delaware- Information Technology', 'Delaware- Management of companies and enterprises', 'Delaware- Mining and utilities', 'Delaware- Other services (except public administration)', 'Delaware- Professional, scientific, and technical services', 'Delaware- Transportation and warehousing', 'Delaware- Waste management and remediation services', 'Delaware- Wholesale and retail trade'],
-                    ['Gloucester- Accommodation and food services', 'Gloucester- Agriculture, forestry, fishing', 'Gloucester- Arts, entertainment, and recreation', 'Gloucester- Construction and manufacturing', 'Gloucester- Educational services', 'Gloucester- Finance, Insurance, and Real Estate', 'Gloucester- Health care and social assistance', 'Gloucester- Industry not classified', 'Gloucester- Information Technology', 'Gloucester- Management of companies and enterprises', 'Gloucester- Mining and utilities', 'Gloucester- Other services (except public administration)', 'Gloucester- Professional, scientific, and technical services', 'Gloucester- Transportation and warehousing', 'Gloucester- Waste management and remediation services', 'Gloucester- Wholesale and retail trade'],
-                    ['Mercer- Accommodation and food services', 'Mercer- Agriculture, forestry, fishing', 'Mercer- Arts, entertainment, and recreation', 'Mercer- Construction and manufacturing', 'Mercer- Educational services', 'Mercer- Finance, Insurance, and Real Estate', 'Mercer- Health care and social assistance', 'Mercer- Industry not classified', 'Mercer- Information Technology', 'Mercer- Management of companies and enterprises', 'Mercer- Mining and utilities', 'Mercer- Other services (except public administration)', 'Mercer- Professional, scientific, and technical services', 'Mercer- Transportation and warehousing', 'Mercer- Waste management and remediation services', 'Mercer- Wholesale and retail trade'],
-                    ['Montgomery- Accommodation and food services', 'Montgomery- Agriculture, forestry, fishing', 'Montgomery- Arts, entertainment, and recreation', 'Montgomery- Construction and manufacturing', 'Montgomery- Educational services', 'Montgomery- Finance, Insurance, and Real Estate', 'Montgomery- Health care and social assistance', 'Montgomery- Industry not classified', 'Montgomery- Information Technology', 'Montgomery- Management of companies and enterprises', 'Montgomery- Mining and utilities', 'Montgomery- Other services (except public administration)', 'Montgomery- Professional, scientific, and technical services', 'Montgomery- Transportation and warehousing', 'Montgomery- Waste management and remediation services', 'Montgomery- Wholesale and retail trade'],
-                    ['Philadelphia- Accommodation and food services', 'Philadelphia- Agriculture, forestry, fishing', 'Philadelphia- Arts, entertainment, and recreation', 'Philadelphia- Construction and manufacturing', 'Philadelphia- Educational services', 'Philadelphia- Finance, Insurance, and Real Estate', 'Philadelphia- Health care and social assistance', 'Philadelphia- Industry not classified', 'Philadelphia- Information Technology', 'Philadelphia- Management of companies and enterprises', 'Philadelphia- Mining and utilities', 'Philadelphia- Other services (except public administration)', 'Philadelphia- Professional, scientific, and technical services', 'Philadelphia- Transportation and warehousing', 'Philadelphia- Waste management and remediation services', 'Philadelphia- Wholesale and retail trade']
+                    ['Region_ag_for_fish_min', 'Region_art_ent_rec_acc_food', 'Region_construction', 'Region_ed_services', 'Region_fin_insur_real_est', 'Region_health_social_assist', 'Region_information', 'Region_manufacturing', 'Region_other_services', 'Region_prof_services', 'Region_gov_fed_mil', 'Region_gov_state_local', 'Region_retail_trade', 'Region_transp_warehouse_util', 'Region_wholesale_trade'],
+                    ['NJ_Cos_ag_for_fish_min', 'NJ_Cos_art_ent_rec_acc_food', 'NJ_Cos_construction', 'NJ_Cos_ed_services', 'NJ_Cos_fin_insur_real_est', 'NJ_Cos_health_social_assist', 'NJ_Cos_information', 'NJ_Cos_manufacturing', 'NJ_Cos_other_services', 'NJ_Cos_prof_services', 'NJ_Cos_gov_fed_mil', 'NJ_Cos_gov_state_local', 'NJ_Cos_retail_trade', 'NJ_Cos_transp_warehouse_util', 'NJ_Cos_wholesale_trade'],
+                    ['PA_Sub_ag_for_fish_min', 'PA_Sub_art_ent_rec_acc_food', 'PA_Sub_construction', 'PA_Sub_ed_services', 'PA_Sub_fin_insur_real_est', 'PA_Sub_health_social_assist', 'PA_Sub_information', 'PA_Sub_manufacturing', 'PA_Sub_other_services', 'PA_Sub_prof_services', 'PA_Sub_gov_fed_mil', 'PA_Sub_gov_state_local', 'PA_Sub_retail_trade', 'PA_Sub_transp_warehouse_util', 'PA_Sub_wholesale_trade'],
+                    ['Bucks_ag_for_fish_min', 'Bucks_art_ent_rec_acc_food', 'Bucks_construction', 'Bucks_ed_services', 'Bucks_fin_insur_real_est', 'Bucks_health_social_assist', 'Bucks_information', 'Bucks_manufacturing', 'Bucks_other_services', 'Bucks_prof_services', 'Bucks_gov_fed_mil', 'Bucks_gov_state_local', 'Bucks_retail_trade', 'Bucks_transp_warehouse_util', 'Bucks_wholesale_trade'],
+                    ['Burlington_ag_for_fish_min', 'Burlington_art_ent_rec_acc_food', 'Burlington_construction', 'Burlington_ed_services', 'Burlington_fin_insur_real_est', 'Burlington_health_social_assist', 'Burlington_information', 'Burlington_manufacturing', 'Burlington_other_services', 'Burlington_prof_services', 'Burlington_gov_fed_mil', 'Burlington_gov_state_local', 'Burlington_retail_trade', 'Burlington_transp_warehouse_util', 'Burlington_wholesale_trade'],
+                    ['Camden_ag_for_fish_min', 'Camden_art_ent_rec_acc_food', 'Camden_construction', 'Camden_ed_services', 'Camden_fin_insur_real_est', 'Camden_health_social_assist', 'Camden_information', 'Camden_manufacturing', 'Camden_other_services', 'Camden_prof_services', 'Camden_gov_fed_mil', 'Camden_gov_state_local', 'Camden_retail_trade', 'Camden_transp_warehouse_util', 'Camden_wholesale_trade'],
+                    ['Chester_ag_for_fish_min', 'Chester_art_ent_rec_acc_food', 'Chester_construction', 'Chester_ed_services', 'Chester_fin_insur_real_est', 'Chester_health_social_assist', 'Chester_information', 'Chester_manufacturing', 'Chester_other_services', 'Chester_prof_services', 'Chester_gov_fed_mil', 'Chester_gov_state_local', 'Chester_retail_trade', 'Chester_transp_warehouse_util', 'Chester_wholesale_trade'],
+                    ['Gloucester_ag_for_fish_min', 'Gloucester_art_ent_rec_acc_food', 'Gloucester_construction', 'Gloucester_ed_services', 'Gloucester_fin_insur_real_est', 'Gloucester_health_social_assist', 'Gloucester_information', 'Gloucester_manufacturing', 'Gloucester_other_services', 'Gloucester_prof_services', 'Gloucester_gov_fed_mil', 'Gloucester_gov_state_local', 'Gloucester_retail_trade', 'Gloucester_transp_warehouse_util', 'Gloucester_wholesale_trade'],
+                    ['Delaware_ag_for_fish_min', 'Delaware_art_ent_rec_acc_food', 'Delaware_construction', 'Delaware_ed_services', 'Delaware_fin_insur_real_est', 'Delaware_health_social_assist', 'Delaware_information', 'Delaware_manufacturing', 'Delaware_other_services', 'Delaware_prof_services', 'Delaware_gov_fed_mil', 'Delaware_gov_state_local', 'Delaware_retail_trade', 'Delaware_transp_warehouse_util', 'Delaware_wholesale_trade'],
+                    ['Mercer_ag_for_fish_min', 'Mercer_art_ent_rec_acc_food', 'Mercer_construction', 'Mercer_ed_services', 'Mercer_fin_insur_real_est', 'Mercer_health_social_assist', 'Mercer_information', 'Mercer_manufacturing', 'Mercer_other_services', 'Mercer_prof_services', 'Mercer_gov_fed_mil', 'Mercer_gov_state_local', 'Mercer_retail_trade', 'Mercer_transp_warehouse_util', 'Mercer_wholesale_trade'],
+                    ['Montgomery_ag_for_fish_min', 'Montgomery_art_ent_rec_acc_food', 'Montgomery_construction', 'Montgomery_ed_services', 'Montgomery_fin_insur_real_est', 'Montgomery_health_social_assist', 'Montgomery_information', 'Montgomery_manufacturing', 'Montgomery_other_services', 'Montgomery_prof_services', 'Montgomery_gov_fed_mil', 'Montgomery_gov_state_local', 'Montgomery_retail_trade', 'Montgomery_transp_warehouse_util', 'Montgomery_wholesale_trade'],
+                    ['Philadelphia_ag_for_fish_min', 'Philadelphia_art_ent_rec_acc_food', 'Philadelphia_construction', 'Philadelphia_ed_services', 'Philadelphia_fin_insur_real_est', 'Philadelphia_health_social_assist', 'Philadelphia_information', 'Philadelphia_manufacturing', 'Philadelphia_other_services', 'Philadelphia_prof_services', 'Philadelphia_gov_fed_mil', 'Philadelphia_gov_state_local', 'Philadelphia_retail_trade', 'Philadelphia_transp_warehouse_util', 'Philadelphia_wholesale_trade']
                 ],
                 data: [
                     {
-                        'key': 'Accommodation and food services',
-                        'columns': ['year', 'DVRPC- Accommodation and food services']
+                        'key': 'Agriculture, forestry, fishing, mining',
+                        'columns': ['year', 'Region_ag_for_fish_min']
                     },
                     {
-                        'key': 'Agriculture, forestry, fishing',
-                        'columns': ['year', 'DVRPC- Agriculture, forestry, fishing']
+                        'key': 'Arts, entertainment, food, accomodations',
+                        'columns': ['year', 'Region_art_ent_rec_acc_food']
                     },
                     {
-                        'key': 'Arts, entertainment, and recreation',
-                        'columns': ['year', 'DVRPC- Arts, entertainment, and recreation']
-                    },
-                    {
-                        'key': 'Construction and manufacturing',
-                        'columns': ['year', 'DVRPC- Construction and manufacturing']
+                        'key': 'Construction',
+                        'columns': ['year', 'Region_construction']
                     },
                     {
                         'key': 'Educational services',
-                        'columns': ['year', 'DVRPC- Educational services']
+                        'columns': ['year', 'Region_ed_services']
                     },
                     {
-                        'key': 'Finance, Insurance, and Real Estate',
-                        'columns': ['year', 'DVRPC- Finance, Insurance, and Real Estate']
+                        'key': 'Finance, insurance, real estate',
+                        'columns': ['year', 'Region_fin_insur_real_est']
                     },
                     {
                         'key': 'Health care and social assistance',
-                        'columns': ['year', 'DVRPC- Health care and social assistance']
+                        'columns': ['year', 'Region_health_social_assist']
                     },
                     {
-                        'key': 'Industry not classified',
-                        'columns': ['year', 'DVRPC- Industry not classified']
+                        'key': 'Information',
+                        'columns': ['year', 'Region_information']
                     },
                     {
-                        'key': 'Information Technology',
-                        'columns': ['year', 'DVRPC- Information Technology']
+                        'key': 'Manufacturing',
+                        'columns': ['year', 'Region_manufacturing']
                     },
                     {
-                        'key': 'Management of companies and enterprises',
-                        'columns': ['year', 'DVRPC- Management of companies and enterprises']
+                        'key': 'Other services (except public admin)',
+                        'columns': ['year', 'Region_other_services']
                     },
                     {
-                        'key': 'Mining and utilities',
-                        'columns': ['year', 'DVRPC- Mining and utilities']
+                        'key': 'Professional, scientific, technical services',
+                        'columns': ['year', 'Region_prof_services']
                     },
                     {
-                        'key': 'Other services (except public administration)',
-                        'columns': ['year', 'DVRPC- Other services (except public administration)']
+                        'key': 'Public administration: federal, military',
+                        'columns': ['year', 'Region_gov_fed_mil']
                     },
                     {
-                        'key': 'Professional, scientific, and technical services',
-                        'columns': ['year', 'DVRPC- Professional, scientific, and technical services']
+                        'key': 'Public administration: state, local',
+                        'columns': ['year', 'Region_gov_state_local']
                     },
                     {
-                        'key': 'Transportation and warehousing',
-                        'columns': ['year', 'DVRPC- Transportation and warehousing']
+                        'key': 'Retail trade',
+                        'columns': ['year', 'Region_retail_trade']
                     },
                     {
-                        'key': 'Waste management and remediation services',
-                        'columns': ['year', 'DVRPC- Waste management and remediation services']
+                        'key': 'Transportation, warehousing, utilities',
+                        'columns': ['year', 'Region_transp_warehouse_util']
                     },
                     {
-                        'key': 'Wholesale and retail trade',
-                        'columns': ['year', 'DVRPC- Wholesale and retail trade']
+                        'key': 'Wholesale trade',
+                        'columns': ['year', 'Region_wholesale_trade']
                     }
                 ]
             }
