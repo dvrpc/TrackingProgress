@@ -44,8 +44,6 @@ const updateView = () => {
     const hash = location.hash ? sanitizeHash(location.hash) : false
     
     if(hash){
-        console.log('hash ', hash)
-
         // handle splash page visibility
         splashPage.style.position = 'fixed'
         splashPage.style.visibility = 'collapse'

@@ -764,12 +764,36 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: US Patent & Trademark Office's Patent Technology Monitoring Team, DVRPC</em></small>`,
     'Job Growth':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Job Growth Rate by Geography</h2>
-            <form>
+            <h2 class="indicator-subheader toggle-subheader">Job Growth Rate by Type</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-0" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
                 <fieldset>
                     <label>
                         Select Value Type
-                        <select id="viz-0" class="toggle-data-selector">
+                        <select id="viz-0-b" class="toggle-data-selector">
                             <option value="0">Annual</option>
                             <option value="1">Since Base Year</option>
                         </select>
@@ -780,8 +804,7 @@ const chartStrings = {
         <div class="data-viz chart">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
-        <small class="chart-src"><em>Source: U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages</em></small>
+        <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
 
         <hr class="indicator-content-hr" />
 
@@ -790,7 +813,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Geography: ** County</em></small>
-        <small class="chart-src"><em>Source: U.S. Bureau of Labor Statistics Quarterly Census of Employment and Wages</em></small>
+        <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
         <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>
 
         <hr class="indicator-content-hr" />
@@ -826,7 +849,7 @@ const chartStrings = {
         <div class="data-viz chart3">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: U.S. Census Bureau County Business Patterns</em></small>
+        <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
         <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>`,
     'Land Consumption':`
         <div class="toggle-wrapper">
