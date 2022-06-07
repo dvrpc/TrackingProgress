@@ -913,7 +913,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['jobs_graph1'],
+                dataSource: ['jobs_graph1a', 'jobs_graph1b'],
                 context: {
                     labels: ['Growth Rate'],
                     keepLabels: true,
