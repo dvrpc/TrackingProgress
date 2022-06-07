@@ -921,68 +921,31 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPC', 'New Jersey Suburbs', 'Pennsylvania Suburbs', 'Bucks', 'Burlington', 'Camden', 'Chester', 'Delaware', 'Gloucester', 'Mercer', 'Montgomery', 'Philadelphia'],
-                    ['DVRPC-total', 'New Jersey Suburbs-total', 'Pennsylvania Suburbs-total', 'Bucks-total', 'Burlington-total', 'Camden-total', 'Chester-total', 'Delaware-total', 'Gloucester-total', 'Mercer-total', 'Montgomery-total', 'Philadelphia-total']
+                    ['Region_total', 'Region_wage_salary', 'Region_proprietors'],
+                    ['NJ_Cos_total', 'NJ_Cos_wage_salary', 'NJ_Cos_proprietors'],
+                    ['PA_Sub_Cos_total', 'PA_Sub_Cos_wage_salary', 'PA_Sub_Cos_proprietors'],
+                    ['Bucks_total', 'Bucks_wage_salary', 'Bucks_proprietors'],
+                    ['Burlington_total', 'Burlington_wage_salary', 'Burlington_proprietors'],
+                    ['Camden_total', 'Camden_wage_salary', 'Camden_proprietors'],
+                    ['Chester_total', 'Chester_wage_salary', 'Chester_proprietors'],
+                    ['Gloucester_total', 'Gloucester_wage_salary', 'Gloucester_proprietors'],
+                    ['Delaware_total', 'Delaware_wage_salary', 'Delaware_proprietors'],
+                    ['Mercer_total', 'Mercer_wage_salary', 'Mercer_proprietors'],
+                    ['Montgomery_total', 'Montgomery_wage_salary', 'Montgomery_proprietors'],
+                    ['Philadelphia_total', 'Philadelphia_wage_salary', 'Philadelphia_proprietors']
                 ],
                 data:[
                     {
-                        'key': 'DVRPC Region*',
-                        columns: ['year', 'DVRPC']
+                        'key': 'Total',
+                        columns: ['year', 'Region_total']
                     },
                     {
-                        'key': 'NJ Counties*',
-                        disabled: true,
-                        columns: ['year', 'New Jersey Suburbs']
+                        'key': 'Wage Salary',
+                        columns: ['year', 'Region_wage_salary']
                     },
                     {
-                        'key': 'PA Suburban Counties*',
-                        disabled: true,
-                        columns: ['year', 'Pennsylvania Suburbs']
-                    },
-                    {
-                        'key': 'Bucks**',
-                        disabled: true,
-                        columns: ['year', 'Bucks']
-                    },
-                    {
-                        'key': 'Burlington**',
-                        disabled: true,
-                        columns: ['year', 'Burlington']
-                    },
-                    {
-                        'key': 'Camden**',
-                        disabled: true,
-                        columns: ['year', 'Camden']
-                    },
-                    {
-                        'key': 'Chester**',
-                        disabled: true,
-                        columns: ['year', 'Chester']
-                    },
-                    {
-                        'key': 'Delaware**',
-                        disabled: true,
-                        columns: ['year', 'Delaware']
-                    },
-                    {
-                        'key': 'Gloucester**',
-                        disabled: true,
-                        columns: ['year', 'Gloucester']
-                    },
-                    {
-                        'key': 'Mercer**',
-                        disabled: true,
-                        columns: ['year', 'Mercer']
-                    },
-                    {
-                        'key': 'Montgomery**',
-                        disabled: true,
-                        columns: ['year', 'Montgomery']
-                    },
-                    {
-                        'key': 'Philadelphia**',
-                        disabled: true,
-                        columns: ['year', 'Philadelphia']
+                        'key': 'Proprietors',
+                        columns: ['year', 'Region_proprietors']
                     }
                 ]
             },
