@@ -1303,7 +1303,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income by People of Color &amp; Latinx Populations vs. White, non-Latinx Population</h2>
+            <h2 class="indicator-subheader toggle-subheader">Median Household Income by Householder’s Major Race or Ethnic Group</h2>
             <form>
                 <fieldset>
                     <label>
