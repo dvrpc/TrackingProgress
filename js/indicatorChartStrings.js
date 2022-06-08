@@ -1268,7 +1268,7 @@ const chartStrings = {
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
     'Racial & Ethnic Disparities':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income Gap between People of Color & Latinx Populations vs. White, non-Latinx Population</h2>
+            <h2 class="indicator-subheader toggle-subheader">Median Income Gap Relative to Households with White, non-Latinx Householder</h2>
             <form>
                 <fieldset>
                     <label>

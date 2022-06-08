@@ -1112,24 +1112,39 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region'],
-                    ['NJ Suburban Counties'],
-                    ['PA Suburban Counties'],
-                    ['Bucks'],
-                    ['Burlington'],
-                    ['Camden'],
-                    ['Chester'],
-                    ['Delaware'],
-                    ['Gloucester'],
-                    ['Mercer'],
-                    ['Montgomery'],
-                    ['Philadelphia']
+                    ['Region_NonWht','Region_Black','Region_Asian','Region_Latinx'],
+                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian','NJ_Suburban_Counties_Latinx'],
+                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian','PA_Suburban_Counties_Latinx'],
+                    ['Bucks_NonWht','Bucks_Black','Bucks_Asian','Bucks_Latinx'],
+                    ['Burlington_NonWht','Burlington_Black','Burlington_Asian','Burlington_Latinx'],
+                    ['Camden_NonWht','Camden_Black','Camden_Asian','Camden_Latinx'],
+                    ['Chester_NonWht','Chester_Black','Chester_Asian','Chester_Latinx'],
+                    ['Delaware_NonWht','Delaware_Black','Delaware_Asian','Delaware_Latinx'],
+                    ['Gloucester_NonWht','Gloucester_Black','Gloucester_Asian','Gloucester_Latinx'],
+                    ['Mercer_NonWht','Mercer_Black','Mercer_Asian','Mercer_Latinx'],
+                    ['Montgomery_NonWht','Montgomery_Black','Montgomery_Asian','Montgomery_Latinx'],
+                    ['Philadelphia_NonWht','Philadelphia_Black','Philadelphia_Asian','Philadelphia_Latinx']
                 ],
                 data: [
                     {
-                        'key': 'Income Gap',
-                        columns: ['year', 'Region']
+                        'key': 'People of Color & Latinx',
+                        columns: ['year', 'Region_NonWht']
                     },
+                    {
+                        'key': 'Black, non-Latinx',
+                        columns: ['year', 'Region_Black'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Asian, non-Latinx',
+                        columns: ['year', 'Region_Asian'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'atinx',
+                        columns: ['year', 'Region_Latinx'],
+                        disabled: true
+                    }
                 ]
             },
             {
