@@ -1346,7 +1346,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between People of Color &amp; Whites</h2>
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap Relative to White Participation Rate</h2>
             <form>
                 <fieldset>
                     <label>

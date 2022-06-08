@@ -1215,7 +1215,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart4',
-                dataSource: ['labForceByRace_wide'],
+                dataSource: ['labForceByRace_gap'],
                 context: {
                     labels: ['Percent Participation Gap'],
                     keepLabels: true,
@@ -1223,24 +1223,34 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region_difference'],
-                    ['NJ Suburban Counties_difference'],
-                    ['PA Suburban Counties_difference'],
-                    ['Bucks_difference'],
-                    ['Burlington_difference'],
-                    ['Camden_difference'],
-                    ['Chester_difference'],
-                    ['Delaware_difference'],
-                    ['Gloucester_difference'],
-                    ['Mercer_difference'],
-                    ['Montgomery_difference'],
-                    ['Philadelphia_difference']
+                    ['Region_NonWht','Region_Black','Region_Asian'],
+                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian'],
+                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian'],
+                    ['Bucks_NonWht','Bucks_Black','Bucks_Asian'],
+                    ['Burlington_NonWht','Burlington_Black','Burlington_Asian'],
+                    ['Camden_NonWht','Camden_Black','Camden_Asian'],
+                    ['Chester_NonWht','Chester_Black','Chester_Asian'],
+                    ['Delaware_NonWht','Delaware_Black','Delaware_Asian'],
+                    ['Gloucester_NonWht','Gloucester_Black','Gloucester_Asian'],
+                    ['Mercer_NonWht','Mercer_Black','Mercer_Asian'],
+                    ['Montgomery_NonWht','Montgomery_Black','Montgomery_Asian'],
+                    ['Philadelphia_NonWht','Philadelphia_Black','Philadelphia_Asian']
                 ],
                 data: [
                     {
-                        'key': 'Participation Gap',
-                        columns: ['year', 'Region_difference']
-                    }
+                        'key': 'People of Color',
+                        columns: ['year', 'Region_NonWht']
+                    },
+                    {
+                        'key': 'Black, non-Latinx',
+                        columns: ['year', 'Region_Black'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Asian, non-Latinx',
+                        columns: ['year', 'Region_Asian'],
+                        disabled: true
+                    },
                 ]
             },
             {
