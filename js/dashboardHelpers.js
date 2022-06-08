@@ -196,16 +196,12 @@ const indicatorHoverFlip = (indicator, flipTo) => {
     if(!indicator.classList.contains('indicators-grid-item')) indicator = indicator.parentElement
     
     // toggle display property of ze children
-    var children = indicator.children
+    var children = Array.from(indicator.children)
 
-    // brute force just to get it to work for now
-    // flipTo condition: hide default view and reveal quick peak stats
+    // show flipside
     if(flipTo){
-        children[0].style.display = 'none'
-        children[1].style.display = 'none'
-        children[2].style.display = 'flex'
-    
-    // else: go back to default view
+        children.forEach(child => child.classList.contains('flipside') ? child.style.display = 'flex' : child.style.display = 'none')
+    // revert to default
     }else{
         children[0].style.display = 'block'
         children[1].style.display = 'flex'
