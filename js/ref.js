@@ -1256,7 +1256,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart5',
-                dataSource: ['labForceByRace_wide'],
+                dataSource: ['labForceByRace'],
                 context: {
                     labels: ['Percent Participation'],
                     keepLabels: true,
