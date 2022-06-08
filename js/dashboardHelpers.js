@@ -202,10 +202,9 @@ const indicatorHoverFlip = (indicator, flipTo) => {
     if(flipTo){
         children.forEach(child => child.classList.contains('flipside') ? child.style.display = 'flex' : child.style.display = 'none')
     
-    // revert to default (inherit gets the job done eveno tho revert should...?)
+    // revert to default (inherit gets the job done even tho tho revert should...?)
     }else{
         children.forEach(child => child.classList.contains('flipside') ? child.style.display = 'none' : child.style.display = 'inherit')
-
     }
 }
 
