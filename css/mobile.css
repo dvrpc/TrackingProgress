@@ -143,6 +143,10 @@ summary, #get-started, .homepage-btn {
 .flipside-img {
     display: none;
 }
+.new-data {
+    width: 75%;
+    font-size: 0.67rem;
+}
 #equity-icon {
     margin-bottom: auto;
 }
