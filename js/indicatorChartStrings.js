@@ -1268,7 +1268,7 @@ const chartStrings = {
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
     'Racial & Ethnic Disparities':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income Gap between People of Color &amp; Latinx Populations vs. White, non-Latinx Population</h2>
+            <h2 class="indicator-subheader toggle-subheader">Median Income Gap Relative to Households with White, non-Latinx Householder</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1303,7 +1303,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income by People of Color &amp; Latinx Populations vs. White, non-Latinx Population</h2>
+            <h2 class="indicator-subheader toggle-subheader">Median Household Income by Householder’s Major Race or Ethnic Group</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1346,7 +1346,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between People of Color &amp; Whites</h2>
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap Relative to White Participation Rate</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1381,7 +1381,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by People of Color &amp; Whites</h2>
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Race</h2>
             <form>
                 <fieldset>
                     <label>

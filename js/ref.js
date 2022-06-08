@@ -1112,24 +1112,39 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region'],
-                    ['NJ Suburban Counties'],
-                    ['PA Suburban Counties'],
-                    ['Bucks'],
-                    ['Burlington'],
-                    ['Camden'],
-                    ['Chester'],
-                    ['Delaware'],
-                    ['Gloucester'],
-                    ['Mercer'],
-                    ['Montgomery'],
-                    ['Philadelphia']
+                    ['Region_NonWht','Region_Black','Region_Asian','Region_Latinx'],
+                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian','NJ_Suburban_Counties_Latinx'],
+                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian','PA_Suburban_Counties_Latinx'],
+                    ['Bucks_NonWht','Bucks_Black','Bucks_Asian','Bucks_Latinx'],
+                    ['Burlington_NonWht','Burlington_Black','Burlington_Asian','Burlington_Latinx'],
+                    ['Camden_NonWht','Camden_Black','Camden_Asian','Camden_Latinx'],
+                    ['Chester_NonWht','Chester_Black','Chester_Asian','Chester_Latinx'],
+                    ['Delaware_NonWht','Delaware_Black','Delaware_Asian','Delaware_Latinx'],
+                    ['Gloucester_NonWht','Gloucester_Black','Gloucester_Asian','Gloucester_Latinx'],
+                    ['Mercer_NonWht','Mercer_Black','Mercer_Asian','Mercer_Latinx'],
+                    ['Montgomery_NonWht','Montgomery_Black','Montgomery_Asian','Montgomery_Latinx'],
+                    ['Philadelphia_NonWht','Philadelphia_Black','Philadelphia_Asian','Philadelphia_Latinx']
                 ],
                 data: [
                     {
-                        'key': 'Income Gap',
-                        columns: ['year', 'Region']
+                        'key': 'People of Color & Latinx',
+                        columns: ['year', 'Region_NonWht']
                     },
+                    {
+                        'key': 'Black, non-Latinx',
+                        columns: ['year', 'Region_Black'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Asian, non-Latinx',
+                        columns: ['year', 'Region_Asian'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Latinx',
+                        columns: ['year', 'Region_Latinx'],
+                        disabled: true
+                    }
                 ]
             },
             {
@@ -1143,27 +1158,42 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region_minorityInc', 'Region_whtNonHispInc'],
-                    ['NJ Suburban Counties_minorityInc', 'NJ Suburban Counties_whtNonHispInc'],
-                    ['PA Suburban Counties_minorityInc', 'PA Suburban Counties_whtNonHispInc'],
-                    ['Bucks_minorityInc', 'Bucks_whtNonHispInc'],
-                    ['Burlington_minorityInc', 'Burlington_whtNonHispInc'],
-                    ['Camden_minorityInc', 'Camden_whtNonHispInc'],
-                    ['Chester_minorityInc', 'Chester_whtNonHispInc'],
-                    ['Delaware_minorityInc', 'Delaware_whtNonHispInc'],
-                    ['Gloucester_minorityInc', 'Gloucester_whtNonHispInc'],
-                    ['Mercer_minorityInc', 'Mercer_whtNonHispInc'],
-                    ['Montgomery_minorityInc', 'Montgomery_whtNonHispInc'],
-                    ['Philadelphia_minorityInc', 'Philadelphia_whtNonHispInc']
+                    ['Region_NonWht','Region_White','Region_Black','Region_Asian','Region_Latinx'],
+                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_White','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian','NJ_Suburban_Counties_Latinx'],
+                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_White','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian','PA_Suburban_Counties_Latinx'],
+                    ['Bucks_NonWht','Bucks_White','Bucks_Black','Bucks_Asian','Bucks_Latinx'],
+                    ['Burlington_NonWht','Burlington_White','Burlington_Black','Burlington_Asian','Burlington_Latinx'],
+                    ['Camden_NonWht','Camden_White','Camden_Black','Camden_Asian','Camden_Latinx'],
+                    ['Chester_NonWht','Chester_White','Chester_Black','Chester_Asian','Chester_Latinx'],
+                    ['Delaware_NonWht','Delaware_White','Delaware_Black','Delaware_Asian','Delaware_Latinx'],
+                    ['Gloucester_NonWht','Gloucester_White','Gloucester_Black','Gloucester_Asian','Gloucester_Latinx'],
+                    ['Mercer_NonWht','Mercer_White','Mercer_Black','Mercer_Asian','Mercer_Latinx'],
+                    ['Montgomery_NonWht','Montgomery_White','Montgomery_Black','Montgomery_Asian','Montgomery_Latinx'],
+                    ['Philadelphia_NonWht','Philadelphia_White','Philadelphia_Black','Philadelphia_Asian','Philadelphia_Latinx']
                 ],
                 data: [
                     {
                         'key': 'People of Color & Latinx',
-                        columns: ['year', 'Region_minorityInc']
+                        columns: ['year', 'Region_NonWht']
                     },
                     {
-                        'key': 'Whites',
-                        columns: ['year', 'Region_whtNonHispInc']
+                        'key': 'White, non-Latinx',
+                        columns: ['year', 'Region_White']
+                    },
+                    {
+                        'key': 'Black, non-Latinx',
+                        columns: ['year', 'Region_Black'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Asian, non-Latinx',
+                        columns: ['year', 'Region_Asian'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Latinx',
+                        columns: ['year', 'Region_Latinx'],
+                        disabled: true
                     }
                 ]
             },
@@ -1185,7 +1215,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart4',
-                dataSource: ['labForceByRace_wide'],
+                dataSource: ['labForceByRace_gap'],
                 context: {
                     labels: ['Percent Participation Gap'],
                     keepLabels: true,
@@ -1193,30 +1223,40 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region_difference'],
-                    ['NJ Suburban Counties_difference'],
-                    ['PA Suburban Counties_difference'],
-                    ['Bucks_difference'],
-                    ['Burlington_difference'],
-                    ['Camden_difference'],
-                    ['Chester_difference'],
-                    ['Delaware_difference'],
-                    ['Gloucester_difference'],
-                    ['Mercer_difference'],
-                    ['Montgomery_difference'],
-                    ['Philadelphia_difference']
+                    ['Region_NonWht','Region_Black','Region_Asian'],
+                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian'],
+                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian'],
+                    ['Bucks_NonWht','Bucks_Black','Bucks_Asian'],
+                    ['Burlington_NonWht','Burlington_Black','Burlington_Asian'],
+                    ['Camden_NonWht','Camden_Black','Camden_Asian'],
+                    ['Chester_NonWht','Chester_Black','Chester_Asian'],
+                    ['Delaware_NonWht','Delaware_Black','Delaware_Asian'],
+                    ['Gloucester_NonWht','Gloucester_Black','Gloucester_Asian'],
+                    ['Mercer_NonWht','Mercer_Black','Mercer_Asian'],
+                    ['Montgomery_NonWht','Montgomery_Black','Montgomery_Asian'],
+                    ['Philadelphia_NonWht','Philadelphia_Black','Philadelphia_Asian']
                 ],
                 data: [
                     {
-                        'key': 'Participation Gap',
-                        columns: ['year', 'Region_difference']
-                    }
+                        'key': 'People of Color',
+                        columns: ['year', 'Region_NonWht']
+                    },
+                    {
+                        'key': 'Black, non-Latinx',
+                        columns: ['year', 'Region_Black'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Asian, non-Latinx',
+                        columns: ['year', 'Region_Asian'],
+                        disabled: true
+                    },
                 ]
             },
             {
                 type: 'line',
                 container: 'chart5',
-                dataSource: ['labForceByRace_wide'],
+                dataSource: ['labForceByRace'],
                 context: {
                     labels: ['Percent Participation'],
                     keepLabels: true,
@@ -1224,28 +1264,38 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region_labWht', 'Region_labNonWht'],
-                    ['NJ Suburban Counties_labWht', 'NJ Suburban Counties_labNonWht'],
-                    ['PA Suburban Counties_labWht', 'PA Suburban Counties_labNonWht'],
-                    ['Bucks_labWht', 'Bucks_labNonWht'],
-                    ['Burlington_labWht', 'Burlington_labNonWht'],
-                    ['Camden_labWht', 'Camden_labNonWht'],
-                    ['Chester_labWht', 'Chester_labNonWht'],
-                    ['Delaware_labWht', 'Delaware_labNonWht'],
-                    ['Gloucester_labWht', 'Gloucester_labNonWht'],
-                    ['Mercer_labWht', 'Mercer_labNonWht'],
-                    ['Montgomery_labWht', 'Montgomery_labNonWht'],
-                    ['Philadelphia_labWht', 'Philadelphia_labNonWht']
+                    ['Region_NonWht','Region_White','Region_Black','Region_Asian'],
+                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_White','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian'],
+                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_White','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian'],
+                    ['Bucks_NonWht','Bucks_White','Bucks_Black','Bucks_Asian'],
+                    ['Burlington_NonWht','Burlington_White','Burlington_Black','Burlington_Asian'],
+                    ['Camden_NonWht','Camden_White','Camden_Black','Camden_Asian'],
+                    ['Chester_NonWht','Chester_White','Chester_Black','Chester_Asian'],
+                    ['Delaware_NonWht','Delaware_White','Delaware_Black','Delaware_Asian'],
+                    ['Gloucester_NonWht','Gloucester_White','Gloucester_Black','Gloucester_Asian'],
+                    ['Mercer_NonWht','Mercer_White','Mercer_Black','Mercer_Asian'],
+                    ['Montgomery_NonWht','Montgomery_White','Montgomery_Black','Montgomery_Asian'],
+                    ['Philadelphia_NonWht','Philadelphia_White','Philadelphia_Black','Philadelphia_Asian']
                 ],
                 data: [
                     {
-                        'key': 'People of Color',
-                        columns: ['year', 'Region_labNonWht']
+                        'key': 'People of Color & Latinx',
+                        columns: ['year', 'Region_NonWht']
                     },
                     {
-                        'key': 'Whites',
-                        columns: ['year', 'Region_labWht']
-                    }
+                        'key': 'White, non-Latinx',
+                        columns: ['year', 'Region_White']
+                    },
+                    {
+                        'key': 'Black, non-Latinx',
+                        columns: ['year', 'Region_Black'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'Asian, non-Latinx',
+                        columns: ['year', 'Region_Asian'],
+                        disabled: true
+                    },
                 ]
             }
         ],
