@@ -1026,7 +1026,7 @@ const snippetsRef = {
                         'columns': ['year', 'Region_ag_for_fish_min']
                     },
                     {
-                        'key': 'Arts, entertainment, food, accomodations',
+                        'key': 'Arts, entertain., food, accomodations',
                         'columns': ['year', 'Region_art_ent_rec_acc_food']
                     },
                     {
@@ -1058,7 +1058,7 @@ const snippetsRef = {
                         'columns': ['year', 'Region_other_services']
                     },
                     {
-                        'key': 'Professional, scientific, technical services',
+                        'key': 'Professional, scientific, tech services',
                         'columns': ['year', 'Region_prof_services']
                     },
                     {
