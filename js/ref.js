@@ -1106,7 +1106,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['medincGapRace'],
                 context: {
-                    labels: ['Dollars (2017)'],
+                    labels: ['Dollars (2019)'],
                     keepLabels: true,
                     units: ['dollars'],
                     keepUnits: true
@@ -1152,7 +1152,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['medincRace'],
                 context: {
-                    labels: ['Dollars (2017)'],
+                    labels: ['Dollars (2019)'],
                     keepLabels: true,
                     units: ['dollars'],
                     keepUnits: true
