@@ -267,10 +267,32 @@ back.onclick = () => {
     {/* <div class="new-data">
         new data!
     </div> */}
-const addNewDataUIEls = async () => {
-    
+const makeNewDataEl = () => {
+    const newDataEl = document.createElement('newDataEl')
+    newDataEl.classList.add('new-data')
+    newDataEl.textContent = 'new data!'
+    return newDataEl
 }
 
+const addNewDataUIEls = async () => {
+    try {
+        const stream = await fetch('http://linux2.dvrpc.org/tracking-progress/v1/indicators')
+        
+        if(stream.ok) {
+            const els = await stream.json()
+
+            if(els.length) {
+                els.forEach(el => {
+                    const activeIndicator = grid.querySelector(`#${el}`)
+                    activeIndicator.prepend(makeNewDataEl())
+                })
+            }
+        }
+    } catch(error) {
+        return false
+    }
+}
+addNewDataUIEls()
 
 /*************************************************/
 /***************** Window Events *****************/
