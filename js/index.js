@@ -262,6 +262,16 @@ back.onclick = () => {
 }
 
 
+// add new dat UI element(s)
+// template: 
+    {/* <div class="new-data">
+        new data!
+    </div> */}
+const addNewDataUIEls = async () => {
+    
+}
+
+
 /*************************************************/
 /***************** Window Events *****************/
 // hashChange function parses an updated URL and updates the page (and route) when using navigation arrows
