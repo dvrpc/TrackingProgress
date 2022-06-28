@@ -285,7 +285,6 @@ const addNewDataUIEls = async () => {
 
             if(els.length) {
                 els.forEach(el => {
-                    el = el.split(' ').join('-')
                     const activeIndicator = grid.querySelector(`#${el}`)
                     activeIndicator.prepend(makeNewDataEl())
                 })
