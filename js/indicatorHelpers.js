@@ -202,7 +202,7 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
             let sideLink = document.createElement('span')
 
             // get a handle on the necessary info
-            const linkTitle = indicator.children[1].textContent
+            const linkTitle = indicator.querySelector('.indicators-title').textContent
 
             // update basic info + styling
             sideLink.textContent = linkTitle
