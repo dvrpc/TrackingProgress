@@ -278,12 +278,10 @@ const makeNewDataEl = () => {
 
 const addNewDataUIEls = async () => {
     try {
-        // const stream = await fetch('http://linux2.dvrpc.org/tracking-progress/v1/indicators')
+        const stream = await fetch('http://linux2.dvrpc.org/tracking-progress/v1/indicators')
         
-        // if(stream.ok) {
-            // const els = await stream.json()
-
-            const els = ['Air Quality', 'Commute Mode', 'Racial and Ethnic Disparities', 'Innovation']
+        if(stream.ok) {
+            const els = await stream.json()
 
             if(els.length) {
                 els.forEach(el => {
@@ -292,7 +290,7 @@ const addNewDataUIEls = async () => {
                     activeIndicator.prepend(makeNewDataEl())
                 })
             }
-        // }
+        }
     } catch(error) {
         return false
     }
