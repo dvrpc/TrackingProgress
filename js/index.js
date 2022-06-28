@@ -263,10 +263,6 @@ back.onclick = () => {
 
 
 // add new dat UI element(s)
-// template: 
-    {/* <div class="new-data">
-        new data!
-    </div> */}
 const makeNewDataEl = () => {
     const newDataEl = document.createElement('div')
 
