@@ -268,9 +268,11 @@ back.onclick = () => {
         new data!
     </div> */}
 const makeNewDataEl = () => {
-    const newDataEl = document.createElement('newDataEl')
+    const newDataEl = document.createElement('div')
+
     newDataEl.classList.add('new-data')
     newDataEl.textContent = 'new data!'
+
     return newDataEl
 }
 
@@ -283,6 +285,7 @@ const addNewDataUIEls = async () => {
 
             if(els.length) {
                 els.forEach(el => {
+                    el = el.split(' ').join('-')
                     const activeIndicator = grid.querySelector(`#${el}`)
                     activeIndicator.prepend(makeNewDataEl())
                 })
