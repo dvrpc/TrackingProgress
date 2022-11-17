@@ -1,0 +1,3 @@
+The U.S. Environmental Protection Agency (US EPA) has developed air quality standards for six "criteria" pollutants. Of these six pollutants, the DVRPC region has a history of violating the standards for two: ground-level ozone and fine particulate matter (PM2.5). These pollutants have been shown to impede healthy lung development in children and exacerbate breathing disorders in the general population, especially in the elderly. Additionally, exposure to PM2.5 can aggravate heart conditions. In addition to higher costs for households and the healthcare system, poor air quality's economic implications include more days of missed work and school.
+
+Air pollution has been shown to have disproportionate effects on persons of color and low-income populations.
