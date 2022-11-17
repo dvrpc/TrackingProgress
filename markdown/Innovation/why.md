@@ -1,0 +1,1 @@
+Innovation is critical for a healthy regional economy. If local industries and economic development entities capitalize on them, goods and services invented in the region can grow into start-ups and job opportunities that stay in the region. Research institutions, and other research and development outfits, can play a big role in innovation creation and regional economic growth.
