@@ -6,27 +6,27 @@ let globalText = null;
 // create an indicator page using content from it's entry in ref.js
 const makeIndicatorHTML = async (params) => {
   // extract info from params
-  const title = params.title;
-  globalText = await Promise.all([
-    fetch(`../markdown/${title}/how.md`)
-      .then((res) => res.text())
-      .then((text) => marked.parse(text)),
-    fetch(`../markdown/${title}/why.md`)
-      .then((res) => res.text())
-      .then((text) => marked.parse(text)),
-    fetch(`../markdown/${title}/what.md`)
-      .then((res) => res.text())
-      .then((text) => marked.parse(text)),
-    fetch(`../markdown/${title}/resource.md`)
-      .then((res) => res.text())
-      .then((text) => marked.parse(text)),
-  ]).then(([how, why, what, resource]) => ({ how, why, what, resource }));
-  const categories = params.categories;
-  const catPrimary = params.categories[0] || "unset";
-  const mainText = params.text;
-  const defaultText = params.text.why;
-  const trend = params.trend;
-  const tabColor = catLookup[catPrimary].dark;
+    const title = params.title;
+    globalText = await Promise.all([
+      fetch(`../markdown/${title}/how.md`)
+        .then((res) => res.text())
+        .then((text) => marked.parse(text)),
+      fetch(`../markdown/${title}/why.md`)
+        .then((res) => res.text())
+        .then((text) => marked.parse(text)),
+      fetch(`../markdown/${title}/what.md`)
+        .then((res) => res.text())
+        .then((text) => marked.parse(text)),
+      fetch(`../markdown/${title}/resource.md`)
+        .then((res) => res.text())
+        .then((text) => marked.parse(text)),
+    ]).then(([how, why, what, resource]) => ({ how, why, what, resource }));
+    const categories = params.categories;
+    const catPrimary = params.categories[0] || "unset";
+    const mainText = params.text;
+    const defaultText = params.text.why;
+    const trend = params.trend;
+    const tabColor = catLookup[catPrimary].dark;
 
     // create parent/non-content elements
     const snippet = document.createElement('article')
