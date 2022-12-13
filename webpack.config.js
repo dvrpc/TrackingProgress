@@ -18,82 +18,88 @@ let indexConfig = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-    entry: ['@babel/polyfill', './js/index.js'],
-    mode: 'production',
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['minify']
-                }
+  entry: ["@babel/polyfill", "./js/index.js"],
+  mode: "production",
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        query: {
+          presets: ["minify"],
+        },
+      },
+      // load styles
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      // load imgs
+      {
+        test: /\.(png|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "img/[name].[ext]",
             },
-            // load styles
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            },
-            // load imgs
-            {
-                test: /\.(png|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: 'img/[name].[ext]'
-                        }
-                    }
-                ]
-            },
-            // load data
-            {
-                test: /\.(csv|tsv)$/,
-                use: [
-                    'csv-loader'
-                ]
-            }
-        ]
-    },
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'build')
-    },
-    plugins: [
-        new CopyWebpackPlugin(
-            [
-                {
-                    from: './img',
-                    to: 'img',
-                    toType: 'dir'
-                },
-                {
-                    from: './data',
-                    to: 'data',
-                    toType: 'dir'
-                },
-                {
-                    from: './css',
-                    to: 'css',
-                    toType: 'dir'
-                },
-                {
-                    from: './vid',
-                    to: 'vid',
-                    toType: 'dir'
-                },
-                {
-                    from: './pdf',
-                    to: 'pdf',
-                    toType: 'dir'
-                }
-            ]
-        ),
+          },
+        ],
+      },
+      // load data
+      {
+        test: /\.(csv|tsv)$/,
+        use: ["csv-loader"],
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: "html-loader",
+          },
+        ],
+      },
+    ],
+  },
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "build"),
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: "./img",
+        to: "img",
+        toType: "dir",
+      },
+      {
+        from: "./data",
+        to: "data",
+        toType: "dir",
+      },
+      {
+        from: "./css",
+        to: "css",
+        toType: "dir",
+      },
+      {
+        from: "./vid",
+        to: "vid",
+        toType: "dir",
+      },
+      {
+        from: "./pdf",
+        to: "pdf",
+        toType: "dir",
+      },
+      {
+        from: "./markdown",
+        to: "markdown",
+        toType: "dir",
+      },
+    ]),
     // HtmlWebpackPlugin
-        indexConfig
-    ]
-}
+    indexConfig,
+  ],
+};

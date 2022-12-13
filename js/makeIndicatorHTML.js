@@ -7,20 +7,7 @@ let globalText = null;
 const makeIndicatorHTML = async (params) => {
   // extract info from params
     const title = params.title;
-    globalText = await Promise.all([
-      fetch(`../markdown/${title}/how.md`)
-        .then((res) => res.text())
-        .then((text) => marked.parse(text)),
-      fetch(`../markdown/${title}/why.md`)
-        .then((res) => res.text())
-        .then((text) => marked.parse(text)),
-      fetch(`../markdown/${title}/what.md`)
-        .then((res) => res.text())
-        .then((text) => marked.parse(text)),
-      fetch(`../markdown/${title}/resource.md`)
-        .then((res) => res.text())
-        .then((text) => marked.parse(text)),
-    ]).then(([how, why, what, resource]) => ({ how, why, what, resource }));
+    globalText = await fetchMarkdown(title)
     const categories = params.categories;
     const catPrimary = params.categories[0] || "unset";
     const mainText = params.text;
@@ -60,6 +47,31 @@ const makeIndicatorHTML = async (params) => {
 
     return snippet
 }
+
+/**
+ * fetches markdown files for an indicator
+ * @param {String} title 
+ * @returns Object
+ */
+const fetchMarkdown = async (title) => {
+  const ret = await Promise.all([
+    fetch(`../markdown/${title}/how.md`)
+      .then((res) => res.text())
+      .then((text) => marked.parse(text)),
+    fetch(`../markdown/${title}/why.md`)
+      .then((res) => res.text())
+      .then((text) => marked.parse(text)),
+    fetch(`../markdown/${title}/what.md`)
+      .then((res) => res.text())
+      .then((text) => marked.parse(text)),
+    fetch(`../markdown/${title}/resources.md`)
+      .then((res) => res.text())
+      .then((text) => marked.parse(text)),
+  ]).then(([how, why, what, resource]) => ({ how, why, what, resource }));
+  
+  return ret;
+}
+
 const make404 = () => {
    // create elements
    const snippet = document.createElement('article')
