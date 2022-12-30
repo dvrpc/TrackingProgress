@@ -901,410 +901,779 @@ const snippetsRef = {
         }
     },
     'Job Growth': {
-        categories: ['econo', 'comm'],
-        trend: {
-            status: 'good',
-            text: {
-                stat: '6% increase',
-                text: `in jobs since 2001`
-            }
-        },
-        d3: [
-            {
-                type: 'line',
-                container: 'chart',
-                dataSource: ['jobs_graph1a', 'jobs_graph1b'],
-                context: {
-                    labels: ['Growth Rate'],
-                    keepLabels: true,
-                    units: ['percentC'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['Region_total', 'Region_wage_salary', 'Region_proprietors'],
-                    ['NJ_Cos_total', 'NJ_Cos_wage_salary', 'NJ_Cos_proprietors'],
-                    ['PA_Sub_Cos_total', 'PA_Sub_Cos_wage_salary', 'PA_Sub_Cos_proprietors'],
-                    ['Bucks_total', 'Bucks_wage_salary', 'Bucks_proprietors'],
-                    ['Burlington_total', 'Burlington_wage_salary', 'Burlington_proprietors'],
-                    ['Camden_total', 'Camden_wage_salary', 'Camden_proprietors'],
-                    ['Chester_total', 'Chester_wage_salary', 'Chester_proprietors'],
-                    ['Gloucester_total', 'Gloucester_wage_salary', 'Gloucester_proprietors'],
-                    ['Delaware_total', 'Delaware_wage_salary', 'Delaware_proprietors'],
-                    ['Mercer_total', 'Mercer_wage_salary', 'Mercer_proprietors'],
-                    ['Montgomery_total', 'Montgomery_wage_salary', 'Montgomery_proprietors'],
-                    ['Philadelphia_total', 'Philadelphia_wage_salary', 'Philadelphia_proprietors']
-                ],
-                data:[
-                    {
-                        'key': 'Total',
-                        columns: ['year', 'Region_total']
-                    },
-                    {
-                        'key': 'Wage Salary',
-                        columns: ['year', 'Region_wage_salary']
-                    },
-                    {
-                        'key': 'Proprietors',
-                        columns: ['year', 'Region_proprietors']
-                    }
-                ]
-            },
-            {
-                type: 'stacked bar',
-                container: 'chart2',
-                dataSource: ['jobs_graph2'],
-                context: {
-                    labels: ['Percentage of Region'],
-                    units: ['percentC']
-                },
-                data: [
-                    {
-                        'key': 'Bucks**',
-                        columns: ['year', 'Bucks']
-                    },
-                    {
-                        'key': 'Burlington**',
-                        columns: ['year', 'Burlington']
-                    },
-                    {
-                        'key': 'Camden**',
-                        columns: ['year', 'Camden']
-                    },
-                    {
-                        'key': 'Chester**',
-                        columns: ['year', 'Chester']
-                    },
-                    {
-                        'key': 'Delaware**',
-                        columns: ['year', 'Delaware']
-                    },
-                    {
-                        'key': 'Gloucester**',
-                        columns: ['year', 'Gloucester']
-                    },
-                    {
-                        'key': 'Mercer**',
-                        columns: ['year', 'Mercer']
-                    },
-                    {
-                        'key': 'Montgomery**',
-                        columns: ['year', 'Montgomery']
-                    },
-                    {
-                        'key': 'Philadelphia**',
-                        columns: ['year', 'Philadelphia']
-                    }
-                ]
-            },
-            {
-                type: 'stacked bar',
-                container: 'chart3',
-                dataSource: ['jobs_graph3'],
-                context: {
-                    labels: ['Percentage of Total Jobs'],
-                    keepLabels: true,
-                    units: ['percentC'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['Region_ag_for_fish_min', 'Region_art_ent_rec_acc_food', 'Region_construction', 'Region_ed_services', 'Region_fin_insur_real_est', 'Region_health_social_assist', 'Region_information', 'Region_manufacturing', 'Region_other_services', 'Region_prof_services', 'Region_gov_fed_mil', 'Region_gov_state_local', 'Region_retail_trade', 'Region_transp_warehouse_util', 'Region_wholesale_trade'],
-                    ['NJ_Cos_ag_for_fish_min', 'NJ_Cos_art_ent_rec_acc_food', 'NJ_Cos_construction', 'NJ_Cos_ed_services', 'NJ_Cos_fin_insur_real_est', 'NJ_Cos_health_social_assist', 'NJ_Cos_information', 'NJ_Cos_manufacturing', 'NJ_Cos_other_services', 'NJ_Cos_prof_services', 'NJ_Cos_gov_fed_mil', 'NJ_Cos_gov_state_local', 'NJ_Cos_retail_trade', 'NJ_Cos_transp_warehouse_util', 'NJ_Cos_wholesale_trade'],
-                    ['PA_Sub_Cos_ag_for_fish_min', 'PA_Sub_Cos_art_ent_rec_acc_food', 'PA_Sub_Cos_construction', 'PA_Sub_Cos_ed_services', 'PA_Sub_Cos_fin_insur_real_est', 'PA_Sub_Cos_health_social_assist', 'PA_Sub_Cos_information', 'PA_Sub_Cos_manufacturing', 'PA_Sub_Cos_other_services', 'PA_Sub_Cos_prof_services', 'PA_Sub_Cos_gov_fed_mil', 'PA_Sub_Cos_gov_state_local', 'PA_Sub_Cos_retail_trade', 'PA_Sub_Cos_transp_warehouse_util', 'PA_Sub_Cos_wholesale_trade'],
-                    ['Bucks_ag_for_fish_min', 'Bucks_art_ent_rec_acc_food', 'Bucks_construction', 'Bucks_ed_services', 'Bucks_fin_insur_real_est', 'Bucks_health_social_assist', 'Bucks_information', 'Bucks_manufacturing', 'Bucks_other_services', 'Bucks_prof_services', 'Bucks_gov_fed_mil', 'Bucks_gov_state_local', 'Bucks_retail_trade', 'Bucks_transp_warehouse_util', 'Bucks_wholesale_trade'],
-                    ['Burlington_ag_for_fish_min', 'Burlington_art_ent_rec_acc_food', 'Burlington_construction', 'Burlington_ed_services', 'Burlington_fin_insur_real_est', 'Burlington_health_social_assist', 'Burlington_information', 'Burlington_manufacturing', 'Burlington_other_services', 'Burlington_prof_services', 'Burlington_gov_fed_mil', 'Burlington_gov_state_local', 'Burlington_retail_trade', 'Burlington_transp_warehouse_util', 'Burlington_wholesale_trade'],
-                    ['Camden_ag_for_fish_min', 'Camden_art_ent_rec_acc_food', 'Camden_construction', 'Camden_ed_services', 'Camden_fin_insur_real_est', 'Camden_health_social_assist', 'Camden_information', 'Camden_manufacturing', 'Camden_other_services', 'Camden_prof_services', 'Camden_gov_fed_mil', 'Camden_gov_state_local', 'Camden_retail_trade', 'Camden_transp_warehouse_util', 'Camden_wholesale_trade'],
-                    ['Chester_ag_for_fish_min', 'Chester_art_ent_rec_acc_food', 'Chester_construction', 'Chester_ed_services', 'Chester_fin_insur_real_est', 'Chester_health_social_assist', 'Chester_information', 'Chester_manufacturing', 'Chester_other_services', 'Chester_prof_services', 'Chester_gov_fed_mil', 'Chester_gov_state_local', 'Chester_retail_trade', 'Chester_transp_warehouse_util', 'Chester_wholesale_trade'],
-                    ['Gloucester_ag_for_fish_min', 'Gloucester_art_ent_rec_acc_food', 'Gloucester_construction', 'Gloucester_ed_services', 'Gloucester_fin_insur_real_est', 'Gloucester_health_social_assist', 'Gloucester_information', 'Gloucester_manufacturing', 'Gloucester_other_services', 'Gloucester_prof_services', 'Gloucester_gov_fed_mil', 'Gloucester_gov_state_local', 'Gloucester_retail_trade', 'Gloucester_transp_warehouse_util', 'Gloucester_wholesale_trade'],
-                    ['Delaware_ag_for_fish_min', 'Delaware_art_ent_rec_acc_food', 'Delaware_construction', 'Delaware_ed_services', 'Delaware_fin_insur_real_est', 'Delaware_health_social_assist', 'Delaware_information', 'Delaware_manufacturing', 'Delaware_other_services', 'Delaware_prof_services', 'Delaware_gov_fed_mil', 'Delaware_gov_state_local', 'Delaware_retail_trade', 'Delaware_transp_warehouse_util', 'Delaware_wholesale_trade'],
-                    ['Mercer_ag_for_fish_min', 'Mercer_art_ent_rec_acc_food', 'Mercer_construction', 'Mercer_ed_services', 'Mercer_fin_insur_real_est', 'Mercer_health_social_assist', 'Mercer_information', 'Mercer_manufacturing', 'Mercer_other_services', 'Mercer_prof_services', 'Mercer_gov_fed_mil', 'Mercer_gov_state_local', 'Mercer_retail_trade', 'Mercer_transp_warehouse_util', 'Mercer_wholesale_trade'],
-                    ['Montgomery_ag_for_fish_min', 'Montgomery_art_ent_rec_acc_food', 'Montgomery_construction', 'Montgomery_ed_services', 'Montgomery_fin_insur_real_est', 'Montgomery_health_social_assist', 'Montgomery_information', 'Montgomery_manufacturing', 'Montgomery_other_services', 'Montgomery_prof_services', 'Montgomery_gov_fed_mil', 'Montgomery_gov_state_local', 'Montgomery_retail_trade', 'Montgomery_transp_warehouse_util', 'Montgomery_wholesale_trade'],
-                    ['Philadelphia_ag_for_fish_min', 'Philadelphia_art_ent_rec_acc_food', 'Philadelphia_construction', 'Philadelphia_ed_services', 'Philadelphia_fin_insur_real_est', 'Philadelphia_health_social_assist', 'Philadelphia_information', 'Philadelphia_manufacturing', 'Philadelphia_other_services', 'Philadelphia_prof_services', 'Philadelphia_gov_fed_mil', 'Philadelphia_gov_state_local', 'Philadelphia_retail_trade', 'Philadelphia_transp_warehouse_util', 'Philadelphia_wholesale_trade']
-                ],
-                data: [
-                    {
-                        'key': 'Agriculture, forestry, fishing, mining',
-                        'columns': ['year', 'Region_ag_for_fish_min']
-                    },
-                    {
-                        'key': 'Arts, entertain., food, accomodations',
-                        'columns': ['year', 'Region_art_ent_rec_acc_food']
-                    },
-                    {
-                        'key': 'Construction',
-                        'columns': ['year', 'Region_construction']
-                    },
-                    {
-                        'key': 'Educational services',
-                        'columns': ['year', 'Region_ed_services']
-                    },
-                    {
-                        'key': 'Finance, insurance, real estate',
-                        'columns': ['year', 'Region_fin_insur_real_est']
-                    },
-                    {
-                        'key': 'Health care and social assistance',
-                        'columns': ['year', 'Region_health_social_assist']
-                    },
-                    {
-                        'key': 'Information',
-                        'columns': ['year', 'Region_information']
-                    },
-                    {
-                        'key': 'Manufacturing',
-                        'columns': ['year', 'Region_manufacturing']
-                    },
-                    {
-                        'key': 'Other services (except public admin)',
-                        'columns': ['year', 'Region_other_services']
-                    },
-                    {
-                        'key': 'Professional, scientific, tech services',
-                        'columns': ['year', 'Region_prof_services']
-                    },
-                    {
-                        'key': 'Public administration: federal, military',
-                        'columns': ['year', 'Region_gov_fed_mil']
-                    },
-                    {
-                        'key': 'Public administration: state, local',
-                        'columns': ['year', 'Region_gov_state_local']
-                    },
-                    {
-                        'key': 'Retail trade',
-                        'columns': ['year', 'Region_retail_trade']
-                    },
-                    {
-                        'key': 'Transportation, warehousing, utilities',
-                        'columns': ['year', 'Region_transp_warehouse_util']
-                    },
-                    {
-                        'key': 'Wholesale trade',
-                        'columns': ['year', 'Region_wholesale_trade']
-                    }
-                ]
-            }
-        ],
+      categories: ['econo', 'comm'],
+      trend: {
+        status: 'good',
         text: {
-            why: `<p>Growth or decline in the total number of jobs is one of the primary tools for measuring the economic strength of the region.  Also important is the geographic distribution of jobs, as well as the distribution of the jobs between different industries. Job growth in one area could indicate a need for more transportation infrastructure to aid workers' commutes, while a decline in jobs in a particular industry may signal a need for investment to help support those businesses, or alternatively to establish job retraining programs to transition employees to industries of the future. Job totals alone do not, however, say anything about the quality or desirability of those jobs. The total number of jobs may increase, but if higher-paying jobs are being replaced by lower-paying jobs, the economy could still be declining overall. On the other hand, employers concentrating in centers around the region may not change the total number of jobs but could have other benefits, like decreasing commuting costs and priming the region for future growth.</p>`,
-            what: `<p>The U.S. Bureau of Labor Statistics' Quarterly Census of Employment and Wages (QCEW) provides a quarterly count of employment and wages as reported by employers and covers more than 95% of U.S. jobs available. County Business Patterns (CBP) is an annual program of the U.S. Census Bureau that provides economic data by industry at the county level. The CBP data is extracted from the Business Register, a database of all known single and multi-establishment employer companies maintained and updated by the U.S. Census Bureau.</p><p>The first chart shows the annual growth rate and the overall growth rate since 2001. The second shows the percentage of the region's jobs located in each county. The third chart shows the percentage of jobs that occur in various sectors of the region's economy. The first and second chart  are based on QCEW data, and the third chart is based on CBP data.</p>`,
-            how: `<p>Overall, the number of jobs in the region has increased by 6.0% since 2001. However, this growth has not been consistent; the annual growth rate has varied significantly from a high of 2.0% between 2015 and 2016 and a low of –3.3% between 2008 and 2009 during the Great Recession.</p><p>Job growth is evenly distributed around the region. Although the four New Jersey counties have about matched the regional average at 5.6%, the four suburban Pennsylvania counties saw job growth of 10.3% between 2001 and 2017. At the same time, jobs in Philadelphia only increased by 2.2%. While jobs are distributed throughout the region's nine counties, two counties have over 40% of all jobs in the region in 2017. Philadelphia has 25.3% of the region's jobs and Montgomery has 18.5%.</p><p>High growth sectors in this time period included: health care and social assistance (3.1% share increase); arts, entertainment, and recreation (1.3% share increase); accommodation and food services (1.2% share increase); and educational services (1% share increase). The region's employment was once dominated by manufacturing. The period from 2005 to 2016 showed a continued decline in job share for the combined construction and manufacturing sectors, going from 13.2% to 10.4%.</p>`,
-            resource: `<p>DVRPC works with its planning partners on <a target="_blank" rel="noopener" href="/Economic/">economic development</a> and analysis in the region, including our <a target="_blank" rel="noopener" href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p><p>DVRPC produced Board-adopted <a target="_blank" rel="noopener" href="/Products/ADR023/">county and municipal employment forecasts</a> for the <em>Connections 2045</em> Long-Range Plan in collaboration with the Commission's county planning partners.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools to bolster job growth in an inclusive economy:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li></ul>`
-        }
+          stat: '6% increase',
+          text: `in jobs since 2001`,
+        },
+      },
+      d3: [
+        {
+          type: 'line',
+          container: 'chart',
+          dataSource: ['jobs_graph1a', 'jobs_graph1b'],
+          context: {
+            labels: ['Growth Rate'],
+            keepLabels: true,
+            units: ['percentC'],
+            keepUnits: true,
+          },
+          columnOptions: [
+            ['region_total', 'region_wage_salary', 'region_proprietors'],
+            ['nj_cos_total', 'nj_cos_wage_salary', 'nj_cos_proprietors'],
+            [
+              'pa_sub_cos_total',
+              'pa_sub_cos_wage_salary',
+              'pa_sub_cos_proprietors',
+            ],
+            ['bucks_total', 'bucks_wage_salary', 'bucks_proprietors'],
+            [
+              'burlington_total',
+              'burlington_wage_salary',
+              'burlington_proprietors',
+            ],
+            ['camden_total', 'camden_wage_salary', 'camden_proprietors'],
+            ['chester_total', 'chester_wage_salary', 'chester_proprietors'],
+            [
+              'gloucester_total',
+              'gloucester_wage_salary',
+              'gloucester_proprietors',
+            ],
+            ['delaware_total', 'delaware_wage_salary', 'delaware_proprietors'],
+            ['mercer_total', 'mercer_wage_salary', 'mercer_proprietors'],
+            [
+              'montgomery_total',
+              'montgomery_wage_salary',
+              'montgomery_proprietors',
+            ],
+            [
+              'philadelphia_total',
+              'philadelphia_wage_salary',
+              'philadelphia_proprietors',
+            ],
+          ],
+          data: [
+            {
+              key: 'Total',
+              columns: ['year', 'region_total'],
+            },
+            {
+              key: 'Wage Salary',
+              columns: ['year', 'region_wage_salary'],
+            },
+            {
+              key: 'Proprietors',
+              columns: ['year', 'region_proprietors'],
+            },
+          ],
+        },
+        {
+          type: 'stacked bar',
+          container: 'chart2',
+          dataSource: ['jobs_graph2'],
+          context: {
+            labels: ['Percentage of Region'],
+            units: ['percentC'],
+          },
+          data: [
+            {
+              key: 'Bucks**',
+              columns: ['year', 'bucks'],
+            },
+            {
+              key: 'Burlington**',
+              columns: ['year', 'burlington'],
+            },
+            {
+              key: 'Camden**',
+              columns: ['year', 'camden'],
+            },
+            {
+              key: 'Chester**',
+              columns: ['year', 'chester'],
+            },
+            {
+              key: 'Delaware**',
+              columns: ['year', 'delaware'],
+            },
+            {
+              key: 'Gloucester**',
+              columns: ['year', 'gloucester'],
+            },
+            {
+              key: 'Mercer**',
+              columns: ['year', 'mercer'],
+            },
+            {
+              key: 'Montgomery**',
+              columns: ['year', 'montgomery'],
+            },
+            {
+              key: 'Philadelphia**',
+              columns: ['year', 'philadelphia'],
+            },
+          ],
+        },
+        {
+          type: 'stacked bar',
+          container: 'chart3',
+          dataSource: ['jobs_graph3'],
+          context: {
+            labels: ['Percentage of Total Jobs'],
+            keepLabels: true,
+            units: ['percentC'],
+            keepUnits: true,
+          },
+          columnOptions: [
+            [
+              'region_ag_for_fish_min',
+              'region_art_ent_rec_acc_food',
+              'region_construction',
+              'region_ed_services',
+              'region_fin_insur_real_est',
+              'region_health_social_assist',
+              'region_information',
+              'region_manufacturing',
+              'region_other_services',
+              'region_prof_services',
+              'region_gov_fed_mil',
+              'region_gov_state_local',
+              'region_retail_trade',
+              'region_transp_warehouse_util',
+              'region_wholesale_trade',
+            ],
+            [
+              'nj_cos_ag_for_fish_min',
+              'nj_cos_art_ent_rec_acc_food',
+              'nj_cos_construction',
+              'nj_cos_ed_services',
+              'nj_cos_fin_insur_real_est',
+              'nj_cos_health_social_assist',
+              'nj_cos_information',
+              'nj_cos_manufacturing',
+              'nj_cos_other_services',
+              'nj_cos_prof_services',
+              'nj_cos_gov_fed_mil',
+              'nj_cos_gov_state_local',
+              'nj_cos_retail_trade',
+              'nj_cos_transp_warehouse_util',
+              'nj_cos_wholesale_trade',
+            ],
+            [
+              'pa_sub_cos_ag_for_fish_min',
+              'pa_sub_cos_art_ent_rec_acc_food',
+              'pa_sub_cos_construction',
+              'pa_sub_cos_ed_services',
+              'pa_sub_cos_fin_insur_real_est',
+              'pa_sub_cos_health_social_assist',
+              'pa_sub_cos_information',
+              'pa_sub_cos_manufacturing',
+              'pa_sub_cos_other_services',
+              'pa_sub_cos_prof_services',
+              'pa_sub_cos_gov_fed_mil',
+              'pa_sub_cos_gov_state_local',
+              'pa_sub_cos_retail_trade',
+              'pa_sub_cos_transp_warehouse_util',
+              'pa_sub_cos_wholesale_trade',
+            ],
+            [
+              'bucks_ag_for_fish_min',
+              'bucks_art_ent_rec_acc_food',
+              'bucks_construction',
+              'bucks_ed_services',
+              'bucks_fin_insur_real_est',
+              'bucks_health_social_assist',
+              'bucks_information',
+              'bucks_manufacturing',
+              'bucks_other_services',
+              'bucks_prof_services',
+              'bucks_gov_fed_mil',
+              'bucks_gov_state_local',
+              'bucks_retail_trade',
+              'bucks_transp_warehouse_util',
+              'bucks_wholesale_trade',
+            ],
+            [
+              'burlington_ag_for_fish_min',
+              'burlington_art_ent_rec_acc_food',
+              'burlington_construction',
+              'burlington_ed_services',
+              'burlington_fin_insur_real_est',
+              'burlington_health_social_assist',
+              'burlington_information',
+              'burlington_manufacturing',
+              'burlington_other_services',
+              'burlington_prof_services',
+              'burlington_gov_fed_mil',
+              'burlington_gov_state_local',
+              'burlington_retail_trade',
+              'burlington_transp_warehouse_util',
+              'burlington_wholesale_trade',
+            ],
+            [
+              'camden_ag_for_fish_min',
+              'camden_art_ent_rec_acc_food',
+              'camden_construction',
+              'camden_ed_services',
+              'camden_fin_insur_real_est',
+              'camden_health_social_assist',
+              'camden_information',
+              'camden_manufacturing',
+              'camden_other_services',
+              'camden_prof_services',
+              'camden_gov_fed_mil',
+              'camden_gov_state_local',
+              'camden_retail_trade',
+              'camden_transp_warehouse_util',
+              'camden_wholesale_trade',
+            ],
+            [
+              'chester_ag_for_fish_min',
+              'chester_art_ent_rec_acc_food',
+              'chester_construction',
+              'chester_ed_services',
+              'chester_fin_insur_real_est',
+              'chester_health_social_assist',
+              'chester_information',
+              'chester_manufacturing',
+              'chester_other_services',
+              'chester_prof_services',
+              'chester_gov_fed_mil',
+              'chester_gov_state_local',
+              'chester_retail_trade',
+              'chester_transp_warehouse_util',
+              'chester_wholesale_trade',
+            ],
+            [
+              'gloucester_ag_for_fish_min',
+              'gloucester_art_ent_rec_acc_food',
+              'gloucester_construction',
+              'gloucester_ed_services',
+              'gloucester_fin_insur_real_est',
+              'gloucester_health_social_assist',
+              'gloucester_information',
+              'gloucester_manufacturing',
+              'gloucester_other_services',
+              'gloucester_prof_services',
+              'gloucester_gov_fed_mil',
+              'gloucester_gov_state_local',
+              'gloucester_retail_trade',
+              'gloucester_transp_warehouse_util',
+              'gloucester_wholesale_trade',
+            ],
+            [
+              'delaware_ag_for_fish_min',
+              'delaware_art_ent_rec_acc_food',
+              'delaware_construction',
+              'delaware_ed_services',
+              'delaware_fin_insur_real_est',
+              'delaware_health_social_assist',
+              'delaware_information',
+              'delaware_manufacturing',
+              'delaware_other_services',
+              'delaware_prof_services',
+              'delaware_gov_fed_mil',
+              'delaware_gov_state_local',
+              'delaware_retail_trade',
+              'delaware_transp_warehouse_util',
+              'delaware_wholesale_trade',
+            ],
+            [
+              'mercer_ag_for_fish_min',
+              'mercer_art_ent_rec_acc_food',
+              'mercer_construction',
+              'mercer_ed_services',
+              'mercer_fin_insur_real_est',
+              'mercer_health_social_assist',
+              'mercer_information',
+              'mercer_manufacturing',
+              'mercer_other_services',
+              'mercer_prof_services',
+              'mercer_gov_fed_mil',
+              'mercer_gov_state_local',
+              'mercer_retail_trade',
+              'mercer_transp_warehouse_util',
+              'mercer_wholesale_trade',
+            ],
+            [
+              'montgomery_ag_for_fish_min',
+              'montgomery_art_ent_rec_acc_food',
+              'montgomery_construction',
+              'montgomery_ed_services',
+              'montgomery_fin_insur_real_est',
+              'montgomery_health_social_assist',
+              'montgomery_information',
+              'montgomery_manufacturing',
+              'montgomery_other_services',
+              'montgomery_prof_services',
+              'montgomery_gov_fed_mil',
+              'montgomery_gov_state_local',
+              'montgomery_retail_trade',
+              'montgomery_transp_warehouse_util',
+              'montgomery_wholesale_trade',
+            ],
+            [
+              'philadelphia_ag_for_fish_min',
+              'philadelphia_art_ent_rec_acc_food',
+              'philadelphia_construction',
+              'philadelphia_ed_services',
+              'philadelphia_fin_insur_real_est',
+              'philadelphia_health_social_assist',
+              'philadelphia_information',
+              'philadelphia_manufacturing',
+              'philadelphia_other_services',
+              'philadelphia_prof_services',
+              'philadelphia_gov_fed_mil',
+              'philadelphia_gov_state_local',
+              'philadelphia_retail_trade',
+              'philadelphia_transp_warehouse_util',
+              'philadelphia_wholesale_trade',
+            ],
+          ],
+          data: [
+            {
+              key: 'Agriculture, forestry, fishing, mining',
+              columns: ['year', 'region_ag_for_fish_min'],
+            },
+            {
+              key: 'Arts, entertain., food, accomodations',
+              columns: ['year', 'region_art_ent_rec_acc_food'],
+            },
+            {
+              key: 'Construction',
+              columns: ['year', 'region_construction'],
+            },
+            {
+              key: 'Educational services',
+              columns: ['year', 'region_ed_services'],
+            },
+            {
+              key: 'Finance, insurance, real estate',
+              columns: ['year', 'region_fin_insur_real_est'],
+            },
+            {
+              key: 'Health care and social assistance',
+              columns: ['year', 'region_health_social_assist'],
+            },
+            {
+              key: 'Information',
+              columns: ['year', 'region_information'],
+            },
+            {
+              key: 'Manufacturing',
+              columns: ['year', 'region_manufacturing'],
+            },
+            {
+              key: 'Other services (except public admin)',
+              columns: ['year', 'region_other_services'],
+            },
+            {
+              key: 'Professional, scientific, tech services',
+              columns: ['year', 'region_prof_services'],
+            },
+            {
+              key: 'Public administration: federal, military',
+              columns: ['year', 'region_gov_fed_mil'],
+            },
+            {
+              key: 'Public administration: state, local',
+              columns: ['year', 'region_gov_state_local'],
+            },
+            {
+              key: 'Retail trade',
+              columns: ['year', 'region_retail_trade'],
+            },
+            {
+              key: 'Transportation, warehousing, utilities',
+              columns: ['year', 'region_transp_warehouse_util'],
+            },
+            {
+              key: 'Wholesale trade',
+              columns: ['year', 'region_wholesale_trade'],
+            },
+          ],
+        },
+      ],
+      text: {
+        why: `<p>Growth or decline in the total number of jobs is one of the primary tools for measuring the economic strength of the region.  Also important is the geographic distribution of jobs, as well as the distribution of the jobs between different industries. Job growth in one area could indicate a need for more transportation infrastructure to aid workers' commutes, while a decline in jobs in a particular industry may signal a need for investment to help support those businesses, or alternatively to establish job retraining programs to transition employees to industries of the future. Job totals alone do not, however, say anything about the quality or desirability of those jobs. The total number of jobs may increase, but if higher-paying jobs are being replaced by lower-paying jobs, the economy could still be declining overall. On the other hand, employers concentrating in centers around the region may not change the total number of jobs but could have other benefits, like decreasing commuting costs and priming the region for future growth.</p>`,
+        what: `<p>The U.S. Bureau of Labor Statistics' Quarterly Census of Employment and Wages (QCEW) provides a quarterly count of employment and wages as reported by employers and covers more than 95% of U.S. jobs available. County Business Patterns (CBP) is an annual program of the U.S. Census Bureau that provides economic data by industry at the county level. The CBP data is extracted from the Business Register, a database of all known single and multi-establishment employer companies maintained and updated by the U.S. Census Bureau.</p><p>The first chart shows the annual growth rate and the overall growth rate since 2001. The second shows the percentage of the region's jobs located in each county. The third chart shows the percentage of jobs that occur in various sectors of the region's economy. The first and second chart  are based on QCEW data, and the third chart is based on CBP data.</p>`,
+        how: `<p>Overall, the number of jobs in the region has increased by 6.0% since 2001. However, this growth has not been consistent; the annual growth rate has varied significantly from a high of 2.0% between 2015 and 2016 and a low of –3.3% between 2008 and 2009 during the Great Recession.</p><p>Job growth is evenly distributed around the region. Although the four New Jersey counties have about matched the regional average at 5.6%, the four suburban Pennsylvania counties saw job growth of 10.3% between 2001 and 2017. At the same time, jobs in Philadelphia only increased by 2.2%. While jobs are distributed throughout the region's nine counties, two counties have over 40% of all jobs in the region in 2017. Philadelphia has 25.3% of the region's jobs and Montgomery has 18.5%.</p><p>High growth sectors in this time period included: health care and social assistance (3.1% share increase); arts, entertainment, and recreation (1.3% share increase); accommodation and food services (1.2% share increase); and educational services (1% share increase). The region's employment was once dominated by manufacturing. The period from 2005 to 2016 showed a continued decline in job share for the combined construction and manufacturing sectors, going from 13.2% to 10.4%.</p>`,
+        resource: `<p>DVRPC works with its planning partners on <a target="_blank" rel="noopener" href="/Economic/">economic development</a> and analysis in the region, including our <a target="_blank" rel="noopener" href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p><p>DVRPC produced Board-adopted <a target="_blank" rel="noopener" href="/Products/ADR023/">county and municipal employment forecasts</a> for the <em>Connections 2045</em> Long-Range Plan in collaboration with the Commission's county planning partners.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools to bolster job growth in an inclusive economy:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li></ul>`,
+      },
     },
-    'Racial and Ethnic Disparities':{
-        categories: ['equity','comm','econo'],
-        trend: {
-            status: 'neutral',
-            text: {
-                stat: '6.8% drop',
-                text: `in income gap between People of Color and White since 2000`
-            }
-        },
-        d3: [
-            {
-                type: 'line',
-                container: 'chart',
-                dataSource: ['medincGapRace'],
-                context: {
-                    labels: ['Dollars (2019)'],
-                    keepLabels: true,
-                    units: ['dollars'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['Region_NonWht','Region_Black','Region_Asian','Region_Latinx'],
-                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian','NJ_Suburban_Counties_Latinx'],
-                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian','PA_Suburban_Counties_Latinx'],
-                    ['Bucks_NonWht','Bucks_Black','Bucks_Asian','Bucks_Latinx'],
-                    ['Burlington_NonWht','Burlington_Black','Burlington_Asian','Burlington_Latinx'],
-                    ['Camden_NonWht','Camden_Black','Camden_Asian','Camden_Latinx'],
-                    ['Chester_NonWht','Chester_Black','Chester_Asian','Chester_Latinx'],
-                    ['Delaware_NonWht','Delaware_Black','Delaware_Asian','Delaware_Latinx'],
-                    ['Gloucester_NonWht','Gloucester_Black','Gloucester_Asian','Gloucester_Latinx'],
-                    ['Mercer_NonWht','Mercer_Black','Mercer_Asian','Mercer_Latinx'],
-                    ['Montgomery_NonWht','Montgomery_Black','Montgomery_Asian','Montgomery_Latinx'],
-                    ['Philadelphia_NonWht','Philadelphia_Black','Philadelphia_Asian','Philadelphia_Latinx']
-                ],
-                data: [
-                    {
-                        'key': 'People of Color & Latinx',
-                        columns: ['year', 'Region_NonWht']
-                    },
-                    {
-                        'key': 'Black, non-Latinx',
-                        columns: ['year', 'Region_Black'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Asian, non-Latinx',
-                        columns: ['year', 'Region_Asian'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Latinx',
-                        columns: ['year', 'Region_Latinx'],
-                        disabled: true
-                    }
-                ]
-            },
-            {
-                type: 'line',
-                container: 'chart2',
-                dataSource: ['medincRace'],
-                context: {
-                    labels: ['Dollars (2019)'],
-                    keepLabels: true,
-                    units: ['dollars'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['Region_NonWht','Region_White','Region_Black','Region_Asian','Region_Latinx'],
-                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_White','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian','NJ_Suburban_Counties_Latinx'],
-                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_White','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian','PA_Suburban_Counties_Latinx'],
-                    ['Bucks_NonWht','Bucks_White','Bucks_Black','Bucks_Asian','Bucks_Latinx'],
-                    ['Burlington_NonWht','Burlington_White','Burlington_Black','Burlington_Asian','Burlington_Latinx'],
-                    ['Camden_NonWht','Camden_White','Camden_Black','Camden_Asian','Camden_Latinx'],
-                    ['Chester_NonWht','Chester_White','Chester_Black','Chester_Asian','Chester_Latinx'],
-                    ['Delaware_NonWht','Delaware_White','Delaware_Black','Delaware_Asian','Delaware_Latinx'],
-                    ['Gloucester_NonWht','Gloucester_White','Gloucester_Black','Gloucester_Asian','Gloucester_Latinx'],
-                    ['Mercer_NonWht','Mercer_White','Mercer_Black','Mercer_Asian','Mercer_Latinx'],
-                    ['Montgomery_NonWht','Montgomery_White','Montgomery_Black','Montgomery_Asian','Montgomery_Latinx'],
-                    ['Philadelphia_NonWht','Philadelphia_White','Philadelphia_Black','Philadelphia_Asian','Philadelphia_Latinx']
-                ],
-                data: [
-                    {
-                        'key': 'People of Color & Latinx',
-                        columns: ['year', 'Region_NonWht']
-                    },
-                    {
-                        'key': 'White, non-Latinx',
-                        columns: ['year', 'Region_White']
-                    },
-                    {
-                        'key': 'Black, non-Latinx',
-                        columns: ['year', 'Region_Black'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Asian, non-Latinx',
-                        columns: ['year', 'Region_Asian'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Latinx',
-                        columns: ['year', 'Region_Latinx'],
-                        disabled: true
-                    }
-                ]
-            },
-            {
-                type: 'line',
-                container: 'chart3',
-                dataSource: ['RaceEthnSegregation'],
-                context: {
-                    labels: ['Population Needing to Move to Achieve Regional Distribution'],
-                    units: ['percentC']
-                },
-                data: [
-                    {
-                        'key': 'Index Value',
-                        columns: ['year', 'PeopleofColor']
-                    }
-                ]
-            },
-            {
-                type: 'line',
-                container: 'chart4',
-                dataSource: ['labForceByRace_gap'],
-                context: {
-                    labels: ['Percent Participation Gap'],
-                    keepLabels: true,
-                    units: ['percentC'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['Region_NonWht','Region_Black','Region_Asian'],
-                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian'],
-                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian'],
-                    ['Bucks_NonWht','Bucks_Black','Bucks_Asian'],
-                    ['Burlington_NonWht','Burlington_Black','Burlington_Asian'],
-                    ['Camden_NonWht','Camden_Black','Camden_Asian'],
-                    ['Chester_NonWht','Chester_Black','Chester_Asian'],
-                    ['Delaware_NonWht','Delaware_Black','Delaware_Asian'],
-                    ['Gloucester_NonWht','Gloucester_Black','Gloucester_Asian'],
-                    ['Mercer_NonWht','Mercer_Black','Mercer_Asian'],
-                    ['Montgomery_NonWht','Montgomery_Black','Montgomery_Asian'],
-                    ['Philadelphia_NonWht','Philadelphia_Black','Philadelphia_Asian']
-                ],
-                data: [
-                    {
-                        'key': 'People of Color',
-                        columns: ['year', 'Region_NonWht']
-                    },
-                    {
-                        'key': 'Black, non-Latinx',
-                        columns: ['year', 'Region_Black'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Asian, non-Latinx',
-                        columns: ['year', 'Region_Asian'],
-                        disabled: true
-                    },
-                ]
-            },
-            {
-                type: 'line',
-                container: 'chart5',
-                dataSource: ['labForceByRace'],
-                context: {
-                    labels: ['Percent Participation'],
-                    keepLabels: true,
-                    units: ['percentC'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['Region_NonWht','Region_White','Region_Black','Region_Asian'],
-                    ['NJ_Suburban_Counties_NonWht','NJ_Suburban_Counties_White','NJ_Suburban_Counties_Black','NJ_Suburban_Counties_Asian'],
-                    ['PA_Suburban_Counties_NonWht','PA_Suburban_Counties_White','PA_Suburban_Counties_Black','PA_Suburban_Counties_Asian'],
-                    ['Bucks_NonWht','Bucks_White','Bucks_Black','Bucks_Asian'],
-                    ['Burlington_NonWht','Burlington_White','Burlington_Black','Burlington_Asian'],
-                    ['Camden_NonWht','Camden_White','Camden_Black','Camden_Asian'],
-                    ['Chester_NonWht','Chester_White','Chester_Black','Chester_Asian'],
-                    ['Delaware_NonWht','Delaware_White','Delaware_Black','Delaware_Asian'],
-                    ['Gloucester_NonWht','Gloucester_White','Gloucester_Black','Gloucester_Asian'],
-                    ['Mercer_NonWht','Mercer_White','Mercer_Black','Mercer_Asian'],
-                    ['Montgomery_NonWht','Montgomery_White','Montgomery_Black','Montgomery_Asian'],
-                    ['Philadelphia_NonWht','Philadelphia_White','Philadelphia_Black','Philadelphia_Asian']
-                ],
-                data: [
-                    {
-                        'key': 'People of Color & Latinx',
-                        columns: ['year', 'Region_NonWht']
-                    },
-                    {
-                        'key': 'White, non-Latinx',
-                        columns: ['year', 'Region_White']
-                    },
-                    {
-                        'key': 'Black, non-Latinx',
-                        columns: ['year', 'Region_Black'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Asian, non-Latinx',
-                        columns: ['year', 'Region_Asian'],
-                        disabled: true
-                    },
-                ]
-            }
-        ],
+    'Racial and Ethnic Disparities': {
+      categories: ['equity', 'comm', 'econo'],
+      trend: {
+        status: 'neutral',
         text: {
-            why: `<p>An equitable, inclusive region means everyone has the opportunity to participate and thrive. But the history of racial and ethnic discrimination in both the country and the region has held generations of residents back from accessing the same opportunities—particularly in the areas of income and employment. Neighborhoods with higher concentrations of people of color are more often the locations of poor housing stock, poorly performing schools, worse air quality, higher rates of crime, and reduced transportation safety.</p><p>There are wonderful things that occur in neighborhoods that share common cultures; nevertheless, diversity has been shown to improve quality of life for everyone. A less segregated region, with higher incomes and workforce inclusion for people of color, improves the bottom line for all businesses and the lives of all citizens.</p>`,
-            what: `<p><em>People of color</em> (defined using U.S. Census Bureau estimates of nonwhite population) and <em>Latinx</em> persons, (defined using Census Bureau estimates of populations with Hispanic origins) can experience discrimination and be held back from opportunities in many facets of life. This indicator focuses on trends in income, labor force participation, and segregation of neighborhoods. These three measures recognize the key inclusion issues these groups can experience in the region's economy, communities, and access to opportunities. There are some limitations when using U.S. Census Bureau data for racial and ethnic analysis—particularly in the area of ethnicity. The American Community Survey (ACS), the decennial census, and other U.S. Census Bureau products only capture one ethnicity in the United States: Hispanic, Latino, or Spanish origin. Although recent attempts have been made to include Middle Eastern or North African as an ethnicity, this has not made its way onto U.S. Census Bureau surveys. For the purpose of simplicity and gender inclusion, this indicator uses the terms <em>Latinx</em> and <em>non-Latinx</em> in reference to people in or out of this ethnic group as defined by the U.S. Census Bureau data. Additionally, the race question on the ACS was revised in 2008 to make it consistent with the 2010 decennial census race question. This makes comparability with earlier years difficult.</p><p>Income was adjusted to 2017 dollars according to <a href="https://www.census.gov/programs-surveys/acs/guidance/comparing-acs-data/2017.html" rel="noopener" target="_blank">U.S. Census Bureau guidance</a> on comparing income data from ACS one-year values with previous ACS releases and the 2000 decennial. Users should be aware that the 2000 decennial census asked about income from 1999, and the ACS asks respondents for income in the past 12 months. This means at least some of respondents' income will likely be received in the year prior to the year the respondent was surveyed.</p><p>Median income trends are found in the first and second chart. The first shows the difference, or gap, between people of color and Latinx vs Whites (non-Latinx); the second shows total median income trends for these groups. In order to estimate median income values at aggregate geographies—the DVRPC region, New Jersey counties, and Pennsylvania suburban counties—weighted averages of groups making up people of color and white, non-Latinx population were used across component counties.</p><p>Although county-level data is presented, counties with higher populations of people of color will have the most reliable estimates. Counties with fewer people of color will have larger margins of error and suspect results due to smaller sample sizes. One way this may manifest itself to <em>Tracking Progress</em> users is in volatile trendlines in the charts. Some counties' income gap values are close to or below zero in one year and have larger swings in income gaps in prior and/or subsequent years. These tend to be counties with fewer people of color in their overall population. In 2017, the estimated percentage of people of color is as follows (in order of greatest to least):</p><ol><li>Philadelphia County (65.5%);</li><li>Mercer County (50.8%);</li><li>Camden County (43.7%);</li><li>Delaware County (33.3%);</li><li>Burlington County (32.7%);</li><li>Montgomery County (24.4%);</li><li>Gloucester County (21.6%);</li><li>Chester County (20.6%); and</li><li>Bucks County (16.0%).</li></ol><p>The Racial/Ethnic Segregation Index in the third chart is an indicator of how segregated the region's census tracts are, relative to the regional distribution of white, non-Latinx population and people of color and Latinx population. In a given year, it shows how dissimilar the racial and ethnic makeup of tracts across the region are to each other and demonstrates the percentage of the population that would theoretically need to relocate in order to match the region's racial and ethnic makeup.</p><p>Gaps in <em>labor force participation rates</em> (percentage of those aged 16 to 64 years who are either employed or seeking work relative to all 16- to 64-year-olds) by race are examined in the fourth chart. Similarly, the actual participation rates of whites and people of color are seen in the fifth chart. Here, too, the population size of the people of color in each county that the ACS can draw from for a sample is important. It is possible for people of color to have a higher rate than whites, but trendlines that are highly variable from year to year are suspect. Gloucester, Bucks, and Chester counties' labor force participation data was not disclosed for these groups in the 2005 ACS one-year estimates as a result.</p><p>The Latinx population is so low in most of our region's counties that labor force participation rates were not disclosed for most years in most counties. Therefore, Latinx and non-Latinx are not presented.</p><p><em>Note: In November, 2019, the Census Bureau issued <a href="https://www.census.gov/programs-surveys/acs/technical-documentation/errata/121.html" rel="noopener" target="_blank">a statement acknowledging errors in 2017 ACS data for Philadelphia County</a>. The error may impact the Racial and Ethnic Disparities indicator for Philadelphia and regional aggregations. DVRPC is aware of the issue and intends to update Tracking Progress with 2018 ACS data soon.</em></p>`,
-            how: `<p>The gap in median income between the region's residents of color and white, non-Latinx residents is wide—it stood at just over $30,000 in 2017. Between 2000 and 2017, the gap has dropped marginally by 6.8% (a little over $2,000). On average, people of color's income was less than two-thirds of white, non-Latinx income in 2017. Regionally, white, non-Latinx workers average $84,352 in yearly income, while people of color average $54,233.</p><p>Racial and ethnic segregation among neighborhoods in the region is on the decline. Comparing the concentrations of people of color and Latinx versus white, non-Latinx in each tract relative to the region's overall racial and ethnic makeup, neighborhoods are diversifying. Although theoretical, in 1990, 68.6% of the region's population would have needed to relocate in order to evenly distribute people of color throughout the region. By 2017, the percentage dropped to 54.5. This value still reflects a region where a high percentage of neighborhoods comprise persons of the same race and ethnicity.</p><p>The gap in labor force participation between working-age whites and people of color is also on the decline. This is due to a slight decline in the white participation rate and slight increase in the rate of people of color. Whites went from 67.2% participation in 2005 to 65.4% in 2017. People of color went from 61.6% to 62.4% in 2017.</p>`,
-            resource: `<p>For more on how DVRPC incorporates equity and environmental justice, and complies with federal Title VI and other important statutes protecting communities of concern, see our <a target="_blank" rel="noopener" href="/GetInvolved/TitleVI/">Title VI and Environmental Justice</a> page, as well as our <a target="_blank" rel="noopener" href="/webmaps/IPD/">Indicators of Potential Disadvantage</a> tool and <a target="_blank" rel="noopener" href="/ETA/">Equity through Access</a> project and tool.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools for reducing disparities and discrimination in the region:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5c929a05e7179a0e4089fae5">Revitalization Planning and Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42b41e7179a56e2137853">Housing Maintenance and Rehabilitation Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43443e7179a56e2137e76">Inclusionary Zoning</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43404e7179a56e2137e25">Community Shuttle Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43435e7179a56e2137e73">Universal Pre-Kindergarten Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb7840afb6fc041ab93097e">Engaging Underserved Communities</a></li></ul>`
-        }
+          stat: '6.8% drop',
+          text: `in income gap between People of Color and White since 2000`,
+        },
+      },
+      d3: [
+        {
+          type: 'line',
+          container: 'chart',
+          dataSource: ['medincGapRace'],
+          context: {
+            labels: ['Dollars (2019)'],
+            keepLabels: true,
+            units: ['dollars'],
+            keepUnits: true,
+          },
+          columnOptions: [
+            ['region_nonwht', 'region_black', 'region_asian', 'region_latinx'],
+            [
+              'nj_suburban_counties_nonwht',
+              'nj_suburban_counties_black',
+              'nj_suburban_counties_asian',
+              'nj_suburban_counties_latinx',
+            ],
+            [
+              'pa_suburban_counties_nonwht',
+              'pa_suburban_counties_black',
+              'pa_suburban_counties_asian',
+              'pa_suburban_counties_latinx',
+            ],
+            ['bucks_nonwht', 'bucks_black', 'bucks_asian', 'bucks_latinx'],
+            [
+              'burlington_nonwht',
+              'burlington_black',
+              'burlington_asian',
+              'burlington_latinx',
+            ],
+            ['camden_nonwht', 'camden_black', 'camden_asian', 'camden_latinx'],
+            [
+              'chester_nonwht',
+              'chester_black',
+              'chester_asian',
+              'chester_latinx',
+            ],
+            [
+              'delaware_nonwht',
+              'delaware_black',
+              'delaware_asian',
+              'delaware_latinx',
+            ],
+            [
+              'gloucester_nonwht',
+              'gloucester_black',
+              'gloucester_asian',
+              'gloucester_latinx',
+            ],
+            ['mercer_nonwht', 'mercer_black', 'mercer_asian', 'mercer_latinx'],
+            [
+              'montgomery_nonwht',
+              'montgomery_black',
+              'montgomery_asian',
+              'montgomery_latinx',
+            ],
+            [
+              'philadelphia_nonwht',
+              'philadelphia_black',
+              'philadelphia_asian',
+              'philadelphia_latinx',
+            ],
+          ],
+          data: [
+            {
+              key: 'People of Color & Latinx',
+              columns: ['year', 'region_nonwht'],
+            },
+            {
+              key: 'Black, non-Latinx',
+              columns: ['year', 'region_black'],
+              disabled: true,
+            },
+            {
+              key: 'Asian, non-Latinx',
+              columns: ['year', 'region_asian'],
+              disabled: true,
+            },
+            {
+              key: 'Latinx',
+              columns: ['year', 'region_latinx'],
+              disabled: true,
+            },
+          ],
+        },
+        {
+          type: 'line',
+          container: 'chart2',
+          dataSource: ['medincRace'],
+          context: {
+            labels: ['Dollars (2019)'],
+            keepLabels: true,
+            units: ['dollars'],
+            keepUnits: true,
+          },
+          columnOptions: [
+            [
+              'region_nonwht',
+              'region_white',
+              'region_black',
+              'region_asian',
+              'region_latinx',
+            ],
+            [
+              'nj_suburban_counties_nonwht',
+              'nj_suburban_counties_white',
+              'nj_suburban_counties_black',
+              'nj_suburban_counties_asian',
+              'nj_suburban_counties_latinx',
+            ],
+            [
+              'pa_suburban_counties_nonwht',
+              'pa_suburban_counties_white',
+              'pa_suburban_counties_black',
+              'pa_suburban_counties_asian',
+              'pa_suburban_counties_latinx',
+            ],
+            [
+              'bucks_nonwht',
+              'bucks_white',
+              'bucks_black',
+              'bucks_asian',
+              'bucks_latinx',
+            ],
+            [
+              'burlington_nonwht',
+              'burlington_white',
+              'burlington_black',
+              'burlington_asian',
+              'burlington_latinx',
+            ],
+            [
+              'camden_nonwht',
+              'camden_white',
+              'camden_black',
+              'camden_asian',
+              'camden_latinx',
+            ],
+            [
+              'chester_nonwht',
+              'chester_white',
+              'chester_black',
+              'chester_asian',
+              'chester_latinx',
+            ],
+            [
+              'delaware_nonwht',
+              'delaware_white',
+              'delaware_black',
+              'delaware_asian',
+              'delaware_latinx',
+            ],
+            [
+              'gloucester_nonwht',
+              'gloucester_white',
+              'gloucester_black',
+              'gloucester_asian',
+              'gloucester_latinx',
+            ],
+            [
+              'mercer_nonwht',
+              'mercer_white',
+              'mercer_black',
+              'mercer_asian',
+              'mercer_latinx',
+            ],
+            [
+              'montgomery_nonwht',
+              'montgomery_white',
+              'montgomery_black',
+              'montgomery_asian',
+              'montgomery_latinx',
+            ],
+            [
+              'philadelphia_nonwht',
+              'philadelphia_white',
+              'philadelphia_black',
+              'philadelphia_asian',
+              'philadelphia_latinx',
+            ],
+          ],
+          data: [
+            {
+              key: 'People of Color & Latinx',
+              columns: ['year', 'region_nonwht'],
+            },
+            {
+              key: 'White, non-Latinx',
+              columns: ['year', 'region_white'],
+            },
+            {
+              key: 'Black, non-Latinx',
+              columns: ['year', 'region_black'],
+              disabled: true,
+            },
+            {
+              key: 'Asian, non-Latinx',
+              columns: ['year', 'region_asian'],
+              disabled: true,
+            },
+            {
+              key: 'Latinx',
+              columns: ['year', 'region_latinx'],
+              disabled: true,
+            },
+          ],
+        },
+        {
+          type: 'line',
+          container: 'chart3',
+          dataSource: ['RaceEthnSegregation'],
+          context: {
+            labels: [
+              'Population Needing to Move to Achieve Regional Distribution',
+            ],
+            units: ['percentC'],
+          },
+          data: [
+            {
+              key: 'Index Value',
+              columns: ['year', 'peopleofcolor'],
+            },
+          ],
+        },
+        {
+          type: 'line',
+          container: 'chart4',
+          dataSource: ['labForceByRace_gap'],
+          context: {
+            labels: ['Percent Participation Gap'],
+            keepLabels: true,
+            units: ['percentC'],
+            keepUnits: true,
+          },
+          columnOptions: [
+            ['region_nonwht', 'region_black', 'region_asian'],
+            [
+              'nj_suburban_counties_nonwht',
+              'nj_suburban_counties_black',
+              'nj_suburban_counties_asian',
+            ],
+            [
+              'pa_suburban_counties_nonwht',
+              'pa_suburban_counties_black',
+              'pa_suburban_counties_asian',
+            ],
+            ['bucks_nonwht', 'bucks_black', 'bucks_asian'],
+            ['burlington_nonwht', 'burlington_black', 'burlington_asian'],
+            ['camden_nonwht', 'camden_black', 'camden_asian'],
+            ['chester_nonwht', 'chester_black', 'chester_asian'],
+            ['delaware_nonwht', 'delaware_black', 'delaware_asian'],
+            ['gloucester_nonwht', 'gloucester_black', 'gloucester_asian'],
+            ['mercer_nonwht', 'mercer_black', 'mercer_asian'],
+            ['montgomery_nonwht', 'montgomery_black', 'montgomery_asian'],
+            ['philadelphia_nonwht', 'philadelphia_black', 'philadelphia_asian'],
+          ],
+          data: [
+            {
+              key: 'People of Color',
+              columns: ['year', 'region_nonwht'],
+            },
+            {
+              key: 'Black, non-Latinx',
+              columns: ['year', 'region_black'],
+              disabled: true,
+            },
+            {
+              key: 'Asian, non-Latinx',
+              columns: ['year', 'region_asian'],
+              disabled: true,
+            },
+          ],
+        },
+        {
+          type: 'line',
+          container: 'chart5',
+          dataSource: ['labForceByRace'],
+          context: {
+            labels: ['Percent Participation'],
+            keepLabels: true,
+            units: ['percentC'],
+            keepUnits: true,
+          },
+          columnOptions: [
+            ['region_nonwht', 'region_white', 'region_black', 'region_asian'],
+            [
+              'nj_suburban_counties_nonwht',
+              'nj_suburban_counties_white',
+              'nj_suburban_counties_black',
+              'nj_suburban_counties_asian',
+            ],
+            [
+              'pa_suburban_counties_nonwht',
+              'pa_suburban_counties_white',
+              'pa_suburban_counties_black',
+              'pa_suburban_counties_asian',
+            ],
+            ['bucks_nonwht', 'bucks_white', 'bucks_black', 'bucks_asian'],
+            [
+              'burlington_nonwht',
+              'burlington_white',
+              'burlington_black',
+              'burlington_asian',
+            ],
+            ['camden_nonwht', 'camden_white', 'camden_black', 'camden_asian'],
+            ['chester_nonwht', 'chester_white', 'chester_black', 'chester_asian'],
+            [
+              'delaware_nonwht',
+              'delaware_white',
+              'delaware_black',
+              'delaware_asian',
+            ],
+            [
+              'gloucester_nonwht',
+              'gloucester_white',
+              'gloucester_black',
+              'gloucester_asian',
+            ],
+            ['mercer_nonwht', 'mercer_white', 'mercer_black', 'mercer_asian'],
+            [
+              'montgomery_nonwht',
+              'montgomery_white',
+              'montgomery_black',
+              'montgomery_asian',
+            ],
+            [
+              'philadelphia_nonwht',
+              'philadelphia_white',
+              'philadelphia_black',
+              'philadelphia_asian',
+            ],
+          ],
+          data: [
+            {
+              key: 'People of Color & Latinx',
+              columns: ['year', 'region_nonwht'],
+            },
+            {
+              key: 'White, non-Latinx',
+              columns: ['year', 'region_white'],
+            },
+            {
+              key: 'Black, non-Latinx',
+              columns: ['year', 'region_black'],
+              disabled: true,
+            },
+            {
+              key: 'Asian, non-Latinx',
+              columns: ['year', 'region_asian'],
+              disabled: true,
+            },
+          ],
+        },
+      ],
+      text: {
+        why: `<p>An equitable, inclusive region means everyone has the opportunity to participate and thrive. But the history of racial and ethnic discrimination in both the country and the region has held generations of residents back from accessing the same opportunities—particularly in the areas of income and employment. Neighborhoods with higher concentrations of people of color are more often the locations of poor housing stock, poorly performing schools, worse air quality, higher rates of crime, and reduced transportation safety.</p><p>There are wonderful things that occur in neighborhoods that share common cultures; nevertheless, diversity has been shown to improve quality of life for everyone. A less segregated region, with higher incomes and workforce inclusion for people of color, improves the bottom line for all businesses and the lives of all citizens.</p>`,
+        what: `<p><em>People of color</em> (defined using U.S. Census Bureau estimates of nonwhite population) and <em>Latinx</em> persons, (defined using Census Bureau estimates of populations with Hispanic origins) can experience discrimination and be held back from opportunities in many facets of life. This indicator focuses on trends in income, labor force participation, and segregation of neighborhoods. These three measures recognize the key inclusion issues these groups can experience in the region's economy, communities, and access to opportunities. There are some limitations when using U.S. Census Bureau data for racial and ethnic analysis—particularly in the area of ethnicity. The American Community Survey (ACS), the decennial census, and other U.S. Census Bureau products only capture one ethnicity in the United States: Hispanic, Latino, or Spanish origin. Although recent attempts have been made to include Middle Eastern or North African as an ethnicity, this has not made its way onto U.S. Census Bureau surveys. For the purpose of simplicity and gender inclusion, this indicator uses the terms <em>Latinx</em> and <em>non-Latinx</em> in reference to people in or out of this ethnic group as defined by the U.S. Census Bureau data. Additionally, the race question on the ACS was revised in 2008 to make it consistent with the 2010 decennial census race question. This makes comparability with earlier years difficult.</p><p>Income was adjusted to 2017 dollars according to <a href="https://www.census.gov/programs-surveys/acs/guidance/comparing-acs-data/2017.html" rel="noopener" target="_blank">U.S. Census Bureau guidance</a> on comparing income data from ACS one-year values with previous ACS releases and the 2000 decennial. Users should be aware that the 2000 decennial census asked about income from 1999, and the ACS asks respondents for income in the past 12 months. This means at least some of respondents' income will likely be received in the year prior to the year the respondent was surveyed.</p><p>Median income trends are found in the first and second chart. The first shows the difference, or gap, between people of color and Latinx vs Whites (non-Latinx); the second shows total median income trends for these groups. In order to estimate median income values at aggregate geographies—the DVRPC region, New Jersey counties, and Pennsylvania suburban counties—weighted averages of groups making up people of color and white, non-Latinx population were used across component counties.</p><p>Although county-level data is presented, counties with higher populations of people of color will have the most reliable estimates. Counties with fewer people of color will have larger margins of error and suspect results due to smaller sample sizes. One way this may manifest itself to <em>Tracking Progress</em> users is in volatile trendlines in the charts. Some counties' income gap values are close to or below zero in one year and have larger swings in income gaps in prior and/or subsequent years. These tend to be counties with fewer people of color in their overall population. In 2017, the estimated percentage of people of color is as follows (in order of greatest to least):</p><ol><li>Philadelphia County (65.5%);</li><li>Mercer County (50.8%);</li><li>Camden County (43.7%);</li><li>Delaware County (33.3%);</li><li>Burlington County (32.7%);</li><li>Montgomery County (24.4%);</li><li>Gloucester County (21.6%);</li><li>Chester County (20.6%); and</li><li>Bucks County (16.0%).</li></ol><p>The Racial/Ethnic Segregation Index in the third chart is an indicator of how segregated the region's census tracts are, relative to the regional distribution of white, non-Latinx population and people of color and Latinx population. In a given year, it shows how dissimilar the racial and ethnic makeup of tracts across the region are to each other and demonstrates the percentage of the population that would theoretically need to relocate in order to match the region's racial and ethnic makeup.</p><p>Gaps in <em>labor force participation rates</em> (percentage of those aged 16 to 64 years who are either employed or seeking work relative to all 16- to 64-year-olds) by race are examined in the fourth chart. Similarly, the actual participation rates of whites and people of color are seen in the fifth chart. Here, too, the population size of the people of color in each county that the ACS can draw from for a sample is important. It is possible for people of color to have a higher rate than whites, but trendlines that are highly variable from year to year are suspect. Gloucester, Bucks, and Chester counties' labor force participation data was not disclosed for these groups in the 2005 ACS one-year estimates as a result.</p><p>The Latinx population is so low in most of our region's counties that labor force participation rates were not disclosed for most years in most counties. Therefore, Latinx and non-Latinx are not presented.</p><p><em>Note: In November, 2019, the Census Bureau issued <a href="https://www.census.gov/programs-surveys/acs/technical-documentation/errata/121.html" rel="noopener" target="_blank">a statement acknowledging errors in 2017 ACS data for Philadelphia County</a>. The error may impact the Racial and Ethnic Disparities indicator for Philadelphia and regional aggregations. DVRPC is aware of the issue and intends to update Tracking Progress with 2018 ACS data soon.</em></p>`,
+        how: `<p>The gap in median income between the region's residents of color and white, non-Latinx residents is wide—it stood at just over $30,000 in 2017. Between 2000 and 2017, the gap has dropped marginally by 6.8% (a little over $2,000). On average, people of color's income was less than two-thirds of white, non-Latinx income in 2017. Regionally, white, non-Latinx workers average $84,352 in yearly income, while people of color average $54,233.</p><p>Racial and ethnic segregation among neighborhoods in the region is on the decline. Comparing the concentrations of people of color and Latinx versus white, non-Latinx in each tract relative to the region's overall racial and ethnic makeup, neighborhoods are diversifying. Although theoretical, in 1990, 68.6% of the region's population would have needed to relocate in order to evenly distribute people of color throughout the region. By 2017, the percentage dropped to 54.5. This value still reflects a region where a high percentage of neighborhoods comprise persons of the same race and ethnicity.</p><p>The gap in labor force participation between working-age whites and people of color is also on the decline. This is due to a slight decline in the white participation rate and slight increase in the rate of people of color. Whites went from 67.2% participation in 2005 to 65.4% in 2017. People of color went from 61.6% to 62.4% in 2017.</p>`,
+        resource: `<p>For more on how DVRPC incorporates equity and environmental justice, and complies with federal Title VI and other important statutes protecting communities of concern, see our <a target="_blank" rel="noopener" href="/GetInvolved/TitleVI/">Title VI and Environmental Justice</a> page, as well as our <a target="_blank" rel="noopener" href="/webmaps/IPD/">Indicators of Potential Disadvantage</a> tool and <a target="_blank" rel="noopener" href="/ETA/">Equity through Access</a> project and tool.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools for reducing disparities and discrimination in the region:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5c929a05e7179a0e4089fae5">Revitalization Planning and Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42b41e7179a56e2137853">Housing Maintenance and Rehabilitation Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43443e7179a56e2137e76">Inclusionary Zoning</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43404e7179a56e2137e25">Community Shuttle Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43435e7179a56e2137e73">Universal Pre-Kindergarten Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb7840afb6fc041ab93097e">Engaging Underserved Communities</a></li></ul>`,
+      },
     },
     'Income Disparities': {
         categories: ['equity','econo','comm'],
@@ -1809,150 +2178,296 @@ const snippetsRef = {
             resource: `<p>For more data on regional trade and freight transportation, go to DVRPC's <a target="_blank" rel="noopener" href="/webmaps/phillyfreightfinder/"><em>PhillyFreightFinder</em></a>.</p><p>DVRPC works with its planning partners on <a target="_blank" rel="noopener" href="/Economic/">economic development</a> and analysis in the region, including our <a target="_blank" rel="noopener" href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools to attract, retain, and grow business opportunities in the region. These may in turn improve the trendline for regional exports:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42edbe7179a56e2137b04">Economic Development Task Force</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42f68e7179a56e2137b5f">Universal Internet Access</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb7796efb6fc041ab92fe9b">Streamlined Permitting Processes</a></li></ul>`
         }
     },
-    'Commute Mode': {
-        categories: ['transpo','enviro','comm'],
-        trend: {
-            status: 'neutral',
-            text: {
-                stat: '1.5% fewer',
-                text: `residents drive alone to work since 2006`
-            }
-        },
-        d3: [
-            {
-                type: 'line',
-                container: 'chart',
-                dataSource: ['ResNonSOV','WorkNonSOV'],
-                context: {
-                    labels: ['Commute Mode Share'],
-                    keepLabels: true,
-                    units: ['percentC'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['DVRPCSOV', 'DVRPCNonSOV'],
-                    ['NJCosSOV', 'NJCosNonSOV'],
-                    ['PASubSOV', 'PASubNonSOV'],
-                    ['BuckSOV', 'BuckNonSOV'],
-                    ['BurlSOV', 'BurlNonSOV'],
-                    ['CamdSOV', 'CamdNonSOV'],
-                    ['ChesSOV', 'ChesNonSOV'],
-                    ['DelSOV', 'DelNonSOV'],
-                    ['GlocSOV', 'GlocNonSOV'],
-                    ['MercSOV', 'MercNonSOV'],
-                    ['MontSOV', 'MontNonSOV'],
-                    ['PhilSOV', 'PhilNonSOV']
-                ],
-                data: [
-                    {
-                        'key': 'Drove Alone',
-                        columns: ['Year', 'DVRPCSOV']
-                    },
-                    {
-                        'key': 'Other Means',
-                        columns: ['Year', 'DVRPCNonSOV']
-                    }
-                ]
-            },
-            {
-                type: 'line',
-                container: 'chart2',
-                dataSource: ['ResNonSOV_multi','WorkNonSOV_multi'], 
-                context: {
-                    labels: ['Commute Mode Share'],
-                    keepLabels: true,
-                    units: ['percentC'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['DVRPCPool', 'DVRPCTransit', 'DVRPCWalk', 'DVRPCBike', 'DVRPCTMO', 'DVRPCWFH', 'DVRPCBus', 'DVRPCRail', 'DVRPCSubw', 'DVRPCTroll', 'DVRPCFerry',  'DVRPCMcyc', 'DVRPCOther', 'DVRPCTaxi'],
-                    ['NJCosPool', 'NJCosTransit', 'NJCosWalk', 'NJCosBike', 'NJCosTMO', 'NJCosWFH', 'NJCosBus', 'NJCosRail', 'NJCosSubw', 'NJCosTroll', 'NJCosFerry',  'NJCosMcyc', 'NJCosOther', 'NJCosTaxi'],
-                    ['PASubPool', 'PASubTransit', 'PASubWalk', 'PASubBike', 'PASubTMO', 'PASubWFH', 'PASubBus', 'PASubRail', 'PASubSubw', 'PASubTroll', 'PASubFerry',  'PASubMcyc', 'PASubOther', 'PASubTaxi'],
-                    ['BuckPool', 'BuckTransit', 'BuckWalk', 'BuckBike', 'BuckTMO', 'BuckWFH', 'BuckBus', 'BuckRail', 'BuckSubw', 'BuckTroll', 'BuckFerry',  'BuckMcyc', 'BuckOther', 'BuckTaxi'],
-                    ['BurlPool', 'BurlTransit', 'BurlWalk', 'BurlBike', 'BurlTMO', 'BurlWFH', 'BurlBus', 'BurlRail', 'BurlSubw', 'BurlTroll', 'BurlFerry',  'BurlMcyc', 'BurlOther', 'BurlTaxi'],
-                    ['CamdPool', 'CamdTransit', 'CamdWalk', 'CamdBike', 'CamdTMO', 'CamdWFH', 'CamdBus', 'CamdRail', 'CamdSubw', 'CamdTroll', 'CamdFerry',  'CamdMcyc', 'CamdOther', 'CamdTaxi'],
-                    ['ChesPool', 'ChesTransit', 'ChesWalk', 'ChesBike', 'ChesTMO', 'ChesWFH', 'ChesBus', 'ChesRail', 'ChesSubw', 'ChesTroll', 'ChesFerry',  'ChesMcyc', 'ChesOther', 'ChesTaxi'],
-                    ['DelaPool', 'DelaTransit', 'DelaWalk', 'DelaBike', 'DelaTMO', 'DelaWFH', 'DelaBus', 'DelaRail', 'DelaSubw', 'DelaTroll', 'DelaFerry',  'DelaMcyc', 'DelaOther', 'DelaTaxi'],
-                    ['GlocPool', 'GlocTransit', 'GlocWalk', 'GlocBike', 'GlocTMO', 'GlocWFH', 'GlocBus', 'GlocRail', 'GlocSubw', 'GlocTroll', 'GlocFerry',  'GlocMcyc', 'GlocOther', 'GlocTaxi'],
-                    ['MercPool', 'MercTransit', 'MercWalk', 'MercBike', 'MercTMO', 'MercWFH', 'MercBus', 'MercRail', 'MercSubw', 'MercTroll', 'MercFerry',  'MercMcyc', 'MercOther', 'MercTaxi'],
-                    ['MontPool', 'MontTransit', 'MontWalk', 'MontBike', 'MontTMO', 'MontWFH', 'MontBus', 'MontRail', 'MontSubw', 'MontTroll', 'MontFerry',  'MontMcyc', 'MontOther', 'MontTaxi'],
-                    ['PhilPool', 'PhilTransit', 'PhilWalk', 'PhilBike', 'PhilTMO', 'PhilWFH', 'PhilBus', 'PhilRail', 'PhilSubw', 'PhilTroll', 'PhilFerry',  'PhilMcyc', 'PhilOther', 'PhilTaxi']
-                ],
-                data: [
-                    {
-                        'key': 'Carpool',
-                        columns: ['Year', 'DVRPCPool']
-                    },
-                    {
-                        'key': 'Public Transit',
-                        columns: ['Year', 'DVRPCTransit']
-                    },
-                    {
-                        'key': 'Walked',
-                        columns: ['Year', 'DVRPCWalk']
-                    },
-                    {
-                        'key': 'Biked',
-                        columns: ['Year', 'DVRPCBike']
-                    },
-                    {
-                        'key': 'Taxi, Motorcycle or Other',
-                        columns: ['Year', 'DVRPCTMO']
-                    },
-                    {
-                        'key': 'Worked from Home',
-                        columns: ['Year', 'DVRPCWFH']
-                    },
-                    {
-                        'key': 'Bus',
-                        columns: ['Year', 'DVRPCBus'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Rail',
-                        columns: ['Year', 'DVRPCRail'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Subway',
-                        columns: ['Year', 'DVRPCSubw'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Trolley or Light Rail',
-                        columns: ['Year', 'DVRPCTroll'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Ferryboat',
-                        columns: ['Year', 'DVRPCFerry'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Motorcycle',
-                        columns: ['Year', 'DVRPCMcyc'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Other Means',
-                        columns: ['Year', 'DVRPCOther'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Taxi',
-                        columns: ['Year', 'DVRPCTaxi'],
-                        disabled: true
-                    }
-                ]
-            }
-        ],
-        text: {
-            why: `<p>Increasing the share of people not driving their vehicles alone reduces congestion, lessens roadway maintenance needs, and can significantly decrease the region's carbon footprint. Increases in active modes like walking and biking can benefit public health and lower healthcare costs. Commute trips only make up a fifth of all trips but are the chief contributor to peak-period demand for transportation facilities—which can slow goods movement within, to, from, and through the region's roadways.</p>`,
-            what: `<p>Commute mode is regularly tracked by the American Community Survey by asking respondents to provide the means of transportation used to travel the longest distance to work last week. A follow-up question asks about vehicle occupancy when "car, truck, van" is selected. This indicator tracks the sum of all individuals not selecting "car, truck, van" with one person in it. Transportation professionals often group travel modes into "single-occupancy vehicles" (SOV) and "non-single-occupancy vehicles" (non-SOV) because SOVs are a less efficient use of roadway and environmental resources.</p><p>The first chart compares the share of workers who drive alone to workers using other means. The second chart examines trends within the modes and submodes of the "Other Means" generalized in the first chart. Toggle the point of origin drop down to get trends of workers that live in the region (residence) and those that work in the region (workplace). Although "worked from home" is not a means of transportation, it is an increasingly important option that lets people opt-out of driving.</p><p>Note that, due to survey sample size, the commute mode shares displayed are estimates—each within a margin of error. Estimates may show a general trend but may not be statistically significant when comparing to each other if change is slight—particularly in lower-population geographies.</p><p><em>Note: In November, 2019, the Census Bureau issued <a href="https://www.census.gov/programs-surveys/acs/technical-documentation/errata/121.html" rel="noopener" target="_blank">a statement acknowledging errors in 2017 ACS data for Philadelphia County</a>. The error may impact the Commute Mode indicator for Philadelphia and regional aggregations. DVRPC is aware of the issue and intends to update Tracking Progress with 2018 ACS data soon.</em></p>`,
-            how: `<p>From 2006 to 2017, commuters <em>living</em> in the region have increasingly used alternative options relative to driving alone to work—the non-SOV commute share has increased by 1.5%. Commuters <em>working</em> in the region have seen their non-SOV share increase by only 0.9% in the same period. For both the region's residents and workers, the SOV share is very high (71.7 and 72.3%, respectively) with a near-flat—albeit downward—trend.</p><p>The second chart shows what is driving the slight increase in non-SOV travel during this period. Public transit and carpool usage continue to be the greatest contributors to non-SOV commutes of the region's residents. Carpooling has steadily declined from 9.0% in 2006 to 7.6% in 2017. Public transit gained in share from 9.4% in 2006 to a peak of 10.6% in 2013, before falling back to 9.6% in 2017. This increase has chiefly been supported by a growing use of commuter rail and subways, but risks future decline if bus ridership continues its steep drop seen in recent years. Regionally, walking commuters have remained steady at just under 4%. Telecommuters have had the greatest increase in non-SOV modeshare in the last 11 years, going from 3.2% to 5.4%. Those that worked from home have surpassed those walking and have become the third highest contributor to non-SOV mode share—after carpooling and public transit. That increase is expected to continue as technology advances, workplace policies become more flexible, and more individuals opt to work for themselves. Bike commuting still registers under 1% in the region but has doubled since 2006.</p>`,
-            resource: `<p>For more resources on alternatives to a drive-alone commute go to our <a target="_blank" rel="noopener" href="/CommuterServices/">Commuter Services</a> page.</p><p>DVRPC is always working at improvements through <a target="_blank" rel="noopener" href="/Transit/">Transit Planning</a>, <a target="_blank" rel="noopener" href="/Transportation/Bicycle/">Bicycle Planning</a>, and <a target="_blank" rel="noopener" href="/Transportation/Pedestrian/">Pedestrian Planning</a>.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools for improving the region's non-drive-alone trendline:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42ad8e7179a56e2137827">Transit-Oriented Development (TOD) Zoning</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42b29e7179a56e2137849">Smart Location of Public Facilities</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43404e7179a56e2137e25">Community Shuttle Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43468e7179a56e2137e9b">Multimodal Transportation Hubs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77e73fb6fc041ab9303f5">Shared Mobility Regulatory Frameworks</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42e6ee7179a56e2137ad8">Complete Streets</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf4350be7179a56e2137f2e">Transportation Demand Management (TDM)</a></li></ul>`
-        }
+'Commute Mode': {
+    categories: ['transpo', 'enviro', 'comm'],
+    trend: {
+      status: 'neutral',
+      text: {
+        stat: '1.5% fewer',
+        text: `residents drive alone to work since 2006`,
+      },
     },
+    d3: [
+      {
+        type: 'line',
+        container: 'chart',
+        dataSource: ['ResNonSOV', 'WorkNonSOV'],
+        context: {
+          labels: ['Commute Mode Share'],
+          keepLabels: true,
+          units: ['percentC'],
+          keepUnits: true,
+        },
+        columnOptions: [
+          ['dvrpcsov', 'dvrpcnonsov'],
+          ['njcossov', 'njcosnonsov'],
+          ['pasubsov', 'pasubnonsov'],
+          ['bucksov', 'bucknonsov'],
+          ['burlsov', 'burlnonsov'],
+          ['camdsov', 'camdnonsov'],
+          ['chessov', 'chesnonsov'],
+          ['delsov', 'delnonsov'],
+          ['glocsov', 'glocnonsov'],
+          ['mercsov', 'mercnonsov'],
+          ['montsov', 'montnonsov'],
+          ['philsov', 'philnonsov'],
+        ],
+        data: [
+          {
+            key: 'Drove Alone',
+            columns: ['year', 'dvrpcsov'],
+          },
+          {
+            key: 'Other Means',
+            columns: ['year', 'dvrpcnonsov'],
+          },
+        ],
+      },
+      {
+        type: 'line',
+        container: 'chart2',
+        dataSource: ['ResNonSOV_multi', 'WorkNonSOV_multi'],
+        context: {
+          labels: ['Commute Mode Share'],
+          keepLabels: true,
+          units: ['percentC'],
+          keepUnits: true,
+        },
+        columnOptions: [
+          [
+            'dvrpcpool',
+            'dvrpctransit',
+            'dvrpcwalk',
+            'dvrpcbike',
+            'dvrpctmo',
+            'dvrpcwfh',
+            'dvrpcbus',
+            'dvrpcrail',
+            'dvrpcsubw',
+            'dvrpctroll',
+            'dvrpcferry',
+            'dvrpcmcyc',
+            'dvrpcother',
+            'dvrpctaxi',
+          ],
+          [
+            'njcospool',
+            'njcostransit',
+            'njcoswalk',
+            'njcosbike',
+            'njcostmo',
+            'njcoswfh',
+            'njcosbus',
+            'njcosrail',
+            'njcossubw',
+            'njcostroll',
+            'njcosferry',
+            'njcosmcyc',
+            'njcosother',
+            'njcostaxi',
+          ],
+          [
+            'pasubpool',
+            'pasubtransit',
+            'pasubwalk',
+            'pasubbike',
+            'pasubtmo',
+            'pasubwfh',
+            'pasubbus',
+            'pasubrail',
+            'pasubsubw',
+            'pasubtroll',
+            'pasubferry',
+            'pasubmcyc',
+            'pasubother',
+            'pasubtaxi',
+          ],
+          [
+            'buckpool',
+            'bucktransit',
+            'buckwalk',
+            'buckbike',
+            'bucktmo',
+            'buckwfh',
+            'buckbus',
+            'buckrail',
+            'bucksubw',
+            'bucktroll',
+            'buckferry',
+            'buckmcyc',
+            'buckother',
+            'bucktaxi',
+          ],
+          [
+            'burlpool',
+            'burltransit',
+            'burlwalk',
+            'burlbike',
+            'burltmo',
+            'burlwfh',
+            'burlbus',
+            'burlrail',
+            'burlsubw',
+            'burltroll',
+            'burlferry',
+            'burlmcyc',
+            'burlother',
+            'burltaxi',
+          ],
+          [
+            'camdpool',
+            'camdtransit',
+            'camdwalk',
+            'camdbike',
+            'camdtmo',
+            'camdwfh',
+            'camdbus',
+            'camdrail',
+            'camdsubw',
+            'camdtroll',
+            'camdferry',
+            'camdmcyc',
+            'camdother',
+            'camdtaxi',
+          ],
+          [
+            'chespool',
+            'chestransit',
+            'cheswalk',
+            'chesbike',
+            'chestmo',
+            'cheswfh',
+            'chesbus',
+            'chesrail',
+            'chessubw',
+            'chestroll',
+            'chesferry',
+            'chesmcyc',
+            'chesother',
+            'chestaxi',
+          ],
+          [
+            'delapool',
+            'delatransit',
+            'delawalk',
+            'delabike',
+            'delatmo',
+            'delawfh',
+            'delabus',
+            'delarail',
+            'delasubw',
+            'delatroll',
+            'delaferry',
+            'delamcyc',
+            'delaother',
+            'delataxi',
+          ],
+          [
+            'glocpool',
+            'gloctransit',
+            'glocwalk',
+            'glocbike',
+            'gloctmo',
+            'glocwfh',
+            'glocbus',
+            'glocrail',
+            'glocsubw',
+            'gloctroll',
+            'glocferry',
+            'glocmcyc',
+            'glocother',
+            'gloctaxi',
+          ],
+          [
+            'mercpool',
+            'merctransit',
+            'mercwalk',
+            'mercbike',
+            'merctmo',
+            'mercwfh',
+            'mercbus',
+            'mercrail',
+            'mercsubw',
+            'merctroll',
+            'mercferry',
+            'mercmcyc',
+            'mercother',
+            'merctaxi',
+          ],
+          [
+            'montpool',
+            'monttransit',
+            'montwalk',
+            'montbike',
+            'monttmo',
+            'montwfh',
+            'montbus',
+            'montrail',
+            'montsubw',
+            'monttroll',
+            'montferry',
+            'montmcyc',
+            'montother',
+            'monttaxi',
+          ],
+          [
+            'philpool',
+            'philtransit',
+            'philwalk',
+            'philbike',
+            'philtmo',
+            'philwfh',
+            'philbus',
+            'philrail',
+            'philsubw',
+            'philtroll',
+            'philferry',
+            'philmcyc',
+            'philother',
+            'philtaxi',
+          ],
+        ],
+        data: [
+          { key: 'Carpool', columns: ['year', 'dvrpcpool'] },
+          { key: 'Public Transit', columns: ['year', 'dvrpctransit'] },
+          { key: 'Walked', columns: ['year', 'dvrpcwalk'] },
+          { key: 'Biked', columns: ['year', 'dvrpcbike'] },
+          { key: 'Taxi, Motorcycle or Other', columns: ['year', 'dvrpctmo'] },
+          { key: 'Worked from Home', columns: ['year', 'dvrpcwfh'] },
+          { key: 'Bus', columns: ['year', 'dvrpcbus'], disabled: true },
+          { key: 'Rail', columns: ['year', 'dvrpcrail'], disabled: true },
+          { key: 'Subway', columns: ['year', 'dvrpcsubw'], disabled: true },
+          {
+            key: 'Trolley or Light Rail',
+            columns: ['year', 'dvrpctroll'],
+            disabled: true,
+          },
+          {
+            key: 'Ferryboat',
+            columns: ['year', 'dvrpcferry'],
+            disabled: true,
+          },
+          {
+            key: 'Motorcycle',
+            columns: ['year', 'dvrpcmcyc'],
+            disabled: true,
+          },
+          {
+            key: 'Other Means',
+            columns: ['year', 'dvrpcother'],
+            disabled: true,
+          },
+          { key: 'Taxi', columns: ['year', 'dvrpctaxi'], disabled: true },
+        ],
+      },
+    ],
+    text: {
+      why: `<p>Increasing the share of people not driving their vehicles alone reduces congestion, lessens roadway maintenance needs, and can significantly decrease the region's carbon footprint. Increases in active modes like walking and biking can benefit public health and lower healthcare costs. Commute trips only make up a fifth of all trips but are the chief contributor to peak-period demand for transportation facilities—which can slow goods movement within, to, from, and through the region's roadways.</p>`,
+      what: `<p>Commute mode is regularly tracked by the American Community Survey by asking respondents to provide the means of transportation used to travel the longest distance to work last week. A follow-up question asks about vehicle occupancy when "car, truck, van" is selected. This indicator tracks the sum of all individuals not selecting "car, truck, van" with one person in it. Transportation professionals often group travel modes into "single-occupancy vehicles" (SOV) and "non-single-occupancy vehicles" (non-SOV) because SOVs are a less efficient use of roadway and environmental resources.</p><p>The first chart compares the share of workers who drive alone to workers using other means. The second chart examines trends within the modes and submodes of the "Other Means" generalized in the first chart. Toggle the point of origin drop down to get trends of workers that live in the region (residence) and those that work in the region (workplace). Although "worked from home" is not a means of transportation, it is an increasingly important option that lets people opt-out of driving.</p><p>Note that, due to survey sample size, the commute mode shares displayed are estimates—each within a margin of error. Estimates may show a general trend but may not be statistically significant when comparing to each other if change is slight—particularly in lower-population geographies.</p><p><em>Note: In November, 2019, the Census Bureau issued <a href="https://www.census.gov/programs-surveys/acs/technical-documentation/errata/121.html" rel="noopener" target="_blank">a statement acknowledging errors in 2017 ACS data for Philadelphia County</a>. The error may impact the Commute Mode indicator for Philadelphia and regional aggregations. DVRPC is aware of the issue and intends to update Tracking Progress with 2018 ACS data soon.</em></p>`,
+      how: `<p>From 2006 to 2017, commuters <em>living</em> in the region have increasingly used alternative options relative to driving alone to work—the non-SOV commute share has increased by 1.5%. Commuters <em>working</em> in the region have seen their non-SOV share increase by only 0.9% in the same period. For both the region's residents and workers, the SOV share is very high (71.7 and 72.3%, respectively) with a near-flat—albeit downward—trend.</p><p>The second chart shows what is driving the slight increase in non-SOV travel during this period. Public transit and carpool usage continue to be the greatest contributors to non-SOV commutes of the region's residents. Carpooling has steadily declined from 9.0% in 2006 to 7.6% in 2017. Public transit gained in share from 9.4% in 2006 to a peak of 10.6% in 2013, before falling back to 9.6% in 2017. This increase has chiefly been supported by a growing use of commuter rail and subways, but risks future decline if bus ridership continues its steep drop seen in recent years. Regionally, walking commuters have remained steady at just under 4%. Telecommuters have had the greatest increase in non-SOV modeshare in the last 11 years, going from 3.2% to 5.4%. Those that worked from home have surpassed those walking and have become the third highest contributor to non-SOV mode share—after carpooling and public transit. That increase is expected to continue as technology advances, workplace policies become more flexible, and more individuals opt to work for themselves. Bike commuting still registers under 1% in the region but has doubled since 2006.</p>`,
+      resource: `<p>For more resources on alternatives to a drive-alone commute go to our <a target="_blank" rel="noopener" href="/CommuterServices/">Commuter Services</a> page.</p><p>DVRPC is always working at improvements through <a target="_blank" rel="noopener" href="/Transit/">Transit Planning</a>, <a target="_blank" rel="noopener" href="/Transportation/Bicycle/">Bicycle Planning</a>, and <a target="_blank" rel="noopener" href="/Transportation/Pedestrian/">Pedestrian Planning</a>.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools for improving the region's non-drive-alone trendline:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42ad8e7179a56e2137827">Transit-Oriented Development (TOD) Zoning</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42b29e7179a56e2137849">Smart Location of Public Facilities</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43404e7179a56e2137e25">Community Shuttle Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43468e7179a56e2137e9b">Multimodal Transportation Hubs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77e73fb6fc041ab9303f5">Shared Mobility Regulatory Frameworks</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42e6ee7179a56e2137ad8">Complete Streets</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf4350be7179a56e2137f2e">Transportation Demand Management (TDM)</a></li></ul>`,
+    },
+  },
     'Transit Ridership': {
         categories: ['transpo','comm','enviro'],
         trend: {
