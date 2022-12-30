@@ -11,7 +11,7 @@ const makeIndicatorHTML = async (params) => {
     const categories = params.categories;
     const catPrimary = params.categories[0] || "unset";
     const mainText = params.text;
-    const defaultText = params.text.why;
+    const defaultText = globalText.why;
     const trend = params.trend;
     const tabColor = catLookup[catPrimary].dark;
 
@@ -55,16 +55,16 @@ const makeIndicatorHTML = async (params) => {
  */
 const fetchMarkdown = async (title) => {
   const ret = await Promise.all([
-    fetch(`../markdown/${title}/how.md`)
+    fetch(`./markdown/${title}/how.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
-    fetch(`../markdown/${title}/why.md`)
+    fetch(`./markdown/${title}/why.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
-    fetch(`../markdown/${title}/what.md`)
+    fetch(`./markdown/${title}/what.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
-    fetch(`../markdown/${title}/resources.md`)
+    fetch(`./markdown/${title}/resources.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
   ]).then(([how, why, what, resource]) => ({ how, why, what, resource }));
