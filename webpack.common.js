@@ -26,9 +26,9 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader",
-        query: {
-          presets: ["minify"],
-        },
+        // query: {
+        //   presets: ["minify"],
+        // },
       },
       // load styles
       {
@@ -67,38 +67,49 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
   },
   plugins: [
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin(
+      // [
+      // {
+      //   from: "./img",
+      //   to: "img",
+      //   toType: "dir",
+      // },
+      // {
+      //   from: "./data",
+      //   to: "data",
+      //   toType: "dir",
+      // },
+      // {
+      //   from: "./css",
+      //   to: "css",
+      //   toType: "dir",
+      // },
+      // {
+      //   from: "./vid",
+      //   to: "vid",
+      //   toType: "dir",
+      // },
+      // {
+      //   from: "./pdf",
+      //   to: "pdf",
+      //   toType: "dir",
+      // },
+      // {
+      //   from: "./markdown",
+      //   to: "markdown",
+      //   toType: "dir",
+      // },]
       {
-        from: "./img",
-        to: "img",
-        toType: "dir",
-      },
-      {
-        from: "./data",
-        to: "data",
-        toType: "dir",
-      },
-      {
-        from: "./css",
-        to: "css",
-        toType: "dir",
-      },
-      {
-        from: "./vid",
-        to: "vid",
-        toType: "dir",
-      },
-      {
-        from: "./pdf",
-        to: "pdf",
-        toType: "dir",
-      },
-      {
-        from: "./markdown",
-        to: "markdown",
-        toType: "dir",
-      },
-    ]),
+        patterns: [
+          { from: "./img", to: "./img" },
+          // { from: "./data", to: "./build/data" },
+          { from: "./css", to: "./css" },
+          { from: "./vid", to: "./vid" },
+          { from: "./pdf", to: "./pdf" },
+          { from: "./markdown", to: "./markdown" },
+        ],
+      }
+    ),
     // HtmlWebpackPlugin
     indexConfig,
   ],
