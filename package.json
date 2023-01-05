@@ -11,7 +11,8 @@
   "description": "Updating the Tracking Progress pages from walls of text to an interactive dashboard with maps, visualizations, and smaller walls of text.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack build --config webpack.prod.js"
   },
   "babel": {
     "presets": [
@@ -26,18 +27,20 @@
     "@babel/polyfill": "^7.4.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/preset-env": "^7.5.4",
-    "babel-loader": "^8.0.6",
-    "babel-preset-minify": "^0.5.0",
-    "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^2.1.1",
-    "csv-loader": "^3.0.2",
-    "file-loader": "^2.0.0",
-    "html-webpack-plugin": "^3.2.0",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "babel-preset-minify": "^0.5.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "csv-loader": "^3.0.5",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "path": "^0.12.7",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6"
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
   }
 }

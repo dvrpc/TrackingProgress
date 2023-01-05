@@ -1,0 +1,3 @@
+DVRPC’s [_Municipal Implementation Toolbox_](https://www.dvrpc.org/Plan/MIT/) (MIT) suggests the the [Tourism Improvement District (TID)](https://www.dvrpc.org/Plan/MIT/tourismimprovementdistricttid) tool to augment the attractiveness of regional destinations and ways foreign travelers and others can access them.
+
+Successfully implemented economic development strategies and others found in DVRPC’s [Comprehensive Economic Development Strategy (CEDS)](https://www.dvrpc.org/Economic/CEDS/) may help make the case for increasing international connections at our airport hub.

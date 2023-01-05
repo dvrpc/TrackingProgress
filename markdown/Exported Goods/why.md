@@ -1,0 +1,1 @@
+The export of goods and services to international destinations is a key indicator of how a nation or region is performing economically. Although _Tracking Progress_ exports data is limited to just goods, it serves to highlight merchandise produced in our region, along with the region's global reach and contributions to the national economy.
