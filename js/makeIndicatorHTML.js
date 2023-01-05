@@ -51,20 +51,21 @@ const makeIndicatorHTML = async (params) => {
 /**
  * fetches markdown files for an indicator
  * @param {String} title 
- * @returns Object
+ * @returns Object 
  */
 const fetchMarkdown = async (title) => {
+  const path = process.env.markdownPath
   const ret = await Promise.all([
-    fetch(`./markdown/${title}/how.md`)
+    fetch(`${path + title}/how.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
-    fetch(`./markdown/${title}/why.md`)
+    fetch(`${path + title}/why.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
-    fetch(`./markdown/${title}/what.md`)
+    fetch(`${path + title}/what.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
-    fetch(`./markdown/${title}/resources.md`)
+    fetch(`${path + title}/resources.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
   ]).then(([how, why, what, resource]) => ({ how, why, what, resource }));
