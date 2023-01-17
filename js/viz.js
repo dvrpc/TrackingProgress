@@ -119,6 +119,36 @@ const createStackedBarChart = (source, toggleContext) => {
             
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
+            // generate custom tooltip
+            const isPercent = context.units === 'percent' || context.units === 'percentC'
+                ? true
+                : false
+            chart.interactiveLayer.tooltip.contentGenerator((data) => {
+                let htmlString = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <td colspan="3"><strong class="x-value">${data.value}</strong></td>
+                            </tr>
+                        </thead>
+                        <tbody>`
+                data.series.map(item => {
+                    htmlString += `
+                        <tr>
+                            <td class="legend-color-guide">
+                                <div style="background-color: ${item.color};"></div>
+                            </td>
+                            <td class="key">${item.key}</td>
+                            <td class="value">${
+                                isPercent 
+                                    ? Number(item.value).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2})
+                                    : item.value}
+                            </td>
+                        </tr>`
+                })
+                return htmlString + '</tbody></table>'
+            })
+
             nv.utils.windowResize(chart.update)
 
             return chart
