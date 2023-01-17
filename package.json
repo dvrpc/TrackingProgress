@@ -11,7 +11,7 @@
   "description": "Updating the Tracking Progress pages from walls of text to an interactive dashboard with maps, visualizations, and smaller walls of text.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --config webpack.dev.js",
+    "start": "webpack build --config webpack.dev.js && webpack serve --config webpack.dev.js",
     "build": "webpack build --config webpack.prod.js"
   },
   "babel": {

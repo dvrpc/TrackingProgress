@@ -7,6 +7,7 @@ const prodConfig = {
   plugins: [
     new EnvironmentPlugin({
       markdownPath: "./markdown/",
+      baseURL: "/TrackingProgress/"
     }),
   ],
 };
