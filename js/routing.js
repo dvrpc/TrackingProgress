@@ -11,7 +11,7 @@ const filterState = document.getElementById('filter-type-form')
 
 
 // for development/live
-const baseURL = '/TrackingProgress/'
+const baseURL = process.env.baseURL
 
 // remove possible special characters from URL by whitelisting alphanumeric characters, -, / and &
 const sanitizeHash = hash => hash.replace(/[^\w\-\/\&]/gi, '')

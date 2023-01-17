@@ -1,18 +1,19 @@
 import chartStrings from './indicatorChartStrings.js'
 import { catLookup } from './utils.js'
 
-
+let globalText = null;
 // START main
 // create an indicator page using content from it's entry in ref.js
-const makeIndicatorHTML = params => {
-    // extract info from params
-    const title = params.title
-    const categories = params.categories
-    const catPrimary = params.categories[0] || 'unset'
-    const mainText = params.text
-    const defaultText = params.text.why
-    const trend = params.trend
-    const tabColor = catLookup[catPrimary].dark
+const makeIndicatorHTML = async (params) => {
+  // extract info from params
+    const title = params.title;
+    globalText = await fetchMarkdown(title)
+    const categories = params.categories;
+    const catPrimary = params.categories[0] || "unset";
+    const mainText = params.text;
+    const defaultText = globalText.why;
+    const trend = params.trend;
+    const tabColor = catLookup[catPrimary].dark;
 
     // create parent/non-content elements
     const snippet = document.createElement('article')
@@ -46,6 +47,32 @@ const makeIndicatorHTML = params => {
 
     return snippet
 }
+
+/**
+ * fetches markdown files for an indicator
+ * @param {String} title 
+ * @returns Object 
+ */
+const fetchMarkdown = async (title) => {
+  const path = process.env.markdownPath
+  const ret = await Promise.all([
+    fetch(`${path + title}/how.md`)
+      .then((res) => res.text())
+      .then((text) => marked.parse(text)),
+    fetch(`${path + title}/why.md`)
+      .then((res) => res.text())
+      .then((text) => marked.parse(text)),
+    fetch(`${path + title}/what.md`)
+      .then((res) => res.text())
+      .then((text) => marked.parse(text)),
+    fetch(`${path + title}/resources.md`)
+      .then((res) => res.text())
+      .then((text) => marked.parse(text)),
+  ]).then(([how, why, what, resource]) => ({ how, why, what, resource }));
+  
+  return ret;
+}
+
 const make404 = () => {
    // create elements
    const snippet = document.createElement('article')
@@ -179,12 +206,12 @@ const handleTabs = (e, text, wrapper, color) => {
     // short out if clicking on the already active tab
     if(oldTab.id === clickedTab.id) return
 
-    // clear the text
-    while(wrapper.firstChild) wrapper.removeChild(wrapper.firstChild)
-    
-    // add new text
-    const textSection = clickedTab.id.split('-')[0]
-    wrapper.insertAdjacentHTML('afterbegin', text[textSection])
+  // clear the text
+  while (wrapper.firstChild) wrapper.removeChild(wrapper.firstChild);
+
+  // add new text
+  const textSection = clickedTab.id.split("-")[0];
+  wrapper.insertAdjacentHTML("afterbegin", globalText[textSection]);
 
     // deactivate the old jawn
     oldTab.classList.remove('active-tab')

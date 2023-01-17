@@ -1,0 +1,7 @@
+DVRPC’s [Corridor Planning](https://www.dvrpc.org/Corridors/) focuses on multimodal transportation improvements in communities throughout the region, consistent with the long-range plan. [Bicycle](https://www.dvrpc.org/Transportation/Bicycle/), [pedestrian](https://www.dvrpc.org/Transportation/Pedestrian/), and [transit](https://www.dvrpc.org/Transit/) planning all focuses on providing travel options within the region. [Freight planning](https://www.dvrpc.org/Freight/) is essential for keeping the region’s economy moving. [Transportation System Management and Operations](https://www.dvrpc.org/Transportation/TSMO/) is critical to optimizing the performance of the existing transportation network.
+
+DVRPC’s [_Municipal Implementation Toolbox_](https://www.dvrpc.org/Plan/MIT/) suggests the following tools for localities to help decrease VMT growth:
+- [Mobility as a Service (MaaS)](https://www.dvrpc.org/Plan/MIT/mobilityasaservicemaas)
+- [Multimodal Transportation Hubs and Connections](https://www.dvrpc.org/Plan/MIT/multimodaltransportationhubsandconnections)
+- [Travel Demand Management (TDM)](https://www.dvrpc.org/Plan/MIT/traveldemandmanagementtdm)
+- [Trip Reduction Ordinances](https://www.dvrpc.org/Plan/MIT/tripreductionordinances)

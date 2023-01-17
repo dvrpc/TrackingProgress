@@ -1,0 +1,1 @@
+An equitable and inclusive region means all residents have opportunities to participate and thrive. Key to this vision is that female members of our community have equal opportunities for income and employment. The financial health of female persons is critical to the economic health of households, communities, and the region.

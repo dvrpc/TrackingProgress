@@ -1,0 +1,3 @@
+Collaborating with our county partners, DVRPC produced [county and municipal employment forecasts](https://www.dvrpc.org/webmaps/popempforecasts/) for the _Connections 2050_ Long-Range Plan that were adopted by the DVRPC Board.
+
+For more detail on population by municipality, [download this table of historic population estimates](https://docs.google.com/spreadsheets/d/1h9od5DzsEpfBQiWowIq2zrQfEUDXeREc/edit#gid=159397524).

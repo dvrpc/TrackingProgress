@@ -122,7 +122,7 @@ const toggleChart = (selected, dataSets) => {
 }
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
-const getIndicatorSnippet = (ref, indicatorParams) => {    
+const getIndicatorSnippet = async (ref, indicatorParams) => {    
 
     // get text and chart content
     // deep clone the chart context objects to avoid polluting the main ref.js object with references to toggled data sets
@@ -131,7 +131,7 @@ const getIndicatorSnippet = (ref, indicatorParams) => {
         return dataVizClone
     })
 
-    const snippet = makeIndicatorHTML(indicatorParams)
+    const snippet = await makeIndicatorHTML(indicatorParams)
 
     // insert the HTML to update the structure & put the map and/or data viz components in place
     grid.insertAdjacentElement('beforebegin', snippet)

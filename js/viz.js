@@ -172,7 +172,8 @@ const createLineChart = (source, toggleContext) => {
 
     d3.csv(dataSource, rows => {
         source.data.forEach(series => {
-            series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
+            if (rows[series.columns[1]] != '')
+                series.values.push([ +rows[series.columns[0]], rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]] ])
         })
     }, csvObj => {
 

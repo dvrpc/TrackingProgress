@@ -1,0 +1,1 @@
+Since 2009, PHL releases the number of destinations that can be reached through a direct flight at PHL. The chart can toggle between displaying all international flight destinations by the destination airport's general location and distinguish between which destinations are seasonal and which are year round.
