@@ -961,10 +961,12 @@ const snippetsRef = {
             },
             {
               key: 'Wage Salary',
+              disabled: true,
               columns: ['year', 'region_wage_salary'],
             },
             {
               key: 'Proprietors',
+              disabled: true,
               columns: ['year', 'region_proprietors'],
             },
           ],
