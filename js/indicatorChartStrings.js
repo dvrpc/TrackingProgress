@@ -756,12 +756,28 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>`,
-    'Innovation':`
-        <h2 class="indicator-subheader">Utility Patent Approvals of First Named Authors Residing in the Greater Philadelphia Region</h2>
-        <div class="data-viz chart">
-            <svg></svg>
+    'Business Formations':`
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Business Formations</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Value Type:
+                        <select id="viz-0" class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Change Since Base Year</option>
+                            <option value="2">Percent Change Since Base Year</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
         </div>
-        <small class="chart-src"><em>Sources: US Patent & Trademark Office's Patent Technology Monitoring Team, DVRPC</em></small>`,
+        <div class="data-viz chart">
+            <svg>
+            </svg>
+        </div>
+        <small class="chart-src"><em>Geography: * Regional, ** County<br>Source: U.S. Census Bureau's Business Formation Statistics</em></small>
+    `,
     'Job Growth':`
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Job Growth Rate by Type</h2>

@@ -2857,7 +2857,7 @@ const snippetsRef = {
             resource: `<p>DVRPC does extensive work with partner agencies to recommend changes for promoting the region's transit system and transit use. Find relevant planning tools, publications, programs, and resources on our <a target="_blank" rel="noopener" href="/Transit/">Transit Planning</a> page.</p><p>See what transit investments are proposed for the region in the Transportation Improvement Program projects for <a target="_blank" rel="noopener" href="/TIP/NJ/">New Jersey</a> and <a target="_blank" rel="noopener" href="/TIP/PA/">Pennsylvania </a>counties and the <a target="_blank" rel="noopener" href="/webmaps/MRP2045/"><em>Connections 2045</em> Plan: Major Regional Projects</a> page.</p>`
         }
     },
-    'Innovation': {
+    'Business Formations': {
         categories: ['econo'],
         trend: {
             status: 'good',
@@ -2870,17 +2870,79 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['patents'],
                 context: {
-                    labels: ['Approvals'],
-                    units: ['thousands']
+                    labels: ['Total Business Formations', 'Total Business Formations', 'Total Business Formations'],
+                    keepLabels: false,
+                    units: ['thousands', 'thousands', 'percentC'],
+                    keepUnits: false
                 },
+                dataSource: ['business_formations'],
+                columnOptions: [
+                    ['dvrpc_total', 'njco_total', 'pasub_total', 'bucks_total', 'burlington_total', 'camden_total', 'chester_total', 'delaware_total', 'gloucester_total', 'mercer_total', 'montgomery_total', 'philadelphia_total'],
+                    ['dvrpc_cumu_chng', 'njco_cumu_chng', 'pasub_cumu_chng', 'bucks_cumu_chng', 'burlington_cumu_chng', 'camden_cumu_chng', 'chester_cumu_chng', 'delaware_cumu_chng', 'gloucester_cumu_chng', 'mercer_cumu_chng', 'montgomery_cumu_chng', 'philadelphia_cumu_chng'],
+                    ['dvrpc_cumu_perc_chng', 'njco_cumu_perc_chng', 'pasub_cumu_perc_chng', 'bucks_cumu_perc_chng', 'burlington_cumu_perc_chng', 'camden_cumu_perc_chng', 'chester_cumu_perc_chng', 'delaware_cumu_perc_chng', 'gloucester_cumu_perc_chng', 'mercer_cumu_perc_chng', 'montgomery_cumu_perc_chng', 'philadelphia_cumu_perc_chng']
+                ],
                 data: [
                     {
-                        'key': 'Approvals',
-                        columns: ['Year', 'DVRPC']
-                    }
-                ]
+                        key: 'DVRPC Region*',
+                        columns: ['year', 'dvrpc_total'],
+                    },
+                    {
+                      key: 'NJ Counties*',
+                      disabled: true, 
+                      columns: ['year', 'njco_total'],
+                    },
+                    {
+                      key: 'PA Suburban Counties*',
+                      disabled: true,
+                      columns: ['year', 'pasub_total'],
+                    },
+                    {
+                        key: 'Bucks**',
+                        disabled: true,
+                        columns: ['year', 'bucks_total'],
+                    },
+                    {
+                        key: 'Burlington**',
+                        disabled: true,
+                        columns: ['year', 'burlington_total'],
+                    },
+                    {
+                      key: 'Camden**',
+                      disabled: true,
+                      columns: ['year', 'camden_total'],
+                    },
+                    {
+                      key: 'Chester**',
+                      disabled: true,
+                      columns: ['year', 'chester_total'],
+                    },
+                    {
+                      key: 'Delaware**',
+                      disabled: true,
+                      columns: ['year', 'delaware_total'],
+                    },
+                    {
+                      key: 'Gloucester**',
+                      disabled: true,
+                      columns: ['year', 'gloucester_total'],
+                    },
+                    {
+                      key: 'Mercer**',
+                      disabled: true,
+                      columns: ['year', 'mercer_total'],
+                    },
+                    {
+                      key: 'Montgomery**',
+                      disabled: true,
+                      columns: ['year', 'montgomery_total'],
+                    },
+                    {
+                      key: 'Philadelphia**',
+                      disabled: true,
+                      columns: ['year', 'philadelphia_total'],
+                    },
+                  ],
             }
         ],
         text: {
