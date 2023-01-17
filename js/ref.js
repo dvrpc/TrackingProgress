@@ -1534,7 +1534,7 @@ const snippetsRef = {
           data: [
             {
               key: 'Index Value',
-              columns: ['year', 'PeopleofColor'],
+              columns: ['year', 'peopleofcolor'],
             },
           ],
         },
