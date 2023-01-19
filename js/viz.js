@@ -120,6 +120,9 @@ const createStackedBarChart = (source, toggleContext) => {
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
             // generate custom tooltip
+            const isPercent = context.units === 'percent' || context.units === 'percentC'
+                ? true
+                : false
             chart.interactiveLayer.tooltip.contentGenerator((data) => {
                 let htmlString = `
                     <table>
@@ -137,7 +140,7 @@ const createStackedBarChart = (source, toggleContext) => {
                             </td>
                             <td class="key">${item.key}</td>
                             <td class="value">${
-                                item.value % 1 != 0 
+                                isPercent 
                                     ? Number(item.value).toLocaleString(undefined,{style: 'percent', minimumFractionDigits:2})
                                     : item.value}
                             </td>
