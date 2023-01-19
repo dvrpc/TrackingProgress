@@ -757,7 +757,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Geography
-                        <select id="viz-0" class="toggle-data-selector">
+                        <select id="viz-2" class="toggle-data-selector">
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
                                 <option value="1">NJ Counties</option>
@@ -792,7 +792,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Geography
-                        <select id="viz-1" class="toggle-data-selector">
+                        <select id="viz-3" class="toggle-data-selector">
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
                                 <option value="1">NJ Counties</option>
@@ -827,7 +827,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Geography
-                        <select id="viz-0" class="toggle-data-selector">
+                        <select id="viz-4" class="toggle-data-selector">
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
                                 <option value="1">NJ Counties</option>
@@ -872,7 +872,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Geography
-                        <select id="viz-1" class="toggle-data-selector">
+                        <select id="viz-5" class="toggle-data-selector">
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
                                 <option value="1">NJ Counties</option>
@@ -1496,7 +1496,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Geography
-                        <select id="viz-2" class="toggle-data-selector">
+                        <select id="viz-0" class="toggle-data-selector">
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
                                 <option value="1">NJ Counties</option>
@@ -1531,7 +1531,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Geography
-                        <select id="viz-3" class="toggle-data-selector">
+                        <select id="viz-1" class="toggle-data-selector">
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
                                 <option value="1">NJ Counties</option>
@@ -1566,7 +1566,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Geography
-                        <select id="viz-3" class="toggle-data-selector">
+                        <select id="viz-2" class="toggle-data-selector">
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
                                 <option value="1">NJ Counties</option>
@@ -1601,7 +1601,7 @@ const chartStrings = {
                     <fieldset>
                         <label>
                             Select Geography:
-                            <select id="viz-4" class="toggle-data-selector">
+                            <select id="viz-3" class="toggle-data-selector">
                                 <optgroup label="Regional">
                                     <option value="0">DVRPC Region</option>
                                     <option value="1">NJ Counties</option>
