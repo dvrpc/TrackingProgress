@@ -1538,125 +1538,34 @@ const snippetsRef = {
               {
                 type: 'line',
                 container: 'chart4',
-                dataSource: ['medincRace'],
+                dataSource: ['sexInc_gap', 'sexInc_percofmale'],
                 context: {
-                  labels: ['Dollars (2019)'],
-                  keepLabels: true,
-                  units: ['dollars'],
-                  keepUnits: true,
+                    labels: ['Median Income Gap (2017 Dollars)', 'Median Income Gap Percentage'],
+                    keepLabels: false,
+                    units: ['dollars', 'percentC'],
+                    keepUnits: false
                 },
                 columnOptions: [
-                  [
-                    'region_nonwht',
-                    'region_white',
-                    'region_black',
-                    'region_asian',
-                    'region_latinx',
-                  ],
-                  [
-                    'nj_suburban_counties_nonwht',
-                    'nj_suburban_counties_white',
-                    'nj_suburban_counties_black',
-                    'nj_suburban_counties_asian',
-                    'nj_suburban_counties_latinx',
-                  ],
-                  [
-                    'pa_suburban_counties_nonwht',
-                    'pa_suburban_counties_white',
-                    'pa_suburban_counties_black',
-                    'pa_suburban_counties_asian',
-                    'pa_suburban_counties_latinx',
-                  ],
-                  [
-                    'bucks_nonwht',
-                    'bucks_white',
-                    'bucks_black',
-                    'bucks_asian',
-                    'bucks_latinx',
-                  ],
-                  [
-                    'burlington_nonwht',
-                    'burlington_white',
-                    'burlington_black',
-                    'burlington_asian',
-                    'burlington_latinx',
-                  ],
-                  [
-                    'camden_nonwht',
-                    'camden_white',
-                    'camden_black',
-                    'camden_asian',
-                    'camden_latinx',
-                  ],
-                  [
-                    'chester_nonwht',
-                    'chester_white',
-                    'chester_black',
-                    'chester_asian',
-                    'chester_latinx',
-                  ],
-                  [
-                    'delaware_nonwht',
-                    'delaware_white',
-                    'delaware_black',
-                    'delaware_asian',
-                    'delaware_latinx',
-                  ],
-                  [
-                    'gloucester_nonwht',
-                    'gloucester_white',
-                    'gloucester_black',
-                    'gloucester_asian',
-                    'gloucester_latinx',
-                  ],
-                  [
-                    'mercer_nonwht',
-                    'mercer_white',
-                    'mercer_black',
-                    'mercer_asian',
-                    'mercer_latinx',
-                  ],
-                  [
-                    'montgomery_nonwht',
-                    'montgomery_white',
-                    'montgomery_black',
-                    'montgomery_asian',
-                    'montgomery_latinx',
-                  ],
-                  [
-                    'philadelphia_nonwht',
-                    'philadelphia_white',
-                    'philadelphia_black',
-                    'philadelphia_asian',
-                    'philadelphia_latinx',
-                  ],
+                    ['Region'],
+                    ['NJ Suburban Counties'],
+                    ['PA Suburban Counties'],
+                    ['Bucks'],
+                    ['Burlington'],
+                    ['Camden'],
+                    ['Chester'],
+                    ['Delaware'],
+                    ['Gloucester'],
+                    ['Mercer'],
+                    ['Montgomery'],
+                    ['Philadelphia']
                 ],
                 data: [
-                  {
-                    key: 'People of Color & Latinx',
-                    columns: ['year', 'region_nonwht'],
-                  },
-                  {
-                    key: 'White, non-Latinx',
-                    columns: ['year', 'region_white'],
-                  },
-                  {
-                    key: 'Black, non-Latinx',
-                    columns: ['year', 'region_black'],
-                    disabled: true,
-                  },
-                  {
-                    key: 'Asian, non-Latinx',
-                    columns: ['year', 'region_asian'],
-                    disabled: true,
-                  },
-                  {
-                    key: 'Latinx',
-                    columns: ['year', 'region_latinx'],
-                    disabled: true,
-                  },
-                ],
-              },
+                    {
+                        'key': 'Male to Female Gap',
+                        columns: ['year', 'Region']
+                    }
+                ]
+            },
               {
                 type: 'line',
                 container: 'chart5',

@@ -851,7 +851,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Value Type
-                        <select id="viz-0-b" class="toggle-data-selector">
+                        <select id="viz-4-b" class="toggle-data-selector">
                             <option value="0">Gap</option>
                             <option value="1">Percent Gap</option>
                         </select>
