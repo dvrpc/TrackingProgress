@@ -783,3 +783,8 @@ address {
     -o-transition: none !important;
     transition: none !important;
 }
+
+.nvd3 .nv-groups .nv-point {
+    stroke-opacity: 1 !important;
+    stroke-width: 2px;
+}

@@ -1305,7 +1305,7 @@ const snippetsRef = {
         resource: `<p>DVRPC works with its planning partners on <a target="_blank" rel="noopener" href="/Economic/">economic development</a> and analysis in the region, including our <a target="_blank" rel="noopener" href="/Economic/CEDS/">Comprehensive Economic Development Strategy (CEDS)</a>.</p><p>DVRPC produced Board-adopted <a target="_blank" rel="noopener" href="/Products/ADR023/">county and municipal employment forecasts</a> for the <em>Connections 2045</em> Long-Range Plan in collaboration with the Commission's county planning partners.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools to bolster job growth in an inclusive economy:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li></ul>`,
       },
     },
-    'Racial and Ethnic Disparities': {
+    'Segregation': {
       categories: ['equity', 'comm', 'econo'],
       trend: {
         status: 'neutral',
@@ -1318,214 +1318,6 @@ const snippetsRef = {
         {
           type: 'line',
           container: 'chart',
-          dataSource: ['medincGapRace'],
-          context: {
-            labels: ['Dollars (2019)'],
-            keepLabels: true,
-            units: ['dollars'],
-            keepUnits: true,
-          },
-          columnOptions: [
-            ['region_nonwht', 'region_black', 'region_asian', 'region_latinx'],
-            [
-              'nj_suburban_counties_nonwht',
-              'nj_suburban_counties_black',
-              'nj_suburban_counties_asian',
-              'nj_suburban_counties_latinx',
-            ],
-            [
-              'pa_suburban_counties_nonwht',
-              'pa_suburban_counties_black',
-              'pa_suburban_counties_asian',
-              'pa_suburban_counties_latinx',
-            ],
-            ['bucks_nonwht', 'bucks_black', 'bucks_asian', 'bucks_latinx'],
-            [
-              'burlington_nonwht',
-              'burlington_black',
-              'burlington_asian',
-              'burlington_latinx',
-            ],
-            ['camden_nonwht', 'camden_black', 'camden_asian', 'camden_latinx'],
-            [
-              'chester_nonwht',
-              'chester_black',
-              'chester_asian',
-              'chester_latinx',
-            ],
-            [
-              'delaware_nonwht',
-              'delaware_black',
-              'delaware_asian',
-              'delaware_latinx',
-            ],
-            [
-              'gloucester_nonwht',
-              'gloucester_black',
-              'gloucester_asian',
-              'gloucester_latinx',
-            ],
-            ['mercer_nonwht', 'mercer_black', 'mercer_asian', 'mercer_latinx'],
-            [
-              'montgomery_nonwht',
-              'montgomery_black',
-              'montgomery_asian',
-              'montgomery_latinx',
-            ],
-            [
-              'philadelphia_nonwht',
-              'philadelphia_black',
-              'philadelphia_asian',
-              'philadelphia_latinx',
-            ],
-          ],
-          data: [
-            {
-              key: 'People of Color & Latinx',
-              columns: ['year', 'region_nonwht'],
-            },
-            {
-              key: 'Black, non-Latinx',
-              columns: ['year', 'region_black'],
-              disabled: true,
-            },
-            {
-              key: 'Asian, non-Latinx',
-              columns: ['year', 'region_asian'],
-              disabled: true,
-            },
-            {
-              key: 'Latinx',
-              columns: ['year', 'region_latinx'],
-              disabled: true,
-            },
-          ],
-        },
-        {
-          type: 'line',
-          container: 'chart2',
-          dataSource: ['medincRace'],
-          context: {
-            labels: ['Dollars (2019)'],
-            keepLabels: true,
-            units: ['dollars'],
-            keepUnits: true,
-          },
-          columnOptions: [
-            [
-              'region_nonwht',
-              'region_white',
-              'region_black',
-              'region_asian',
-              'region_latinx',
-            ],
-            [
-              'nj_suburban_counties_nonwht',
-              'nj_suburban_counties_white',
-              'nj_suburban_counties_black',
-              'nj_suburban_counties_asian',
-              'nj_suburban_counties_latinx',
-            ],
-            [
-              'pa_suburban_counties_nonwht',
-              'pa_suburban_counties_white',
-              'pa_suburban_counties_black',
-              'pa_suburban_counties_asian',
-              'pa_suburban_counties_latinx',
-            ],
-            [
-              'bucks_nonwht',
-              'bucks_white',
-              'bucks_black',
-              'bucks_asian',
-              'bucks_latinx',
-            ],
-            [
-              'burlington_nonwht',
-              'burlington_white',
-              'burlington_black',
-              'burlington_asian',
-              'burlington_latinx',
-            ],
-            [
-              'camden_nonwht',
-              'camden_white',
-              'camden_black',
-              'camden_asian',
-              'camden_latinx',
-            ],
-            [
-              'chester_nonwht',
-              'chester_white',
-              'chester_black',
-              'chester_asian',
-              'chester_latinx',
-            ],
-            [
-              'delaware_nonwht',
-              'delaware_white',
-              'delaware_black',
-              'delaware_asian',
-              'delaware_latinx',
-            ],
-            [
-              'gloucester_nonwht',
-              'gloucester_white',
-              'gloucester_black',
-              'gloucester_asian',
-              'gloucester_latinx',
-            ],
-            [
-              'mercer_nonwht',
-              'mercer_white',
-              'mercer_black',
-              'mercer_asian',
-              'mercer_latinx',
-            ],
-            [
-              'montgomery_nonwht',
-              'montgomery_white',
-              'montgomery_black',
-              'montgomery_asian',
-              'montgomery_latinx',
-            ],
-            [
-              'philadelphia_nonwht',
-              'philadelphia_white',
-              'philadelphia_black',
-              'philadelphia_asian',
-              'philadelphia_latinx',
-            ],
-          ],
-          data: [
-            {
-              key: 'People of Color & Latinx',
-              columns: ['year', 'region_nonwht'],
-            },
-            {
-              key: 'White, non-Latinx',
-              columns: ['year', 'region_white'],
-            },
-            {
-              key: 'Black, non-Latinx',
-              columns: ['year', 'region_black'],
-              disabled: true,
-            },
-            {
-              key: 'Asian, non-Latinx',
-              columns: ['year', 'region_asian'],
-              disabled: true,
-            },
-            {
-              key: 'Latinx',
-              columns: ['year', 'region_latinx'],
-              disabled: true,
-            },
-          ],
-        },
-        {
-          type: 'line',
-          container: 'chart3',
           dataSource: ['RaceEthnSegregation'],
           context: {
             labels: [
@@ -1541,134 +1333,22 @@ const snippetsRef = {
           ],
         },
         {
-          type: 'line',
-          container: 'chart4',
-          dataSource: ['labForceByRace_gap'],
-          context: {
-            labels: ['Percent Participation Gap'],
-            keepLabels: true,
-            units: ['percentC'],
-            keepUnits: true,
-          },
-          columnOptions: [
-            ['region_nonwht', 'region_black', 'region_asian'],
-            [
-              'nj_suburban_counties_nonwht',
-              'nj_suburban_counties_black',
-              'nj_suburban_counties_asian',
-            ],
-            [
-              'pa_suburban_counties_nonwht',
-              'pa_suburban_counties_black',
-              'pa_suburban_counties_asian',
-            ],
-            ['bucks_nonwht', 'bucks_black', 'bucks_asian'],
-            ['burlington_nonwht', 'burlington_black', 'burlington_asian'],
-            ['camden_nonwht', 'camden_black', 'camden_asian'],
-            ['chester_nonwht', 'chester_black', 'chester_asian'],
-            ['delaware_nonwht', 'delaware_black', 'delaware_asian'],
-            ['gloucester_nonwht', 'gloucester_black', 'gloucester_asian'],
-            ['mercer_nonwht', 'mercer_black', 'mercer_asian'],
-            ['montgomery_nonwht', 'montgomery_black', 'montgomery_asian'],
-            ['philadelphia_nonwht', 'philadelphia_black', 'philadelphia_asian'],
-          ],
-          data: [
-            {
-              key: 'People of Color',
-              columns: ['year', 'region_nonwht'],
+            type: 'line',
+            container: 'chart2',
+            dataSource: ['IncomeSegregation'],
+            context: {
+                labels: ['Population Needing to Move to Achieve Regional Distribution'],
+                keepLabels: true,
+                units: ['percentC'],
+                keepUnits: true
             },
-            {
-              key: 'Black, non-Latinx',
-              columns: ['year', 'region_black'],
-              disabled: true,
-            },
-            {
-              key: 'Asian, non-Latinx',
-              columns: ['year', 'region_asian'],
-              disabled: true,
-            },
-          ],
-        },
-        {
-          type: 'line',
-          container: 'chart5',
-          dataSource: ['labForceByRace'],
-          context: {
-            labels: ['Percent Participation'],
-            keepLabels: true,
-            units: ['percentC'],
-            keepUnits: true,
-          },
-          columnOptions: [
-            ['region_nonwht', 'region_white', 'region_black', 'region_asian'],
-            [
-              'nj_suburban_counties_nonwht',
-              'nj_suburban_counties_white',
-              'nj_suburban_counties_black',
-              'nj_suburban_counties_asian',
-            ],
-            [
-              'pa_suburban_counties_nonwht',
-              'pa_suburban_counties_white',
-              'pa_suburban_counties_black',
-              'pa_suburban_counties_asian',
-            ],
-            ['bucks_nonwht', 'bucks_white', 'bucks_black', 'bucks_asian'],
-            [
-              'burlington_nonwht',
-              'burlington_white',
-              'burlington_black',
-              'burlington_asian',
-            ],
-            ['camden_nonwht', 'camden_white', 'camden_black', 'camden_asian'],
-            ['chester_nonwht', 'chester_white', 'chester_black', 'chester_asian'],
-            [
-              'delaware_nonwht',
-              'delaware_white',
-              'delaware_black',
-              'delaware_asian',
-            ],
-            [
-              'gloucester_nonwht',
-              'gloucester_white',
-              'gloucester_black',
-              'gloucester_asian',
-            ],
-            ['mercer_nonwht', 'mercer_white', 'mercer_black', 'mercer_asian'],
-            [
-              'montgomery_nonwht',
-              'montgomery_white',
-              'montgomery_black',
-              'montgomery_asian',
-            ],
-            [
-              'philadelphia_nonwht',
-              'philadelphia_white',
-              'philadelphia_black',
-              'philadelphia_asian',
-            ],
-          ],
-          data: [
-            {
-              key: 'People of Color & Latinx',
-              columns: ['year', 'region_nonwht'],
-            },
-            {
-              key: 'White, non-Latinx',
-              columns: ['year', 'region_white'],
-            },
-            {
-              key: 'Black, non-Latinx',
-              columns: ['year', 'region_black'],
-              disabled: true,
-            },
-            {
-              key: 'Asian, non-Latinx',
-              columns: ['year', 'region_asian'],
-              disabled: true,
-            },
-          ],
-        },
+            data: [
+                {
+                    'key': 'Index Value',
+                    columns: ['year', 'LowIncome']
+                }
+            ]
+        }
       ],
       text: {
         why: `<p>An equitable, inclusive region means everyone has the opportunity to participate and thrive. But the history of racial and ethnic discrimination in both the country and the region has held generations of residents back from accessing the same opportunities—particularly in the areas of income and employment. Neighborhoods with higher concentrations of people of color are more often the locations of poor housing stock, poorly performing schools, worse air quality, higher rates of crime, and reduced transportation safety.</p><p>There are wonderful things that occur in neighborhoods that share common cultures; nevertheless, diversity has been shown to improve quality of life for everyone. A less segregated region, with higher incomes and workforce inclusion for people of color, improves the bottom line for all businesses and the lives of all citizens.</p>`,
@@ -1677,7 +1357,7 @@ const snippetsRef = {
         resource: `<p>For more on how DVRPC incorporates equity and environmental justice, and complies with federal Title VI and other important statutes protecting communities of concern, see our <a target="_blank" rel="noopener" href="/GetInvolved/TitleVI/">Title VI and Environmental Justice</a> page, as well as our <a target="_blank" rel="noopener" href="/webmaps/IPD/">Indicators of Potential Disadvantage</a> tool and <a target="_blank" rel="noopener" href="/ETA/">Equity through Access</a> project and tool.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools for reducing disparities and discrimination in the region:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5c929a05e7179a0e4089fae5">Revitalization Planning and Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42b41e7179a56e2137853">Housing Maintenance and Rehabilitation Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43443e7179a56e2137e76">Inclusionary Zoning</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77b58fb6fc041ab93009c">Minority- and Women-Owned Business Resources</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43404e7179a56e2137e25">Community Shuttle Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43435e7179a56e2137e73">Universal Pre-Kindergarten Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb7840afb6fc041ab93097e">Engaging Underserved Communities</a></li></ul>`,
       },
     },
-    'Income Disparities': {
+    'Income': {
         categories: ['equity','econo','comm'],
         trend: {
             status: 'bad',
@@ -1772,41 +1452,214 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: ['IncomeSegregation'],
+                dataSource: ['medincGapRace'],
                 context: {
-                    labels: ['Population Needing to Move to Achieve Regional Distribution'],
-                    keepLabels: true,
-                    units: ['percentC'],
-                    keepUnits: true
+                  labels: ['Dollars (2019)'],
+                  keepLabels: true,
+                  units: ['dollars'],
+                  keepUnits: true,
                 },
+                columnOptions: [
+                  ['region_nonwht', 'region_black', 'region_asian', 'region_latinx'],
+                  [
+                    'nj_suburban_counties_nonwht',
+                    'nj_suburban_counties_black',
+                    'nj_suburban_counties_asian',
+                    'nj_suburban_counties_latinx',
+                  ],
+                  [
+                    'pa_suburban_counties_nonwht',
+                    'pa_suburban_counties_black',
+                    'pa_suburban_counties_asian',
+                    'pa_suburban_counties_latinx',
+                  ],
+                  ['bucks_nonwht', 'bucks_black', 'bucks_asian', 'bucks_latinx'],
+                  [
+                    'burlington_nonwht',
+                    'burlington_black',
+                    'burlington_asian',
+                    'burlington_latinx',
+                  ],
+                  ['camden_nonwht', 'camden_black', 'camden_asian', 'camden_latinx'],
+                  [
+                    'chester_nonwht',
+                    'chester_black',
+                    'chester_asian',
+                    'chester_latinx',
+                  ],
+                  [
+                    'delaware_nonwht',
+                    'delaware_black',
+                    'delaware_asian',
+                    'delaware_latinx',
+                  ],
+                  [
+                    'gloucester_nonwht',
+                    'gloucester_black',
+                    'gloucester_asian',
+                    'gloucester_latinx',
+                  ],
+                  ['mercer_nonwht', 'mercer_black', 'mercer_asian', 'mercer_latinx'],
+                  [
+                    'montgomery_nonwht',
+                    'montgomery_black',
+                    'montgomery_asian',
+                    'montgomery_latinx',
+                  ],
+                  [
+                    'philadelphia_nonwht',
+                    'philadelphia_black',
+                    'philadelphia_asian',
+                    'philadelphia_latinx',
+                  ],
+                ],
                 data: [
-                    {
-                        'key': 'Index Value',
-                        columns: ['year', 'LowIncome']
-                    }
-                ]
-            }
-        ],
-        text: {
-            why: `<p>All residents deserve the opportunity to participate and thrive in our economy and their communities, but too often the opportunities available fall short of supporting all individuals and families. Without an inclusive economy, economic growth remains out of reach. <a href="https://www.philadelphiafed.org/egmp/why" rel="noopener" target="_blank">Studies</a> show that when the top 20% of earners increase incomes by 1%, gross domestic product (GDP) falls, but if the bottom 20% receives a 1% gain in income, GDP increases. When neighborhoods diversify in income levels, significant gains are seen in essential resources like public education, parks and open space, and infrastructure; and children see new opportunities that they might not have if they were growing up in more income-segregated spaces.</p>`,
-            what: `<p>The American Community Survey (ACS) reports household income by the average of each income quintile. A <em>quintile</em> is any fifth of households sorted from least to greatest income. The first quintile is bottom 20% of households by income, the second quintile contains households between 20 and 40 percentiles of income (the next 20%), and so on. The fifth quintile is the top 20% of households by income. Within this group, and also reported in the ACS, is the top 5% of households. The first chart reports the gap (or difference) between the percent change in mean income for the first (lowest income) and fifth (highest income) quintiles since the 2006 base year. The second chart displays all quintiles, along with the top 5% of households (the top end of the fifth quintile). Toggle between the average income of each set of households, as well as the change and the percentage change in those incomes since 2006. Particularly for counties with smaller populations, or for those quintiles within a county where the ACS got a poor sample in a given year, trendlines will be subject to more variability due to data reliability issues. Users should use caution when interpreting results.</p><p>Income was adjusted to 2017 dollars according to <a href="https://www.census.gov/programs-surveys/acs/guidance/comparing-acs-data/2017.html" rel="noopener" target="_blank">U.S. Census Bureau guidance</a> on comparing income data from ACS one-year values with previous ACS releases. Users should be aware that the ACS asks respondents for income in the past 12 months. This means that at least some of respondents' income will likely be received in the year prior to the year the respondent was surveyed, making inflation adjustments slightly more muddled than if the survey had asked for income from the prior calendar year the way the decennial census used to.</p><p>The Income Segregation Index in the third chart is an indicator of how segregated the region's census tracts are, relative to the regional distribution of low-income households versus the rest. <em>Low-income</em> is defined as households below 200% of the federal poverty rate. In a given year, it shows how dissimilar the income makeups of census tracts across the region are to each other and demonstrates what percentage of the population would need to relocate in order to match the regional income distribution. The higher the index value the more geographic concentrations of wealth or poverty exist in the region. The index uses decennial census tract data for 1990 and 2000. The ACS five-year period estimates for subsequent tract analysis, reporting the final year of the period as the data year (e.g., 2010 is a period estimate for 2006–2010, based on households surveyed in those years).</p><p><em>Note: In November, 2019, the Census Bureau issued <a href="https://www.census.gov/programs-surveys/acs/technical-documentation/errata/121.html" rel="noopener" target="_blank">a statement acknowledging errors in 2017 ACS data for Philadelphia County</a>. The error may impact the Income Disparities indicator for Philadelphia and regional aggregations. DVRPC is aware of the issue and intends to update Tracking Progress with 2018 ACS data soon.</em></p>`,
-            how: `<p>In just 11 years, the growth rate between the lowest and highest quintile income households has diverged by 25%, regionally. First-quintile households' income averaged $16,576 a year in 2006 and dropped by $1,991, or 13.7%, to $14,585 by 2017. Meanwhile, the fifth-quintile average income went from $221,835 a year to $250,205 a year, a gain of over $28,000—almost twice as much as the average first-quintile household made in 2017—or 11.3% of what they yielded in 2006. In this same period, the average second-quintile household also lost income ($1,776, or 4.3%, since 2006), and the average third-quintile household's annual intake was stagnant.</p><p>All groups were impacted by the Great Recession, but the highest earners had a shorter period of losses and quickly recovered. By 2010, all quintiles made the same or less than they had in 2006, but it only took the highest quintile until 2012 to recoup those losses. It took the fourth quintile until 2015. The third quintile barely surpassed 2006 income by 2017, and the second and first don't show signs of recovery, at least in the near term. The first quintile seemed to be recovering from 2012 to 2015 but then had two steep drops in 2016 and 2017, resulting in their lowest income in the entire period.</p><p>In 2017, a family was just as likely to live near a family of a similar income level as they were in 1990. Income segregation in the region has been stagnant for the last three decades. Comparing the concentrations of low income households to the rest of the households in each tract relative to the region's overall income split, the income segregation index shows that, theoretically, 42% of the region's population would have to relocate in order to see an even distribution of low-income households throughout the region.</p>`,
-            resource: `<p>For more on how DVRPC incorporates equity and environmental justice, and complies with federal Title VI and other important statutes protecting communities of concern, see our <a target="_blank" rel="noopener" href="/GetInvolved/TitleVI/">Title VI and Environmental Justice</a> page, as well as our <a target="_blank" rel="noopener" href="/webmaps/IPD/">Indicators of Potential Disadvantage (IPD)</a> tool and <a target="_blank" rel="noopener" href="/ETA/">Equity through Access</a> project and tool.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools for reducing income disparities by increasing economic opportunities or making the most of limited income so that it is less of a setback for individuals and families:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42b77e7179a56e2137867">Building Missing Middle Housing</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42b41e7179a56e2137853">Housing Maintenance and Rehabilitation Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77b58fb6fc041ab93009c">Minority- And Women-Owned Business Resources</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf4341de7179a56e2137e39">Accessory Dwelling Units</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43435e7179a56e2137e73">Universal Pre-Kindergarten Programs</a></li></ul>`
-        }
-    },
-    'Sex Disparities': {
-        categories: ['equity','econo','comm'],
-        trend: {
-            status: 'neutral',
-            text: {
-                stat: '30% smaller',
-                text: `income gap between male and female workers since 2000`
-            }
-        },
-        d3: [
-            {
+                  {
+                    key: 'People of Color & Latinx',
+                    columns: ['year', 'region_nonwht'],
+                  },
+                  {
+                    key: 'Black, non-Latinx',
+                    columns: ['year', 'region_black'],
+                    disabled: true,
+                  },
+                  {
+                    key: 'Asian, non-Latinx',
+                    columns: ['year', 'region_asian'],
+                    disabled: true,
+                  },
+                  {
+                    key: 'Latinx',
+                    columns: ['year', 'region_latinx'],
+                    disabled: true,
+                  },
+                ],
+              },
+              {
                 type: 'line',
-                container: 'chart',
+                container: 'chart4',
+                dataSource: ['medincRace'],
+                context: {
+                  labels: ['Dollars (2019)'],
+                  keepLabels: true,
+                  units: ['dollars'],
+                  keepUnits: true,
+                },
+                columnOptions: [
+                  [
+                    'region_nonwht',
+                    'region_white',
+                    'region_black',
+                    'region_asian',
+                    'region_latinx',
+                  ],
+                  [
+                    'nj_suburban_counties_nonwht',
+                    'nj_suburban_counties_white',
+                    'nj_suburban_counties_black',
+                    'nj_suburban_counties_asian',
+                    'nj_suburban_counties_latinx',
+                  ],
+                  [
+                    'pa_suburban_counties_nonwht',
+                    'pa_suburban_counties_white',
+                    'pa_suburban_counties_black',
+                    'pa_suburban_counties_asian',
+                    'pa_suburban_counties_latinx',
+                  ],
+                  [
+                    'bucks_nonwht',
+                    'bucks_white',
+                    'bucks_black',
+                    'bucks_asian',
+                    'bucks_latinx',
+                  ],
+                  [
+                    'burlington_nonwht',
+                    'burlington_white',
+                    'burlington_black',
+                    'burlington_asian',
+                    'burlington_latinx',
+                  ],
+                  [
+                    'camden_nonwht',
+                    'camden_white',
+                    'camden_black',
+                    'camden_asian',
+                    'camden_latinx',
+                  ],
+                  [
+                    'chester_nonwht',
+                    'chester_white',
+                    'chester_black',
+                    'chester_asian',
+                    'chester_latinx',
+                  ],
+                  [
+                    'delaware_nonwht',
+                    'delaware_white',
+                    'delaware_black',
+                    'delaware_asian',
+                    'delaware_latinx',
+                  ],
+                  [
+                    'gloucester_nonwht',
+                    'gloucester_white',
+                    'gloucester_black',
+                    'gloucester_asian',
+                    'gloucester_latinx',
+                  ],
+                  [
+                    'mercer_nonwht',
+                    'mercer_white',
+                    'mercer_black',
+                    'mercer_asian',
+                    'mercer_latinx',
+                  ],
+                  [
+                    'montgomery_nonwht',
+                    'montgomery_white',
+                    'montgomery_black',
+                    'montgomery_asian',
+                    'montgomery_latinx',
+                  ],
+                  [
+                    'philadelphia_nonwht',
+                    'philadelphia_white',
+                    'philadelphia_black',
+                    'philadelphia_asian',
+                    'philadelphia_latinx',
+                  ],
+                ],
+                data: [
+                  {
+                    key: 'People of Color & Latinx',
+                    columns: ['year', 'region_nonwht'],
+                  },
+                  {
+                    key: 'White, non-Latinx',
+                    columns: ['year', 'region_white'],
+                  },
+                  {
+                    key: 'Black, non-Latinx',
+                    columns: ['year', 'region_black'],
+                    disabled: true,
+                  },
+                  {
+                    key: 'Asian, non-Latinx',
+                    columns: ['year', 'region_asian'],
+                    disabled: true,
+                  },
+                  {
+                    key: 'Latinx',
+                    columns: ['year', 'region_latinx'],
+                    disabled: true,
+                  },
+                ],
+              },
+              {
+                type: 'line',
+                container: 'chart5',
                 dataSource: ['sexInc_gap', 'sexInc_percofmale'],
                 context: {
                     labels: ['Median Income Gap (2017 Dollars)', 'Median Income Gap Percentage'],
@@ -1837,7 +1690,7 @@ const snippetsRef = {
             },
             {
                 type: 'line',
-                container: 'chart2',
+                container: 'chart6',
                 dataSource: ['sexInc_median'],
                 context: {
                     labels: ['Median Income (2017 Dollars)'],
@@ -1870,9 +1723,27 @@ const snippetsRef = {
                     }
                 ]
             },
+        ],
+        text: {
+            why: `<p>All residents deserve the opportunity to participate and thrive in our economy and their communities, but too often the opportunities available fall short of supporting all individuals and families. Without an inclusive economy, economic growth remains out of reach. <a href="https://www.philadelphiafed.org/egmp/why" rel="noopener" target="_blank">Studies</a> show that when the top 20% of earners increase incomes by 1%, gross domestic product (GDP) falls, but if the bottom 20% receives a 1% gain in income, GDP increases. When neighborhoods diversify in income levels, significant gains are seen in essential resources like public education, parks and open space, and infrastructure; and children see new opportunities that they might not have if they were growing up in more income-segregated spaces.</p>`,
+            what: `<p>The American Community Survey (ACS) reports household income by the average of each income quintile. A <em>quintile</em> is any fifth of households sorted from least to greatest income. The first quintile is bottom 20% of households by income, the second quintile contains households between 20 and 40 percentiles of income (the next 20%), and so on. The fifth quintile is the top 20% of households by income. Within this group, and also reported in the ACS, is the top 5% of households. The first chart reports the gap (or difference) between the percent change in mean income for the first (lowest income) and fifth (highest income) quintiles since the 2006 base year. The second chart displays all quintiles, along with the top 5% of households (the top end of the fifth quintile). Toggle between the average income of each set of households, as well as the change and the percentage change in those incomes since 2006. Particularly for counties with smaller populations, or for those quintiles within a county where the ACS got a poor sample in a given year, trendlines will be subject to more variability due to data reliability issues. Users should use caution when interpreting results.</p><p>Income was adjusted to 2017 dollars according to <a href="https://www.census.gov/programs-surveys/acs/guidance/comparing-acs-data/2017.html" rel="noopener" target="_blank">U.S. Census Bureau guidance</a> on comparing income data from ACS one-year values with previous ACS releases. Users should be aware that the ACS asks respondents for income in the past 12 months. This means that at least some of respondents' income will likely be received in the year prior to the year the respondent was surveyed, making inflation adjustments slightly more muddled than if the survey had asked for income from the prior calendar year the way the decennial census used to.</p><p>The Income Segregation Index in the third chart is an indicator of how segregated the region's census tracts are, relative to the regional distribution of low-income households versus the rest. <em>Low-income</em> is defined as households below 200% of the federal poverty rate. In a given year, it shows how dissimilar the income makeups of census tracts across the region are to each other and demonstrates what percentage of the population would need to relocate in order to match the regional income distribution. The higher the index value the more geographic concentrations of wealth or poverty exist in the region. The index uses decennial census tract data for 1990 and 2000. The ACS five-year period estimates for subsequent tract analysis, reporting the final year of the period as the data year (e.g., 2010 is a period estimate for 2006–2010, based on households surveyed in those years).</p><p><em>Note: In November, 2019, the Census Bureau issued <a href="https://www.census.gov/programs-surveys/acs/technical-documentation/errata/121.html" rel="noopener" target="_blank">a statement acknowledging errors in 2017 ACS data for Philadelphia County</a>. The error may impact the Income Disparities indicator for Philadelphia and regional aggregations. DVRPC is aware of the issue and intends to update Tracking Progress with 2018 ACS data soon.</em></p>`,
+            how: `<p>In just 11 years, the growth rate between the lowest and highest quintile income households has diverged by 25%, regionally. First-quintile households' income averaged $16,576 a year in 2006 and dropped by $1,991, or 13.7%, to $14,585 by 2017. Meanwhile, the fifth-quintile average income went from $221,835 a year to $250,205 a year, a gain of over $28,000—almost twice as much as the average first-quintile household made in 2017—or 11.3% of what they yielded in 2006. In this same period, the average second-quintile household also lost income ($1,776, or 4.3%, since 2006), and the average third-quintile household's annual intake was stagnant.</p><p>All groups were impacted by the Great Recession, but the highest earners had a shorter period of losses and quickly recovered. By 2010, all quintiles made the same or less than they had in 2006, but it only took the highest quintile until 2012 to recoup those losses. It took the fourth quintile until 2015. The third quintile barely surpassed 2006 income by 2017, and the second and first don't show signs of recovery, at least in the near term. The first quintile seemed to be recovering from 2012 to 2015 but then had two steep drops in 2016 and 2017, resulting in their lowest income in the entire period.</p><p>In 2017, a family was just as likely to live near a family of a similar income level as they were in 1990. Income segregation in the region has been stagnant for the last three decades. Comparing the concentrations of low income households to the rest of the households in each tract relative to the region's overall income split, the income segregation index shows that, theoretically, 42% of the region's population would have to relocate in order to see an even distribution of low-income households throughout the region.</p>`,
+            resource: `<p>For more on how DVRPC incorporates equity and environmental justice, and complies with federal Title VI and other important statutes protecting communities of concern, see our <a target="_blank" rel="noopener" href="/GetInvolved/TitleVI/">Title VI and Environmental Justice</a> page, as well as our <a target="_blank" rel="noopener" href="/webmaps/IPD/">Indicators of Potential Disadvantage (IPD)</a> tool and <a target="_blank" rel="noopener" href="/ETA/">Equity through Access</a> project and tool.</p><p>DVRPC's <a target="_blank" rel="noopener" href="/Connections2045/MIT/"><em>Municipal Implementation Toolbox</em></a> suggests the following tools for reducing income disparities by increasing economic opportunities or making the most of limited income so that it is less of a setback for individuals and families:</p><ul><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42b77e7179a56e2137867">Building Missing Middle Housing</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf42b41e7179a56e2137853">Housing Maintenance and Rehabilitation Programs</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a06fb6fc041ab92ffe3">Business Incubators</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77b58fb6fc041ab93009c">Minority- And Women-Owned Business Resources</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5cb77a80fb6fc041ab930040">Human Capital Investments</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf4341de7179a56e2137e39">Accessory Dwelling Units</a></li><li><a target="_blank" rel="noopener" href="/Connections2045/MIT/Toolpage?tool=5bf43435e7179a56e2137e73">Universal Pre-Kindergarten Programs</a></li></ul>`
+        }
+    },
+    'Labor Force': {
+        categories: ['equity','econo','comm'],
+        trend: {
+            status: 'neutral',
+            text: {
+                stat: '30% smaller',
+                text: `income gap between male and female workers since 2000`
+            }
+        },
+        d3: [
             {
                 type: 'line',
-                container: 'chart3',
+                container: 'chart',
                 dataSource: ['labForceBySex_gap'],
                 context: {
                     labels: ['Percent Participation Gap'],
@@ -1903,7 +1774,7 @@ const snippetsRef = {
             },
             {
                 type: 'line',
-                container: 'chart4',
+                container: 'chart2',
                 dataSource: ['labForceBySex_percent'],
                 context: {
                     labels: ['Percent Participation'],
@@ -1935,7 +1806,136 @@ const snippetsRef = {
                         columns: ['year', 'Region_Female']
                     }
                 ]
-            }
+            },
+            {
+                type: 'line',
+                container: 'chart3',
+                dataSource: ['labForceByRace_gap'],
+                context: {
+                  labels: ['Percent Participation Gap'],
+                  keepLabels: true,
+                  units: ['percentC'],
+                  keepUnits: true,
+                },
+                columnOptions: [
+                  ['region_nonwht', 'region_black', 'region_asian'],
+                  [
+                    'nj_suburban_counties_nonwht',
+                    'nj_suburban_counties_black',
+                    'nj_suburban_counties_asian',
+                  ],
+                  [
+                    'pa_suburban_counties_nonwht',
+                    'pa_suburban_counties_black',
+                    'pa_suburban_counties_asian',
+                  ],
+                  ['bucks_nonwht', 'bucks_black', 'bucks_asian'],
+                  ['burlington_nonwht', 'burlington_black', 'burlington_asian'],
+                  ['camden_nonwht', 'camden_black', 'camden_asian'],
+                  ['chester_nonwht', 'chester_black', 'chester_asian'],
+                  ['delaware_nonwht', 'delaware_black', 'delaware_asian'],
+                  ['gloucester_nonwht', 'gloucester_black', 'gloucester_asian'],
+                  ['mercer_nonwht', 'mercer_black', 'mercer_asian'],
+                  ['montgomery_nonwht', 'montgomery_black', 'montgomery_asian'],
+                  ['philadelphia_nonwht', 'philadelphia_black', 'philadelphia_asian'],
+                ],
+                data: [
+                  {
+                    key: 'People of Color',
+                    columns: ['year', 'region_nonwht'],
+                  },
+                  {
+                    key: 'Black, non-Latinx',
+                    columns: ['year', 'region_black'],
+                    disabled: true,
+                  },
+                  {
+                    key: 'Asian, non-Latinx',
+                    columns: ['year', 'region_asian'],
+                    disabled: true,
+                  },
+                ],
+              },
+              {
+                type: 'line',
+                container: 'chart4',
+                dataSource: ['labForceByRace'],
+                context: {
+                  labels: ['Percent Participation'],
+                  keepLabels: true,
+                  units: ['percentC'],
+                  keepUnits: true,
+                },
+                columnOptions: [
+                  ['region_nonwht', 'region_white', 'region_black', 'region_asian'],
+                  [
+                    'nj_suburban_counties_nonwht',
+                    'nj_suburban_counties_white',
+                    'nj_suburban_counties_black',
+                    'nj_suburban_counties_asian',
+                  ],
+                  [
+                    'pa_suburban_counties_nonwht',
+                    'pa_suburban_counties_white',
+                    'pa_suburban_counties_black',
+                    'pa_suburban_counties_asian',
+                  ],
+                  ['bucks_nonwht', 'bucks_white', 'bucks_black', 'bucks_asian'],
+                  [
+                    'burlington_nonwht',
+                    'burlington_white',
+                    'burlington_black',
+                    'burlington_asian',
+                  ],
+                  ['camden_nonwht', 'camden_white', 'camden_black', 'camden_asian'],
+                  ['chester_nonwht', 'chester_white', 'chester_black', 'chester_asian'],
+                  [
+                    'delaware_nonwht',
+                    'delaware_white',
+                    'delaware_black',
+                    'delaware_asian',
+                  ],
+                  [
+                    'gloucester_nonwht',
+                    'gloucester_white',
+                    'gloucester_black',
+                    'gloucester_asian',
+                  ],
+                  ['mercer_nonwht', 'mercer_white', 'mercer_black', 'mercer_asian'],
+                  [
+                    'montgomery_nonwht',
+                    'montgomery_white',
+                    'montgomery_black',
+                    'montgomery_asian',
+                  ],
+                  [
+                    'philadelphia_nonwht',
+                    'philadelphia_white',
+                    'philadelphia_black',
+                    'philadelphia_asian',
+                  ],
+                ],
+                data: [
+                  {
+                    key: 'People of Color & Latinx',
+                    columns: ['year', 'region_nonwht'],
+                  },
+                  {
+                    key: 'White, non-Latinx',
+                    columns: ['year', 'region_white'],
+                  },
+                  {
+                    key: 'Black, non-Latinx',
+                    columns: ['year', 'region_black'],
+                    disabled: true,
+                  },
+                  {
+                    key: 'Asian, non-Latinx',
+                    columns: ['year', 'region_asian'],
+                    disabled: true,
+                  },
+                ],
+              },
         ],
         text: {
             why: `<p>An equitable and inclusive region means all residents have opportunities to participate and thrive. Key to this vision is that female members of our community have equal opportunities for income and employment. The financial health of female persons is critical to the economic health of households, communities, and the region.</p>`,
@@ -2857,7 +2857,7 @@ const snippetsRef = {
             resource: `<p>DVRPC does extensive work with partner agencies to recommend changes for promoting the region's transit system and transit use. Find relevant planning tools, publications, programs, and resources on our <a target="_blank" rel="noopener" href="/Transit/">Transit Planning</a> page.</p><p>See what transit investments are proposed for the region in the Transportation Improvement Program projects for <a target="_blank" rel="noopener" href="/TIP/NJ/">New Jersey</a> and <a target="_blank" rel="noopener" href="/TIP/PA/">Pennsylvania </a>counties and the <a target="_blank" rel="noopener" href="/webmaps/MRP2045/"><em>Connections 2045</em> Plan: Major Regional Projects</a> page.</p>`
         }
     },
-    'Innovation': {
+    'Business Formations': {
         categories: ['econo'],
         trend: {
             status: 'good',
@@ -2870,17 +2870,79 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['patents'],
                 context: {
-                    labels: ['Approvals'],
-                    units: ['thousands']
+                    labels: ['Total Business Formations', 'Total Business Formations', 'Total Business Formations'],
+                    keepLabels: false,
+                    units: ['thousands', 'thousands', 'percentC'],
+                    keepUnits: false
                 },
+                dataSource: ['business_formations'],
+                columnOptions: [
+                    ['dvrpc_total', 'njco_total', 'pasub_total', 'bucks_total', 'burlington_total', 'camden_total', 'chester_total', 'delaware_total', 'gloucester_total', 'mercer_total', 'montgomery_total', 'philadelphia_total'],
+                    ['dvrpc_cumu_chng', 'njco_cumu_chng', 'pasub_cumu_chng', 'bucks_cumu_chng', 'burlington_cumu_chng', 'camden_cumu_chng', 'chester_cumu_chng', 'delaware_cumu_chng', 'gloucester_cumu_chng', 'mercer_cumu_chng', 'montgomery_cumu_chng', 'philadelphia_cumu_chng'],
+                    ['dvrpc_cumu_perc_chng', 'njco_cumu_perc_chng', 'pasub_cumu_perc_chng', 'bucks_cumu_perc_chng', 'burlington_cumu_perc_chng', 'camden_cumu_perc_chng', 'chester_cumu_perc_chng', 'delaware_cumu_perc_chng', 'gloucester_cumu_perc_chng', 'mercer_cumu_perc_chng', 'montgomery_cumu_perc_chng', 'philadelphia_cumu_perc_chng']
+                ],
                 data: [
                     {
-                        'key': 'Approvals',
-                        columns: ['Year', 'DVRPC']
-                    }
-                ]
+                        key: 'DVRPC Region*',
+                        columns: ['year', 'dvrpc_total'],
+                    },
+                    {
+                      key: 'NJ Counties*',
+                      disabled: true, 
+                      columns: ['year', 'njco_total'],
+                    },
+                    {
+                      key: 'PA Suburban Counties*',
+                      disabled: true,
+                      columns: ['year', 'pasub_total'],
+                    },
+                    {
+                        key: 'Bucks**',
+                        disabled: true,
+                        columns: ['year', 'bucks_total'],
+                    },
+                    {
+                        key: 'Burlington**',
+                        disabled: true,
+                        columns: ['year', 'burlington_total'],
+                    },
+                    {
+                      key: 'Camden**',
+                      disabled: true,
+                      columns: ['year', 'camden_total'],
+                    },
+                    {
+                      key: 'Chester**',
+                      disabled: true,
+                      columns: ['year', 'chester_total'],
+                    },
+                    {
+                      key: 'Delaware**',
+                      disabled: true,
+                      columns: ['year', 'delaware_total'],
+                    },
+                    {
+                      key: 'Gloucester**',
+                      disabled: true,
+                      columns: ['year', 'gloucester_total'],
+                    },
+                    {
+                      key: 'Mercer**',
+                      disabled: true,
+                      columns: ['year', 'mercer_total'],
+                    },
+                    {
+                      key: 'Montgomery**',
+                      disabled: true,
+                      columns: ['year', 'montgomery_total'],
+                    },
+                    {
+                      key: 'Philadelphia**',
+                      disabled: true,
+                      columns: ['year', 'philadelphia_total'],
+                    },
+                  ],
             }
         ],
         text: {

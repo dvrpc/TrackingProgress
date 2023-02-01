@@ -669,8 +669,8 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's American Community Survey, DVRPC</em></small>`,
-    'Income Disparities':`
-        <div class="toggle-wrapper">
+    'Income':`
+            <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Income Growth Gap between Highest Quintile &amp; Lowest Quintile Households</h2>
             <form>
                 <fieldset>
@@ -704,7 +704,7 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: U.S. Census Bureau's American Community Survey, DVRPC</em></small>
 
         <hr class="indicator-content-hr" />
-        
+
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Average Income by Household Income Grouping</h2>
             <form class="double-toggle-form">
@@ -751,17 +751,175 @@ const chartStrings = {
 
         <hr class="indicator-content-hr" />
 
-        <h2 class="indicator-subheader">Income Segregation Index</h2>
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Median Income Gap Relative to Households with White, non-Latinx Householder</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-2" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
         <div class="data-viz chart3">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>`,
-    'Innovation':`
-        <h2 class="indicator-subheader">Utility Patent Approvals of First Named Authors Residing in the Greater Philadelphia Region</h2>
-        <div class="data-viz chart">
+        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Median Household Income by Householder’s Major Race or Ethnic Group</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-3" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart4">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Sources: US Patent & Trademark Office's Patent Technology Monitoring Team, DVRPC</em></small>`,
+        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Median Income Gap between Sexes</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-4" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-4-b" class="toggle-data-selector">
+                            <option value="0">Gap</option>
+                            <option value="1">Percent Gap</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: U.S. Census Bureau’s Decennial Census & American Community Survey, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Median Income by Sex</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-5" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart6">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: U.S. Census Bureau’s Decennial Census & American Community Survey, DVRPC</em></small>`,
+    'Business Formations':`
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Business Formations</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Value Type:
+                        <select id="viz-0" class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Change Since Base Year</option>
+                            <option value="2">Percent Change Since Base Year</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart">
+            <svg>
+            </svg>
+        </div>
+        <small class="chart-src"><em>Geography: * Regional, ** County<br>Source: U.S. Census Bureau's Business Formation Statistics</em></small>
+    `,
     'Job Growth':`
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Job Growth Rate by Type</h2>
@@ -1266,152 +1424,20 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
-    'Racial and Ethnic Disparities':`
-        <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income Gap Relative to Households with White, non-Latinx Householder</h2>
-            <form>
-                <fieldset>
-                    <label>
-                        Select Geography
-                        <select id="viz-0" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="3">Bucks</option>
-                                <option value="4">Burlington</option>
-                                <option value="5">Camden</option>
-                                <option value="6">Chester</option>
-                                <option value="7">Delaware</option>
-                                <option value="8">Gloucester</option>
-                                <option value="9">Mercer</option>
-                                <option value="10">Montgomery</option>
-                                <option value="11">Philadelphia</option>
-                            </optgroup>
-                        </select>
-                    </label>
-                </fieldset>
-            </form>
-        </div>
+    'Segregation':`
+        <h2 class="indicator-subheader">Racial/Ethnic Segregation Index</h2>
         <div class="data-viz chart">
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
-        
+
         <hr class="indicator-content-hr" />
 
-        <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Household Income by Householder’s Major Race or Ethnic Group</h2>
-            <form>
-                <fieldset>
-                    <label>
-                        Select Geography
-                        <select id="viz-1" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="3">Bucks</option>
-                                <option value="4">Burlington</option>
-                                <option value="5">Camden</option>
-                                <option value="6">Chester</option>
-                                <option value="7">Delaware</option>
-                                <option value="8">Gloucester</option>
-                                <option value="9">Mercer</option>
-                                <option value="10">Montgomery</option>
-                                <option value="11">Philadelphia</option>
-                            </optgroup>
-                        </select>
-                    </label>
-                </fieldset>
-            </form>
-        </div>
+        <h2 class="indicator-subheader">Income Segregation Index</h2>
         <div class="data-viz chart2">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
-
-        <hr class="indicator-content-hr" />
-
-        <h2 class="indicator-subheader">Racial/Ethnic Segregation Index</h2>
-        <div class="data-viz chart3">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
-
-        <hr class="indicator-content-hr" />
-
-        <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap Relative to White Participation Rate</h2>
-            <form>
-                <fieldset>
-                    <label>
-                        Select Geography
-                        <select id="viz-3" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="3">Bucks</option>
-                                <option value="4">Burlington</option>
-                                <option value="5">Camden</option>
-                                <option value="6">Chester</option>
-                                <option value="7">Delaware</option>
-                                <option value="8">Gloucester</option>
-                                <option value="9">Mercer</option>
-                                <option value="10">Montgomery</option>
-                                <option value="11">Philadelphia</option>
-                            </optgroup>
-                        </select>
-                    </label>
-                </fieldset>
-            </form>
-        </div>
-        <div class="data-viz chart4">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
-
-        <hr class="indicator-content-hr" />
-
-        <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Race</h2>
-            <form>
-                <fieldset>
-                    <label>
-                        Select Geography:
-                        <select id="viz-4" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="3">Bucks</option>
-                                <option value="4">Burlington</option>
-                                <option value="5">Camden</option>
-                                <option value="6">Chester</option>
-                                <option value="7">Delaware</option>
-                                <option value="8">Gloucester</option>
-                                <option value="9">Mercer</option>
-                                <option value="10">Montgomery</option>
-                                <option value="11">Philadelphia</option>
-                            </optgroup>
-                        </select>
-                    </label>
-                </fieldset>
-            </form>
-        </div>
-        <div class="data-viz chart5">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
+        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>`,
     'Roadway Safety':`
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
@@ -1479,10 +1505,10 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's Population Estimates Program</em></small>`,
-    'Sex Disparities':`
+    'Labor Force':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income Gap between Sexes</h2>
-            <form class="double-toggle-form">
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes</h2>
+            <form>
                 <fieldset>
                     <label>
                         Select Geography
@@ -1506,27 +1532,17 @@ const chartStrings = {
                         </select>
                     </label>
                 </fieldset>
-                <span class="toggle-vr">|</span>
-                <fieldset>
-                    <label>
-                        Select Value Type
-                        <select id="viz-0-b" class="toggle-data-selector">
-                            <option value="0">Gap</option>
-                            <option value="1">Percent Gap</option>
-                        </select>
-                    </label>
-                </fieldset>
             </form>
         </div>
         <div class="data-viz chart">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Sources: U.S. Census Bureau’s Decennial Census & American Community Survey, DVRPC</em></small>
+        <small class="chart-src"><em>Source: U.S. Census Bureau’s American Community Survey</em></small>
 
         <hr class="indicator-content-hr" />
         
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income by Sex</h2>
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Sex</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1556,12 +1572,12 @@ const chartStrings = {
         <div class="data-viz chart2">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Sources: U.S. Census Bureau’s Decennial Census & American Community Survey, DVRPC</em></small>
-
-        <hr class="indicator-content-hr" />
+        <small class="chart-src"><em>Source: U.S. Census Bureau’s American Community Survey</em></small>
         
+        <hr class="indicator-content-hr" />
+
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes</h2>
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap Relative to White Participation Rate</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1591,42 +1607,42 @@ const chartStrings = {
         <div class="data-viz chart3">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: U.S. Census Bureau’s American Community Survey</em></small>
-
-        <hr class="indicator-content-hr" />
+        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
         
+        <hr class="indicator-content-hr" />
+
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Sex</h2>
-            <form>
-                <fieldset>
-                    <label>
-                        Select Geography
-                        <select id="viz-3" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="3">Bucks</option>
-                                <option value="4">Burlington</option>
-                                <option value="5">Camden</option>
-                                <option value="6">Chester</option>
-                                <option value="7">Delaware</option>
-                                <option value="8">Gloucester</option>
-                                <option value="9">Mercer</option>
-                                <option value="10">Montgomery</option>
-                                <option value="11">Philadelphia</option>
-                            </optgroup>
-                        </select>
-                    </label>
-                </fieldset>
-            </form>
-        </div>
-        <div class="data-viz chart4">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Source: U.S. Census Bureau’s American Community Survey</em></small>`,
+                <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Race</h2>
+                <form>
+                    <fieldset>
+                        <label>
+                            Select Geography:
+                            <select id="viz-3" class="toggle-data-selector">
+                                <optgroup label="Regional">
+                                    <option value="0">DVRPC Region</option>
+                                    <option value="1">NJ Counties</option>
+                                    <option value="2">PA Suburban Counties</option>
+                                </optgroup>
+                                <optgroup label="Counties">
+                                    <option value="3">Bucks</option>
+                                    <option value="4">Burlington</option>
+                                    <option value="5">Camden</option>
+                                    <option value="6">Chester</option>
+                                    <option value="7">Delaware</option>
+                                    <option value="8">Gloucester</option>
+                                    <option value="9">Mercer</option>
+                                    <option value="10">Montgomery</option>
+                                    <option value="11">Philadelphia</option>
+                                </optgroup>
+                            </select>
+                        </label>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="data-viz chart4">
+                <svg></svg>
+            </div>
+            <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
     'Transit Conditions':`
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Average Vehicle Age by Vehicle Type</h2>
