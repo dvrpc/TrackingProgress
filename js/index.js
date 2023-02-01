@@ -274,7 +274,7 @@ const makeNewDataEl = () => {
 
 const addNewDataUIEls = async () => {
     try {
-        const stream = await fetch('http://linux2.dvrpc.org/tracking-progress/v1/indicators')
+        const stream = await fetch('http://linux3.dvrpc.org/api/tp-updates/v1/indicators')
         
         if(stream.ok) {
             const els = await stream.json()
