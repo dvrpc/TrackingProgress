@@ -154,25 +154,18 @@ const getIndicatorSnippet = async (ref, indicatorParams) => {
 }
 
 const makeRelatedSubheader = cat => {
-    const accentColor = catLookup[cat].dark
+    // @TODO: is this still needed
     const name = catLookup[cat].name
     const frag = document.createDocumentFragment()
     const wrapper = document.createElement('div')
-    const img = document.createElement('img')
     const subheader = document.createElement('h3')
 
     wrapper.id = 'related-indicators-subheader-wrapper'
-    relatedIndicators.style.backgroundColor = accentColor
-    
-    img.src =  `./img/sidenav/${cat}.png`
-    img.alt = `${cat} icons`
-    img.id="related-indicators-subheader-img"
     
     subheader.id = 'related-indicators-subheader'
-    subheader.innerHTML = `${name} <br /> Indicators`
+    subheader.innerHTML = `Related Indicators`
 
     wrapper.appendChild(subheader)
-    wrapper.appendChild(img)
     frag.appendChild(wrapper)
 
     return frag
@@ -194,6 +187,7 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 
     // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
     indicators.forEach(indicator => {
+        // @TODO: update the primary dataset with the new matrix of information
         const indicatorPrimaryCategory = indicator.dataset.primary
         
         if(indicatorPrimaryCategory === primaryCategory){
