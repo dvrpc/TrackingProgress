@@ -9,11 +9,8 @@ const makeIndicatorHTML = async (params) => {
     const title = params.title;
     globalText = await fetchMarkdown(title)
     const categories = params.categories;
-    const catPrimary = params.categories[0] || "unset";
-    const mainText = params.text;
     const defaultText = globalText.why;
     const trend = params.trend;
-    const tabColor = catLookup[catPrimary].dark;
 
     // create parent/non-content elements
     const snippet = document.createElement('article')
@@ -29,7 +26,7 @@ const makeIndicatorHTML = async (params) => {
     // create content 
     const headerFrag = makeHeader(title, categories)
     const {descriptionFrag, description} = {...makeDescription(defaultText, trend)}
-    const tabs = makeTabs(tabColor, mainText, description)
+    const tabs = makeTabs(description)
     const toTopBtn = makeToTopBtn()
 
     // append
@@ -155,7 +152,7 @@ const makeIconImgs = icons => {
 
 // START text
 // returns the text tabs as a document fragment
-const makeTabs = (tabColor, text, description) => {
+const makeTabs = description => {
     // make elements
     const tabsFrag = document.createDocumentFragment()
     const tabsWrapper = document.createElement('header')
@@ -181,13 +178,8 @@ const makeTabs = (tabColor, text, description) => {
     howTab.textContent = 'How are we doing?'
     resourceTab.textContent = 'Resources'
 
-    // add style
-    tabsWrapper.style.borderBottom = `1px solid ${tabColor}`
-    whyTab.style.background = tabColor
-    whyTab.style.color = '#f7f7f7'
-
     // add interactivity
-    tabsWrapper.onclick = e => handleTabs(e, text, description, tabColor)
+    tabsWrapper.onclick = e => handleTabs(e, description)
 
     // append jawns
     tabsWrapper.appendChild(whyTab)
@@ -198,8 +190,9 @@ const makeTabs = (tabColor, text, description) => {
 
     return tabsFrag
 }
+
 // handle cycling through tabs and replacing content
-const handleTabs = (e, text, wrapper, color) => {
+const handleTabs = (e, wrapper) => {
     const clickedTab = e.target
     const oldTab = document.querySelector('.active-tab')
     
@@ -215,14 +208,11 @@ const handleTabs = (e, text, wrapper, color) => {
 
     // deactivate the old jawn
     oldTab.classList.remove('active-tab')
-    oldTab.style.background = 'initial'
-    oldTab.style.color = 'initial'
 
     // uset the new active tab
     clickedTab.classList.add('active-tab')
-    clickedTab.style.background = color
-    clickedTab.style.color = '#f7f7f7'
 }
+
 // returns main text content fragment + the main text wrapper element
 const makeDescription = (defaultText, trend) => {
     // create elements
@@ -245,6 +235,7 @@ const makeDescription = (defaultText, trend) => {
 
     return {descriptionFrag, description}
 }
+
 // returns the trend section as a document fragment
 const makeTrendText = trend => {
     const text = trend.text

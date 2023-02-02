@@ -531,6 +531,7 @@ summary {
     display: flex;
     justify-content: space-between;
     background: transparent;
+    border-bottom: 1px solid #4fa3a8;
 
 }
 .description-wrapper-tab-headers {
@@ -548,7 +549,8 @@ summary {
     text-decoration: underline;
 }
 .active-tab {
-    background: #f9f9f9;
+    background: #4fa3a8;
+    color: #f7f7f7;
     box-shadow: 2px 0px 3px rgba(0,0,0,0.3);
     overflow: hidden;
 }
