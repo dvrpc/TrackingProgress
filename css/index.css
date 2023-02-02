@@ -10,6 +10,10 @@ body {
     font-size: 16px;
     line-height: 1.45;
 }
+:root {
+    --border-radius: 5px;
+    --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+}
 .hidden {
     display: none;
 }
@@ -161,8 +165,8 @@ fieldset {
 .region-map {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 .tp-header {
     display: block;
@@ -205,8 +209,8 @@ summary {
 }
 .gif-figure {
     background: #f7f7f7;
-    border-radius: 5px;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     width: 300px;
     margin: 0;
 }
@@ -257,12 +261,12 @@ summary {
     background: #4fa3a8;
     padding: 5px 10px;
     color: #f7f7f7;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     border: none;
     font-size: 1.1rem;
     margin-top: 1%;
     cursor: pointer;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--box-shadow);
 }
 .btn-disabled {
     color: #4fa3a8;
@@ -395,16 +399,13 @@ summary {
 }
 .indicators-grid-item {
     position: relative;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     background: #4fa3a8;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--box-shadow);
     margin: 1%;
     width: 12vw;
     height: 12vw;
     cursor: pointer;
-}
-.region-map:hover {
-    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.4);
 }
 .indicators-grid-item:active {
     box-shadow: none;
@@ -554,7 +555,7 @@ summary {
     overflow: hidden;
 }
 #description-content-wrapper {
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    box-shadow: var(--box-shadow);
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     background: #f9f9f9;
@@ -593,10 +594,10 @@ summary {
     padding: 10px 0;
     width: 90%;
     border: 1px solid #4fa3a8;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     font-size: 1.1rem;
     cursor: pointer;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    box-shadow: var(--box-shadow);
 }
 .related-indicators {
     display: none;
@@ -707,8 +708,8 @@ summary {
     max-width: 1000px;
     margin: 0 auto;
     background: #f9f9f9;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
-    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
     padding: 1% 0;
 }
 .waterfall-viz {
