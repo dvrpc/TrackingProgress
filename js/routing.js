@@ -40,7 +40,7 @@ const setIndicatorURL = (title, primaryCategory) => {
 const updateView = () => {
     // let hash = hashParam ? hashParam : sanitizeHash(location.hash)
     const hash = location.hash ? sanitizeHash(location.hash) : false
-    
+
     if(hash){
         // handle splash page visibility
         splashPage.style.position = 'fixed'
