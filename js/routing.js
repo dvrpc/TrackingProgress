@@ -27,6 +27,8 @@ const setIndicatorURL = (title, primaryCategory) => {
 
     // pull relevant info from the URL
     const formattedTitle = title.trim().replace(/\s+/g, '-')
+
+    // @TODO: remove primaryCategory from URL schema, it's no longer relevant
     const newHash = `${formattedTitle}/${primaryCategory}`
 
     // update URL state

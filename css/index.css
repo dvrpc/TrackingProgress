@@ -23,6 +23,9 @@ body {
     opacity: 0.5;
     cursor: auto;
 }
+.hover-btn {
+    cursor: pointer;
+}
 .hover-btn:hover {
     box-shadow: 2px 4px 6px rgba(0,0,0,0.3) !important;
     filter: brightness(101%);
@@ -321,9 +324,6 @@ summary {
     text-align: center;
     padding: 15px 0;
     margin: 0 auto;
-}
-#filter-select {
-    cursor:pointer;
 }
 .category-active {
     color: #f7f7f7 !important;

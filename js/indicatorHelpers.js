@@ -153,9 +153,7 @@ const getIndicatorSnippet = async (ref, indicatorParams) => {
     window.scrollTo(0,0)
 }
 
-const makeRelatedSubheader = cat => {
-    // @TODO: is this still needed
-    const name = catLookup[cat].name
+const makeRelatedSubheader = () => {
     const frag = document.createDocumentFragment()
     const wrapper = document.createElement('div')
     const subheader = document.createElement('h3')
@@ -172,6 +170,7 @@ const makeRelatedSubheader = cat => {
 }
 
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
+// @TODO remove primaryCategory. Not needed
 const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
         
     // clear the side nav of all it's children
@@ -180,14 +179,22 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
     }
 
     // use primary category to create the "related indicators" subheader
-    const subheader = makeRelatedSubheader(primaryCategory)
+    const subheader = makeRelatedSubheader()
 
     // create a fragment to house each sidelink
     let sideLinks = document.createDocumentFragment()
 
     // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
+    // @UPDATE: instead of looping thru each indicator:
+        // loop thru indicator.dataset.matrix
+            // string of ID's
+        // split byt ('-') and then poop out the links. That should do it?
+    // const indicatorMatrix = indicator.dataset.indicator
+    // indicatorMatrix.forEach(associated => {
+
+    // })
+
     indicators.forEach(indicator => {
-        // @TODO: update the primary dataset with the new matrix of information
         const indicatorPrimaryCategory = indicator.dataset.primary
         
         if(indicatorPrimaryCategory === primaryCategory){
