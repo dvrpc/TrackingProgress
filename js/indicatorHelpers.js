@@ -6,6 +6,8 @@ import { setIndicatorURL } from './routing.js'
 import { catLookup } from './utils.js'
 
 const grid = document.querySelector('.indicators-grid')
+
+// @TODO: don't need this after matrix update
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 const relatedIndicators = document.querySelector('.related-indicators')
 
@@ -170,9 +172,12 @@ const makeRelatedSubheader = () => {
 }
 
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
-// @TODO remove primaryCategory. Not needed
-const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
-        
+/*
+    @PARAMS: relatedIndicators: list of links
+
+*/
+const generateSideNav = (newIndicator, relatedIndicators) => {
+    
     // clear the side nav of all it's children
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
@@ -183,35 +188,20 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 
     // create a fragment to house each sidelink
     let sideLinks = document.createDocumentFragment()
+    const indicatorMatrix = newIndicator.dataset.matrix.split(' ')
 
-    // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
-    // @UPDATE: instead of looping thru each indicator:
-        // loop thru indicator.dataset.matrix
-            // string of ID's
-        // split byt ('-') and then poop out the links. That should do it?
-    // const indicatorMatrix = indicator.dataset.indicator
-    // indicatorMatrix.forEach(associated => {
+    indicatorMatrix.forEach(associated => {
+        // create a link to the indicator page that will go on the side bar
+        let sideLink = document.createElement('span')
 
-    // })
+        // get a handle on the necessary info
+        const linkTitle = associated.split('-').join(' ')
 
-    indicators.forEach(indicator => {
-        const indicatorPrimaryCategory = indicator.dataset.primary
-        
-        if(indicatorPrimaryCategory === primaryCategory){
+        // update basic info + styling
+        sideLink.textContent = linkTitle
+        sideLink.classList.add('sideLink')
 
-            //  create a link to the indicator page that will go on the side bar
-            let sideLink = document.createElement('span')
-
-            // get a handle on the necessary info
-            const linkTitle = indicator.querySelector('.indicators-title').textContent
-
-            // update basic info + styling
-            sideLink.textContent = linkTitle
-            sideLink.classList.add('sideLink')
-            sideLink.classList.add(indicatorPrimaryCategory)
-
-            sideLinks.appendChild(sideLink)
-        }
+        sideLinks.appendChild(sideLink)
     })
 
     relatedIndicators.appendChild(subheader)
@@ -224,7 +214,9 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 
 // helper function for the routing
 const makeIndicatorPage = hashArray => {
-    const title = hashArray[0].replace(/-/g, ' ')
+    const titleString = hashArray[0]
+    const newIndicator = grid.querySelector(`#${titleString}`)
+    const title = titleString.replace(/-/g, ' ')
     const ref = snippetsRef[title]
 
     // remove an existing indicator page before continuing
@@ -234,12 +226,11 @@ const makeIndicatorPage = hashArray => {
     // create the indicator page if it exists
     if(ref){
         const categories = ref.categories
-        const primaryCategory = categories[0]
         const trend = ref.trend
         const text = ref.text
         const indicatorParams = {title, categories, trend, text}
 
-        generateSideNav(indicators, relatedIndicators, primaryCategory)
+        generateSideNav(newIndicator, relatedIndicators)
         getIndicatorSnippet(ref, indicatorParams)
 
     // create the Indicator Not Found page if not
@@ -258,10 +249,9 @@ const updateLinks = () => {
     sideLinks.forEach(sideLink => {
         sideLink.onclick = () => {
             const title = sideLink.textContent
-            const primaryCategory = sideLink.classList[1]
 
             // update the URL which in turn hydrates the new indicator page
-            setIndicatorURL(title, primaryCategory)
+            setIndicatorURL(title)
         }
     })
 }

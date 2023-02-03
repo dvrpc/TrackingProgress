@@ -63,7 +63,7 @@ const makeHowTo = () => {
                     </figure>
                     <figure class="gif-figure">
                         <video controls width="300" height="215" id="indicator-nav" type="video/mp4"></video>
-                        <figcaption class="gif-caption">View indicators with the same primary principle or return to the dashboard to view all indicators.</figcaption>
+                        <figcaption class="gif-caption">View related indicators or return to the dashboard to view all indicators.</figcaption>
                     </figure>
                 </div>
             </div>

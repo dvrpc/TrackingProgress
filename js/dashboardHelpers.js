@@ -218,9 +218,8 @@ const clickIndicator = e => {
 
     // get the title from it's id
     let title = indicator.id ? indicator.id : null
-    const primaryCategory = indicator.dataset.primary
 
-    return [title, primaryCategory]
+    return title
 }
 
 // recursive helper to get the indicator itself

@@ -218,25 +218,25 @@ indicators.forEach(indicator => {
 
 // load the selected indicator page & transition to it
 grid.onclick = e => {
-    let title, primaryCategory;
+    let title;
 
     // only setIndicator if the user clicked on a valid tile
     if(e.target.nodeName != 'MAIN'){
-        // get title and primary category from the clicked element
-        [title, primaryCategory] = [... clickIndicator(e)]
+        // get title from the clicked element
+        title = clickIndicator(e)
         
         // scroll & load
         if(!help.classList.contains('fade-in')){
             const gridOffset = (grid.getBoundingClientRect().top + window.scrollY)
             
-            window.setTimeout(setIndicatorURL, 250, title, primaryCategory)
+            window.setTimeout(setIndicatorURL, 250, title)
 
             window.scrollTo({
                 top: gridOffset,
                 behavior: 'smooth'
             })
         } else {
-            setIndicatorURL(title, primaryCategory)
+            setIndicatorURL(title)
         }
     }
 }

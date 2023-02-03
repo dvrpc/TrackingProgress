@@ -605,6 +605,7 @@ summary {
     width: 100%;
     border-top: 1px solid #f7f7f7;
     padding: 0 10px;
+    /* @TODO: contrast fails with f7 */
     color: #f7f7f7;
     background-color: #4fa3a8;
     text-align: center;
@@ -630,7 +631,7 @@ summary {
     color: #f7f7f7;
 }
 .sideLink:hover {
-    color: #75b8c8;
+    text-decoration: underline;
 }
 .toggle-vr {
     color: #141414;

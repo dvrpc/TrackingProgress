@@ -7,7 +7,6 @@ const grid = dashboard.children[1]
 const splashPage = document.getElementById('splash-page')
 const filterState = document.getElementById('filter-type-form')
 
-
 // for development/live
 const baseURL = process.env.baseURL
 
@@ -23,13 +22,11 @@ const setIndexURL = () => {
 }
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
-const setIndicatorURL = (title, primaryCategory) => {
+const setIndicatorURL = title => {
 
     // pull relevant info from the URL
     const formattedTitle = title.trim().replace(/\s+/g, '-')
-
-    // @TODO: remove primaryCategory from URL schema, it's no longer relevant
-    const newHash = `${formattedTitle}/${primaryCategory}`
+    const newHash = `${formattedTitle}/`
 
     // update URL state
     history.pushState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
