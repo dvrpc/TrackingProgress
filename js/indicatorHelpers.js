@@ -220,8 +220,7 @@ const makeIndicatorPage = hashArray => {
     if(ref){
         const categories = ref.categories
         const trend = ref.trend
-        const text = ref.text
-        const indicatorParams = {title, categories, trend, text}
+        const indicatorParams = {title, categories, trend}
 
         generateSideNav(newIndicator, relatedIndicators)
         getIndicatorSnippet(ref, indicatorParams)
