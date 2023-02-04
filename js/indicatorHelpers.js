@@ -156,19 +156,12 @@ const getIndicatorSnippet = async (ref, indicatorParams) => {
 }
 
 const makeRelatedSubheader = () => {
-    const frag = document.createDocumentFragment()
-    const wrapper = document.createElement('div')
     const subheader = document.createElement('h3')
-
-    wrapper.id = 'related-indicators-subheader-wrapper'
     
     subheader.id = 'related-indicators-subheader'
     subheader.innerHTML = `Related Indicators`
 
-    wrapper.appendChild(subheader)
-    frag.appendChild(wrapper)
-
-    return frag
+    return subheader
 }
 
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
