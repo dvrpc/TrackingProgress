@@ -499,8 +499,8 @@ summary {
     max-width: 70%;
     display: flex;
     margin: 10px auto;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 .indicator-header {
     text-align: center;
