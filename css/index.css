@@ -498,14 +498,14 @@ summary {
 #indicator-header-wrapper {
     max-width: 70%;
     display: flex;
-    margin: 10px auto 25px auto;
-    justify-content: center;
-    align-items: center;
+    margin: 10px auto;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 .indicator-header {
     text-align: center;
     font-size: 2.5em;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0 25px 0 0;
     color: var(--theme-main);
 }
@@ -527,8 +527,8 @@ summary {
     justify-content: center;
 }
 .snippet-categories {
-    margin-right: 3%;
-    height: 33px;
+    margin-left: 15px;
+    height: 35px;
 }
 #description-wrapper {
     max-width: 1000px;
@@ -619,16 +619,15 @@ summary {
     display: none;
     min-height: calc(92vh - 40px - 1rem);
     width: 100%;
-    text-align: center;
     border-top: 1px solid var(--theme-main);
     color: #050709;
 }
 #related-indicators-subheader {
-    padding: 15px 0;
     width: 100%;
+    padding: 15px 0;
     margin: 0;
+    text-align: center;
     font-weight: 500;
-    color: var(--theme-main);
 }
 .sideLink {
     padding: 15px;
