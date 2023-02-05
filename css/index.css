@@ -16,6 +16,9 @@ body {
 
     --theme-main: #4fa3a8;
     --theme-main-white: #feffff;
+    --theme-sustain: #00474E;
+    --theme-equity: #166871;
+    --theme-resil: #4D8185;
     --theme-econo: #721E52; 
     --theme-enviro: #006227;
     --theme-comm: #004C6C;
@@ -43,6 +46,15 @@ body {
 .sm {
     font-size: 0.9em;
     color: #bd2556;
+}
+.sustain-accent {
+    color: var(--theme-sustain);
+}
+.equity-accent {
+    color: var(--theme-equity);
+}
+.resil-accent {
+    color: var(--theme-resil);
 }
 .econo-accent {
     color: var(--theme-econo);
@@ -353,6 +365,15 @@ summary {
     display: none;
     background: #e9e9e9;
     color: var(--theme-main);
+}
+#sustain-icon {
+    background: var(--theme-sustain);
+}
+#equity-icon {
+    background: var(--theme-equity);
+}
+#resil-icon {
+    background: var(--theme-resil);
 }
 #enviro-icon {
     background: var(--theme-enviro);

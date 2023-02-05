@@ -72,6 +72,7 @@ const removeDashboard = () => {
 }
 
 // function to display/hide indicators based on which category is clicked
+// @TODO #108 change click event (fade all but active)
 const toggleIndicators = (element, indicators, filterType) => {
     let iconSets = [... element.parentNode.children]
 
