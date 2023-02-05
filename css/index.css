@@ -16,6 +16,10 @@ body {
 
     --theme-main: #4fa3a8;
     --theme-main-white: #feffff;
+    --theme-econo: #721E52; 
+    --theme-enviro: #006227;
+    --theme-comm: #004C6C;
+    --theme-transpo: #433C59;
 }
 .hidden {
     display: none;
@@ -41,19 +45,16 @@ body {
     color: #bd2556;
 }
 .econo-accent {
-    color: #bd2556;
+    color: var(--theme-econo);
 }
 .enviro-accent {
-    color: #7b9d3e;
+    color: var(--theme-enviro);
 }
 .comm-accent {
-    color: #006ba6;
+    color: var(--theme-comm);
 }
 .transpo-accent {
-    color: #de6e1d;
-}
-.equity-accent {
-    color: #582267;
+    color: var(--theme-transpo);
 }
 .text-right {
     text-align: right;
