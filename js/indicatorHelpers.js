@@ -167,7 +167,6 @@ const makeRelatedSubheader = () => {
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
 /*
     @PARAMS: relatedIndicators: list of links
-
 */
 const generateSideNav = (newIndicator, relatedIndicators) => {
     
