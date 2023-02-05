@@ -113,7 +113,7 @@ fieldset {
     padding: 0 3%;
     height: 8vh;
     width: 94%;
-    background: #fff;
+    background: var(--theme-main-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -312,7 +312,7 @@ summary {
     border-top: 8px solid white;
     margin-bottom: 8px;
     visibility: hidden;
-    background: #fff;
+    background-color: white;
 }
 .indicators-nav {
     position: absolute;
