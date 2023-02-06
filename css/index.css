@@ -131,9 +131,9 @@ fieldset {
     margin-left: 42px;
     color: var(--theme-main);
     border: 1px solid var(--theme-main);
-    border-radius: 50%;
+    border-radius: var(--border-radius);
     background: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 500;
     padding: 3px 11px;
     cursor: pointer;

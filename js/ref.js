@@ -1,6 +1,6 @@
 const snippetsRef = {
     'Air Quality': {
-        categories: ['enviro', 'equity', 'transpo'],
+        categories: ['enviro', 'transpo'],
         trend: {
             status: 'good',
             text: {
@@ -167,7 +167,7 @@ const snippetsRef = {
         ]
     },
     'Educational Attainment': {
-        categories: ['comm', 'econo', 'equity'],
+        categories: ['comm', 'econo'],
         trend: {
             status: 'good',
             text: {
@@ -335,7 +335,7 @@ const snippetsRef = {
         ]
     },
     'Roadway Safety': {
-        categories: ['transpo','equity'],
+        categories: ['transpo'],
         trend: {
             status: 'not-great',
             text: {
@@ -624,7 +624,7 @@ const snippetsRef = {
         ]
     },
     'Housing Affordability': {
-        categories: ['comm', 'equity', 'econo'],
+        categories: ['comm', 'econo'],
         trend: {
             status: 'neutral',
             text: {
@@ -1259,7 +1259,7 @@ const snippetsRef = {
       ]
     },
     'Segregation': {
-      categories: ['equity', 'comm', 'econo'],
+      categories: ['comm', 'econo'],
       trend: {
         status: 'neutral',
         text: {
@@ -1305,7 +1305,7 @@ const snippetsRef = {
       ]
     },
     'Income': {
-        categories: ['equity','econo','comm'],
+        categories: ['econo','comm'],
         trend: {
             status: 'bad',
             text: {
@@ -1673,7 +1673,7 @@ const snippetsRef = {
         ]
     },
     'Labor Force': {
-        categories: ['equity','econo','comm'],
+        categories: ['econo','comm'],
         trend: {
             status: 'neutral',
             text: {
@@ -2490,7 +2490,7 @@ const snippetsRef = {
         ]
     },
     'Greenhouse Gas Emissions': {
-        categories: ['enviro','comm','equity'],
+        categories: ['enviro','comm'],
         trend: {
             status: 'good',
             text: {

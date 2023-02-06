@@ -10,6 +10,7 @@ const filterToggle = document.getElementById('filter-type-form')
 let clickedRef;
 
 // colors to change indicator background to on cat filter
+// @TODO: can get rid of this
 const catColors = {
     'econo': '#bd2756',
     'enviro': '#7a9c3e',
@@ -23,14 +24,12 @@ const catColors = {
     'equity-default': '#c6b7cd'
 }
 
-const handleDashboardTransition = (relatedIndicators, indicator) => {
+const handleDashboardTransition = relatedIndicators => {
     // remove un-needed elements
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
     
-    // if(indicator) indicator.remove()
-
     back.style.display = 'none'
     relatedIndicators.style.display = 'none'
     
@@ -49,7 +48,7 @@ const makeDashboard = relatedIndicators => {
     grid.classList.remove('fade-right')
     indicator.style.opacity = '30%'
 
-    handleDashboardTransition(relatedIndicators, indicator)
+    handleDashboardTransition(relatedIndicators)
 
     // remove grid after transition (desktop) or immediately (mobile)
     if(window.innerWidth > 800) {
@@ -121,6 +120,7 @@ const toggleIndicators = (element, indicators, filterType) => {
 const toggleCatIcons = (filter, element, options) => {
     const {elID, img, categoryName} = {... options}
 
+    // @TODO set opacity of all non-clicked icons to 50%
     if(filter != element){
             
         // check if another category is active and set it back to default
