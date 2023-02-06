@@ -28,9 +28,8 @@ body {
     display: none;
 }
 .inactive {
-    background: #dadada !important;
+    background-color: #dadada !important;
     pointer-events: none;
-    opacity: 0.5;
     cursor: auto;
 }
 .hover-btn {
@@ -38,7 +37,6 @@ body {
 }
 .hover-btn:hover {
     box-shadow: 2px 4px 6px rgba(0,0,0,0.3) !important;
-    filter: brightness(101%);
   }
 .hover-text:hover {
     filter: drop-shadow(1px 2px 0px rgba(0,0,0,0.2));
@@ -357,6 +355,11 @@ summary {
     cursor: pointer;
     text-align: center;
     overflow-y: hidden;
+    filter: opacity(100%);
+    transition: filter 0.75s;
+}
+.icon-set-inactive {
+    filter: opacity(50%);
 }
 .icon-set-img {
     width: 50px;
@@ -397,6 +400,7 @@ summary {
 .icon-set:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
     border-bottom: hidden;
+    filter: opacity(100%);
 }
 .icon-set-p {
     margin: 0;
@@ -429,6 +433,7 @@ summary {
     width: 12vw;
     height: 12vw;
     cursor: pointer;
+    transition: background-color 0.75s;
 }
 .indicators-grid-item:active {
     box-shadow: none;
