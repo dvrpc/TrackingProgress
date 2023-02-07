@@ -1,5 +1,20 @@
 const makeHowTo = () => {
-    return `
+    const modal = document.createElement('div')
+    const content = document.createElement('div')
+    const close = document.createElement('span')
+
+    modal.id = 'modal'
+    modal.role = 'dialog'
+    content.id = 'modal-content'
+    close.id = 'modal-close'
+
+    modal.classList.add('modal')
+    content.classList.add('modal-content')
+    close.classList.add('modal-close')
+
+    close.textContent = 'x'
+
+    const jawn = `
         <h3 id="get-started">Here's how to get started...</h3>
         <details class="info-toggle" open>
             <summary role="button" id="dashSummary" class="hover-text">Exploring the Dashboard</summary>
@@ -83,6 +98,43 @@ const makeHowTo = () => {
             </div>
         </details>
     `
+    
+    modal.onclick = e => {
+        if (e.target === modal) ariaHideModal(modal)
+    }
+
+    modal.appendChild(content)
+    content.appendChild(close)
+    content.insertAdjacentHTML('beforeend', jawn)
+    
+    return modal
 }
+
+const ariaHideModal = modal => {
+    modal.style.display = 'none'
+    modal.setAttribute('aria-hidden', 'true')
+}
+
+const ariaShowModal = modal => {
+    modal.style.display = 'flex'
+    modal.style.justifyContent = 'center'
+    modal.style.alignItems = 'center'
+
+    modal.setAttribute('aria-hidden', 'false')
+}
+
+// open the modal by clicking the div
+// modalToggle.onclick = () => ariaShowModal()
+// closeModal.onclick = () => ariaHideModal()
+
+// modal.onclick = event => {
+//   if (event.target == modal) ariaHideModal(modal)
+// }
+// document.onkeydown = event => {
+//   // only hide open modals 
+//   if( event.code === 'Escape' && modal.style.display === 'flex'){
+//     ariaHideModal(modal)
+//   }
+// }
 
 export default makeHowTo

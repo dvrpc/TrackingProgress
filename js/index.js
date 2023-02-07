@@ -1,6 +1,6 @@
 import { toggleIndicators, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
-import makeHowTo from './makeHowTo.js'
+import makeHowTo from './modal.js'
 
 
 /**************************************************/
@@ -27,15 +27,6 @@ let emojiFilters = []
 filters.forEach(filter => filter.classList.contains('emoji-set') ? emojiFilters.push(filter) : catFilters.push(filter))
 let filterType = 'category'
 
-// get default category colors to revert to on filter change
-const catColors = {
-    'econo': '#f0cfd0',
-    'enviro': '#e0e6cf',
-    'comm': '#c6d6ea',
-    'transpo': '#f9dcc4',
-    'equity': '#c6b7cd'
-}
-
 // get a handle on the indicator page elements
 const back = document.querySelector('.back-to-dash')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
@@ -46,8 +37,13 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 // @TODO: refactor to modal toggle fnc
 viewHowTo.onclick = e => {
     e.preventDefault()
-
+    
+    // make it on first pass, otherwise just toggle on/off
     const howTo = makeHowTo()
+    const wrapper = splash.parentElement
+    wrapper.appendChild(howTo)
+
+
     // const wrapper = toGrid.parentElement
 
     // wrapper.insertAdjacentHTML('afterend', howTo)
