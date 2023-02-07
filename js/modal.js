@@ -14,6 +14,18 @@ const makeHowTo = () => {
 
     close.textContent = 'x'
 
+    // @TODO: bake the lazy loading into the videos after refactoring jawn
+    // from a string to document.createElements
+
+    // const infoToggles = document.querySelectorAll('.info-toggle')
+
+    // // lazy load the videos 
+    // infoToggles.forEach(toggle => toggle.onclick = toggle => loadVideos(toggle))
+
+    // // style the button 
+    // viewHowTo.classList.add('btn-disabled')
+    // viewHowTo.classList.remove('hover-btn')
+
     const jawn = `
         <h3 id="get-started">Here's how to get started...</h3>
         <details class="info-toggle" open>
@@ -121,6 +133,28 @@ const ariaShowModal = modal => {
     modal.style.alignItems = 'center'
 
     modal.setAttribute('aria-hidden', 'false')
+}
+
+// loop thru corresponding videos and add .mp4 src
+const loadVideos = toggle => {    
+    let target = toggle.target
+
+    // return if not clicking on summary or if the videos are already loaded
+    if(target.nodeName != 'SUMMARY' || videosLoaded[target.id]) return
+        
+    const figures = target.nextElementSibling.children[0].children
+    const length = figures.length
+    var i = 0
+
+    // add src
+    for(i; i < length; i++) {
+        const video = figures[i].children[0]
+        const videoName = video.id
+        video.src = `./vid/${videoName}.mp4`
+    }
+
+    // flip videos loaded bool
+    videosLoaded[target.id] = true
 }
 
 // open the modal by clicking the div

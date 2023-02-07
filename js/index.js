@@ -42,30 +42,6 @@ viewHowTo.onclick = e => {
     const howTo = makeHowTo()
     const wrapper = splash.parentElement
     wrapper.appendChild(howTo)
-
-
-    // const wrapper = toGrid.parentElement
-
-    // wrapper.insertAdjacentHTML('afterend', howTo)
-
-    // const infoToggles = document.querySelectorAll('.info-toggle')
-
-    // // lazy load the videos 
-    // infoToggles.forEach(toggle => toggle.onclick = toggle => loadVideos(toggle))
-
-    // // style the button 
-    // viewHowTo.classList.add('btn-disabled')
-    // viewHowTo.classList.remove('hover-btn')
-
-    // const head = infoToggles[0].previousElementSibling
-    // const offset = head.offsetTop - 65
-
-    // window.scrollTo({
-    //     top: offset,
-    //     behavior: 'smooth'
-    // })
-
-    // viewHowTo.disabled = true
 }
 
 // when the splash page is visible, listen to scroll events to know when to hide it
@@ -117,27 +93,6 @@ help.onclick = () => {
     help.classList.remove('fade-in')
 }
 
-// loop thru corresponding videos and add .mp4 src
-const loadVideos = toggle => {    
-    let target = toggle.target
-
-    // return if not clicking on summary or if the videos are already loaded
-    if(target.nodeName != 'SUMMARY' || videosLoaded[target.id]) return
-        
-    const figures = target.nextElementSibling.children[0].children
-    const length = figures.length
-    var i = 0
-
-    // add src
-    for(i; i < length; i++) {
-        const video = figures[i].children[0]
-        const videoName = video.id
-        video.src = `./vid/${videoName}.mp4`
-    }
-
-    // flip videos loaded bool
-    videosLoaded[target.id] = true
-}
 
 
 /**************************************************/
