@@ -184,25 +184,15 @@ const clearIndicators = () => indicators.forEach(indicator => {
 
 // reset icon-sets to their default state
 const resetFilters = type => {
-    if(type === 'category') {
-        emojiFilters.forEach(filter => {
-            if(filter.classList.contains('category-active')){
-                filter.classList.remove('category-active')
-                filter.style.color = '#4fa3a8'
-                filter.style.background = '#e9e9e9'
-            }
+    if(type === 'emoji') {
+        emojiFilters.forEach(emoji => {
+            emoji.classList.remove('icon-set-active', 'icon-set-inactive')
+            emoji.style.color = '#4fa3a8'
+            emoji.style.background = '#e9e9e9'
         })
     }else {
-        catFilters.forEach(filter => {
-            if(filter.classList.contains('category-active')){
-                const filterID = filter.id
-                const img = filter.children[0]
-                const defaultColor = filterID.split('-')[0]
-    
-                img.src = `./img/${filterID}.png`
-                filter.style.background = catColors[defaultColor]
-                filter.classList.remove('category-active')
-            }
+        catFilters.forEach(category => {
+            category.classList.remove('icon-set-inactive', 'icon-set-active')
         })
     }
 } 

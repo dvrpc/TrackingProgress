@@ -368,6 +368,24 @@ summary {
     display: none;
     background: #e9e9e9;
     color: var(--theme-main);
+    height: calc(20% - 8px);
+}
+.emoji-set-img {
+    align-self: center;
+    width: 23%;
+    background: rgba(79,163,168,.8);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.icon-set:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    border-bottom: hidden;
+    filter: opacity(100%);
+}
+.icon-set-p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
 }
 #sustain-icon {
     background: var(--theme-sustain);
@@ -390,22 +408,6 @@ summary {
 #econo-icon {
     background: var(--theme-econo);
     margin-bottom: 0;
-}
-.emoji-set-img {
-    align-self: center;
-    width: 23%;
-    background: rgba(79,163,168,.8);
-    border-radius: 50%;
-}
-.icon-set:hover {
-    box-shadow: 0 0 10px rgba(0,0,0,0.8);
-    border-bottom: hidden;
-    filter: opacity(100%);
-}
-.icon-set-p {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
 }
 .indicators-grid {
     height: calc(94vh - 16px);

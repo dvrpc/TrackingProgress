@@ -67,7 +67,6 @@ const removeDashboard = () => {
 }
 
 // function to display/hide indicators based on which category is clicked
-// @TODO #108 change click event (fade all but active)
 const toggleIndicators = (element, indicators, filterType) => {
     const iconEls = element.parentNode
     const activeIcon = iconEls.querySelector('.icon-set-active')
@@ -83,8 +82,6 @@ const toggleIndicators = (element, indicators, filterType) => {
         iconArrs.forEach(icon => toggleCatIcons(icon, element, activeIcon))
     } else{
         categoryName = elID.split('-')[1]
-
-        // @UPDATE: emoji fnc invokded
         iconArrs.forEach(filter => toggleEmojiIcons(filter, element))
     }
 
@@ -117,8 +114,7 @@ const toggleIndicators = (element, indicators, filterType) => {
 // helpers for toggling icon-sets
 const toggleCatIcons = (icon, element, activeIcon) => {
     if(activeIcon === element) {
-        icon.classList.remove('icon-set-inactive')
-        icon.classList.remove('icon-set-active')
+        icon.classList.remove('icon-set-inactive', 'icon-set-active')
     } else {
         if(icon != element) {
             icon.classList.add('icon-set-inactive')
@@ -128,13 +124,14 @@ const toggleCatIcons = (icon, element, activeIcon) => {
         }
     }
 }
-const toggleEmojiIcons = (filter, element) => {
-    if(filter != element){
+const toggleEmojiIcons = (emoji, element) => {
+    if(emoji != element){
         
         // check if another category is active and set it back to default
-        if(filter.classList.contains('category-active')){
-            filter.classList.remove('category-active')
-            filter.style.background = '#e9e9e9'
+        if(emoji.classList.contains('category-active')){
+            emoji.classList.remove('category-active')
+            emoji.style.color = '#4fa3a8'
+            emoji.style.background = '#e9e9e9'
         }
 
     // toggle selected category
@@ -144,6 +141,7 @@ const toggleEmojiIcons = (filter, element) => {
         // set active styles
         if(element.classList.contains('category-active')){
             // update bg and text color
+            element.style.color = '#feffff'
             element.style.background = '#4fa3a8'
             
         // set default styles
