@@ -125,25 +125,26 @@ fieldset {
     display: block;
     height: 44px;
 }
-#help-btn {
-    margin-left: 42px;
+.nav-btn {
+    margin-left: 40px;
     color: var(--theme-main);
     border: 1px solid var(--theme-main);
     border-radius: var(--border-radius);
     background: none;
     font-size: 1rem;
     font-weight: 500;
-    padding: 3px 11px;
-    cursor: pointer;
-    opacity: 0;
+    padding: 8px 12px;
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     transition-timing-function: ease-out;
 }
-#help-btn:hover, #to-top-btn:hover {
+.nav-btn:hover {
     background: var(--theme-main);
     color: #f7f7f7;
+}
+.help-btn {
+    opacity: 0;
 }
 #dvrpc-logo {
     display: block;
@@ -276,17 +277,6 @@ summary {
     border-top: 2px solid var(--theme-main);
     width: 3%;
     border-radius: 50%;
-}
-.homepage-btn {
-    background: var(--theme-main);
-    padding: 5px 10px;
-    color: #f7f7f7;
-    border-radius: var(--border-radius);
-    border: none;
-    font-size: 1.1rem;
-    margin-top: 1%;
-    cursor: pointer;
-    box-shadow: var(--box-shadow);
 }
 .btn-disabled {
     color: var(--theme-main);

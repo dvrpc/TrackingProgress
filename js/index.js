@@ -7,7 +7,6 @@ import makeHowTo from './makeHowTo.js'
 /******************** Set up *********************/
 // get a handle on the splash page elements
 const splash = document.getElementById('splash-page')
-const toGrid = document.getElementById('to-grid')
 const viewHowTo = document.getElementById('view-how-to')
 const help = document.getElementById('help-btn')
 const videosLoaded = {
@@ -44,44 +43,33 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 /**************************************************/
 /*************** Splash Page events ***************/
-// scroll the grid into view which will trigger the splash page hide function
-toGrid.onclick = e => {
-    e.preventDefault()
-
-    // get splash page height + grid padding to trigger the onscroll effect
-    const splashHeight = splash.clientHeight + 10
-
-    window.scrollTo({
-        top: splashHeight,
-        behavior: 'smooth'
-    })
-}
+// @TODO: refactor to modal toggle fnc
 viewHowTo.onclick = e => {
     e.preventDefault()
 
     const howTo = makeHowTo()
-    const wrapper = toGrid.parentElement
+    // const wrapper = toGrid.parentElement
 
-    wrapper.insertAdjacentHTML('afterend', howTo)
+    // wrapper.insertAdjacentHTML('afterend', howTo)
 
-    const infoToggles = document.querySelectorAll('.info-toggle')
+    // const infoToggles = document.querySelectorAll('.info-toggle')
 
-    // lazy load the videos 
-    infoToggles.forEach(toggle => toggle.onclick = toggle => loadVideos(toggle))
+    // // lazy load the videos 
+    // infoToggles.forEach(toggle => toggle.onclick = toggle => loadVideos(toggle))
 
-    // style the button 
-    viewHowTo.classList.add('btn-disabled')
-    viewHowTo.classList.remove('hover-btn')
+    // // style the button 
+    // viewHowTo.classList.add('btn-disabled')
+    // viewHowTo.classList.remove('hover-btn')
 
-    const head = infoToggles[0].previousElementSibling
-    const offset = head.offsetTop - 65
+    // const head = infoToggles[0].previousElementSibling
+    // const offset = head.offsetTop - 65
 
-    window.scrollTo({
-        top: offset,
-        behavior: 'smooth'
-    })
+    // window.scrollTo({
+    //     top: offset,
+    //     behavior: 'smooth'
+    // })
 
-    viewHowTo.disabled = true
+    // viewHowTo.disabled = true
 }
 
 // when the splash page is visible, listen to scroll events to know when to hide it
