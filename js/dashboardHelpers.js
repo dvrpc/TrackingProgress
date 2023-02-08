@@ -82,7 +82,7 @@ const toggleIndicators = (element, indicators, filterType) => {
         iconArrs.forEach(icon => toggleCatIcons(icon, element, activeIcon))
     } else{
         categoryName = elID.split('-')[1]
-        iconArrs.forEach(filter => toggleEmojiIcons(filter, element))
+        iconArrs.forEach(filter => toggleEmojiIcons(filter, element, activeIcon))
     }
 
     // handle 3 conditions & expected behaviors: 
@@ -124,32 +124,42 @@ const toggleCatIcons = (icon, element, activeIcon) => {
         }
     }
 }
-const toggleEmojiIcons = (emoji, element) => {
-    if(emoji != element){
-        
-        // check if another category is active and set it back to default
-        if(emoji.classList.contains('category-active')){
-            emoji.classList.remove('category-active')
-            emoji.style.color = '#4fa3a8'
-            emoji.style.background = '#e9e9e9'
-        }
-
-    // toggle selected category
-    }else{
-        element.classList.toggle('category-active')
-        
-        // set active styles
-        if(element.classList.contains('category-active')){
-            // update bg and text color
-            element.style.color = '#feffff'
-            element.style.background = '#4fa3a8'
-            
-        // set default styles
-        }else{
-            element.style.color = '#4fa3a8'
-            element.style.background = '#e9e9e9'
+const toggleEmojiIcons = (emoji, element, activeIcon) => {
+    if(activeIcon === element) {
+        emoji.classList.remove('emoji-set-active', 'icon-set-active')
+    } else {
+        if(emoji != element) {
+            emoji.classList.remove('emoji-set-active')
+        } else {
+            element.classList.add('icon-set-active', 'emoji-set-active')
         }
     }
+
+    // if(emoji != element){
+        
+    //     // check if another category is active and set it back to default
+    //     if(emoji.classList.contains('category-active')){
+    //         emoji.classList.remove('category-active')
+    //         emoji.style.color = '#4fa3a8'
+    //         emoji.style.background = '#e9e9e9'
+    //     }
+
+    // // toggle selected category
+    // }else{
+    //     element.classList.toggle('category-active')
+        
+    //     // set active styles
+    //     if(element.classList.contains('category-active')){
+    //         // update bg and text color
+    //         element.style.color = '#feffff'
+    //         element.style.background = '#4fa3a8'
+            
+    //     // set default styles
+    //     }else{
+    //         element.style.color = '#4fa3a8'
+    //         element.style.background = '#e9e9e9'
+    //     }
+    // }
 }
 
 // fade/slide out elements

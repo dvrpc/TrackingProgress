@@ -388,6 +388,10 @@ summary {
     color: var(--theme-main);
     height: calc(20% - 8px);
 }
+.emoji-set-active {
+    background: var(--theme-main);
+    color: var(--theme-main-white);
+}
 .emoji-set-img {
     align-self: center;
     width: 23%;

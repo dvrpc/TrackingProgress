@@ -135,9 +135,7 @@ const clearIndicators = () => indicators.forEach(indicator => {
 const resetFilters = type => {
     if(type === 'emoji') {
         emojiFilters.forEach(emoji => {
-            emoji.classList.remove('icon-set-active', 'icon-set-inactive')
-            emoji.style.color = '#4fa3a8'
-            emoji.style.background = '#e9e9e9'
+            emoji.classList.remove('icon-set-active', 'icon-set-inactive', 'emoji-set-active')
         })
     }else {
         catFilters.forEach(category => {
