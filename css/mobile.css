@@ -106,6 +106,8 @@ summary, .modal-header, .homepage-btn {
     width: 150px;
     font-size: 0.8em;
     margin-right: 4px;
+    margin-bottom: 4px;
+    padding: 12px 8px;
 }
 .icon-set {
     min-width: 100px;

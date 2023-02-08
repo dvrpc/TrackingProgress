@@ -16,6 +16,7 @@ body {
 
     --theme-main: #4fa3a8;
     --theme-main-white: #feffff;
+    --theme-main-dark: #00282c;
     --theme-sustain: #00474E;
     --theme-equity: #166871;
     --theme-resil: #4D8185;
@@ -166,12 +167,12 @@ fieldset {
 }
 .modal-content {
     position: relative;
-    width: 75%;
+    width: 70%;
     max-height: 85%;
     overflow-y: auto;
-    margin: 3.5% auto;
+    margin: 3.25% auto;
     background: var(--theme-main-white);
-    padding-bottom: 24px;
+    padding-bottom: 32px;
     border-radius: var(--border-radius);
 }
 .modal-header {
@@ -197,7 +198,7 @@ summary {
     cursor: pointer;
 }
 .info-toggle {
-    padding: 8px 16px;
+    padding: 8px 24px;
 }
 .details-content-wrapper {
     padding: 18px 0;
@@ -326,7 +327,7 @@ summary {
     position: relative;
     display: flex;
     width: 100%;
-    min-height: calc(94vh - 16px);
+    min-height: calc(94vh - 32px);
     border-top: 8px solid white;
     margin-bottom: 8px;
     visibility: hidden;
@@ -361,10 +362,15 @@ summary {
 }
 #filter-type-form {
     width: 100%;
-    color: var(--theme-main);
+    margin-bottom: 8px;
+    margin-right: 16px;
+    background-color: var(--theme-main-dark);
+    color: var(--theme-main-white);
     text-align: center;
-    padding: 15px 0;
-    margin: 0 auto;
+    padding: 12px 0;
+}
+.filter-select {
+    color: var(--theme-main-dark);
 }
 .icon-set {
     height: calc(14% - 8px);
@@ -437,7 +443,7 @@ summary {
     margin-bottom: 0;
 }
 .indicators-grid {
-    height: calc(94vh - 16px);
+    height: calc(94vh - 32px);
     width: 88%;
     background: #e9e9e9;
     position: absolute;
