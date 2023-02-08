@@ -44,7 +44,8 @@ const updateView = () => {
         // handle splash page visibility
         splashPage.style.position = 'fixed'
         splashPage.style.visibility = 'collapse'
-        dashboard.style.marginTop = '6vh'
+        
+        dashboard.classList.add('indicators-wrapper-top')
         
         if(!grid.classList.contains('fade-right')) removeDashboard()
         

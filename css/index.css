@@ -330,6 +330,9 @@ summary {
     visibility: hidden;
     background-color: white;
 }
+.indicators-wrapper-top {
+    margin-top: 8vh;
+}
 .indicators-nav {
     position: absolute;
     height: 100%;
@@ -350,6 +353,7 @@ summary {
     position: sticky;
     top: 8vh;
     width: 15vw;
+    height: 92vh;
     background-color: #f5f5f5;
     border-right: 8px solid white;
 }
@@ -524,17 +528,20 @@ summary {
 /****************************************/
 /*********** Indicator Pages ***********/
 .indicators-snippet {
-    opacity: 0;
+    opacity: 30%;
     background: #f5f5f5;
     color: #050709;
     padding: 15px 0;
     width: calc(85vw - 24px);
     overflow-y: auto;
-    transition: opacity 2s;
-    -webkit-transition: opacity 2s;
-    -moz-transition: opacity 2s;
-    -o-transition: opacity 2s;
+    transition: opacity 1.75s;
+    -webkit-transition: opacity 1.75s;
+    -moz-transition: opacity 1.75s;
+    -o-transition: opacity 1.75s;
     transition-timing-function: ease-out;
+}
+.indicators-snippet-visible {
+    opacity: 100%;
 }
 #description-wrapper, .toggle-wrapper, .chart-src, .data-viz {
     width: 70%;
@@ -660,7 +667,6 @@ summary {
 }
 .related-indicators {
     display: none;
-    height: 92vh;
     width: 100%;
     border-top: 1px solid var(--theme-main);
     color: #050709;

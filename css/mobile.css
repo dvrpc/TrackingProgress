@@ -90,6 +90,9 @@ summary, .modal-header, .homepage-btn {
     border-top: none;
     min-height: calc(94vh - 16px);
 }
+.indicators-wrapper-top {
+    margin-top: 6vh;
+}
 .indicators-nav {
     background: white;
     position: sticky;
@@ -163,6 +166,7 @@ summary, .modal-header, .homepage-btn {
     padding: 4px 6px;
     font-size: 0.9em;
 }
+
 .related-indicators {
     height: unset;
     width: calc(80% - 20px);

@@ -46,7 +46,7 @@ document.onscroll = () => {
         splash.style.visibility = 'hidden'
 
         // undo the margin that allows splash page and dash to coexist
-        dashboard.style.marginTop = '6vh'
+        dashboard.classList.add('indicators-wrapper-top')
 
         window.scrollTo(0,0)
 
@@ -66,7 +66,7 @@ help.onclick = () => {
     splash.style.visibility = 'visible'
 
     // remove dash margin
-    dashboard.style.marginTop = '0'
+    dashboard.classList.remove('indicators-wrapper-top')
 
     // scroll to top of the page
     window.scrollTo({

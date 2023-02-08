@@ -5,8 +5,6 @@ import { makeIndicatorHTML, make404 } from './makeIndicatorHTML.js'
 import { setIndicatorURL } from './routing.js'
 
 const grid = document.querySelector('.indicators-grid')
-
-// @TODO: don't need this after matrix update
 const relatedIndicators = document.querySelector('.related-indicators')
 
 
@@ -151,6 +149,8 @@ const getIndicatorSnippet = async (ref, indicatorParams) => {
 
     // send user to the top of the indicator page
     window.scrollTo(0,0)
+
+    snippet.classList.add('indicators-snippet-visible')
 }
 
 const makeRelatedSubheader = () => {

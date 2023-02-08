@@ -42,7 +42,7 @@ const makeDashboard = relatedIndicators => {
 
     // reveal the indicators grid, widen the sideNav and reveal the categories
     grid.classList.remove('fade-right')
-    indicator.style.opacity = '30%'
+    indicator.classList.remove('indicators-snippet-visible')
 
     handleDashboardTransition(relatedIndicators)
 
