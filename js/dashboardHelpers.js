@@ -38,7 +38,7 @@ const makeDashboard = relatedIndicators => {
 
     // keep snippet in place while transitioning & constrain height to grid so cat nav imgs don't get stretched
     indicator.style.paddingLeft = '15vw'
-    indicator.style.height = 'calc(94vh - 46px)'
+    indicator.style.height = 'calc(94vh - 64px)'
 
     // reveal the indicators grid, widen the sideNav and reveal the categories
     grid.classList.remove('fade-right')
