@@ -1,8 +1,3 @@
-// @TODO: delete?
-const videosLoaded = {
-    dash: false,
-    indicators: false
-}
 const videoMeta = {
     dash: [
         {
@@ -100,20 +95,20 @@ const makeEmojiRow = () => {
 }
 
 const makeDashDetails = id => {
+    const wrapper = document.createElement('div')
     const details = document.createElement('details')
     const summary = document.createElement('summary')
-    const wrapper = document.createElement('div')
-    const gifRow = makeGifRow('dash')
+    const gifRow = makeGifRow(id)
     const hr = document.createElement('hr')
     const emojiRow = makeEmojiRow()
 
+    details.setAttribute('open', true)
     summary.role = 'button'
     summary.id = id
     summary.textContent = 'Exploring the Dashboard'
 
-    summary.onclick = () => console.log('wtf clicked summary')
-    
     wrapper.classList.add('details-content-wrapper')
+    details.classList.add('info-toggle')
     summary.classList.add('hover-text')
     hr.classList.add('info-toggle-hr')
 
@@ -126,6 +121,50 @@ const makeDashDetails = id => {
     return details
 }
 
+const makeIndicatorDetails = id => {
+    const wrapper = document.createElement('div')
+    const details = document.createElement('details')
+    const summary = document.createElement('summary')
+    const gifRow = makeGifRow(id)
+
+    summary.role = 'button'
+    summary.id = id
+    summary.textContent = 'Exploring Indicator Pages'
+
+    wrapper.classList.add('details-content-wrapper')
+    details.classList.add('info-toggle')
+    summary.classList.add('hover-text')
+
+    wrapper.appendChild(gifRow)
+    details.appendChild(summary)
+    details.appendChild(wrapper)
+
+    return details
+}
+
+const makeGeoDetails = () => {
+    const details = document.createElement('details')
+    
+    details.classList.add('info-toggle')
+    details.insertAdjacentHTML('afterbegin', `
+        <summary role="button" class="hover-text">Exploring Geographic Levels</summary>
+        <div class="details-content-wrapper details-text-content">
+            <figure class="modal-map-figure">
+                <a href="./img/MainDVRPCMap2-01.png"><img loading="lazy" src="./img/MainDVRPCMap2-01.png" alt="map of the DVRPC region" class="region-map" /></a>
+                <figcaption>
+                    <a href="./img/MainDVRPCMap2-01.png">view larger map</a>
+                </figcaption>
+            </figure>
+            <div>
+                <p class="splash-text"><em>Tracking Progress</em> uses subregional geographies to further analyze what drives regional trends and provide data relevant to our communities, member governments, and planning partners. "NJ Counties" (Burlington, Camden, Gloucester, and Mercer counties) and "PA Suburban Counties" (Bucks, Chester, Delaware, and Montgomery counties) are used as aggregations to pair with "Philadelphia" to draw broad comparisons of Philadelphia and its surrounding counties on either side of the river.</p>
+                <p class="splash-text">Some charts also group "All PA Counties", including Philadelphia, into one dataset. Many indicators offer individual county trends. Additionally, charts may group data by <a href="./pdf/Planning_Areas_2045_List.pdf">Planning Areas</a><span class="sm"> [0.1 MB pdf]</span> — a typology of the region's municipalities—into four classifications: Core Cities, Developed Communities, Growing Suburbs, and Rural Areas. Although these may be useful groupings, there are local nuances within any subgeography for which we cannot always account.</p>
+            </div>
+        </div>
+    `)
+
+    return details
+}
+
 const makeHowTo = () => {
     const modal = document.createElement('div')
     const content = document.createElement('div')
@@ -133,8 +172,8 @@ const makeHowTo = () => {
     const header = document.createElement('h2')
 
     const dashDetails = makeDashDetails('dash')
-    const indicatorDetails = document.createElement('details')
-    const geoDetails = document.createElement('details')
+    const indicatorDetails = makeIndicatorDetails('indicators')
+    const geoDetails = makeGeoDetails()
 
     modal.id = 'modal'
     modal.role = 'dialog'
@@ -145,53 +184,11 @@ const makeHowTo = () => {
     content.classList.add('modal-content')
     close.classList.add('modal-close')
     header.classList.add('modal-header')
-    dashDetails.classList.add('info-toggle')
-    indicatorDetails.classList.add('info-toggle')
-    geoDetails.classList.add('info-toggle')
-
-    dashDetails.open = true
 
     close.textContent = 'x'
     header.textContent = "Here's how to get started..."
-
-    const jawn = `
-        <details class="info-toggle">
-            <summary role="button" id="indicatorSummary" class="hover-text">Exploring Indicator Pages</summary>
-            <div class="details-content-wrapper">
-                <div class="gif-row">
-                    <figure class="gif-figure">
-                        <video controls width="300" height="215" id="indicator-text" type="video/mp4"></video>
-                        <figcaption class="gif-caption">Read each indicator's four narrative tabs to learn more, read analysis and explore othe resources.</figcaption>
-                    </figure>
-                    <figure class="gif-figure">
-                        <video controls width="300" height="215" id="indicator-data" type="video/mp4"></video>
-                        <figcaption class="gif-caption">Interact with charts by hovering over data points. Toggle data with the legend &amp; dropdown menus.</figcaption>
-                    </figure>
-                    <figure class="gif-figure">
-                        <video controls width="300" height="215" id="indicator-nav" type="video/mp4"></video>
-                        <figcaption class="gif-caption">View related indicators or return to the dashboard to view all indicators.</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </details>
-
-        <details class="info-toggle">
-            <summary role="button" class="hover-text">Exploring Geographic Levels</summary>
-            <div class="details-content-wrapper details-text-content">
-                <p class="splash-text"><em>Tracking Progress</em> uses subregional geographies to further analyze what drives regional trends and provide data relevant to our communities, member governments, and planning partners. "NJ Counties" (Burlington, Camden, Gloucester, and Mercer counties) and "PA Suburban Counties" (Bucks, Chester, Delaware, and Montgomery counties) are used as aggregations to pair with "Philadelphia" to draw broad comparisons of Philadelphia and its surrounding counties on either side of the river.</p>
-                <figure class="splash-map-figure">
-                    <a href="./img/MainDVRPCMap2-01.png"><img loading="lazy" src="./img/MainDVRPCMap2-01_reduced.png" alt="map of the DVRPC region" class="region-map" /></a>
-                    <figcaption>
-                        <a href="./img/MainDVRPCMap2-01.png">view a map of Planning Areas</a>
-                    </figcaption>
-                </figure>
-                <p class="splash-text">Some charts also group "All PA Counties", including Philadelphia, into one dataset. Many indicators offer individual county trends. Additionally, charts may group data by <a href="./pdf/Planning_Areas_2045_List.pdf">Planning Areas</a><span class="sm"> [0.1 MB pdf]</span> — a typology of the region's municipalities—into four classifications: Core Cities, Developed Communities, Growing Suburbs, and Rural Areas. Although these may be useful groupings, there are local nuances within any subgeography for which we cannot always account.</p>
-            </div>
-        </details>
-    `
     
     modal.onclick = e => {
-        e.preventDefault()
         if (e.target === modal) ariaHideModal(modal)
     }
 
@@ -203,9 +200,8 @@ const makeHowTo = () => {
     content.appendChild(close)
     content.appendChild(header)
     content.appendChild(dashDetails)
-
-    // @TEMP 
-    content.insertAdjacentHTML('beforeend', jawn)
+    content.appendChild(indicatorDetails)
+    content.appendChild(geoDetails)
     modal.appendChild(content)
     
     return modal
@@ -219,30 +215,6 @@ const ariaHideModal = modal => {
 const ariaShowModal = modal => {
     modal.style.display = 'initial'
     modal.setAttribute('aria-hidden', 'false')
-}
-
-// loop thru corresponding videos and add .mp4 src
-// @TODO: not needed anymore (?)
-    // only six gifs, three load when the modal is made.
-const loadVideos = toggle => {    
-    console.log('toggle ', toggle)
-
-    // return if the videos are already loaded
-    if(videosLoaded[toggle.id]) return
-        
-    const figures = toggle.nextElementSibling.children[0].children
-    const length = figures.length
-    var i = 0
-
-    // add src
-    for(i; i < length; i++) {
-        const video = figures[i].children[0]
-        const videoName = video.id
-        video.src = `./vid/${videoName}.mp4`
-    }
-
-    // flip videos loaded bool
-    videosLoaded[target.id] = true
 }
 
 export { makeHowTo, ariaShowModal, ariaHideModal }

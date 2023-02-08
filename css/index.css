@@ -168,7 +168,7 @@ fieldset {
 .modal-content {
     position: relative;
     width: 75%;
-    margin: 5% auto;
+    margin: 3.5% auto;
     background: var(--theme-main-white);
     padding-bottom: 24px;
     border-radius: var(--border-radius);
@@ -195,7 +195,7 @@ summary {
     cursor: pointer;
 }
 .info-toggle {
-    padding: 0 16px;
+    padding: 8px 16px;
 }
 .details-content-wrapper {
     padding: 18px 0;
@@ -258,6 +258,15 @@ summary {
     width: 3%;
     border-radius: 50%;
 }
+.details-text-content {
+    display: flex;
+    width: 94%;
+    margin: 0 auto;
+}
+.modal-map-figure {
+    width: 50%;
+    margin: 0 16px 16px 0;
+}
 
 
 
@@ -269,23 +278,17 @@ summary {
     background: rgba(79,163,168,0.1);
     visibility: visible;
 }
-.details-text-content {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-}
-.splash-map-wrapper {
-    align-items: center;
-}
 .header-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.splash-map-wrapper {
+    align-items: center;
+}
 .splash-map-figure {
-    width: 14%;
+    width: 15%;
     text-align: center;
     font-size: 0.8rem;
     margin: 0 2rem 0 0;
@@ -308,7 +311,7 @@ summary {
     margin-right: 1rem;
 }
 .splash-text {
-    width: 70ch;
+    width: 33em;
     line-height: 1.7rem;
     margin-right: 1.5rem;
 }
