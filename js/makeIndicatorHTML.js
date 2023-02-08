@@ -1,5 +1,4 @@
 import chartStrings from './indicatorChartStrings.js'
-import { catLookup } from './utils.js'
 
 let globalText = null;
 // START main

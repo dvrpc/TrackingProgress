@@ -3,12 +3,10 @@ import * as graphs from './viz.js'
 import snippetsRef from './ref.js'
 import { makeIndicatorHTML, make404 } from './makeIndicatorHTML.js'
 import { setIndicatorURL } from './routing.js'
-import { catLookup } from './utils.js'
 
 const grid = document.querySelector('.indicators-grid')
 
 // @TODO: don't need this after matrix update
-const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 const relatedIndicators = document.querySelector('.related-indicators')
 
 
