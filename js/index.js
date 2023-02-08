@@ -9,10 +9,6 @@ import { makeHowTo, ariaShowModal, ariaHideModal } from './modal.js'
 const splash = document.getElementById('splash-page')
 const viewHowTo = document.getElementById('view-how-to')
 const help = document.getElementById('help-btn')
-const videosLoaded = {
-    dashSummary: false,
-    indicatorSummary: false
-}
 let splashVisible = true
 let modal = false
 

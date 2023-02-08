@@ -67,7 +67,7 @@ summary, .modal-header, .homepage-btn {
     text-align: center;
     margin-bottom: 5%;
 }
-#emojis-row {
+.emojis-row {
     flex-wrap: wrap;
     justify-content: center;
 }

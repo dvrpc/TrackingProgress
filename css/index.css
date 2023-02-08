@@ -168,8 +168,6 @@ fieldset {
 .modal-content {
     position: relative;
     width: 75%;
-    max-height: 85%;
-    overflow-y: auto;
     margin: 5% auto;
     background: var(--theme-main-white);
     padding-bottom: 24px;
@@ -177,13 +175,14 @@ fieldset {
 }
 .modal-header {
     padding: 16px;
+    font-size: 1.25rem;
     background-color: var(--theme-main);
     color: var(--theme-main-white);
     border-radius: var(--border-radius);
 }
 .modal-close {
     position: absolute;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     right: 16px;
     top: 8px;
     font-size: 1.5em;
@@ -221,7 +220,7 @@ summary {
     font-size: 0.8rem;
     max-width: 100%;
 }
-#info-toggle-hr {
+.info-toggle-hr {
     width: 94%;
     margin: 2% auto;
 }
@@ -229,7 +228,7 @@ summary {
     width: 20%;
     margin: 0;
 }
-#emojis-row {
+.emojis-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
