@@ -16,13 +16,10 @@ body {
     border-right: none;
     height: 26px;
 }
-#logo-help-wrapper {
-    width: 50%;
-}
-#help-btn {
-    font-size: 1rem;
-    margin-left: 15px;
-    padding: 3px 9px;
+.nav-btn {
+    margin-left: 20px;
+    padding: 4px 6px;
+    font-weight: 400;
 }
 #tp-logo {
     height: 30px;
@@ -56,7 +53,7 @@ body {
 .text-right {
     text-align: left;
 }
-summary, #get-started, .homepage-btn {
+summary, .modal-header, .homepage-btn {
     font-size: 1em;
 }
 .gif-row {
@@ -84,9 +81,6 @@ summary, #get-started, .homepage-btn {
 .homepage-btn {
     padding: 5px 10px;
     margin-bottom: 6px;
-}
-#view-how-to {
-    float: right;
 }
 
 

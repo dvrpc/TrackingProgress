@@ -1,3 +1,21 @@
+const videoMeta = {
+    dash: [
+        {
+            id: 'hover-tiles',
+            src: './vid/hover-tiles.mp4'
+        }
+    ],
+    indicators: [
+        {
+
+        }
+    ]
+}
+
+// @RETURNS a <div><gifs></dif>
+// videoMeta.dash.map(jawn => logic)
+// videoMeta.indicators.map(jawn => logic)
+
 const makeHowTo = () => {
     const modal = document.createElement('div')
     const content = document.createElement('div')
@@ -27,7 +45,7 @@ const makeHowTo = () => {
     // viewHowTo.classList.remove('hover-btn')
 
     const jawn = `
-        <h3 id="get-started">Here's how to get started...</h3>
+        <h2 id="get-started" class="modal-header">Here's how to get started...</h3>
         <details class="info-toggle" open>
             <summary role="button" id="dashSummary" class="hover-text">Exploring the Dashboard</summary>
             <div class="details-content-wrapper">
@@ -96,7 +114,7 @@ const makeHowTo = () => {
             </div>
         </details>
 
-        <details>
+        <details class="info-toggle">
             <summary role="button" class="hover-text">Exploring Geographic Levels</summary>
             <div class="details-content-wrapper details-text-content">
                 <p class="splash-text"><em>Tracking Progress</em> uses subregional geographies to further analyze what drives regional trends and provide data relevant to our communities, member governments, and planning partners. "NJ Counties" (Burlington, Camden, Gloucester, and Mercer counties) and "PA Suburban Counties" (Bucks, Chester, Delaware, and Montgomery counties) are used as aggregations to pair with "Philadelphia" to draw broad comparisons of Philadelphia and its surrounding counties on either side of the river.</p>
@@ -112,7 +130,13 @@ const makeHowTo = () => {
     `
     
     modal.onclick = e => {
+        e.preventDefault()
         if (e.target === modal) ariaHideModal(modal)
+    }
+
+    close.onclick = e => {
+        e.preventDefault()
+        ariaHideModal(modal)
     }
 
     modal.appendChild(content)
@@ -128,10 +152,7 @@ const ariaHideModal = modal => {
 }
 
 const ariaShowModal = modal => {
-    modal.style.display = 'flex'
-    modal.style.justifyContent = 'center'
-    modal.style.alignItems = 'center'
-
+    modal.style.display = 'initial'
     modal.setAttribute('aria-hidden', 'false')
 }
 
@@ -161,14 +182,5 @@ const loadVideos = toggle => {
 // modalToggle.onclick = () => ariaShowModal()
 // closeModal.onclick = () => ariaHideModal()
 
-// modal.onclick = event => {
-//   if (event.target == modal) ariaHideModal(modal)
-// }
-// document.onkeydown = event => {
-//   // only hide open modals 
-//   if( event.code === 'Escape' && modal.style.display === 'flex'){
-//     ariaHideModal(modal)
-//   }
-// }
 
-export default makeHowTo
+export { makeHowTo, ariaShowModal, ariaHideModal }

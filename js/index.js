@@ -1,6 +1,6 @@
 import { toggleIndicators, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
-import makeHowTo from './modal.js'
+import { makeHowTo, ariaShowModal, ariaHideModal } from './modal.js'
 
 
 /**************************************************/
@@ -14,6 +14,7 @@ const videosLoaded = {
     indicatorSummary: false
 }
 let splashVisible = true
+let modal = false
 
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
@@ -34,17 +35,8 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 /**************************************************/
 /*************** Splash Page events ***************/
-// @TODO: refactor to modal toggle fnc
-viewHowTo.onclick = e => {
-    e.preventDefault()
-    
-    // make it on first pass, otherwise just toggle on/off
-    const howTo = makeHowTo()
-    const wrapper = splash.parentElement
-    wrapper.appendChild(howTo)
-}
-
 // when the splash page is visible, listen to scroll events to know when to hide it
+// @TODO: for perf, refactor as observer 
 document.onscroll = () => {
     if(!splashVisible) return
     
@@ -91,6 +83,28 @@ help.onclick = () => {
 
     // hide the (i)
     help.classList.remove('fade-in')
+}
+
+// toggle modal state
+viewHowTo.onclick = e => {
+    e.preventDefault()
+    
+    if(modal) {
+        ariaShowModal(modal)
+    } else {
+        const howTo = makeHowTo()
+        const wrapper = splash.parentElement
+        wrapper.appendChild(howTo)
+        modal = howTo
+    }
+}
+
+// close modal w/escape key
+document.onkeydown = event => {
+  // only hide existing, open modals 
+  if( event.code === 'Escape' && modal && modal.style.display !== 'none'){
+    ariaHideModal(modal)
+  }
 }
 
 
