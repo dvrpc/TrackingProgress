@@ -350,7 +350,7 @@ summary {
     -webkit-transition: width 2s;
     -moz-transition: width 2s;
     -o-transition: width 2s;
-    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
 }
 .indicators-nav-indicators-page {
     position: sticky;

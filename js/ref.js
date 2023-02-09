@@ -1,6 +1,6 @@
 const snippetsRef = {
     'Air Quality': {
-        categories: ['enviro', 'transpo'],
+        categories: ['enviro', 'transpo', 'sustain', 'equity'],
         trend: {
             status: 'good',
             text: {
@@ -73,7 +73,7 @@ const snippetsRef = {
         ]
     },
     'Miles Driven': {
-        categories: ['transpo','enviro'],
+        categories: ['transpo','enviro', 'sustain'],
         trend: {
             status: 'neutral',
             text: {
@@ -167,7 +167,7 @@ const snippetsRef = {
         ]
     },
     'Educational Attainment': {
-        categories: ['comm', 'econo'],
+        categories: ['comm', 'econo', 'equity'],
         trend: {
             status: 'good',
             text: {
@@ -335,7 +335,7 @@ const snippetsRef = {
         ]
     },
     'Roadway Safety': {
-        categories: ['transpo'],
+        categories: ['transpo', 'equity'],
         trend: {
             status: 'not-great',
             text: {
@@ -507,7 +507,7 @@ const snippetsRef = {
         ]
     },
     'Housing Activity': {
-        categories: ['comm', 'econo', 'enviro'],
+        categories: ['comm', 'econo', 'enviro', 'sustain'],
         trend: {
             status: 'good',
             text: {
@@ -624,7 +624,7 @@ const snippetsRef = {
         ]
     },
     'Housing Affordability': {
-        categories: ['comm', 'econo'],
+        categories: ['comm', 'econo', 'resil', 'equity'],
         trend: {
             status: 'neutral',
             text: {
@@ -860,7 +860,7 @@ const snippetsRef = {
         ]
     },
     'Job Growth': {
-      categories: ['econo', 'comm'],
+      categories: ['econo', 'comm', 'resil'],
       trend: {
         status: 'good',
         text: {
@@ -1259,7 +1259,7 @@ const snippetsRef = {
       ]
     },
     'Segregation': {
-      categories: ['comm', 'econo'],
+      categories: ['comm', 'econo', 'equity'],
       trend: {
         status: 'neutral',
         text: {
@@ -1305,7 +1305,7 @@ const snippetsRef = {
       ]
     },
     'Income': {
-        categories: ['econo','comm'],
+        categories: ['econo','comm', 'equity', 'resil'],
         trend: {
             status: 'bad',
             text: {
@@ -1673,7 +1673,7 @@ const snippetsRef = {
         ]
     },
     'Labor Force': {
-        categories: ['econo','comm'],
+        categories: ['econo','comm', 'equity'],
         trend: {
             status: 'neutral',
             text: {
@@ -1880,7 +1880,7 @@ const snippetsRef = {
         ]
     },
     'Congestion': {
-        categories: ['transpo', 'econo', 'comm'],
+        categories: ['transpo', 'econo', 'comm', 'sustain'],
         trend: {
             status: 'neutral',
             text: {
@@ -2105,7 +2105,7 @@ const snippetsRef = {
         ]
     },
     'Commute Mode': {
-        categories: ['transpo', 'enviro', 'comm'],
+        categories: ['transpo', 'enviro', 'comm', 'sustain'],
         trend: {
             status: 'neutral',
             text: {
@@ -2389,7 +2389,7 @@ const snippetsRef = {
         ]
     },
     'Transit Ridership': {
-        categories: ['transpo','comm','enviro'],
+        categories: ['transpo','comm','enviro','sustain'],
         trend: {
             status: 'neutral',
             text: {
@@ -2490,7 +2490,7 @@ const snippetsRef = {
         ]
     },
     'Greenhouse Gas Emissions': {
-        categories: ['enviro','comm'],
+        categories: ['enviro','comm', 'sustain', 'resil'],
         trend: {
             status: 'good',
             text: {
@@ -2629,7 +2629,7 @@ const snippetsRef = {
         ]
     },
     'Transit Conditions': {
-        categories: ['transpo'],
+        categories: ['transpo', 'resil'],
         trend: {
             status: 'neutral',
             text: {
@@ -2758,7 +2758,7 @@ const snippetsRef = {
         ]
     },
     'Business Formations': {
-        categories: ['econo'],
+        categories: ['econo', 'resil'],
         trend: {
             status: 'good',
             text: {
@@ -3107,7 +3107,7 @@ const snippetsRef = {
         ]
     },
     'Bridge Conditions': {
-        categories: ['transpo'],
+        categories: ['transpo', 'resil'],
         trend: {
             status: 'awesome',
             text: {
@@ -3250,7 +3250,7 @@ const snippetsRef = {
         ]
     },
     'Water Quality': {
-        categories: ['enviro'],
+        categories: ['enviro','sustain'],
         trend: {
             status: 'not-great',
             text: {
@@ -3331,7 +3331,7 @@ const snippetsRef = {
         ]
     },
     'Land Consumption': {
-        categories: ['enviro', 'comm'],
+        categories: ['enviro', 'comm', 'sustain', 'resil'],
         trend: {
             status: 'good',
             text: {
@@ -3678,7 +3678,7 @@ const snippetsRef = {
         ]
     },
     'Pavement Conditions': {
-        categories: ['transpo'],
+        categories: ['transpo', 'resil'],
         trend: {
             status: 'bad',
             text: {
