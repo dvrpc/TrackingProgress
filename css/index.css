@@ -551,6 +551,9 @@ summary {
 .indicators-snippet-visible {
     opacity: 100%;
 }
+.indicator-not-found {
+    opacity: 100%;
+}
 #description-wrapper, .toggle-wrapper, .chart-src, .data-viz {
     width: 70%;
 }

@@ -81,7 +81,7 @@ const make404 = () => {
    const text = document.createElement('p')
 
    // identify elements
-   snippet.classList.add('indicators-snippet')
+   snippet.classList.add('indicators-snippet', 'indicator-not-found')
    headerWrapper.id = 'indicator-header-wrapper'
    header.classList.add('indicator-header')
    catWrapper.classList.add('indicator-category-icons')
