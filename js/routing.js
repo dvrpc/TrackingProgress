@@ -37,7 +37,6 @@ const setIndicatorURL = title => {
 
 // parses the URL hash and hydrates the page with the appropriate information
 const updateView = () => {
-    // let hash = hashParam ? hashParam : sanitizeHash(location.hash)
     const hash = location.hash ? sanitizeHash(location.hash) : false
 
     if(hash){
@@ -57,7 +56,11 @@ const updateView = () => {
 
     }else{
         const relatedIndicators = document.querySelector('.related-indicators')
+        const snippet = dashboard.querySelector('.indicators-snippet')
+
         nav.classList.remove('indicators-nav-indicators-page')
+        snippet.classList.remove('notransition')
+        
         makeDashboard(relatedIndicators)
     }
 }

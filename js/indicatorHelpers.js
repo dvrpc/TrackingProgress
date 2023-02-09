@@ -150,6 +150,7 @@ const getIndicatorSnippet = async (ref, indicatorParams) => {
     // send user to the top of the indicator page
     window.scrollTo(0,0)
 
+    if(indicatorParams.replaceOld) snippet.classList.add('notransition')
     snippet.classList.add('indicators-snippet-visible')
 }
 
@@ -208,16 +209,21 @@ const makeIndicatorPage = hashArray => {
     const newIndicator = grid.querySelector(`#${titleString}`)
     const title = titleString.replace(/-/g, ' ')
     const ref = snippetsRef[title]
+    let replaceOld = false
 
     // remove an existing indicator page before continuing
     const oldIndicator = document.querySelector('.indicators-snippet')
-    if(oldIndicator) oldIndicator.remove()
+
+    if(oldIndicator) { 
+        oldIndicator.remove()
+        replaceOld = true
+    }
 
     // create the indicator page if it exists
     if(ref){
         const categories = ref.categories
         const trend = ref.trend
-        const indicatorParams = {title, categories, trend}
+        const indicatorParams = {title, categories, trend, replaceOld}
 
         generateSideNav(newIndicator, relatedIndicators)
         getIndicatorSnippet(ref, indicatorParams)
