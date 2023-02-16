@@ -2016,8 +2016,7 @@ const snippetsRef = {
             }
         ]
     },
-    // @TODO: remove?
-    'Exported Goods': {
+    'Gross Domestic Product': {
         categories: ['econo'],
         trend: {
             status: 'not-great',
@@ -2030,78 +2029,326 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['Exports'],
+                dataSource: ['gdp_chart1a', 'gdp_chart1b', 'gdp_chart1c'],
                 context: {
-                    labels: ['Billions of Dollars (2018)'],
-                    units: ['dollars']
+                    labels: ['Growth Rate', 'Growth Rate', 'Total GDP in Millions of Dollars (2021)'],
+                    keepLabels: false,
+                    units: ['dollars', 'dollars', 'dollars'],
+                    keepUnits: false
                 },
+                columnOptions: [
+                    [
+                        'dvrpc_total',    'njcos_total',
+                        'pasubcos_total', 'bucks_total',
+                        'burl_total',     'camd_total',
+                        'ches_total',     'del_total',
+                        'glo_total',      'mer_total',
+                        'mont_total',     'phil_total'
+                    ],
+                    [
+                        'dvrpc_goods',    'njcos_goods',
+                        'pasubcos_goods', 'bucks_goods',
+                        'burl_goods',     'camd_goods',
+                        'ches_goods',     'del_goods',
+                        'glo_goods',      'mer_goods',
+                        'mont_goods',     'phil_goods'
+                    ],
+                    [
+                        'dvrpc_ag_for_fish_min',
+                        'njcos_ag_for_fish_min',
+                        'pasubcos_ag_for_fish_min',
+                        'bucks_ag_for_fish_min',
+                        'burl_ag_for_fish_min',
+                        'camd_ag_for_fish_min',
+                        'ches_ag_for_fish_min',
+                        'del_ag_for_fish_min',
+                        'glo_ag_for_fish_min',
+                        'mer_ag_for_fish_min',
+                        'mont_ag_for_fish_min',
+                        'phil_ag_for_fish_min'
+                    ],
+                    [
+                        'dvrpc_construction',
+                        'njcos_construction',
+                        'pasubcos_construction',
+                        'bucks_construction',
+                        'burl_construction',
+                        'camd_construction',
+                        'ches_construction',
+                        'del_construction',
+                        'glo_construction',
+                        'mer_construction',
+                        'mont_construction',
+                        'phil_construction'
+                    ],
+                    [
+                        'dvrpc_manufacturing',
+                        'njcos_manufacturing',
+                        'pasubcos_manufacturing',
+                        'bucks_manufacturing',
+                        'burl_manufacturing',
+                        'camd_manufacturing',
+                        'ches_manufacturing',
+                        'del_manufacturing',
+                        'glo_manufacturing',
+                        'mer_manufacturing',
+                        'mont_manufacturing',
+                        'phil_manufacturing'
+                    ],
+                    [
+                        'dvrpc_manu_durable',
+                        'njcos_manu_durable',
+                        'pasubcos_manu_durable',
+                        'bucks_manu_durable',
+                        'burl_manu_durable',
+                        'camd_manu_durable',
+                        'ches_manu_durable',
+                        'del_manu_durable',
+                        'glo_manu_durable',
+                        'mer_manu_durable',
+                        'mont_manu_durable',
+                        'phil_manu_durable'
+                    ],
+                    [
+                        'dvrpc_manu_nondurable',
+                        'njcos_manu_nondurable',
+                        'pasubcos_manu_nondurable',
+                        'bucks_manu_nondurable',
+                        'burl_manu_nondurable',
+                        'camd_manu_nondurable',
+                        'ches_manu_nondurable',
+                        'del_manu_nondurable',
+                        'glo_manu_nondurable',
+                        'mer_manu_nondurable',
+                        'mont_manu_nondurable',
+                        'phil_manu_nondurable'
+                    ],
+                    [
+                        'dvrpc_services',
+                        'njcos_services',
+                        'pasubcos_services',
+                        'bucks_services',
+                        'burl_services',
+                        'camd_services',
+                        'ches_services',
+                        'del_services',
+                        'glo_services',
+                        'mer_services',
+                        'mont_services',
+                        'phil_services'
+                    ],
+                    [
+                        'dvrpc_art_ent_rec_acc_food',
+                        'njcos_art_ent_rec_acc_food',
+                        'pasubcos_art_ent_rec_acc_food',
+                        'bucks_art_ent_rec_acc_food',
+                        'burl_art_ent_rec_acc_food',
+                        'camd_art_ent_rec_acc_food',
+                        'ches_art_ent_rec_acc_food',
+                        'del_art_ent_rec_acc_food',
+                        'glo_art_ent_rec_acc_food',
+                        'mer_art_ent_rec_acc_food',
+                        'mont_art_ent_rec_acc_food',
+                        'phil_art_ent_rec_acc_food'
+                    ],
+                    [
+                        'dvrpc_ed_services',
+                        'njcos_ed_services',
+                        'pasubcos_ed_services',
+                        'bucks_ed_services',
+                        'burl_ed_services',
+                        'camd_ed_services',
+                        'ches_ed_services',
+                        'del_ed_services',
+                        'glo_ed_services',
+                        'mer_ed_services',
+                        'mont_ed_services',
+                        'phil_ed_services'
+                    ],
+                    [
+                        'dvrpc_fin_insur_real_est',
+                        'njcos_fin_insur_real_est',
+                        'pasubcos_fin_insur_real_est',
+                        'bucks_fin_insur_real_est',
+                        'burl_fin_insur_real_est',
+                        'camd_fin_insur_real_est',
+                        'ches_fin_insur_real_est',
+                        'del_fin_insur_real_est',
+                        'glo_fin_insur_real_est',
+                        'mer_fin_insur_real_est',
+                        'mont_fin_insur_real_est',
+                        'phil_fin_insur_real_est'
+                    ],
+                    [
+                        'dvrpc_health_social_assist',
+                        'njcos_health_social_assist',
+                        'pasubcos_health_social_assist',
+                        'bucks_health_social_assist',
+                        'burl_health_social_assist',
+                        'camd_health_social_assist',
+                        'ches_health_social_assist',
+                        'del_health_social_assist',
+                        'glo_health_social_assist',
+                        'mer_health_social_assist',
+                        'mont_health_social_assist',
+                        'phil_health_social_assist'
+                    ],
+                    [
+                        'dvrpc_information',
+                        'njcos_information',
+                        'pasubcos_information',
+                        'bucks_information',
+                        'burl_information',
+                        'camd_information',
+                        'ches_information',
+                        'del_information',
+                        'glo_information',
+                        'mer_information',
+                        'mont_information',
+                        'phil_information'
+                    ],
+                    [
+                        'dvrpc_other_services',
+                        'njcos_other_services',
+                        'pasubcos_other_services',
+                        'bucks_other_services',
+                        'burl_other_services',
+                        'camd_other_services',
+                        'ches_other_services',
+                        'del_other_services',
+                        'glo_other_services',
+                        'mer_other_services',
+                        'mont_other_services',
+                        'phil_other_services'
+                    ],
+                    [
+                        'dvrpc_prof_services',
+                        'njcos_prof_services',
+                        'pasubcos_prof_services',
+                        'bucks_prof_services',
+                        'burl_prof_services',
+                        'camd_prof_services',
+                        'ches_prof_services',
+                        'del_prof_services',
+                        'glo_prof_services',
+                        'mer_prof_services',
+                        'mont_prof_services',
+                        'phil_prof_services'
+                    ],
+                    [
+                        'dvrpc_retail_trade',
+                        'njcos_retail_trade',
+                        'pasubcos_retail_trade',
+                        'bucks_retail_trade',
+                        'burl_retail_trade',
+                        'camd_retail_trade',
+                        'ches_retail_trade',
+                        'del_retail_trade',
+                        'glo_retail_trade',
+                        'mer_retail_trade',
+                        'mont_retail_trade',
+                        'phil_retail_trade'
+                    ],
+                    [
+                        'dvrpc_transp_warehouse_util',
+                        'njcos_transp_warehouse_util',
+                        'pasubcos_transp_warehouse_util',
+                        'bucks_transp_warehouse_util',
+                        'burl_transp_warehouse_util',
+                        'camd_transp_warehouse_util',
+                        'ches_transp_warehouse_util',
+                        'del_transp_warehouse_util',
+                        'glo_transp_warehouse_util',
+                        'mer_transp_warehouse_util',
+                        'mont_transp_warehouse_util',
+                        'phil_transp_warehouse_util'
+                    ],
+                    [
+                        'dvrpc_wholesale_trade',
+                        'njcos_wholesale_trade',
+                        'pasubcos_wholesale_trade',
+                        'bucks_wholesale_trade',
+                        'burl_wholesale_trade',
+                        'camd_wholesale_trade',
+                        'ches_wholesale_trade',
+                        'del_wholesale_trade',
+                        'glo_wholesale_trade',
+                        'mer_wholesale_trade',
+                        'mont_wholesale_trade',
+                        'phil_wholesale_trade'
+                    ],
+                    [
+                        'dvrpc_gov',    'njcos_gov',
+                        'pasubcos_gov', 'bucks_gov',
+                        'burl_gov',     'camd_gov',
+                        'ches_gov',     'del_gov',
+                        'glo_gov',      'mer_gov',
+                        'mont_gov',     'phil_gov'
+                    ]
+
+                ],
                 data: [
                     {
                         'key': 'DVRPC Region*',
-                        columns: ['year', 'DVRPC']
+                        columns: ['year', 'dvrpc_total'],
                     },
                     {
                         'key': 'NJ Counties*',
+                        columns: ['year', 'njcos_total'],
                         disabled: true,
-                        columns: ['year', 'NJ Counties']
-                    },
-                    {
-                        'key': 'All PA Counties*',
-                        disabled: true,
-                        columns: ['year', 'PA Counties']
                     },
                     {
                         'key': 'PA Suburban Counties*',
+                        columns: ['year', 'pasubcos_total'],
                         disabled: true,
-                        columns: ['year', 'Suburban PA']
                     },
                     {
                         'key': 'Bucks**',
+                        columns: ['year', 'bucks_total'],
                         disabled: true,
-                        columns: ['year', 'Bucks']
                     },
                     {
                         'key': 'Burlington**',
+                        columns: ['year', 'burl_total'],
                         disabled: true,
-                        columns: ['year', 'Burlington']
                     },
                     {
                         'key': 'Camden**',
+                        columns: ['year', 'camd_total'],
                         disabled: true,
-                        columns: ['year', 'Camden']
                     },
                     {
                         'key': 'Chester**',
+                        columns: ['year', 'ches_total'],   
                         disabled: true,
-                        columns: ['year', 'Chester']
                     },
                     {
                         'key': 'Delaware**',
+                        columns: ['year', 'del_total'],
                         disabled: true,
-                        columns: ['year', 'Delaware']
                     },
                     {
                         'key': 'Gloucester**',
+                        columns: ['year', 'glo_total'],
                         disabled: true,
-                        columns: ['year', 'Gloucester']
                     },
                     {
                         'key': 'Mercer**',
+                        columns: ['year', 'mer_total'],
                         disabled: true,
-                        columns: ['year', 'Mercer']
                     },
                     {
                         'key': 'Montgomery**',
+                        columns: ['year', 'mont_total'],
                         disabled: true,
-                        columns: ['year', 'Montgomery']
                     },
                     {
                         'key': 'Philadelphia**',
+                        columns: ['year', 'phil_total'],
                         disabled: true,
-                        columns: ['year', 'Philadelphia']
-                    }
+                    },
                 ]
-            }
+            },
         ]
     },
     'Commute Mode': {

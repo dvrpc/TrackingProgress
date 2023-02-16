@@ -374,13 +374,56 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census &amp; American Community Survey, DVRPC</em></small>`,
-    'Exported Goods':`
-        <h2 class="indicator-subheader">Merchandise Trade Exports to the World by Geography</h2>
+    'Gross Domestic Product':`
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Average Income by Household Income Grouping</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Industry
+                        <select id="viz-0" class="toggle-data-selector">
+                            <option value="0">All Industries</option>
+                            <optgroup label="Goods">
+                                <option value="0">Agriculture, Forestry, Fishing, and Mining</option>
+                                <option value="1">Construction</option>
+                                <option value="3">Manufacturing</option>
+                                <option value="4">Durable Goods</option>   
+                                <option value="5">Nondurable Goods</option>    
+                            </optgroup> 
+                            <optgroup label="Services">
+                                <option value="6">Arts, Entertainment, Recreaction, Accommodation, and Food Services</option>
+                                <option value="7">Educational Services</option>
+                                <option value="8">Finance, Insurance, Real Estate</option>
+                                <option value="9">Health Care and Social Assistance</option>
+                                <option value="10">Information</option>
+                                <option value="11">Other Services (except Government)</option>
+                                <option value="12">Professional Services</option>
+                                <option value="13">Retail Trade</option>
+                                <option value="14">Transportation, Warehousing, and Utilities</option>
+                                <option value="15">Wholesale Trade</option>
+                                <option value="16">Government and government enterprises</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-0-b" class="toggle-data-selector">
+                            <option value="0">Annual Change</option>
+                            <option value="1">Change Since Base Year</option>
+                            <option value="2">Total GDP</option>                       
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
         <div class="data-viz chart">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
-        <small class="chart-src">Sources: International Trade Administration's Office of Trade and Industry Information, Manufacturing and Services, DVRPC</small>`,
+        <small class="chart-src"><em>Sources: U.S. Census Bureau's American Community Survey, DVRPC</em></small>
+    `,
     'Global Connectivity':`
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Destinations of Flights from Philadelphia International Airport (PHL) by Airport Location</h2>
