@@ -423,7 +423,42 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's American Community Survey, DVRPC</em></small>
-    `,
+  
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Job Distribution by Industry</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-1" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart1">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
+        <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>`,
     'Global Connectivity':`
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Destinations of Flights from Philadelphia International Airport (PHL) by Airport Location</h2>
