@@ -435,7 +435,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Environmental Protection Agency, Emissions & Generation Resource Integrated Database (eGRID)</em></small>
-        <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>
+        
 
         <hr class="indicator-content-hr" />
 
@@ -972,7 +972,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Geography: ** County</em></small>
         <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
-        <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>
+        
 
         <hr class="indicator-content-hr" />
 
@@ -1008,7 +1008,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
-        <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>`,
+        `,
     'Land Consumption':`
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Developed and Agricultural Land by Geography</h2>
