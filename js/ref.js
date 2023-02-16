@@ -2628,6 +2628,53 @@ const snippetsRef = {
             },
           ],
         },
+        {
+          type: 'stacked bar',
+          container: 'chart2',
+          dataSource: ['gdp_chart3'],
+          context: {
+            labels: ['Percentage of Regional GDP'],
+            units: ['percent'],
+          },
+          data: [
+            {
+              key: 'Bucks**',
+              columns: ['year', 'bucks_share'],
+            },
+            {
+              key: 'Burlington**',
+              columns: ['year', 'burl_share'],
+            },
+            {
+              key: 'Camden**',
+              columns: ['year', 'camd_share'],
+            },
+            {
+              key: 'Chester**',
+              columns: ['year', 'ches_share'],
+            },
+            {
+              key: 'Delaware**',
+              columns: ['year', 'del_share'],
+            },
+            {
+              key: 'Gloucester**',
+              columns: ['year', 'glo_share'],
+            },
+            {
+              key: 'Mercer**',
+              columns: ['year', 'mer_share'],
+            },
+            {
+              key: 'Montgomery**',
+              columns: ['year', 'mont_share'],
+            },
+            {
+              key: 'Philadelphia**',
+              columns: ['year', 'phil_share'],
+            },
+          ],
+        },
         ]
     },
     'Commute Mode': {
