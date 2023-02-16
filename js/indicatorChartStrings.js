@@ -427,7 +427,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Job Distribution by Industry</h2>
+            <h2 class="indicator-subheader toggle-subheader">GDP Distribution by Industry</h2>
             <form>
                 <fieldset>
                     <label>

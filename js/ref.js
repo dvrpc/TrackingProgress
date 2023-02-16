@@ -2354,7 +2354,7 @@ const snippetsRef = {
           container: 'chart1',
           dataSource: ['gdp_chart2'],
           context: {
-            labels: ['Percentage of Total Jobs'],
+            labels: ['Percentage of GDP'],
             keepLabels: true,
             units: ['percent'],
             keepUnits: true,
