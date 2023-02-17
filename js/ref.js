@@ -456,7 +456,7 @@ const snippetsRef = {
         ]
     },
     // @TODO: remove?
-    'Global Connectivity': {
+    'Mortgage Lending': {
         categories: ['econo', 'transpo'],
         trend: {
             status: 'neutral',
@@ -1258,7 +1258,7 @@ const snippetsRef = {
         },
       ]
     },
-    'Segregation': {
+    'Community Integration': {
       categories: ['comm', 'econo', 'equity'],
       trend: {
         status: 'neutral',

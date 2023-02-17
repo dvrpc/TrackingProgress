@@ -381,7 +381,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
         <small class="chart-src">Sources: International Trade Administration's Office of Trade and Industry Information, Manufacturing and Services, DVRPC</small>`,
-    'Global Connectivity':`
+    'Mortgage Lending':`
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Destinations of Flights from Philadelphia International Airport (PHL) by Airport Location</h2>
         <form>
@@ -1424,7 +1424,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
-    'Segregation':`
+    'Community Integration':`
         <h2 class="indicator-subheader">Racial/Ethnic Segregation Index</h2>
         <div class="data-viz chart">
             <svg></svg>
