@@ -3230,10 +3230,6 @@ const snippetsRef = {
                 ],
                 data: [
                     {
-                        'key': 'No Data',
-                        columns: ['year', 'DVRPC- NA']
-                    },
-                    {
                         'key': 'Poor',
                         columns: ['year', 'DVRPC- Poor']
                     },
