@@ -3214,7 +3214,7 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
+                    ['DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
                     ['New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
                     ['Pennsylvania All Counties- Poor','Pennsylvania All Counties- Fair','Pennsylvania All Counties- Good'],
                     ['Pennsylvania Suburbs- Poor','Pennsylvania Suburbs- Fair','Pennsylvania Suburbs- Good'],
