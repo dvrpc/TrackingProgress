@@ -374,7 +374,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census &amp; American Community Survey, DVRPC</em></small>`,
-    'Exported Goods':`
+    'Gross Domestic Product':`
         <h2 class="indicator-subheader">Merchandise Trade Exports to the World by Geography</h2>
         <div class="data-viz chart">
             <svg></svg>

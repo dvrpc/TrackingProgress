@@ -455,9 +455,8 @@ const snippetsRef = {
             },
         ]
     },
-    // @TODO: remove?
     'Mortgage Lending': {
-        categories: ['econo', 'transpo'],
+        categories: ['econo', 'transpo','equity','resil'],
         trend: {
             status: 'neutral',
             text: {
@@ -2016,9 +2015,8 @@ const snippetsRef = {
             }
         ]
     },
-    // @TODO: remove?
-    'Exported Goods': {
-        categories: ['econo'],
+    'Gross Domestic Product': {
+        categories: ['econo','resil'],
         trend: {
             status: 'not-great',
             text: {
