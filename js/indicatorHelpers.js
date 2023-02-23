@@ -3,10 +3,8 @@ import * as graphs from './viz.js'
 import snippetsRef from './ref.js'
 import { makeIndicatorHTML, make404 } from './makeIndicatorHTML.js'
 import { setIndicatorURL } from './routing.js'
-import { catLookup } from './utils.js'
 
 const grid = document.querySelector('.indicators-grid')
-const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 const relatedIndicators = document.querySelector('.related-indicators')
 
 
@@ -151,66 +149,50 @@ const getIndicatorSnippet = async (ref, indicatorParams) => {
 
     // send user to the top of the indicator page
     window.scrollTo(0,0)
+
+    if(indicatorParams.replaceOld) snippet.classList.add('notransition')
+    snippet.classList.add('indicators-snippet-visible')
 }
 
-const makeRelatedSubheader = cat => {
-    const accentColor = catLookup[cat].dark
-    const name = catLookup[cat].name
-    const frag = document.createDocumentFragment()
-    const wrapper = document.createElement('div')
-    const img = document.createElement('img')
+const makeRelatedSubheader = () => {
     const subheader = document.createElement('h3')
-
-    wrapper.id = 'related-indicators-subheader-wrapper'
-    relatedIndicators.style.backgroundColor = accentColor
-    
-    img.src =  `./img/sidenav/${cat}.png`
-    img.alt = `${cat} icons`
-    img.id="related-indicators-subheader-img"
     
     subheader.id = 'related-indicators-subheader'
-    subheader.innerHTML = `${name} <br /> Indicators`
+    subheader.innerHTML = `Related Indicators`
 
-    wrapper.appendChild(subheader)
-    wrapper.appendChild(img)
-    frag.appendChild(wrapper)
-
-    return frag
+    return subheader
 }
 
 // populate the side nav with indicators that share a primary category for easy switching w/o having to go back to the main dashboard view
-const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
-        
+/*
+    @PARAMS: relatedIndicators: list of links
+*/
+const generateSideNav = (newIndicator, relatedIndicators) => {
+    
     // clear the side nav of all it's children
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
 
     // use primary category to create the "related indicators" subheader
-    const subheader = makeRelatedSubheader(primaryCategory)
+    const subheader = makeRelatedSubheader()
 
     // create a fragment to house each sidelink
     let sideLinks = document.createDocumentFragment()
+    const indicatorMatrix = newIndicator.dataset.matrix.split(' ')
 
-    // using the classlist from the clicked indicator, add all others w/same primary indicator (first on the list, for now)
-    indicators.forEach(indicator => {
-        const indicatorPrimaryCategory = indicator.dataset.primary
-        
-        if(indicatorPrimaryCategory === primaryCategory){
+    indicatorMatrix.forEach(associated => {
+        // create a link to the indicator page that will go on the side bar
+        let sideLink = document.createElement('span')
 
-            //  create a link to the indicator page that will go on the side bar
-            let sideLink = document.createElement('span')
+        // get a handle on the necessary info
+        const linkTitle = associated.split('-').join(' ')
 
-            // get a handle on the necessary info
-            const linkTitle = indicator.querySelector('.indicators-title').textContent
+        // update basic info + styling
+        sideLink.textContent = linkTitle
+        sideLink.classList.add('sideLink')
 
-            // update basic info + styling
-            sideLink.textContent = linkTitle
-            sideLink.classList.add('sideLink')
-            sideLink.classList.add(indicatorPrimaryCategory)
-
-            sideLinks.appendChild(sideLink)
-        }
+        sideLinks.appendChild(sideLink)
     })
 
     relatedIndicators.appendChild(subheader)
@@ -223,22 +205,27 @@ const generateSideNav = (indicators, relatedIndicators, primaryCategory) => {
 
 // helper function for the routing
 const makeIndicatorPage = hashArray => {
-    const title = hashArray[0].replace(/-/g, ' ')
+    const titleString = hashArray[0]
+    const newIndicator = grid.querySelector(`#${titleString}`)
+    const title = titleString.replace(/-/g, ' ')
     const ref = snippetsRef[title]
+    let replaceOld = false
 
     // remove an existing indicator page before continuing
     const oldIndicator = document.querySelector('.indicators-snippet')
-    if(oldIndicator) oldIndicator.remove()
+
+    if(oldIndicator) { 
+        oldIndicator.remove()
+        replaceOld = true
+    }
 
     // create the indicator page if it exists
     if(ref){
         const categories = ref.categories
-        const primaryCategory = categories[0]
         const trend = ref.trend
-        const text = ref.text
-        const indicatorParams = {title, categories, trend, text}
+        const indicatorParams = {title, categories, trend, replaceOld}
 
-        generateSideNav(indicators, relatedIndicators, primaryCategory)
+        generateSideNav(newIndicator, relatedIndicators)
         getIndicatorSnippet(ref, indicatorParams)
 
     // create the Indicator Not Found page if not
@@ -257,10 +244,9 @@ const updateLinks = () => {
     sideLinks.forEach(sideLink => {
         sideLink.onclick = () => {
             const title = sideLink.textContent
-            const primaryCategory = sideLink.classList[1]
 
             // update the URL which in turn hydrates the new indicator page
-            setIndicatorURL(title, primaryCategory)
+            setIndicatorURL(title)
         }
     })
 }

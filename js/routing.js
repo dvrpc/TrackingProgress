@@ -1,14 +1,11 @@
 import { makeIndicatorPage } from './indicatorHelpers.js'
 import { makeDashboard, removeDashboard } from './dashboardHelpers.js';
-import { catLookup } from './utils.js'
 
 const dashboard = document.getElementById('dashboard')
 const nav = dashboard.children[0]
-const backBtn = nav.children[0]
 const grid = dashboard.children[1]
 const splashPage = document.getElementById('splash-page')
 const filterState = document.getElementById('filter-type-form')
-
 
 // for development/live
 const baseURL = process.env.baseURL
@@ -25,11 +22,11 @@ const setIndexURL = () => {
 }
 
 // take an indicator title and update the URL, triggering an onhashchange event that creates the indicator page
-const setIndicatorURL = (title, primaryCategory) => {
+const setIndicatorURL = title => {
 
     // pull relevant info from the URL
     const formattedTitle = title.trim().replace(/\s+/g, '-')
-    const newHash = `${formattedTitle}/${primaryCategory}`
+    const newHash = `${formattedTitle}/`
 
     // update URL state
     history.pushState({page: 'indicator'}, title, `${baseURL}#${newHash}`)
@@ -40,28 +37,30 @@ const setIndicatorURL = (title, primaryCategory) => {
 
 // parses the URL hash and hydrates the page with the appropriate information
 const updateView = () => {
-    // let hash = hashParam ? hashParam : sanitizeHash(location.hash)
     const hash = location.hash ? sanitizeHash(location.hash) : false
-    
+
     if(hash){
         // handle splash page visibility
         splashPage.style.position = 'fixed'
         splashPage.style.visibility = 'collapse'
-        dashboard.style.marginTop = '6vh'
+        
+        dashboard.classList.add('indicators-wrapper-top')
         
         if(!grid.classList.contains('fade-right')) removeDashboard()
         
         // create indicator page and hide dash (if needed)
         let hashArray = hash.split('/')
-        const accentColor = catLookup[hashArray[1]].dark
-        backBtn.style.backgroundColor = accentColor
 
         if( window.innerWidth > 800 ) nav.classList.add('indicators-nav-indicators-page')
         makeIndicatorPage(hashArray)
 
     }else{
         const relatedIndicators = document.querySelector('.related-indicators')
+        const snippet = dashboard.querySelector('.indicators-snippet')
+
         nav.classList.remove('indicators-nav-indicators-page')
+        snippet.classList.remove('notransition')
+        
         makeDashboard(relatedIndicators)
     }
 }

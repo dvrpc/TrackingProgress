@@ -16,13 +16,10 @@ body {
     border-right: none;
     height: 26px;
 }
-#logo-help-wrapper {
-    width: 50%;
-}
-#help-btn {
-    font-size: 1rem;
-    margin-left: 15px;
-    padding: 3px 9px;
+.nav-btn {
+    margin-left: 20px;
+    padding: 4px 6px;
+    font-weight: 400;
 }
 #tp-logo {
     height: 30px;
@@ -32,10 +29,6 @@ body {
 #splash-page {
     margin-top: 6vh;
     padding: 2% 3%;
-}
-.header-btns {
-    flex-direction: row !important;
-    justify-content: space-between;
 }
 .header-wrapper {
     flex-direction: column;
@@ -60,7 +53,7 @@ body {
 .text-right {
     text-align: left;
 }
-summary, #get-started, .homepage-btn {
+summary, .modal-header, .homepage-btn {
     font-size: 1em;
 }
 .gif-row {
@@ -74,7 +67,7 @@ summary, #get-started, .homepage-btn {
     text-align: center;
     margin-bottom: 5%;
 }
-#emojis-row {
+.emojis-row {
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -89,9 +82,6 @@ summary, #get-started, .homepage-btn {
     padding: 5px 10px;
     margin-bottom: 6px;
 }
-#view-how-to {
-    float: right;
-}
 
 
 /* Mobile styles for the dashboard page */
@@ -100,21 +90,38 @@ summary, #get-started, .homepage-btn {
     border-top: none;
     min-height: calc(94vh - 16px);
 }
+.indicators-wrapper-top {
+    margin-top: 6vh;
+}
 .indicators-nav {
     background: white;
     position: sticky;
-    overflow-y: auto;
+    overflow-x: auto;
     top: 6vh;
     width: 100%;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);
 }
 #filter-type-form {
-    width: 100%;
-    padding: 10px 0;
+    width: 150px;
     font-size: 0.8em;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    padding: 12px 8px;
+}
+.icon-set {
+    min-width: 100px;
+    padding: 16px 0;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    overflow-x: none;
+}
+.icon-set-img {
+    height: 25px;
+    width: unset;
+}
+.icon-set-p {
+    font-size: 0.77em;
 }
 .indicators-grid-item {
     margin: 1.5%;
@@ -128,27 +135,12 @@ summary, #get-started, .homepage-btn {
 .indicators-title {
     font-size: 0.8em;
 }
-.icon-set {
-    height: 62px;
-    width: calc(20% - 4px);
-    margin-right: 4px;
-    margin-bottom: 4px;
-}
-.icon-set-img {
-    height: 40px;
-}
-.icon-set-p {
-    font-size: 0.77em;
-}
 .flipside-img {
     display: none;
 }
 .new-data {
     width: 75%;
     font-size: 0.67rem;
-}
-#equity-icon {
-    margin-bottom: auto;
 }
 .indicators-nav div:last-child {
     margin-right: 0;
@@ -172,15 +164,14 @@ summary, #get-started, .homepage-btn {
 
 /* Mobile styles for the indicator subpages */
 .back-to-dash {
-    width: 18%;
-    height: 100%;
-    padding: 0 2px;
-    border-right: 1px solid white;
+    margin: 10px;
+    padding: 4px 6px;
     font-size: 0.9em;
 }
+
 .related-indicators {
-    min-height: unset;
-    width: calc(82% - 20px);
+    height: unset;
+    width: calc(80% - 20px);
     padding: 5px 10px;
     border-top: none;
     flex-direction: row !important;
@@ -194,26 +185,17 @@ summary, #get-started, .homepage-btn {
     margin-right: 5px;
     width: 15px;
 }
+#econo-icon {
+    margin-bottom: 4px;
+}
 .emoji-set-img {
     width: 25px;
     height: 25px;
 }
-#related-indicators-subheader-wrapper {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    width: auto;
-}
-#related-indicators-subheader-img {
-    width: 25px;
-    margin: 0 5px;
-    max-width: none;
-    height: auto;
-}
 #related-indicators-subheader {
     font-size: 0.8em;
     font-weight: 500;
-    padding-bottom: 2px;
+    text-align: left;
 }
 .sideLink {
     padding: 0 2vw;

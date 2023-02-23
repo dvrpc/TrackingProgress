@@ -1,20 +1,16 @@
 import { toggleIndicators, indicatorHoverFlip, clickIndicator } from './dashboardHelpers.js'
 import { setIndexURL, setIndicatorURL, refreshView, updateView } from './routing.js'
-import makeHowTo from './makeHowTo.js'
+import { makeHowTo, ariaShowModal, ariaHideModal } from './modal.js'
 
 
 /**************************************************/
 /******************** Set up *********************/
 // get a handle on the splash page elements
 const splash = document.getElementById('splash-page')
-const toGrid = document.getElementById('to-grid')
 const viewHowTo = document.getElementById('view-how-to')
 const help = document.getElementById('help-btn')
-const videosLoaded = {
-    dashSummary: false,
-    indicatorSummary: false
-}
 let splashVisible = true
+let modal = false
 
 // get a handle on the dashboard elements
 const grid = document.querySelector('.indicators-grid')
@@ -28,15 +24,6 @@ let emojiFilters = []
 filters.forEach(filter => filter.classList.contains('emoji-set') ? emojiFilters.push(filter) : catFilters.push(filter))
 let filterType = 'category'
 
-// get default category colors to revert to on filter change
-const catColors = {
-    'econo': '#f0cfd0',
-    'enviro': '#e0e6cf',
-    'comm': '#c6d6ea',
-    'transpo': '#f9dcc4',
-    'equity': '#c6b7cd'
-}
-
 // get a handle on the indicator page elements
 const back = document.querySelector('.back-to-dash')
 const indicators = [... document.querySelectorAll('.indicators-grid-item')]
@@ -44,47 +31,8 @@ const indicators = [... document.querySelectorAll('.indicators-grid-item')]
 
 /**************************************************/
 /*************** Splash Page events ***************/
-// scroll the grid into view which will trigger the splash page hide function
-toGrid.onclick = e => {
-    e.preventDefault()
-
-    // get splash page height + grid padding to trigger the onscroll effect
-    const splashHeight = splash.clientHeight + 10
-
-    window.scrollTo({
-        top: splashHeight,
-        behavior: 'smooth'
-    })
-}
-viewHowTo.onclick = e => {
-    e.preventDefault()
-
-    const howTo = makeHowTo()
-    const wrapper = toGrid.parentElement
-
-    wrapper.insertAdjacentHTML('afterend', howTo)
-
-    const infoToggles = document.querySelectorAll('.info-toggle')
-
-    // lazy load the videos 
-    infoToggles.forEach(toggle => toggle.onclick = toggle => loadVideos(toggle))
-
-    // style the button 
-    viewHowTo.classList.add('btn-disabled')
-    viewHowTo.classList.remove('hover-btn')
-
-    const head = infoToggles[0].previousElementSibling
-    const offset = head.offsetTop - 65
-
-    window.scrollTo({
-        top: offset,
-        behavior: 'smooth'
-    })
-
-    viewHowTo.disabled = true
-}
-
 // when the splash page is visible, listen to scroll events to know when to hide it
+// @TODO: for perf, refactor as observer 
 document.onscroll = () => {
     if(!splashVisible) return
     
@@ -98,7 +46,7 @@ document.onscroll = () => {
         splash.style.visibility = 'hidden'
 
         // undo the margin that allows splash page and dash to coexist
-        dashboard.style.marginTop = '6vh'
+        dashboard.classList.add('indicators-wrapper-top')
 
         window.scrollTo(0,0)
 
@@ -118,7 +66,7 @@ help.onclick = () => {
     splash.style.visibility = 'visible'
 
     // remove dash margin
-    dashboard.style.marginTop = '0'
+    dashboard.classList.remove('indicators-wrapper-top')
 
     // scroll to top of the page
     window.scrollTo({
@@ -133,27 +81,28 @@ help.onclick = () => {
     help.classList.remove('fade-in')
 }
 
-// loop thru corresponding videos and add .mp4 src
-const loadVideos = toggle => {    
-    let target = toggle.target
-
-    // return if not clicking on summary or if the videos are already loaded
-    if(target.nodeName != 'SUMMARY' || videosLoaded[target.id]) return
-        
-    const figures = target.nextElementSibling.children[0].children
-    const length = figures.length
-    var i = 0
-
-    // add src
-    for(i; i < length; i++) {
-        const video = figures[i].children[0]
-        const videoName = video.id
-        video.src = `./vid/${videoName}.mp4`
+// toggle modal state
+viewHowTo.onclick = e => {
+    e.preventDefault()
+    
+    if(modal) {
+        ariaShowModal(modal)
+    } else {
+        const howTo = makeHowTo()
+        const wrapper = splash.parentElement
+        wrapper.appendChild(howTo)
+        modal = howTo
     }
-
-    // flip videos loaded bool
-    videosLoaded[target.id] = true
 }
+
+// close modal w/escape key
+document.onkeydown = event => {
+  // only hide existing, open modals 
+  if( event.code === 'Escape' && modal && modal.style.display !== 'none'){
+    ariaHideModal(modal)
+  }
+}
+
 
 
 /**************************************************/
@@ -184,25 +133,13 @@ const clearIndicators = () => indicators.forEach(indicator => {
 
 // reset icon-sets to their default state
 const resetFilters = type => {
-    if(type === 'category') {
-        emojiFilters.forEach(filter => {
-            if(filter.classList.contains('category-active')){
-                filter.classList.remove('category-active')
-                filter.style.color = '#4fa3a8'
-                filter.style.background = '#e9e9e9'
-            }
+    if(type === 'emoji') {
+        emojiFilters.forEach(emoji => {
+            emoji.classList.remove('icon-set-active', 'icon-set-inactive', 'emoji-set-active')
         })
     }else {
-        catFilters.forEach(filter => {
-            if(filter.classList.contains('category-active')){
-                const filterID = filter.id
-                const img = filter.children[0]
-                const defaultColor = filterID.split('-')[0]
-    
-                img.src = `./img/${filterID}.png`
-                filter.style.background = catColors[defaultColor]
-                filter.classList.remove('category-active')
-            }
+        catFilters.forEach(category => {
+            category.classList.remove('icon-set-inactive', 'icon-set-active')
         })
     }
 } 
@@ -218,25 +155,25 @@ indicators.forEach(indicator => {
 
 // load the selected indicator page & transition to it
 grid.onclick = e => {
-    let title, primaryCategory;
+    let title;
 
     // only setIndicator if the user clicked on a valid tile
     if(e.target.nodeName != 'MAIN'){
-        // get title and primary category from the clicked element
-        [title, primaryCategory] = [... clickIndicator(e)]
+        // get title from the clicked element
+        title = clickIndicator(e)
         
         // scroll & load
         if(!help.classList.contains('fade-in')){
             const gridOffset = (grid.getBoundingClientRect().top + window.scrollY)
             
-            window.setTimeout(setIndicatorURL, 250, title, primaryCategory)
+            window.setTimeout(setIndicatorURL, 250, title)
 
             window.scrollTo({
                 top: gridOffset,
                 behavior: 'smooth'
             })
         } else {
-            setIndicatorURL(title, primaryCategory)
+            setIndicatorURL(title)
         }
     }
 }

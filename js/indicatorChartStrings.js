@@ -374,14 +374,14 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census &amp; American Community Survey, DVRPC</em></small>`,
-    'Exported Goods':`
+    'Gross Domestic Product':`
         <h2 class="indicator-subheader">Merchandise Trade Exports to the World by Geography</h2>
         <div class="data-viz chart">
             <svg></svg>
         </div>
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
         <small class="chart-src">Sources: International Trade Administration's Office of Trade and Industry Information, Manufacturing and Services, DVRPC</small>`,
-    'Global Connectivity':`
+    'Mortgage Lending':`
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Destinations of Flights from Philadelphia International Airport (PHL) by Airport Location</h2>
         <form>
@@ -435,7 +435,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Environmental Protection Agency, Emissions & Generation Resource Integrated Database (eGRID)</em></small>
-        <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>
+        
 
         <hr class="indicator-content-hr" />
 
@@ -972,7 +972,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Geography: ** County</em></small>
         <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
-        <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>
+        
 
         <hr class="indicator-content-hr" />
 
@@ -1008,7 +1008,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
-        <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>`,
+        `,
     'Land Consumption':`
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Developed and Agricultural Land by Geography</h2>
@@ -1424,7 +1424,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
-    'Segregation':`
+    'Community Integration':`
         <h2 class="indicator-subheader">Racial/Ethnic Segregation Index</h2>
         <div class="data-viz chart">
             <svg></svg>

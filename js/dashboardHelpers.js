@@ -3,7 +3,7 @@ const dashboard = document.getElementById('dashboard')
 const grid = dashboard.children[1]
 const indicatorsNav = document.querySelector('.indicators-nav')
 const back = document.querySelector('.back-to-dash')
-const iconSets = [... document.querySelectorAll('.icon-set')]
+const iconArrs = [... document.querySelectorAll('.icon-set')]
 const filterToggle = document.getElementById('filter-type-form')
 
 // rerence to the clicked category (this has to exist outside the scope of toggleIndicators, otherwise clicking an active category won't reset to all indicators view)
@@ -11,26 +11,21 @@ let clickedRef;
 
 // colors to change indicator background to on cat filter
 const catColors = {
-    'econo': '#bd2756',
-    'enviro': '#7a9c3e',
-    'comm': '#006ba6',
-    'transpo': '#dd6e1d',
-    'equity': '#582267',
-    'econo-default': '#f0cfd0',
-    'enviro-default': '#e0e6cf',
-    'comm-default': '#c6d6ea',
-    'transpo-default': '#f9dcc4',
-    'equity-default': '#c6b7cd'
+    'econo': '#721E52',
+    'enviro': '#006227',
+    'comm': '#004C6C',
+    'transpo': '#433C59',
+    'equity': '#166871',
+    'sustain': '#00474E',
+    'resil': '#4D8185'
 }
 
-const handleDashboardTransition = (relatedIndicators, indicator) => {
+const handleDashboardTransition = relatedIndicators => {
     // remove un-needed elements
     while(relatedIndicators.firstChild){
         relatedIndicators.removeChild(relatedIndicators.firstChild)
     }
     
-    // if(indicator) indicator.remove()
-
     back.style.display = 'none'
     relatedIndicators.style.display = 'none'
     
@@ -43,13 +38,13 @@ const makeDashboard = relatedIndicators => {
 
     // keep snippet in place while transitioning & constrain height to grid so cat nav imgs don't get stretched
     indicator.style.paddingLeft = '15vw'
-    indicator.style.height = 'calc(94vh - 46px)'
+    indicator.style.height = 'calc(94vh - 64px)'
 
     // reveal the indicators grid, widen the sideNav and reveal the categories
     grid.classList.remove('fade-right')
-    indicator.style.opacity = '30%'
+    indicator.classList.remove('indicators-snippet-visible')
 
-    handleDashboardTransition(relatedIndicators, indicator)
+    handleDashboardTransition(relatedIndicators)
 
     // remove grid after transition (desktop) or immediately (mobile)
     if(window.innerWidth > 800) {
@@ -73,7 +68,9 @@ const removeDashboard = () => {
 
 // function to display/hide indicators based on which category is clicked
 const toggleIndicators = (element, indicators, filterType) => {
-    let iconSets = [... element.parentNode.children]
+    const iconEls = element.parentNode
+    const activeIcon = iconEls.querySelector('.icon-set-active')
+    if(activeIcon) activeIcon.classList.remove('icon-set-active')
 
     // get a handle on the elements info
     const elID = element.id
@@ -82,12 +79,10 @@ const toggleIndicators = (element, indicators, filterType) => {
     // toggle based on filter type
     if(filterType === 'category') {
         categoryName = elID.split('-')[0]
-        const img = element.children[0]
-        const filterOptions = { elID, img, categoryName }
-        iconSets.forEach(filter => toggleCatIcons(filter, element, filterOptions))
+        iconArrs.forEach(icon => toggleCatIcons(icon, element, activeIcon))
     } else{
         categoryName = elID.split('-')[1]
-        iconSets.forEach(filter => toggleEmojiIcons(filter, element))
+        iconArrs.forEach(filter => toggleEmojiIcons(filter, element, activeIcon))
     }
 
     // handle 3 conditions & expected behaviors: 
@@ -117,64 +112,54 @@ const toggleIndicators = (element, indicators, filterType) => {
 }
 
 // helpers for toggling icon-sets
-const toggleCatIcons = (filter, element, options) => {
-    const {elID, img, categoryName} = {... options}
-
-    if(filter != element){
-            
-        // check if another category is active and set it back to default
-        if(filter.classList.contains('category-active')){
-            const filterID = filter.id
-            const img = filter.children[0]
-            const previousFilterName = filterID.split('-')[0]+'-default'
-
-            img.src = `./img/${filterID}.png`
-            filter.style.background = catColors[previousFilterName]
-            filter.classList.remove('category-active')
-        }
-
-    // toggle selected category
-    }else{
-        element.classList.toggle('category-active')
-        
-        // set active styles
-        if(element.classList.contains('category-active')){
-            const activeCategoryImg = elID + '-active'
-            img.src=`./img/${activeCategoryImg}.png`
-            element.style.background = catColors[categoryName]
-            
-        // set default styles
-        }else{
-            img.src=`./img/${elID}.png`
-            const categoryDefaultBackground = categoryName + '-default'
-            element.style.background = catColors[categoryDefaultBackground]
+const toggleCatIcons = (icon, element, activeIcon) => {
+    if(activeIcon === element) {
+        icon.classList.remove('icon-set-inactive', 'icon-set-active')
+    } else {
+        if(icon != element) {
+            icon.classList.add('icon-set-inactive')
+        } else {
+            element.classList.remove('icon-set-inactive')
+            element.classList.add('icon-set-active')
         }
     }
 }
-const toggleEmojiIcons = (filter, element) => {
-    if(filter != element){
-        
-        // check if another category is active and set it back to default
-        if(filter.classList.contains('category-active')){
-            filter.classList.remove('category-active')
-            filter.style.background = '#e9e9e9'
-        }
-
-    // toggle selected category
-    }else{
-        element.classList.toggle('category-active')
-        
-        // set active styles
-        if(element.classList.contains('category-active')){
-            // update bg and text color
-            element.style.background = '#4fa3a8'
-            
-        // set default styles
-        }else{
-            element.style.color = '#4fa3a8'
-            element.style.background = '#e9e9e9'
+const toggleEmojiIcons = (emoji, element, activeIcon) => {
+    if(activeIcon === element) {
+        emoji.classList.remove('emoji-set-active', 'icon-set-active')
+    } else {
+        if(emoji != element) {
+            emoji.classList.remove('emoji-set-active')
+        } else {
+            element.classList.add('icon-set-active', 'emoji-set-active')
         }
     }
+
+    // if(emoji != element){
+        
+    //     // check if another category is active and set it back to default
+    //     if(emoji.classList.contains('category-active')){
+    //         emoji.classList.remove('category-active')
+    //         emoji.style.color = '#4fa3a8'
+    //         emoji.style.background = '#e9e9e9'
+    //     }
+
+    // // toggle selected category
+    // }else{
+    //     element.classList.toggle('category-active')
+        
+    //     // set active styles
+    //     if(element.classList.contains('category-active')){
+    //         // update bg and text color
+    //         element.style.color = '#feffff'
+    //         element.style.background = '#4fa3a8'
+            
+    //     // set default styles
+    //     }else{
+    //         element.style.color = '#4fa3a8'
+    //         element.style.background = '#e9e9e9'
+    //     }
+    // }
 }
 
 // fade/slide out elements
@@ -218,9 +203,8 @@ const clickIndicator = e => {
 
     // get the title from it's id
     let title = indicator.id ? indicator.id : null
-    const primaryCategory = indicator.dataset.primary
 
-    return [title, primaryCategory]
+    return title
 }
 
 // recursive helper to get the indicator itself
@@ -238,7 +222,7 @@ const getIndicatorDetails = el => {
 const getActiveIcons = () => {
     const select = filterToggle.querySelector('select')
     const activeFilter = select.options[select.selectedIndex].value
-    let activeIcons = activeFilter === 'emoji' ? iconSets.filter(icon => icon.classList.contains('emoji-set')) : iconSets.filter(icon => !icon.classList.contains('emoji-set'))
+    let activeIcons = activeFilter === 'emoji' ? iconArrs.filter(icon => icon.classList.contains('emoji-set')) : iconArrs.filter(icon => !icon.classList.contains('emoji-set'))
     return activeIcons
 }
 
