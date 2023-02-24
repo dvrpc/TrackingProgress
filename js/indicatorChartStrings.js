@@ -375,12 +375,97 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census &amp; American Community Survey, DVRPC</em></small>`,
     'Gross Domestic Product':`
-        <h2 class="indicator-subheader">Merchandise Trade Exports to the World by Geography</h2>
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Average Income by Household Income Grouping</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Industry
+                        <select id="viz-0" class="toggle-data-selector">
+                            <option class="optionGroup" value="0">All Industries</option>
+                            <option class="optionGroup" value="1">Goods</option>
+                            <option class="optionChild" value="2">Agriculture, Forestry, Fishing, and Mining</option>
+                            <option class="optionChild" value="3">Construction</option>
+                            <option class="optionChild" value="4">Manufacturing</option>
+                            <option class="optionChild" value="5">Durable Goods</option>   
+                            <option class="optionChild" value="6">Nondurable Goods</option>    
+                            <option class="optionGroup" value="7">Services</option> 
+                            <option class="optionChild" value="8">Arts, Entertainment, Recreation, Accommodation, and Food Services</option>
+                            <option class="optionChild" value="9">Educational Services</option>
+                            <option class="optionChild" value="10">Finance, Insurance, Real Estate</option>
+                            <option class="optionChild" value="11">Health Care and Social Assistance</option>
+                            <option class="optionChild" value="12">Information</option>
+                            <option class="optionChild" value="13">Other Services (except Government)</option>
+                            <option class="optionChild" value="14">Professional Services</option>
+                            <option class="optionChild" value="15">Retail Trade</option>
+                            <option class="optionChild" value="16">Transportation, Warehousing, and Utilities</option>
+                            <option class="optionChild" value="17">Wholesale Trade</option>
+                            <option class="optionGroup" value="18">Government and government enterprises</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-0-b" class="toggle-data-selector">
+                            <option value="0">Annual Change</option>
+                            <option value="1">Change Since Base Year</option>
+                            <option value="2">Total GDP</option>                       
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
         <div class="data-viz chart">
             <svg></svg>
         </div>
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
-        <small class="chart-src">Sources: International Trade Administration's Office of Trade and Industry Information, Manufacturing and Services, DVRPC</small>`,
+        <small class="chart-src"><em>U.S. Bureau of Economic Analysis, Real GDP by County</em></small>
+  
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">GDP Distribution by Industry</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-1" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart1">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>U.S. Bureau of Economic Analysis, Real GDP by County</em></small>
+    
+        <hr class="indicator-content-hr" />       
+
+        <h2 class="indicator-subheader">Regional GDP Distribution by County</h2>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>U.S. Bureau of Economic Analysis, Real GDP by County</em></small>
+        `,
     'Mortgage Lending':`
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Destinations of Flights from Philadelphia International Airport (PHL) by Airport Location</h2>
@@ -970,9 +1055,7 @@ const chartStrings = {
         <div class="data-viz chart2">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Geography: ** County</em></small>
         <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
-        
 
         <hr class="indicator-content-hr" />
 
@@ -1007,8 +1090,7 @@ const chartStrings = {
         <div class="data-viz chart3">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>
-        `,
+        <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>`,
     'Land Consumption':`
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Developed and Agricultural Land by Geography</h2>
