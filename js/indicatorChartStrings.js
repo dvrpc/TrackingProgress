@@ -376,7 +376,7 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census &amp; American Community Survey, DVRPC</em></small>`,
     'Gross Domestic Product':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Average Income by Household Income Grouping</h2>
+            <h2 class="indicator-subheader toggle-subheader">GDP Growth</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
