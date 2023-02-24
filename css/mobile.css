@@ -4,7 +4,7 @@ body {
 }
 
 /* Hide elements */
-.emoji-spacer, .splash-map-figure, .fade-right, #to-top-btn {
+.emoji-spacer, .fade-right, #to-top-btn {
     display: none;
 }
 
@@ -26,24 +26,32 @@ body {
 }
 
 /* Mobile styles for the splash page */
-#splash-page {
+.splash-page {
     margin-top: 6vh;
-    padding: 2% 3%;
+    padding: 6% 3%;
 }
-.header-wrapper {
+.splash-header-wrapper {
     flex-direction: column;
+    text-align: center;
 }
-.tp-header {
-    font-size: 1.2rem;
-    margin: initial;
-}
-#tp-header-name {
-    width: 100%;
-    display: block;
+.tp-header-main {
+    margin-right: 0;
 }
 .splash-map-wrapper, .details-text-content {
     flex-direction: column;
     padding: 0;
+}
+.splash-blurb {
+    width: 90%;
+    font-size: 1rem;
+}
+.splash-details-content {
+    flex-direction: column;
+    width: 90%;
+}
+.splash-map-figure {
+    width: 35%;
+    margin: 16px auto;
 }
 .splash-text {
     width: 100%;
@@ -82,6 +90,16 @@ summary, .modal-header, .homepage-btn {
     padding: 5px 10px;
     margin-bottom: 6px;
 }
+/* END splash page */
+
+
+
+/* Modal */
+.modal-content {
+    width: 90%;
+}
+/* END Modal */
+
 
 
 /* Mobile styles for the dashboard page */
@@ -110,7 +128,7 @@ summary, .modal-header, .homepage-btn {
     padding: 12px 8px;
 }
 .icon-set {
-    min-width: 100px;
+    min-width: 130px;
     padding: 16px 0;
     margin-right: 4px;
     margin-bottom: 4px;
@@ -122,6 +140,7 @@ summary, .modal-header, .homepage-btn {
 }
 .icon-set-p {
     font-size: 0.77em;
+    margin: 0;
 }
 .indicators-grid-item {
     margin: 1.5%;

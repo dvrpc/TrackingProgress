@@ -6,6 +6,7 @@ import { makeHowTo, ariaShowModal, ariaHideModal } from './modal.js'
 /**************************************************/
 /******************** Set up *********************/
 // get a handle on the splash page elements
+const toDash = document.getElementById('to-dash')
 const splash = document.getElementById('splash-page')
 const viewHowTo = document.getElementById('view-how-to')
 const help = document.getElementById('help-btn')
@@ -79,6 +80,18 @@ help.onclick = () => {
 
     // hide the (i)
     help.classList.remove('fade-in')
+}
+
+toDash.onclick = e => {
+    e.preventDefault()
+
+    // get splash page height + grid padding to trigger the onscroll effect
+    const splashHeight = splash.clientHeight + 10
+
+    window.scrollTo({
+        top: splashHeight,
+        behavior: 'smooth'
+    })
 }
 
 // toggle modal state

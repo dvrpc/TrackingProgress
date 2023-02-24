@@ -46,22 +46,28 @@
     <header id="header">
         <div id="logo-help-wrapper">
             <a href="/TrackingProgress/"><img id="tp-logo" src="./img/header/TP-Logo.png" alt="Tracking Progress project logo" /></a>
-            <button id="view-how-to" class="hover-btn nav-btn">How To</button>
-            <button id="help-btn" class="hover-btn nav-btn help-btn">About</button>
+            <button id="view-how-to" class="btn hover-btn nav-btn">How To</button>
+            <button id="help-btn" class="btn hover-btn nav-btn help-btn">About</button>
         </div>
         <a href="https://www.dvrpc.org">
             <img id="dvrpc-logo" src="./img/header/logo.png" alt="dvrpc logo" />
         </a>
     </header>
 
-    <section id="splash-page">
-        <div class="splash-map-wrapper">
-            <header class="header-wrapper">
-                <h1 class="tp-header tp-header-main">Tracking Progress</h1>
-                <span class="tp-header">Indicators Dashboard</span>
-            </header>
+    <section id="splash-page" class="splash-page">
+        <header class="splash-header-wrapper">
+            <h1 class="tp-header tp-header-main">Tracking Progress</h1>
+            <span class="tp-header">Indicators Dashboard</span>
+        </header>
 
-            <aside class="header-wrapper">
+        <p class="splash-blurb">Measuring the Greater Philadelphia region's progress toward realizing DVRPC's Connections 2045 long-range plan.</p>
+
+        <details class="splash-details">
+            <summary>More Info</summary>
+
+            <div class="splash-details-content">
+                <p class="splash-text"><em>Tracking Progress</em> is an interactive dashboard for exploring regularly updated data to gauge the progress of the Greater Philadelphia region toward realizing the principles of DVRPC's Connections 2045 long-range plan to expand the <strong>economy</strong>, sustain the <strong>environment</strong>, develop livable <strong>communities</strong>, create an integrated multimodal <strong>transportation</strong> network and advance <strong>equity</strong> and foster diversity.</p>
+
                 <figure class="splash-map-figure">
                     <a href="./img/MainDVRPCMap.png"><img src="./img/MainDVRPCMap_reduced.png" alt="map of the DVRPC region" class="region-map" /></a>
                     <figcaption>
@@ -69,16 +75,16 @@
                     </figcaption>
                 </figure>
 
-                <p class="splash-text"><em>Tracking Progress</em> is an interactive dashboard for exploring regularly updated data to gauge the progress of the Greater Philadelphia region toward realizing the principles of DVRPC's Connections 2045 long-range plan to expand the <strong>economy</strong>, sustain the <strong>environment</strong>, develop livable <strong>communities</strong>, create an integrated multimodal <strong>transportation</strong> network and advance <strong>equity</strong> and foster diversity.</p>
-                
                 <p class="splash-text">Regional indicators are used to better understand where the region is at a given time period, identify successful programs, align DVRPC's planning and implementation activities, and inform regional strategies. The data in Tracking Progress is also a valuable resource for other planners, analysts and anyone interested in the conditions and future of the Greater Philadelphia region.</p>
-            </aside>
-        </div>
+            </div>
+        </details>
+
+        <button id="to-dash" class="btn hover-btn btn-splash">↓ To Dashboard</button>
     </section>
 
     <div class="indicators-wrapper" id="dashboard">
         <nav class="indicators-nav" role="navigation">
-            <button class="back-to-dash">Dashboard</button>
+            <button class="back-to-dash">← To Dashboard</button>
             <div class="related-indicators"></div>
             <form id="filter-type-form">
                 <fieldset>
