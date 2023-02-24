@@ -56,17 +56,17 @@ const snippetsRef = {
                     {
                         'key' : 'Unhealthy for Sensitive Groups',
                         'color': '#ff7e00',
-                        'columns': ['quarterYear', 'Unhealthy Sensitive Ozone'],
+                        'columns': ['quarteryear', 'Unhealthy Sensitive Ozone'],
                     },
                     {
                         'key': 'Unhealthy',
                         'color': '#fe0000',
-                        'columns': ['quarterYear', 'Unhealthy Ozone'],
+                        'columns': ['quarteryear', 'Unhealthy Ozone'],
                     },
                     {
                         'key': 'Very Unhealthy',
                         'color': '#8f3f98',
-                        'columns': ['quarterYear', 'Very Unhealthy Ozone'],
+                        'columns': ['quarteryear', 'Very Unhealthy Ozone'],
                     }
                 ]
             },
@@ -455,9 +455,8 @@ const snippetsRef = {
             },
         ]
     },
-    // @TODO: remove?
-    'Global Connectivity': {
-        categories: ['econo', 'transpo'],
+    'Mortgage Lending': {
+        categories: ['econo', 'transpo','equity','resil'],
         trend: {
             status: 'neutral',
             text: {
@@ -1258,7 +1257,7 @@ const snippetsRef = {
         },
       ]
     },
-    'Segregation': {
+    'Community Integration': {
       categories: ['comm', 'econo', 'equity'],
       trend: {
         status: 'neutral',
@@ -2017,7 +2016,7 @@ const snippetsRef = {
         ]
     },
     'Gross Domestic Product': {
-        categories: ['econo'],
+        categories: ['econo','resil'],
         trend: {
             status: 'not-great',
             text: {
@@ -3771,25 +3770,21 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPC- NA','DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
-                    ['New Jersey Suburbs- NA','New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
-                    ['Pennsylvania All Counties- NA','Pennsylvania All Counties- Poor','Pennsylvania All Counties- Fair','Pennsylvania All Counties- Good'],
-                    ['Pennsylvania Suburbs- NA','Pennsylvania Suburbs- Poor','Pennsylvania Suburbs- Fair','Pennsylvania Suburbs- Good'],
-                    ['Bucks- NA','Bucks- Poor','Bucks- Fair','Bucks- Good'],
-                    ['Burlington- NA','Burlington- Poor','Burlington- Fair','Burlington- Good'],
-                    ['Camden- NA','Camden- Poor','Camden- Fair','Camden- Good'],
-                    ['Chester- NA','Chester- Poor','Chester- Fair','Chester- Good'],
-                    ['Delaware- NA','Delaware- Poor','Delaware- Fair','Delaware- Good'],
-                    ['Gloucester- NA','Gloucester- Poor','Gloucester- Fair','Gloucester- Good'],
-                    ['Mercer- NA','Mercer- Poor','Mercer- Fair','Mercer- Good'],
-                    ['Montgomery- NA','Montgomery- Poor','Montgomery- Fair','Montgomery- Good'],
-                    ['Philadelphia- NA','Philadelphia- Poor','Philadelphia- Fair','Philadelphia- Good']
+                    ['DVRPC- Poor','DVRPC- Fair','DVRPC- Good'],
+                    ['New Jersey Suburbs- Poor','New Jersey Suburbs- Fair','New Jersey Suburbs- Good'],
+                    ['Pennsylvania All Counties- Poor','Pennsylvania All Counties- Fair','Pennsylvania All Counties- Good'],
+                    ['Pennsylvania Suburbs- Poor','Pennsylvania Suburbs- Fair','Pennsylvania Suburbs- Good'],
+                    ['Bucks- Poor','Bucks- Fair','Bucks- Good'],
+                    ['Burlington- Poor','Burlington- Fair','Burlington- Good'],
+                    ['Camden- Poor','Camden- Fair','Camden- Good'],
+                    ['Chester- Poor','Chester- Fair','Chester- Good'],
+                    ['Delaware- Poor','Delaware- Fair','Delaware- Good'],
+                    ['Gloucester- Poor','Gloucester- Fair','Gloucester- Good'],
+                    ['Mercer- Poor','Mercer- Fair','Mercer- Good'],
+                    ['Montgomery- Poor','Montgomery- Fair','Montgomery- Good'],
+                    ['Philadelphia- Poor','Philadelphia- Fair','Philadelphia- Good']
                 ],
                 data: [
-                    {
-                        'key': 'No Data',
-                        columns: ['year', 'DVRPC- NA']
-                    },
                     {
                         'key': 'Poor',
                         columns: ['year', 'DVRPC- Poor']

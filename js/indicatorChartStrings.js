@@ -466,7 +466,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>U.S. Bureau of Economic Analysis, Real GDP by County</em></small>
         `,
-    'Global Connectivity':`
+    'Mortgage Lending':`
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Destinations of Flights from Philadelphia International Airport (PHL) by Airport Location</h2>
         <form>
@@ -520,7 +520,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Environmental Protection Agency, Emissions & Generation Resource Integrated Database (eGRID)</em></small>
-        <small class="chart-src"><em>Note: Due to a current bug in the software, percentages display in the mouse-over as decimals.</em></small>
+        
 
         <hr class="indicator-content-hr" />
 
@@ -1506,7 +1506,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
-    'Segregation':`
+    'Community Integration':`
         <h2 class="indicator-subheader">Racial/Ethnic Segregation Index</h2>
         <div class="data-viz chart">
             <svg></svg>
