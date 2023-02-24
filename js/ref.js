@@ -56,17 +56,17 @@ const snippetsRef = {
                     {
                         'key' : 'Unhealthy for Sensitive Groups',
                         'color': '#ff7e00',
-                        'columns': ['quarterYear', 'Unhealthy Sensitive Ozone'],
+                        'columns': ['quarteryear', 'Unhealthy Sensitive Ozone'],
                     },
                     {
                         'key': 'Unhealthy',
                         'color': '#fe0000',
-                        'columns': ['quarterYear', 'Unhealthy Ozone'],
+                        'columns': ['quarteryear', 'Unhealthy Ozone'],
                     },
                     {
                         'key': 'Very Unhealthy',
                         'color': '#8f3f98',
-                        'columns': ['quarterYear', 'Very Unhealthy Ozone'],
+                        'columns': ['quarteryear', 'Very Unhealthy Ozone'],
                     }
                 ]
             },
