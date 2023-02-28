@@ -468,14 +468,40 @@ const chartStrings = {
         `,
     'Mortgage Lending':`
         <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Destinations of Flights from Philadelphia International Airport (PHL) by Airport Location</h2>
-        <form>
+        <h2 class="indicator-subheader toggle-subheader">Loan Origination Gap</h2>
+        <form class="double-toggle-form">
             <fieldset>
                 <label>
-                    Select Type
+                    Select Geography
                     <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Year-Round/Seasonal</option>
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </fieldset>
+            <span class="toggle-vr">|</span>
+            <fieldset>
+                <label>
+                    Select Purpose
+                    <select id="viz-0b" class="toggle-data-selector">
+                        <option value="0">All</option>
+                        <option value="1">Home Purchase</option>
+                        <option value="2">Home Improvement</option>
+                        <option value="3">Refinancing</option>
                     </select>
                 </label>
             </fieldset>
@@ -484,7 +510,56 @@ const chartStrings = {
         <div class="data-viz chart">
             <svg></svg>
         </div>
-        <small class="chart-src">Source: City of Philadelphia Commerce Department, Philadelphia International Airport</small>`,
+        <small class="chart-src"><em>Geography: * Sex, ** Ethnicity, *** Race</em></small>
+        <small class="chart-src">Federal Financial Institutions Examination Council's (FFIEC) Home Mortgage Disclosure Act (HMDA) Data</small>
+        
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">Loan Origination Rates</h2>
+        <form class="double-toggle-form">
+            <fieldset>
+                <label>
+                    Select Geography
+                    <select id="viz-1" class="toggle-data-selector">
+                        <optgroup label="Regional">
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">PA Suburban Counties</option>
+                        </optgroup>
+                        <optgroup label="Counties">
+                            <option value="3">Bucks</option>
+                            <option value="4">Burlington</option>
+                            <option value="5">Camden</option>
+                            <option value="6">Chester</option>
+                            <option value="7">Delaware</option>
+                            <option value="8">Gloucester</option>
+                            <option value="9">Mercer</option>
+                            <option value="10">Montgomery</option>
+                            <option value="11">Philadelphia</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </fieldset>
+            <span class="toggle-vr">|</span>
+            <fieldset>
+                <label>
+                    Select Purpose
+                    <select id="viz-1b" class="toggle-data-selector">
+                        <option value="0">All</option>
+                        <option value="1">Home Purchase</option>
+                        <option value="2">Home Improvement</option>
+                        <option value="3">Refinancing</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        </div>
+        <div class="data-viz chart1">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Geography: * Sex, ** Ethnicity, *** Race</em></small>
+        <small class="chart-src">Federal Financial Institutions Examination Council's (FFIEC) Home Mortgage Disclosure Act (HMDA) Data</small>`,
     'Greenhouse Gas Emissions':`
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Greenhouse Gas Emissions</h2>
