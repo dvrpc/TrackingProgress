@@ -662,6 +662,69 @@ const snippetsRef = {
                         columns: ['year', 'dvrpc_white']
                     },
                 ]
+            },
+            {
+                type: 'line',
+                container: 'chart2',
+                dataSource: ['mortgage_lending_3a', 'mortgage_lending_3b', 'mortgage_lending_3c', 'mortgage_lending_3d'],
+                context: {
+                    labels: ['Total'],
+                    keepLabels: true,
+                    units: ['thousands'],
+                    keepUnits: true
+                },
+                columnOptions:  [
+                    ['dvrpc_female','dvrpc_male','dvrpc_latinx','dvrpc_nonlatinx','dvrpc_minority','dvrpc_asian','dvrpc_black','dvrpc_other','dvrpc_white'],
+                    ['njcos_female', 'njcos_male', 'njcos_latinx', 'njcos_nonlatinx', 'njcos_minority', 'njcos_asian', 'njcos_black', 'njcos_other', 'njcos_white'],
+                    ['pasubcos_female', 'pasubcos_male', 'pasubcos_latinx', 'pasubcos_nonlatinx', 'pasubcos_minority', 'pasubcos_asian', 'pasubcos_black', 'pasubcos_other', 'pasubcos_white'],
+                    ['bucks_female', 'bucks_male', 'bucks_latinx', 'bucks_nonlatinx', 'bucks_minority', 'bucks_asian', 'bucks_black', 'bucks_other', 'bucks_white'],
+                    ['burl_female', 'burl_male', 'burl_latinx', 'burl_nonlatinx', 'burl_minority', 'burl_asian', 'burl_black', 'burl_other', 'burl_white'],
+                    ['camd_female', 'camd_male', 'camd_latinx', 'camd_nonlatinx', 'camd_minority', 'camd_asian', 'camd_black', 'camd_other', 'camd_white'],
+                    ['ches_female', 'ches_male', 'ches_latinx', 'ches_nonlatinx', 'ches_minority', 'ches_asian', 'ches_black', 'ches_other', 'ches_white'],
+                    ['del_female', 'del_male', 'del_latinx', 'del_nonlatinx', 'del_minority', 'del_asian', 'del_black', 'del_other', 'del_white'],
+                    ['glo_female', 'glo_male', 'glo_latinx', 'glo_nonlatinx', 'glo_minority', 'glo_asian', 'glo_black', 'glo_other', 'glo_white'],
+                    ['mer_female', 'mer_male', 'mer_latinx', 'mer_nonlatinx', 'mer_minority', 'mer_asian', 'mer_black', 'mer_other', 'mer_white'],
+                    ['mont_female', 'mont_male', 'mont_latinx', 'mont_nonlatinx', 'mont_minority', 'mont_asian', 'mont_black', 'mont_other', 'mont_white'],
+                    ['phil_female', 'phil_male', 'phil_latinx', 'phil_nonlatinx', 'phil_minority', 'phil_asian', 'phil_black', 'phil_other', 'phil_white'],
+                ],
+                data: [
+                    {
+                        'key': 'Female*',
+                        columns: ['year', 'dvrpc_female']
+                    },
+                    {
+                        'key': 'Male*',
+                        columns: ['year', 'dvrpc_male']
+                    },
+                    {
+                        'key': 'Latinx**',
+                        columns: ['year', 'dvrpc_latinx']
+                    },
+                    {
+                        'key': 'Non-Latinx**',
+                        columns: ['year', 'dvrpc_latinx']
+                    },
+                    {
+                        'key': 'Minority***',
+                        columns: ['year', 'dvrpc_minority']
+                    },
+                    {
+                        'key': 'Asian to White***',
+                        columns: ['year', 'dvrpc_asian']
+                    },
+                    {
+                        'key': 'Black to White***',
+                        columns: ['year', 'dvrpc_black']
+                    },
+                    {
+                        'key': 'Other Non-White***',
+                        columns: ['year', 'dvrpc_other']
+                    },
+                    {
+                        'key': 'White***',
+                        columns: ['year', 'dvrpc_white']
+                    },
+                ]
             }
         ]
     },
