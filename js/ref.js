@@ -871,12 +871,12 @@ const snippetsRef = {
         {
           type: 'line',
           container: 'chart',
-          dataSource: ['jobs_graph1a', 'jobs_graph1b'],
+          dataSource: ['jobs_graph1a', 'jobs_graph1b', 'jobs_graph1c'],
           context: {
-            labels: ['Growth Rate'],
-            keepLabels: true,
-            units: ['percentC'],
-            keepUnits: true,
+            labels: ['Growth Rate', 'Growth Rate', 'Total Employment'],
+            keepLabels: false,
+            units: ['percentC', 'percentC', 'thousands'],
+            keepUnits: false,
           },
           columnOptions: [
             ['region_total', 'region_wage_salary', 'region_proprietors'],
@@ -918,7 +918,7 @@ const snippetsRef = {
               columns: ['year', 'region_total'],
             },
             {
-              key: 'Wage Salary',
+              key: 'Wage and Salary',
               disabled: true,
               columns: ['year', 'region_wage_salary'],
             },

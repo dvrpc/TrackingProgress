@@ -1039,6 +1039,7 @@ const chartStrings = {
                         <select id="viz-0-b" class="toggle-data-selector">
                             <option value="0">Annual</option>
                             <option value="1">Since Base Year</option>
+                            <option value="2">Total Employment</option>
                         </select>
                     </label>
                 </fieldset>
