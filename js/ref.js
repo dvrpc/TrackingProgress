@@ -583,21 +583,24 @@ const snippetsRef = {
                         columns: ['year', 'dvrpc_latinx']
                     },
                     {
+                        'key': 'Non-White to White***',
+                        columns: ['year', 'dvrpc_minority']
+                    },
+                    {
                         'key': 'Asian to White***',
-                        columns: ['year', 'dvrpc_asian']
+                        columns: ['year', 'dvrpc_asian'],
+                        disabled: true
                     },
                     {
                         'key': 'Black to White***',
-                        columns: ['year', 'dvrpc_black']
+                        columns: ['year', 'dvrpc_black'],
+                        disabled: true
                     },
                     {
                         'key': 'Other Non-White to White***',
-                        columns: ['year', 'dvrpc_other']
+                        columns: ['year', 'dvrpc_other'],
+                        disabled: true
                     },
-                    {
-                        'key': 'Non-White to White***',
-                        columns: ['year', 'dvrpc_minority']
-                    }
                 ]
             },
             {
@@ -639,23 +642,26 @@ const snippetsRef = {
                     },
                     {
                         'key': 'Non-Latinx**',
-                        columns: ['year', 'dvrpc_latinx']
+                        columns: ['year', 'dvrpc_nonlatinx']
                     },
                     {
-                        'key': 'Minority***',
+                        'key': 'Non-White***',
                         columns: ['year', 'dvrpc_minority']
                     },
                     {
-                        'key': 'Asian to White***',
-                        columns: ['year', 'dvrpc_asian']
+                        'key': 'Asian***',
+                        columns: ['year', 'dvrpc_asian'],
+                        disabled: true
                     },
                     {
-                        'key': 'Black to White***',
-                        columns: ['year', 'dvrpc_black']
+                        'key': 'Black***',
+                        columns: ['year', 'dvrpc_black'],
+                        disabled: true
                     },
                     {
                         'key': 'Other Non-White***',
-                        columns: ['year', 'dvrpc_other']
+                        columns: ['year', 'dvrpc_other'],
+                        disabled: true
                     },
                     {
                         'key': 'White***',
@@ -702,23 +708,26 @@ const snippetsRef = {
                     },
                     {
                         'key': 'Non-Latinx**',
-                        columns: ['year', 'dvrpc_latinx']
+                        columns: ['year', 'dvrpc_nonlatinx']
                     },
                     {
-                        'key': 'Minority***',
+                        'key': 'Non-White***',
                         columns: ['year', 'dvrpc_minority']
                     },
                     {
-                        'key': 'Asian to White***',
-                        columns: ['year', 'dvrpc_asian']
+                        'key': 'Asian***',
+                        columns: ['year', 'dvrpc_asian'],
+                        disabled: true
                     },
                     {
-                        'key': 'Black to White***',
-                        columns: ['year', 'dvrpc_black']
+                        'key': 'Black***',
+                        columns: ['year', 'dvrpc_black'],
+                        disabled: true
                     },
                     {
                         'key': 'Other Non-White***',
-                        columns: ['year', 'dvrpc_other']
+                        columns: ['year', 'dvrpc_other'],
+                        disabled: true
                     },
                     {
                         'key': 'White***',
