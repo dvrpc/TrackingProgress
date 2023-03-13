@@ -4250,10 +4250,10 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPC- All', 'New Jersey- All', 'Pennsylvania- All'],
-                    ['DVRPC- NHS, interstate', 'New Jersey- NHS, interstate', 'Pennsylvania- NHS, interstate'],
-                    ['DVRPC- NHS, non-interstate', 'New Jersey- NHS, non-interstate', 'Pennsylvania- NHS, non-interstate'],
-                    ['DVRPC- Non-NHS', 'New Jersey- Non-NHS', 'Pennsylvania- Non-NHS'],
+                    ['DVRPC- All', 'New Jersey- All', 'Pennsylvania- All', 'Bucks- All', 'Burlington- All', 'Camden- All', 'Chester- All', 'Delaware- All', 'Gloucester- All', 'Mercer- All', 'Montgomery- All', 'Philadelphia- All'],
+                    ['DVRPC- All', 'New Jersey- All', 'Pennsylvania- All', 'Bucks- All', 'Burlington- All', 'Camden- All', 'Chester- All', 'Delaware- All', 'Gloucester- All', 'Mercer- All', 'Montgomery- All', 'Philadelphia- All'],
+                    ['DVRPC- NHS, non-interstate', 'New Jersey- NHS, non-interstate', 'Pennsylvania- NHS, non-interstate', 'Bucks- NHS, non-interstate', 'Burlington- NHS, non-interstate', 'Camden- NHS, non-interstate', 'Chester- NHS, non-interstate', 'Delaware- NHS, non-interstate', 'Gloucester- NHS, non-interstate', 'Mercer- NHS, non-interstate', 'Montgomery- NHS, non-interstate', 'Philadelphia- NHS, non-interstate'],
+                    ['DVRPC- Non-NHS', 'New Jersey- Non-NHS', 'Pennsylvania- Non-NHS', 'Bucks- Non-NHS', 'Burlington- Non-NHS', 'Camden- Non-NHS', 'Chester- Non-NHS', 'Delaware- Non-NHS', 'Gloucester- Non-NHS', 'Mercer- Non-NHS', 'Montgomery- Non-NHS', 'Philadelphia- Non-NHS'],
                 ],
                 data: [
                     {
@@ -4261,14 +4261,59 @@ const snippetsRef = {
                         columns: ['year', 'DVRPC- All']
                     },
                     {
-                        'key': 'New Jersey Counties',
+                        'key': 'New Jersey Counties*',
                         disabled: true,
                         columns: ['year', 'New Jersey- All']
                     },
                     {
-                        'key': 'Pennsylvania Counties',
+                        'key': 'Pennsylvania Counties*',
                         disabled: true,
                         columns: ['year', 'Pennsylvania- All']
+                    },
+                    {
+                        'key': 'Bucks**',
+                        disabled: true,
+                        columns: ['year', 'Bucks- All']
+                    },
+                    {
+                        'key': 'Burlington**',
+                        disabled: true,
+                        columns: ['year', 'Burlington- All']
+                    },
+                    {
+                        'key': 'Camden**',
+                        disabled: true,
+                        columns: ['year', 'Camden- All']
+                    },
+                    {
+                        'key': 'Chester**',
+                        disabled: true,
+                        columns: ['year', 'Chester- All']
+                    },
+                    {
+                        'key': 'Delaware**',
+                        disabled: true,
+                        columns: ['year', 'Delaware- All']
+                    },
+                    {
+                        'key': 'Gloucester**',
+                        disabled: true,
+                        columns: ['year', 'Gloucester- All']
+                    },
+                    {
+                        'key': 'Mercer**',
+                        disabled: true,
+                        columns: ['year', 'Mercer- All']
+                    },
+                    {
+                        'key': 'Montgomery**',
+                        disabled: true,
+                        columns: ['year', 'Montgomery- All']
+                    },
+                    {
+                        'key': 'Philadelphia**',
+                        disabled: true,
+                        columns: ['year', 'Philadelphia- All']
                     }
                 ]
             },
@@ -4285,7 +4330,16 @@ const snippetsRef = {
                 columnOptions: [
                     ['DVRPC- Poor', 'DVRPC- Fair', 'DVRPC- Good'],
                     ['New Jersey- Poor', 'New Jersey- Fair', 'New Jersey- Good'],
-                    ['Pennsylvania- Poor', 'Pennsylvania- Fair', 'Pennsylvania- Good']
+                    ['Pennsylvania- Poor', 'Pennsylvania- Fair', 'Pennsylvania- Good'],
+                    ['Bucks- Poor', 'Bucks- Fair', 'Bucks- Good'],
+                    ['Burlington- Poor', 'Burlington- Fair', 'Burlington- Good'],
+                    ['Camden- Poor', 'Camden- Fair', 'Camden- Good'],
+                    ['Chester- Poor', 'Chester- Fair', 'Chester- Good'],
+                    ['Delaware- Poor', 'Delaware- Fair', 'Delaware- Good'],
+                    ['Gloucester- Poor', 'Gloucester- Fair', 'Gloucester- Good'],
+                    ['Mercer- Poor', 'Mercer- Fair', 'Mercer- Good'],
+                    ['Montgomery- Poor', 'Montgomery- Fair', 'Montgomery- Good'],
+                    ['Philadelphia- Poor', 'Philadelphia- Fair', 'Philadelphia- Good'],
                 ],
                 data: [
                     {

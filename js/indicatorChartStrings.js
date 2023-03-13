@@ -1278,6 +1278,7 @@ const chartStrings = {
         <div class="data-viz chart">
             <svg></svg>
         </div>
+        <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>
 
         <hr class="indicator-content-hr" />
@@ -1289,9 +1290,22 @@ const chartStrings = {
                     <label>
                         Select Geography
                         <select id="viz-1" class="toggle-data-selector">
+                            <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
-                                <option value="1">New Jersey Counties</option>
-                                <option value="2">Pennsylvania Counties</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
                         </select>
                     </label>
                 </fieldset>
