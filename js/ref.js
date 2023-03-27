@@ -298,7 +298,7 @@ const snippetsRef = {
                     ['Gloucester-Less than High School', 'Gloucester-Some High School', 'Gloucester-Graduated High School', 'Gloucester-Some College', 'Gloucester-Associates Degree', 'Gloucester-Bachelors Degree', 'Gloucester-Graduate/Professional Degree'],
                     ['Mercer-Less than High School', 'Mercer-Some High School', 'Mercer-Graduated High School', 'Mercer-Some College', 'Mercer-Associates Degree', 'Mercer-Bachelors Degree', 'Mercer-Graduate/Professional Degree'],
                     ['Montgomery-Less than High School', 'Montgomery-Some High School', 'Montgomery-Graduated High School', 'Montgomery-Some College', 'Montgomery-Associates Degree', 'Montgomery-Bachelors Degree', 'Montgomery-Graduate/Professional Degree'],
-                    ['Philadelphia Subregion-Less than High School', 'Philadelphia Subregion-Some High School', 'Philadelphia Subregion-Graduated High School', 'Philadelphia Subregion-Some College', 'Philadelphia Subregion-Associates Degree', 'Philadelphia Subregion-Bachelors Degree', 'Philadelphia Subregion-Graduate/Professional Degree']
+                    ['Philadelphia-Less than High School', 'Philadelphia-Some High School', 'Philadelphia-Graduated High School', 'Philadelphia-Some College', 'Philadelphia-Associates Degree', 'Philadelphia-Bachelors Degree', 'Philadelphia-Graduate/Professional Degree']
                 ],
                 data: [
                     {
@@ -972,39 +972,39 @@ const snippetsRef = {
                     units: ['thousands']
                 },
                 columnOptions: [
-                    ['DVRPC- Below 35%- Own', 'DVRPC- Below 35%- Rent', 'DVRPC- Above 35%- Own','DVRPC- Above 35%- Rent','DVRPC- Not Computed- Own', 'DVRPC- Not Computed- Rent'],
-                    ['New Jersey Suburbs- Below 35%- Own', 'New Jersey Suburbs- Below 35%- Rent','New Jersey Suburbs- Above 35%- Own','New Jersey Suburbs- Above 35%- Rent','New Jersey Suburbs- Not Computed- Own', 'New Jersey Suburbs- Not Computed- Rent'],
-                    ['Pennsylvania Suburbs- Below 35%- Own', 'Pennsylvania Suburbs- Below 35%- Rent','Pennsylvania Suburbs- Above 35%- Own','Pennsylvania Suburbs- Above 35%- Rent','Pennsylvania Suburbs- Not Computed- Own', 'Pennsylvania Suburbs- Not Computed- Rent'],
-                    ['Core City- Below 35%- Own', 'Core City- Below 35%- Rent','Core City- Above 35%- Own','Core City- Above 35%- Rent','Core City- Not Computed- Own', 'Core City- Not Computed- Rent'],
-                    ['Developed Community- Below 35%- Own', 'Developed Community- Below 35%- Rent','Developed Community- Above 35%- Own','Developed Community- Above 35%- Rent','Developed Community- Not Computed- Own', 'Developed Community- Not Computed- Rent'],
-                    ['Growing Suburb- Below 35%- Own', 'Growing Suburb- Below 35%- Rent','Growing Suburb- Above 35%- Own','Growing Suburb- Above 35%- Rent','Growing Suburb- Not Computed- Own', 'Growing Suburb- Not Computed- Rent'],
-                    ['Rural Area- Below 35%- Own', 'Rural Area- Below 35%- Rent','Rural Area- Above 35%- Own','Rural Area- Above 35%- Rent','Rural Area- Not Computed- Own', 'Rural Area- Not Computed- Rent'],
-                    ['Bucks County- Below 35%- Own', 'Bucks County- Below 35%- Rent','Bucks County- Above 35%- Own','Bucks County- Above 35%- Rent','Bucks County- Not Computed- Own', 'Bucks County- Not Computed- Rent'],
-                    ['Burlington County- Below 35%- Own', 'Burlington County- Below 35%- Rent','Burlington County- Above 35%- Own','Burlington County- Above 35%- Rent','Burlington County- Not Computed- Own', 'Burlington County- Not Computed- Rent'],
-                    ['Camden County- Below 35%- Own', 'Camden County- Below 35%- Rent','Camden County- Above 35%- Own','Camden County- Above 35%- Rent','Camden County- Not Computed- Own', 'Camden County- Not Computed- Rent'],
-                    ['Chester County- Below 35%- Own', 'Chester County- Below 35%- Rent','Chester County- Above 35%- Own','Chester County- Above 35%- Rent','Chester County- Not Computed- Own', 'Chester County- Not Computed- Rent'],
-                    ['Delaware County- Below 35%- Own', 'Delaware County- Below 35%- Rent','Delaware County- Above 35%- Own','Delaware County- Above 35%- Rent','Delaware County- Not Computed- Own', 'Delaware County- Not Computed- Rent'],
-                    ['Gloucester County- Below 35%- Own', 'Gloucester County- Below 35%- Rent','Gloucester County- Above 35%- Own','Gloucester County- Above 35%- Rent','Gloucester County- Not Computed- Own', 'Gloucester County- Not Computed- Rent'],
-                    ['Mercer County- Below 35%- Own', 'Mercer County- Below 35%- Rent','Mercer County- Above 35%- Own','Mercer County- Above 35%- Rent','Mercer County- Not Computed- Own', 'Mercer County- Not Computed- Rent'],
-                    ['Montgomery County- Below 35%- Own', 'Montgomery County- Below 35%- Rent','Montgomery County- Above 35%- Own','Montgomery County- Above 35%- Rent','Montgomery County- Not Computed- Own', 'Montgomery County- Not Computed- Rent'],
-                    ['Philadelphia County- Below 35%- Own', 'Philadelphia County- Below 35%- Rent','Philadelphia County- Above 35%- Own','Philadelphia County- Above 35%- Rent','Philadelphia County- Not Computed- Own', 'Philadelphia County- Not Computed- Rent']
+                    ['DVRPC- Below 30%- Own', 'DVRPC- Below 30%- Rent', 'DVRPC- Above 30%- Own','DVRPC- Above 30%- Rent','DVRPC- Not Computed- Own', 'DVRPC- Not Computed- Rent'],
+                    ['New Jersey Suburbs- Below 30%- Own', 'New Jersey Suburbs- Below 30%- Rent','New Jersey Suburbs- Above 30%- Own','New Jersey Suburbs- Above 30%- Rent','New Jersey Suburbs- Not Computed- Own', 'New Jersey Suburbs- Not Computed- Rent'],
+                    ['Pennsylvania Suburbs- Below 30%- Own', 'Pennsylvania Suburbs- Below 30%- Rent','Pennsylvania Suburbs- Above 30%- Own','Pennsylvania Suburbs- Above 30%- Rent','Pennsylvania Suburbs- Not Computed- Own', 'Pennsylvania Suburbs- Not Computed- Rent'],
+                    ['Core City- Below 30%- Own', 'Core City- Below 30%- Rent','Core City- Above 30%- Own','Core City- Above 30%- Rent','Core City- Not Computed- Own', 'Core City- Not Computed- Rent'],
+                    ['Developed Community- Below 30%- Own', 'Developed Community- Below 30%- Rent','Developed Community- Above 30%- Own','Developed Community- Above 30%- Rent','Developed Community- Not Computed- Own', 'Developed Community- Not Computed- Rent'],
+                    ['Growing Suburb- Below 30%- Own', 'Growing Suburb- Below 30%- Rent','Growing Suburb- Above 30%- Own','Growing Suburb- Above 30%- Rent','Growing Suburb- Not Computed- Own', 'Growing Suburb- Not Computed- Rent'],
+                    ['Rural Area- Below 30%- Own', 'Rural Area- Below 30%- Rent','Rural Area- Above 30%- Own','Rural Area- Above 30%- Rent','Rural Area- Not Computed- Own', 'Rural Area- Not Computed- Rent'],
+                    ['Bucks County- Below 30%- Own', 'Bucks County- Below 30%- Rent','Bucks County- Above 30%- Own','Bucks County- Above 30%- Rent','Bucks County- Not Computed- Own', 'Bucks County- Not Computed- Rent'],
+                    ['Burlington County- Below 30%- Own', 'Burlington County- Below 30%- Rent','Burlington County- Above 30%- Own','Burlington County- Above 30%- Rent','Burlington County- Not Computed- Own', 'Burlington County- Not Computed- Rent'],
+                    ['Camden County- Below 30%- Own', 'Camden County- Below 30%- Rent','Camden County- Above 30%- Own','Camden County- Above 30%- Rent','Camden County- Not Computed- Own', 'Camden County- Not Computed- Rent'],
+                    ['Chester County- Below 30%- Own', 'Chester County- Below 30%- Rent','Chester County- Above 30%- Own','Chester County- Above 30%- Rent','Chester County- Not Computed- Own', 'Chester County- Not Computed- Rent'],
+                    ['Delaware County- Below 30%- Own', 'Delaware County- Below 30%- Rent','Delaware County- Above 30%- Own','Delaware County- Above 30%- Rent','Delaware County- Not Computed- Own', 'Delaware County- Not Computed- Rent'],
+                    ['Gloucester County- Below 30%- Own', 'Gloucester County- Below 30%- Rent','Gloucester County- Above 30%- Own','Gloucester County- Above 30%- Rent','Gloucester County- Not Computed- Own', 'Gloucester County- Not Computed- Rent'],
+                    ['Mercer County- Below 30%- Own', 'Mercer County- Below 30%- Rent','Mercer County- Above 30%- Own','Mercer County- Above 30%- Rent','Mercer County- Not Computed- Own', 'Mercer County- Not Computed- Rent'],
+                    ['Montgomery County- Below 30%- Own', 'Montgomery County- Below 30%- Rent','Montgomery County- Above 30%- Own','Montgomery County- Above 30%- Rent','Montgomery County- Not Computed- Own', 'Montgomery County- Not Computed- Rent'],
+                    ['Philadelphia County- Below 30%- Own', 'Philadelphia County- Below 30%- Rent','Philadelphia County- Above 30%- Own','Philadelphia County- Above 30%- Rent','Philadelphia County- Not Computed- Own', 'Philadelphia County- Not Computed- Rent']
                 ],
                 data: [
                     {
-                        'key': 'Below 35% - Own',
-                        columns: ['year', 'DVRPC- Below 35%- Own']
+                        'key': 'Below 30% - Own',
+                        columns: ['year', 'DVRPC- Below 30%- Own']
                     },
                     {
-                        'key': 'Below 35% - Rent',
-                        columns: ['year', 'DVRPC- Below 35%- Rent']
+                        'key': 'Below 30% - Rent',
+                        columns: ['year', 'DVRPC- Below 30%- Rent']
                     },
                     {
-                        'key': 'Above 35% - Own',
-                        columns: ['year', 'DVRPC- Above 35%- Own']
+                        'key': 'Above 30% - Own',
+                        columns: ['year', 'DVRPC- Above 30%- Own']
                     },
                     {
-                        'key': 'Above 35% - Rent',
-                        columns: ['year', 'DVRPC- Above 35%- Rent']
+                        'key': 'Above 30% - Rent',
+                        columns: ['year', 'DVRPC- Above 30%- Rent']
                     },
                     {
                         'key': 'Not Computed - Own',
