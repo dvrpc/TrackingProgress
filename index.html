@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>DVRPC > Tracking Progress</title>
     <meta name="created" content="2020-02">
-    <meta name="description" content="Tracking Progress is an interactive dashboard for exploring regularly updated data to gauge the region's progress towards long-range plan goals. Regional indicator data are used to better understand where the region is at the start of each plan update, identify successful programs, and align DVRPC's planning and implementation activities to serve as a guide for regional strategies.">
-    <meta name="keywords" content="Long-Range Planning, The Long-Range Plan, DVRPC Long-Range Plan, Connections 2045, Data Visualization, D3, NVD3, DVRPC, Urban Planning, Regional Planning, Planning Implementation, Delaware Valley Planning, Regional Indicators" >
-    <meta name="author" content="Delaware Valley Regional Planning Commission (DVRPC)" >
-    <meta name="owner" content="webmaster@dvrpc.org" >
+    <meta name="description"
+        content="Tracking Progress is an interactive dashboard for exploring regularly updated data to gauge the region's progress towards long-range plan goals. Regional indicator data are used to better understand where the region is at the start of each plan update, identify successful programs, and align DVRPC's planning and implementation activities to serve as a guide for regional strategies.">
+    <meta name="keywords"
+        content="Long-Range Planning, The Long-Range Plan, DVRPC Long-Range Plan, Connections 2045, Data Visualization, D3, NVD3, DVRPC, Urban Planning, Regional Planning, Planning Implementation, Delaware Valley Planning, Regional Indicators">
+    <meta name="author" content="Delaware Valley Regional Planning Commission (DVRPC)">
+    <meta name="owner" content="webmaster@dvrpc.org">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="distribution" content="global" >
-    <meta name="robots" content="index, follow" >
+    <meta name="distribution" content="global">
+    <meta name="robots" content="index, follow">
     <meta name="copyright" content="1995-2020 all rights reserved">
-    
+
     <meta property="og:title" content="Tracking Progress" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.dvrpc.org/TrackingProgress/" />
     <meta property="og:image" content="https://www.dvrpc.org/TrackingProgress/img/tp-og-img.png" />
-    <meta property="og:description" content="Tracking Progress is an interactive dashboard for exploring regularly updated data to gauge the progress of the Greater Philadelphia region toward realizing the principles of DVRPC's Connections 2045 long-range plan." />
-    
+    <meta property="og:description"
+        content="Tracking Progress is an interactive dashboard for exploring regularly updated data to gauge the progress of the Greater Philadelphia region toward realizing the principles of DVRPC's Connections 2045 long-range plan." />
+
     <!-- DVRPC Website VERSION #7.0 Copyright (c) 1995-2020 Delaware Valley Regional Planning Commission. All rights reserved.  -->
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700">
@@ -30,22 +34,24 @@
     <link rel="stylesheet" href="./css/print.css" media="print">
 
     <script defer src="bundle.js" type="module"></script>
-    
+
     <!-- Analytics -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9825778-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-9825778-1');
     </script>
 </head>
+
 <body>
     <header id="header">
         <div id="logo-help-wrapper">
-            <a href="/TrackingProgress/"><img id="tp-logo" src="./img/header/TP-Logo.png" alt="Tracking Progress project logo" /></a>
+            <a href="/TrackingProgress/"><img id="tp-logo" src="./img/header/TP-Logo.png"
+                    alt="Tracking Progress project logo" /></a>
             <button id="view-how-to" class="btn hover-btn nav-btn">How To</button>
             <button id="help-btn" class="btn hover-btn nav-btn help-btn">About</button>
         </div>
@@ -60,26 +66,34 @@
             <span class="tp-header">Indicators Dashboard</span>
         </header>
 
-        <p class="splash-blurb">Measuring the Greater Philadelphia region's progress toward realizing DVRPC's Connections 2045 long-range plan.</p>
+        <p class="splash-blurb">Measuring the Greater Philadelphia region's progress toward realizing DVRPC's
+            Connections 2050 long-range plan.</p>
+
+        <button id="to-dash" class="dashboard-btn"><img src="./img/DashboardButtonIcon.png" />To the Dashboard</button>
 
         <details class="splash-details">
             <summary>More Info</summary>
 
             <div class="splash-details-content">
-                <p class="splash-text"><em>Tracking Progress</em> is an interactive dashboard for exploring regularly updated data to gauge the progress of the Greater Philadelphia region toward realizing the principles of DVRPC's Connections 2045 long-range plan to expand the <strong>economy</strong>, sustain the <strong>environment</strong>, develop livable <strong>communities</strong>, create an integrated multimodal <strong>transportation</strong> network and advance <strong>equity</strong> and foster diversity.</p>
-
                 <figure class="splash-map-figure">
-                    <a href="./img/MainDVRPCMap.png"><img src="./img/MainDVRPCMap_reduced.png" alt="map of the DVRPC region" class="region-map" /></a>
+                    <a href="./img/MainDVRPCMap.png"><img src="./img/MainDVRPCMap_reduced.png"
+                            alt="map of the DVRPC region" class="region-map" /></a>
                     <figcaption>
                         <a href="./img/MainDVRPCMap.png">view the DVRPC counties</a>
                     </figcaption>
                 </figure>
-
-                <p class="splash-text">Regional indicators are used to better understand where the region is at a given time period, identify successful programs, align DVRPC's planning and implementation activities, and inform regional strategies. The data in Tracking Progress is also a valuable resource for other planners, analysts and anyone interested in the conditions and future of the Greater Philadelphia region.</p>
+                <div>
+                <p class="splash-text"><em>Tracking Progress</em> is an interactive dashboard for exploring regularly
+                    updated data to gauge our progress toward achieve the <a href="http://www.dvrpc.org/plan">Connections 2050</a>
+                    vision of an <strong>equitable</strong>, <strong>resilient</strong>, and <strong>sustainable</strong>
+                    <a href="https://www.dvrpc.org/about/">Greater Philadelphia region</a>
+                </p> 
+                <br>
+                <p class="splash-text">Regional indicators are used to communicate how the region is performing at a given time, identify successful programs, align DVRPC's planning and implementation activities, and inform regional strategies. The data in Tracking Progress is also a valuable resource for other planners, analysts and anyone interested in the conditions and future of the Greater Philadelphia region.</p>
+                </div>
             </div>
         </details>
 
-        <button id="to-dash" class="btn hover-btn btn-splash">↓ To Dashboard</button>
     </section>
 
     <div class="indicators-wrapper" id="dashboard">
@@ -100,247 +114,348 @@
 
             <!-- category filters -->
             <div id="sustain-icon" class="icon-set sustain-accent hover-btn">
-                <img loading="lazy" src="./img/sustain-icon.png" alt="sustainability icon"  class="icon-set-img"/>
+                <img loading="lazy" src="./img/sustain-icon.png" alt="sustainability icon" class="icon-set-img" />
                 <p class="icon-set-p">Sustainability</p>
             </div>
             <div id="equity-icon" class="icon-set equity-accent hover-btn">
-                <img loading="lazy" src="./img/equity-icon.png" alt="equity icon"  class="icon-set-img"/>
+                <img loading="lazy" src="./img/equity-icon.png" alt="equity icon" class="icon-set-img" />
                 <p class="icon-set-p">Equity</p>
             </div>
             <div id="resil-icon" class="icon-set resil-accent hover-btn">
-                <img loading="lazy" src="./img/resil-icon.png" alt="resiliency icon"  class="icon-set-img"/>
+                <img loading="lazy" src="./img/resil-icon.png" alt="resiliency icon" class="icon-set-img" />
                 <p class="icon-set-p">Resiliency</p>
             </div>
             <div id="enviro-icon" class="icon-set enviro-accent hover-btn">
-                <img loading="lazy" src="./img/enviro-icon.png" alt="environment icon"  class="icon-set-img"/>
+                <img loading="lazy" src="./img/enviro-icon.png" alt="environment icon" class="icon-set-img" />
                 <p class="icon-set-p">Environment</p>
             </div>
             <div id="comm-icon" class="icon-set comm-accent hover-btn">
-                <img loading="lazy" src="./img/comm-icon.png" alt="community icon" class="icon-set-img"/>
+                <img loading="lazy" src="./img/comm-icon.png" alt="community icon" class="icon-set-img" />
                 <p class="icon-set-p">Community</p>
             </div>
             <div id="transpo-icon" class="icon-set transpo-accent hover-btn">
-                <img loading="lazy" src="./img/transpo-icon.png" alt="commerce icon"  class="icon-set-img"/>
+                <img loading="lazy" src="./img/transpo-icon.png" alt="commerce icon" class="icon-set-img" />
                 <p class="icon-set-p">Transportation</p>
             </div>
             <div id="econo-icon" class="icon-set econo-accent hover-btn">
-                <img loading="lazy" src="./img/econo-icon.png" alt="economy icon" class="icon-set-img"/>
+                <img loading="lazy" src="./img/econo-icon.png" alt="economy icon" class="icon-set-img" />
                 <p class="icon-set-p">Economy</p>
             </div>
 
             <!-- emoji filters -->
             <div id="emoji-awesome" class="icon-set emoji-set hover-btn">
-                <img loading="lazy" src="./img/emoji-awesome.png" alt="awesome emoji" class="emoji-set-img"/>
+                <img loading="lazy" src="./img/emoji-awesome.png" alt="awesome emoji" class="emoji-set-img" />
                 <p class="icon-set-p">Very Good</p>
             </div>
             <div id="emoji-good" class="icon-set emoji-set hover-btn">
-                <img loading="lazy" src="./img/emoji-good.png" alt="good emoji"  class="emoji-set-img"/>
+                <img loading="lazy" src="./img/emoji-good.png" alt="good emoji" class="emoji-set-img" />
                 <p class="icon-set-p">Good</p>
             </div>
             <div id="emoji-neutral" class="icon-set emoji-set hover-btn">
-                <img loading="lazy" src="./img/emoji-neutral.png" alt="neutral emoji" class="emoji-set-img"/>
+                <img loading="lazy" src="./img/emoji-neutral.png" alt="neutral emoji" class="emoji-set-img" />
                 <p class="icon-set-p">Neutral</p>
             </div>
             <div id="emoji-not-great" class="icon-set emoji-set hover-btn">
-                <img loading="lazy" src="./img/emoji-not-great.png" alt="bad emoji"  class="emoji-set-img"/>
+                <img loading="lazy" src="./img/emoji-not-great.png" alt="bad emoji" class="emoji-set-img" />
                 <p class="icon-set-p">Not Good</p>
             </div>
             <div id="emoji-bad" class="icon-set emoji-set hover-btn">
-                <img loading="lazy" src="./img/emoji-bad.png" alt="terrible emoji"  class="emoji-set-img"/>
+                <img loading="lazy" src="./img/emoji-bad.png" alt="terrible emoji" class="emoji-set-img" />
                 <p class="icon-set-p">Poor</p>
             </div>
         </nav>
 
         <main class="indicators-grid">
-            <div data-matrix="Commute-Mode Congestion Greenhouse-Gas-Emissions Miles-Driven Transit-Ridership Water-Quality" data-emoji="good" data-categories="enviro transpo equity sustain" class="indicators-grid-item hover-btn" id="Air-Quality" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/air_quality.png" class="indicators-icons" alt="air quality icon" />
+            <div data-matrix="Commute-Mode Congestion Greenhouse-Gas-Emissions Miles-Driven Transit-Ridership Water-Quality"
+                data-emoji="awesome" data-categories="enviro transpo equity sustain"
+                class="indicators-grid-item hover-btn" id="Air-Quality" role="button" tabindex="0"
+                aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/air_quality.svg" class="indicators-icons"
+                    alt="air quality icon" />
                 <p class="indicators-title">Air Quality</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img" alt="109 fewer unhealthy air quality days per year" />
-                    <p class="flipside-text"><strong>109 fewer</strong><br />unhealthy air quality days per year</p>
+                    <img loading="lazy" src="./img/emoji-awesome.png" class="flipside-img"
+                        alt="109 fewer unhealthy air quality days per year" />
+                    <p class="flipside-text"><strong>67 fewer</strong><br />unhealthy air quality days per year</p>
                 </div>
             </div>
-            <div data-matrix="Pavement-Conditions Roadway-Safety Transit-Conditions" data-emoji="awesome" data-categories="transpo resil" class="indicators-grid-item hover-btn" id="Bridge-Conditions" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/bridge_conditions.png" class="indicators-icons" alt="bridge conditions icon" />
+            <div data-matrix="Pavement-Conditions Roadway-Safety Transit-Conditions" data-emoji="awesome"
+                data-categories="transpo resil" class="indicators-grid-item hover-btn" id="Bridge-Conditions"
+                role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/bridge_conditions.svg" class="indicators-icons"
+                    alt="bridge conditions icon" />
                 <p class="indicators-title">Bridge Conditions</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-awesome.png" class="flipside-img" alt="54% drop in deficient bridge deck area" />
-                    <p class="flipside-text"><strong>54% drop </strong><br />in deficient bridge deck area</p>
+                    <img loading="lazy" src="./img/emoji-awesome.png" class="flipside-img"
+                        alt="54% drop in deficient bridge deck area" />
+                    <p class="flipside-text"><strong>59% drop </strong><br />in deficient bridge deck area</p>
                 </div>
             </div>
-            <div data-matrix="Educational-Attainment Gross-Domestic-Product Income Job-Growth Labor-Force" data-emoji="good" data-categories="econo resil" class="indicators-grid-item hover-btn" id="Business-Formations" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/business_formations.png" class="indicators-icons" alt="Business Formations icon"/>
+            <div data-matrix="Educational-Attainment Gross-Domestic-Product Income Job-Growth Labor-Force"
+                data-emoji="awesome" data-categories="econo resil" class="indicators-grid-item hover-btn"
+                id="Business-Formations" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/business_formations.svg" class="indicators-icons"
+                    alt="Business Formations icon" />
                 <p class="indicators-title">Business Formations</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img" alt="29% increase in patent approvals" />
-                    <p class="flipside-text"><strong>29% increase</strong><br />in patent approvals</p>
+                    <img loading="lazy" src="./img/emoji-awesome.png" class="flipside-img"
+                        alt="29% increase in patent approvals" />
+                    <p class="flipside-text"><strong>143% growth</strong><br />in applications</p>
                 </div>
             </div>
-            <div data-matrix="Educational-Attainment Housing-Activity Housing-Affordability Income Job-Growth Land-Consumption Mortgage-Lending Population-Growth" data-emoji="neutral" data-categories="comm econo equity" class="indicators-grid-item hover-btn" id="Community-Integration" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/community_integration.png" class="indicators-icons " alt="Community Integration icon"/>
+            <div data-matrix="Educational-Attainment Housing-Activity Housing-Affordability Income Job-Growth Land-Consumption Mortgage-Lending Population-Growth"
+                data-emoji="not-great" data-categories="comm econo equity" class="indicators-grid-item hover-btn"
+                id="Community-Integration" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/community_integration.svg" class="indicators-icons "
+                    alt="Community Integration icon" />
                 <p class="indicators-title">Community Integration</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img" alt="6.8% income gap drop between People of Color &amp; White" />
-                    <p class="flipside-text"><strong>6.8% drop</strong><br />in income gap between People of Color &amp; White</p>
+                    <img loading="lazy" src="./img/emoji-not-great.png" class="flipside-img"
+                        alt="6.8% income gap drop between People of Color &amp; White" />
+                    <p class="flipside-text"><strong>41 to 54%</strong><br />not living in diverse communities</p>
                 </div>
-            </div>   
-            <div data-matrix="Air-Quality Congestion Greenhouse-Gas-Emissions Labor-Force Miles-Driven Transit-Ridership" data-emoji="neutral" data-categories="transpo enviro comm sustain" class="indicators-grid-item hover-btn" id="Commute-Mode" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/nonSOV_mode_share.png" class="indicators-icons" alt="nonSOV mode share icon"/>
+            </div>
+            <div data-matrix="Air-Quality Congestion Greenhouse-Gas-Emissions Labor-Force Miles-Driven Transit-Ridership"
+                data-emoji="neutral" data-categories="transpo enviro comm sustain"
+                class="indicators-grid-item hover-btn" id="Commute-Mode" role="button" tabindex="0"
+                aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/nonSOV_mode_share.svg" class="indicators-icons"
+                    alt="nonSOV mode share icon" />
                 <p class="indicators-title">Commute Mode</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img" alt="1.5% fewer residents drive alone to work" />
+                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img"
+                        alt="1.5% fewer residents drive alone to work" />
                     <p class="flipside-text"><strong>1.5% fewer</strong><br />residents drive alone to work</p>
                 </div>
             </div>
-            <div data-matrix="Air-Quality Commute-Mode Gross-Domestic-Product Miles-Driven Roadway-Safety Transit-Ridership" data-emoji="neutral" data-categories="transpo econo comm sustain" class="indicators-grid-item hover-btn" id="Congestion" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/roadway_reliability.png" class="indicators-icons" alt="Congestion icon" />
+            <div data-matrix="Air-Quality Commute-Mode Gross-Domestic-Product Miles-Driven Roadway-Safety Transit-Ridership"
+                data-emoji="neutral" data-categories="transpo econo comm sustain" class="indicators-grid-item hover-btn"
+                id="Congestion" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/roadway_reliability.svg" class="indicators-icons"
+                    alt="Congestion icon" />
                 <p class="indicators-title">Congestion</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img" alt="2.3% greater reliability on region's freeways" />
+                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img"
+                        alt="2.3% greater reliability on region's freeways" />
                     <p class="flipside-text"><strong>2.3% greater</strong><br />reliability on region's freeways</p>
                 </div>
             </div>
-            <div data-matrix="Business-Formations Gross-Domestic-Product Income Job-Growth Labor-Force" data-emoji="good" data-categories="comm econo equity" class="indicators-grid-item hover-btn" id="Educational-Attainment" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/educational_attainment.png" class="indicators-icons" alt="educational attainment icon" />
+            <div data-matrix="Business-Formations Gross-Domestic-Product Income Job-Growth Labor-Force"
+                data-emoji="good" data-categories="comm econo equity" class="indicators-grid-item hover-btn"
+                id="Educational-Attainment" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/educational_attainment.svg" class="indicators-icons"
+                    alt="educational attainment icon" />
                 <p class="indicators-title">Educational Attainment</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img" alt="8.6% rise in population over 24 with high school diploma" />
-                    <p class="flipside-text"><strong>8.6% rise</strong><br />in population over 24 with high school diploma</p>
+                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img"
+                        alt="8.6% rise in population over 24 with high school diploma" />
+                    <p class="flipside-text"><strong>10% rise</strong><br />in population over 24 with high school
+                        diploma</p>
                 </div>
             </div>
-            <div data-matrix="Business-Formations Income Job-Growth Labor-Force" data-emoji="not-great" data-categories="econo resil" class="indicators-grid-item hover-btn" id="Gross-Domestic-Product" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/exports.png" class="indicators-icons" alt="Exports icon"/>
+            <div data-matrix="Business-Formations Income Job-Growth Labor-Force" data-emoji="awesome"
+                data-categories="econo resil" class="indicators-grid-item hover-btn" id="Gross-Domestic-Product"
+                role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/exports.svg" class="indicators-icons"
+                    alt="Exports icon" />
                 <p class="indicators-title">Gross Domestic Product</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-not-great.png" class="flipside-img" alt="8.9% decrease in value of exported goods" />
-                    <p class="flipside-text"><strong>8.9% decrease</strong><br />in value of GDP</p>
+                    <img loading="lazy" src="./img/emoji-not-great.png" class="flipside-img"
+                        alt="8.9% decrease in value of exported goods" />
+                    <p class="flipside-text"><strong>105% gain</strong><br />in economic growth</p>
                 </div>
             </div>
-            <div data-matrix="Air-Quality Commute-Mode Land-Consumption Population-Growth " data-emoji="good" data-categories="enviro comm sustain resil" class="indicators-grid-item hover-btn" id="Greenhouse-Gas-Emissions" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/emissions.png" class="indicators-icons" alt="emissions icon"/>
+            <div data-matrix="Air-Quality Commute-Mode Land-Consumption Population-Growth " data-emoji="good"
+                data-categories="enviro comm sustain resil" class="indicators-grid-item hover-btn"
+                id="Greenhouse-Gas-Emissions" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/emissions.svg" class="indicators-icons"
+                    alt="emissions icon" />
                 <p class="indicators-title">Greenhouse Gas Emissions</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img" alt="21% reduction in greenhouse gas emissions" />
+                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img"
+                        alt="21% reduction in greenhouse gas emissions" />
                     <p class="flipside-text"><strong>21% reduction</strong><br />in greenhouse gas emissions</p>
                 </div>
             </div>
-            <div data-matrix="Housing-Affordability Land-Consumption Mortgage-Lending Transit-Ridership Community-Integration" data-emoji="good" data-categories="comm econo enviro sustain" class="indicators-grid-item hover-btn" id="Housing-Activity" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/housing_activity.png" class="indicators-icons" alt="housing activity icon"/>
-                <p class="indicators-title">Housing Activity</p>
-                <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img" alt="30% more permits in appropriate development areas" />
-                    <p class="flipside-text"><strong>30% more</strong><br />permits in appropriate development areas</p>
-                </div>
-            </div>
-            <div data-matrix="Housing-Activity Income Land-Consumption Mortgage-Lending Community-Integration" data-emoji="neutral" data-categories="comm econo resil equity" class="indicators-grid-item hover-btn" id="Housing-Affordability" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/affordable_housing.png" class="indicators-icons" alt="affordable housing icon" />
+            <div data-matrix="Housing-Activity Income Land-Consumption Mortgage-Lending Community-Integration"
+                data-emoji="good" data-categories="comm econo resil equity" class="indicators-grid-item hover-btn"
+                id="Housing-Affordability" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/affordable_housing.svg" class="indicators-icons"
+                    alt="affordable housing icon" />
                 <p class="indicators-title">Housing Affordability</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img" alt="4.2% fewer cost burdened households" />
-                    <p class="flipside-text"><strong>4.2% fewer</strong><br />cost-burdened households</p>
+                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img"
+                        alt="4.2% fewer cost burdened households" />
+                    <p class="flipside-text"><strong>9% fewer</strong><br />cost-burdened households</p>
                 </div>
             </div>
-            <div data-matrix="Educational-Attainment Gross-Domestic-Product Job-Growth Labor-Force" data-emoji="bad" data-categories="econo comm equity resil" class="indicators-grid-item hover-btn" id="Income" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/income_inequality.png" class="indicators-icons" alt="Income icon" />
+            <div data-matrix="Housing-Affordability Land-Consumption Mortgage-Lending Transit-Ridership Community-Integration"
+                data-emoji="good" data-categories="comm econo enviro sustain" class="indicators-grid-item hover-btn"
+                id="Housing-Activity" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/housing_activity.svg" class="indicators-icons"
+                    alt="housing activity icon" />
+                <p class="indicators-title">Housing Permits</p>
+                <div class="flipside">
+                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img"
+                        alt="30% more permits in appropriate development areas" />
+                    <p class="flipside-text"><strong>51.5% more</strong><br />permits in appropriate development areas
+                    </p>
+                </div>
+            </div>
+            <div data-matrix="Educational-Attainment Gross-Domestic-Product Job-Growth Labor-Force" data-emoji="bad"
+                data-categories="econo comm equity resil" class="indicators-grid-item hover-btn" id="Income"
+                role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/income_inequality.svg" class="indicators-icons"
+                    alt="Income icon" />
                 <p class="indicators-title">Income</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-bad.png" class="flipside-img" alt="25% wider gap between high &amp; low household income" />
-                    <p class="flipside-text"><strong>25% wider</strong><br />gap between high &amp; low household income</p>
+                    <img loading="lazy" src="./img/emoji-bad.png" class="flipside-img"
+                        alt="25% wider gap between high &amp; low household income" />
+                    <p class="flipside-text"><strong>25% wider</strong><br />gap between high &amp; low household income
+                    </p>
                 </div>
             </div>
-            <div data-matrix="Business-Formations Gross-Domestic-Product Income Labor-Force Population-Growth" data-emoji="good" data-categories="econo comm resil" class="indicators-grid-item hover-btn" id="Job-Growth" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/job_growth.png" class="indicators-icons" alt="Job Growth icon"/>
+            <div data-matrix="Business-Formations Gross-Domestic-Product Income Labor-Force Population-Growth"
+                data-emoji="good" data-categories="econo comm resil" class="indicators-grid-item hover-btn"
+                id="Job-Growth" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/job_growth.svg" class="indicators-icons"
+                    alt="Job Growth icon" />
                 <p class="indicators-title">Job Growth</p>
                 <div class="flipside">
                     <img loading="lazy" src="./img/emoji-good.png" class="flipside-img" alt="6% increase in jobs" />
                     <p class="flipside-text"><strong>6% increase</strong><br />in jobs</p>
                 </div>
             </div>
-            <div data-matrix="Business-Formations Educational-Attainment Gross-Domestic-Product Income Job-Growth Population-Growth" data-emoji="neutral" data-categories="econo comm equity" class="indicators-grid-item hover-btn" id="Labor-Force" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/labor_force.png" class="indicators-icons " alt="Labor Force icon"/>
+            <div data-matrix="Business-Formations Educational-Attainment Gross-Domestic-Product Income Job-Growth Population-Growth"
+                data-emoji="neutral" data-categories="econo comm equity" class="indicators-grid-item hover-btn"
+                id="Labor-Force" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/labor_force.svg" class="indicators-icons"
+                    alt="Labor Force icon" />
                 <p class="indicators-title">Labor Force</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img" alt="30% smaller income gap between male &amp; female workers" />
-                    <p class="flipside-text"><strong>30% smaller</strong><br />income gap between male &amp; female workers</p>
+                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img"
+                        alt="30% smaller income gap between male &amp; female workers" />
+                    <p class="flipside-text"><strong>30% smaller</strong><br />income gap between male &amp; female
+                        workers</p>
                 </div>
             </div>
-            <div data-matrix="Business-Formations Housing-Activity Housing-Affordability Job-Growth Miles-Driven Population-Growth Community-Integration Water-Quality" data-emoji="good" data-categories="enviro comm sustain resil" class="indicators-grid-item hover-btn" id="Land-Consumption" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/land_consumption.png" class="indicators-icons" alt="land consumption icon"/>
+            <div data-matrix="Business-Formations Housing-Activity Housing-Affordability Job-Growth Miles-Driven Population-Growth Community-Integration Water-Quality"
+                data-emoji="good" data-categories="enviro comm sustain resil" class="indicators-grid-item hover-btn"
+                id="Land-Consumption" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/land_consumption.svg" class="indicators-icons"
+                    alt="land consumption icon" />
                 <p class="indicators-title">Land Consumption</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img" alt="land consumption quick info: 13% increase in developed acres per person" />
+                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img"
+                        alt="land consumption quick info: 13% increase in developed acres per person" />
                     <p class="flipside-text"><strong>62% drop</strong><br />in land consumption rate</p>
                 </div>
             </div>
-            <div data-matrix="Air-Quality Commute-Mode Congestion Greenhouse-Gas-Emissions Land-Consumption Transit-Ridership" data-emoji="neutral" data-categories="transpo enviro sustain" class="indicators-grid-item hover-btn" id="Miles-Driven" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/miles_driven.png" class="indicators-icons" alt="miles driven icon"/>
+            <div data-matrix="Air-Quality Commute-Mode Congestion Greenhouse-Gas-Emissions Land-Consumption Transit-Ridership"
+                data-emoji="neutral" data-categories="transpo enviro sustain" class="indicators-grid-item hover-btn"
+                id="Miles-Driven" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/miles_driven.svg" class="indicators-icons"
+                    alt="miles driven icon" />
                 <p class="indicators-title">Miles Driven</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img" alt="0.6% more miles driven annually per person" />
+                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img"
+                        alt="0.6% more miles driven annually per person" />
                     <p class="flipside-text"><strong>0.6% more</strong><br />miles driven annually per person</p>
                 </div>
             </div>
-            <div data-matrix="Housing-Activity Housing-Affordability Land-Consumption Community-Integration" data-emoji="neutral" data-categories="econo transpo equity resil" class="indicators-grid-item hover-btn" id="Mortgage-Lending" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/mortgage_lending.png" class="indicators-icons" alt="Mortgage Lending icon"/>
+            <div data-matrix="Housing-Activity Housing-Affordability Land-Consumption Community-Integration"
+                data-emoji="neutral" data-categories="econo transpo equity resil" class="indicators-grid-item hover-btn"
+                id="Mortgage-Lending" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/mortgage_lending.svg" class="indicators-icons"
+                    alt="Mortgage Lending icon" />
                 <p class="indicators-title">Mortgage Lending</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img" alt="0% change in PHL's international destinations" />
+                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img"
+                        alt="0% change in PHL's international destinations" />
                     <p class="flipside-text"><strong>0% change</strong><br />in PHL's international destinations</p>
                 </div>
             </div>
-            <div data-matrix="Bridge-Conditions Miles-Driven Roadway-Safety Transit-Conditions" data-emoji="bad" data-categories="transpo resil" class="indicators-grid-item hover-btn" id="Pavement-Conditions" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/pavement_conditions.png" class="indicators-icons" alt="pavement conditions icon"/>
+            <div data-matrix="Bridge-Conditions Miles-Driven Roadway-Safety Transit-Conditions" data-emoji="bad"
+                data-categories="transpo resil" class="indicators-grid-item hover-btn" id="Pavement-Conditions"
+                role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/pavement_conditions.svg" class="indicators-icons"
+                    alt="pavement conditions icon" />
                 <p class="indicators-title">Pavement Conditions</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-bad.png" class="flipside-img" alt="pavement conditions quick info: 5.3% more road segment miles in poor conditions" />
+                    <img loading="lazy" src="./img/emoji-bad.png" class="flipside-img"
+                        alt="pavement conditions quick info: 5.3% more road segment miles in poor conditions" />
                     <p class="flipside-text"><strong>5.3% more</strong><br />road segment miles in poor condition</p>
                 </div>
             </div>
-            <div data-matrix="Greenhouse-Gas-Emissions Housing-Activity Job-Growth Labor-Force Land-Consumption Miles-Driven Community-Integration Transit-Ridership" data-emoji="good" data-categories="comm econo enviro" class="indicators-grid-item hover-btn" id="Population-Growth" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/population_growth.png" class="indicators-icons" alt="population growth icon"/>
+            <div data-matrix="Greenhouse-Gas-Emissions Housing-Activity Job-Growth Labor-Force Land-Consumption Miles-Driven Community-Integration Transit-Ridership"
+                data-emoji="good" data-categories="comm econo enviro" class="indicators-grid-item hover-btn"
+                id="Population-Growth" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/population_growth.svg" class="indicators-icons"
+                    alt="population growth icon" />
                 <p class="indicators-title">Population Growth</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img" alt="6.6% rise in population since 2000" />
+                    <img loading="lazy" src="./img/emoji-good.png" class="flipside-img"
+                        alt="6.6% rise in population since 2000" />
                     <p class="flipside-text"><strong>6.5% increase</strong><br />in population</p>
                 </div>
             </div>
-            <div data-matrix="Bridge-Conditions Commute-Mode Congestion Miles-Driven Pavement-Conditions" data-emoji="not-great" data-categories="transpo equity" class="indicators-grid-item hover-btn" id="Roadway-Safety" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/vehicle_crashes.png" class="indicators-icons" alt="roadway safety icon" />
+            <div data-matrix="Bridge-Conditions Commute-Mode Congestion Miles-Driven Pavement-Conditions"
+                data-emoji="not-great" data-categories="transpo equity" class="indicators-grid-item hover-btn"
+                id="Roadway-Safety" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/roadway_safety.svg" class="indicators-icons"
+                    alt="roadway safety icon" />
                 <p class="indicators-title">Roadway Safety</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-not-great.png" class="flipside-img" alt="2.5% increase in fatalities &amp; severe injuries" />
+                    <img loading="lazy" src="./img/emoji-not-great.png" class="flipside-img"
+                        alt="2.5% increase in fatalities &amp; severe injuries" />
                     <p class="flipside-text"><strong>2.5% increase</strong><br />in fatalities and severe injuries</p>
                 </div>
-            </div>    
-            <div data-matrix="Bridge-Conditions Commute-Mode Congestion Pavement-Conditions Transit-Ridership" data-emoji="neutral" data-categories="transpo resil" class="indicators-grid-item hover-btn" id="Transit-Conditions" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/transit_conditions.png" class="indicators-icons" alt="transit conditions icon"/>
+            </div>
+            <div data-matrix="Bridge-Conditions Commute-Mode Congestion Pavement-Conditions Transit-Ridership"
+                data-emoji="neutral" data-categories="transpo resil" class="indicators-grid-item hover-btn"
+                id="Transit-Conditions" role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/transit_conditions.svg" class="indicators-icons"
+                    alt="transit conditions icon" />
                 <p class="indicators-title">Transit Conditions</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img" alt="14% increase in average transit fleet age" />
+                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img"
+                        alt="14% increase in average transit fleet age" />
                     <p class="flipside-text"><strong>14% increase</strong><br />in average transit fleet age</p>
                 </div>
             </div>
-            <div data-matrix="Commute-Mode Congestion Greenhouse-Gas-Emissions Miles-Driven Transit-Conditions" data-emoji="neutral" data-categories="transpo comm enviro sustain" class="indicators-grid-item hover-btn" id="Transit-Ridership" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/transit_ridership.png" class="indicators-icons" alt="Transit Ridership icon"/>
+            <div data-matrix="Commute-Mode Congestion Greenhouse-Gas-Emissions Miles-Driven Transit-Conditions"
+                data-emoji="neutral" data-categories="transpo comm enviro sustain"
+                class="indicators-grid-item hover-btn" id="Transit-Ridership" role="button" tabindex="0"
+                aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/transit_ridership.svg" class="indicators-icons"
+                    alt="Transit Ridership icon" />
                 <p class="indicators-title">Transit Ridership</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img" alt="1.1% decrease in transit trips per person" />
+                    <img loading="lazy" src="./img/emoji-neutral.png" class="flipside-img"
+                        alt="1.1% decrease in transit trips per person" />
                     <p class="flipside-text"><strong>1.1% decrease</strong><br />in transit trips per person</p>
                 </div>
             </div>
-            <div data-matrix="Air-Quality Land-Consumption" data-emoji="not-great" data-categories="enviro sustain" class="indicators-grid-item hover-btn" id="Water-Quality" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/water_quality.png" class="indicators-icons" alt="water quality icon"/>
+            <div data-matrix="Air-Quality Land-Consumption" data-emoji="not-great" data-categories="enviro sustain"
+                class="indicators-grid-item hover-btn" id="Water-Quality" role="button" tabindex="0"
+                aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/water_quality.svg" class="indicators-icons"
+                    alt="water quality icon" />
                 <p class="indicators-title">Water Quality</p>
                 <div class="flipside">
-                    <img loading="lazy" src="./img/emoji-not-great.png" class="flipside-img" alt="8.7% decrease in water supporting aquatic life" />
+                    <img loading="lazy" src="./img/emoji-not-great.png" class="flipside-img"
+                        alt="8.7% decrease in water supporting aquatic life" />
                     <p class="flipside-text"><strong>8.7% decrease</strong><br />in water supporting aquatic life</p>
                 </div>
             </div>
-            <div data-categories="enviro comm econo transpo" data-emoji="na" class="indicators-grid-item hover-btn" role="button" tabindex="0" aria-expanded="false">
-                <img loading="lazy" src="./img/indicator_icons/tp_homepage_logo.png" id="connections-icon" alt="Connections 2045 Logo"/>
+            <div data-categories="enviro comm econo transpo" data-emoji="na" class="indicators-grid-item hover-btn"
+                role="button" tabindex="0" aria-expanded="false">
+                <img loading="lazy" src="./img/indicator_icons/tp_homepage_logo.png" id="connections-icon"
+                    alt="Connections 2045 Logo" />
                 <span></span>
                 <div class="flipside">
-                    <a target="_blank" rel="noopener" href="/Connections2045/" class="flispside text">Click to explore DVRPC's Long-Range Plan</a>
+                    <a target="_blank" rel="noopener" href="/Connections2045/" class="flispside text">Click to explore
+                        DVRPC's Long-Range Plan</a>
                 </div>
             </div>
         </main>
@@ -348,49 +463,62 @@
 
     <footer>
         <div id="footer-words">
-            <a href="/"><img src="./img/footer/footer-logo.png" alt="footer logo" id="footer-logo"/></a>
+            <a href="/"><img src="./img/footer/footer-logo.png" alt="footer logo" id="footer-logo" /></a>
             <address>
                 190 N Independence Mall West, 8th Floor,<br />
                 Philadelphia, PA 19106-1520<br />
-                <a href="tel:+1-215-592-1800">215.592.1800</a> | <a href="mailto:bgruswitz@dvrpc.org">bgruswitz@dvrpc.org</a> | <a href="/Policies/">Policies</a><br />
-                &copy; Delaware Valley Regional Planning Commission 
+                <a href="tel:+1-215-592-1800">215.592.1800</a> | <a
+                    href="mailto:bgruswitz@dvrpc.org">bgruswitz@dvrpc.org</a> | <a href="/Policies/">Policies</a><br />
+                &copy; Delaware Valley Regional Planning Commission
             </address>
         </div>
 
         <div id="footer-contact-wrapper">
             <h3>Connect With Us!</h3>
             <div id="footer-social-wrapper">
-                <a id="mailto" class="footer-social-link" href="https://signup.e2ma.net/signup/1808352/1403728/" rel="noopener" target="_blank">
-                    <img loading="lazy"id="email-icon" class="footer-social" src="./img/footer/email.png" alt="icon link to email" />
+                <a id="mailto" class="footer-social-link" href="https://signup.e2ma.net/signup/1808352/1403728/"
+                    rel="noopener" target="_blank">
+                    <img loading="lazy" id="email-icon" class="footer-social" src="./img/footer/email.png"
+                        alt="icon link to email" />
                 </a>
                 <span class="vr"></span>
                 <a class="footer-social-link" href="https://www.facebook.com/DVRPC" rel="noopener" target="_blank">
-                    <img loading="lazy" class="footer-social" src="./img/footer/facebook.png" alt="icon link to facebook" />
+                    <img loading="lazy" class="footer-social" src="./img/footer/facebook.png"
+                        alt="icon link to facebook" />
                 </a>
                 <span class="vr"></span>
                 <a class="footer-social-link" href="https://twitter.com/DVRPC" rel="noopener" target="_blank">
-                    <img loading="lazy" class="footer-social" src="./img/footer/twitter.png" alt="icon link to twitter" />
+                    <img loading="lazy" class="footer-social" src="./img/footer/twitter.png"
+                        alt="icon link to twitter" />
                 </a>
                 <span class="vr"></span>
-                <a class="footer-social-link" href="https://www.instagram.com/dvrpc/?hl=en" rel="noopener" target="_blank">
-                    <img loading="lazy" class="footer-social" src="./img/footer/instagram.png" alt="icon link to instagram" />
+                <a class="footer-social-link" href="https://www.instagram.com/dvrpc/?hl=en" rel="noopener"
+                    target="_blank">
+                    <img loading="lazy" class="footer-social" src="./img/footer/instagram.png"
+                        alt="icon link to instagram" />
                 </a>
                 <span class="vr"></span>
-                <a class="footer-social-link" href="https://www.linkedin.com/company/delaware-valley-regional-planning-commission" rel="noopener" target="_blank">
-                    <img loading="lazy" class="footer-social" src="./img/footer/linkedin.png" alt="icon link to linkedin" />
+                <a class="footer-social-link"
+                    href="https://www.linkedin.com/company/delaware-valley-regional-planning-commission" rel="noopener"
+                    target="_blank">
+                    <img loading="lazy" class="footer-social" src="./img/footer/linkedin.png"
+                        alt="icon link to linkedin" />
                 </a>
                 <span class="vr"></span>
-                <a class="footer-social-link" href="https://www.youtube.com/channel/UCEU8UI5_iGkVypHP93b5jLA" rel="noopener" target="_blank">
-                    <img loading="lazy" class="footer-social" src="./img/footer/youtube.png" alt="icon link to youtube" />
+                <a class="footer-social-link" href="https://www.youtube.com/channel/UCEU8UI5_iGkVypHP93b5jLA"
+                    rel="noopener" target="_blank">
+                    <img loading="lazy" class="footer-social" src="./img/footer/youtube.png"
+                        alt="icon link to youtube" />
                 </a>
             </div>
         </div>
     </footer>
-    
+
     <script src="https://d3js.org/d3.v3.min.js" type="text/javascript"></script>
     <script src="https://cdn.rawgit.com/novus/nvd3/v1.8.4/build/nv.d3.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.2/marked.min.js"
         integrity="sha512-YCrDB5/fPsWLy0vZ1sPc6m2n9vTrSfaxH4mdyQaZVa07MRJqai+5YeOzmflXBFdj5a1Rfvpn+g4XOq3f8yCThA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+
 </html>

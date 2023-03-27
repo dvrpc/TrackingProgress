@@ -387,8 +387,8 @@ const chartStrings = {
                             <option class="optionChild" value="2">Agriculture, Forestry, Fishing, and Mining</option>
                             <option class="optionChild" value="3">Construction</option>
                             <option class="optionChild" value="4">Manufacturing</option>
-                            <option class="optionChild" value="5">Durable Goods</option>   
-                            <option class="optionChild" value="6">Nondurable Goods</option>    
+                            <option class="optionChild" value="5">&nbsp;&nbsp;Durable Goods</option>   
+                            <option class="optionChild" value="6">&nbsp;&nbsp;Nondurable Goods</option>    
                             <option class="optionGroup" value="7">Services</option> 
                             <option class="optionChild" value="8">Arts, Entertainment, Recreation, Accommodation, and Food Services</option>
                             <option class="optionChild" value="9">Educational Services</option>
@@ -409,8 +409,8 @@ const chartStrings = {
                     <label>
                         Select Value Type
                         <select id="viz-0-b" class="toggle-data-selector">
-                            <option value="0">Annual Change</option>
-                            <option value="1">Change Since Base Year</option>
+                            <option value="0">Annual Change Rate</option>
+                            <option value="1">Change Rate Since Base Year</option>
                             <option value="2">Total GDP</option>                       
                         </select>
                     </label>
@@ -543,7 +543,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: National Oceanic & Atmospheric Administration's National Centers for Environmental Information</em></small>`,
-    'Housing Activity':`
+    'Housing Permits':`
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Percentage of Building Permits Issued in Core Cities or Developed Communities</h2>
             <form>
@@ -1239,7 +1239,7 @@ const chartStrings = {
         <small class="chart-src"><em>Source: DVRPC Protected Open Space Inventory</em></small>`,
     'Miles Driven':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Vehicle Miles Traveled (VMT) by Geography</h2>
+            <h2 class="indicator-subheader toggle-subheader">Daily Vehicle Miles Traveled (VMT) by Geography</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1293,7 +1293,7 @@ const chartStrings = {
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
                                 <option value="1">NJ Counties</option>
-                                <option value="2">PA Suburban Counties</option>
+                                <option value="2">PA Counties</option>
                             </optgroup>
                             <optgroup label="Counties">
                                 <option value="3">Bucks</option>

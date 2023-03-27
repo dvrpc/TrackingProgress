@@ -1,5 +1,6 @@
-The percentage of households in the region with a high housing cost burden (those paying over 35% of income on housing) has dropped by 4.2% in recent years to levels lower than at any point in the period from 2005 to 2017. The peak for this period came in the recession years—24.4% in 2011—and hovered around 22% prior to 2010. The percentage dipped to 19.6% in 2017.
+The percentage of households in the region with a high housing cost burden (those paying over 30% of income on housing) has dropped by 9% since its peak of 41% of households in 2011 to levels lower than at any point in the period from 2005 to 2021. 
 
-Recent years have seen more of the region's households opting to rent. Although rental cost burden has decreased, it has not been as quick to drop as owner cost burden. Notably, the region's Core Cities have had relatively flat declines in rental cost burden, while other Planning Areas have seen increases—especially Rural Areas and Growing Suburbs.
+The region’s Core Cities’ households had higher percentages of cost-burdened households than the other planning area types. While Core Cities and Developed Communities had higher percentages of cost-burdened households than Growing Suburbs or Rural Areas, those outlying areas may tend toward higher transportation costs.
 
-Those with a severe cost burden—greater than 50% of household income—have seen a similar modest decline. Developed Communities and Core Cities Planning Areas have seen steeper declines in severe cost burden than have Growing Suburbs and Rural Areas.
+Cost burden of renters has increased in recent years, with an all-time high of 367,000 households in 2021. Cost-burdened owners have decreased nearly every year from 2011 to 2019, but were up slightly in 2021. 
+Those with a severe cost burden—greater than 50% of household income—were seeing a modest decline from 2011 to 2019, but 2021 saw a rise to levels not seen since 2013. 

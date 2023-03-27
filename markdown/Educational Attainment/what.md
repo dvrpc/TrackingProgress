@@ -4,4 +4,4 @@ The charts here detail educational attainment of residents over 24 years old. Th
 
 Note that, due to survey sample size, the values are estimates—each within a margin of error. Estimates may show a general trend but may not be statistically significant when compared with each other if change is slight—particularly in lower-population geographies.
 
-_Note: In November, 2019, the Census Bureau issued [a statement acknowledging errors in 2017 ACS data for Philadelphia County](https://www.census.gov/programs-surveys/acs/technical-documentation/errata/121.html). The error may impact the Educational Attainment indicator for Philadelphia and regional aggregations. DVRPC is aware of the issue and intends to update Tracking Progress with 2018 ACS data soon._
+_Note: The Census Bureau issued [a statement acknowledging errors in 2017 ACS data for Philadelphia County](https://www.census.gov/programs-surveys/acs/technical-documentation/errata/121.html). Philadelphia estimates for geography of residence are omitted as a result, but the error may impact regional aggregations. Also note, the 2020  1yr ACS was not released due to disruptions of the Covid-19 pandemic._

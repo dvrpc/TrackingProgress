@@ -1,1 +1,3 @@
-tbd
+Business formations data from the U.S. Census Bureau Business Formations Statistics (BFS) program gives annual county-level counts of Employer Identification Number (EIN) applications in a given year. Tracking Progress sums the county statistics to regional and subregional totals, displaying the total number of formations, as well as the absolute and percentage change in applications from the base year of 2005.
+
+Only applications are counted, and the success and longevity of businesses are not tracked.

@@ -75,6 +75,7 @@ const axisFormats = {
     'singles': '.3n',
     'thousands': ',.0f',
     'thousandsC': ',.3r',
+    'thousandsD': ',.2f',
     'millions': ',4r',
     'dollars': '$,3'
 }
@@ -213,7 +214,7 @@ const createLineChart = (source, toggleContext) => {
                 .useInteractiveGuideline(true)
                 .showYAxis(true)
                 .clipEdge(false)
-                .forceY(0)
+                .forceY(source.range || 0)
                 .x(d => d[0])
                 .y((d, i) => d[1])
 

@@ -328,7 +328,6 @@ summary {
 .splash-details {
     width: 100%;
     margin: 0 auto;
-    text-align: center;
 }
 .splash-details summary {
     text-align: center;
@@ -338,13 +337,13 @@ summary {
     padding: 16px 8px;
     border-radius: var(--border-radius);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .splash-map-figure {
     width: 15%;
     font-size: 0.8rem;
     margin: 0;
+    margin-right: 1rem;
 }
 .region-map {
     width: 100%;
@@ -927,3 +926,21 @@ address {
 }
 /* END Transitions */
 /*******************/
+
+#to-dash {
+    border: none;
+    border-radius: 0.75rem;
+    background-color: #00a5ab;
+    display: flex;
+    cursor: pointer;
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#to-dash img {
+    height: 3rem;
+    margin-right: .5rem;
+}

@@ -2,10 +2,10 @@ const snippetsRef = {
     'Air Quality': {
         categories: ['enviro', 'transpo', 'sustain', 'equity'],
         trend: {
-            status: 'good',
+            status: 'awesome',
             text: {
-                stat: '109 fewer',
-                text: `days annually violating air quality standards since 2009's 5-year average`
+                stat: '67 fewer',
+                text: `days annually violating air quality standards since 2002's 5-year average`
             }
         },
         d3: [
@@ -86,9 +86,9 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['vmtWeb'],
                 context: {
-                    labels: ['VMT Per Capita', 'Total VMT (Billions)', 'VMT Per Vehicle'],
+                    labels: ['VMT Per Capita', 'Total VMT (Millions)', 'VMT Per Vehicle'],
                     keepLabels: false,
-                    units: ['thousands'],
+                    units: ['thousandsD'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -170,7 +170,7 @@ const snippetsRef = {
         trend: {
             status: 'good',
             text: {
-                stat: '8.6% rise',
+                stat: '10% rise',
                 text: `in population over 24 with high school diploma since 2000`
             }
         },
@@ -179,6 +179,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['edattainHS'],
+                range: [0, 1],
                 context: {
                     labels: ['Percentage Population Over 24 years'],
                     units: ['percentC']
@@ -736,13 +737,13 @@ const snippetsRef = {
             }
         ]
     },
-    'Housing Activity': {
+    'Housing Permits': {
         categories: ['comm', 'econo', 'enviro', 'sustain'],
         trend: {
             status: 'good',
             text: {
-                stat: '30% more',
-                text: `permits in Core Cities and Developed Communities since 1999`
+                stat: '51.5% more',
+                text: `permits in Core Cities and Developed Communities since 1999 low`
             }
         },
         d3: [
@@ -858,7 +859,7 @@ const snippetsRef = {
         trend: {
             status: 'neutral',
             text: {
-                stat: '4.2% fewer',
+                stat: '9% fewer',
                 text: `cost-burdened households since 2005`
             }
         },
@@ -1491,10 +1492,10 @@ const snippetsRef = {
     'Community Integration': {
       categories: ['comm', 'econo', 'equity'],
       trend: {
-        status: 'neutral',
+        status: 'not-great',
         text: {
-          stat: '6.8% drop',
-          text: `in income gap between People of Color and White since 2000`,
+          stat: '41 to 54%',
+          text: `of residents not living in diverse communities`,
         },
       },
       d3: [
@@ -1580,7 +1581,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['IncomeQuintilesMean', 'IncomeQuintilesAbs', 'IncomeQuintilesPct'],
                 context: {
-                    labels: ['Dollars (2017)', 'Change in Dollars (2017)', 'Percent Change in Dollars (2017)'],
+                    labels: ['Dollars (2021)', 'Change in Dollars (2021)', 'Percent Change in Dollars (2021)'],
                     keepLabels: false,
                     units: ['dollars', 'dollars', 'percentC'],
                     keepUnits: false
@@ -1631,7 +1632,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['medincGapRace'],
                 context: {
-                  labels: ['Dollars (2019)'],
+                  labels: ['Dollars (2021)'],
                   keepLabels: true,
                   units: ['dollars'],
                   keepUnits: true,
@@ -1717,7 +1718,7 @@ const snippetsRef = {
                 container: 'chart4',
                 dataSource: ['medincRace'],
                 context: {
-                  labels: ['Dollars (2019)'],
+                  labels: ['Dollars (2021)'],
                   keepLabels: true,
                   units: ['dollars'],
                   keepUnits: true,
@@ -1989,26 +1990,28 @@ const snippetsRef = {
                   keepUnits: true,
                 },
                 columnOptions: [
-                  ['region_nonwht', 'region_black', 'region_asian'],
+                  ['region_nonwht', 'region_black', 'region_asian', 'region_latinx'],
                   [
                     'nj_suburban_counties_nonwht',
                     'nj_suburban_counties_black',
                     'nj_suburban_counties_asian',
+                    'nj_suburban_counties_latinx'
                   ],
                   [
                     'pa_suburban_counties_nonwht',
                     'pa_suburban_counties_black',
                     'pa_suburban_counties_asian',
+                    'pa_suburban_counties_latinx'
                   ],
-                  ['bucks_nonwht', 'bucks_black', 'bucks_asian'],
-                  ['burlington_nonwht', 'burlington_black', 'burlington_asian'],
-                  ['camden_nonwht', 'camden_black', 'camden_asian'],
-                  ['chester_nonwht', 'chester_black', 'chester_asian'],
-                  ['delaware_nonwht', 'delaware_black', 'delaware_asian'],
-                  ['gloucester_nonwht', 'gloucester_black', 'gloucester_asian'],
-                  ['mercer_nonwht', 'mercer_black', 'mercer_asian'],
-                  ['montgomery_nonwht', 'montgomery_black', 'montgomery_asian'],
-                  ['philadelphia_nonwht', 'philadelphia_black', 'philadelphia_asian'],
+                  ['bucks_nonwht', 'bucks_black', 'bucks_asian', 'bucks_latinx'],
+                  ['burlington_nonwht', 'burlington_black', 'burlington_asian', 'burlington_latinx'],
+                  ['camden_nonwht', 'camden_black', 'camden_asian', 'camden_latinx'],
+                  ['chester_nonwht', 'chester_black', 'chester_asian', 'chester_latinx'],
+                  ['delaware_nonwht', 'delaware_black', 'delaware_asian', 'delaware_latinx'],
+                  ['gloucester_nonwht', 'gloucester_black', 'gloucester_asian', 'gloucester_latinx'],
+                  ['mercer_nonwht', 'mercer_black', 'mercer_asian', 'mercer_latinx'],
+                  ['montgomery_nonwht', 'montgomery_black', 'montgomery_asian', 'montgomery_latinx'],
+                  ['philadelphia_nonwht', 'philadelphia_black', 'philadelphia_asian', 'philadelphia_latinx'],
                 ],
                 data: [
                   {
@@ -2025,6 +2028,11 @@ const snippetsRef = {
                     columns: ['year', 'region_asian'],
                     disabled: true,
                   },
+                  {
+                    key: 'Latinx',
+                    columns: ['year', 'region_latinx'],
+                    disabled: true,
+                  },
                 ],
               },
               {
@@ -2038,52 +2046,59 @@ const snippetsRef = {
                   keepUnits: true,
                 },
                 columnOptions: [
-                  ['region_nonwht', 'region_white', 'region_black', 'region_asian'],
+                  ['region_nonwht', 'region_white', 'region_black', 'region_asian', 'region_latinx'],
                   [
                     'nj_suburban_counties_nonwht',
                     'nj_suburban_counties_white',
                     'nj_suburban_counties_black',
                     'nj_suburban_counties_asian',
+                    'nj_suburban_counties_latinx'
                   ],
                   [
                     'pa_suburban_counties_nonwht',
                     'pa_suburban_counties_white',
                     'pa_suburban_counties_black',
                     'pa_suburban_counties_asian',
+                    'pa_suburban_counties_latinx'
                   ],
-                  ['bucks_nonwht', 'bucks_white', 'bucks_black', 'bucks_asian'],
+                  ['bucks_nonwht', 'bucks_white', 'bucks_black', 'bucks_asian', 'bucks_latinx'],
                   [
                     'burlington_nonwht',
                     'burlington_white',
                     'burlington_black',
                     'burlington_asian',
+                    'burlington_latinx'
                   ],
-                  ['camden_nonwht', 'camden_white', 'camden_black', 'camden_asian'],
-                  ['chester_nonwht', 'chester_white', 'chester_black', 'chester_asian'],
+                  ['camden_nonwht', 'camden_white', 'camden_black', 'camden_asian', 'camden_latinx'],
+                  ['chester_nonwht', 'chester_white', 'chester_black', 'chester_asian', 'chester_latinx'],
                   [
                     'delaware_nonwht',
                     'delaware_white',
                     'delaware_black',
                     'delaware_asian',
+                    'delaware_latinx'
                   ],
                   [
                     'gloucester_nonwht',
                     'gloucester_white',
                     'gloucester_black',
                     'gloucester_asian',
+                    'gloucester_latinx'
                   ],
-                  ['mercer_nonwht', 'mercer_white', 'mercer_black', 'mercer_asian'],
+                  ['mercer_nonwht', 'mercer_white', 'mercer_black', 'mercer_asian', 'mercer_latinx'],
                   [
                     'montgomery_nonwht',
                     'montgomery_white',
                     'montgomery_black',
                     'montgomery_asian',
+                    'montgomery_latinx'
                   ],
                   [
                     'philadelphia_nonwht',
                     'philadelphia_white',
                     'philadelphia_black',
                     'philadelphia_asian',
+                    'philadelphia_latinx'
                   ],
                 ],
                 data: [
@@ -2105,6 +2120,11 @@ const snippetsRef = {
                     columns: ['year', 'region_asian'],
                     disabled: true,
                   },
+                  {
+                    key: 'Latinx',
+                    columns: ['year', 'region_latinx'],
+                    disabled: true,
+                  }
                 ],
               },
         ]
@@ -2249,10 +2269,10 @@ const snippetsRef = {
     'Gross Domestic Product': {
         categories: ['econo','resil'],
         trend: {
-            status: 'not-great',
+            status: 'awesome',
             text: {
-                stat: '8.9% decrease',
-                text: `in value of exported goods since 2012`
+                stat: '105% gain',
+                text: `in economic growth since 2001`
             }
         },
         d3: [
@@ -2261,9 +2281,9 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['gdp_chart1a', 'gdp_chart1b', 'gdp_chart1c'],
                 context: {
-                    labels: ['Growth Rate', 'Growth Rate', 'Total GDP in Millions of Dollars (2021)'],
+                    labels: ['Change Rate', 'Change Rate Since Base Year', 'Total GDP in Millions of Dollars (2021)'],
                     keepLabels: false,
-                    units: ['percent', 'dollars', 'dollars'],
+                    units: ['percent', 'percent', 'dollars'],
                     keepUnits: false
                 },
                 columnOptions: [
@@ -3546,10 +3566,10 @@ const snippetsRef = {
     'Business Formations': {
         categories: ['econo', 'resil'],
         trend: {
-            status: 'good',
+            status: 'awesome',
             text: {
-                stat: '29% increase',
-                text: `in patent approvals since 1998`
+                stat: '143% growth',
+                text: `in business formations since 2005`
             }
         },
         d3: [
@@ -3897,7 +3917,7 @@ const snippetsRef = {
         trend: {
             status: 'awesome',
             text: {
-                stat: '54% drop',
+                stat: '59% drop',
                 text: `in bridge deck area rated deficient since a 2003 peak of 18%`
             }
         },
@@ -3905,7 +3925,7 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['Bridge_Conditions_1A','Bridge_Conditions_1B'],
+                dataSource: ['Bridge_Conditions_1B','Bridge_Conditions_1A'],
                 context: {
                     labels: ['Percentage of Deck Area', 'Percentage of Bridges'],
                     keepLabels: false,
@@ -4474,7 +4494,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['pavement_graph_1'],
                 context: {
-                    labels: ['Percentage of Total Lane Miles'],
+                    labels: ['Percentage of Total Segment Miles'],
                     keepLabels: true,
                     units: ['percentC'],
                     keepUnits: true
@@ -4552,7 +4572,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['pavement_2_all', 'pavement_2_interstate', 'pavement_2_NHS', 'pavement_2_NoNHS'],
                 context: {
-                    labels: ['Lane Miles'],
+                    labels: ['Segment Miles'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
