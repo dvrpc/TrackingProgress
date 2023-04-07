@@ -2134,7 +2134,7 @@ const snippetsRef = {
         trend: {
             status: 'neutral',
             text: {
-                stat: '2.3% greater',
+                stat: '1.5% less',
                 text: `reliability on region's freeways during weekdays since 2011`
             }
         },
