@@ -944,3 +944,7 @@ address {
     height: 3rem;
     margin-right: .5rem;
 }
+
+#indicator-description-container > ul > li {
+    margin-left: 25px;
+}
