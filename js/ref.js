@@ -2401,7 +2401,7 @@ const snippetsRef = {
     'Gross Domestic Product': {
         categories: ['econo','resil'],
         trend: {
-            status: 'awesome',
+            status: 'good',
             text: {
                 stat: '105% gain',
                 text: `in economic growth since 2001`
