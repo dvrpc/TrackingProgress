@@ -1227,7 +1227,7 @@ const snippetsRef = {
       trend: {
         status: 'good',
         text: {
-          stat: '6% increase',
+          stat: '18% increase',
           text: `in jobs since 2001`,
         },
       },

@@ -1,3 +1,24 @@
-The U.S. Bureau of Labor Statistics' Quarterly Census of Employment and Wages (QCEW) provides a quarterly count of employment and wages as reported by employers and covers more than 95% of U.S. jobs available. County Business Patterns (CBP) is an annual program of the U.S. Census Bureau that provides economic data by industry at the county level. The CBP data is extracted from the Business Register, a database of all known single and multi-establishment employer companies maintained and updated by the U.S. Census Bureau.
+**[Job Growth]{.underline}**
 
-The first chart shows the annual growth rate and the overall growth rate since 2001. The second shows the percentage of the region's jobs located in each county. The third chart shows the percentage of jobs that occur in various sectors of the region's economy. The first and second chart are based on QCEW data, and the third chart is based on CBP data.
+**What Is it? Tab Text**
+
+The U.S. Bureau of Economic Analysis' Total Full-Time and Part-Time
+Employment provides one of the most comprehensive publicly available
+accountings of average annual employment. Beyond full- and part-time
+employment types, it includes farm employment and other sectors that
+aren't always included in other sources, such as Public
+Administration\--with more detail of federal vs state and local
+employees. It also includes and distinguishes both Wage and Salary
+employees from Proprietors who own their own unincorporated businesses,
+handling taxation chiefly as personal income. These tend to be
+single-person or small businesses and can include construction or repair
+workers, babysitters, ride-share drivers, artists, local grocers,
+housekeepers, various freelancers and consultants, and can include some
+attorneys and doctors.
+
+The first chart shows the annual growth rate and the overall growth rate
+since 2001, along with total employment, for total employees, wage and
+salary workers, and proprietors. The second shows the percentage of the
+region\'s jobs located in each county. The third chart shows the
+percentage of jobs that occur in various sectors of the region\'s
+economy.

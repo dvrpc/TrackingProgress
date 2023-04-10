@@ -1,1 +1,19 @@
-Growth or decline in the total number of jobs is one of the primary tools for measuring the economic strength of the region. Also important is the geographic distribution of jobs, as well as the distribution of the jobs between different industries. Job growth in one area could indicate a need for more transportation infrastructure to aid workers' commutes, while a decline in jobs in a particular industry may signal a need for investment to help support those businesses, or alternatively to establish job retraining programs to transition employees to industries of the future. Job totals alone do not, however, say anything about the quality or desirability of those jobs. The total number of jobs may increase, but if higher-paying jobs are being replaced by lower-paying jobs, the economy could still be declining overall. On the other hand, employers concentrating in centers around the region may not change the total number of jobs but could have other benefits, like decreasing commuting costs and priming the region for future growth.
+**[Job Growth]{.underline}**
+
+**How Are We Doing? Tab Text**
+
+Growth or decline in the total number of jobs is one of the primary
+tools for measuring the economic strength of the region. Also important
+is the geographic distribution of jobs, as well as the distribution of
+the jobs between different industries. Job growth in one area could
+indicate a need for more transportation infrastructure to aid workers\'
+commutes, while a decline in jobs in a particular industry may signal a
+need for investment to help support those businesses, or alternatively
+to establish job retraining programs to transition employees to
+industries of the future. Job totals alone do not, however, say anything
+about the quality or desirability of those jobs. The total number of
+jobs may increase, but if higher-paying jobs are being replaced by
+lower-paying jobs, quality of life could still be declining overall. On
+the other hand, employers concentrating in centers around the region may
+not change the total number of jobs but could have other benefits, like
+decreasing commuting costs and priming the region for future growth.
