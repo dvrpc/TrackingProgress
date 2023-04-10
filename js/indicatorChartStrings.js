@@ -319,7 +319,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>`,
     'Educational Attainment':`
-        <h2 class="indicator-subheader">Population Over 24 Having Completed High-School by Geography</h2>
+        <h2 class="indicator-subheader">Population Over 25 Having Completed High-School by Geography</h2>
         <div class="data-viz chart">
             <svg></svg>
         </div>
@@ -328,7 +328,7 @@ const chartStrings = {
 
         <hr class="indicator-content-hr" />
 
-        <h2 class="indicator-subheader">Population Over 24 Having Completed High-School by Planning Area</h2>
+        <h2 class="indicator-subheader">Population Over 25 Having Completed High-School by Planning Area</h2>
         <div class="data-viz chart2">
             <svg></svg>
         </div>
@@ -337,7 +337,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Population Over 24 by Educational Attainment</h2>
+            <h2 class="indicator-subheader toggle-subheader">Population Over 25 by Educational Attainment</h2>
             <form>
                 <fieldset>
                     <label>
