@@ -76,8 +76,8 @@ const snippetsRef = {
         trend: {
             status: 'neutral',
             text: {
-                stat: '0.6% more',
-                text: `miles driven annually per person since 2000`
+                stat: '0.5% fewer',
+                text: `daily miles driven annually per person since 2000`
             }
         },
         d3: [
