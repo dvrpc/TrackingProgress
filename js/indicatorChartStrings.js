@@ -425,6 +425,13 @@ const chartStrings = {
   
         <hr class="indicator-content-hr" />
 
+        <h2 class="indicator-subheader">Regional GDP Distribution by County</h2>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>U.S. Bureau of Economic Analysis, Real GDP by County</em></small>
+                <hr class="indicator-content-hr" />       
+        
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">GDP Distribution by Industry</h2>
             <form>
@@ -456,16 +463,7 @@ const chartStrings = {
         <div class="data-viz chart1">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>U.S. Bureau of Economic Analysis, Real GDP by County</em></small>
-    
-        <hr class="indicator-content-hr" />       
-
-        <h2 class="indicator-subheader">Regional GDP Distribution by County</h2>
-        <div class="data-viz chart2">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>U.S. Bureau of Economic Analysis, Real GDP by County</em></small>
-        `,
+        <small class="chart-src"><em>U.S. Bureau of Economic Analysis, Real GDP by County</em></small>        `,
     'Mortgage Lending':`
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Loan Origination Gap</h2>
