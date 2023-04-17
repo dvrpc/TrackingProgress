@@ -12,6 +12,3 @@ DVRPC’s [_Municipal Implementation Toolbox_](https://www.dvrpc.org/Plan/MIT/) 
  - [Smart Location Of Public Facilities](https://www.dvrpc.org/Plan/MIT/smartlocationofpublicfacilities)
  - [Travel Demand Management (TDM)](https://www.dvrpc.org/Plan/MIT/traveldemandmanagementtdm)
  - [Walking and Biking Encouragement Programs](https://www.dvrpc.org/Plan/MIT/walkingandbikingencouragementprograms) 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMzQ3NTk1Nl19
--->

@@ -3045,9 +3045,9 @@ const snippetsRef = {
     'Commute Mode': {
         categories: ['transpo', 'enviro', 'comm', 'sustain'],
         trend: {
-            status: 'neutral',
+            status: 'good',
             text: {
-                stat: '1.5% fewer',
+                stat: '13.6% fewer',
                 text: `residents drive alone to work since 2006`,
             },
         },
