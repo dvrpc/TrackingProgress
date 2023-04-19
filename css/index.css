@@ -210,14 +210,13 @@ fieldset {
     cursor: pointer;
     color: var(--theme-main-white);
 }
-summary {
+.modal-h2 {
     font-size: 1rem;
-    cursor: pointer;
 }
 .info-toggle {
     padding: 8px 24px;
 }
-.details-content-wrapper {
+.modal-content-wrapper {
     padding: 18px 0;
 }
 .gif-row {
@@ -328,9 +327,6 @@ summary {
 .splash-details {
     width: 100%;
     margin: 0 auto;
-}
-.splash-details summary {
-    text-align: center;
 }
 .splash-details-content {
     margin: 8px auto;

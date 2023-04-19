@@ -94,36 +94,31 @@ const makeEmojiRow = () => {
     return div
 }
 
-const makeDashDetails = id => {
+const makeDashHowTo = id => {
     const wrapper = document.createElement('div')
-    const details = document.createElement('details')
-    const summary = document.createElement('summary')
-    const gifRow = makeGifRow(id)
+    const header = document.createElement('h2')
     const hr = document.createElement('hr')
+    
+    const gifRow = makeGifRow(id)
     const emojiRow = makeEmojiRow()
 
-    details.setAttribute('open', true)
-    summary.role = 'button'
-    summary.id = id
-    summary.textContent = 'Exploring the Dashboard'
+    header.textContent = 'Exploring the Dashboard'
 
-    wrapper.classList.add('details-content-wrapper')
-    details.classList.add('info-toggle')
-    summary.classList.add('hover-text')
+    wrapper.classList.add('modal-content-wrapper')
+    header.classList.add('modal-h2')
     hr.classList.add('info-toggle-hr')
 
+    wrapper.appendChild(header)
     wrapper.appendChild(gifRow)
     wrapper.appendChild(hr)
     wrapper.appendChild(emojiRow)
-    details.appendChild(summary)
-    details.appendChild(wrapper)
 
-    return details
+    return wrapper
 }
 
 const makeIndicatorDetails = id => {
     const wrapper = document.createElement('div')
-    const details = document.createElement('details')
+    // const details = document.createElement('details')
     const summary = document.createElement('summary')
     const gifRow = makeGifRow(id)
 
@@ -131,15 +126,16 @@ const makeIndicatorDetails = id => {
     summary.id = id
     summary.textContent = 'Exploring Indicator Pages'
 
-    wrapper.classList.add('details-content-wrapper')
-    details.classList.add('info-toggle')
+    wrapper.classList.add('modal-content-wrapper')
+    // details.classList.add('info-toggle')
     summary.classList.add('hover-text')
 
     wrapper.appendChild(gifRow)
-    details.appendChild(summary)
-    details.appendChild(wrapper)
+    // details.appendChild(summary)
+    // details.appendChild(wrapper)
 
-    return details
+    // return details
+    return wrapper
 }
 
 const makeGeoDetails = () => {
@@ -148,7 +144,7 @@ const makeGeoDetails = () => {
     details.classList.add('info-toggle')
     details.insertAdjacentHTML('afterbegin', `
         <summary role="button" class="hover-text">Exploring Geographic Levels</summary>
-        <div class="details-content-wrapper details-text-content">
+        <div class="modal-content-wrapper details-text-content">
             <figure class="modal-map-figure">
                 <a href="./img/MainDVRPCMap2-01.png"><img loading="lazy" src="./img/MainDVRPCMap2-01.png" alt="map of the DVRPC region" class="region-map" /></a>
                 <figcaption>
@@ -171,7 +167,7 @@ const makeHowTo = () => {
     const close = document.createElement('span')
     const header = document.createElement('h2')
 
-    const dashDetails = makeDashDetails('dash')
+    const dashDetails = makeDashHowTo('dash')
     const indicatorDetails = makeIndicatorDetails('indicators')
     const geoDetails = makeGeoDetails()
 
