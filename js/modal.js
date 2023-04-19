@@ -60,8 +60,16 @@ const makeGifRow = id => {
 }
 
 const makeEmojiRow = () => {
+    const frag = document.createDocumentFragment()
+    const header = document.createElement('h2')
     const div = document.createElement('div')
+    const hr = document.createElement('hr')
+
     div.classList.add('emojis-row')
+    header.classList.add('modal-h2')
+    hr.classList.add('info-toggle-hr')
+
+    header.textContent = 'Interpreting the Emojis'
 
     div.insertAdjacentHTML('afterbegin', `
         <p id="emojis-description">Emojis indicate how we are doing based on historic trend:</p>
@@ -91,7 +99,11 @@ const makeEmojiRow = () => {
         </figure>
     `)
 
-    return div
+    frag.appendChild(header)
+    frag.appendChild(div)
+    frag.appendChild(hr)
+
+    return frag
 }
 
 const makeDashHowTo = id => {
@@ -116,25 +128,23 @@ const makeDashHowTo = id => {
     return wrapper
 }
 
-const makeIndicatorDetails = id => {
+const makeIndicatorHowTo = id => {
     const wrapper = document.createElement('div')
-    // const details = document.createElement('details')
-    const summary = document.createElement('summary')
+    const header = document.createElement('h2')
+    const hr = document.createElement('hr')
+
     const gifRow = makeGifRow(id)
 
-    summary.role = 'button'
-    summary.id = id
-    summary.textContent = 'Exploring Indicator Pages'
+    header.textContent = 'Exploring Indicator Pages'
 
+    header.classList.add('modal-h2')
     wrapper.classList.add('modal-content-wrapper')
-    // details.classList.add('info-toggle')
-    summary.classList.add('hover-text')
+    hr.classList.add('info-toggle-hr')
 
+    wrapper.appendChild(header)
     wrapper.appendChild(gifRow)
-    // details.appendChild(summary)
-    // details.appendChild(wrapper)
+    wrapper.appendChild(hr)
 
-    // return details
     return wrapper
 }
 
@@ -168,7 +178,7 @@ const makeHowTo = () => {
     const header = document.createElement('h2')
 
     const dashDetails = makeDashHowTo('dash')
-    const indicatorDetails = makeIndicatorDetails('indicators')
+    const indicatorDetails = makeIndicatorHowTo('indicators')
     const geoDetails = makeGeoDetails()
 
     modal.id = 'modal'

@@ -212,12 +212,15 @@ fieldset {
 }
 .modal-h2 {
     font-size: 1rem;
+    font-weight: 500;
+    width: 94%;
+    margin: 0 auto 8px auto;
 }
 .info-toggle {
     padding: 8px 24px;
 }
 .modal-content-wrapper {
-    padding: 18px 0;
+    padding-bottom: 18px;
 }
 .gif-row {
     display: flex;
@@ -226,6 +229,7 @@ fieldset {
     flex-wrap: wrap;
     width: 94%;
     margin: 0 auto;
+    padding-bottom: 18px;
 }
 .gif-figure {
     background: #f7f7f7;
@@ -254,6 +258,7 @@ fieldset {
     align-items: center;
     width: 94%;
     margin: 0 auto;
+    padding-bottom: 18px;
 }
 .emoji-figure {
     min-width: 50px;
