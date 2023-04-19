@@ -149,11 +149,12 @@ const makeIndicatorHowTo = id => {
 }
 
 const makeGeoDetails = () => {
-    const details = document.createElement('details')
+    const wrapper = document.createElement('wrapper')
     
-    details.classList.add('info-toggle')
-    details.insertAdjacentHTML('afterbegin', `
-        <summary role="button" class="hover-text">Exploring Geographic Levels</summary>
+    wrapper.classList.add('modal-content-wrapper')
+
+    wrapper.insertAdjacentHTML('afterbegin', `
+        <h2 class="modal-h2">Explore Geographic Levels</h2>
         <div class="modal-content-wrapper details-text-content">
             <figure class="modal-map-figure">
                 <a href="./img/MainDVRPCMap2-01.png"><img loading="lazy" src="./img/MainDVRPCMap2-01.png" alt="map of the DVRPC region" class="region-map" /></a>
@@ -168,7 +169,7 @@ const makeGeoDetails = () => {
         </div>
     `)
 
-    return details
+    return wrapper
 }
 
 const makeHowTo = () => {
