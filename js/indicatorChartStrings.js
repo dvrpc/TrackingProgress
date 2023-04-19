@@ -1725,7 +1725,7 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's Population Estimates Program</em></small>`,
     'Labor Force':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes</h2>
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes (Ages 20 to 64)</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1760,7 +1760,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
         
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Sex</h2>
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Sex (Ages 20 to 64)</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1795,7 +1795,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap Relative to White Participation Rate</h2>
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap Relative to White Participation Rate (Ages 16 and Older)</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1830,7 +1830,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-                <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Race</h2>
+                <h2 class="indicator-subheader toggle-subheader">Labor Force Participation by Race (Ages 16 and Older)</h2>
                 <form>
                     <fieldset>
                         <label>
