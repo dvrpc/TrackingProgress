@@ -60,8 +60,16 @@ const makeGifRow = id => {
 }
 
 const makeEmojiRow = () => {
+    const frag = document.createDocumentFragment()
+    const header = document.createElement('h2')
     const div = document.createElement('div')
+    const hr = document.createElement('hr')
+
     div.classList.add('emojis-row')
+    header.classList.add('modal-h2')
+    hr.classList.add('info-toggle-hr')
+
+    header.textContent = 'Interpreting the Emojis'
 
     div.insertAdjacentHTML('afterbegin', `
         <p id="emojis-description">Emojis indicate how we are doing based on historic trend:</p>
@@ -91,64 +99,63 @@ const makeEmojiRow = () => {
         </figure>
     `)
 
-    return div
+    frag.appendChild(header)
+    frag.appendChild(div)
+    frag.appendChild(hr)
+
+    return frag
 }
 
-const makeDashDetails = id => {
+const makeDashHowTo = id => {
     const wrapper = document.createElement('div')
-    const details = document.createElement('details')
-    const summary = document.createElement('summary')
-    const gifRow = makeGifRow(id)
+    const header = document.createElement('h2')
     const hr = document.createElement('hr')
+    
+    const gifRow = makeGifRow(id)
     const emojiRow = makeEmojiRow()
 
-    details.setAttribute('open', true)
-    summary.role = 'button'
-    summary.id = id
-    summary.textContent = 'Exploring the Dashboard'
+    header.textContent = 'Exploring the Dashboard'
 
-    wrapper.classList.add('details-content-wrapper')
-    details.classList.add('info-toggle')
-    summary.classList.add('hover-text')
+    wrapper.classList.add('modal-content-wrapper')
+    header.classList.add('modal-h2')
     hr.classList.add('info-toggle-hr')
 
+    wrapper.appendChild(header)
     wrapper.appendChild(gifRow)
     wrapper.appendChild(hr)
     wrapper.appendChild(emojiRow)
-    details.appendChild(summary)
-    details.appendChild(wrapper)
 
-    return details
+    return wrapper
 }
 
-const makeIndicatorDetails = id => {
+const makeIndicatorHowTo = id => {
     const wrapper = document.createElement('div')
-    const details = document.createElement('details')
-    const summary = document.createElement('summary')
+    const header = document.createElement('h2')
+    const hr = document.createElement('hr')
+
     const gifRow = makeGifRow(id)
 
-    summary.role = 'button'
-    summary.id = id
-    summary.textContent = 'Exploring Indicator Pages'
+    header.textContent = 'Exploring Indicator Pages'
 
-    wrapper.classList.add('details-content-wrapper')
-    details.classList.add('info-toggle')
-    summary.classList.add('hover-text')
+    header.classList.add('modal-h2')
+    wrapper.classList.add('modal-content-wrapper')
+    hr.classList.add('info-toggle-hr')
 
+    wrapper.appendChild(header)
     wrapper.appendChild(gifRow)
-    details.appendChild(summary)
-    details.appendChild(wrapper)
+    wrapper.appendChild(hr)
 
-    return details
+    return wrapper
 }
 
 const makeGeoDetails = () => {
-    const details = document.createElement('details')
+    const wrapper = document.createElement('wrapper')
     
-    details.classList.add('info-toggle')
-    details.insertAdjacentHTML('afterbegin', `
-        <summary role="button" class="hover-text">Exploring Geographic Levels</summary>
-        <div class="details-content-wrapper details-text-content">
+    wrapper.classList.add('modal-content-wrapper')
+
+    wrapper.insertAdjacentHTML('afterbegin', `
+        <h2 class="modal-h2">Explore Geographic Levels</h2>
+        <div class="modal-content-wrapper details-text-content">
             <figure class="modal-map-figure">
                 <a href="./img/MainDVRPCMap2-01.png"><img loading="lazy" src="./img/MainDVRPCMap2-01.png" alt="map of the DVRPC region" class="region-map" /></a>
                 <figcaption>
@@ -162,7 +169,7 @@ const makeGeoDetails = () => {
         </div>
     `)
 
-    return details
+    return wrapper
 }
 
 const makeHowTo = () => {
@@ -171,8 +178,8 @@ const makeHowTo = () => {
     const close = document.createElement('span')
     const header = document.createElement('h2')
 
-    const dashDetails = makeDashDetails('dash')
-    const indicatorDetails = makeIndicatorDetails('indicators')
+    const dashDetails = makeDashHowTo('dash')
+    const indicatorDetails = makeIndicatorHowTo('indicators')
     const geoDetails = makeGeoDetails()
 
     modal.id = 'modal'
