@@ -6,7 +6,7 @@ const videoMeta = {
         },
         {
             id: 'toggle-filters',
-            caption: "Click filters to sort indicators by <em>Connections 2045</em> Plan category or historic trend."
+            caption: "Click filters to sort indicators by category or historic trend."
         },
         {
             id: 'click-indicator',
