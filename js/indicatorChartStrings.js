@@ -877,7 +877,7 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: U.S. Census Bureau's American Community Survey, DVRPC</em></small>`,
     'Income':`
             <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Income Growth Gap between Highest Quintile &amp; Lowest Quintile Households</h2>
+            <h2 class="indicator-subheader toggle-subheader">Income Change Gap between Highest Quintile &amp; Lowest Quintile Households</h2>
             <form>
                 <fieldset>
                     <label>
@@ -943,8 +943,8 @@ const chartStrings = {
                         Select Value Type
                         <select id="viz-1-b" class="toggle-data-selector">
                             <option value="0">Averages</option>
-                            <option value="1">Change (Absolute)</option>
-                            <option value="2">Change (Percentage)</option>                       
+                            <option value="1">Change Since Base Year</option>
+                            <option value="2">Percent Change Since Base Year</option>                       
                         </select>
                     </label>
                 </fieldset>
