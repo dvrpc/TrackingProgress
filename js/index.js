@@ -224,16 +224,16 @@ const makeNewDataEl = () => {
 
 const addNewDataUIEls = async () => {
     try {
-        const stream = await fetch('http://linux3.dvrpc.org/api/tp-updates/v1/indicators')
-        
+        const stream = await fetch('https://cloud.dvrpc.org/api/tp-updates/v1/indicators')
+
         if(stream.ok) {
             const els = await stream.json()
-
+        
             if(els.length) {
-                els.forEach(el => {
-                    const activeIndicator = grid.querySelector(`#${el}`)
-                    activeIndicator.prepend(makeNewDataEl())
-                })
+               els.map(el => {
+                let indicator = document.getElementById(el.replace(' ', '-'))
+                if(indicator) indicator.prepend(makeNewDataEl())
+               }) 
             }
         }
     } catch(error) {
