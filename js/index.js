@@ -231,7 +231,7 @@ const addNewDataUIEls = async () => {
         
             if(els.length) {
                els.map(el => {
-                let indicator = document.getElementById(el.replace(' ', '-'))
+                let indicator = document.getElementById(el.replaceAll(' ', '-'))
                 if(indicator) indicator.prepend(makeNewDataEl())
                }) 
             }
