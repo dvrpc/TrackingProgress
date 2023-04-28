@@ -231,13 +231,8 @@ const addNewDataUIEls = async () => {
         
             if(els.length) {
                els.map(el => {
-                // if it works it works ¯\_(ツ)_/¯
-                    try {
-                        let indicator = document.getElementById(el.replace(' ', '-'))
-                        indicator.prepend(makeNewDataEl())
-                    } catch (error) {
-                        console.error(error)
-                    }
+                let indicator = document.getElementById(el.replace(' ', '-'))
+                if(indicator) indicator.prepend(makeNewDataEl())
                }) 
             }
         }
