@@ -477,102 +477,102 @@ const snippetsRef = {
                 },
                 columnOptions:  [
                     [
-                        'dvrpc_female',
-                        'dvrpc_latinx',
-                        'dvrpc_asian',
-                        'dvrpc_black',
-                        'dvrpc_other',
-                        'dvrpc_minority'
+                      'dvrpc_female',
+                      'dvrpc_latinx',
+                      'dvrpc_minority',
+                      'dvrpc_asian',
+                      'dvrpc_black',
+                      'dvrpc_other'
                     ],
                     [
-                        'njcos_female',
-                        'njcos_latinx',
-                        'njcos_asian',
-                        'njcos_black',
-                        'njcos_other',
-                        'njcos_minority'
+                      'njcos_female',
+                      'njcos_latinx',
+                      'njcos_minority',
+                      'njcos_asian',
+                      'njcos_black',
+                      'njcos_other'
                     ],
                     [
-                        'pasubcos_female',
-                        'pasubcos_latinx',
-                        'pasubcos_asian',
-                        'pasubcos_black',
-                        'pasubcos_other',
-                        'pasubcos_minority'
+                      'pasubcos_female',
+                      'pasubcos_latinx',
+                      'pasubcos_minority',
+                      'pasubcos_asian',
+                      'pasubcos_black',
+                      'pasubcos_other'
                     ],
                     [
-                        'bucks_female',
-                        'bucks_latinx',
-                        'bucks_asian',
-                        'bucks_black',
-                        'bucks_other',
-                        'bucks_minority'
+                      'bucks_female',
+                      'bucks_latinx',
+                      'bucks_minority',
+                      'bucks_asian',
+                      'bucks_black',
+                      'bucks_other'
                     ],
                     [
-                        'burl_female',
-                        'burl_latinx',
-                        'burl_asian',
-                        'burl_black',
-                        'burl_other',
-                        'burl_minority'
+                      'burl_female',
+                      'burl_latinx',
+                      'burl_minority',
+                      'burl_asian',
+                      'burl_black',
+                      'burl_other'
                     ],
                     [
-                        'camd_female',
-                        'camd_latinx',
-                        'camd_asian',
-                        'camd_black',
-                        'camd_other',
-                        'camd_minority'
+                      'camd_female',
+                      'camd_latinx',
+                      'camd_minority',
+                      'camd_asian',
+                      'camd_black',
+                      'camd_other'
                     ],
                     [
-                        'ches_female',
-                        'ches_latinx',
-                        'ches_asian',
-                        'ches_black',
-                        'ches_other',
-                        'ches_minority'
+                      'ches_female',
+                      'ches_latinx',
+                      'ches_minority',
+                      'ches_asian',
+                      'ches_black',
+                      'ches_other'
                     ],
                     [
-                        'del_female',
-                        'del_latinx',
-                        'del_asian',
-                        'del_black',
-                        'del_other',
-                        'del_minority'
+                      'del_female',
+                      'del_latinx',
+                      'del_minority',
+                      'del_asian',
+                      'del_black',
+                      'del_other'
                     ],
                     [
-                        'glo_female',
-                        'glo_latinx',
-                        'glo_asian',
-                        'glo_black',
-                        'glo_other',
-                        'glo_minority'
+                      'glo_female',
+                      'glo_latinx',
+                      'glo_minority',
+                      'glo_asian',
+                      'glo_black',
+                      'glo_other'
                     ],
                     [
-                        'mer_female',
-                        'mer_latinx',
-                        'mer_asian',
-                        'mer_black',
-                        'mer_other',
-                        'mer_minority'
+                      'mer_female',
+                      'mer_latinx',
+                      'mer_minority',
+                      'mer_asian',
+                      'mer_black',
+                      'mer_other'
                     ],
                     [
-                        'mont_female',
-                        'mont_latinx',
-                        'mont_asian',
-                        'mont_black',
-                        'mont_other',
-                        'mont_minority'
+                      'mont_female',
+                      'mont_latinx',
+                      'mont_minority',
+                      'mont_asian',
+                      'mont_black',
+                      'mont_other'
                     ],
                     [
-                        'phil_female',
-                        'phil_latinx',
-                        'phil_asian',
-                        'phil_black',
-                        'phil_other',
-                        'phil_minority'
+                      'phil_female',
+                      'phil_latinx',
+                      'phil_minority',
+                      'phil_asian',
+                      'phil_black',
+                      'phil_other'
                     ]
-                ],
+                  ],
                 data: [
                     {
                         'key': 'Female to Male*',
@@ -676,7 +676,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Total'],
                     keepLabels: true,
-                    units: ['thousandsC'],
+                    units: ['thousands'],
                     keepUnits: true
                 },
                 columnOptions:  [
