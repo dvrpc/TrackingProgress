@@ -71,6 +71,7 @@ const formatLabels = (y, x, context) => {
 // Y-axis formatting lookup table
 const axisFormats = {
     'percent': '.0%',
+    'percentD': '.1%',
     'percentC': '.3p',
     'singles': '.3n',
     'thousands': ',.0f',

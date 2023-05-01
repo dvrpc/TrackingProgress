@@ -472,7 +472,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Origination Rate Gap'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentD'],
                     keepUnits: true
                 },
                 columnOptions:  [
@@ -610,7 +610,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Loan Origination Rates'],
                     keepLabels: true,
-                    units: ['percent'],
+                    units: ['percentD'],
                     keepUnits: true
                 },
                 columnOptions:  [

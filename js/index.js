@@ -217,7 +217,7 @@ const makeNewDataEl = () => {
     const newDataEl = document.createElement('div')
 
     newDataEl.classList.add('new-data')
-    newDataEl.textContent = 'new data!'
+    newDataEl.innerHTML = 'new <br> data!'
 
     return newDataEl
 }
