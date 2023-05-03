@@ -742,7 +742,7 @@ const snippetsRef = {
         trend: {
             status: 'good',
             text: {
-                stat: '51.5% more',
+                stat: '27.9% more',
                 text: `permits in Core Cities and Developed Communities since 1999 low`
             }
         },
@@ -773,7 +773,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['permits_graph_2A','permits_graph_2B'],
                 context: {
-                    labels: ['Permits Issued'],
+                    labels: ['Housing Units Approved'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
@@ -814,7 +814,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['permits_graph_3A','permits_graph_3B'],
                 context: {
-                    labels: ['Permits Issued'],
+                    labels: ['Housing Units Approved'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true

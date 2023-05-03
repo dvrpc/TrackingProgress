@@ -666,7 +666,7 @@ const chartStrings = {
         <small class="chart-src"><em>Source: National Oceanic & Atmospheric Administration's National Centers for Environmental Information</em></small>`,
     'Housing Permits':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Percentage of Building Permits Issued in Core Cities or Developed Communities</h2>
+            <h2 class="indicator-subheader toggle-subheader">Percentage of Housing Units Approved in Core Cities or Developed Communities</h2>
             <form>
                 <fieldset>
                     <label>
@@ -687,7 +687,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Total Building Permits Issued by Planning Area</h2>
+            <h2 class="indicator-subheader toggle-subheader">Total Housing Units Approved by Planning Area</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -730,7 +730,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Total Building Permits Issued by Type</h2>
+            <h2 class="indicator-subheader toggle-subheader">Total Housing Units Approved by Type</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
