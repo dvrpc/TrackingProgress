@@ -458,10 +458,10 @@ const snippetsRef = {
     'Mortgage Lending': {
         categories: ['econo', 'transpo','equity','resil'],
         trend: {
-            status: 'neutral',
+            status: 'good',
             text: {
-                stat: '0% change',
-                text: `in PHL's international destinations since 2009`
+                stat: '9-10% drop',
+                text: `in loan approval rate gaps from base year`
             }
         },
         d3: [
