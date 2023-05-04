@@ -1,3 +1,5 @@
-To see how conditions are planned to be addressed for the next 25+ years, see what is listed among DVRPC’s [_Connections 2050 Plan_: Major Regional Projects](https://www.dvrpc.org/webmaps/mrp2050/).
+To see how conditions are planned to be addressed for the next 25+ years, see what is listed among DVRPC’s _[Connections 2050 Plan: Major Regional Projects](https://www.dvrpc.org/webmaps/mrp2050/)_. 
 
-DVRPC’s [_Municipal Implementation Toolbox_](https://www.dvrpc.org/Plan/MIT/) suggests preparing infrastructure for Connected and Automated Vehicles by prioritizing pavement conditions and lane markings. For more information visit: [Connected and Automated Vehicle Preparations](https://www.dvrpc.org/Plan/MIT/connectedandautomatedvehiclepreparations).
+Maintaining pavement conditions in a state-of-good repair is one the National Goals set by the Federal Highway Administration’s Transportation Performance Management (TPM). DVRPC is required to either set regional targets or match state department of transportation targets for pavement (and bridge) conditions on the National Highway System. See how the region is performing: [TPM Bridge and Pavement](https://www.dvrpc.org/tpm/?indicator=bridgepavement).
+
+DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ suggests preparing infrastructure for Connected and Automated Vehicles by prioritizing pavement conditions and lane markings. For more information visit: [Connected and Automated Vehicle Preparations](https://www.dvrpc.org/Plan/MIT/connectedandautomatedvehiclepreparations).

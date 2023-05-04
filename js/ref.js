@@ -4482,9 +4482,9 @@ const snippetsRef = {
     'Pavement Conditions': {
         categories: ['transpo', 'resil'],
         trend: {
-            status: 'bad',
+            status: 'neutral',
             text: {
-                stat: '5.3% more',
+                stat: '0.5% fewer',
                 text: `road segment miles in poor condition since 2010`
             }
         },
