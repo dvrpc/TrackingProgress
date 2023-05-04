@@ -1540,8 +1540,8 @@ const snippetsRef = {
         trend: {
             status: 'bad',
             text: {
-                stat: '25% wider',
-                text: `gap between highest and lowest household income quintiles since 2006`
+                stat: '20-50% remaining',
+                text: `income gaps between groups`
             }
         },
         d3: [
@@ -1630,12 +1630,12 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: ['medincGapRace'],
+                dataSource: ['medincGapRace', 'medincPercGapRace'],
                 context: {
-                  labels: ['Dollars (2021)'],
-                  keepLabels: true,
-                  units: ['dollars'],
-                  keepUnits: true,
+                  labels: ['Dollars (2021)', 'Percent'],
+                  keepLabels: false,
+                  units: ['dollars', 'percent'],
+                  keepUnits: false,
                 },
                 columnOptions: [
                   ['region_nonwht', 'region_black', 'region_asian', 'region_latinx'],
@@ -1840,7 +1840,7 @@ const snippetsRef = {
                 container: 'chart5',
                 dataSource: ['sexInc_gap', 'sexInc_percofmale'],
                 context: {
-                    labels: ['Median Income Gap (2021 Dollars)', 'Median Income Gap Percentage'],
+                    labels: ['Median Earnings Gap (2021 Dollars)', 'Median Earnings Gap Percentage'],
                     keepLabels: false,
                     units: ['dollars', 'percentC'],
                     keepUnits: false
@@ -1871,7 +1871,7 @@ const snippetsRef = {
                 container: 'chart6',
                 dataSource: ['sexInc_median'],
                 context: {
-                    labels: ['Median Income (2021 Dollars)'],
+                    labels: ['Median Earnings Gap (2021 Dollars)'],
                     keepLabels: true,
                     units: ['dollars'],
                     keepUnits: true

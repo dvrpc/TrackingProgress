@@ -959,7 +959,7 @@ const chartStrings = {
 
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Median Income Gap Relative to Households with White, non-Latinx Householder</h2>
-            <form>
+            <form class="double-toggle-form">
                 <fieldset>
                     <label>
                         Select Geography
@@ -980,6 +980,16 @@ const chartStrings = {
                                 <option value="10">Montgomery</option>
                                 <option value="11">Philadelphia</option>
                             </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-2-b" class="toggle-data-selector">
+                            <option value="0">Gap</option>
+                            <option value="1">Percent Gap</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1028,7 +1038,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income Gap between Sexes</h2>
+            <h2 class="indicator-subheader toggle-subheader">Median Earnings Gap between Sexes</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -1073,7 +1083,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income by Sex</h2>
+            <h2 class="indicator-subheader toggle-subheader">Median Earnings by Sex</h2>
             <form>
                 <fieldset>
                     <label>
