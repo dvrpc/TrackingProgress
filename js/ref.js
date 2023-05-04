@@ -1906,10 +1906,10 @@ const snippetsRef = {
     'Labor Force': {
         categories: ['econo','comm', 'equity'],
         trend: {
-            status: 'neutral',
+            status: 'good',
             text: {
-                stat: '30% smaller',
-                text: `income gap between male and female workers since 2000`
+                stat: '3-5% drop',
+                text: `in participation rate gaps from base year`
             }
         },
         d3: [
