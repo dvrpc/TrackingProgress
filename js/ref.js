@@ -66,6 +66,11 @@ const snippetsRef = {
                         'key': 'Very Unhealthy',
                         'color': '#8f3f98',
                         'columns': ['quarteryear', 'Very Unhealthy Ozone'],
+                    },
+                    {
+                        'key': 'Hazardous',
+                        'color': '#7e0023',
+                        'columns': ['quarteryear', 'Hazardous Ozone'],
                     }
                 ]
             },
@@ -482,7 +487,6 @@ const snippetsRef = {
                       'dvrpc_minority',
                       'dvrpc_asian',
                       'dvrpc_black',
-                      'dvrpc_other'
                     ],
                     [
                       'njcos_female',
@@ -490,7 +494,6 @@ const snippetsRef = {
                       'njcos_minority',
                       'njcos_asian',
                       'njcos_black',
-                      'njcos_other'
                     ],
                     [
                       'pasubcos_female',
@@ -498,7 +501,6 @@ const snippetsRef = {
                       'pasubcos_minority',
                       'pasubcos_asian',
                       'pasubcos_black',
-                      'pasubcos_other'
                     ],
                     [
                       'bucks_female',
@@ -506,7 +508,6 @@ const snippetsRef = {
                       'bucks_minority',
                       'bucks_asian',
                       'bucks_black',
-                      'bucks_other'
                     ],
                     [
                       'burl_female',
@@ -514,7 +515,6 @@ const snippetsRef = {
                       'burl_minority',
                       'burl_asian',
                       'burl_black',
-                      'burl_other'
                     ],
                     [
                       'camd_female',
@@ -522,7 +522,6 @@ const snippetsRef = {
                       'camd_minority',
                       'camd_asian',
                       'camd_black',
-                      'camd_other'
                     ],
                     [
                       'ches_female',
@@ -530,7 +529,6 @@ const snippetsRef = {
                       'ches_minority',
                       'ches_asian',
                       'ches_black',
-                      'ches_other'
                     ],
                     [
                       'del_female',
@@ -538,7 +536,6 @@ const snippetsRef = {
                       'del_minority',
                       'del_asian',
                       'del_black',
-                      'del_other'
                     ],
                     [
                       'glo_female',
@@ -546,7 +543,6 @@ const snippetsRef = {
                       'glo_minority',
                       'glo_asian',
                       'glo_black',
-                      'glo_other'
                     ],
                     [
                       'mer_female',
@@ -554,7 +550,6 @@ const snippetsRef = {
                       'mer_minority',
                       'mer_asian',
                       'mer_black',
-                      'mer_other'
                     ],
                     [
                       'mont_female',
@@ -562,7 +557,6 @@ const snippetsRef = {
                       'mont_minority',
                       'mont_asian',
                       'mont_black',
-                      'mont_other'
                     ],
                     [
                       'phil_female',
@@ -570,7 +564,6 @@ const snippetsRef = {
                       'phil_minority',
                       'phil_asian',
                       'phil_black',
-                      'phil_other'
                     ]
                   ],
                 data: [
@@ -596,11 +589,6 @@ const snippetsRef = {
                         columns: ['year', 'dvrpc_black'],
                         disabled: true
                     },
-                    {
-                        'key': 'Other Non-White to White***',
-                        columns: ['year', 'dvrpc_other'],
-                        disabled: true
-                    },
                 ]
             },
             {
@@ -614,18 +602,18 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions:  [
-                    ['dvrpc_female','dvrpc_male','dvrpc_latinx','dvrpc_nonlatinx','dvrpc_minority','dvrpc_asian','dvrpc_black','dvrpc_other','dvrpc_white'],
-                    ['njcos_female', 'njcos_male', 'njcos_latinx', 'njcos_nonlatinx', 'njcos_minority', 'njcos_asian', 'njcos_black', 'njcos_other', 'njcos_white'],
-                    ['pasubcos_female', 'pasubcos_male', 'pasubcos_latinx', 'pasubcos_nonlatinx', 'pasubcos_minority', 'pasubcos_asian', 'pasubcos_black', 'pasubcos_other', 'pasubcos_white'],
-                    ['bucks_female', 'bucks_male', 'bucks_latinx', 'bucks_nonlatinx', 'bucks_minority', 'bucks_asian', 'bucks_black', 'bucks_other', 'bucks_white'],
-                    ['burl_female', 'burl_male', 'burl_latinx', 'burl_nonlatinx', 'burl_minority', 'burl_asian', 'burl_black', 'burl_other', 'burl_white'],
-                    ['camd_female', 'camd_male', 'camd_latinx', 'camd_nonlatinx', 'camd_minority', 'camd_asian', 'camd_black', 'camd_other', 'camd_white'],
-                    ['ches_female', 'ches_male', 'ches_latinx', 'ches_nonlatinx', 'ches_minority', 'ches_asian', 'ches_black', 'ches_other', 'ches_white'],
-                    ['del_female', 'del_male', 'del_latinx', 'del_nonlatinx', 'del_minority', 'del_asian', 'del_black', 'del_other', 'del_white'],
-                    ['glo_female', 'glo_male', 'glo_latinx', 'glo_nonlatinx', 'glo_minority', 'glo_asian', 'glo_black', 'glo_other', 'glo_white'],
-                    ['mer_female', 'mer_male', 'mer_latinx', 'mer_nonlatinx', 'mer_minority', 'mer_asian', 'mer_black', 'mer_other', 'mer_white'],
-                    ['mont_female', 'mont_male', 'mont_latinx', 'mont_nonlatinx', 'mont_minority', 'mont_asian', 'mont_black', 'mont_other', 'mont_white'],
-                    ['phil_female', 'phil_male', 'phil_latinx', 'phil_nonlatinx', 'phil_minority', 'phil_asian', 'phil_black', 'phil_other', 'phil_white'],
+                    ['dvrpc_female','dvrpc_male','dvrpc_latinx','dvrpc_nonlatinx','dvrpc_minority','dvrpc_asian','dvrpc_black', 'dvrpc_white'],
+                    ['njcos_female', 'njcos_male', 'njcos_latinx', 'njcos_nonlatinx', 'njcos_minority', 'njcos_asian', 'njcos_black', 'njcos_white'],
+                    ['pasubcos_female', 'pasubcos_male', 'pasubcos_latinx', 'pasubcos_nonlatinx', 'pasubcos_minority', 'pasubcos_asian', 'pasubcos_black', 'pasubcos_white'],
+                    ['bucks_female', 'bucks_male', 'bucks_latinx', 'bucks_nonlatinx', 'bucks_minority', 'bucks_asian', 'bucks_black', 'bucks_white'],
+                    ['burl_female', 'burl_male', 'burl_latinx', 'burl_nonlatinx', 'burl_minority', 'burl_asian', 'burl_black', 'burl_white'],
+                    ['camd_female', 'camd_male', 'camd_latinx', 'camd_nonlatinx', 'camd_minority', 'camd_asian', 'camd_black', 'camd_white'],
+                    ['ches_female', 'ches_male', 'ches_latinx', 'ches_nonlatinx', 'ches_minority', 'ches_asian', 'ches_black', 'ches_white'],
+                    ['del_female', 'del_male', 'del_latinx', 'del_nonlatinx', 'del_minority', 'del_asian', 'del_black', 'del_white'],
+                    ['glo_female', 'glo_male', 'glo_latinx', 'glo_nonlatinx', 'glo_minority', 'glo_asian', 'glo_black', 'glo_white'],
+                    ['mer_female', 'mer_male', 'mer_latinx', 'mer_nonlatinx', 'mer_minority', 'mer_asian', 'mer_black', 'mer_white'],
+                    ['mont_female', 'mont_male', 'mont_latinx', 'mont_nonlatinx', 'mont_minority', 'mont_asian', 'mont_black', 'mont_white'],
+                    ['phil_female', 'phil_male', 'phil_latinx', 'phil_nonlatinx', 'phil_minority', 'phil_asian', 'phil_black', 'phil_white'],
                 ],
                 data: [
                     {
@@ -656,11 +644,6 @@ const snippetsRef = {
                     {
                         'key': 'Black***',
                         columns: ['year', 'dvrpc_black'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Other Non-White***',
-                        columns: ['year', 'dvrpc_other'],
                         disabled: true
                     },
                     {
@@ -680,18 +663,18 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions:  [
-                    ['dvrpc_female','dvrpc_male','dvrpc_latinx','dvrpc_nonlatinx','dvrpc_minority','dvrpc_asian','dvrpc_black','dvrpc_other','dvrpc_white'],
-                    ['njcos_female', 'njcos_male', 'njcos_latinx', 'njcos_nonlatinx', 'njcos_minority', 'njcos_asian', 'njcos_black', 'njcos_other', 'njcos_white'],
-                    ['pasubcos_female', 'pasubcos_male', 'pasubcos_latinx', 'pasubcos_nonlatinx', 'pasubcos_minority', 'pasubcos_asian', 'pasubcos_black', 'pasubcos_other', 'pasubcos_white'],
-                    ['bucks_female', 'bucks_male', 'bucks_latinx', 'bucks_nonlatinx', 'bucks_minority', 'bucks_asian', 'bucks_black', 'bucks_other', 'bucks_white'],
-                    ['burl_female', 'burl_male', 'burl_latinx', 'burl_nonlatinx', 'burl_minority', 'burl_asian', 'burl_black', 'burl_other', 'burl_white'],
-                    ['camd_female', 'camd_male', 'camd_latinx', 'camd_nonlatinx', 'camd_minority', 'camd_asian', 'camd_black', 'camd_other', 'camd_white'],
-                    ['ches_female', 'ches_male', 'ches_latinx', 'ches_nonlatinx', 'ches_minority', 'ches_asian', 'ches_black', 'ches_other', 'ches_white'],
-                    ['del_female', 'del_male', 'del_latinx', 'del_nonlatinx', 'del_minority', 'del_asian', 'del_black', 'del_other', 'del_white'],
-                    ['glo_female', 'glo_male', 'glo_latinx', 'glo_nonlatinx', 'glo_minority', 'glo_asian', 'glo_black', 'glo_other', 'glo_white'],
-                    ['mer_female', 'mer_male', 'mer_latinx', 'mer_nonlatinx', 'mer_minority', 'mer_asian', 'mer_black', 'mer_other', 'mer_white'],
-                    ['mont_female', 'mont_male', 'mont_latinx', 'mont_nonlatinx', 'mont_minority', 'mont_asian', 'mont_black', 'mont_other', 'mont_white'],
-                    ['phil_female', 'phil_male', 'phil_latinx', 'phil_nonlatinx', 'phil_minority', 'phil_asian', 'phil_black', 'phil_other', 'phil_white'],
+                    ['dvrpc_female','dvrpc_male','dvrpc_latinx','dvrpc_nonlatinx','dvrpc_minority','dvrpc_asian','dvrpc_black', 'dvrpc_white'],
+                    ['njcos_female', 'njcos_male', 'njcos_latinx', 'njcos_nonlatinx', 'njcos_minority', 'njcos_asian', 'njcos_black', 'njcos_white'],
+                    ['pasubcos_female', 'pasubcos_male', 'pasubcos_latinx', 'pasubcos_nonlatinx', 'pasubcos_minority', 'pasubcos_asian', 'pasubcos_black', 'pasubcos_white'],
+                    ['bucks_female', 'bucks_male', 'bucks_latinx', 'bucks_nonlatinx', 'bucks_minority', 'bucks_asian', 'bucks_black', 'bucks_white'],
+                    ['burl_female', 'burl_male', 'burl_latinx', 'burl_nonlatinx', 'burl_minority', 'burl_asian', 'burl_black', 'burl_white'],
+                    ['camd_female', 'camd_male', 'camd_latinx', 'camd_nonlatinx', 'camd_minority', 'camd_asian', 'camd_black', 'camd_white'],
+                    ['ches_female', 'ches_male', 'ches_latinx', 'ches_nonlatinx', 'ches_minority', 'ches_asian', 'ches_black', 'ches_white'],
+                    ['del_female', 'del_male', 'del_latinx', 'del_nonlatinx', 'del_minority', 'del_asian', 'del_black', 'del_white'],
+                    ['glo_female', 'glo_male', 'glo_latinx', 'glo_nonlatinx', 'glo_minority', 'glo_asian', 'glo_black', 'glo_white'],
+                    ['mer_female', 'mer_male', 'mer_latinx', 'mer_nonlatinx', 'mer_minority', 'mer_asian', 'mer_black', 'mer_white'],
+                    ['mont_female', 'mont_male', 'mont_latinx', 'mont_nonlatinx', 'mont_minority', 'mont_asian', 'mont_black', 'mont_white'],
+                    ['phil_female', 'phil_male', 'phil_latinx', 'phil_nonlatinx', 'phil_minority', 'phil_asian', 'phil_black', 'phil_white'],
                 ],
                 data: [
                     {
@@ -722,11 +705,6 @@ const snippetsRef = {
                     {
                         'key': 'Black***',
                         columns: ['year', 'dvrpc_black'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Other Non-White***',
-                        columns: ['year', 'dvrpc_other'],
                         disabled: true
                     },
                     {
@@ -1529,7 +1507,7 @@ const snippetsRef = {
             data: [
                 {
                     'key': 'Index Value',
-                    columns: ['year', 'LowIncome']
+                    columns: ['year', 'lowincome']
                 }
             ]
         }

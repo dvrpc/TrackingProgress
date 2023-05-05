@@ -562,7 +562,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Total Originations and Denials</h2>
+        <h2 class="indicator-subheader toggle-subheader">Total Decisioned Applications (Originations + Denials)</h2>
         <form class="double-toggle-form">
             <fieldset>
                 <label>
