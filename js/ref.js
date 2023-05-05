@@ -46,8 +46,8 @@ const snippetsRef = {
                     xLabel: 'Quarter'
                 },
                 columnOptions: [
-                    ['Unhealthy Sensitive Ozone', 'Unhealthy Ozone', 'Very Unhealthy Ozone'],
-                    ['Unhealthy Sensitive PM', 'Unhealthy PM', 'Very Unhealthy PM']
+                    ['Unhealthy Sensitive Ozone', 'Unhealthy Ozone', 'Very Unhealthy Ozone', 'Hazardous Ozone'],
+                    ['Unhealthy Sensitive PM', 'Unhealthy PM', 'Very Unhealthy PM', 'Hazardous Ozone']
                 ],
                 newKeys: true,
                 range: [0, 50],
