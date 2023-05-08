@@ -91,7 +91,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['vmtWeb'],
                 context: {
-                    labels: ['VMT Per Capita', 'Total VMT (Millions)', 'VMT Per Vehicle'],
+                    labels: ['VMT Per Capita', 'Total Daily VMT (Millions)', 'VMT Per Vehicle'],
                     keepLabels: false,
                     units: ['thousands'],
                     keepUnits: true
@@ -3388,7 +3388,7 @@ const snippetsRef = {
                     labels: ['Degrees Farenheit', 'Precipitation (inches)', 'Percentage of Precipitation from Severe Storms'],
                     keepLabels: false,
                     units: ['thousands', 'thousands', 'percentC'],
-                    keepUnits: false
+                    keepUnits: false,
                 },
                 columnOptions: [
                     ['Average Annual Temperature', '30 year trend - Temperature'],
