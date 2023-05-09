@@ -144,7 +144,10 @@ const getIndicatorSnippet = async (ref, indicatorParams) => {
         const context = 'initial'
 
         // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
-        hasDataViz.forEach(chart => dataVizSwitch(chart.type, chart, context))
+        hasDataViz.forEach(chart => {
+            chart = {...chart, dataUrl: indicatorParams.dataUrl}
+            return dataVizSwitch(chart.type, chart, context)
+        })
     }
 
     // send user to the top of the indicator page
@@ -223,7 +226,7 @@ const makeIndicatorPage = hashArray => {
     if(ref){
         const categories = ref.categories
         const trend = ref.trend
-        const indicatorParams = {title, categories, trend, replaceOld}
+        const indicatorParams = {title, categories, trend, replaceOld, dataUrl: ref.dataUrl}
 
         generateSideNav(newIndicator, relatedIndicators)
         getIndicatorSnippet(ref, indicatorParams)

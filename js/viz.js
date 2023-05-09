@@ -50,6 +50,9 @@ const formatInpus = (source, toggleContext) => {
 
     // if neither labels nor units need updating, make context null so the viz fncs can avoid calling formatLabels
     let context = labels || units ? {labels, units, xLabel} : null
+
+    const chartSrc = document.querySelector(container).parentElement.nextElementSibling
+    chartSrc.innerHTML += `<a href='${source.dataUrl}' style='margin-left:auto;'>Access the data behind these charts</a>`
     
     return [container, dataSource, source, context]
 }

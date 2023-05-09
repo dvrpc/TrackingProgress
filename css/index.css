@@ -775,7 +775,7 @@ fieldset {
     align-items: center;
 }
 .chart-src {
-    display: block;
+    display: flex;
     max-width: 1000px;
     margin: 0 auto;
     font-style: italic;

@@ -8,6 +8,7 @@ const snippetsRef = {
                 text: `days annually violating air quality standards since 2002's 5-year average`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/air-quality-violations',  
         d3: [
             {
                 type: 'line and bar',
@@ -85,6 +86,7 @@ const snippetsRef = {
                 text: `daily miles driven annually per person since 2000`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/vehicle-miles-traveled',
         d3: [
             {
                 type: 'line',
@@ -179,6 +181,7 @@ const snippetsRef = {
                 text: `in population over 24 with high school diploma since 2000`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/educational-attainment',
         d3: [
             {
                 type: 'line',
@@ -348,6 +351,7 @@ const snippetsRef = {
                 text: `in fatalities and severe injuries since 2015`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/roadway-safety',
         d3: [
             {
                 type: 'line',
@@ -469,6 +473,7 @@ const snippetsRef = {
                 text: `in loan approval rate gaps from base year`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/mortgage-lending',
         d3: [
             {
                 type: 'line',
@@ -724,6 +729,7 @@ const snippetsRef = {
                 text: `permits in Core Cities and Developed Communities since 1999 low`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/housing-permits',
         d3: [
             {
                 type: 'line',
@@ -841,6 +847,7 @@ const snippetsRef = {
                 text: `cost-burdened households since 2005`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/housing-affordability',
         d3: [
             {
                 type: 'line',
@@ -1077,6 +1084,7 @@ const snippetsRef = {
           text: `in jobs since 2001`,
         },
       },
+      dataUrl: 'https://catalog.dvrpc.org/dataset/job-growth',
       d3: [
         {
           type: 'line',
@@ -1476,6 +1484,7 @@ const snippetsRef = {
           text: `of residents not living in diverse communities`,
         },
       },
+      dataUrl: 'https://catalog.dvrpc.org/dataset/community-integration',
       d3: [
         {
           type: 'line',
@@ -1522,6 +1531,7 @@ const snippetsRef = {
                 text: `income gaps between groups`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/income',
         d3: [
             {
                 type: 'line',
@@ -1890,6 +1900,7 @@ const snippetsRef = {
                 text: `in participation rate gaps from base year`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/labor-force',
         d3: [
             {
                 type: 'line',
@@ -2116,6 +2127,7 @@ const snippetsRef = {
                 text: `reliability on region's freeways during weekdays since 2011`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/traffic-reliability',
         d3: [
             {
                 type: 'line',
@@ -2253,6 +2265,7 @@ const snippetsRef = {
                 text: `in economic growth since 2001`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/gross-domestic-product',
         d3: [
             {
                 type: 'line',
@@ -2897,6 +2910,7 @@ const snippetsRef = {
                 text: `residents drive alone to work since 2006`,
             },
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/commute-mode',
         d3: [
             {
                 type: 'line',
@@ -3181,6 +3195,7 @@ const snippetsRef = {
                 text: `in transit trips per person since 2000`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/transit-ridership-ntd',
         d3: [
             {
                 type: 'line',
@@ -3282,6 +3297,7 @@ const snippetsRef = {
                 text: `in greenhouse gas emissions since 2005`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/greenhouse-gas-emissions',
         d3: [
             {
                 type: 'line',
@@ -3421,6 +3437,7 @@ const snippetsRef = {
                 text: `in average transit fleet age since 2000`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/transit-conditions',
         d3: [
             {
                 type: 'line',
@@ -3550,6 +3567,7 @@ const snippetsRef = {
                 text: `in business formations since 2005`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/business-formations',
         d3: [
             {
                 type: 'line',
@@ -3639,6 +3657,7 @@ const snippetsRef = {
                 text: `in population since 2000`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/population-estimates',
         d3: [
             {
                 type: 'line',
@@ -3899,6 +3918,7 @@ const snippetsRef = {
                 text: `in bridge deck area rated deficient since a 2003 peak of 18%`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/bridge-conditions',
         d3: [
             {
                 type: 'line',
@@ -4038,6 +4058,7 @@ const snippetsRef = {
                 text: `in water supporting aquatic life since 2006`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/water-quality',
         d3: [
             {
                 type: 'line',
@@ -4119,6 +4140,7 @@ const snippetsRef = {
                 text: `in land consumption rate from 2005-2015 compared to 1990-2005`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/land-consumption',
         d3: [
             {
                 type: 'line',
@@ -4466,6 +4488,7 @@ const snippetsRef = {
                 text: `road segment miles in poor condition since 2010`
             }
         },
+        dataUrl: 'https://catalog.dvrpc.org/dataset/pavement-conditions',
         d3: [
             {
                 type: 'line',
