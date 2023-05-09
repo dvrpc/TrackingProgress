@@ -918,7 +918,7 @@ address {
     stroke-opacity: 1 !important;
     stroke-width: 2px;
 }
-
+/* css rule for single ghg chart */
 #dashboard > article > div.data-viz.chart4 > svg > g > g > g.lines1Wrap.nvd3-svg > g > g > g.nv-scatterWrap.nvd3-svg > g > g:nth-child(2) > g.nv-groups > g > .nv-point {
     stroke-opacity: 0 !important;
 }
