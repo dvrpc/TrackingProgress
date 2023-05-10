@@ -841,7 +841,7 @@ const snippetsRef = {
     'Housing Affordability': {
         categories: ['comm', 'econo', 'resil', 'equity'],
         trend: {
-            status: 'neutral',
+            status: 'good',
             text: {
                 stat: '9% fewer',
                 text: `cost-burdened households since 2005`
@@ -2904,7 +2904,7 @@ const snippetsRef = {
     'Commute Mode': {
         categories: ['transpo', 'enviro', 'comm', 'sustain'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
                 stat: '13.6% fewer',
                 text: `residents drive alone to work since 2006`,
