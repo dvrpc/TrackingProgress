@@ -344,6 +344,12 @@ fieldset {
     justify-content: center;
     text-align: center;
 }
+.splash-details-content > div {
+    width: 60%;
+}
+.splash-details-content > div > p {
+    width: 100%;
+}
 .splash-map-figure {
     width: 15%;
     font-size: 0.8rem;
