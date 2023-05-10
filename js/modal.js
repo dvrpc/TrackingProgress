@@ -90,12 +90,12 @@ const makeEmojiRow = () => {
         <span class="emoji-spacer"></span>
         <figure class="emoji-figure">
             <img loading="lazy" src="./img/emoji-not-great.png" alt="not-great emoji" />
-            <figcaption><strong>Not Good</strong></figcaption>
+            <figcaption><strong>not good</strong></figcaption>
         </figure>
         <span class="emoji-spacer"></span>
         <figure class="emoji-figure">
             <img loading="lazy" src="./img/emoji-bad.png" alt="bad emoji" />
-            <figcaption><strong>Poor</strong></figcaption>
+            <figcaption><strong>poor</strong></figcaption>
         </figure>
     `)
 
@@ -164,7 +164,7 @@ const makeGeoDetails = () => {
             </figure>
             <div>
                 <p class="splash-text"><em>Tracking Progress</em> uses subregional geographies to further analyze what drives regional trends and provide data relevant to our communities, member governments, and planning partners. "NJ Counties" (Burlington, Camden, Gloucester, and Mercer counties) and "PA Suburban Counties" (Bucks, Chester, Delaware, and Montgomery counties) are used as aggregations to pair with "Philadelphia" to draw broad comparisons of Philadelphia and its surrounding counties on either side of the river.</p>
-                <p class="splash-text">Some charts also group "All PA Counties", including Philadelphia, into one dataset. Many indicators offer individual county trends. Additionally, charts may group data by <a href="./pdf/Planning_Areas_2045_List.pdf">Planning Areas</a><span class="sm"> [0.1 MB pdf]</span> — a typology of the region's municipalities—into four classifications: Core Cities, Developed Communities, Growing Suburbs, and Rural Areas. Although these may be useful groupings, there are local nuances within any subgeography for which we cannot always account.</p>
+                <p class="splash-text">Some charts also group "All PA Counties", including Philadelphia, into one dataset. Many indicators offer individual county trends. Additionally, charts may group data by <a href="./pdf/Planning_Areas_2050_List.pdf">Planning Areas</a><span class="sm"> [0.1 MB pdf]</span> — a typology of the region's municipalities—into four classifications: Core Cities, Developed Communities, Growing Suburbs, and Rural Areas. Although these may be useful groupings, there are local nuances within any subgeography for which we cannot always account.</p>
             </div>
         </div>
     `)
