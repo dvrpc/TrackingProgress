@@ -573,24 +573,24 @@ const snippetsRef = {
                   ],
                 data: [
                     {
-                        'key': 'Female to Male*',
+                        'key': 'Female-to-Male*',
                         columns: ['year', 'dvrpc_female']
                     },
                     {
-                        'key': 'Latinx to Non-Latinx**',
+                        'key': 'Latinx-to-Non-Latinx**',
                         columns: ['year', 'dvrpc_latinx']
                     },
                     {
-                        'key': 'Non-White to White***',
+                        'key': 'Non-White-to-White***',
                         columns: ['year', 'dvrpc_minority']
                     },
                     {
-                        'key': 'Asian to White***',
+                        'key': 'Asian-to-White***',
                         columns: ['year', 'dvrpc_asian'],
                         disabled: true
                     },
                     {
-                        'key': 'Black to White***',
+                        'key': 'Black-to-White***',
                         columns: ['year', 'dvrpc_black'],
                         disabled: true
                     },

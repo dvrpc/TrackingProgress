@@ -52,7 +52,9 @@ const formatInpus = (source, toggleContext) => {
     let context = labels || units ? {labels, units, xLabel} : null
 
     const chartSrc = document.querySelector(container).parentElement.nextElementSibling
-    chartSrc.innerHTML += `<a href='${source.dataUrl}' style='margin-left:auto;'>Access the data behind these charts</a>`
+	const dataUrl = chartSrc.querySelector('#data-url')
+    if (!dataUrl) 
+        chartSrc.innerHTML += `<a id='data-url' href='${source.dataUrl}' style='margin-left:auto;'>Access the data behind these charts</a>`
     
     return [container, dataSource, source, context]
 }
