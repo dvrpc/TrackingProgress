@@ -1,0 +1,3 @@
+Increasing the share of people not driving their vehicles alone reduces congestion, lessens roadway maintenance needs, and can significantly decrease the region's carbon footprint. Increases in active modes like walking and biking can benefit public health and lower healthcare costs. Commute trips only make up a fifth of all trips but are the chief contributor to peak-period demand for transportation facilities—which can slow goods movement within, to, from, and through the region's roadways. 
+
+This indicator relates to the _Connections 2050_ Plan goal to integrate modes into an accessible, multimodal transportation network, with transit, walking, and biking serving as fundamental components. 

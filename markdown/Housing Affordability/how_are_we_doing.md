@@ -1,0 +1,7 @@
+Among households sharing income information, the percentage of households in the region with a high housing cost burden (those paying over 30% of income on housing) has dropped by 9% since its peak of 41% of households in 2011 to levels lower than any time between 2005 and 2021. Percent of cost-burdened households stood at 32.1% in 2021.
+
+ The region’s Core Cities have the highest percentage of cost-burdened households, and Developed Communities have the second highest. Households in Growing Suburbs or Rural Areas may have lower housing costs and/or higher incomes. Households in outlying areas are also likely to have higher transportation costs.
+
+A growing number of renter households became cost burdened in recent years, with an all-time high of 367,000 households in 2021, but this appears to be attributable to overall growth of renter population. The share of cost-burdened renter households was 51% in 2005 and in 2021. It peaked at 55% in 2011. The number of cost-burdened homeowners decreased nearly every year from 2011 to 2019, but were up slightly in 2021. However the share of cost-burdened households has dropped from 31% in 2005 to a low of 23% in 2021.
+
+The number of households with a severe cost burden—greater than 50% of household income—increased over the 2005 to 2021 period, but the percentage of severely cost-burdened households dropped 1 percent over the span. It was 16.7% in 2005, peaked in 2011 at 19%, and was 15.7% in 2021. 

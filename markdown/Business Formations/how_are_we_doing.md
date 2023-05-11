@@ -1,0 +1,5 @@
+Business formations in the Greater Philadelphia region increased 143% from 2005 to 2021. Annual business formations finally achieved pre-Great Recession-levels in 2015 and were on a steady upward trend through 2019—before the unprecedented growth stemming from economic shifts during  the Covid pandemic.Years 2020 and 2021 saw successive, record-breaking business formations, with annual applications 66% higher in 2021 than 2019, (which already had strong growth).
+
+It’s clear that Philadelphia has led the recent business application trend in recent years, with 2021 applications at 350% of 2005 levels. Philadelphia’s annual totals went from levels lower than all four New Jersey counties combined in 2014, to surpassing the suburban Pennsylvania counties’ totals in 2020. In 2020 and 2021, the only other county exceeding the regional percentage change since 2005 was Delaware County.
+
+While recent trends suggest economic health and resiliency, time will tell whether the pandemic-era shifts will remain. 

@@ -1,6 +1,7 @@
 DVRPC works with its planning partners on [economic development](https://www.dvrpc.org/Economic/) and analysis in the region, including our [Comprehensive Economic Development Strategy (CEDS)](https://www.dvrpc.org/Economic/CEDS/).
 
 DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ suggests the following tools to bolster GDP growth in an inclusive economy:
+
 * [Broadband Universal Access](https://www.dvrpc.org/Plan/MIT/broadbanduniversalaccess)
 * [Buy Local Campaign](https://www.dvrpc.org/Plan/MIT/buylocalcampaign)
 * [Downtown Management](https://www.dvrpc.org/Plan/MIT/downtownmanagement)

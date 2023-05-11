@@ -7,4 +7,4 @@ DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ 
  - [Live/Work Zoning](https://www.dvrpc.org/Plan/MIT/liveworkzoning) 
  - [Revitalization Planning and Programs](https://www.dvrpc.org/Plan/MIT/revitalizationplanningandprograms) 
  - [Streamlined Permitting Processes](https://www.dvrpc.org/Plan/MIT/streamlinedpermittingprocesses) 
- - [Suburban Retrofits](https://www.dvrpc.org/Plan/MIT/suburbanretrofits)
+ - [Suburban Retrofits](https://www.dvrpc.org/Plan/MIT/suburbanretrofits) 

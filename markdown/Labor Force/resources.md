@@ -10,4 +10,4 @@ DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ 
 * [Inclusionary Zoning](https://www.dvrpc.org/Plan/MIT/inclusionaryzoning) 
 * [Universal Pre-Kindergarten Programs](https://www.dvrpc.org/Plan/MIT/universalpre-kindergartenprograms) 
 
-For more on how DVRPC incorporates equity and environmental justice, and complies with federal Title VI and other important statutes protecting communities of concern, see our [Title VI and Environmental Justice](http://staging.dvrpc.org/GetInvolved/TitleVI/) page, as well as our [Indicators of Potential Disadvantage](http://staging.dvrpc.org/webmaps/IPD/) tool and [Equity through Access](http://staging.dvrpc.org/ETA/) project and tool.
+For more on how DVRPC incorporates equity, environmental justice, and civil rights, see our [Title VI and Environmental Justice](http://staging.dvrpc.org/GetInvolved/TitleVI/) page, as well as our [Indicators of Potential Disadvantage](http://staging.dvrpc.org/webmaps/IPD/) tool and [Equity through Access](http://staging.dvrpc.org/ETA/) project and tool.

@@ -52,13 +52,13 @@ const makeIndicatorHTML = async (params) => {
 const fetchMarkdown = async (title) => {
   const path = process.env.markdownPath
   const ret = await Promise.all([
-    fetch(`${path + title}/how.md`)
+    fetch(`${path + title}/how_are_we_doing.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
-    fetch(`${path + title}/why.md`)
+    fetch(`${path + title}/why_its_important.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
-    fetch(`${path + title}/what.md`)
+    fetch(`${path + title}/what_is_it.md`)
       .then((res) => res.text())
       .then((text) => marked.parse(text)),
     fetch(`${path + title}/resources.md`)

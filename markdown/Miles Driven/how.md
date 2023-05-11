@@ -1,5 +1,0 @@
-Total miles traveled peaked in the region in 2007, with 113.38 million VMT. Miles traveled declined with the Great Recession, but gained ground from 2012 to 2019, as the economy improved. The onset of the Covid-19 pandemic in 2020 caused the most significant one-year drop in miles driven, but was followed by the most significant one-year gain that brought the region back to pre-pandemic levels.
-
-Still, over this time the VMT per capita—a better way to conceptualize individuals’ driving habits—has shown a decrease in miles driven per person. Even after the VMT rebound in 2021, at 18.77 daily miles, VMT is a half mile lower per person per day than 2000 (19.28) and 1.65 miles less than the per capita VMT peak in 2006 (20.42). Due to the rise in more households and more vehicles per household, per vehicle VMT has seen more steady declines. Daily VMT per vehicle went from 34.45 to 29.62.
-
-New Jersey Counties, led by Burlington (28.35 daily miles per capita) and Gloucester (27.08 daily miles per capita), have the highest per capita VMT. As the least auto-oriented, Philadelphia has the lowest per capita VMT at 10.26 daily miles per person.

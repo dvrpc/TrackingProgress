@@ -1,1 +1,0 @@
-While not a full picture of societal well-being, Gross Domestic Product (GDP) is a valuable measure of an economy’s health. GDP growth can spur opportunity for the region's residents in the form of job and income growth.
