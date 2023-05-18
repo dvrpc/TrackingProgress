@@ -963,6 +963,6 @@ address {
 
 @media (width: 1366px) {
     #transpo-icon > img {
-        width: 80%;
+        width: 25px;
     }
 }
