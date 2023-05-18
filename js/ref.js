@@ -189,7 +189,7 @@ const snippetsRef = {
                 dataSource: ['edattainHS'],
                 range: [0, 1],
                 context: {
-                    labels: ['Percentage Population Over 24 years'],
+                    labels: ['Percentage of Population 25 Years and Older'],
                     units: ['percentC']
                 },
                 data: [
@@ -259,7 +259,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['edattainHS'],
                 context: {
-                    labels: ['Percentage Population Over 24 years'],
+                    labels: ['Percentage of Population 25 Years and Older'],
                     units: ['percentC']
                 },
                 data: [
@@ -286,7 +286,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['edattainComprehensive'],
                 context: {
-                    labels: ['Population Over 24 years (Thousands)'],
+                    labels: ['Population 25 Years and Older (Thousands)'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true
@@ -1539,7 +1539,7 @@ const snippetsRef = {
                 dataSource: ['IncomeQuintileTopBottomGap'],
                 context: {
                     labels: ['Growth Rate Difference'],
-                    keepLabels: false,
+                    keepLabels: true,
                     units: ['percentC'],
                     keepUnits: true
                 },
@@ -1866,8 +1866,8 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ['Region_Female', 'Region_Male'],
-                    ['NJ Suburban Counties_Female', 'NJ Suburban Counties_Male'],
-                    ['PA Suburban Counties_Female', 'PA Suburban Counties_Male'],
+                    ['NJ_Suburban_Counties_Female', 'NJ_Suburban_Counties_Male'],
+                    ['PA_Suburban_Counties_Female', 'PA_Suburban_Counties_Male'],
                     ['Bucks_Female', 'Bucks_Male'],
                     ['Burlington_Female', 'Burlington_Male'],
                     ['Camden_Female', 'Camden_Male'],
@@ -3573,7 +3573,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart',
                 context: {
-                    labels: ['Total Business Formations', 'Total Business Formations', 'Total Business Formations'],
+                    labels: ['Total Business Formations', 'Change in Business Formations', 'Percentage Change in Business Formations'],
                     keepLabels: false,
                     units: ['thousands', 'thousands', 'percentC'],
                     keepUnits: false
