@@ -966,3 +966,13 @@ address {
         width: 25px;
     }
 }
+
+@media (width: 1280px) {
+    .indicators-nav {
+        width: 13.5vw;
+    }
+    .indicators-grid {
+        margin-left: 13.5vw;
+        width: auto;
+    }
+}
