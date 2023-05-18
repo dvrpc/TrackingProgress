@@ -1,3 +1,5 @@
 Growth or decline in the total number of jobs is one of the primary tools for measuring the economic strength of a region. Job growth in one geographic area could indicate a need for more transportation infrastructure to aid workers' commutes. Employers locating in centers around the region may not change the total number of jobs, but could have other benefits, like lower commuting costs and priming the region for future growth.
 
 A decline in jobs in a particular industry may signal a need for investment to help support those businesses or, alternatively, to establish job retraining programs to transition employees to industries of the future. Job totals alone are not a good indicator of the quality or desirability of those jobs—if higher-paying jobs are being replaced by lower-paying jobs, quality of life could still be declining overall. 
+
+The _Connections 2050_ Plan notes that equitable economies expand economic mobility by attracting and creating more good paying jobs, and increasing access to capital for everyone. They place additional focus on expanding opportunity in communities that have been historically marginalized and denied access to good jobs.

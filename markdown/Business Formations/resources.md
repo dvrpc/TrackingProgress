@@ -6,6 +6,6 @@ DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ 
 * [Buy Local Campaign](https://www.dvrpc.org/Plan/MIT/buylocalcampaign)
 * [Community Branding](https://www.dvrpc.org/Plan/MIT/communitybranding)
 * [Historic Districts, Overlay Zones, and Facade Improvement Grants](https://www.dvrpc.org/Plan/MIT/historicdistrictsoverlayzonesandfacadeimprovementgrants)
-* [Local Food Procurement Policy Preference](https://www.dvrpc.org/Plan/MIT/broadbanduniversalaccess)
+* [Local Food Procurement Policy Preference](https://www.dvrpc.org/Plan/MIT/localfoodprocurementpolicypreference)
 * [Minority And Women-Owned Business Resources](https://www.dvrpc.org/Plan/MIT/minorityandwomen-ownedbusinessresources)
 * [Wireless Communications Facilities Ordinances (5G)](https://www.dvrpc.org/Plan/MIT/minorityandwomen-ownedbusinessresources)
