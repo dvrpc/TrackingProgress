@@ -1,4 +1,4 @@
-DVRPC’s work in [housing](https://www.dvrpc.org/housing/) includes a series of data reports on mortgage lending, using 2004 to 2019 _Lending Patterns _data entitled _Barriers to Building Generational Wealth_.
+DVRPC’s work in [housing](https://www.dvrpc.org/housing/) includes a series of data reports on mortgage lending, using 2004 to 2019 _Lending Patterns_ data entitled _Barriers to Building Generational Wealth_.
 
 DVRPC’s Municipal Implementation Toolbox lists several strategies that local governments can use to make home ownership in reach for more residents:
 

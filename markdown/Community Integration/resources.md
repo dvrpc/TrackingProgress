@@ -9,4 +9,4 @@ DVRPC’s [Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/) su
 * [Housing Maintenance and Rehabilitation Programs](https://www.dvrpc.org/Plan/MIT/housingmaintenanceandrehabilitationprograms)
 * [Inclusionary Zoning](https://www.dvrpc.org/Plan/MIT/inclusionaryzoning)
 * [Minority and Women-Owned Business Resources](https://www.dvrpc.org/Plan/MIT/minorityandwomen-ownedbusinessresources)
-* [Universal Pre-Kindergarten Programs](https://www.dvrpc.org/Plan/MIT/universalpre-kindergartenprograms
+* [Universal Pre-Kindergarten Programs](https://www.dvrpc.org/Plan/MIT/universalpre-kindergartenprograms)
