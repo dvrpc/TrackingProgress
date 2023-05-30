@@ -957,9 +957,13 @@ address {
     margin-right: .5rem;
 }
 
-#indicator-description-container > ul > li {
+#indicator-description-container > ul > li,  #indicator-description-container > ol > li{
     margin-left: 25px;
 }
+
+/* #indicator-description-container > 0l > li {
+    margin-left: 25px;
+} */
 
 @media (width: 1366px) {
     #transpo-icon > img {

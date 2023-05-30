@@ -662,7 +662,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['mortgage_lending_3a', 'mortgage_lending_3b', 'mortgage_lending_3c', 'mortgage_lending_3d'],
                 context: {
-                    labels: ['Total'],
+                    labels: ['Total Decisioned Applications'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true

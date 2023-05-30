@@ -54,7 +54,7 @@ const formatInpus = (source, toggleContext) => {
     const chartSrc = document.querySelector(container).parentElement.nextElementSibling
 	const dataUrl = chartSrc.querySelector('#data-url')
     if (!dataUrl) 
-        chartSrc.innerHTML += `<a id='data-url' href='${source.dataUrl}' style='margin-left:auto;'>Access the data behind these charts</a>`
+        chartSrc.innerHTML += `<a id='data-url' target='_blank' href='${source.dataUrl}' style='margin-left:auto;'>Access the data behind these charts</a>`
     
     return [container, dataSource, source, context]
 }
