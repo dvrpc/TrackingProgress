@@ -4,7 +4,7 @@ const snippetsRef = {
         trend: {
             status: 'awesome',
             text: {
-                stat: '58 fewer',
+                stat: '62 fewer',
                 text: `days annually violating air quality standards since 2002's 5-year average`
             }
         },
