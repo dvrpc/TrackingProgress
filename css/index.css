@@ -168,7 +168,11 @@ fieldset {
 #dvrpc-logo {
     display: block;
     float: right;
-    height: 38px;
+    height: 60px;
+}
+#splash-logo {
+    margin-top: 1.25em;
+    height: 70px;
 }
 /* END Header */
 /**************/
