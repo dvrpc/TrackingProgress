@@ -141,7 +141,7 @@ const replaceFilter = (oldFilters, newFilters) => {
 }
 const clearIndicators = () => indicators.forEach(indicator => {
     indicator.classList.remove('inactive')
-    indicator.style.background = '#4fa3a8'
+    indicator.style.background = '#008085'
 })
 
 // reset icon-sets to their default state
