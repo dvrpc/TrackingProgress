@@ -945,7 +945,7 @@ address {
 #to-dash {
     border: none;
     border-radius: 0.75rem;
-    background-color: #00a5ab;
+    background-color: var(--theme-main); 
     display: flex;
     cursor: pointer;
     color: white;
