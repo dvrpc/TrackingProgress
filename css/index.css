@@ -18,7 +18,7 @@ summary {
     --border-radius: 5px;
     --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
 
-    --theme-main: #4fa3a8;
+    --theme-main: #008085;
     --theme-main-white: #feffff;
     --theme-main-dark: #00282c;
     --theme-sustain: #00474E;
@@ -434,7 +434,7 @@ fieldset {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: 8px;
     margin-right: 16px;
     color: var(--theme-main-white);
@@ -538,6 +538,7 @@ fieldset {
     width: 71%;
     height: 71%;
     margin: 0 auto;
+    padding-top: 3px;
 }
 #connections-icon {
     display: block;
@@ -785,6 +786,8 @@ fieldset {
     max-width: 1000px;
     margin: 0 auto;
     font-style: italic;
+    padding-top: 3px;
+    color: #979eaa;
 }
 #to-top-btn {
     position: fixed;
