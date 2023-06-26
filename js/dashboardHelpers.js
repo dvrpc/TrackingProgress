@@ -92,7 +92,7 @@ const toggleIndicators = (element, indicators, filterType) => {
     if(clickedRef === element){
         indicators.forEach(indicator => {
             indicator.classList.remove('inactive')
-            indicator.style.background = '#4fa3a8'
+            indicator.style.background = '#008085'
         })
         clickedRef = ''
     }else{

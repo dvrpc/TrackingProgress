@@ -49,6 +49,10 @@ body {
     flex-direction: column;
     width: 90%;
 }
+.splash-details-content > div {
+    margin-left: auto;
+    margin-right: auto;
+}
 .splash-map-figure {
     width: 35%;
     margin: 16px auto;
