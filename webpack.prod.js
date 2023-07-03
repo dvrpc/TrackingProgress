@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const config = require("./webpack.common");
 const { EnvironmentPlugin } = require("webpack");
+const CopyPlugin = require('copy-webpack-plugin')
 
 const prodConfig = {
   mode: "production",
@@ -8,6 +9,11 @@ const prodConfig = {
     new EnvironmentPlugin({
       markdownPath: "./markdown/",
       baseURL: "/TrackingProgress/"
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "./data", to: "./data" }
+      ]
     }),
   ],
 };
