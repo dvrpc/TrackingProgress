@@ -253,7 +253,7 @@ const createBarChart = (source, toggleContext) => {
                 .x(d => d[0])
                 .y((d => d[1]))
                 .showControls(false)
-                .yDomain([0, 1])
+                .yDomain(source.range === undefined ? [0, 1] : null)
                 .stacked(false)
             
             // set max legend length to an arbitrarily high number to prevent text cutoff

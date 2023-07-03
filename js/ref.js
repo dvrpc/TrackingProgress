@@ -3570,18 +3570,18 @@ const snippetsRef = {
         dataUrl: 'https://catalog.dvrpc.org/dataset/business-formations',
         d3: [
             {
-                type: 'line',
+                type: 'bar',
                 container: 'chart',
                 context: {
-                    labels: ['Total Business Formations', 'Change in Business Formations', 'Percentage Change in Business Formations'],
+                    labels: ['Total Business Formations', 'Percentage Difference from Base Year'],
                     keepLabels: false,
-                    units: ['thousands', 'thousands', 'percentC'],
+                    units: ['thousands', 'percentC'],
                     keepUnits: false
                 },
+                range: false,
                 dataSource: ['business_formations'],
                 columnOptions: [
                     ['dvrpc_total', 'njco_total', 'pasub_total', 'bucks_total', 'burlington_total', 'camden_total', 'chester_total', 'delaware_total', 'gloucester_total', 'mercer_total', 'montgomery_total', 'philadelphia_total'],
-                    ['dvrpc_cumu_chng', 'njco_cumu_chng', 'pasub_cumu_chng', 'bucks_cumu_chng', 'burlington_cumu_chng', 'camden_cumu_chng', 'chester_cumu_chng', 'delaware_cumu_chng', 'gloucester_cumu_chng', 'mercer_cumu_chng', 'montgomery_cumu_chng', 'philadelphia_cumu_chng'],
                     ['dvrpc_cumu_perc_chng', 'njco_cumu_perc_chng', 'pasub_cumu_perc_chng', 'bucks_cumu_perc_chng', 'burlington_cumu_perc_chng', 'camden_cumu_perc_chng', 'chester_cumu_perc_chng', 'delaware_cumu_perc_chng', 'gloucester_cumu_perc_chng', 'mercer_cumu_perc_chng', 'montgomery_cumu_perc_chng', 'philadelphia_cumu_perc_chng']
                 ],
                 data: [
