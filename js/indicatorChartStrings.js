@@ -1116,7 +1116,7 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: U.S. Census Bureau’s Decennial Census & American Community Survey, DVRPC</em></small>`,
     'Business Formations':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Business Formations</h2>
+            <h2 class="indicator-subheader toggle-subheader">Annual Business Formations</h2>
             <form>
                 <fieldset>
                     <label>
