@@ -495,7 +495,7 @@ const chartStrings = {
             <fieldset>
                 <label>
                     Select Purpose
-                    <select id="viz-0b" class="toggle-data-selector">
+                    <select id="viz-0-b" class="toggle-data-selector">
                         <option value="0">All</option>
                         <option value="1">Home Purchase</option>
                         <option value="2">Home Improvement</option>
@@ -543,7 +543,7 @@ const chartStrings = {
             <fieldset>
                 <label>
                     Select Purpose
-                    <select id="viz-1b" class="toggle-data-selector">
+                    <select id="viz-1-b" class="toggle-data-selector">
                         <option value="0">All</option>
                         <option value="1">Home Purchase</option>
                         <option value="2">Home Improvement</option>
@@ -591,7 +591,7 @@ const chartStrings = {
             <fieldset>
                 <label>
                     Select Purpose
-                    <select id="viz-2b" class="toggle-data-selector">
+                    <select id="viz-2-b" class="toggle-data-selector">
                         <option value="0">All</option>
                         <option value="1">Home Purchase</option>
                         <option value="2">Home Improvement</option>
