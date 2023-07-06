@@ -189,10 +189,15 @@ const createLinePlusBarChart = (source, toggleContext) => {
                 .x(d => d[0])
                 .y((d, i) => d[1])
 
+            let barMax = 0, lineMax = 0
+            source.data[barIndex].values.forEach((val) => barMax = Math.max(barMax, val[1]))
+            source.data[lineIndex].values.forEach((val) => lineMax = Math.max(lineMax, val[1]))
+
             // set yMax
-            chart.lines.forceY(source.range || 0)
+            chart.lines.forceY(source.range || [0, Math.max(barMax, lineMax)])
+            chart.bars.forceY(source.range || [0, Math.max(barMax, lineMax)])
+            // set x Range
             if (source.xAxisRange) chart.lines.forceX(source.xAxisRange)
-            chart.bars.forceY(source.range || 0)
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)

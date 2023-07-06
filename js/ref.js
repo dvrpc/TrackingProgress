@@ -3573,7 +3573,7 @@ const snippetsRef = {
                 type: 'line and bar',
                 container: 'chart',
                 context: {
-                    labels: ['Annual Business Formations'],
+                    labels: ['Annual Business Formations', 'Percent Difference from Base Year'],
                     units: ['thousands', 'percentC'],
                 },
                 xAxisRange: [2005, 2021], 
