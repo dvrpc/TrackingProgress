@@ -469,7 +469,7 @@ const snippetsRef = {
         trend: {
             status: 'good',
             text: {
-                stat: '9-10% drop',
+                stat: '8-10% drop',
                 text: `in loan approval rate gaps from base year`
             }
         },
@@ -3563,7 +3563,7 @@ const snippetsRef = {
         trend: {
             status: 'awesome',
             text: {
-                stat: '143% growth',
+                stat: '80% growth',
                 text: `in business formations since 2005`
             }
         },
