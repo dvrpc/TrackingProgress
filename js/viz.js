@@ -61,10 +61,13 @@ const formatInpus = (source, toggleContext) => {
 
 // labelling helper function 
 const formatLabels = (y, x, context, y2) => {
-    context.units 
-        ? (y.tickFormat(d3.format(axisFormats[context.units])), y2.tickFormat(d3.format(axisFormats[context.units])))
-        : (y.tickFormat(d3.format('.3n')), y2.tickFormat(d3.format('.3n')))
-
+   
+    if (!y2) context.units ? y.tickFormat(d3.format(axisFormats[context.units])) : y.tickFormat(d3.format('.3n'))
+    else 
+        context.units 
+            ? (y.tickFormat(d3.format(axisFormats[context.units])), y2.tickFormat(d3.format(axisFormats[context.units])))
+            : (y.tickFormat(d3.format('.3n')), y2.tickFormat(d3.format('.3n')))
+ 
     // add axis label & update margin to compensate
     if(context.labels) {
         y.axisLabel(context.labels)
