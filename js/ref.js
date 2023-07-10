@@ -3570,81 +3570,43 @@ const snippetsRef = {
         dataUrl: 'https://catalog.dvrpc.org/dataset/business-formations',
         d3: [
             {
-                type: 'bar',
+                type: 'line and bar',
                 container: 'chart',
                 context: {
-                    labels: ['Total Business Formations', 'Percentage Difference from Base Year'],
-                    keepLabels: false,
+                    labels: ['Annual Business Formations', 'Percent Difference from Base Year'],
                     units: ['thousands', 'percentC'],
-                    keepUnits: false
                 },
-                range: false,
-                dataSource: ['business_formations'],
+                xAxisRange: [2005, 2021], 
+                dataSource: ['business_formations_1a', 'business_formations_1b'],
                 columnOptions: [
-                    ['dvrpc_total', 'njco_total', 'pasub_total', 'bucks_total', 'burlington_total', 'camden_total', 'chester_total', 'delaware_total', 'gloucester_total', 'mercer_total', 'montgomery_total', 'philadelphia_total'],
-                    ['dvrpc_cumu_perc_chng', 'njco_cumu_perc_chng', 'pasub_cumu_perc_chng', 'bucks_cumu_perc_chng', 'burlington_cumu_perc_chng', 'camden_cumu_perc_chng', 'chester_cumu_perc_chng', 'delaware_cumu_perc_chng', 'gloucester_cumu_perc_chng', 'mercer_cumu_perc_chng', 'montgomery_cumu_perc_chng', 'philadelphia_cumu_perc_chng']
-                ],
+                    ['dvrpc', 'dvrpc_5yr'], 
+                    ['njco', 'njco_5yr'],
+                    ['pasub', 'pasub_5yr'],
+                    ['bucks', 'bucks_5yr'],
+                    ['burlington', 'burlington_5yr'],
+                    ['camden', 'camden_5yr'],
+                    ['chester', 'chester_5yr'],
+                    ['delaware', 'delaware_5yr'],
+                    ['gloucester', 'gloucester_5yr'],
+                    ['mercer', 'mercer_5yr'],
+                    ['montgomery', 'montgomery_5yr'],
+                    ['philadelphia', 'philadelphia_5yr'],
+                ], 
                 data: [
                     {
-                        key: 'DVRPC Region*',
-                        columns: ['year', 'dvrpc_total'],
+                        'key': 'Annual Business Formations', 
+                        columns: ['year', 'dvrpc'], 
+                        type: 'bar', 
+                        yAxis: 1, 
+                        bar: true
                     },
                     {
-                      key: 'NJ Counties*',
-                      disabled: true, 
-                      columns: ['year', 'njco_total'],
-                    },
-                    {
-                      key: 'PA Suburban Counties*',
-                      disabled: true,
-                      columns: ['year', 'pasub_total'],
-                    },
-                    {
-                        key: 'Bucks**',
-                        disabled: true,
-                        columns: ['year', 'bucks_total'],
-                    },
-                    {
-                        key: 'Burlington**',
-                        disabled: true,
-                        columns: ['year', 'burlington_total'],
-                    },
-                    {
-                      key: 'Camden**',
-                      disabled: true,
-                      columns: ['year', 'camden_total'],
-                    },
-                    {
-                      key: 'Chester**',
-                      disabled: true,
-                      columns: ['year', 'chester_total'],
-                    },
-                    {
-                      key: 'Delaware**',
-                      disabled: true,
-                      columns: ['year', 'delaware_total'],
-                    },
-                    {
-                      key: 'Gloucester**',
-                      disabled: true,
-                      columns: ['year', 'gloucester_total'],
-                    },
-                    {
-                      key: 'Mercer**',
-                      disabled: true,
-                      columns: ['year', 'mercer_total'],
-                    },
-                    {
-                      key: 'Montgomery**',
-                      disabled: true,
-                      columns: ['year', 'montgomery_total'],
-                    },
-                    {
-                      key: 'Philadelphia**',
-                      disabled: true,
-                      columns: ['year', 'philadelphia_total'],
-                    },
-                  ],
+                        'key': '5-year average', 
+                        columns: ['year', 'dvrpc_5yr'],
+                        type: 'line',
+                        yAxis: 1
+                    }, 
+                ]
             }
         ]
     },

@@ -60,9 +60,11 @@ const formatInpus = (source, toggleContext) => {
 }
 
 // labelling helper function 
-const formatLabels = (y, x, context) => {
-    context.units ? y.tickFormat(d3.format(axisFormats[context.units])) : y.tickFormat(d3.format('.3n'))
-            
+const formatLabels = (y, x, context, y2) => {
+    context.units 
+        ? (y.tickFormat(d3.format(axisFormats[context.units])), y2.tickFormat(d3.format(axisFormats[context.units])))
+        : (y.tickFormat(d3.format('.3n')), y2.tickFormat(d3.format('.3n')))
+
     // add axis label & update margin to compensate
     if(context.labels) {
         y.axisLabel(context.labels)
@@ -165,7 +167,11 @@ const createStackedBarChart = (source, toggleContext) => {
 const createLinePlusBarChart = (source, toggleContext) => {
     let container, dataSource, context;
     [container, dataSource, source, context] = formatInpus(source, toggleContext)
-    
+
+    // remove historical bars when toggling line-bar chart
+    const chart = document.querySelector(container)    
+    Array.from(chart.getElementsByClassName('nv-barsWrap nvd3-svg')).map(elem => elem.firstChild.remove())
+
     let barIndex = source.data[0].type === 'bar' ? 0 : 1
     let lineIndex = barIndex === 0 ? 1 : 0
 
@@ -173,8 +179,8 @@ const createLinePlusBarChart = (source, toggleContext) => {
     let lineSource = lineIndex === 1 ? source.data[1].columns : source.data[0].columns
 
     d3.csv(dataSource, rows => {
-        source.data[barIndex].values.push([ +rows[barSource[0]], rows[barSource[1]] === 'NA' ? null : +rows[barSource[1]] ])
-        source.data[lineIndex].values.push([ +rows[lineSource[0]], rows[lineSource[1]] === 'NA' ? null : +rows[lineSource[1]] ])
+        source.data[barIndex].values.push([ +rows[barSource[0]], rows[barSource[1]] === 'NA' ? null : +rows[barSource[1]] ]) 
+        source.data[lineIndex].values.push([ rows[lineSource[1]] === '' ? null : +rows[lineSource[0]], rows[lineSource[1]] === '' ? null : +rows[lineSource[1]] ])
     }, csvObj => {        
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
@@ -183,15 +189,21 @@ const createLinePlusBarChart = (source, toggleContext) => {
                 .x(d => d[0])
                 .y((d, i) => d[1])
 
+            let barMax = 0, lineMax = 0
+            source.data[barIndex].values.forEach((val) => barMax = Math.max(barMax, val[1]))
+            source.data[lineIndex].values.forEach((val) => lineMax = Math.max(lineMax, val[1]))
+
             // set yMax
-            chart.lines.forceY(source.range || 0)
-            chart.bars.forceY(source.range || 0)
+            chart.lines.forceY(source.range || [0, Math.max(barMax, lineMax)])
+            chart.bars.forceY(source.range || [0, Math.max(barMax, lineMax)])
+            // set x Range
+            if (source.xAxisRange) chart.lines.forceX(source.xAxisRange)
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.y1Axis, chart.xAxis, context)
+            if(context) formatLabels(chart.y1Axis, chart.xAxis, context, chart.y2Axis)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
