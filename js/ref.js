@@ -4446,7 +4446,7 @@ const snippetsRef = {
         trend: {
             status: 'neutral',
             text: {
-                stat: '0.5% fewer',
+                stat: '0.7% fewer',
                 text: `road segment miles in poor condition since 2010`
             }
         },
