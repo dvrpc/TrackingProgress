@@ -1411,7 +1411,28 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
-        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's American Community Survey &amp; Population Estimates Program</em></small>`,
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's American Community Survey &amp; Population Estimates Program</em></small>
+        
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Personal Vehicles by Geography</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-1" class="toggle-data-selector">
+                            <option value="0">Per Capita</option>
+                            <option value="1">Total</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's American Community Survey &amp; Population Estimates Program</em></small>
+        `,
     'Pavement Conditions':`
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Percentage of Pavement in Deficient Condition by Geography</h2>
