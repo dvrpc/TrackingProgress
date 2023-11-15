@@ -82,7 +82,7 @@ const snippetsRef = {
         trend: {
             status: 'neutral',
             text: {
-                stat: '0.5% fewer',
+                stat: '6.5% fewer',
                 text: `daily miles driven annually per person since 2000`
             }
         },
@@ -167,6 +167,87 @@ const snippetsRef = {
                         'key' : 'Philadelphia**',
                         'disabled': true,
                         'columns': ['year', 'vmtPerCapPhillyCo']
+                    }
+                ]
+            }, 
+            {
+                type: 'line',
+                container: 'chart2',
+                dataSource: ['vehiclesWeb'],
+                context: {
+                    labels: ['Per Capita', 'Total (in thousands)'],
+                    keepLabels: false,
+                    units: ['millions'],
+                    keepUnits: true
+                },
+                columnOptions: [
+                    ['vehiclesPerCapDVRPC', 'vehiclesPerCapNJSuburbs', 'vehiclesPerCapAllPACounties', 'vehiclesPerCapPASuburbs', 'vehiclesPerCapBucksCo', 'vehiclesPerCapBurlingtonCo', 'vehiclesPerCapCamdenCo', 'vehiclesPerCapChesterCo', 'vehiclesPerCapDelawareCo', 'vehiclesPerCapGloucesterCo', 'vehiclesPerCapMercerCo', 'vehiclesPerCapMontgomeryCo', 'vehiclesPerCapPhillyCo'],
+                    ['vehiclesDVRPC', 'vehiclesNJSuburbs', 'vehiclesAllPACounties', 'vehiclesPASuburbs', 'vehiclesBucksCo', 'vehiclesBurlingtonCo', 'vehiclesCamdenCo', 'vehiclesChesterCo', 'vehiclesDelawareCo', 'vehiclesGloucesterCo', 'vehiclesMercerCo', 'vehiclesMontgomeryCo', 'vehiclesPhillyCo'],
+                ],
+                data: [
+                    {
+                        'key' : 'DVRPC Region*',
+                        'columns': ['year', 'vehiclesPerCapDVRPC']
+                    },
+                    {
+                        'key' : 'NJ Counties*',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapNJSuburbs']
+                    },
+                    {
+                        'key': 'All PA Counties*',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapAllPACounties']
+                    },
+                    {
+                        'key' : 'PA Suburban Counties*',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapPASuburbs']
+                    },
+                    {
+                        'key' : 'Bucks**',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapBucksCo']
+                    },
+                    {
+                        'key' : 'Burlington**',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapBurlingtonCo']
+                    },
+                    {
+                        'key' : 'Camden**',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapCamdenCo']
+                    },
+                    {
+                        'key' : 'Chester**',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapChesterCo']
+                    },
+                    {
+                        'key' : 'Gloucester**',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapGloucesterCo']
+                    },
+                    {
+                        'key' : 'Mercer**',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapMercerCo']
+                    },
+                    {
+                        'key' : 'Delaware**',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapDelawareCo']
+                    },
+                    {
+                        'key' : 'Montgomery**',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapMontgomeryCo']
+                    },
+                    {
+                        'key' : 'Philadelphia**',
+                        'disabled': true,
+                        'columns': ['year', 'vehiclesPerCapPhillyCo']
                     }
                 ]
             }
