@@ -3279,91 +3279,88 @@ const snippetsRef = {
         dataUrl: 'https://catalog.dvrpc.org/dataset/transit-ridership-ntd',
         d3: [
             {
+                keepLabels: true,
+                keepUnits: true, 
                 type: 'line',
                 container: 'chart',
-                dataSource: ['transit_ridership_graph_1'],
-                context: {
-                    labels: ['Trips (Millions)', 'Trips Per Capita'],
-                    units: ['millions', 'singles'],
-                },
-                columnOptions: [
-                    ['unlinkedTrips'],
-                    ['unlinkedTripsPerCap']
-                ],
-                data: [
-                    {
-                        'key': 'DVRPC Region',
-                        columns: ['year', 'unlinkedTrips']
-                    }
-                ]
-            },
-            {
-                type: 'line',
-                container: 'chart2',
                 dataSource: ['transit_ridership_graph_2'],
                 context: {
-                    labels: ['Trips (Millions)', 'Trips Per Capita'],
-                    units: ['millions', 'singles'],
+                    labels: ['Trips (Thousands)', 'Trips Per Capita', 'Trips Per Vehicle Revenue Hour', 'Trips Per Vehicle Revenue Mile'],
+                    units: ['thousands'],
                 },
                 columnOptions: [
-                    ['Bus', 'Commuter Rail', 'Light Rail', 'Non-Scheduled Services', 'Subway', 'Trolleybus'],
-                    ['Bus-per capita', 'Commuter Rail-per capita', 'Light Rail-per capita', 'Non-Scheduled Services-per capita', 'Subway-per capita', 'Trolleybus-per capita']
+                    ['bus', 'commuter_rail', 'light_rail', 'nonscheduled_services', 'subway', 'trolleybus', 'all'],
+                    ['busper_capita', 'commuter_railper_capita', 'light_railper_capita', 'nonscheduled_servicesper_capita', 'subwayper_capita', 'trolleybusper_capita', 'allper_capita'],
+                    ['busper_vrh', 'commuter_railper_vrh', 'light_railper_vrh', 'nonscheduled_servicesper_vrh', 'subwayper_vrh', 'trolleybusper_vrh', 'allper_vrh'],
+                    ['busper_vrm', 'commuter_railper_vrm', 'light_railper_vrm', 'nonscheduled_servicesper_vrm', 'subwayper_vrm', 'trolleybusper_vrm', 'allper_vrm']
                 ],
                 data: [
                     {
                         'key': 'Bus',
-                        columns: ['year', 'Bus'],
+                        columns: ['year', 'bus'],
                     },
                     {
                         'key': 'Commuter Rail',
-                        columns: ['year', 'Commuter Rail']
+                        columns: ['year', 'commuter_rail']
                     },
                     {
                         'key': 'Light Rail',
-                        columns: ['year', 'Light Rail']
+                        columns: ['year', 'light_rail']
                     },
                     {
                         'key': 'Non-Scheduled Services',
-                        columns: ['year', 'Non-Scheduled Services']
+                        columns: ['year', 'nonscheduled_services']
                     },
                     {
                         'key': 'Subway',
-                        columns: ['year', 'Subway']
+                        columns: ['year', 'subway']
                     },
                     {
                         'key': 'Trolleybus',
-                        columns: ['year', 'Trolleybus']
+                        columns: ['year', 'trolleybus']
+                    },
+                    {
+                        'key': 'All',
+                        columns: ['year', 'all']
                     }
                 ]
             },
             {
+                keepLabels: true,
+                keepUnits: true, 
                 type: 'line',
-                container: 'chart3',
+                container: 'chart2',
                 dataSource: ['transit_ridership_graph_3'],
                 context: {
-                    labels: ['Trips (Millions)', 'Trips Per Capita'],
-                    units: ['millions', 'singles'],
+                    labels: ['Trips (Thousands)', 'Trips Per Capita', 'Trips Per Vehicle Revenue Hour', 'Trips Per Vehicle Revenue Mile'],
+                    units: ['thousands'],
                 },
                 columnOptions: [
-                    ['New Jersey Transit', 'PATCO', 'Pottstown Area Rapid Transit', 'SEPTA'],
-                    ['New Jersey Transit-per capita', 'PATCO-per capita', 'Pottstown Area Rapid Transit-per capita', 'SEPTA-per capita',]
+                    ['new_jersey_transit', 'patco', 'pottstown_area_rapid_transit', 'septa', 'all'],
+                    ['new_jersey_transitper_capita', 'patcoper_capita', 'pottstown_area_rapid_transitper_capita', 'septaper_capita', 'allper_capita'],
+                    ['new_jersey_transitper_vrh', 'patcoper_vrh', 'pottstown_area_rapid_transitper_vrh', 'septaper_vrh', 'allper_vrh'],
+                    ['new_jersey_transitper_vrm', 'patcoper_vrm', 'pottstown_area_rapid_transitper_vrm', 'septaper_vrm', 'allper_vrm'],
                 ],
                 data: [
                     {
                         'key': 'New Jersey Transit',
-                        columns: ['year', 'New Jersey Transit']
+                        columns: ['year', 'new_jersey_transit']
                     },
                     {
                         'key': 'PATCO',
-                        columns: ['year', 'PATCO']
+                        columns: ['year', 'patco']
                     },
                     {
                         'key': 'Pottstown Area Rapid Transit',
-                        columns: ['year', 'Pottstown Area Rapid Transit']
+                        columns: ['year', 'pottstown_area_rapid_transit']
                     },
                     {
                         'key': 'SEPTA',
-                        columns: ['year', 'SEPTA']
+                        columns: ['year', 'septa']
+                    },
+                    {
+                        'key': 'All',
+                        columns: ['year', 'all']
                     }
                 ]
             }

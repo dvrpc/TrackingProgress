@@ -1984,8 +1984,8 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>`,
     'Transit Ridership':`
-        <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Transit Trips</h2>
+       <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Mode</h2>
             <form>
                 <fieldset>
                     <label>
@@ -1993,6 +1993,8 @@ const chartStrings = {
                         <select id="viz-0" class="toggle-data-selector">
                             <option value="0">Total</option>
                             <option value="1">Per Capita</option>
+                            <option value="2">Per VRH</option>
+                            <option value="3">Per VRM</option>
                         </select>
                     </label>
                 </fieldset>
@@ -2006,7 +2008,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Mode</h2>
+            <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Agency</h2>
             <form>
                 <fieldset>
                     <label>
@@ -2014,33 +2016,14 @@ const chartStrings = {
                         <select id="viz-1" class="toggle-data-selector">
                             <option value="0">Total</option>
                             <option value="1">Per Capita</option>
+                            <option value="2">Per VRH</option>
+                            <option value="3">Per VRM</option>                       
                         </select>
                     </label>
                 </fieldset>
             </form>
         </div>
         <div class="data-viz chart2">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Sources: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>
-
-        <hr class="indicator-content-hr" />
-
-        <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Agency</h2>
-            <form>
-                <fieldset>
-                    <label>
-                        Select Value Type
-                        <select id="viz-2" class="toggle-data-selector">
-                            <option value="0">Total</option>
-                            <option value="1">Per Capita</option>
-                        </select>
-                    </label>
-                </fieldset>
-            </form>
-        </div>
-        <div class="data-viz chart3">
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>`,
