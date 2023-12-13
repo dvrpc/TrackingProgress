@@ -1,4 +1,4 @@
-year,Bucks,Burlington,Camden,Chester,Delaware,Gloucester,Mercer,Montgomery,Philadelphia,NJ_Suburban_Counties,PA_Suburban_Counties,Region
+"year","Bucks","Burlington","Camden","Chester","Delaware","Gloucester","Mercer","Montgomery","Philadelphia","NJ_Suburban_Counties","PA_Suburban_Counties","Region"
 2005,0.135,0.128,0.13,0.154,0.101,0.108,0.132,0.12,0.088,0.126,0.127,0.118
 2006,0.129,0.0379999999999999,0.093,0.137,0.077,0.142,0.083,0.114,0.0569999999999999,0.084,0.114,0.093
 2007,0.12,0.089,0.127,0.147,0.103,0.087,0.112,0.08,0.08,0.106,0.109,0.103
@@ -15,3 +15,4 @@ year,Bucks,Burlington,Camden,Chester,Delaware,Gloucester,Mercer,Montgomery,Phila
 2018,0.083,0.048,0.076,0.131,0.075,0.051,0.085,0.068,0.027,0.066,0.086,0.065
 2019,0.099,0.047,0.052,0.137,0.067,0.065,0.073,0.071,0.035,0.057,0.091,0.066
 2021,0.095,0.056,0.073,0.112,0.069,0.11,0.08,0.057,0.026,0.077,0.081,0.065
+2022,0.09,0.063,0.08,0.104,0.067,0.105,0.051,0.076,0.022,0.073,0.084,0.065
