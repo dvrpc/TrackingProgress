@@ -1650,7 +1650,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['IncomeQuintilesMean', 'IncomeQuintilesAbs', 'IncomeQuintilesPct'],
                 context: {
-                    labels: ['Dollars (2021)', 'Change in Dollars (2021)', 'Percent Change in Dollars (2021)'],
+                    labels: ['Dollars (2022)', 'Change in Dollars (2022)', 'Percent Change in Dollars (2022)'],
                     keepLabels: false,
                     units: ['dollars', 'dollars', 'percentC'],
                     keepUnits: false
@@ -1701,7 +1701,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['medincGapRace', 'medincPercGapRace'],
                 context: {
-                  labels: ['Dollars (2021)', 'Percent'],
+                  labels: ['Dollars (2022)', 'Percent'],
                   keepLabels: false,
                   units: ['dollars', 'percent'],
                   keepUnits: false,
@@ -1787,7 +1787,7 @@ const snippetsRef = {
                 container: 'chart4',
                 dataSource: ['medincRace'],
                 context: {
-                  labels: ['Dollars (2021)'],
+                  labels: ['Dollars (2022)'],
                   keepLabels: true,
                   units: ['dollars'],
                   keepUnits: true,
@@ -1909,7 +1909,7 @@ const snippetsRef = {
                 container: 'chart5',
                 dataSource: ['sexInc_gap', 'sexInc_percofmale'],
                 context: {
-                    labels: ['Median Earnings Gap (2021 Dollars)', 'Median Earnings Gap Percentage'],
+                    labels: ['Median Earnings Gap (2022 Dollars)', 'Median Earnings Gap Percentage'],
                     keepLabels: false,
                     units: ['dollars', 'percentC'],
                     keepUnits: false
@@ -1940,7 +1940,7 @@ const snippetsRef = {
                 container: 'chart6',
                 dataSource: ['sexInc_median'],
                 context: {
-                    labels: ['Median Earnings Gap (2021 Dollars)'],
+                    labels: ['Median Earnings Gap (2022 Dollars)'],
                     keepLabels: true,
                     units: ['dollars'],
                     keepUnits: true
