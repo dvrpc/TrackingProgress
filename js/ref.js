@@ -3270,10 +3270,10 @@ const snippetsRef = {
     'Transit Ridership': {
         categories: ['transpo','comm','enviro','sustain'],
         trend: {
-            status: 'neutral',
+            status: 'bad',
             text: {
-                stat: '1.1% decrease',
-                text: `in transit trips per person since 2000`
+                stat: '44% decrease',
+                text: `in transit trips per person since 2019`
             }
         },
         dataUrl: 'https://catalog.dvrpc.org/dataset/transit-ridership-ntd',
