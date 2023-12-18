@@ -175,7 +175,7 @@ const snippetsRef = {
                 container: 'chart2',
                 dataSource: ['vehiclesWeb'],
                 context: {
-                    labels: ['Per Capita', 'Total (in thousands)'],
+                    labels: ['Per Capita', 'Total (in millions)'],
                     keepLabels: false,
                     units: ['millions'],
                     keepUnits: true
