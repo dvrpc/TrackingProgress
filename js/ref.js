@@ -259,7 +259,7 @@ const snippetsRef = {
             status: 'good',
             text: {
                 stat: '10% rise',
-                text: `in population over 24 with high school diploma since 2000`
+                text: `in population over 25 with high school diploma since 2000`
             }
         },
         dataUrl: 'https://catalog.dvrpc.org/dataset/educational-attainment',
