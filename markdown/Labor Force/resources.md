@@ -1,6 +1,6 @@
-DVRPC’s [Comprehensive Economic Development Strategy](https://www.dvrpc.org/economic/ceds/) is the region's framework to increase economic productivity, diversify local wealth, improve the culture for underrepresented businesses, and increase individual prosperity. 
+DVRPC’s [Comprehensive Economic Development Strategy](https://www.dvrpc.org/economic/ceds/) (CEDS) is the region's framework to increase economic productivity, diversify local wealth, improve the culture for underrepresented businesses, and increase individual prosperity. 
 
-DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ suggests the following tools for enhancing the region’s labor force by expanding individual skills and ensuring community affordability to a wide-range of incomes:
+DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ suggests the following tools for enhancing the region’s labor force by building individual skills and ensuring housing affordability:
 
 * [Broadband Universal Access](https://www.dvrpc.org/Plan/MIT/broadbanduniversalaccess)
 * [Development without Displacement](https://www.dvrpc.org/Plan/MIT/developmentwithoutdisplacement) 
@@ -10,4 +10,4 @@ DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ 
 * [Inclusionary Zoning](https://www.dvrpc.org/Plan/MIT/inclusionaryzoning) 
 * [Universal Pre-Kindergarten Programs](https://www.dvrpc.org/Plan/MIT/universalpre-kindergartenprograms) 
 
-For more on how DVRPC incorporates equity, environmental justice, and civil rights, see our [Title VI and Environmental Justice](http://staging.dvrpc.org/GetInvolved/TitleVI/) page, as well as our [Indicators of Potential Disadvantage](http://staging.dvrpc.org/webmaps/IPD/) tool and [Equity through Access](http://staging.dvrpc.org/ETA/) project and tool.
+For more on how DVRPC incorporates equity, environmental justice, and civil rights, see our [Title VI and Environmental Justice](https://www.dvrpc.org/getinvolved/titlevi/) page, as well as our [Indicators of Potential Disadvantage](https://www.dvrpc.org/webmaps/ipd/) tool and [Equity through Access](https://www.dvrpc.org/eta/) project and tool.
