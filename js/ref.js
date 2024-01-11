@@ -1656,18 +1656,18 @@ const snippetsRef = {
                     keepUnits: false
                 },
                 columnOptions: [
-                    ['Region_1st', 'Region_2nd', 'Region_3rd', 'Region_4th', 'Region_5th', 'Region_T5pct'],
-                    ['NJCos_1st', 'NJCos_2nd', 'NJCos_3rd', 'NJCos_4th', 'NJCos_5th', 'NJCos_T5pct'],
-                    ['PASubCos_1st', 'PASubCos_2nd', 'PASubCos_3rd', 'PASubCos_4th', 'PASubCos_5th', 'PASubCos_T5pct'],
-                    ['BuckCo_1st', 'BuckCo_2nd', 'BuckCo_3rd', 'BuckCo_4th', 'BuckCo_5th', 'BuckCo_T5pct'],
-                    ['BurlCo_1st', 'BurlCo_2nd', 'BurlCo_3rd', 'BurlCo_4th', 'BurlCo_5th', 'BurlCo_T5pct'],
-                    ['CamdCo_1st', 'CamdCo_2nd', 'CamdCo_3rd', 'CamdCo_4th', 'CamdCo_5th', 'CamdCo_T5pct'],
-                    ['ChesCo_1st', 'ChesCo_2nd', 'ChesCo_3rd', 'ChesCo_4th', 'ChesCo_5th', 'ChesCo_T5pct'],
-                    ['DelCo_1st', 'DelCo_2nd', 'DelCo_3rd', 'DelCo_4th', 'DelCo_5th', 'DelCo_T5pct'],
-                    ['GloCo_1st', 'GloCo_2nd', 'GloCo_3rd', 'GloCo_4th', 'GloCo_5th', 'GloCo_T5pct'],
-                    ['MerCo_1st', 'MerCo_2nd', 'MerCo_3rd', 'MerCo_4th', 'MerCo_5th', 'MerCo_T5pct'],
-                    ['MontCo_1st', 'MontCo_2nd', 'MontCo_3rd', 'MontCo_4th', 'MontCo_5th', 'MontCo_T5pct'],
-                    ['PhilCo_1st', 'PhilCo_2nd', 'PhilCo_3rd', 'PhilCo_4th', 'PhilCo_5th', 'PhilCo_T5pct']
+                    ['Region_1st', 'Region_2nd', 'Region_3rd', 'Region_4th', 'Region_5th', 'Region_T5pct', 'Region_All'],
+                    ['NJCos_1st', 'NJCos_2nd', 'NJCos_3rd', 'NJCos_4th', 'NJCos_5th', 'NJCos_T5pct', 'NJCos_All'],
+                    ['PASubCos_1st', 'PASubCos_2nd', 'PASubCos_3rd', 'PASubCos_4th', 'PASubCos_5th', 'PASubCos_T5pct', 'PASubCos_All'],
+                    ['BuckCo_1st', 'BuckCo_2nd', 'BuckCo_3rd', 'BuckCo_4th', 'BuckCo_5th', 'BuckCo_T5pct', 'BuckCo_All'],
+                    ['BurlCo_1st', 'BurlCo_2nd', 'BurlCo_3rd', 'BurlCo_4th', 'BurlCo_5th', 'BurlCo_T5pct', 'BurlCo_All'],
+                    ['CamdCo_1st', 'CamdCo_2nd', 'CamdCo_3rd', 'CamdCo_4th', 'CamdCo_5th', 'CamdCo_T5pct', 'CamdCo_All'],
+                    ['ChesCo_1st', 'ChesCo_2nd', 'ChesCo_3rd', 'ChesCo_4th', 'ChesCo_5th', 'ChesCo_T5pct', 'ChesCo_All'],
+                    ['DelCo_1st', 'DelCo_2nd', 'DelCo_3rd', 'DelCo_4th', 'DelCo_5th', 'DelCo_T5pct', 'DelCo_All'],
+                    ['GloCo_1st', 'GloCo_2nd', 'GloCo_3rd', 'GloCo_4th', 'GloCo_5th', 'GloCo_T5pct', 'GloCo_All'],
+                    ['MerCo_1st', 'MerCo_2nd', 'MerCo_3rd', 'MerCo_4th', 'MerCo_5th', 'MerCo_T5pct', 'MerCo_All'],
+                    ['MontCo_1st', 'MontCo_2nd', 'MontCo_3rd', 'MontCo_4th', 'MontCo_5th', 'MontCo_T5pct', 'MontCo_All'],
+                    ['PhilCo_1st', 'PhilCo_2nd', 'PhilCo_3rd', 'PhilCo_4th', 'PhilCo_5th', 'PhilCo_T5pct', 'PhilCo_All']
                 ],
                 data: [
                     {
@@ -1693,6 +1693,10 @@ const snippetsRef = {
                     {
                         'key': 'Top 5 Percent',
                         columns: ['Year', 'Region_T5pct']
+                    },
+                    {
+                        'key': 'All',
+                        columns: ['Year', 'Region_All']
                     }
                 ]
             },
@@ -1707,57 +1711,65 @@ const snippetsRef = {
                   keepUnits: false,
                 },
                 columnOptions: [
-                  ['region_nonwht', 'region_black', 'region_asian', 'region_latinx'],
+                  ['region_nonwht', 'region_black', 'region_asian', 'region_latinx', 'region_all'],
                   [
                     'nj_suburban_counties_nonwht',
                     'nj_suburban_counties_black',
                     'nj_suburban_counties_asian',
                     'nj_suburban_counties_latinx',
+                    'nj_suburban_counties_all',
                   ],
                   [
                     'pa_suburban_counties_nonwht',
                     'pa_suburban_counties_black',
                     'pa_suburban_counties_asian',
                     'pa_suburban_counties_latinx',
+                    'pa_suburban_counties_all',
                   ],
-                  ['bucks_nonwht', 'bucks_black', 'bucks_asian', 'bucks_latinx'],
+                  ['bucks_nonwht', 'bucks_black', 'bucks_asian', 'bucks_latinx', 'bucks_all'],
                   [
                     'burlington_nonwht',
                     'burlington_black',
                     'burlington_asian',
                     'burlington_latinx',
+                    'burlington_all',
                   ],
-                  ['camden_nonwht', 'camden_black', 'camden_asian', 'camden_latinx'],
+                  ['camden_nonwht', 'camden_black', 'camden_asian', 'camden_latinx', 'camden_all'],
                   [
                     'chester_nonwht',
                     'chester_black',
                     'chester_asian',
                     'chester_latinx',
+                    'chester_all',
                   ],
                   [
                     'delaware_nonwht',
                     'delaware_black',
                     'delaware_asian',
                     'delaware_latinx',
+                    'delaware_all',
                   ],
                   [
                     'gloucester_nonwht',
                     'gloucester_black',
                     'gloucester_asian',
                     'gloucester_latinx',
+                    'gloucester_all',
                   ],
-                  ['mercer_nonwht', 'mercer_black', 'mercer_asian', 'mercer_latinx'],
+                  ['mercer_nonwht', 'mercer_black', 'mercer_asian', 'mercer_latinx', 'mercer_all'],
                   [
                     'montgomery_nonwht',
                     'montgomery_black',
                     'montgomery_asian',
                     'montgomery_latinx',
+                    'montgomery_all',
                   ],
                   [
                     'philadelphia_nonwht',
                     'philadelphia_black',
                     'philadelphia_asian',
                     'philadelphia_latinx',
+                    'philadelphia_all',
                   ],
                 ],
                 data: [
@@ -1780,6 +1792,11 @@ const snippetsRef = {
                     columns: ['year', 'region_latinx'],
                     disabled: true,
                   },
+                  {
+                    key: 'All',
+                    columns: ['year', 'region_all'],
+                    disabled: true,
+                  },
                 ],
               },
               {
@@ -1799,6 +1816,7 @@ const snippetsRef = {
                     'region_black',
                     'region_asian',
                     'region_latinx',
+                    'region_all'
                   ],
                   [
                     'nj_suburban_counties_nonwht',
@@ -1806,6 +1824,7 @@ const snippetsRef = {
                     'nj_suburban_counties_black',
                     'nj_suburban_counties_asian',
                     'nj_suburban_counties_latinx',
+                    'nj_suburban_counties_all',
                   ],
                   [
                     'pa_suburban_counties_nonwht',
@@ -1813,6 +1832,7 @@ const snippetsRef = {
                     'pa_suburban_counties_black',
                     'pa_suburban_counties_asian',
                     'pa_suburban_counties_latinx',
+                    'pa_suburban_counties_all',
                   ],
                   [
                     'bucks_nonwht',
@@ -1820,6 +1840,7 @@ const snippetsRef = {
                     'bucks_black',
                     'bucks_asian',
                     'bucks_latinx',
+                    'bucks_all',
                   ],
                   [
                     'burlington_nonwht',
@@ -1827,6 +1848,7 @@ const snippetsRef = {
                     'burlington_black',
                     'burlington_asian',
                     'burlington_latinx',
+                    'burlington_all',
                   ],
                   [
                     'camden_nonwht',
@@ -1834,6 +1856,7 @@ const snippetsRef = {
                     'camden_black',
                     'camden_asian',
                     'camden_latinx',
+                    'camden_all',
                   ],
                   [
                     'chester_nonwht',
@@ -1841,6 +1864,7 @@ const snippetsRef = {
                     'chester_black',
                     'chester_asian',
                     'chester_latinx',
+                    'chester_all',
                   ],
                   [
                     'delaware_nonwht',
@@ -1848,6 +1872,7 @@ const snippetsRef = {
                     'delaware_black',
                     'delaware_asian',
                     'delaware_latinx',
+                    'delaware_all',
                   ],
                   [
                     'gloucester_nonwht',
@@ -1855,6 +1880,7 @@ const snippetsRef = {
                     'gloucester_black',
                     'gloucester_asian',
                     'gloucester_latinx',
+                    'gloucester_all',
                   ],
                   [
                     'mercer_nonwht',
@@ -1862,6 +1888,7 @@ const snippetsRef = {
                     'mercer_black',
                     'mercer_asian',
                     'mercer_latinx',
+                    'mercer_all',
                   ],
                   [
                     'montgomery_nonwht',
@@ -1869,6 +1896,7 @@ const snippetsRef = {
                     'montgomery_black',
                     'montgomery_asian',
                     'montgomery_latinx',
+                    'montgomery_all',
                   ],
                   [
                     'philadelphia_nonwht',
@@ -1876,6 +1904,7 @@ const snippetsRef = {
                     'philadelphia_black',
                     'philadelphia_asian',
                     'philadelphia_latinx',
+                    'philadelphia_all',
                   ],
                 ],
                 data: [
@@ -1901,6 +1930,11 @@ const snippetsRef = {
                     key: 'Latinx',
                     columns: ['year', 'region_latinx'],
                     disabled: true,
+                  },
+                  {
+                    key: 'All',
+                    columns: ['year', 'region_all'],
+                    disabled: false,
                   },
                 ],
               },
@@ -1946,18 +1980,18 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['Region_Female', 'Region_Male'],
-                    ['NJ_Suburban_Counties_Female', 'NJ_Suburban_Counties_Male'],
-                    ['PA_Suburban_Counties_Female', 'PA_Suburban_Counties_Male'],
-                    ['Bucks_Female', 'Bucks_Male'],
-                    ['Burlington_Female', 'Burlington_Male'],
-                    ['Camden_Female', 'Camden_Male'],
-                    ['Chester_Female', 'Chester_Male'],
-                    ['Delaware_Female', 'Delaware_Male'],
-                    ['Gloucester_Female', 'Gloucester_Male'],
-                    ['Mercer_Female', 'Mercer_Male'],
-                    ['Montgomery_Female', 'Montgomery_Male'],
-                    ['Philadelphia_Female', 'Philadelphia_Male']
+                    ['Region_Female', 'Region_Male', 'Region_All'],
+                    ['NJ_Suburban_Counties_Female', 'NJ_Suburban_Counties_Male', 'NJ_Suburban_Counties_All'],
+                    ['PA_Suburban_Counties_Female', 'PA_Suburban_Counties_Male', 'PA_Suburban_Counties_All'],
+                    ['Bucks_Female', 'Bucks_Male', 'Bucks_All'],
+                    ['Burlington_Female', 'Burlington_Male', 'Burlington_All'],
+                    ['Camden_Female', 'Camden_Male', 'Camden_All'],
+                    ['Chester_Female', 'Chester_Male', 'Chester_All'],
+                    ['Delaware_Female', 'Delaware_Male', 'Delaware_All'],
+                    ['Gloucester_Female', 'Gloucester_Male', 'Gloucester_All'],
+                    ['Mercer_Female', 'Mercer_Male', 'Mercer_All'],
+                    ['Montgomery_Female', 'Montgomery_Male', 'Montgomery_All'],
+                    ['Philadelphia_Female', 'Philadelphia_Male', 'Philadelphia_All']
                 ],
                 data: [
                     {
@@ -1967,6 +2001,10 @@ const snippetsRef = {
                     {
                         'key': 'Male',
                         columns: ['year', 'Region_Male']
+                    },
+                    {
+                        'key': 'All',
+                        columns: ['year', 'Region_All']
                     }
                 ]
             },
