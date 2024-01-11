@@ -1977,7 +1977,7 @@ const snippetsRef = {
         trend: {
             status: 'good',
             text: {
-                stat: '3-5% drop',
+                stat: '0-5% drop',
                 text: `in participation rate gaps from base year`
             }
         },
