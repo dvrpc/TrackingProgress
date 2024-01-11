@@ -12,4 +12,4 @@ DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ 
 * [Transit Revitalization Investment District (TRID)](https://www.dvrpc.org/Plan/MIT/transitrevitalizationinvestmentdistricttrid)
 * [Transit-Oriented Development Zoning](https://www.dvrpc.org/Plan/MIT/transit-orienteddevelopmenttodzoning)
 
-For more on how DVRPC incorporates equity and environmental justice, and complies with federal Title VI and other important statutes protecting communities of concern, see our [Title VI and Environmental Justice](http://staging.dvrpc.org/GetInvolved/TitleVI/) page, as well as our [Indicators of Potential Disadvantage](http://staging.dvrpc.org/webmaps/IPD/) tool and [Equity through Access](http://staging.dvrpc.org/ETA/) project and tool.
+For more on how DVRPC incorporates equity, environmental justice, and civil rights, see our [Title VI and Environmental Justice](https://www.dvrpc.org/getinvolved/titlevi/) page, as well as our [Indicators of Potential Disadvantage](https://www.dvrpc.org/webmaps/ipd/) tool and [Equity through Access](https://www.dvrpc.org/eta/) project and tool.
