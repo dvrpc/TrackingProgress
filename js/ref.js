@@ -1608,7 +1608,7 @@ const snippetsRef = {
         trend: {
             status: 'bad',
             text: {
-                stat: '20-50% remaining',
+                stat: '20-36% remaining',
                 text: `income gaps between groups`
             }
         },
@@ -1711,65 +1711,57 @@ const snippetsRef = {
                   keepUnits: false,
                 },
                 columnOptions: [
-                  ['region_nonwht', 'region_black', 'region_asian', 'region_latinx', 'region_all'],
+                  ['region_nonwht', 'region_black', 'region_asian', 'region_latinx'],
                   [
                     'nj_suburban_counties_nonwht',
                     'nj_suburban_counties_black',
                     'nj_suburban_counties_asian',
                     'nj_suburban_counties_latinx',
-                    'nj_suburban_counties_all',
                   ],
                   [
                     'pa_suburban_counties_nonwht',
                     'pa_suburban_counties_black',
                     'pa_suburban_counties_asian',
                     'pa_suburban_counties_latinx',
-                    'pa_suburban_counties_all',
                   ],
-                  ['bucks_nonwht', 'bucks_black', 'bucks_asian', 'bucks_latinx', 'bucks_all'],
+                  ['bucks_nonwht', 'bucks_black', 'bucks_asian', 'bucks_latinx'],
                   [
                     'burlington_nonwht',
                     'burlington_black',
                     'burlington_asian',
                     'burlington_latinx',
-                    'burlington_all',
                   ],
-                  ['camden_nonwht', 'camden_black', 'camden_asian', 'camden_latinx', 'camden_all'],
+                  ['camden_nonwht', 'camden_black', 'camden_asian', 'camden_latinx'],
                   [
                     'chester_nonwht',
                     'chester_black',
                     'chester_asian',
                     'chester_latinx',
-                    'chester_all',
                   ],
                   [
                     'delaware_nonwht',
                     'delaware_black',
                     'delaware_asian',
                     'delaware_latinx',
-                    'delaware_all',
                   ],
                   [
                     'gloucester_nonwht',
                     'gloucester_black',
                     'gloucester_asian',
                     'gloucester_latinx',
-                    'gloucester_all',
                   ],
-                  ['mercer_nonwht', 'mercer_black', 'mercer_asian', 'mercer_latinx', 'mercer_all'],
+                  ['mercer_nonwht', 'mercer_black', 'mercer_asian', 'mercer_latinx'],
                   [
                     'montgomery_nonwht',
                     'montgomery_black',
                     'montgomery_asian',
                     'montgomery_latinx',
-                    'montgomery_all',
                   ],
                   [
                     'philadelphia_nonwht',
                     'philadelphia_black',
                     'philadelphia_asian',
                     'philadelphia_latinx',
-                    'philadelphia_all',
                   ],
                 ],
                 data: [
@@ -1790,11 +1782,6 @@ const snippetsRef = {
                   {
                     key: 'Latinx',
                     columns: ['year', 'region_latinx'],
-                    disabled: true,
-                  },
-                  {
-                    key: 'All',
-                    columns: ['year', 'region_all'],
                     disabled: true,
                   },
                 ],
