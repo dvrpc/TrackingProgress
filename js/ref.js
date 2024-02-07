@@ -933,66 +933,33 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
+                columnOptions: [
+                    ['DVRPC Region- Own', 'DVRPC Region- Rent', 'DVRPC Region- Total'],
+                    ['NJ Counties- Own', 'NJ Counties- Rent', 'NJ Counties- Total'],
+                    ['PA Suburban Counties- Own', 'PA Suburban Counties- Rent', 'PA Suburban Counties- Total'],
+                    ['Bucks County- Own', 'Bucks County- Rent', 'Bucks County- Total'],
+                    ['Burlington County- Own', 'Burlington County- Rent', 'Burlington County- Total'],
+                    ['Camden County- Own', 'Camden County- Rent', 'Camden County- Total'],
+                    ['Chester County- Own', 'Chester County- Rent', 'Chester County- Total'],
+                    ['Delaware County- Own', 'Delaware County- Rent', 'Delaware County- Total'],
+                    ['Gloucester County- Own', 'Gloucester County- Rent', 'Gloucester County- Total'],
+                    ['Mercer County- Own', 'Mercer County- Rent', 'Mercer County- Total'],
+                    ['Montgomery County- Own', 'Montgomery County- Rent', 'Montgomery County- Total'],
+                    ['Philadelphia County- Own', 'Philadelphia County- Rent', 'Philadelphia County- Total'],
+                ],
                 dataSource: ['housing_afford_graph_1'],
                 data: [
                     {
-                        'key': 'DVRPC Region*',
-                        columns: ['year', 'DVRPC']
+                        'key': 'Own',
+                        columns: ['year', 'DVRPC Region- Own']
                     },
                     {
-                        'key': 'NJ Counties*',
-                        columns: ['year', 'New Jersey Suburbs'],
-                        disabled: true
+                        'key': 'Rent',
+                        columns: ['year', 'DVRPC Region- Rent']
                     },
                     {
-                        'key': 'PA Suburban Counties*',
-                        columns: ['year', 'Pennsylvania Suburbs'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Bucks**',
-                        columns: ['year', 'Bucks County'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Burlington**',
-                        columns: ['year', 'Burlington County'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Camden**',
-                        columns: ['year', 'Camden County'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Chester**',
-                        columns: ['year', 'Chester County'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Delaware**',
-                        columns: ['year', 'Delaware County'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Gloucester**',
-                        columns: ['year', 'Gloucester County'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Mercer**',
-                        columns: ['year', 'Mercer County'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Montgomery**',
-                        columns: ['year', 'Montgomery County'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Philadelphia**',
-                        columns: ['year', 'Philadelphia County'],
-                        disabled: true
+                        'key': 'Total',
+                        columns: ['year', 'DVRPC Region- Total']
                     }
                 ],
                 context: {
@@ -1013,19 +980,19 @@ const snippetsRef = {
                 data: [
                     {
                         'key': 'Core Cities',
-                        columns: ['year', 'Core City'],
+                        columns: ['year', 'Core Cities- Total'],
                     },
                     {
                         'key': 'Developed Communities',
-                        columns: ['year', 'Developed Community'],
+                        columns: ['year', 'Developed Communities- Total'],
                     },
                     {
                         'key': 'Growing Suburbs',
-                        columns: ['year', 'Growing Suburb'],
+                        columns: ['year', 'Growing Suburbs- Total'],
                     },
                     {
                         'key': 'Rural Areas',
-                        columns: ['year', 'Rural Area'],
+                        columns: ['year', 'Rural Areas- Total'],
                     }
                 ]
             },
@@ -1154,6 +1121,35 @@ const snippetsRef = {
                     }
                 ]
             },
+            {
+                type: 'line',
+                container: 'chart5',
+                dataSource: ['housing_afford_graph_4'],
+                context: {
+                    labels: ['Ratio'],
+                    units: ['singles'],
+                },
+                columnOptions: [
+                    ['Region'],
+                    ['NJ_Suburban_Counties'],
+                    ['PA_Suburban_Counties'],
+                    ['Bucks'],
+                    ['Burlington'],
+                    ['Camden'],
+                    ['Chester'],
+                    ['Delaware'],
+                    ['Gloucester'],
+                    ['Mercer'],
+                    ['Montgomery'],
+                    ['Philadelphia']
+                ],
+                data: [
+                    {
+                        'key': 'Ratio',
+                        columns: ['year', 'DVRPC Region']
+                    }
+                ]
+            }
         ]
     },
     'Job Growth': {

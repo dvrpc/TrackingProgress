@@ -779,6 +779,34 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: U.S. Census Bureau, Residential Construction Statistics Division, DVRPC</em></small>`,
     'Housing Affordability':`
         <h2 class="indicator-subheader">Cost-Burdened Households by Geography</h2>
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes (Ages 20 to 64)</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-0" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
         <div class="data-viz chart">
             <svg></svg>
         </div>
@@ -874,7 +902,45 @@ const chartStrings = {
         <div class="data-viz chart4">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Sources: U.S. Census Bureau's American Community Survey, DVRPC</em></small>`,
+        <small class="chart-src"><em>Sources: U.S. Census Bureau's American Community Survey, DVRPC</em></small>
+        
+        <hr class="indicator-content-hr" />
+
+        <h2 class="indicator-subheader">Home Price to Median Household Income Ratio</h2>
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader"></h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-5" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
+        `,
     'Income':`
             <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Income Change Gap between Highest Quintile &amp; Lowest Quintile Households</h2>
