@@ -1127,21 +1127,22 @@ const snippetsRef = {
                 dataSource: ['housing_afford_graph_4'],
                 context: {
                     labels: ['Ratio'],
+                    keepLabels: true,
                     units: ['singles'],
                 },
                 columnOptions: [
-                    ['Region'],
-                    ['NJ_Suburban_Counties'],
-                    ['PA_Suburban_Counties'],
-                    ['Bucks'],
-                    ['Burlington'],
-                    ['Camden'],
-                    ['Chester'],
-                    ['Delaware'],
-                    ['Gloucester'],
-                    ['Mercer'],
-                    ['Montgomery'],
-                    ['Philadelphia']
+                    ['DVRPC Region'],
+                    ['NJ Counties'],
+                    ['PA Suburban Counties'],
+                    ['Bucks County'],
+                    ['Burlington County'],
+                    ['Camden County'],
+                    ['Chester County'],
+                    ['Delaware County'],
+                    ['Gloucester County'],
+                    ['Mercer County'],
+                    ['Montgomery County'],
+                    ['Philadelphia County']
                 ],
                 data: [
                     {
