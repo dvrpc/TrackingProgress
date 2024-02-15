@@ -1490,6 +1490,10 @@ const snippetsRef = {
           ],
           data: [
             {
+              key: 'Admin and support and waste management and remediation services',
+              columns: ['year', 'region_admin_supp_wm_rem'],
+            },
+            {
               key: 'Agriculture, forestry, fishing, mining',
               columns: ['year', 'region_ag_for_fish_min'],
             },
@@ -1516,6 +1520,10 @@ const snippetsRef = {
             {
               key: 'Information',
               columns: ['year', 'region_information'],
+            },
+            {
+              key: 'Management of companies and enterprises',
+              columns: ['year', 'region_management'],
             },
             {
               key: 'Manufacturing',
