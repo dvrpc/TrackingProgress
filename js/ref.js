@@ -947,8 +947,9 @@ const snippetsRef = {
                     ['Montgomery County- Own', 'Montgomery County- Rent', 'Montgomery County- Total'],
                     ['Philadelphia County- Own', 'Philadelphia County- Rent', 'Philadelphia County- Total'],
                 ],
-                dataSource: ['housing_afford_graph_1'],
+                dataSource: ['housing_afford_graph_1a', 'housing_afford_graph_1b'],
                 data: [
+
                     {
                         'key': 'Own',
                         columns: ['year', 'DVRPC Region- Own']
@@ -963,10 +964,8 @@ const snippetsRef = {
                     }
                 ],
                 context: {
-                    labels: ['Percentage of Households'],
-                    keepLabels: true,
-                    units: ['percentC'],
-                    keepUnits: true
+                    labels: ['Thousands of Households', 'Percentage of Households'],
+                    units: ['thousands', 'percentC'],
                 },
             },
             {

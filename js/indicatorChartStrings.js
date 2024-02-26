@@ -780,8 +780,7 @@ const chartStrings = {
     'Housing Affordability':`
         <h2 class="indicator-subheader">Cost-Burdened Households by Geography</h2>
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes (Ages 20 to 64)</h2>
-            <form>
+            <form class="double-toggle-form">
                 <fieldset>
                     <label>
                         Select Geography
@@ -802,6 +801,16 @@ const chartStrings = {
                                 <option value="10">Montgomery</option>
                                 <option value="11">Philadelphia</option>
                             </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-0-b" class="toggle-data-selector">
+                            <option value="0">Amount</option>
+                            <option value="1">Percent</option>
                         </select>
                     </label>
                 </fieldset>
