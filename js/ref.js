@@ -922,10 +922,10 @@ const snippetsRef = {
     'Housing Affordability': {
         categories: ['comm', 'econo', 'resil', 'equity'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '9% fewer',
-                text: `cost-burdened households since 2005`
+                stat: '752,000 cost-burdened households',
+                text: `down 10% since 2011 peak`
             }
         },
         dataUrl: 'https://catalog.dvrpc.org/dataset/housing-affordability',
