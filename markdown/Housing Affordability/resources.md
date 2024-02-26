@@ -1,6 +1,10 @@
-DVRPC’s [_Municipal Implementation Toolbox_](https://www.dvrpc.org/Plan/MIT/) lists several strategies that local governments can use to enhance the supply and variety of housing types in their communities:
- - [Build Missing Middle Housing](https://www.dvrpc.org/Plan/MIT/buildmissingmiddlehousing)
+DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ lists several strategies that local governments can use to enhance the supply and variety of housing types in their communities:
+ - [Build Missing Middle Housing](https://www.dvrpc.org/Plan/MIT/buildmissingmiddlehousing) 
  - [Development without Displacement](https://www.dvrpc.org/Plan/MIT/developmentwithoutdisplacement) 
- - [Housing Maintenance and Rehabilitation Programs](https://www.dvrpc.org/Plan/MIT/housingmaintenanceandrehabilitationprograms)
- - [Inclusionary Zoning](https://www.dvrpc.org/Plan/MIT/inclusionaryzoning)
+ - [Housing Maintenance and Rehabilitation Programs](https://www.dvrpc.org/Plan/MIT/housingmaintenanceandrehabilitationprograms) 
+ - [Inclusionary Zoning](https://www.dvrpc.org/Plan/MIT/inclusionaryzoning) 
+ - [Infill Ordinances](https://www.dvrpc.org/Plan/MIT/infillordinances)
  - [Live/Work Zoning](https://www.dvrpc.org/Plan/MIT/liveworkzoning)
+ - [Suburban Retrofits](https://www.dvrpc.org/Plan/MIT/suburbanretrofits)
+ - [Transit-Oriented Development (TOD) Zoning](https://www.dvrpc.org/Plan/MIT/transit-orienteddevelopmenttodzoning)
+ - [Regional Housing Initiative](https://www.dvrpc.org/housing/regionalhousinginitiative/)
