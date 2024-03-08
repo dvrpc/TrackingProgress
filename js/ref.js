@@ -1155,10 +1155,10 @@ const snippetsRef = {
     'Job Growth': {
       categories: ['econo', 'comm', 'resil'],
       trend: {
-        status: 'good',
+        status: 'awesome',
         text: {
-          stat: '18% increase',
-          text: `in jobs since 2001`,
+          stat: '25% increase',
+          text: `in jobs between 2001-2022`,
         },
       },
       dataUrl: 'https://catalog.dvrpc.org/dataset/job-growth',
