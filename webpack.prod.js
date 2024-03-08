@@ -16,6 +16,9 @@ const prodConfig = {
       ]
     }),
   ],
+  output: {
+    clean: true
+  }
 };
 
 module.exports = merge(config, prodConfig);
