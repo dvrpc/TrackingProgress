@@ -1481,7 +1481,7 @@ const snippetsRef = {
               columns: ['year', 'region_ag_for_fish_min'],
             },
             {
-              key: 'Arts, entertain., food, accomodations',
+              key: 'Arts, entertain., food, accommodations',
               columns: ['year', 'region_art_ent_rec_acc_food'],
             },
             {
@@ -2901,7 +2901,7 @@ const snippetsRef = {
               columns: ['year', 'dvrpc_ag_for_fish_min'],
             },
             {
-              key: 'Arts, entertain., rec., food, accomodations',
+              key: 'Arts, entertain., rec., food, accommodations',
               columns: ['year', 'dvrpc_art_ent_rec_acc_food'],
             },
             {
