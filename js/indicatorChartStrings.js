@@ -382,25 +382,21 @@ const chartStrings = {
                     <label>
                         Select Industry
                         <select id="viz-0" class="toggle-data-selector">
-                            <option class="optionGroup" value="0">All Industries</option>
-                            <option class="optionGroup" value="1">Goods</option>
-                            <option class="optionChild" value="2">Agriculture, Forestry, Fishing, and Mining</option>
-                            <option class="optionChild" value="3">Construction</option>
-                            <option class="optionChild" value="4">Manufacturing</option>
-                            <option class="optionChild" value="5">&nbsp;&nbsp;Durable Goods</option>   
-                            <option class="optionChild" value="6">&nbsp;&nbsp;Nondurable Goods</option>    
-                            <option class="optionGroup" value="7">Services</option> 
-                            <option class="optionChild" value="8">Arts, Entertainment, Recreation, Accommodation, and Food Services</option>
-                            <option class="optionChild" value="9">Educational Services</option>
-                            <option class="optionChild" value="10">Finance, Insurance, Real Estate</option>
-                            <option class="optionChild" value="11">Health Care and Social Assistance</option>
-                            <option class="optionChild" value="12">Information</option>
-                            <option class="optionChild" value="13">Other Services (except Government)</option>
-                            <option class="optionChild" value="14">Professional Services</option>
-                            <option class="optionChild" value="15">Retail Trade</option>
-                            <option class="optionChild" value="16">Transportation, Warehousing, and Utilities</option>
-                            <option class="optionChild" value="17">Wholesale Trade</option>
-                            <option class="optionGroup" value="18">Government and government enterprises</option>
+                            <option class="optionChild" value="0">All Industries</option>
+                            <option class="optionChild" value="1">Agriculture, Forestry, Fishing, and Mining</option>
+                            <option class="optionChild" value="2">Construction</option>
+                            <option class="optionChild" value="3">Manufacturing</option>
+                            <option class="optionChild" value="4">Arts, Entertainment, Recreation, Accommodation, and Food Services</option>
+                            <option class="optionChild" value="5">Educational Services</option>
+                            <option class="optionChild" value="6">Finance, Insurance, Real Estate</option> 
+                            <option class="optionChild" value="7">Health Care and Social Assistance</option>
+                            <option class="optionChild" value="8">Information</option>
+                            <option class="optionChild" value="9">Other Services (except Government)</option>
+                            <option class="optionChild" value="10">Professional Services</option>
+                            <option class="optionChild" value="11">Retail Trade</option>
+                            <option class="optionChild" value="12">Transportation, Warehousing, and Utilities</option>
+                            <option class="optionChild" value="13">Wholesale Trade</option>
+                            <option class="optionChild" value="14">Public administration</option>
                         </select>
                     </label>
                 </fieldset>
@@ -412,6 +408,7 @@ const chartStrings = {
                             <option value="0">Annual Change Rate</option>
                             <option value="1">Change Rate Since Base Year</option>
                             <option value="2">Total GDP</option>                       
+                            <option value="3">Per Capita</option>                       
                         </select>
                     </label>
                 </fieldset>

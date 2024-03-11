@@ -2372,11 +2372,11 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['gdp_chart1a', 'gdp_chart1b', 'gdp_chart1c'],
+                dataSource: ['gdp_chart1a', 'gdp_chart1b', 'gdp_chart1c', 'gdp_chart1d'],
                 context: {
-                    labels: ['Change Rate', 'Change Rate Since Base Year', 'Total GDP in Millions of Dollars (2021)'],
+                    labels: ['Annual Change Rate', 'Change Rate Since Base Year', 'Change Rate in Millions of Dollars (2022)', 'GDP per Capita (2022)'],
                     keepLabels: false,
-                    units: ['percent', 'percent', 'dollars'],
+                    units: ['percent', 'percent', 'dollars', 'dollars'],
                     keepUnits: false
                 },
                 columnOptions: [
@@ -2387,14 +2387,6 @@ const snippetsRef = {
                         'ches_total',     'del_total',
                         'glo_total',      'mer_total',
                         'mont_total',     'phil_total'
-                    ],
-                    [
-                        'dvrpc_goods',    'njcos_goods',
-                        'pasubcos_goods', 'bucks_goods',
-                        'burl_goods',     'camd_goods',
-                        'ches_goods',     'del_goods',
-                        'glo_goods',      'mer_goods',
-                        'mont_goods',     'phil_goods'
                     ],
                     [
                         'dvrpc_ag_for_fish_min',
@@ -2437,48 +2429,6 @@ const snippetsRef = {
                         'mer_manufacturing',
                         'mont_manufacturing',
                         'phil_manufacturing'
-                    ],
-                    [
-                        'dvrpc_manu_durable',
-                        'njcos_manu_durable',
-                        'pasubcos_manu_durable',
-                        'bucks_manu_durable',
-                        'burl_manu_durable',
-                        'camd_manu_durable',
-                        'ches_manu_durable',
-                        'del_manu_durable',
-                        'glo_manu_durable',
-                        'mer_manu_durable',
-                        'mont_manu_durable',
-                        'phil_manu_durable'
-                    ],
-                    [
-                        'dvrpc_manu_nondurable',
-                        'njcos_manu_nondurable',
-                        'pasubcos_manu_nondurable',
-                        'bucks_manu_nondurable',
-                        'burl_manu_nondurable',
-                        'camd_manu_nondurable',
-                        'ches_manu_nondurable',
-                        'del_manu_nondurable',
-                        'glo_manu_nondurable',
-                        'mer_manu_nondurable',
-                        'mont_manu_nondurable',
-                        'phil_manu_nondurable'
-                    ],
-                    [
-                        'dvrpc_services',
-                        'njcos_services',
-                        'pasubcos_services',
-                        'bucks_services',
-                        'burl_services',
-                        'camd_services',
-                        'ches_services',
-                        'del_services',
-                        'glo_services',
-                        'mer_services',
-                        'mont_services',
-                        'phil_services'
                     ],
                     [
                         'dvrpc_art_ent_rec_acc_food',
@@ -2917,7 +2867,7 @@ const snippetsRef = {
               columns: ['year', 'dvrpc_fin_insur_real_est'],
             },
             {
-              key: 'Government and government enterprises',
+              key: 'Public administration',
               columns: ['year', 'dvrpc_gov'],
             },
             {
