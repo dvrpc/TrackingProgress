@@ -384,19 +384,19 @@ const chartStrings = {
                         <select id="viz-0" class="toggle-data-selector">
                             <option class="optionChild" value="0">All Industries</option>
                             <option class="optionChild" value="1">Agriculture, Forestry, Fishing, and Mining</option>
-                            <option class="optionChild" value="2">Construction</option>
-                            <option class="optionChild" value="3">Manufacturing</option>
-                            <option class="optionChild" value="4">Arts, Entertainment, Recreation, Accommodation, and Food Services</option>
-                            <option class="optionChild" value="5">Educational Services</option>
-                            <option class="optionChild" value="6">Finance, Insurance, Real Estate</option> 
-                            <option class="optionChild" value="7">Health Care and Social Assistance</option>
-                            <option class="optionChild" value="8">Information</option>
-                            <option class="optionChild" value="9">Other Services (except Government)</option>
-                            <option class="optionChild" value="10">Professional Services</option>
-                            <option class="optionChild" value="11">Retail Trade</option>
-                            <option class="optionChild" value="12">Transportation, Warehousing, and Utilities</option>
-                            <option class="optionChild" value="13">Wholesale Trade</option>
-                            <option class="optionChild" value="14">Public administration</option>
+                            <option class="optionChild" value="2">Arts, Entertainment, Recreation, Accommodation, and Food Services</option>
+                            <option class="optionChild" value="3">Construction</option>
+                            <option class="optionChild" value="4">Educational Services</option>
+                            <option class="optionChild" value="5">Finance, Insurance, Real Estate</option> 
+                            <option class="optionChild" value="6">Health Care and Social Assistance</option>
+                            <option class="optionChild" value="7">Information</option>
+                            <option class="optionChild" value="8">Manufacturing</option>
+                            <option class="optionChild" value="9">Other Services (except public admin)</option>
+                            <option class="optionChild" value="10">Professional Services, scientific, tech services</option>
+                            <option class="optionChild" value="11">Public administration</option>
+                            <option class="optionChild" value="12">Retail Trade</option>
+                            <option class="optionChild" value="13">Transportation, Warehousing, and Utilities</option>
+                            <option class="optionChild" value="14">Wholesale Trade</option>
                         </select>
                     </label>
                 </fieldset>
