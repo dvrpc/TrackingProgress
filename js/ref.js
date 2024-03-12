@@ -2374,7 +2374,7 @@ const snippetsRef = {
                 container: 'chart',
                 dataSource: ['gdp_chart1a', 'gdp_chart1b', 'gdp_chart1c', 'gdp_chart1d'],
                 context: {
-                    labels: ['Annual Change Rate', 'Change Rate Since Base Year', 'Change Rate in Millions of Dollars (2022)', 'GDP per Capita (2022)'],
+                    labels: ['Annual Change Rate', 'Change Rate Since Base Year', 'Total GDP in Billions of Dollars (2022)', 'GDP per Capita (2022)'],
                     keepLabels: false,
                     units: ['percent', 'percent', 'dollars', 'dollars'],
                     keepUnits: false
