@@ -4,6 +4,7 @@ DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ 
 
 * [Broadband Universal Access](https://www.dvrpc.org/Plan/MIT/broadbanduniversalaccess)
 * [Buy Local Campaign](https://www.dvrpc.org/Plan/MIT/buylocalcampaign)
+* [Cultivating a Homegrown Economy](https://www.dvrpc.org/reports/mit034.pdf)
 * [Downtown Management](https://www.dvrpc.org/Plan/MIT/downtownmanagement)
 * [Financial Incentive Zones](https://www.dvrpc.org/Plan/MIT/financialincentivezones)
 * [Human Capital Investments](https://www.dvrpc.org/Plan/MIT/humancapitalinvestments)
