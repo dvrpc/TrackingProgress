@@ -2361,10 +2361,10 @@ const snippetsRef = {
     'Gross Domestic Product': {
         categories: ['econo','resil'],
         trend: {
-            status: 'good',
+            status: 'neutral',
             text: {
-                stat: '105% gain',
-                text: `in economic growth since 2001`
+                stat: '3.1% gain',
+                text: `in economic growth since 2017`
             }
         },
         dataUrl: 'https://catalog.dvrpc.org/dataset/gross-domestic-product',
