@@ -1989,17 +1989,26 @@ const chartStrings = {
             <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
     'Transit Conditions':`
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Average Vehicle Age by Vehicle Type</h2>
-            <form>
+            <h2 class="indicator-subheader toggle-subheader">Revenue Vehicles Past their Useful Life Benchmark (ULB)</h2>
+            <form class="double-toggle-form">
                 <fieldset>
                     <label>
                         Select Transit Agency
                         <select id="viz-0" class="toggle-data-selector">
                             <option value="0">All Agencies</option>
                             <option value="1">NJ Transit</option>
-                            <option value="2">PART (Pottstown)</option>
-                            <option value="3">PATCO</option>
-                            <option value="4">SEPTA</option>
+                            <option value="2">PATCO</option>
+                            <option value="3">SEPTA</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-0-b" class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Percent</option>
                         </select>
                     </label>
                 </fieldset>
@@ -2009,12 +2018,12 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>
-
-        <hr class="indicator-content-hr" />
+        
+        <hr class="indicator-content-hr" />       
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Rail Vehicles by Age Group</h2>
-            <form>
+            <h2 class="indicator-subheader toggle-subheader">Support Vehicles Past their Useful Life Benchmark (ULB)</h2>
+            <form class="double-toggle-form">
                 <fieldset>
                     <label>
                         Select Transit Agency
@@ -2026,26 +2035,36 @@ const chartStrings = {
                         </select>
                     </label>
                 </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-1-b" class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Percent</option>
+                        </select>
+                    </label>
+                </fieldset>
             </form>
         </div>
         <div class="data-viz chart2">
-            <svg></svg>    
+            <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>
+        <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>               
 
-        <hr class="indicator-content-hr" />
+        <hr class="indicator-content-hr" />       
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Buses by Age Group</h2>
+            <h2 class="indicator-subheader toggle-subheader">Transit Facilities in Deficient Condition</h2>
             <form>
                 <fieldset>
                     <label>
                         Select Transit Agency
                         <select id="viz-2" class="toggle-data-selector">
-                            <option value="0">All Agencies</option>
+                            <option value="0">SEPTA</option>
                             <option value="1">NJ Transit</option>
-                            <option value="2">PART (Pottstown)</option>
-                            <option value="3">SEPTA</option>
+                            <option value="2">PATCO</option>
+                            <option value="3">PART</option>
                         </select>
                     </label>
                 </fieldset>
@@ -2054,7 +2073,19 @@ const chartStrings = {
         <div class="data-viz chart3">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>`,
+        <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>               
+
+        <hr class="indicator-content-hr" />       
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Rail Track with Performance Restrictions</h2>
+        </div>
+        <div class="data-viz chart4">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>               
+
+        `,
     'Transit Ridership':`
        <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Mode</h2>

@@ -3491,118 +3491,106 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['transit_conditions_graph_1'],
+                dataSource: ['transit_conditions_graph_1a', 'transit_conditions_graph_1b'],
                 context: {
-                    labels: ['Years Old'],
-                    keepLabels: true,
-                    units: false
+                    labels: ['Number of Revenue Vehicles Past their ULB', 'Percent of Revenue Vehicles Past their ULB'],
+                    keepLabels: false,
+                    units: ['hundreds', 'percentC'],
+                    keepUnits:  false
                 },
                 columnOptions: [
-                    ['All Agencies- All Vehicles', 'All Agencies- Buses', 'All Agencies- Rail Vehicles'],
-                    ['NJ Transit- All Vehicles', 'NJ Transit- Buses', 'NJ Transit- Rail Vehicles'],
-                    ['', 'PART- Buses', ''],
-                    ['', '', 'PATCO- Rail Vehicles'],
-                    ['SEPTA- All Vehicles', 'SEPTA- Buses', 'SEPTA- Rail Vehicles']
+                    ['all_all_graphed_modes'],
+                    ['njt_all_graphed_modes'],
+                    ['patco_all_graphed_modes'],
+                    ['septa_all_graphed_modes']
                 ],
                 data: [
                     {
-                        'key': 'All Vehicles',
-                        columns: ['year', 'All Agencies- All Vehicles']
+                        'key': 'All Modes',
+                        columns: ['year', 'all_all_graphed_modes']
                     },
-                    {
-                        'key': 'Buses',
-                        columns: ['year', 'All Agencies- Buses']
-                    },
-                    {
-                        'key': 'Rail Vehicles',
-                        columns: ['year', 'All Agencies- Rail Vehicles']
-                    }
                 ]
             },
             {
-                type: 'stacked bar',
+                type: 'line',
                 container: 'chart2',
-                dataSource: ['transit_conditions_graph_2'],
+                dataSource: ['transit_conditions_graph_2a', 'transit_conditions_graph_2b'],
                 context: {
-                    labels: ['Vehicles'],
-                    keepLabels: true,
-                    units: ['thousands'],
-                    keepUnits: true
+                    labels: ['Number of Support Vehicles Past their ULB', 'Percent of Support Vehicles Past their ULB'],
+                    keepLabels: false,
+                    units: ['hundreds', 'percentC'],
+                    keepUnits:  false
                 },
                 columnOptions: [
-                    [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
-                    [ 'NJ Transit- age_0_5', 'NJ Transit- age_6_11', 'NJ Transit- age_12_15', 'NJ Transit- age_16_20', 'NJ Transit- age_21_25', 'NJ Transit- age_25over'],
-                    [ 'PATCO- age_0_5', 'PATCO- age_6_11', 'PATCO- age_12_15', 'PATCO- age_16_20', 'PATCO- age_21_25', 'PATCO- age_25over'],
-                    [ 'SEPTA- age_0_5', 'SEPTA- age_6_11', 'SEPTA- age_12_15', 'SEPTA- age_16_20', 'SEPTA- age_21_25', 'SEPTA- age_25over']
+                    ['all_all_graphed_svs'],
+                    ['njt_all_graphed_svs'],
+                    ['patco_all_graphed_svs'],
+                    ['septa_all_graphed_svs']
                 ],
                 data: [
                     {
-                        'key': 'Age (0-5)',
-                        columns: ['year', 'All Agencies- age_0_5']
+                        'key': 'All Support Vehicles',
+                        columns: ['year', 'all_all_graphed_svs']
                     },
-                    {
-                        'key': 'Age (6-11)',
-                        columns: ['year', 'All Agencies- age_6_11']
-                    },
-                    {
-                        'key': 'Age (12-15)',
-                        columns: ['year', 'All Agencies- age_12_15']
-                    },
-                    {
-                        'key': 'Age (16-20)',
-                        columns: ['year', 'All Agencies- age_16_20']
-                    },
-                    {
-                        'key': 'Age (21-25)',
-                        columns: ['year', 'All Agencies- age_21_25']
-                    },
-                    {
-                        'key': 'Age (25+)',
-                        columns: ['year', 'All Agencies- age_25over']
-                    }
                 ]
             },
             {
-                type: 'stacked bar',
+                type: 'line',
                 container: 'chart3',
                 dataSource: ['transit_conditions_graph_3'],
                 context: {
-                    labels: ['Vehicles'],
+                    labels: ['Percent in Deficient Condition'],
                     keepLabels: true,
-                    units: ['thousands'],
-                    keepUnits: true
+                    units: ['percentC'],
+                    keepUnits: true 
                 },
                 columnOptions: [
-                    [ 'All Agencies- age_0_5', 'All Agencies- age_6_11', 'All Agencies- age_12_15', 'All Agencies- age_16_20', 'All Agencies- age_21_25', 'All Agencies- age_25over'],
-                    [ 'NJ Transit- age_0_5', 'NJ Transit- age_6_11', 'NJ Transit- age_12_15', 'NJ Transit- age_16_20', 'NJ Transit- age_21_25', 'NJ Transit- age_25over'],
-                    [ 'PART- age_0_5', 'PART- age_6_11', 'PART- age_12_15', 'PART- age_16_20', 'PART- age_21_25', 'PART- age_25over'],
-                    [ 'SEPTA- age_0_5', 'SEPTA- age_6_11', 'SEPTA- age_12_15', 'SEPTA- age_16_20', 'SEPTA- age_21_25', 'SEPTA- age_25over']
+                    ['septa_passenger', 'septa_admin']
+                    ['njt_passenger', 'njt_admin'],
+                    ['patco_passenger', 'patco_admin'],
+                    ['part_passenger', 'part_admin'],
                 ],
                 data: [
                     {
-                        'key': 'Age (0-5)',
-                        columns: ['year', 'All Agencies- age_0_5']
+                        'key': 'Passenger', 
+                        columns: ['year', 'septa_passenger']
                     },
                     {
-                        'key': 'Age (6-11)',
-                        columns: ['year', 'All Agencies- age_6_11']
+                        'key': 'Administrative', 
+                        columns: ['year', 'septa_admin']
+                    },
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart4',
+                dataSource: ['transit_conditions_graph_4'],
+                context: {
+                    labels: ['Percent of Rail Track with Performance Restrictions'],
+                    keepLabels: true,
+                    units: ['percentC'],
+                    keepUnits: true 
+                },
+                columnOptions: [
+                    ['njt_hybrid_rail', 'septa_commuter_rail', 'septa_heavy_rail', 'septa_streetcar_rail']
+                ],
+                data: [
+                    {
+                        'key': 'NJ Transit - Hybrid Rail', 
+                        columns: ['year', 'njt_hybrid_rail']
                     },
                     {
-                        'key': 'Age (12-15)',
-                        columns: ['year', 'All Agencies- age_12_15']
+                        'key': 'SEPTA - Commuter Rail', 
+                        columns: ['year', 'septa_commuter_rail']
                     },
                     {
-                        'key': 'Age (16-20)',
-                        columns: ['year', 'All Agencies- age_16_20']
+                        'key': 'SEPTA - Heavy Rail',  
+                        columns: ['year', 'septa_heavy_rail']
                     },
                     {
-                        'key': 'Age (21-25)',
-                        columns: ['year', 'All Agencies- age_21_25']
+                        'key': 'SEPTA - Streetcar Rail',  
+                        columns: ['year', 'septa_streetcar_rail']
                     },
-                    {
-                        'key': 'Age (25+)',
-                        columns: ['year', 'All Agencies- age_25over']
-                    }
                 ]
             }
         ]

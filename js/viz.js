@@ -87,7 +87,8 @@ const axisFormats = {
     'thousands': ',.0f',
     'thousandsC': ',.3r',
     'millions': ',4r',
-    'dollars': '$,3'
+    'dollars': '$,3',
+    'hundreds': '0'
 }
 
 // margin object for desktop/mobile
