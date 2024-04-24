@@ -1,0 +1,5 @@
+"year","septa_automobiles","septa_trucks_and_ort_veh","septa_st_wh_veh","septa_all_graphed_svs","njt_automobiles","njt_trucks_and_ort_veh","njt_st_wh_veh","njt_all_graphed_svs","patco_all_graphed_svs","all_automobiles","all_trucks_and_ort_veh","all_st_wh_veh","all_all_graphed_svs"
+2019,0.409,0.326,0.506,0.366,0.828,0.475,0.236,0.489,0.000,0.523,0.404,0.361,0.415
+2020,0.408,0.327,0.488,0.365,0.770,0.343,0.258,0.360,0.000,0.475,0.334,0.360,0.351
+2021,0.412,0.419,0.488,0.423,0.554,0.564,0.333,0.548,0.225,0.441,0.494,0.414,0.478
+2022,0.042,0.333,0.506,0.290,0.554,0.640,0.377,0.616,0.224,0.193,0.508,0.439,0.462
