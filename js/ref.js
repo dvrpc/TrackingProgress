@@ -3499,15 +3499,98 @@ const snippetsRef = {
                     keepUnits:  false
                 },
                 columnOptions: [
-                    ['all_all_graphed_modes'],
-                    ['njt_all_graphed_modes'],
-                    ['patco_all_graphed_modes'],
-                    ['septa_all_graphed_modes']
+                    ['all_all_graphed_modes','all_artic_bus','all_automobile','all_bus','all_comm_rail_locomotive','all_comm_rail_pass_coach','all_comm_rail_sp_pass_car','all_cutaway','all_hr_pass_car','all_light_rail_veh','all_minivan','all_otr_bus','all_trolleybus','all_van','all_vintage_trolley_sc'],
+                    ['njt_all_graphed_modes','njt_artic_bus','njt_automobile','njt_bus','njt_comm_rail_locomotive','njt_comm_rail_pass_coach','njt_comm_rail_sp_pass_car','njt_cutaway','njt_hr_pass_car','njt_light_rail_veh','njt_minivan','njt_otr_bus','njt_trolleybus','njt_van','njt_vintage_trolley_sc'],
+                    ['patco_all_graphed_modes','patco_artic_bus','patco_automobile','patco_bus','patco_comm_rail_locomotive','patco_comm_rail_pass_coach','patco_comm_rail_sp_pass_car','patco_cutaway','patco_hr_pass_car','patco_light_rail_veh','patco_minivan','patco_otr_bus','patco_trolleybus','patco_van','patco_vintage_trolley_sc'],
+                    ['septa_all_graphed_modes','septa_artic_bus','septa_automobile','septa_bus','septa_comm_rail_locomotive','septa_comm_rail_pass_coach','septa_comm_rail_sp_pass_car','septa_cutaway','septa_hr_pass_car','septa_light_rail_veh','septa_minivan','septa_otr_bus','septa_trolleybus','septa_van','septa_vintage_trolley_sc'],
                 ],
                 data: [
                     {
                         'key': 'All Modes',
                         columns: ['year', 'all_all_graphed_modes']
+                    },
+                    {
+                        'key': 'Articulated Bus',
+                        columns: ['year', 'all_artic_bus'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Automobile',
+                        columns: ['year', 'all_automobile'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Bus',
+                        columns: ['year', 'all_bus'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Commuter Rail Locomotive',
+                        columns: ['year', 'all_comm_rail_locomotive'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Commuter Rail Passenger Coach',
+                        columns: ['year', 'all_comm_rail_pass_coach'],
+                        disabled: true
+
+                    },               
+                    {
+                        'key': 'Commuter Rail Self-Propelled Passenger Car',
+                        columns: ['year', 'all_comm_rail_sp_pass_car'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Cutaway',
+                        columns: ['year', 'all_cutaway'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Heavy Rail Passenger Car',
+                        columns: ['year', 'all_hr_pass_car'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Light Rail Vehicle',
+                        columns: ['year', 'all_light_rail_veh'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Minivan',
+                        columns: ['year', 'all_minivan'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Over-the Road Bus',
+                        columns: ['year', 'all_otr_bus'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Trolleybus',
+                        columns: ['year', 'all_trolleybus'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Van',
+                        columns: ['year', 'all_van'],
+                        disabled: true
+
+                    },
+                    {
+                        'key': 'Vintage Trolley/Streetcar',
+                        columns: ['year', 'all_vintage_trolley_sc'],
+                        disabled: true
                     },
                 ]
             },
@@ -3522,15 +3605,30 @@ const snippetsRef = {
                     keepUnits:  false
                 },
                 columnOptions: [
-                    ['all_all_graphed_svs'],
-                    ['njt_all_graphed_svs'],
-                    ['patco_all_graphed_svs'],
-                    ['septa_all_graphed_svs']
+                    ['all_all_graphed_svs','all_automobiles','all_trucks_and_ort_veh','all_st_wh_veh'],
+                    ['njt_all_graphed_svs','njt_automobiles','njt_trucks_and_ort_veh','njt_st_wh_veh'],
+                    ['patco_all_graphed_svs','patco_automobiles','patco_trucks_and_ort_veh','patco_st_wh_veh'],
+                    ['setpa_all_graphed_svs','setpa_automobiles','setpa_trucks_and_ort_veh','setpa_st_wh_veh'],
                 ],
                 data: [
                     {
                         'key': 'All Support Vehicles',
                         columns: ['year', 'all_all_graphed_svs']
+                    },
+                    {
+                        'key': 'Automobiles',
+                        columns: ['year', 'all_automobiles'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'All Trucks and Other Rubber Tire Vehicles',
+                        columns: ['year', 'all_trucks_and_ort_veh'],
+                        disabled: true
+                    },
+                    {
+                        'key': 'All Steel-Wheel Vehicles',
+                        columns: ['year', 'all_st_wh_veh'],
+                        disabled: true
                     },
                 ]
             },
@@ -3540,12 +3638,11 @@ const snippetsRef = {
                 dataSource: ['transit_conditions_graph_3'],
                 context: {
                     labels: ['Percent in Deficient Condition'],
-                    keepLabels: true,
                     units: ['percentC'],
                     keepUnits: true 
                 },
                 columnOptions: [
-                    ['septa_passenger', 'septa_admin']
+                    ['septa_passenger', 'septa_admin'],
                     ['njt_passenger', 'njt_admin'],
                     ['patco_passenger', 'patco_admin'],
                     ['part_passenger', 'part_admin'],

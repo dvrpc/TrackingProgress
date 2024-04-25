@@ -1,5 +1,5 @@
-"year","patco_passenger","patco_admin","njt_passenger","njt_admin","septa_passenger","septa_admin","part_passenger"
-2019,0,0,0,0,0.024,0,0
-2020,0,0,0,0,0.014,0.036,0
-2021,0,0,0,0,0.013,0.036,0
-2022,0,0,0,0,0.020,0.036,0
+"year","patco_passenger","patco_admin","njt_passenger","njt_admin","septa_passenger","septa_admin","part_passenger","part_admin"
+2019,0,0,0,0,0.024,0,0,0
+2020,0,0,0,0,0.014,0.036,0,0
+2021,0,0,0,0,0.013,0.036,0,0
+2022,0,0,0,0,0.020,0.036,0,0
