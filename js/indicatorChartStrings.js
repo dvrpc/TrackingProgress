@@ -1993,12 +1993,23 @@ const chartStrings = {
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Transit Agency
+                        Select Mode
                         <select id="viz-0" class="toggle-data-selector">
-                            <option value="0">All Agencies</option>
-                            <option value="1">NJ Transit</option>
-                            <option value="2">PATCO</option>
-                            <option value="3">SEPTA</option>
+                            <option value="0">All Modes</option>
+                            <option value="1">Articulated Bus</option>
+                            <option value="2">Autombile</option>
+                            <option value="3">Bus</option>
+                            <option value="4">Commuter Rail Locomotive</option>
+                            <option value="5">Commuter Rail Passenger Coach</option>
+                            <option value="6">Commuter Rail Self-Propelled Passenger Car</option>
+                            <option value="7">Cutaway Bus</option>
+                            <option value="8">Heavy Rail Passenger Car</option>
+                            <option value="9">Light Rail Vehicle</option>
+                            <option value="10">Minivan</option>
+                            <option value="11">Over-the Road Bus</option>
+                            <option value="12">Trolleybus</option>
+                            <option value="13">Van</option>
+                            <option value="14">Vintage Trolley/Streetcar</option>
                         </select>
                     </label>
                 </fieldset>
@@ -2026,12 +2037,12 @@ const chartStrings = {
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Transit Agency
+                        Select Mode 
                         <select id="viz-1" class="toggle-data-selector">
-                            <option value="0">All Agencies</option>
-                            <option value="1">NJ Transit</option>
-                            <option value="2">PATCO</option>
-                            <option value="3">SEPTA</option>
+                            <option value="0">All Support Vehicles</option>
+                            <option value="1">Autmobiles</option>
+                            <option value="2">All Trucks and Other Rubber Tire Vehicles</option>
+                            <option value="3">All Steel-Wheel Vehicles</option>
                         </select>
                     </label>
                 </fieldset>
@@ -2056,15 +2067,26 @@ const chartStrings = {
 
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Transit Facilities in Deficient Condition</h2>
-            <form>
+            <form class="double-toggle-form">
                 <fieldset>
                     <label>
                         Select Transit Agency
                         <select id="viz-2" class="toggle-data-selector">
-                            <option value="0">SEPTA</option>
-                            <option value="1">NJ Transit</option>
-                            <option value="2">PATCO</option>
-                            <option value="3">PART</option>
+                            <option value="0">All</option>
+                            <option value="1">SEPTA</option>
+                            <option value="2">NJ Transit</option>
+                            <option value="3">PATCO</option>
+                            <option value="4">PART</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-2-b" class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Percent</option>
                         </select>
                     </label>
                 </fieldset>
@@ -2079,6 +2101,29 @@ const chartStrings = {
 
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Rail Track with Performance Restrictions</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Transit Agency
+                        <select id="viz-3" class="toggle-data-selector">
+                            <option value="0">All</option>
+                            <option value="1">SEPTA</option>
+                            <option value="2">NJ Transit</option>
+                            <option value="3">PATCO</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type
+                        <select id="viz-3-b" class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Percent</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
         </div>
         <div class="data-viz chart4">
             <svg></svg>

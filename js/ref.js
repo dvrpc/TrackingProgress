@@ -3499,98 +3499,38 @@ const snippetsRef = {
                     keepUnits:  false
                 },
                 columnOptions: [
-                    ['all_all_graphed_modes','all_artic_bus','all_automobile','all_bus','all_comm_rail_locomotive','all_comm_rail_pass_coach','all_comm_rail_sp_pass_car','all_cutaway','all_hr_pass_car','all_light_rail_veh','all_minivan','all_otr_bus','all_trolleybus','all_van','all_vintage_trolley_sc'],
-                    ['njt_all_graphed_modes','njt_artic_bus','njt_automobile','njt_bus','njt_comm_rail_locomotive','njt_comm_rail_pass_coach','njt_comm_rail_sp_pass_car','njt_cutaway','njt_hr_pass_car','njt_light_rail_veh','njt_minivan','njt_otr_bus','njt_trolleybus','njt_van','njt_vintage_trolley_sc'],
-                    ['patco_all_graphed_modes','patco_artic_bus','patco_automobile','patco_bus','patco_comm_rail_locomotive','patco_comm_rail_pass_coach','patco_comm_rail_sp_pass_car','patco_cutaway','patco_hr_pass_car','patco_light_rail_veh','patco_minivan','patco_otr_bus','patco_trolleybus','patco_van','patco_vintage_trolley_sc'],
-                    ['septa_all_graphed_modes','septa_artic_bus','septa_automobile','septa_bus','septa_comm_rail_locomotive','septa_comm_rail_pass_coach','septa_comm_rail_sp_pass_car','septa_cutaway','septa_hr_pass_car','septa_light_rail_veh','septa_minivan','septa_otr_bus','septa_trolleybus','septa_van','septa_vintage_trolley_sc'],
+                    ['all_all_graphed_modes','njt_all_graphed_modes','patco_all_graphed_modes','septa_all_graphed_modes'],
+                    ['all_artic_bus','njt_artic_bus','patco_artic_bus','septa_artic_bus'],
+                    ['all_automobile','njt_automobile','patco_automobile','septa_automobile'],
+                    ['all_bus','njt_bus','patco_bus','septa_bus'],
+                    ['all_comm_rail_locomotive','njt_comm_rail_locomotive','patco_comm_rail_locomotive','septa_comm_rail_locomotive'],
+                    ['all_comm_rail_pass_coach','njt_comm_rail_pass_coach','patco_comm_rail_pass_coach','septa_comm_rail_pass_coach'],
+                    ['all_comm_rail_sp_pass_car','njt_comm_rail_sp_pass_car','patco_comm_rail_sp_pass_car','septa_comm_rail_sp_pass_car'],
+                    ['all_cutaway','njt_cutaway','patco_cutaway','septa_cutaway'],
+                    ['all_hr_pass_car','njt_hr_pass_car','patco_hr_pass_car','septa_hr_pass_car'],
+                    ['all_light_rail_veh','njt_light_rail_veh','patco_light_rail_veh','septa_light_rail_veh'],
+                    ['all_minivan','njt_minivan','patco_minivan','septa_minivan'],
+                    ['all_otr_bus','njt_otr_bus','patco_otr_bus','septa_otr_bus'],
+                    ['all_trolleybus','njt_trolleybus','patco_trolleybus','septa_trolleybus'],
+                    ['all_van','njt_van','patco_van','septa_van'],
+                    ['all_vintage_trolley_sc','njt_vintage_trolley_sc','patco_vintage_trolley_sc','septa_vintage_trolley_sc'],
                 ],
                 data: [
                     {
-                        'key': 'All Modes',
+                        'key': 'All Agencies',
                         columns: ['year', 'all_all_graphed_modes']
                     },
                     {
-                        'key': 'Articulated Bus',
-                        columns: ['year', 'all_artic_bus'],
-                        disabled: true
-
+                        'key': 'New Jersey Transit',
+                        columns: ['year', 'njt_all_graphed_modes']
                     },
                     {
-                        'key': 'Automobile',
-                        columns: ['year', 'all_automobile'],
-                        disabled: true
-
+                        'key': 'PATCO',
+                        columns: ['year', 'patco_all_graphed_modes']
                     },
                     {
-                        'key': 'Bus',
-                        columns: ['year', 'all_bus'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Commuter Rail Locomotive',
-                        columns: ['year', 'all_comm_rail_locomotive'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Commuter Rail Passenger Coach',
-                        columns: ['year', 'all_comm_rail_pass_coach'],
-                        disabled: true
-
-                    },               
-                    {
-                        'key': 'Commuter Rail Self-Propelled Passenger Car',
-                        columns: ['year', 'all_comm_rail_sp_pass_car'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Cutaway',
-                        columns: ['year', 'all_cutaway'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Heavy Rail Passenger Car',
-                        columns: ['year', 'all_hr_pass_car'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Light Rail Vehicle',
-                        columns: ['year', 'all_light_rail_veh'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Minivan',
-                        columns: ['year', 'all_minivan'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Over-the Road Bus',
-                        columns: ['year', 'all_otr_bus'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Trolleybus',
-                        columns: ['year', 'all_trolleybus'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Van',
-                        columns: ['year', 'all_van'],
-                        disabled: true
-
-                    },
-                    {
-                        'key': 'Vintage Trolley/Streetcar',
-                        columns: ['year', 'all_vintage_trolley_sc'],
-                        disabled: true
+                        'key': 'SEPTA',
+                        columns: ['year', 'septa_all_graphed_modes']
                     },
                 ]
             },
@@ -3605,88 +3545,94 @@ const snippetsRef = {
                     keepUnits:  false
                 },
                 columnOptions: [
-                    ['all_all_graphed_svs','all_automobiles','all_trucks_and_ort_veh','all_st_wh_veh'],
-                    ['njt_all_graphed_svs','njt_automobiles','njt_trucks_and_ort_veh','njt_st_wh_veh'],
-                    ['patco_all_graphed_svs','patco_automobiles','patco_trucks_and_ort_veh','patco_st_wh_veh'],
-                    ['setpa_all_graphed_svs','setpa_automobiles','setpa_trucks_and_ort_veh','setpa_st_wh_veh'],
+                    ['all_all_graphed_svs','njt_all_graphed_svs','patco_all_graphed_svs','septa_all_graphed_svs'],
+                    ['all_automobiles','njt_automobiles','patco_automobiles','septa_automobiles'],
+                    ['all_trucks_and_ort_veh','njt_trucks_and_ort_veh','patco_trucks_and_ort_veh','septa_trucks_and_ort_veh'],
+                    ['all_st_wh_veh','njt_st_wh_veh','patco_st_wh_veh','septa_st_wh_veh']
                 ],
                 data: [
                     {
-                        'key': 'All Support Vehicles',
+                        'key': 'All Agencies',
                         columns: ['year', 'all_all_graphed_svs']
                     },
                     {
-                        'key': 'Automobiles',
-                        columns: ['year', 'all_automobiles'],
-                        disabled: true
+                        'key': 'New Jersey Transit',
+                        columns: ['year', 'njt_all_graphed_svs']
                     },
                     {
-                        'key': 'All Trucks and Other Rubber Tire Vehicles',
-                        columns: ['year', 'all_trucks_and_ort_veh'],
-                        disabled: true
+                        'key': 'PATCO',
+                        columns: ['year', 'patco_all_graphed_svs']
                     },
                     {
-                        'key': 'All Steel-Wheel Vehicles',
-                        columns: ['year', 'all_st_wh_veh'],
-                        disabled: true
+                        'key': 'SEPTA',
+                        columns: ['year', 'septa_all_graphed_svs']
                     },
                 ]
             },
             {
                 type: 'line',
                 container: 'chart3',
-                dataSource: ['transit_conditions_graph_3'],
+                dataSource: ['transit_conditions_graph_3a', 'transit_conditions_graph_3b'],
                 context: {
-                    labels: ['Percent in Deficient Condition'],
-                    units: ['percentC'],
-                    keepUnits: true 
+                    labels: ['Vehicles in Deficient Condition', 'Percent in Deficient Condition'],
+                    units: ['hundreds', 'percentC'],
+                    keepUnits: false,
+                    keepLabels: false
                 },
                 columnOptions: [
-                    ['septa_passenger', 'septa_admin'],
-                    ['njt_passenger', 'njt_admin'],
-                    ['patco_passenger', 'patco_admin'],
-                    ['part_passenger', 'part_admin'],
+                    ['all_all', 'all_passenger', 'all_admin'],
+                    ['septa_all','septa_passenger', 'septa_admin'],
+                    ['njt_all','njt_passenger', 'njt_admin'],
+                    ['patco_all','patco_passenger', 'patco_admin'],
+                    ['part_all', 'part_passenger', 'part_admin'],
                 ],
                 data: [
                     {
+                        'key': 'All', 
+                        columns: ['year', 'all_all']
+                    },
+                    {
                         'key': 'Passenger', 
-                        columns: ['year', 'septa_passenger']
+                        columns: ['year', 'all_passenger']
                     },
                     {
                         'key': 'Administrative', 
-                        columns: ['year', 'septa_admin']
+                        columns: ['year', 'all_admin']
                     },
                 ]
             },
             {
                 type: 'line',
                 container: 'chart4',
-                dataSource: ['transit_conditions_graph_4'],
+                dataSource: ['transit_conditions_graph_4a','transit_conditions_graph_4b'],
                 context: {
-                    labels: ['Percent of Rail Track with Performance Restrictions'],
-                    keepLabels: true,
-                    units: ['percentC'],
-                    keepUnits: true 
+                    labels: ['Miles of Rail Track with Performance Restrictions', 'Percent of Rail Track with Performance Restrictions'],
+                    keepLabels: false,
+                    units: ['singles', 'percentC'],
+                    keepUnits: false 
                 },
                 columnOptions: [
-                    ['njt_hybrid_rail', 'septa_commuter_rail', 'septa_heavy_rail', 'septa_streetcar_rail']
+                    ['all_hybrid_rail', 'all_commuter_rail', 'all_heavy_rail', 'all_streetcar'],
+                    ['septa_hybrid_rail', 'septa_commuter_rail', 'septa_heavy_rail', 'septa_streetcar'],
+                    ['njt_hybrid_rail', 'njt_commuter_rail', 'njt_heavy_rail', 'njt_streetcar'],
+                    ['patco_hybrid_rail', 'patco_commuter_rail', 'patco_heavy_rail', 'patco_streetcar'],
                 ],
                 data: [
                     {
-                        'key': 'NJ Transit - Hybrid Rail', 
-                        columns: ['year', 'njt_hybrid_rail']
+                        'key': 'Hybrid Rail', 
+                        columns: ['year', 'all_hybrid_rail']
                     },
                     {
-                        'key': 'SEPTA - Commuter Rail', 
-                        columns: ['year', 'septa_commuter_rail']
+                        'key': 'Commuter Rail', 
+                        columns: ['year', 'all_commuter_rail']
                     },
                     {
-                        'key': 'SEPTA - Heavy Rail',  
-                        columns: ['year', 'septa_heavy_rail']
+                        'key': 'Heavy Rail',  
+                        columns: ['year', 'all_heavy_rail']
                     },
                     {
-                        'key': 'SEPTA - Streetcar Rail',  
-                        columns: ['year', 'septa_streetcar_rail']
+                        'key': 'Streetcar Rail',  
+                        columns: ['year', 'all_streetcar']
                     },
                 ]
             }
