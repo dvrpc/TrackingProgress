@@ -3482,8 +3482,8 @@ const snippetsRef = {
         trend: {
             status: 'neutral',
             text: {
-                stat: '14% increase',
-                text: `in average transit fleet age since 2000`
+                stat: '20.6% increase',
+                text: `of revenue service vehicles past their useful life benchmark in 2022`
             }
         },
         dataUrl: 'https://catalog.dvrpc.org/dataset/transit-conditions',
