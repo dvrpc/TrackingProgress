@@ -3573,6 +3573,7 @@ const snippetsRef = {
                 type: 'line',
                 container: 'chart3',
                 dataSource: ['transit_conditions_graph_3a', 'transit_conditions_graph_3b'],
+                range: [0,1],
                 context: {
                     labels: ['Vehicles in Deficient Condition', 'Percent in Deficient Condition'],
                     units: ['hundreds', 'percentC'],
