@@ -3957,7 +3957,7 @@ const snippetsRef = {
         trend: {
             status: 'awesome',
             text: {
-                stat: '59% drop',
+                stat: '62% drop',
                 text: `in bridge deck area rated deficient since a 2003 peak of 18%`
             }
         },
