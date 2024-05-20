@@ -1,3 +1,3 @@
-To see how conditions are planned to be addressed for the next 25 years, see what is listed among DVRPC’s _[Connections 2050 Plan: Major Regional Projects](https://www.dvrpc.org/webmaps/mrp2050/)_. 
+To see how conditions are planned to be addressed for the next 25 years, see Major Regional Roadway Preservation Projects in DVRPC’s _[Connections 2050 Plan: Major Regional Projects](https://www.dvrpc.org/webmaps/mrp2050/)_. 
 
 Maintaining bridge conditions in a state-of-good repair is one the National Goals set by the Federal Highway Administration’s Transportation Performance Management (TPM). DVRPC is required to either set regional targets or match state department of transportation targets for bridge (and pavement) conditions on the National Highway System. See how the region is performing: [TPM Bridge and Pavement](https://www.dvrpc.org/tpm/?indicator=bridgepavement).
