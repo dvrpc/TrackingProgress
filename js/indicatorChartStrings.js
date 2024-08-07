@@ -254,12 +254,25 @@ const chartStrings = {
         <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
     'Congestion': `
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Planning Time Index by Geography (Annual Weekday Average)</h2>
-            <form>
+            <h2 class="indicator-subheader toggle-subheader">Planning Time Index (Annual Weekday Average)</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Time Period:
+                        <select id="viz-0" class="toggle-data-selector">
+                            <option value="0">24 hour</option>
+                            <option value="1">Morning (6-10 AM)</option>
+                            <option value="2">Midday (10 AM-3 PM)</option>
+                            <option value="3">Evening (3-7 PM)</option>
+                            <option value="4">Overnight (7 PM-6 AM)</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
                 <fieldset>
                     <label>
                         Select Road Type
-                        <select id="viz-0" class="toggle-data-selector">
+                        <select id="viz-0-b" class="toggle-data-selector">
                             <option value="0">Freeways</option>
                             <option value="1">Local</option>
                         </select>
@@ -270,45 +283,31 @@ const chartStrings = {
         <div class="data-viz chart">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
         <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
-
+        
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Planning Time Index by Time Period (Annual Weekday Average)</h2>
-            <form class="double-toggle-form">
+            <h2 class="indicator-subheader toggle-subheader">Truck Time Travel Reliability</h2>
+            <form>
                 <fieldset>
                     <label>
-                        Select Geography:
+                        Select Geography
                         <select id="viz-1" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">All PA Counties</option>
-                                <option value="3">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="4">Bucks</option>
-                                <option value="5">Burlington</option>
-                                <option value="6">Camden</option>
-                                <option value="7">Chester</option>
-                                <option value="8">Delaware</option>
-                                <option value="9">Gloucester</option>
-                                <option value="10">Mercer</option>
-                                <option value="11">Montgomery</option>
-                                <option value="12">Philadelphia</option>
-                            </optgroup>
-                        </select>
-                    </label>
-                </fieldset>
-                <span class="toggle-vr">|</span>
-                <fieldset>
-                    <label>
-                        Select Road Type
-                        <select id="viz-1-b" class="toggle-data-selector">
-                            <option value="0">Freeways</option>
-                            <option value="1">Local</option>
+                            <option value="0">DVRPC Region</option>
+                            <option value="1">NJ Counties</option>
+                            <option value="2">NJ DVRPC Counties</option>
+                            <option value="3">PA Counties</option>
+                            <option value="4">PA DVRPC Counties</option>
+                            <option value="5">Bucks</option>
+                            <option value="6">Burlington</option>
+                            <option value="7">Camden</option>
+                            <option value="8">Chester</option>
+                            <option value="9">Delaware</option>
+                            <option value="10">Gloucester</option>
+                            <option value="11">Mercer</option>
+                            <option value="12">Montgomery</option>
+                            <option value="13">Philadelphia</option>
                         </select>
                     </label>
                 </fieldset>
@@ -317,7 +316,186 @@ const chartStrings = {
         <div class="data-viz chart2">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>`,
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+        
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Reliable Roadways</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Road Type
+                        <select id="viz-2" class="toggle-data-selector">
+                            <option value="0">Interstate</option>
+                            <option value="1">Non-Interstate</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type 
+                        <select id="viz-2-b" class="toggle-data-selector">
+                            <option value="0">Percent</option>
+                            <option value="1">Miles</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+   
+        <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">Annual Hours of Peak Hour Excessive Delay</h2>
+        <form>
+            <fieldset>
+                <label>
+                    Select Value Type
+                    <select id="viz-3" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        </div>
+        <div class="data-viz chart4">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+   
+        <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">Trenton, NJ Urban Area - AHPHED</h2>
+        <form>
+            <fieldset>
+                <label>
+                    Select Value Type
+                    <select id="viz-4" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        </div>
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+   
+        <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">Philadelphia, DE-MD-NJ-PA Urban Area - AHPHED - By County</h2>
+        <form>
+            <fieldset>
+                <label>
+                    Select Value Type
+                    <select id="viz-5" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        </div>
+        <div class="data-viz chart6">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+   
+        <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">Philadelphia, DE-MD-NJ-PA Urban Area - AHPHED - By State</h2>
+        <form>
+            <fieldset>
+                <label>
+                    Select Value Type
+                    <select id="viz-6" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        </div>
+        <div class="data-viz chart7">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+   
+        <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">Philadelphia, DE-MD-NJ-PA Urban Area - AHPHED</h2>
+        <form>
+            <fieldset>
+                <label>
+                    Select Value Type
+                    <select id="viz-7" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        </div>
+        <div class="data-viz chart8">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+   
+        <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">DVRPC Region - Percent of AHPHED - By County</h2>
+        <form>
+            <fieldset>
+                <label>
+                    Select Value Type
+                    <select id="viz-8" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        </div>
+        <div class="data-viz chart9">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+   
+        <div class="toggle-wrapper">
+        <h2 class="indicator-subheader toggle-subheader">DVRPC Region - AHPHED - By State</h2>
+        <form>
+            <fieldset>
+                <label>
+                    Select Value Type
+                    <select id="viz-9" class="toggle-data-selector">
+                        <option value="0">Total</option>
+                        <option value="1">Per Capita</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        </div>
+        <div class="data-viz chart10">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+        `,
     'Educational Attainment':`
         <h2 class="indicator-subheader">Population 25 Years and Older Having Completed High-School by Geography</h2>
         <div class="data-viz chart">

@@ -2234,87 +2234,6 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart',
-                dataSource: ['roadwayreliability24'],
-                context: {
-                    labels: ['Planning Time Index'],
-                    keepLabels: true,
-                    units: ['singles'],
-                    keepUnits: true
-                },
-                columnOptions: [
-                    ['DVRPCFree24', 'NJCosFree24', 'PACosFree24', 'PASubCosFree24', 'BucFree24', 'BurlFree24', 'CamFree24', 'ChesFree24', 'DelFree24', 'GloFree24', 'MerFree24', 'MontFree24', 'PhilFree24'],
-                    ['DVRPCLoca24', 'NJCosLoca24', 'PACosLoca24', 'PASubCosLoca24', 'BucLoca24', 'BurlLoca24', 'CamLoca24', 'ChesLoca24', 'DelLoca24', 'GloLoca24', 'MerLoca24', 'MontLoca24', 'PhilLoca24']
-                ],
-                data: [
-                    {
-                        'key': 'DVRPC Region*',
-                        columns: ['year', 'DVRPCFree24']
-                    },
-                    {
-                        'key': 'NJ Counties*',
-                        columns: ['year', 'NJCosFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'All PA Counties*',
-                        columns: ['year', 'PACosFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'PA Suburban Counties*',
-                        columns: ['year', 'PASubCosFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Bucks**',
-                        columns: ['year', 'BucFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Burlington**',
-                        columns: ['year', 'BurlFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Camden**',
-                        columns: ['year', 'CamFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Chester**',
-                        columns: ['year', 'ChesFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Delaware**',
-                        columns: ['year', 'DelFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Gloucester**',
-                        columns: ['year', 'GloFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Mercer**',
-                        columns: ['year', 'MerFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Montgomery**',
-                        columns: ['year', 'MontFree24'],
-                        disabled: true
-                    },
-                    {
-                        'key': 'Philadelphia**',
-                        columns: ['year', 'PhilFree24'],
-                        disabled: true
-                    }
-                ]
-            },
-            {
-                type: 'line',
-                container: 'chart2',
                 dataSource: ['roadwayreliablilityTOD_Fwy', 'roadwayreliablilityTOD_Local'],
                 context: {
                     labels: ['Planning Time Index'],
@@ -2323,37 +2242,438 @@ const snippetsRef = {
                     keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPCAM', 'DVRPCMD', 'DVRPCPM', 'DVRPCNT'],
-                    ['PACosAM', 'PACosMD', 'PACosPM', 'PACosNT'],
-                    ['PASubCosAM', 'PASubCosMD', 'PASubCosPM', 'PASubCosNT'],
-                    ['NJCosAM', 'NJCosMD', 'NJCosPM', 'NJCosNT'],
-                    ['BucAM', 'BucMD', 'BucPM', 'BucNT'],
-                    ['BurlAM', 'BurlMD', 'BurlPM', 'BurlNT'],
-                    ['CamAM', 'CamMD', 'CamPM', 'CamNT'],
-                    ['ChesAM', 'ChesMD', 'ChesPM', 'ChesNT'],
-                    ['DelAM', 'DelMD', 'DelPM', 'DelNT'],
-                    ['GloAM', 'GloMD', 'GloPM', 'GloNT'],
-                    ['MerAM', 'MerMD', 'MerPM', 'MerNT'],
-                    ['MontAM', 'MontMD', 'MontPM', 'MontNT'],
-                    ['PhilAM', 'PhilMD', 'PhilPM', 'PhilNT']
+                    ['DVRPC24','PACos24','PASubCos24','NJCos24','Buc24','Burl24','Cam24','Ches24','Del24','Glo24','Mer24','Mont24','Phil24'],
+                    ['DVRPCAM','PACosAM','PASubCosAM','NJCosAM','BucAM','BurlAM','CamAM','ChesAM','DelAM','GloAM','MerAM','MontAM','PhilAM'],
+                    ['DVRPCMD','PACosMD','PASubCosMD','NJCosMD','BucMD','BurlMD','CamMD','ChesMD','DelMD','GloMD','MerMD','MontMD','PhilMD'],
+                    ['DVRPCPM','PACosPM','PASubCosPM','NJCosPM','BucPM','BurlPM','CamPM','ChesPM','DelPM','GloPM','MerPM','MontPM','PhilPM'],
+                    ['DVRPCNT','PACosNT','PASubCosNT','NJCosNT','BucNT','BurlNT','CamNT','ChesNT','DelNT','GloNT','MerNT','MontNT','PhilNT'],
+               ],
+                data: [
+                    {
+                        'key' : 'DVRPC Region',
+                        'columns': ['Year', 'DVRPC24']
+                    },
+                    {
+                        'key': 'All PA Counties',
+                        'columns': ['Year', 'PACos24']
+                    },
+                    {
+                        'key' : 'PA Suburban Counties',
+                        'columns': ['Year', 'PASubCos24']
+                    },
+                    {
+                        'key' : 'NJ Counties',
+                        'columns': ['Year', 'NJCos24']
+                    },
+                    {
+                        'key' : 'Bucks',
+                        'columns': ['Year', 'Buc24']
+                    },
+                    {
+                        'key' : 'Burlington',
+                        'columns': ['Year', 'Burl24']
+                    },
+                    {
+                        'key' : 'Camden',
+                        'columns': ['Year', 'Cam24']
+                    },
+                    {
+                        'key' : 'Chester',
+                        'columns': ['Year', 'Ches24']
+                    },
+                    {
+                        'key' : 'Delaware',
+                        'columns': ['Year', 'Del24']
+                    },
+                    {
+                        'key' : 'Gloucester',
+                        'columns': ['Year', 'Glo24']
+                    },
+                    {
+                        'key' : 'Mercer',
+                        'columns': ['Year', 'Mer24']
+                    },
+                    {
+                        'key' : 'Montgomery',
+                        'columns': ['Year', 'Mont24']
+                    },
+                    {
+                        'key' : 'Philadelphia',
+                        'columns': ['Year', 'Phil24']
+                    }
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart2',
+                dataSource: ['tttr'],
+                context: {
+                    labels: ['Truck Travel Time Reliability'],
+                    units: ['singles'],
+                },
+                columnOptions: [
+                    ['DVRPCTTTR'],
+                    ['NJTTTR'],
+                    ['NJDVRPCCosTTTR'],
+                    ['PATTTR'],
+                    ['PADVRPCCosTTTR'],
+                    ['BucTTTR'],
+                    ['BurlTTTR'],
+                    ['CamTTTR'],
+                    ['ChesTTTR'],
+                    ['DelTTTR'],
+                    ['GloTTTR'],
+                    ['MerTTTR'],
+                    ['MontTTTR'],
+                    ['PhiTTTRl']
                 ],
                 data: [
                     {
-                        'key': 'AM',
-                        columns: ['year', 'DVRPCAM']
+                        'key': 'TTTR',
+                        columns: ['Year', 'DVRPCTTTR']
+                    }, 
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart3',
+                dataSource: ['reliability_1a', 'reliability_1b'],
+                context: {
+                    labels: ['Percent Reliability','Miles'],
+                    units: ['percent', 'singles'],
+                },
+                columnOptions: [
+                    ["Burl-Interstate","Cam-Interstate","Glo-Interstate","Mer-Interstate","Buc-Interstate","Ches-Interstate","Del-Interstate","Mont-Interstate","Phil-Interstate","NJDVRPCCos-Interstate","PADVRPCCos-Interstate","DVRPC-Interstate","NJ-Interstate","PA-Interstate"],
+                    ["Burl-Non-Interstate","Cam-Non-Interstate","Glo-Non-Interstate","Mer-Non-Interstate","Buc-Non-Interstate","Ches-Non-Interstate","Del-Non-Interstate","Mont-Non-Interstate","Phil-Non-Interstate","NJDVRPCCos-Non-Interstate","PADVRPCCos-Non-Interstate","DVRPC-Non-Interstate","NJ-Non-Interstate","PA-Non-Interstate"]
+                ],
+                data: [
+                    {
+                        'key': 'Burlington',
+                        columns: ['Year', 'Burl-Interstate']
                     },
                     {
-                        'key': 'MD',
-                        columns: ['year', 'DVRPCMD']
+                        'key': 'Camden',
+                        columns: ['Year', 'Cam-Interstate']
                     },
                     {
-                        'key': 'PM',
-                        columns: ['year', 'DVRPCPM']
+                        'key': 'Gloucester',
+                        columns: ['Year', 'Glo-Interstate']
                     },
                     {
-                        'key': 'NT',
-                        columns: ['year', 'DVRPCNT']
+                        'key': 'Mercer',
+                        columns: ['Year', 'Mer-Interstate']
+                    },
+                    {
+                        'key': 'Bucks',
+                        columns: ['Year', 'Buc-Interstate']
+                    },
+                    {
+                        'key': 'Chester',
+                        columns: ['Year', 'Ches-Interstate']
+                    },
+                    {
+                        'key': 'Delaware',
+                        columns: ['Year', 'Del-Interstate']
+                    },
+                    {
+                        'key': 'Montgomery',
+                        columns: ['Year', 'Mont-Interstate']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        columns: ['Year', 'Phil-Interstate']
+                    },
+                    {
+                        'key': 'New Jersey DVRPC Counties',
+                        columns: ['Year', 'NJDVRPCCos-Interstate']
+                    },
+                    {
+                        'key': 'Pennsylvania DVRPC Counties',
+                        columns: ['Year', 'PADVRPCCos-Interstate']
+                    },
+                    {
+                        'key': 'DVRPC Region',
+                        columns: ['Year', 'DVRPC-Interstate']
+                    },
+                    {
+                        'key': 'New Jersey',
+                        columns: ['Year', 'NJ-Interstate']
+                    },
+                    {
+                        'key': 'Pennsylvania',
+                        columns: ['Year', 'PA-Interstate']
+                    },
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart4',
+                dataSource: ['ahphed_1a', 'ahphed_1b'],
+                context: {
+                    labels: ['Annual Hours of Peak Hour Excessive Delay'],
+                    keepLabels: true,
+                    units: ['singles'],
+                    keepUnits: true
+                },
+                columnOptions: [
+                    ["DVRPC Region","Non-DVRPC Phila UZA","Philadelphia, PA-NJ-DE-MD","Trenton, NJ","Burlington","Camden","Gloucester","Mercer","Bucks","Chester","Delaware","Montgomery","Philadelphia"],
+                    ["Philadelphia, PA-NJ-DE-MD","Trenton, NJ"],
+                ],
+                data: [
+                    {
+                        'key': 'DVRPC Region',
+                        columns: ['Year', 'DVRPC Region']
+                    },
+                    {
+                        'key': 'Non-DVRPC Phila UZA',
+                        columns: ['Year', 'Non-DVRPC Phila UZA']
+                    },
+                    {
+                        'key': 'Philadelphia, PA-NJ-DE-MD',
+                        columns: ['Year', 'Philadelphia, PA-NJ-DE-MD']
+                    },
+                    {
+                        'key': 'Trenton, NJ',
+                        columns: ['Year', 'Trenton, NJ']
+                    },
+                    {
+                        'key': 'Burlington',
+                        columns: ['Year', 'Burlington']
+                    },
+                    {
+                        'key': 'Camden',
+                        columns: ['Year', 'Camden']
+                    },
+                    {
+                        'key' : 'Chester',
+                        'columns': ['Year', 'Chester']
+                    },
+                    {
+                        'key' : 'Delaware',
+                        'columns': ['Year', 'Delaware']
+                    },
+                    {
+                        'key' : 'Gloucester',
+                        'columns': ['Year', 'Gloucester']
+                    },
+                    {
+                        'key' : 'Mercer',
+                        'columns': ['Year', 'Mercer']
+                    },
+                    {
+                        'key' : 'Montgomery',
+                        'columns': ['Year', 'Montgomery']
+                    },
+                    {
+                        'key' : 'Philadelphia',
+                        'columns': ['Year', 'Philadelphia']
                     }
+                ]
+            },
+            {
+                type: ['stacked bar', 'line'],
+                container: 'chart5',
+                dataSource: ['ahphed_2a', 'ahphed_2b'],
+                context: {
+                    labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
+                    units: ['percent', 'singles'],
+                },
+                columnOptions: [
+                    ["Mercer","Burlington"],
+                    ["Mercer","Burlington"],
+                ],
+                data: [
+                    {
+                        'key' : 'Mercer',
+                        'columns': ['Year', 'Mercer']
+                    },
+                    {
+                        'key': 'Burlington',
+                        columns: ['Year', 'Burlington']
+                    },
+                ]
+            },
+            {
+                type: ['stacked bar', 'line'],
+                container: 'chart6',
+                dataSource: ['ahphed_3a', 'ahphed_3b'],
+                context: {
+                    labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
+                    units: ['percent', 'singles'],
+                },
+                columnOptions: [
+                    ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia","Non-DVRPC Phila UZA"],
+                    ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia","Non-DVRPC Phila UZA"]
+                ],
+                data: [
+                    {
+                        'key': 'Burlington',
+                        columns: ['Year', 'Burlington']
+                    },
+                    {
+                        'key': 'Camden',
+                        columns: ['Year', 'Camden']
+                    },
+                    {
+                        'key': 'Gloucester',
+                        columns: ['Year', 'Gloucester']
+                    },
+                    {
+                        'key': 'Bucks',
+                        columns: ['Year', 'Bucks']
+                    },
+                    {
+                        'key': 'Chester',
+                        columns: ['Year', 'Chester']
+                    },
+                    {
+                        'key': 'Delaware',
+                        columns: ['Year', 'Delaware']
+                    },
+                    {
+                        'key': 'Montgomery',
+                        columns: ['Year', 'Montgomery']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        columns: ['Year', 'Philadelphia']
+                    },
+                    {
+                        'key': 'Non-DVRPC Phila UZA',
+                        columns: ['Year', 'Non-DVRPC Phila UZA']
+                    },
+                ]
+            },
+            {
+                type: ['stacked bar', 'line'],
+                container: 'chart7',
+                dataSource: ['ahphed_4a', 'ahphed_4b'],
+                context: {
+                    labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
+                    units: ['percent', 'singles'],
+                },
+                columnOptions: [
+                    ["Pennsylvania","New Jersey","Delaware","Maryland"],
+                    ["Pennsylvania","New Jersey","Delaware","Maryland"]
+                ],
+                data: [
+                    {
+                        'key' : 'Pennsylvania',
+                        'columns': ['Year', 'Pennsylvania']
+                    },
+                    {
+                        'key': 'New Jersey',
+                        columns: ['Year', 'New Jersey']
+                    },
+                    {
+                        'key': 'Delaware',
+                        columns: ['Year', 'Delaware']
+                    },
+                    {
+                        'key': 'Maryland',
+                        columns: ['Year', 'Maryland']
+                    },
+                ]
+            },
+            {
+                type: ['stacked bar', 'line'],
+                container: 'chart8',
+                dataSource: ['ahphed_5a', 'ahphed_5b'],
+                context: {
+                    labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
+                    units: ['percent', 'singles'],
+                },
+                columnOptions: [
+                    ["New Jersey","Pennsylvania", "Non-DVRPC Phila UZA"],
+                    ["New Jersey","Pennsylvania", "Non-DVRPC Phila UZA"],
+                ],
+                data: [
+                    {
+                        'key': 'New Jersey',
+                        columns: ['Year', 'New Jersey']
+                    },
+                    {
+                        'key' : 'Pennsylvania',
+                        'columns': ['Year', 'Pennsylvania']
+                    },
+                    {
+                        'key': 'Non-DVRPC Phila UZA',
+                        columns: ['Year', 'Non-DVRPC Phila UZA']
+                    },
+                ]
+            },
+            {
+                type: ['stacked bar', 'line'],
+                container: 'chart9',
+                dataSource: ['ahphed_6a', 'ahphed_6b'],
+                context: {
+                    labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
+                    units: ['percent', 'singles'],
+                },
+                columnOptions: [
+                    ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia"],
+                    ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia"]
+                ],
+                data: [
+                    {
+                        'key': 'Burlington',
+                        columns: ['Year', 'Burlington']
+                    },
+                    {
+                        'key': 'Camden',
+                        columns: ['Year', 'Camden']
+                    },
+                    {
+                        'key': 'Bucks',
+                        columns: ['Year', 'Bucks']
+                    },
+                    {
+                        'key': 'Chester',
+                        columns: ['Year', 'Chester']
+                    },
+                    {
+                        'key': 'Delaware',
+                        columns: ['Year', 'Delaware']
+                    },
+                    {
+                        'key': 'Montgomery',
+                        columns: ['Year', 'Montgomery']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        columns: ['Year', 'Philadelphia']
+                    },
+                ]
+            },
+            {
+                type: ['stacked bar', 'line'],
+                container: 'chart10',
+                dataSource: ['ahphed_7a', 'ahphed_7b'],
+                context: {
+                    labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
+                    units: ['percent', 'singles'],
+                },
+                columnOptions: [
+                    ["Pennsylvania","New Jersey","Delaware","Maryland"],
+                    ["Pennsylvania","New Jersey","Delaware","Maryland"]
+                ],
+                data: [
+                    {
+                        'key' : 'Pennsylvania',
+                        'columns': ['Year', 'Pennsylvania']
+                    },
+                    {
+                        'key': 'New Jersey',
+                        columns: ['Year', 'New Jersey']
+                    },
+                    {
+                        'key': 'Delaware',
+                        columns: ['Year', 'Delaware']
+                    },
+                    {
+                        'key': 'Maryland',
+                        columns: ['Year', 'Maryland']
+                    },
                 ]
             }
         ]
