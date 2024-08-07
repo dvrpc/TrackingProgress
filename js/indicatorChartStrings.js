@@ -273,7 +273,7 @@ const chartStrings = {
                     <label>
                         Select Road Type
                         <select id="viz-0-b" class="toggle-data-selector">
-                            <option value="0">Freeways</option>
+                            <option value="0">Highways</option>
                             <option value="1">Local</option>
                         </select>
                     </label>
@@ -392,14 +392,24 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
 
         <hr class="indicator-content-hr" />
-   
+
         <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Philadelphia, DE-MD-NJ-PA Urban Area - AHPHED - By County</h2>
-        <form>
+        <h2 class="indicator-subheader toggle-subheader">Philadelphia, DE-MD-NJ-PA Urban Area - AHPHED</h2>
+        <form class="double-toggle-form">
             <fieldset>
                 <label>
-                    Select Value Type
+                    Select Geography Type
                     <select id="viz-5" class="toggle-data-selector">
+                        <option value="0">County</option>
+                        <option value="1">State</option>
+                    </select>
+                </label>
+            </fieldset>
+            <span class="toggle-vr">|</span>
+            <fieldset>
+                <label>
+                    Select Value Type 
+                    <select id="viz-5-b" class="toggle-data-selector">
                         <option value="0">Total</option>
                         <option value="1">Per Capita</option>
                     </select>
@@ -415,12 +425,22 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
    
         <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Philadelphia, DE-MD-NJ-PA Urban Area - AHPHED - By State</h2>
-        <form>
+        <h2 class="indicator-subheader toggle-subheader">DVRPC Region - AHPHED</h2>
+        <form class="double-toggle-form">
             <fieldset>
                 <label>
-                    Select Value Type
+                    Select Geography Type
                     <select id="viz-6" class="toggle-data-selector">
+                        <option value="0">County</option>
+                        <option value="1">State</option>
+                    </select>
+                </label>
+            </fieldset>
+            <span class="toggle-vr">|</span>
+            <fieldset>
+                <label>
+                    Select Value Type 
+                    <select id="viz-6-b" class="toggle-data-selector">
                         <option value="0">Total</option>
                         <option value="1">Per Capita</option>
                     </select>
@@ -429,69 +449,6 @@ const chartStrings = {
         </form>
         </div>
         <div class="data-viz chart7">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
-
-        <hr class="indicator-content-hr" />
-   
-        <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Philadelphia, DE-MD-NJ-PA Urban Area - AHPHED</h2>
-        <form>
-            <fieldset>
-                <label>
-                    Select Value Type
-                    <select id="viz-7" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
-                    </select>
-                </label>
-            </fieldset>
-        </form>
-        </div>
-        <div class="data-viz chart8">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
-
-        <hr class="indicator-content-hr" />
-   
-        <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">DVRPC Region - Percent of AHPHED - By County</h2>
-        <form>
-            <fieldset>
-                <label>
-                    Select Value Type
-                    <select id="viz-8" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
-                    </select>
-                </label>
-            </fieldset>
-        </form>
-        </div>
-        <div class="data-viz chart9">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
-
-        <hr class="indicator-content-hr" />
-   
-        <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">DVRPC Region - AHPHED - By State</h2>
-        <form>
-            <fieldset>
-                <label>
-                    Select Value Type
-                    <select id="viz-9" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
-                    </select>
-                </label>
-            </fieldset>
-        </form>
-        </div>
-        <div class="data-viz chart10">
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>

@@ -2503,7 +2503,7 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia","Non-DVRPC Phila UZA"],
-                    ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia","Non-DVRPC Phila UZA"]
+                    ["Pennsylvania","New Jersey","Delaware","Maryland"]
                 ],
                 data: [
                     {
@@ -2547,64 +2547,6 @@ const snippetsRef = {
             {
                 type: ['stacked bar', 'line'],
                 container: 'chart7',
-                dataSource: ['ahphed_4a', 'ahphed_4b'],
-                context: {
-                    labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
-                    units: ['percent', 'singles'],
-                },
-                columnOptions: [
-                    ["Pennsylvania","New Jersey","Delaware","Maryland"],
-                    ["Pennsylvania","New Jersey","Delaware","Maryland"]
-                ],
-                data: [
-                    {
-                        'key' : 'Pennsylvania',
-                        'columns': ['Year', 'Pennsylvania']
-                    },
-                    {
-                        'key': 'New Jersey',
-                        columns: ['Year', 'New Jersey']
-                    },
-                    {
-                        'key': 'Delaware',
-                        columns: ['Year', 'Delaware']
-                    },
-                    {
-                        'key': 'Maryland',
-                        columns: ['Year', 'Maryland']
-                    },
-                ]
-            },
-            {
-                type: ['stacked bar', 'line'],
-                container: 'chart8',
-                dataSource: ['ahphed_5a', 'ahphed_5b'],
-                context: {
-                    labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
-                    units: ['percent', 'singles'],
-                },
-                columnOptions: [
-                    ["New Jersey","Pennsylvania", "Non-DVRPC Phila UZA"],
-                    ["New Jersey","Pennsylvania", "Non-DVRPC Phila UZA"],
-                ],
-                data: [
-                    {
-                        'key': 'New Jersey',
-                        columns: ['Year', 'New Jersey']
-                    },
-                    {
-                        'key' : 'Pennsylvania',
-                        'columns': ['Year', 'Pennsylvania']
-                    },
-                    {
-                        'key': 'Non-DVRPC Phila UZA',
-                        columns: ['Year', 'Non-DVRPC Phila UZA']
-                    },
-                ]
-            },
-            {
-                type: ['stacked bar', 'line'],
-                container: 'chart9',
                 dataSource: ['ahphed_6a', 'ahphed_6b'],
                 context: {
                     labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
@@ -2612,7 +2554,7 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia"],
-                    ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia"]
+                    ["Pennsylvania","New Jersey","Delaware","Maryland"]
                 ],
                 data: [
                     {
@@ -2645,37 +2587,6 @@ const snippetsRef = {
                     },
                 ]
             },
-            {
-                type: ['stacked bar', 'line'],
-                container: 'chart10',
-                dataSource: ['ahphed_7a', 'ahphed_7b'],
-                context: {
-                    labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
-                    units: ['percent', 'singles'],
-                },
-                columnOptions: [
-                    ["Pennsylvania","New Jersey","Delaware","Maryland"],
-                    ["Pennsylvania","New Jersey","Delaware","Maryland"]
-                ],
-                data: [
-                    {
-                        'key' : 'Pennsylvania',
-                        'columns': ['Year', 'Pennsylvania']
-                    },
-                    {
-                        'key': 'New Jersey',
-                        columns: ['Year', 'New Jersey']
-                    },
-                    {
-                        'key': 'Delaware',
-                        columns: ['Year', 'Delaware']
-                    },
-                    {
-                        'key': 'Maryland',
-                        columns: ['Year', 'Maryland']
-                    },
-                ]
-            }
         ]
     },
     'Gross Domestic Product': {
