@@ -7,7 +7,7 @@
 const formatInpus = (source, toggleContext) => {
     // the Period of the div containing the svg for d3 to paint on
     const container = `.${source.container} svg`
-    
+
     // create or reset the values field to be populated by each charting function
     source.data.forEach(series => series.values = [])
     
@@ -236,8 +236,8 @@ const createLineChart = (source, toggleContext) => {
                 .showYAxis(true)
                 .clipEdge(false)
                 .forceY(source.range || 0)
-                .x(d => d[0])
-                .y((d, i) => d[1])
+                .x(d => d ? d[0] : null)
+                .y((d, i) => d ? d[1] : null)
 
             // set max legend length to an arbitrarily high number to prevent text cutoff
             chart.legend.maxKeyLength(100)

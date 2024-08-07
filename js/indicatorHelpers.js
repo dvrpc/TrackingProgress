@@ -37,7 +37,7 @@ const dataVizSwitch = (type, source, toggleContext) => {
 
 // toggle between charts on an indicator page (params are the selectors and datasets for the given indicator page)
 const toggleChart = (selected, dataSets) => {
-    
+
     // get the component pieces of the toggle ID
     let toggleID = selected.id.split('-')
 
@@ -115,8 +115,16 @@ const toggleChart = (selected, dataSets) => {
     let toggleContext;
     toggleContext = context ? { doubleToggle, context, chartNumber } : { doubleToggle }
 
+    let chartType = ''  
+    if (typeof source.type === 'object') {
+        chartType = source.type[chartNumber]
+        d3.selectAll(`.${source.container} > svg > *`).remove();
+    }
+    else chartType = source.type
+
+
     // switch case to determine which kind of vis to make and which dataset to reference
-    dataVizSwitch(source.type, source, toggleContext)
+    dataVizSwitch(chartType, source, toggleContext)
 }
 
 // generate selected indicator page (from dashboard or sideNav) & update the side nav
@@ -146,7 +154,8 @@ const getIndicatorSnippet = async (ref, indicatorParams) => {
         // loop through each chart option & call the appropriate d3 function on it (0 represents the default value of doubleToggle)
         hasDataViz.forEach(chart => {
             chart = {...chart, dataUrl: indicatorParams.dataUrl}
-            return dataVizSwitch(chart.type, chart, context)
+            const chartType = typeof chart.type === 'object' ? chart.type[0] : chart.type
+            return dataVizSwitch(chartType, chart, context)
         })
     }
 
