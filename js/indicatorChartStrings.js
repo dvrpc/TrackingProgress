@@ -289,29 +289,6 @@ const chartStrings = {
 
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Truck Time Travel Reliability</h2>
-            <form>
-                <fieldset>
-                    <label>
-                        Select Geography
-                        <select id="viz-1" class="toggle-data-selector">
-                            <option value="0">DVRPC Region</option>
-                            <option value="1">NJ Counties</option>
-                            <option value="2">NJ DVRPC Counties</option>
-                            <option value="3">PA Counties</option>
-                            <option value="4">PA DVRPC Counties</option>
-                            <option value="5">Bucks</option>
-                            <option value="6">Burlington</option>
-                            <option value="7">Camden</option>
-                            <option value="8">Chester</option>
-                            <option value="9">Delaware</option>
-                            <option value="10">Gloucester</option>
-                            <option value="11">Mercer</option>
-                            <option value="12">Montgomery</option>
-                            <option value="13">Philadelphia</option>
-                        </select>
-                    </label>
-                </fieldset>
-            </form>
         </div>
         <div class="data-viz chart2">
             <svg></svg>
@@ -373,14 +350,14 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
    
         <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Trenton, NJ Urban Area - AHPHED</h2>
+        <h2 class="indicator-subheader toggle-subheader">Trenton, NJ Urban Area AHPHED</h2>
         <form>
             <fieldset>
                 <label>
                     Select Value Type
-                    <select id="viz-4" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
+                    <select id="viz-4-b" class="toggle-data-selector">
+                        <option value="0">Percent</option>
+                        <option value="1">Total</option>
                     </select>
                 </label>
             </fieldset>
@@ -394,7 +371,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Philadelphia, DE-MD-NJ-PA Urban Area - AHPHED</h2>
+        <h2 class="indicator-subheader toggle-subheader">Philadelphia, DE-MD-NJ-PA Urban Area AHPHED</h2>
         <form class="double-toggle-form">
             <fieldset>
                 <label>
@@ -410,8 +387,8 @@ const chartStrings = {
                 <label>
                     Select Value Type 
                     <select id="viz-5-b" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
+                        <option value="0">Percent</option>
+                        <option value="1">Total</option>
                     </select>
                 </label>
             </fieldset>
@@ -425,7 +402,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
    
         <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">DVRPC Region - AHPHED</h2>
+        <h2 class="indicator-subheader toggle-subheader">DVRPC Region AHPHED</h2>
         <form class="double-toggle-form">
             <fieldset>
                 <label>
@@ -441,8 +418,8 @@ const chartStrings = {
                 <label>
                     Select Value Type 
                     <select id="viz-6-b" class="toggle-data-selector">
-                        <option value="0">Total</option>
-                        <option value="1">Per Capita</option>
+                        <option value="0">Percent</option>
+                        <option value="1">Total</option>
                     </select>
                 </label>
             </fieldset>

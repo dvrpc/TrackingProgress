@@ -2309,28 +2309,69 @@ const snippetsRef = {
                 dataSource: ['tttr'],
                 context: {
                     labels: ['Truck Travel Time Reliability'],
+                    keepLabels: true,
                     units: ['singles'],
+                    keepUnits: true
                 },
                 columnOptions: [
-                    ['DVRPCTTTR'],
-                    ['NJTTTR'],
-                    ['NJDVRPCCosTTTR'],
-                    ['PATTTR'],
-                    ['PADVRPCCosTTTR'],
-                    ['BucTTTR'],
-                    ['BurlTTTR'],
-                    ['CamTTTR'],
-                    ['ChesTTTR'],
-                    ['DelTTTR'],
-                    ['GloTTTR'],
-                    ['MerTTTR'],
-                    ['MontTTTR'],
-                    ['PhiTTTRl']
+                    ['DVRPCTTTR', 'NJTTTR','NJDVRPCCosTTTR','PATTTR','PADVRPCCosTTTR','BucTTTR','BurlTTTR','CamTTTR','ChesTTTR','DelTTTR','GloTTTR','MerTTTR','MontTTTR','PhiTTTRl'],
                 ],
                 data: [
                     {
-                        'key': 'TTTR',
+                        'key': 'DVRPC Region',
                         columns: ['Year', 'DVRPCTTTR']
+                    }, 
+                    {
+                        'key': 'New Jersey',
+                        columns: ['Year', 'NJTTTR']
+                    }, 
+                    {
+                        'key': 'New Jersey DVRPC Counties',
+                        columns: ['Year', 'NJDVRPCCosTTTR']
+                    }, 
+                    {
+                        'key': 'Pennsylvania',
+                        columns: ['Year', 'PATTTR']
+                    }, 
+                    {
+                        'key': 'Pennsylvania',
+                        columns: ['Year', 'PATTTR']
+                    }, 
+                    {
+                        'key': 'Bucks',
+                        columns: ['Year', 'BucTTTR']
+                    }, 
+                    {
+                        'key': 'Burlington',
+                        columns: ['Year', 'BurlTTTR']
+                    }, 
+                    {
+                        'key': 'Camden',
+                        columns: ['Year', 'CamTTTR']
+                    }, 
+                    {
+                        'key': 'Chester',
+                        columns: ['Year', 'ChesTTTR']
+                    }, 
+                    {
+                        'key': 'Delaware',
+                        columns: ['Year', 'DelTTTR']
+                    }, 
+                    {
+                        'key': 'Gloucester',
+                        columns: ['Year', 'GloTTTR']
+                    }, 
+                    {
+                        'key': 'Mercer',
+                        columns: ['Year', 'MerTTTR']
+                    }, 
+                    {
+                        'key': 'Montgomery',
+                        columns: ['Year', 'MontTTTR']
+                    }, 
+                    {
+                        'key': 'Philadelphia',
+                        columns: ['Year', 'PhilTTTR']
                     }, 
                 ]
             },
@@ -2503,7 +2544,7 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia","Non-DVRPC Phila UZA"],
-                    ["Pennsylvania","New Jersey","Delaware","Maryland"]
+                    ["Pennsylvania","New Jersey","Delaware (state)","Maryland"]
                 ],
                 data: [
                     {
@@ -2547,14 +2588,14 @@ const snippetsRef = {
             {
                 type: ['stacked bar', 'line'],
                 container: 'chart7',
-                dataSource: ['ahphed_6a', 'ahphed_6b'],
+                dataSource: ['ahphed_4a', 'ahphed_4b'],
                 context: {
                     labels: ['Percent of Annual Hours of Peak Hour Excessive Delay', 'Annual Hours of Peak Hour Excessive Delay (Millions)'],
                     units: ['percent', 'singles'],
                 },
                 columnOptions: [
                     ["Burlington","Camden","Gloucester","Bucks","Chester","Delaware","Montgomery","Philadelphia"],
-                    ["Pennsylvania","New Jersey","Delaware","Maryland"]
+                    ["Pennsylvania","New Jersey","Delaware (state)","Maryland"]
                 ],
                 data: [
                     {

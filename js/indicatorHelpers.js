@@ -38,8 +38,6 @@ const dataVizSwitch = (type, source, toggleContext) => {
 // toggle between charts on an indicator page (params are the selectors and datasets for the given indicator page)
 const toggleChart = (selected, dataSets) => {
 
-    console.log(dataSets)
-
     // get the component pieces of the toggle ID
     let toggleID = selected.id.split('-')
 
