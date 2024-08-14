@@ -286,16 +286,6 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
         
         <hr class="indicator-content-hr" />
-
-        <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Truck Time Travel Reliability</h2>
-        </div>
-        <div class="data-viz chart2">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
-
-        <hr class="indicator-content-hr" />
         
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Reliable Roadways</h2>
@@ -303,7 +293,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Road Type
-                        <select id="viz-2" class="toggle-data-selector">
+                        <select id="viz-1" class="toggle-data-selector">
                             <option value="0">Interstate</option>
                             <option value="1">Non-Interstate</option>
                         </select>
@@ -313,13 +303,23 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Value Type 
-                        <select id="viz-2-b" class="toggle-data-selector">
+                        <select id="viz-1-b" class="toggle-data-selector">
                             <option value="0">Percent</option>
                             <option value="1">Miles</option>
                         </select>
                     </label>
                 </fieldset>
             </form>
+        </div>
+        <div class="data-viz chart2">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Truck Time Travel Reliability</h2>
         </div>
         <div class="data-viz chart3">
             <svg></svg>

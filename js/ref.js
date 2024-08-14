@@ -2318,6 +2318,90 @@ const snippetsRef = {
             {
                 type: 'line',
                 container: 'chart2',
+                dataSource: ['reliability_1a', 'reliability_1b'],
+                context: {
+                    labels: ['Percent Reliability','Miles'],
+                    units: ['percent', 'thousands'],
+                },
+                columnOptions: [
+                    ["Burl-Interstate","Cam-Interstate","Glo-Interstate","Mer-Interstate","Buc-Interstate","Ches-Interstate","Del-Interstate","Mont-Interstate","Phil-Interstate","NJDVRPCCos-Interstate","PADVRPCCos-Interstate","DVRPC-Interstate","NJ-Interstate","PA-Interstate"],
+                    ["Burl-Non-Interstate","Cam-Non-Interstate","Glo-Non-Interstate","Mer-Non-Interstate","Buc-Non-Interstate","Ches-Non-Interstate","Del-Non-Interstate","Mont-Non-Interstate","Phil-Non-Interstate","NJDVRPCCos-Non-Interstate","PADVRPCCos-Non-Interstate","DVRPC-Non-Interstate","NJ-Non-Interstate","PA-Non-Interstate"]
+                ],
+                data: [
+                    {
+                        'key': 'Burlington',
+                        disabled: true,
+                        columns: ['Year', 'Burl-Interstate']
+                    },
+                    {
+                        'key': 'Camden',
+                        disabled: true,
+                        columns: ['Year', 'Cam-Interstate']
+                    },
+                    {
+                        'key': 'Gloucester',
+                        disabled: true,
+                        columns: ['Year', 'Glo-Interstate']
+                    },
+                    {
+                        'key': 'Mercer',
+                        disabled: true,
+                        columns: ['Year', 'Mer-Interstate']
+                    },
+                    {
+                        'key': 'Bucks',
+                        disabled: true,
+                        columns: ['Year', 'Buc-Interstate']
+                    },
+                    {
+                        'key': 'Chester',
+                        disabled: true,
+                        columns: ['Year', 'Ches-Interstate']
+                    },
+                    {
+                        'key': 'Delaware',
+                        disabled: true,
+                        columns: ['Year', 'Del-Interstate']
+                    },
+                    {
+                        'key': 'Montgomery',
+                        disabled: true,
+                        columns: ['Year', 'Mont-Interstate']
+                    },
+                    {
+                        'key': 'Philadelphia',
+                        disabled: true,
+                        columns: ['Year', 'Phil-Interstate']
+                    },
+                    {
+                        'key': 'New Jersey DVRPC Counties',
+                        disabled: true,
+                        columns: ['Year', 'NJDVRPCCos-Interstate']
+                    },
+                    {
+                        'key': 'Pennsylvania DVRPC Counties',
+                        disabled: true,
+                        columns: ['Year', 'PADVRPCCos-Interstate']
+                    },
+                    {
+                        'key': 'DVRPC Region',
+                        columns: ['Year', 'DVRPC-Interstate']
+                    },
+                    {
+                        'key': 'New Jersey',
+                        disabled: true,
+                        columns: ['Year', 'NJ-Interstate']
+                    },
+                    {
+                        'key': 'Pennsylvania',
+                        disabled: true,
+                        columns: ['Year', 'PA-Interstate']
+                    },
+                ]
+            },
+            {
+                type: 'line',
+                container: 'chart3',
                 dataSource: ['tttr'],
                 context: {
                     labels: ['Truck Travel Time Reliability'],
@@ -2407,95 +2491,10 @@ const snippetsRef = {
             },
             {
                 type: 'line',
-                container: 'chart3',
-                dataSource: ['reliability_1a', 'reliability_1b'],
-                context: {
-                    labels: ['Percent Reliability','Miles'],
-                    units: ['percent', 'thousands'],
-                },
-                columnOptions: [
-                    ["Burl-Interstate","Cam-Interstate","Glo-Interstate","Mer-Interstate","Buc-Interstate","Ches-Interstate","Del-Interstate","Mont-Interstate","Phil-Interstate","NJDVRPCCos-Interstate","PADVRPCCos-Interstate","DVRPC-Interstate","NJ-Interstate","PA-Interstate"],
-                    ["Burl-Non-Interstate","Cam-Non-Interstate","Glo-Non-Interstate","Mer-Non-Interstate","Buc-Non-Interstate","Ches-Non-Interstate","Del-Non-Interstate","Mont-Non-Interstate","Phil-Non-Interstate","NJDVRPCCos-Non-Interstate","PADVRPCCos-Non-Interstate","DVRPC-Non-Interstate","NJ-Non-Interstate","PA-Non-Interstate"]
-                ],
-                data: [
-                    {
-                        'key': 'Burlington',
-                        disabled: true,
-                        columns: ['Year', 'Burl-Interstate']
-                    },
-                    {
-                        'key': 'Camden',
-                        disabled: true,
-                        columns: ['Year', 'Cam-Interstate']
-                    },
-                    {
-                        'key': 'Gloucester',
-                        disabled: true,
-                        columns: ['Year', 'Glo-Interstate']
-                    },
-                    {
-                        'key': 'Mercer',
-                        disabled: true,
-                        columns: ['Year', 'Mer-Interstate']
-                    },
-                    {
-                        'key': 'Bucks',
-                        disabled: true,
-                        columns: ['Year', 'Buc-Interstate']
-                    },
-                    {
-                        'key': 'Chester',
-                        disabled: true,
-                        columns: ['Year', 'Ches-Interstate']
-                    },
-                    {
-                        'key': 'Delaware',
-                        disabled: true,
-                        columns: ['Year', 'Del-Interstate']
-                    },
-                    {
-                        'key': 'Montgomery',
-                        disabled: true,
-                        columns: ['Year', 'Mont-Interstate']
-                    },
-                    {
-                        'key': 'Philadelphia',
-                        disabled: true,
-                        columns: ['Year', 'Phil-Interstate']
-                    },
-                    {
-                        'key': 'New Jersey DVRPC Counties',
-                        disabled: true,
-                        columns: ['Year', 'NJDVRPCCos-Interstate']
-                    },
-                    {
-                        'key': 'Pennsylvania DVRPC Counties',
-                        disabled: true,
-                        columns: ['Year', 'PADVRPCCos-Interstate']
-                    },
-                    {
-                        'key': 'DVRPC Region',
-                        columns: ['Year', 'DVRPC-Interstate']
-                    },
-                    {
-                        'key': 'New Jersey',
-                        disabled: true,
-                        columns: ['Year', 'NJ-Interstate']
-                    },
-                    {
-                        'key': 'Pennsylvania',
-                        disabled: true,
-                        columns: ['Year', 'PA-Interstate']
-                    },
-                ]
-            },
-            {
-                type: 'line',
                 container: 'chart4',
                 dataSource: ['ahphed_1a', 'ahphed_1b'],
                 context: {
-                    labels: ['Annual Hours of Peak Hour Excessive Delay'],
-                    keepLabels: true,
+                    labels: ['Annual Hours of Peak Hour Excessive Delay (Millions)', 'Annual Hours of Peak Hour Excessive Delay Per Capita'],
                     units: ['singles'],
                     keepUnits: true
                 },
