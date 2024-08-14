@@ -2500,7 +2500,7 @@ const snippetsRef = {
                 },
                 columnOptions: [
                     ["DVRPC Region","Non-DVRPC Phila UZA","Philadelphia UZA","Trenton UZA","Bucks","Burlington","Camden","Chester","Delaware","Gloucester","Mercer","Montgomery","Philadelphia", "NJ Counties", "PA Counties", "PA Suburban Counties", "Total UZA"],
-                    ["Philadelphia UZA","Trenton UZA"],
+                    ["Philadelphia UZA","Trenton UZA", "Total UZA"],
                 ],
                 data: [
                     {
