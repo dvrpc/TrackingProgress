@@ -1,5 +1,5 @@
 const chartStrings = {
-    'Air Quality': `
+  "Air Quality": `
         <h2 class="indicator-subheader">Days Violating National Ambient Air Quality Standards for Ozone and/or PM<sub>2.5</sub> by Value Type</h2>
         <div class="data-viz chart">
             <svg></svg>
@@ -27,7 +27,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Source: U.S. Environmental Protection Agency</em></small>
     `,
-    'Bridge Conditions': `
+  "Bridge Conditions": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Percentage of Deficient Bridges by Ownership Type</h2>
             <form class="double-toggle-form">
@@ -164,7 +164,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Source: National Bridge Inventory (NBI)</em></small>
     `,
-    'Commute Mode': `
+  "Commute Mode": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Share of Workers by Drive-Alone Status</h2>
             <form class="double-toggle-form">
@@ -252,7 +252,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
-    'Congestion': `
+  Congestion: `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Planning Time Index (Annual Weekday Average)</h2>
             <form class="double-toggle-form">
@@ -334,7 +334,7 @@ const chartStrings = {
             <fieldset>
                 <label>
                     Select Value Type
-                    <select id="viz-3" class="toggle-data-selector">
+                    <select id="viz-3-b" class="toggle-data-selector">
                         <option value="0">Total</option>
                         <option value="1">Per Capita</option>
                     </select>
@@ -347,7 +347,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
         `,
-    'Educational Attainment':`
+  "Educational Attainment": `
         <h2 class="indicator-subheader">Population 25 Years and Older Having Completed High-School by Geography</h2>
         <div class="data-viz chart">
             <svg></svg>
@@ -403,7 +403,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census &amp; American Community Survey, DVRPC</em></small>`,
-    'Gross Domestic Product':`
+  "Gross Domestic Product": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">GDP Growth</h2>
             <form class="double-toggle-form">
@@ -490,7 +490,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>U.S. Bureau of Economic Analysis, Real GDP by County</em></small>        `,
-    'Mortgage Lending':`
+  "Mortgage Lending": `
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Loan Origination Gap</h2>
         <form class="double-toggle-form">
@@ -632,7 +632,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Geography: * Sex, ** Ethnicity, *** Race</em></small>
         <small class="chart-src">Federal Financial Institutions Examination Council's (FFIEC) Home Mortgage Disclosure Act (HMDA) Data</small>`,
-    'Greenhouse Gas Emissions':`
+  "Greenhouse Gas Emissions": `
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Greenhouse Gas Emissions</h2>
         <form>
@@ -690,7 +690,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: National Oceanic & Atmospheric Administration's National Centers for Environmental Information</em></small>`,
-    'Housing Permits':`
+  "Housing Permits": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Percentage of Housing Units Approved in Core Cities or Developed Communities</h2>
             <form>
@@ -803,7 +803,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau, Residential Construction Statistics Division, DVRPC</em></small>`,
-    'Housing Affordability':`
+  "Housing Affordability": `
         <h2 class="indicator-subheader">Cost-Burdened Households by Geography</h2>
         <div class="toggle-wrapper">
             <form class="double-toggle-form">
@@ -976,7 +976,7 @@ const chartStrings = {
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
         <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
         `,
-    'Income':`
+  Income: `
             <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Income Change Gap between Highest Quintile &amp; Lowest Quintile Households</h2>
             <form>
@@ -1215,7 +1215,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau’s Decennial Census & American Community Survey, DVRPC</em></small>`,
-    'Business Formations':`
+  "Business Formations": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Business Formations</h2>
             <form class="double-toggle-form">
@@ -1260,7 +1260,7 @@ const chartStrings = {
 
         <small class="chart-src"><em>Geography: * Regional, ** County<br>Source: U.S. Census Bureau's Business Formation Statistics</em></small>
     `,
-    'Job Growth':`
+  "Job Growth": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Job Growth Rate by Type</h2>
             <form class="double-toggle-form">
@@ -1347,7 +1347,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: Bureau of Economic Analysis Total Full-Time and Part-Time Employment by NAICS Industry.</em></small>`,
-    'Land Consumption':`
+  "Land Consumption": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Developed and Agricultural Land by Geography</h2>
             <form class="double-toggle-form">
@@ -1492,7 +1492,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: DVRPC Protected Open Space Inventory</em></small>`,
-    'Miles Driven':`
+  "Miles Driven": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Daily Vehicle Miles Traveled (VMT) by Geography</h2>
             <form>
@@ -1534,7 +1534,7 @@ const chartStrings = {
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's American Community Survey &amp; Population Estimates Program</em></small>
         `,
-    'Pavement Conditions':`
+  "Pavement Conditions": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Percentage of Pavement in Deficient Condition by Geography</h2>
             <form>
@@ -1603,7 +1603,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>`,
-    'Population Growth':`
+  "Population Growth": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Population by Geography</h2>
             <form>
@@ -1797,7 +1797,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
-    'Community Integration':`
+  "Community Integration": `
         <h2 class="indicator-subheader">Racial/Ethnic Segregation Index</h2>
         <div class="data-viz chart">
             <svg></svg>
@@ -1811,7 +1811,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>`,
-    'Roadway Safety':`
+  "Roadway Safety": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
             <form>
@@ -1878,7 +1878,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's Population Estimates Program</em></small>`,
-    'Labor Force':`
+  "Labor Force": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes (Ages 20 to 64)</h2>
             <form>
@@ -2016,7 +2016,7 @@ const chartStrings = {
                 <svg></svg>
             </div>
             <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
-    'Transit Conditions':`
+  "Transit Conditions": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Revenue Vehicles Past their Useful Life Benchmark (ULB)</h2>
             <form class="double-toggle-form">
@@ -2160,7 +2160,7 @@ const chartStrings = {
         <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>               
 
         `,
-    'Transit Ridership':`
+  "Transit Ridership": `
        <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Annual Unlinked Trips by Transit Mode</h2>
             <form>
@@ -2204,7 +2204,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>`,
-    'Water Quality':`
+  "Water Quality": `
         <h2 class="indicator-subheader">Waterbodies Attaining Quality Standards by Geography</h2>
         <div class="data-viz chart">
             <svg></svg>
@@ -2226,6 +2226,6 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: Pennsylvania Department of Environmental Protection</em></small>`,
-}
+};
 
-export default chartStrings
+export default chartStrings;
