@@ -254,7 +254,7 @@ const chartStrings = {
         <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
   Congestion: `
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Planning Time Index (Annual Weekday Average)</h2>
+            <h2 class="indicator-subheader toggle-subheader">Planning Time Index</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>

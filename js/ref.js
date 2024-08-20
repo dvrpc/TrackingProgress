@@ -2225,18 +2225,18 @@ const snippetsRef = {
         trend: {
             status: 'neutral',
             text: {
-                stat: '1.5% less',
+                stat: '4.3% less',
                 text: `reliability on region's freeways during weekdays since 2011`
             }
         },
-        dataUrl: 'https://catalog.dvrpc.org/dataset/traffic-reliability',
+        dataUrl: 'https://catalog.dvrpc.org/dataset/congestion',
         d3: [
             {
                 type: 'line',
                 container: 'chart',
                 dataSource: ['roadwayreliablilityTOD_Fwy', 'roadwayreliablilityTOD_Local'],
                 context: {
-                    labels: ['Planning Time Index'],
+                    labels: ['Planning Time Index (Annual Weekday Average)'],
                     keepLabels: true,
                     units: ['singles'],
                     keepUnits: true
@@ -2404,7 +2404,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['tttr'],
                 context: {
-                    labels: ['Truck Travel Time Reliability'],
+                    labels: ['Truck Travel Time Reliability (Interstate Only)'],
                     keepLabels: true,
                     units: ['singles'],
                     keepUnits: true
