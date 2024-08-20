@@ -2226,7 +2226,7 @@ const snippetsRef = {
             status: 'neutral',
             text: {
                 stat: '4.3% less',
-                text: `reliability on region's freeways during weekdays since 2011`
+                text: `reliability on region's highways during weekdays since 2011`
             }
         },
         dataUrl: 'https://catalog.dvrpc.org/dataset/congestion',
