@@ -2238,7 +2238,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Planning Time Index (Annual Weekday Average)'],
                     keepLabels: true,
-                    units: ['singles'],
+                    units: ['decimals'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -2404,7 +2404,7 @@ const snippetsRef = {
                 container: 'chart3',
                 dataSource: ['tttr'],
                 context: {
-                    labels: ['Truck Travel Time Reliability (Interstate Only)'],
+                    labels: ['Truck Travel Time Reliability Index (Interstate Only)'],
                     keepLabels: true,
                     units: ['singles'],
                     keepUnits: true

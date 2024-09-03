@@ -319,7 +319,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Truck Time Travel Reliability</h2>
+            <h2 class="indicator-subheader toggle-subheader">Truck Travel Time Reliability Index</h2>
         </div>
         <div class="data-viz chart3">
             <svg></svg>

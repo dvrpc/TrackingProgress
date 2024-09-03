@@ -84,6 +84,7 @@ const axisFormats = {
     'percentD': '.1%',
     'percentC': '.3p',
     'singles': '.3n',
+    'decimals': '.2n',
     'thousands': ',.0f',
     'thousandsC': ',.3r',
     'millions': ',4r',
