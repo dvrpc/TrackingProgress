@@ -2238,7 +2238,7 @@ const snippetsRef = {
                 context: {
                     labels: ['Planning Time Index (Annual Weekday Average)'],
                     keepLabels: true,
-                    units: ['decimals'],
+                    units: ['singles'],
                     keepUnits: true
                 },
                 columnOptions: [
@@ -2321,7 +2321,7 @@ const snippetsRef = {
                 dataSource: ['reliability_1a', 'reliability_1b'],
                 context: {
                     labels: ['Percent Reliability','Miles'],
-                    units: ['percent', 'thousands'],
+                    units: ['percentD', 'hundreds'],
                 },
                 columnOptions: [
                     ["Burl-Interstate","Cam-Interstate","Glo-Interstate","Mer-Interstate","Buc-Interstate","Ches-Interstate","Del-Interstate","Mont-Interstate","Phil-Interstate","NJDVRPCCos-Interstate","PADVRPCCos-Interstate","DVRPC-Interstate","NJ-Interstate","PA-Interstate"],
