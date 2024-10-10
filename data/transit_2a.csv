@@ -1,0 +1,19 @@
+"Year","All - All - Fatalities","All - Bus - Fatalities","All - Trolleybus - Fatalities","All - Heavy Rail - Fatalities","All - Light Rail - Fatalities","SEPTA - All - Fatalities","SEPTA - Bus - Fatalities","SEPTA - Trolleybus - Fatalities","SEPTA - Heavy Rail - Fatalities","SEPTA - Light Rail - Fatalities","NJ Transit - All - Fatalities","NJ Transit - Bus - Fatalities","NJ Transit - Light Rail - Fatalities","PATCO - Heavy Rail - Fatalities","All - All - Passenger Injuries","All - Bus - Passenger Injuries","All - Trolleybus - Passenger Injuries","All - Heavy Rail - Passenger Injuries","All - Light Rail - Passenger Injuries","SEPTA - All - Passenger Injuries","SEPTA - Bus - Passenger Injuries","SEPTA - Trolleybus - Passenger Injuries","SEPTA - Heavy Rail - Passenger Injuries","SEPTA - Light Rail - Passenger Injuries","NJ Transit - All - Passenger Injuries","NJ Transit - Bus - Passenger Injuries","NJ Transit - Light Rail - Passenger Injuries","PATCO - Heavy Rail - Passenger Injuries","All - All - Employee Injuries","All - Bus - Employee Injuries","All - Trolleybus - Employee Injuries","All - Heavy Rail - Employee Injuries","All - Light Rail - Employee Injuries","SEPTA - All - Employee Injuries","SEPTA - Bus - Employee Injuries","SEPTA - Trolleybus - Employee Injuries","SEPTA - Heavy Rail - Employee Injuries","SEPTA - Light Rail - Employee Injuries","NJ Transit - All - Employee Injuries","NJ Transit - Bus - Employee Injuries","NJ Transit - Light Rail - Employee Injuries","PATCO - Heavy Rail - Employee Injuries"
+2006,9,6,,2,1,8,6,,1,1,0,0,0,1,3479,3044,,222,213,2946,2556,,177,213,488,488,0,45,26,20,,5,1,2,0,,1,1,20,20,0,4
+2007,12,5,,4,3,10,4,,4,2,2,1,1,0,2632,1976,,296,321,2156,1524,,272,321,452,452,0,24,48,47,,0,1,10,9,,0,1,38,38,0,0
+2008,6,3,0,1,2,5,2,0,1,2,1,1,0,0,2345,1711,0,195,315,1933,1347,0,152,310,369,364,5,43,317,257,0,15,42,298,244,0,13,38,17,13,4,2
+2009,11,5,0,6,0,8,2,0,6,0,3,3,0,0,2135,1259,146,178,266,1783,1003,146,97,251,271,256,15,81,285,236,1,14,34,277,236,1,8,32,2,0,2,6
+2010,10,3,0,6,1,7,1,0,5,1,2,2,0,1,2030,1519,36,203,272,1799,1341,36,164,258,192,178,14,39,217,188,0,5,24,208,184,0,5,19,9,4,5,0
+2011,9,5,0,4,0,8,4,0,4,0,1,1,0,0,1023,656,13,184,170,684,408,13,111,152,266,248,18,73,47,22,1,5,19,31,18,1,4,8,15,4,11,1
+2012,10,7,0,2,1,6,3,0,2,1,4,4,0,0,777,570,7,118,82,501,353,7,69,72,227,217,10,49,63,41,1,9,12,52,35,1,9,7,11,6,5,0
+2013,16,8,0,7,1,11,4,0,7,0,5,4,1,0,1589,1290,10,142,147,1155,897,10,111,137,403,393,10,31,177,146,0,14,17,153,129,0,14,10,24,17,7,0
+2014,12,5,0,6,1,7,1,0,5,1,4,4,0,1,1813,1504,1,178,130,1390,1128,1,140,121,385,376,9,38,193,157,1,19,16,160,130,1,17,12,31,27,4,2
+2015,10,3,0,4,3,8,1,0,4,3,2,2,0,0,2174,1844,18,175,137,1579,1308,18,127,126,547,536,11,48,256,229,0,11,16,200,180,0,11,9,56,49,7,0
+2016,23,13,0,9,1,15,8,0,6,1,5,5,0,3,2058,1728,23,190,117,1431,1142,23,161,105,598,586,12,29,256,207,4,27,18,209,170,4,23,12,43,37,6,4
+2017,13,6,0,6,1,10,3,0,6,1,3,3,0,0,1822,1399,23,229,171,1294,938,23,180,153,479,461,18,49,177,146,2,15,14,123,98,2,11,12,50,48,2,4
+2018,15,6,0,9,0,12,3,0,9,0,3,3,0,0,1692,1349,19,211,113,1141,879,19,146,97,486,470,16,65,201,147,1,28,25,132,101,1,12,18,53,46,7,16
+2019,20,8,0,12,0,13,1,0,12,0,7,7,0,0,1619,1260,4,227,128,1126,845,4,163,114,429,415,14,64,209,173,0,18,18,152,131,0,9,12,48,42,6,9
+2020,24,10,0,13,1,15,4,0,10,1,6,6,0,3,1105,819,12,214,60,787,544,12,178,53,282,275,7,36,148,128,3,11,6,110,93,3,8,6,35,35,0,3
+2021,22,9,1,11,1,17,4,1,11,1,5,5,0,0,1206,924,8,212,62,870,616,8,194,52,318,308,10,18,189,161,3,12,13,147,123,3,10,11,40,38,2,2
+2022,24,7,0,16,1,16,3,0,12,1,4,4,0,4,1281,996,13,208,64,846,590,13,185,58,412,406,6,23,200,173,2,14,11,150,130,2,7,11,43,43,0,7
+2023,12,4,0,8,0,10,2,0,8,0,2,2,0,0,651,505,4,111,31,433,301,4,99,29,206,204,2,12,96,82,1,8,5,64,53,1,6,4,30,29,1,2
