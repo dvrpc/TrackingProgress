@@ -434,116 +434,87 @@ const snippetsRef = {
         },
         dataUrl: 'https://catalog.dvrpc.org/dataset/roadway-safety',
         d3: [
-            {
-                type: 'line',
+              {
+                type: 'line and bar',
                 container: 'chart',
-                dataSource: ['crashesWeb1'],
                 context: {
-                    labels: ['KSI Total', 'KSI Per 100,000 People', 'KSI Per 100 Million VMT'],
-                    units: ['thousands', 'thousandsC', 'thousandsC'],
+                    labels: ['KSI Total', 'KSI Per 100 Million VMT', 'KSI Per Capita'],
+                    units: ['thousands', 'singles', 'singles'],
                 },
+                dataSource: ['crashes_1a', 'crashes_1b', 'crashes_1c'],
                 columnOptions: [
-                    ['DVRPC- ksi total','NJ Suburbs- ksi total','PA Suburbs- ksi total','Bucks- ksi total','Burlington- ksi total','Camden- ksi total','Chester- ksi total','Delaware- ksi total','Gloucester- ksi total','Mercer- ksi total','Montgomery- ksi total','Philadelphia- ksi total'],
-                    ['DVRPC- ksi per capita','NJ Suburbs- ksi per capita','PA Suburbs- ksi per capita','Bucks- ksi per capita','Burlington- ksi per capita','Camden- ksi per capita','Chester- ksi per capita','Delaware- ksi per capita','Gloucester- ksi per capita','Mercer- ksi per capita','Montgomery- ksi per capita','Philadelphia- ksi per capita'],
-                    ['DVRPC- ksi per VMT','NJ Suburbs- ksi per VMT','PA Suburbs- ksi per VMT','Bucks- ksi per VMT','Burlington- ksi per VMT','Camden- ksi per VMT','Chester- ksi per VMT','Delaware- ksi per VMT','Gloucester- ksi per VMT','Mercer- ksi per VMT','Montgomery- ksi per VMT','Philadelphia- ksi per VMT']
-                ],
+                    ['DVRPC Region', 'DVRPC Region - 5-Year Average'], 
+                    ['NJ Counties', 'NJ Counties - 5-Year Average'],
+                    ['PA Suburban Counties', 'PA Suburban Counties - 5-Year Average'],
+                    ['Bucks', 'Bucks - 5-Year Average'],
+                    ['Burlington', 'Burlington - 5-Year Average'],
+                    ['Camden', 'Camden - 5-Year Average'],
+                    ['Chester', 'Chester - 5-Year Average'],
+                    ['Delaware', 'Delaware - 5-Year Average'],
+                    ['Gloucester', 'Gloucester - 5-Year Average'],
+                    ['Mercer', 'Mercer - 5-Year Average'],
+                    ['Montgomery', 'Montgomery - 5-Year Average'],
+                    ['Philadelphia', 'Philadelphia - 5-Year Average'],
+                ], 
                 data: [
                     {
-                        'key': 'DVRPC Region*',
-                        'columns': ['year', 'DVRPC- ksi total']
+                        'key': 'KSI Total', 
+                        columns: ['Year', 'DVRPC Region'], 
+                        type: 'bar', 
+                        yAxis: 1, 
+                        bar: true
                     },
                     {
-                        'key': 'NJ Counties*',
-                        disabled: true,
-                        'columns': ['year', 'NJ Suburbs- ksi total']
-                    },
-                    {
-                        'key': 'PA Suburban Counties*',
-                        disabled: true,
-                        'columns': ['year', 'PA Suburbs- ksi total']
-                    },
-                    {
-                        'key': 'Bucks**',
-                        disabled: true,
-                        'columns': ['year', 'Bucks- ksi total']
-                    },
-                    {
-                        'key': 'Burlington**',
-                        disabled: true,
-                        'columns': ['year', 'Burlington- ksi total']
-                    },
-                    {
-                        'key': 'Camden**',
-                        disabled: true,
-                        'columns': ['year', 'Camden- ksi total']
-                    },
-                    {
-                        'key': 'Chester**',
-                        disabled: true,
-                        'columns': ['year', 'Chester- ksi total']
-                    },
-                    {
-                        'key': 'Delaware**',
-                        disabled: true,
-                        'columns': ['year', 'Delaware- ksi total']
-                    },
-                    {
-                        'key': 'Gloucester**',
-                        disabled: true,
-                        'columns': ['year', 'Gloucester- ksi total']
-                    },
-                    {
-                        'key': 'Mercer**',
-                        disabled: true,
-                        'columns': ['year', 'Mercer- ksi total']
-                    },
-                    {
-                        'key': 'Montgomery**',
-                        disabled: true,
-                        'columns': ['year', 'Montgomery- ksi total']
-                    },
-                    {
-                        'key': 'Philadelphia**',
-                        disabled: true,
-                        'columns': ['year', 'Philadelphia- ksi total']
-                    }
+                        'key': '5-year average', 
+                        columns: ['Year', 'DVRPC Region - 5-Year Average'],
+                        type: 'line',
+                        yAxis: 1
+                    }, 
                 ]
-            },
-            {
+          },
+          {
                 type: 'stacked bar',
                 container: 'chart2',
-                dataSource: ['crashesWeb2A', 'crashesWeb2B', 'crashesWeb2C'],
+                dataSource: ['crashes_2a','crashes_2b', 'crashes_2c'],
                 context: {
-                    labels: ['KSI Total', 'KSI Per 100,000 People', 'KSI Per 100 Million VMT'],
-                    keepLabels: false,
-                    units: ['thousands', 'thousandsC', 'thousandsC'],
+                    labels: ['KSI by Motorized and Non-Motorized - Total', 'KSI by Motorized and Non-Motorized - Per 100 Million VMT', 'KSI by Motorized and Non-Motorized - Per Capita'],
+                    units: ['hundreds', 'singles', 'singles'],
                 },
                 columnOptions: [
-                    ['DVRPC- ksiBikePed', 'DVRPC- ksiMotorVehicle'],
-                    ['PA Suburbs- ksiBikePed', 'PA Suburbs- ksiMotorVehicle'],
-                    ['NJ Suburbs- ksiBikePed', 'NJ Suburbs- ksiMotorVehicle'],
-                    ['Bucks- ksiBikePed', 'Bucks- ksiMotorVehicle'],
-                    ['Burlington- ksiBikePed', 'Burlington- ksiMotorVehicle'],
-                    ['Camden- ksiBikePed', 'Camden- ksiMotorVehicle'],
-                    ['Chester- ksiBikePed', 'Chester- ksiMotorVehicle'],
-                    ['Delaware- ksiBikePed', 'Delaware- ksiMotorVehicle'],
-                    ['Gloucester- ksiBikePed', 'Gloucester- ksiMotorVehicle'],
-                    ['Mercer- ksiBikePed', 'Mercer- ksiMotorVehicle'],
-                    ['Montgomery- ksiBikePed', 'Montgomery- ksiMotorVehicle'],
-                    ['Philadelphia- ksiBikePed', 'Philadelphia- ksiMotorVehicle']
+                    ['DVRPC Region - Motorized Killed', 'DVRPC Region - Motorized Severely Injured', 'DVRPC Region - Non-Motorized Killed', 'DVRPC Region - Non-Motorized Severely Injured'],
+                    ['NJ Counties - Motorized Killed', 'NJ Counties - Motorized Severely Injured', 'NJ Counties - Non-Motorized Killed', 'NJ Counties - Non-Motorized Severely Injured'],
+                    ['PA Suburban Counties - Motorized Killed', 'Pennsylvania Suburbs - Motorized Severely Injured', 'Pennsylvania Suburbs - Non-Motorized Killed', 'Pennsylvania Suburbs - Non-Motorized Severely Injured'],
+                    ['Bucks - Motorized Killed', 'Bucks - Motorized Severely Injured', 'Bucks - Non-Motorized Killed', 'Bucks - Non-Motorized Severely Injured'],
+                    ['Burlington - Motorized Killed', 'Burlington County- Motorized Severely Injured', 'Burlington County- Non-Motorized Killed', 'Burlington County- Non-Motorized Severely Injured'],
+                    ['Camden - Motorized Killed', 'Camden - Motorized Severely Injured', 'Camden - Non-Motorized Killed', 'Camden - Non-Motorized Severely Injured'],
+                    ['Chester - Motorized Killed', 'Chester - Motorized Severely Injured', 'Chester - Non-Motorized Killed', 'Chester - Non-Motorized Severely Injured'],
+                    ['Delaware - Motorized Killed', 'Delaware - Motorized Severely Injured', 'Delaware - Non-Motorized Killed', 'Delaware - Non-Motorized Severely Injured'],
+                    ['Gloucester - Motorized Killed', 'Gloucester - Motorized Severely Injured', 'Gloucester - Non-Motorized Killed', 'Gloucester - Non-Motorized Severely Injured'],
+                    ['Mercer - Motorized Killed', 'Mercer - Motorized Severely Injured', 'Mercer - Non-Motorized Killed', 'Mercer - Non-Motorized Severely Injured'],
+                    ['Montgomery - Motorized Killed', 'Montgomery - Motorized Severely Injured', 'Montgomery - Non-Motorized Killed', 'Montgomery - Non-Motorized Severely Injured'],
+                    ['Philadelphia - Motorized Killed', 'Philadelphia - Motorized Severely Injured', 'Philadelphia - Non-Motorized Killed', 'Philadelphia - Non-Motorized Severely Injured']
                 ],
                 data: [
                     {
-                        'key': 'Bike + Pededestrian',
-                        columns: ['year', 'DVRPC- ksiBikePed']
+                        'key': 'Motorized Fatalities',
+                        columns: ['Year', 'DVRPC Region - Motorized Killed']
                     },
                     {
-                        'key': 'Motor Vehicle',
-                        columns: ['year', 'DVRPC- ksiMotorVehicle']
+                        'key': 'Motorized Severely Injured',
+                        columns: ['Year', 'DVRPC Region - Motorized Severely Injured']
+                    },
+                    {
+                        'key': 'Non-Motorized Fatalities',
+                        columns: ['Year', 'DVRPC Region - Non-Motorized Killed']
+                    },
+                    {
+                        'key': 'Non-Motorized Serious Injuries',
+                        columns: ['Year', 'DVRPC Region - Non-Motorized Severely Injured']
                     }
                 ]
             },
-        ]
+            
+      ]
     },
     'Mortgage Lending': {
         categories: ['econo', 'transpo','equity','resil'],

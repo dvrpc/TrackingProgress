@@ -1814,14 +1814,38 @@ const chartStrings = {
   "Roadway Safety": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
-            <form>
+            <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Value Type
+                        Select Geography:
                         <select id="viz-0" class="toggle-data-selector">
-                            <option value="0">Total</option>
-                            <option value="1">Per Capita</option>
-                            <option value="2">Per Vehicle Miles Traveled</option>
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type:
+                        <select id="viz-0-b" class="toggle-data-selector">
+                            <option value="0">Totals</option>
+                            <option value="1">Rates (Per 100 Mil VMT)</option>
+                            <option value="2">Per Capita</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1830,17 +1854,16 @@ const chartStrings = {
         <div class="data-viz chart">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
 
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Mode (Annual)</h2>
+            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Geography
+                        Select Geography:
                         <select id="viz-1" class="toggle-data-selector">
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
@@ -1864,11 +1887,11 @@ const chartStrings = {
                 <span class="toggle-vr">|</span>
                 <fieldset>
                     <label>
-                        Select Value Type
+                        Select Value Type:
                         <select id="viz-1-b" class="toggle-data-selector">
-                            <option value="0">Total</option>
-                            <option value="1">Per Capita</option>
-                            <option value="2">Per Vehicle Miles Traveled</option>
+                            <option value="0">Totals</option>
+                            <option value="1">Rates (Per 100 Mil VMT)</option>
+                            <option value="2">Per Capita</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1877,7 +1900,41 @@ const chartStrings = {
         <div class="data-viz chart2">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's Population Estimates Program</em></small>`,
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Transit Agency:
+                        <select id="viz-2" class="toggle-data-selector">
+                                <option value="0">All</option>
+                                <option value="1">SEPTA</option>
+                                <option value="2">NJ Transit</option>
+                                <option value="3">PATCO</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type:
+                        <select id="viz-2-b" class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Per 100,000 Vehicle Revenue Miles</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
+`,
   "Labor Force": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes (Ages 20 to 64)</h2>

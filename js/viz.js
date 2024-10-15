@@ -103,6 +103,7 @@ const createStackedBarChart = (source, toggleContext) => {
     let container, dataSource, context;
     [container, dataSource, source, context] = formatInpus(source, toggleContext)
 
+
     d3.csv(dataSource, rows => {
 
         // create a values field based on the desired column as defined in the reference object
@@ -182,10 +183,9 @@ const createLinePlusBarChart = (source, toggleContext) => {
 
     let barSource = barIndex === 0 ? source.data[0].columns : source.data[1].columns
     let lineSource = lineIndex === 1 ? source.data[1].columns : source.data[0].columns
-
     d3.csv(dataSource, rows => {
         source.data[barIndex].values.push([ +rows[barSource[0]], rows[barSource[1]] === 'NA' ? null : +rows[barSource[1]] ]) 
-        source.data[lineIndex].values.push([ rows[lineSource[1]] === '' ? null : +rows[lineSource[0]], rows[lineSource[1]] === '' ? null : +rows[lineSource[1]] ])
+        source.data[lineIndex].values.push([ rows[lineSource[1]] === '' || isNaN(rows[lineSource[1]])  ? null : +rows[lineSource[0]], rows[lineSource[1]] === '' ? null : +rows[lineSource[1]] ])
     }, csvObj => {        
         nv.addGraph(() => {
             let chart = nv.models.linePlusBarChart()
