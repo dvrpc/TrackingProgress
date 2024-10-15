@@ -231,6 +231,8 @@ const makeIndicatorPage = hashArray => {
         replaceOld = true
     }
 
+
+  console.log(ref)
     // create the indicator page if it exists
     if(ref){
         const categories = ref.categories

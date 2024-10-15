@@ -109,7 +109,7 @@ const createStackedBarChart = (source, toggleContext) => {
         // create a values field based on the desired column as defined in the reference object
         source.data.forEach(series => {
             const x = rows[series.columns[0]]
-            const y = rows[series.columns[1]] === 'NA' ? null : +rows[series.columns[1]]
+            const y = rows[series.columns[1]] === 'NA' || isNaN(rows[series.columns[1]]) ? null : +rows[series.columns[1]]
             series.values.push({x, y})
         })
 
@@ -500,5 +500,6 @@ const createWaterfallChart = (source, toggleContext) => {
         }
     }
 }
+
 
 export {createStackedBarChart, createLinePlusBarChart, createLineChart, createBarChart, createLineAndScatterChart, createWaterfallChart};

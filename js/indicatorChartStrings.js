@@ -1811,7 +1811,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>`,
-  "Roadway Safety": `
+  "Transportation Safety": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
             <form class="double-toggle-form">
@@ -1905,7 +1905,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
+            <h2 class="indicator-subheader toggle-subheader">KSI by Motorized vs Non Motorized</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -1925,12 +1925,102 @@ const chartStrings = {
                         <select id="viz-2-b" class="toggle-data-selector">
                             <option value="0">Total</option>
                             <option value="1">Per 100,000 Vehicle Revenue Miles</option>
+                            <option value="2">Rate per Employee 200,000 Work Hours</option>
                         </select>
                     </label>
                 </fieldset>
             </form>
         </div>
         <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
+
+       <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Killed and Injured</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Transit Agency:
+                        <select id="viz-3" class="toggle-data-selector">
+                                <option value="0">All</option>
+                                <option value="1">SEPTA</option>
+                                <option value="2">NJ Transit</option>
+                                <option value="3">PATCO</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type:
+                        <select id="viz-3-b" class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Per 100,000 Vehicle Revenue Miles</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart4">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Safety Events</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Transit Agency:
+                        <select id="viz-4" class="toggle-data-selector">
+                                <option value="0">All</option>
+                                <option value="1">SEPTA</option>
+                                <option value="2">NJ Transit</option>
+                                <option value="3">PATCO</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Value Type:
+                        <select id="viz-4-b" class="toggle-data-selector">
+                            <option value="0">Total</option>
+                            <option value="1">Per 100,000 Vehicle Revenue Miles</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Annual Vehicle Revenue Miles between Failures</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Transit Agency:
+                        <select id="viz-5" class="toggle-data-selector">
+                                <option value="0">All</option>
+                                <option value="1">SEPTA</option>
+                                <option value="2">NJ Transit</option>
+                                <option value="3">PATCO</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart6">
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
