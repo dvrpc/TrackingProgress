@@ -514,13 +514,103 @@ const snippetsRef = {
                 ]
             },
             {
-                type: 'stacked bar',
+                type: 'line and bar',
                 container: 'chart3',
                 context: {
-                    labels: ['Killed', 'Killed Per 100,000 Vehicle Revenue Miles', 'Employee Injuries Per Per 200,000 Employee Work Hours'],
+                    labels: ['KSI Total', 'KSI Per 100 Million VMT', 'KSI Per Capita'],
                     units: ['thousands', 'singles', 'singles'],
                 },
                 dataSource: ['transit_1a', 'transit_1b', 'transit_3'],
+                columnOptions: [
+                    ['All - All', 'All - All - 5-Year Average'], 
+                    ['SEPTA - All', 'SEPTA - All - 5-Year Average'], 
+                    ['NJ Transit - All', 'NJ Transit - All - 5-Year Average'], 
+                    ['PATCO - Heavy Rail', 'PATCO - Heavy Rail - 5-Year Average'], 
+                ], 
+                data: [
+                    {
+                        'key': 'KSI Total', 
+                        columns: ['Year', 'All - All'], 
+                        type: 'bar', 
+                        yAxis: 1, 
+                        bar: true
+                    },
+                    {
+                        'key': '5-year average', 
+                        columns: ['Year', 'All - All - 5-Year Average'],
+                        type: 'line',
+                        yAxis: 1
+                    }, 
+                ]
+          },
+          {
+                type: 'line and bar',
+                container: 'chart4',
+                context: {
+                    labels: ['KSI Total', 'KSI Per 100 Million VMT', 'KSI Per Capita'],
+                    units: ['thousands', 'singles', 'singles'],
+                },
+                dataSource: ['transit_1a', 'transit_1b', 'transit_3'],
+                columnOptions: [
+                    ['All - All', 'All - All - 5-Year Average'], 
+                    ['SEPTA - All', 'SEPTA - All - 5-Year Average'], 
+                    ['NJ Transit - All', 'NJ Transit - All - 5-Year Average'], 
+                    ['PATCO - Heavy Rail', 'PATCO - Heavy Rail - 5-Year Average'], 
+                ], 
+                data: [
+                    {
+                        'key': 'KSI Total', 
+                        columns: ['Year', 'All - All'], 
+                        type: 'bar', 
+                        yAxis: 1, 
+                        bar: true
+                    },
+                    {
+                        'key': '5-year average', 
+                        columns: ['Year', 'All - All - 5-Year Average'],
+                        type: 'line',
+                        yAxis: 1
+                    }, 
+                ]
+          },
+          {
+                type: 'line and bar',
+                container: 'chart5',
+                context: {
+                    labels: ['Safety Events', 'Safety Events Per 100,000 Vehicle Revenue Miles'],
+                    units: ['thousands', 'singles'],
+                },
+                dataSource: ['transit_4a', 'transit_4b'],
+                columnOptions: [
+                    ['All - All', 'All - All - 5-Year Average'], 
+                    ['SEPTA - All', 'SEPTA - All - 5-Year Average'], 
+                    ['NJ Transit - All', 'NJ Transit - All - 5-Year Average'], 
+                    ['PATCO - Heavy Rail', 'PATCO - Heavy Rail - 5-Year Average'], 
+                ], 
+                data: [
+                    {
+                        'key': 'KSI Total', 
+                        columns: ['Year', 'All - All'], 
+                        type: 'bar', 
+                        yAxis: 1, 
+                        bar: true
+                    },
+                    {
+                        'key': '5-year average', 
+                        columns: ['Year', 'All - All - 5-Year Average'],
+                        type: 'line',
+                        yAxis: 1
+                    }, 
+                ]
+          },
+          {
+                type: 'stacked bar',
+                container: 'chart6',
+                context: {
+                    labels: ['Safety Events'],
+                    units: ['thousands'],
+                },
+                dataSource: ['transit_4a'],
                 columnOptions: [
                     ['All - All', 'All - Bus', 'All - Trolleybus', 'All - Heavy Rail', 'All - Light Rail'], 
                     ['SEPTA - All', 'SEPTA - Bus', 'SEPTA - Trolleybus', 'SEPTA - Heavy Rail', 'SEPTA - Light Rail'], 
@@ -552,83 +642,9 @@ const snippetsRef = {
           },
           {
                 type: 'stacked bar',
-                container: 'chart4',
+                container: 'chart7',
                 context: {
-                    labels: ['KSI Total', 'KSI Per 100 Million VMT'],
-                    units: ['thousands', 'singles', 'singles'],
-                },
-                dataSource: ['transit_2a', 'transit_2b', 'transit_3'],
-                columnOptions: [
-                    ["All - All - Fatalities","All - Bus - Fatalities","All - Trolleybus - Fatalities","All - Heavy Rail - Fatalities","All - Light Rail - Fatalities"],
-                    ["SEPTA - All - Fatalities","SEPTA - Bus - Fatalities","SEPTA - Trolleybus - Fatalities","SEPTA - Heavy Rail - Fatalities","SEPTA - Light Rail - Fatalities"],
-                    ["NJ Transit - All - Fatalities", "NJ Transit - Bus - Fatalities", "NJ Transit - Trolleybus - Fatalities", "NJ Transit - Heavy Rail - Fatalities", "NJ Transit - Light Rail - Fatalities"], 
-                    ["PATCO - All - Fatalities", "PATCO - Bus - Fatalities", "PATCO - Trolleybus - Fatalities", "PATCO - Heavy Rail - Fatalities", "PATCO - Light Rail - Fatalities"], 
-                ], 
-                data: [
-                    {
-                        'key': 'Total', 
-                        columns: ['Year', 'All - All - Fatalities'], 
-                    },
-                    {
-                        'key': 'Bus', 
-                        columns: ['Year', 'All - Bus - Fatalities'], 
-                    },
-                    {
-                        'key': 'Trolleybus', 
-                        columns: ['Year', 'All - Trolleybus - Fatalities'], 
-                    },
-                    {
-                        'key': 'Heavy Rail', 
-                        columns: ['Year', 'All - Heavy Rail - Fatalities'], 
-                    },
-                    {
-                        'key': 'Light Rail', 
-                        columns: ['Year', 'All - Light Rail - Fatalities'], 
-                    },
-                ]
-          },
-          {
-                type: 'stacked bar',
-                container: 'chart5',
-                context: {
-                    labels: ['Safety Events', 'Safety Events Per 100,000 Vehicle Revenue Miles'],
-                    units: ['thousands', 'singles'],
-                },
-                dataSource: ['transit_4a', 'transit_4b'],
-                columnOptions: [
-                    ["All - All","All - Bus","All - Trolleybus","All - Heavy Rail","All - Light Rail"],
-                    ["SEPTA - All","SEPTA - Bus","SEPTA - Trolleybus","SEPTA - Heavy Rail","SEPTA - Light Rail"],
-                    ["NJ Transit - All", "NJ Transit - Bus", "NJ Transit - Trolleybus", "NJ Transit - Heavy Rail", "NJ Transit - Light Rail"], 
-                    ["PATCO - All", "PATCO - Bus", "PATCO - Trolleybus", "PATCO - Heavy Rail", "PATCO - Light Rail"], 
-                ], 
-                data: [
-                    {
-                        'key': 'Total', 
-                        columns: ['Year', 'All - All'], 
-                    },
-                    {
-                        'key': 'Bus', 
-                        columns: ['Year', 'All - Bus'], 
-                    },
-                    {
-                        'key': 'Trolleybus', 
-                        columns: ['Year', 'All - Trolleybus'], 
-                    },
-                    {
-                        'key': 'Heavy Rail', 
-                        columns: ['Year', 'All - Heavy Rail'], 
-                    },
-                    {
-                        'key': 'Light Rail', 
-                        columns: ['Year', 'All - Light Rail'], 
-                    },
-                ]
-          },
-          {
-                type: 'line',
-                container: 'chart6',
-                context: {
-                    labels: ['Vehicle Revenue Miles Between FailuresPer 100,000 Vehicle Revenue Miles'],
+                    labels: ['Total'],
                     keepLabels: true,
                     units: ['thousands'],
                     keepUnits: true,

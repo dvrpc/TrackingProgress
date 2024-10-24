@@ -54,7 +54,7 @@ const toggleChart = (selected, dataSets) => {
     let useFirstToggle;
     const form = selected.parentElement.parentElement.parentElement
     const formLast = (form.children.length -1)
-    
+
     // handle DIRECT interaction with the second toggle (toggleID.length > 2 means the user has selected the 2nd toggle)
     if(toggleID.length > 2) {
         doubleToggle = chartNumber
@@ -231,8 +231,6 @@ const makeIndicatorPage = hashArray => {
         replaceOld = true
     }
 
-
-  console.log(ref)
     // create the indicator page if it exists
     if(ref){
         const categories = ref.categories
