@@ -867,8 +867,60 @@ const snippetsRef = {
         ],
       },
       {
-        type: "line and bar",
+        type: "stacked bar",
         container: "chart5",
+        context: {
+          labels: ["KSI Total"],
+          keepUnits: true,
+          keepLabels: true,
+          units: ["thousands"],
+        },
+        dataSource: ["transit_2a"],
+        columnOptions: [
+          [
+            "All - All - Fatalities",
+            "All - All - Passenger Injuries",
+            "All - All - Employee Injuries",
+          ],
+          [
+            "All - Bus - Fatalities",
+            "All - Bus - Passenger Injuries",
+            "All - Bus - Employee Injuries",
+          ],
+          [
+            "All - Trolleybus - Fatalities",
+            "All - Trolleybus - Passenger Injuries",
+            "All - Trolleybus - Employee Injuries",
+          ],
+          [
+            "All - Heavy Rail - Fatalities",
+            "All - Heavy Rail - Passenger Injuries",
+            "All - Heavy Rail - Employee Injuries",
+          ],
+          [
+            "All - Light Rail - Fatalities",
+            "All - Light Rail - Passenger Injuries",
+            "All - Light Rail - Employee Injuries",
+          ],
+        ],
+        data: [
+          {
+            key: "Killed",
+            columns: ["Year", "All - All - Fatalities"],
+          },
+          {
+            key: "Passenger Injuries",
+            columns: ["Year", "All - All - Passenger Injuries"],
+          },
+          {
+            key: "Employee Injuries",
+            columns: ["Year", "All - All - Employee Injuries"],
+          },
+        ],
+      },
+      {
+        type: "line and bar",
+        container: "chart6",
         context: {
           labels: [
             "Safety Events",
@@ -901,7 +953,7 @@ const snippetsRef = {
       },
       {
         type: "stacked bar",
-        container: "chart6",
+        container: "chart7",
         context: {
           labels: ["Safety Events"],
           units: ["thousands"],
@@ -962,7 +1014,7 @@ const snippetsRef = {
       },
       {
         type: "stacked bar",
-        container: "chart7",
+        container: "chart8",
         context: {
           labels: ["Total"],
           keepLabels: true,
