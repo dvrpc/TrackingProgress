@@ -1939,7 +1939,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
+            <h2 class="indicator-subheader toggle-subheader"> Killed, passenger injuries, employee injuries</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -1958,6 +1958,10 @@ const chartStrings = {
                         Select Mode:
                         <select id="viz-3-b" class="toggle-data-selector">
                             <option value="0">All</option>
+                            <option value="1">Bus</option>
+                            <option value="2">Trolleybus</option>
+                            <option value="3">Light Rail</option>
+                            <option value="4">Heavy Rail</option>
                         </select>
                     </label>
                 </fieldset>
@@ -2043,6 +2047,29 @@ const chartStrings = {
             </form>
         </div>
         <div class="data-viz chart7">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Vehicle Revenue Miles Between Failures</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Transit Agency:
+                        <select id="viz-7" class="toggle-data-selector">
+                                <option value="0">All</option>
+                                <option value="1">SEPTA</option>
+                                <option value="2">NJ Transit</option>
+                                <option value="3">PATCO</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart8">
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation,  U.S. Census Bureau's Population Estimates Program</em></small>
