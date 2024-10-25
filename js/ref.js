@@ -820,32 +820,49 @@ const snippetsRef = {
         ],
       },
       {
-        type: "stacked bars",
+        type: "stacked bar",
         container: "chart4",
         context: {
-          labels: ["KSI Total", "KSI Per 100 Million VMT", "KSI Per Capita"],
-          units: ["thousands", "singles", "singles"],
+          labels: ["KSI Total"],
+          keepUnits: true,
+          keepLabels: true,
+          units: ["thousands"],
         },
-        dataSource: ["transit_1a", "transit_1b", "transit_3"],
+        dataSource: ["transit_2a"],
         columnOptions: [
-          ["All - All", "All - All - 5-Year Average"],
-          ["SEPTA - All", "SEPTA - All - 5-Year Average"],
-          ["NJ Transit - All", "NJ Transit - All - 5-Year Average"],
-          ["PATCO - Heavy Rail", "PATCO - Heavy Rail - 5-Year Average"],
+          [
+            "All - All - Fatalities",
+            "All - All - Passenger Injuries",
+            "All - All - Employee Injuries",
+          ],
+          [
+            "SEPTA - All - Fatalities",
+            "SEPTA - All - Passenger Injuries",
+            "SEPTA - All - Employee Injuries",
+          ],
+          [
+            "NJ Transit - All - Fatalities",
+            "NJ Transit - All - Passenger Injuries",
+            "NJ Transit - All - Employee Injuries",
+          ],
+          [
+            "PATCO - Heavy Rail - Fatalities",
+            "PATCO - Heavy Rail - Passenger Injuries",
+            "PATCO - Heavy Rail - Employee Injuries",
+          ],
         ],
         data: [
           {
-            key: "KSI Total",
-            columns: ["Year", "All - All"],
-            type: "bar",
-            yAxis: 1,
-            bar: true,
+            key: "Killed",
+            columns: ["Year", "All - All - Fatalities"],
           },
           {
-            key: "5-year average",
-            columns: ["Year", "All - All - 5-Year Average"],
-            type: "line",
-            yAxis: 1,
+            key: "Passenger Injuries",
+            columns: ["Year", "All - All - Passenger Injuries"],
+          },
+          {
+            key: "Employee Injuries",
+            columns: ["Year", "All - All - Employee Injuries"],
           },
         ],
       },
@@ -944,71 +961,8 @@ const snippetsRef = {
         ],
       },
       {
-        type: "pie",
-        container: "chart7",
-        context: {
-          labels: ["Total"],
-          keepLabels: true,
-          units: ["thousands"],
-          keepUnits: true,
-        },
-        dataSource: ["transit_5"],
-        columnOptions: [
-          [
-            "All - All",
-            "All - Bus",
-            "All - Trolleybus",
-            "All - Heavy Rail",
-            "All - Light Rail",
-          ],
-          [
-            "SEPTA - All",
-            "SEPTA - Bus",
-            "SEPTA - Trolleybus",
-            "SEPTA - Heavy Rail",
-            "SEPTA - Light Rail",
-          ],
-          [
-            "NJ Transit - All",
-            "NJ Transit - Bus",
-            "NJ Transit - Trolleybus",
-            "NJ Transit - Heavy Rail",
-            "NJ Transit - Light Rail",
-          ],
-          [
-            "PATCO - All",
-            "PATCO - Bus",
-            "PATCO - Trolleybus",
-            "PATCO - Heavy Rail",
-            "PATCO - Light Rail",
-          ],
-        ],
-        data: [
-          {
-            key: "Total",
-            columns: ["Year", "All - All"],
-          },
-          {
-            key: "Bus",
-            columns: ["Year", "All - Bus"],
-          },
-          {
-            key: "Trolleybus",
-            columns: ["Year", "All - Trolleybus"],
-          },
-          {
-            key: "Heavy Rail",
-            columns: ["Year", "All - Heavy Rail"],
-          },
-          {
-            key: "Light Rail",
-            columns: ["Year", "All - Light Rail"],
-          },
-        ],
-      },
-      {
         type: "stacked bar",
-        container: "chart8",
+        container: "chart7",
         context: {
           labels: ["Total"],
           keepLabels: true,
