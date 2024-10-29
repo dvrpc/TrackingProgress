@@ -828,99 +828,47 @@ const snippetsRef = {
           keepLabels: true,
           units: ["thousands"],
         },
-        dataSource: ["transit_2a"],
+        dataSource: ["transit_2a", "transit_2b", "transit_2c", "transit_2d", "transit_2e"],
         columnOptions: [
           [
-            "All - All - Fatalities",
-            "All - All - Passenger Injuries",
-            "All - All - Employee Injuries",
+            "All - Fatalities",
+            "All - Passenger Injuries",
+            "All - Employee Injuries",
           ],
           [
-            "SEPTA - All - Fatalities",
-            "SEPTA - All - Passenger Injuries",
-            "SEPTA - All - Employee Injuries",
+            "SEPTA - Fatalities",
+            "SEPTA - Passenger Injuries",
+            "SEPTA - Employee Injuries",
           ],
           [
-            "NJ Transit - All - Fatalities",
-            "NJ Transit - All - Passenger Injuries",
-            "NJ Transit - All - Employee Injuries",
+            "NJ Transit - Fatalities",
+            "NJ Transit - Passenger Injuries",
+            "NJ Transit - Employee Injuries",
           ],
           [
-            "PATCO - Heavy Rail - Fatalities",
-            "PATCO - Heavy Rail - Passenger Injuries",
-            "PATCO - Heavy Rail - Employee Injuries",
+            "PATCO - Fatalities",
+            "PATCO - Passenger Injuries",
+            "PATCO - Employee Injuries",
           ],
         ],
         data: [
           {
             key: "Killed",
-            columns: ["Year", "All - All - Fatalities"],
+            columns: ["Year", "All - Fatalities"],
           },
           {
             key: "Passenger Injuries",
-            columns: ["Year", "All - All - Passenger Injuries"],
+            columns: ["Year", "All - Passenger Injuries"],
           },
           {
             key: "Employee Injuries",
-            columns: ["Year", "All - All - Employee Injuries"],
-          },
-        ],
-      },
-      {
-        type: "stacked bar",
-        container: "chart5",
-        context: {
-          labels: ["KSI Total"],
-          keepUnits: true,
-          keepLabels: true,
-          units: ["thousands"],
-        },
-        dataSource: ["transit_2a"],
-        columnOptions: [
-          [
-            "All - All - Fatalities",
-            "All - All - Passenger Injuries",
-            "All - All - Employee Injuries",
-          ],
-          [
-            "All - Bus - Fatalities",
-            "All - Bus - Passenger Injuries",
-            "All - Bus - Employee Injuries",
-          ],
-          [
-            "All - Trolleybus - Fatalities",
-            "All - Trolleybus - Passenger Injuries",
-            "All - Trolleybus - Employee Injuries",
-          ],
-          [
-            "All - Heavy Rail - Fatalities",
-            "All - Heavy Rail - Passenger Injuries",
-            "All - Heavy Rail - Employee Injuries",
-          ],
-          [
-            "All - Light Rail - Fatalities",
-            "All - Light Rail - Passenger Injuries",
-            "All - Light Rail - Employee Injuries",
-          ],
-        ],
-        data: [
-          {
-            key: "Killed",
-            columns: ["Year", "All - All - Fatalities"],
-          },
-          {
-            key: "Passenger Injuries",
-            columns: ["Year", "All - All - Passenger Injuries"],
-          },
-          {
-            key: "Employee Injuries",
-            columns: ["Year", "All - All - Employee Injuries"],
+            columns: ["Year", "All - Employee Injuries"],
           },
         ],
       },
       {
         type: "line and bar",
-        container: "chart6",
+        container: "chart5",
         context: {
           labels: [
             "Safety Events",
@@ -953,7 +901,7 @@ const snippetsRef = {
       },
       {
         type: "stacked bar",
-        container: "chart7",
+        container: "chart6",
         context: {
           labels: ["Safety Events"],
           units: ["thousands"],
@@ -1014,7 +962,7 @@ const snippetsRef = {
       },
       {
         type: "stacked bar",
-        container: "chart8",
+        container: "chart7",
         context: {
           labels: ["Total"],
           keepLabels: true,
