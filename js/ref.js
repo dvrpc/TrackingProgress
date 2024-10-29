@@ -899,130 +899,69 @@ const snippetsRef = {
           },
         ],
       },
-      {
-        type: "stacked bar",
-        container: "chart6",
-        context: {
-          labels: ["Safety Events"],
-          units: ["thousands"],
-        },
-        dataSource: ["transit_4a"],
-        columnOptions: [
-          [
-            "All - All",
-            "All - Bus",
-            "All - Trolleybus",
-            "All - Heavy Rail",
-            "All - Light Rail",
-          ],
-          [
-            "SEPTA - All",
-            "SEPTA - Bus",
-            "SEPTA - Trolleybus",
-            "SEPTA - Heavy Rail",
-            "SEPTA - Light Rail",
-          ],
-          [
-            "NJ Transit - All",
-            "NJ Transit - Bus",
-            "NJ Transit - Trolleybus",
-            "NJ Transit - Heavy Rail",
-            "NJ Transit - Light Rail",
-          ],
-          [
-            "PATCO - All",
-            "PATCO - Bus",
-            "PATCO - Trolleybus",
-            "PATCO - Heavy Rail",
-            "PATCO - Light Rail",
-          ],
-        ],
-        data: [
-          {
-            key: "Total",
-            columns: ["Year", "All - All"],
-          },
-          {
-            key: "Bus",
-            columns: ["Year", "All - Bus"],
-          },
-          {
-            key: "Trolleybus",
-            columns: ["Year", "All - Trolleybus"],
-          },
-          {
-            key: "Heavy Rail",
-            columns: ["Year", "All - Heavy Rail"],
-          },
-          {
-            key: "Light Rail",
-            columns: ["Year", "All - Light Rail"],
-          },
-        ],
-      },
-      {
-        type: "stacked bar",
-        container: "chart7",
-        context: {
-          labels: ["Total"],
-          keepLabels: true,
-          units: ["thousands"],
-          keepUnits: true,
-        },
-        dataSource: ["transit_5"],
-        columnOptions: [
-          [
-            "All - All",
-            "All - Bus",
-            "All - Trolleybus",
-            "All - Heavy Rail",
-            "All - Light Rail",
-          ],
-          [
-            "SEPTA - All",
-            "SEPTA - Bus",
-            "SEPTA - Trolleybus",
-            "SEPTA - Heavy Rail",
-            "SEPTA - Light Rail",
-          ],
-          [
-            "NJ Transit - All",
-            "NJ Transit - Bus",
-            "NJ Transit - Trolleybus",
-            "NJ Transit - Heavy Rail",
-            "NJ Transit - Light Rail",
-          ],
-          [
-            "PATCO - All",
-            "PATCO - Bus",
-            "PATCO - Trolleybus",
-            "PATCO - Heavy Rail",
-            "PATCO - Light Rail",
-          ],
-        ],
-        data: [
-          {
-            key: "Total",
-            columns: ["Year", "All - All"],
-          },
-          {
-            key: "Bus",
-            columns: ["Year", "All - Bus"],
-          },
-          {
-            key: "Trolleybus",
-            columns: ["Year", "All - Trolleybus"],
-          },
-          {
-            key: "Heavy Rail",
-            columns: ["Year", "All - Heavy Rail"],
-          },
-          {
-            key: "Light Rail",
-            columns: ["Year", "All - Light Rail"],
-          },
-        ],
-      },
+      // {
+      //   type: "stacked bar",
+      //   container: "chart6",
+      //   context: {
+      //     labels: ["Total"],
+      //     keepLabels: true,
+      //     units: ["thousands"],
+      //     keepUnits: true,
+      //   },
+      //   dataSource: ["transit_5"],
+      //   columnOptions: [
+      //     [
+      //       "All - All",
+      //       "All - Bus",
+      //       "All - Trolleybus",
+      //       "All - Heavy Rail",
+      //       "All - Light Rail",
+      //     ],
+      //     [
+      //       "SEPTA - All",
+      //       "SEPTA - Bus",
+      //       "SEPTA - Trolleybus",
+      //       "SEPTA - Heavy Rail",
+      //       "SEPTA - Light Rail",
+      //     ],
+      //     [
+      //       "NJ Transit - All",
+      //       "NJ Transit - Bus",
+      //       "NJ Transit - Trolleybus",
+      //       "NJ Transit - Heavy Rail",
+      //       "NJ Transit - Light Rail",
+      //     ],
+      //     [
+      //       "PATCO - All",
+      //       "PATCO - Bus",
+      //       "PATCO - Trolleybus",
+      //       "PATCO - Heavy Rail",
+      //       "PATCO - Light Rail",
+      //     ],
+      //   ],
+      //   data: [
+      //     {
+      //       key: "Total",
+      //       columns: ["Year", "All - All"],
+      //     },
+      //     {
+      //       key: "Bus",
+      //       columns: ["Year", "All - Bus"],
+      //     },
+      //     {
+      //       key: "Trolleybus",
+      //       columns: ["Year", "All - Trolleybus"],
+      //     },
+      //     {
+      //       key: "Heavy Rail",
+      //       columns: ["Year", "All - Heavy Rail"],
+      //     },
+      //     {
+      //       key: "Light Rail",
+      //       columns: ["Year", "All - Light Rail"],
+      //     },
+      //   ],
+      // },
     ],
   },
   "Mortgage Lending": {
