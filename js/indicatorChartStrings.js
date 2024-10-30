@@ -1813,7 +1813,7 @@ const chartStrings = {
         <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>`,
   "Transportation Safety": `
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
+            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -1844,7 +1844,7 @@ const chartStrings = {
                         Select Value Type:
                         <select id="viz-0-b" class="toggle-data-selector">
                             <option value="0">Totals</option>
-                            <option value="1">Rates (Per 100 Mil VMT)</option>
+                            <option value="1">Per 100 Million VMT</option>
                             <option value="2">Per Capita</option>
                         </select>
                     </label>
@@ -1859,7 +1859,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Safety Events by Geography</h2>
+            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Crash Type</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -1890,7 +1890,7 @@ const chartStrings = {
                         Select Value Type:
                         <select id="viz-1-b" class="toggle-data-selector">
                             <option value="0">Totals</option>
-                            <option value="1">Rates (Per 100 Mil VMT)</option>
+                            <option value="1">Per 100 Million VMT</option>
                             <option value="2">Per Capita</option>
                         </select>
                     </label>
@@ -1905,7 +1905,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Individuals Killed or Seriously Injured (KSI) on Roadways by Geography (Five-Year Average)</h2>
+            <h2 class="indicator-subheader toggle-subheader">Killed and Injured on Transit</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -1925,7 +1925,7 @@ const chartStrings = {
                         <select id="viz-2-b" class="toggle-data-selector">
                             <option value="0">Total</option>
                             <option value="1">Per 100,000 Vehicle Revenue Miles</option>
-                            <option value="2">Rate per Employee 200,000 Work Hours</option>
+                            <option value="2">Per 200,000 Employee Work Hours</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1940,7 +1940,7 @@ const chartStrings = {
 
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader"> Killed, Passenger Injuries, Employee Injuries</h2>
+            <h2 class="indicator-subheader toggle-subheader">Fatalities, Passenger Injuries, and Employee Injuries on Transit</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -1976,7 +1976,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Safety Events By Agency</h2>
+            <h2 class="indicator-subheader toggle-subheader">Transit Safety Events</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
