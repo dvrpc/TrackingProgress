@@ -1843,7 +1843,7 @@ const chartStrings = {
                     <label>
                         Select Value Type:
                         <select id="viz-0-b" class="toggle-data-selector">
-                            <option value="0">Totals</option>
+                            <option value="0">Total</option>
                             <option value="1">Per 100 Million VMT</option>
                             <option value="2">Per Capita</option>
                         </select>
@@ -1889,7 +1889,7 @@ const chartStrings = {
                     <label>
                         Select Value Type:
                         <select id="viz-1-b" class="toggle-data-selector">
-                            <option value="0">Totals</option>
+                            <option value="0">Total</option>
                             <option value="1">Per 100 Million VMT</option>
                             <option value="2">Per Capita</option>
                         </select>
@@ -1925,7 +1925,6 @@ const chartStrings = {
                         <select id="viz-2-b" class="toggle-data-selector">
                             <option value="0">Total</option>
                             <option value="1">Per 100,000 Vehicle Revenue Miles</option>
-                            <option value="2">Per 200,000 Employee Work Hours</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1994,7 +1993,7 @@ const chartStrings = {
                     <label>
                         Select Value Type:
                         <select id="viz-4-b" class="toggle-data-selector">
-                            <option value="0">Totals</option>
+                            <option value="0">Total</option>
                             <option value="1">Per 100,000 Vehicle Revenue Miles</option>
                         </select>
                     </label>

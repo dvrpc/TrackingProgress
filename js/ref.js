@@ -644,7 +644,7 @@ const snippetsRef = {
         text: `in fatalities and severe injuries since 2015`,
       },
     },
-    dataUrl: "https://catalog.dvrpc.org/dataset/roadway-safety",
+    dataUrl: "https://catalog.dvrpc.org/dataset/transportation-safety",
     d3: [
       {
         type: "line and bar",
@@ -657,7 +657,10 @@ const snippetsRef = {
         columnOptions: [
           ["DVRPC Region - Total", "DVRPC Region - 5-Year Average"],
           ["NJ Counties - Total", "NJ Counties - 5-Year Average"],
-          ["PA Suburban Counties - Total", "PA Suburban Counties - 5-Year Average"],
+          [
+            "PA Suburban Counties - Total",
+            "PA Suburban Counties - 5-Year Average",
+          ],
           ["Bucks - Total", "Bucks - 5-Year Average"],
           ["Burlington - Total", "Burlington - 5-Year Average"],
           ["Camden - Total", "Camden - 5-Year Average"],
@@ -776,7 +779,7 @@ const snippetsRef = {
             columns: ["Year", "DVRPC Region - Motorized Killed"],
           },
           {
-            key: "Motorized Severely Injured",
+            key: "Motorized Severe Injuries",
             columns: ["Year", "DVRPC Region - Motorized Severely Injured"],
           },
           {
@@ -796,7 +799,7 @@ const snippetsRef = {
           labels: ["KSI Total", "KSI Per 100 Million VMT", "KSI Per Capita"],
           units: ["thousands", "singles", "singles"],
         },
-        dataSource: ["transit_1a", "transit_1b", "transit_3"],
+        dataSource: ["transit_1a", "transit_1b"],
         columnOptions: [
           ["All - All", "All - All - 5-Year Average"],
           ["SEPTA - All", "SEPTA - All - 5-Year Average"],
@@ -828,7 +831,13 @@ const snippetsRef = {
           keepLabels: true,
           units: ["thousands"],
         },
-        dataSource: ["transit_2a", "transit_2b", "transit_2c", "transit_2d", "transit_2e"],
+        dataSource: [
+          "transit_2a",
+          "transit_2b",
+          "transit_2c",
+          "transit_2d",
+          "transit_2e",
+        ],
         columnOptions: [
           [
             "All - Fatalities",
