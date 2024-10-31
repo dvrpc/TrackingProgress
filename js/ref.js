@@ -684,6 +684,7 @@ const snippetsRef = {
             columns: ["Year", "DVRPC Region - 5-Year Average"],
             type: "line",
             yAxis: 1,
+            hideYAxis: true 
           },
         ],
       },
@@ -713,7 +714,7 @@ const snippetsRef = {
             "NJ Counties - Non-Motorized Severely Injured",
           ],
           [
-            "PA Suburban Counties - Motorized Killed",
+            "Pennsylvania Suburbs - Motorized Killed",
             "Pennsylvania Suburbs - Motorized Severely Injured",
             "Pennsylvania Suburbs - Non-Motorized Killed",
             "Pennsylvania Suburbs - Non-Motorized Severely Injured",
@@ -799,7 +800,7 @@ const snippetsRef = {
           labels: ["KSI Total", "KSI Per 100 Million VMT", "KSI Per Capita"],
           units: ["thousands", "singles", "singles"],
         },
-        dataSource: ["transit_1a", "transit_1b"],
+        dataSource: ["transit_1a", "transit_1b", "transit_1c"],
         columnOptions: [
           ["All - All", "All - All - 5-Year Average"],
           ["SEPTA - All", "SEPTA - All - 5-Year Average"],
@@ -819,6 +820,7 @@ const snippetsRef = {
             columns: ["Year", "All - All - 5-Year Average"],
             type: "line",
             yAxis: 1,
+            hideYAxis: true
           },
         ],
       },
@@ -905,6 +907,7 @@ const snippetsRef = {
             columns: ["Year", "All - All - 5-Year Average"],
             type: "line",
             yAxis: 1,
+            hideYAxis: true
           },
         ],
       },

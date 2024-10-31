@@ -193,10 +193,13 @@ const createLinePlusBarChart = (source, toggleContext) => {
                 .focusEnable(false)
                 .x(d => d[0])
                 .y((d, i) => d[1])
-
+                
             let barMax = 0, lineMax = 0
             source.data[barIndex].values.forEach((val) => barMax = Math.max(barMax, val[1]))
             source.data[lineIndex].values.forEach((val) => lineMax = Math.max(lineMax, val[1]))
+
+           source.data[lineIndex].hideYAxis && chart.y2Axis
+              .tickFormat(function(d) { return null });
 
             // set yMax
             chart.lines.forceY(source.range || [0, Math.max(barMax, lineMax)])
@@ -208,7 +211,7 @@ const createLinePlusBarChart = (source, toggleContext) => {
             chart.legend.maxKeyLength(100)
 
             // format yAxis units and labels if necessary
-            if(context) formatLabels(chart.y1Axis, chart.xAxis, context, chart.y2Axis)
+            if(context) formatLabels(chart.y1Axis, chart.xAxis, context, !source.data[lineIndex].hideYAxis && chart.y2Axis)
 
             d3.select(container).datum(source.data).transition().duration(500).call(chart)
 
