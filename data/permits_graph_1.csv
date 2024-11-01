@@ -1,4 +1,4 @@
-year,ratio_annual,ratio_cumulative
+"year","ratio_annual","ratio_cumulative"
 1980,0.656,0.656
 1981,0.622,0.642
 1982,0.592,0.626
@@ -41,4 +41,5 @@ year,ratio_annual,ratio_cumulative
 2019,0.689,0.499
 2020,0.677,0.503
 2021,0.853,0.522
-2022,0.617,0.524
+2022,0.615,0.524
+2023,0.645,0.527
