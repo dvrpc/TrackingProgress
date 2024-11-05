@@ -684,7 +684,7 @@ const snippetsRef = {
             columns: ["Year", "DVRPC Region - 5-Year Average"],
             type: "line",
             yAxis: 1,
-            hideYAxis: true 
+            hideYAxis: true,
           },
         ],
       },
@@ -820,7 +820,7 @@ const snippetsRef = {
             columns: ["Year", "All - All - 5-Year Average"],
             type: "line",
             yAxis: 1,
-            hideYAxis: true
+            hideYAxis: true,
           },
         ],
       },
@@ -907,7 +907,7 @@ const snippetsRef = {
             columns: ["Year", "All - All - 5-Year Average"],
             type: "line",
             yAxis: 1,
-            hideYAxis: true
+            hideYAxis: true,
           },
         ],
       },
@@ -5512,7 +5512,7 @@ const snippetsRef = {
     trend: {
       status: "awesome",
       text: {
-        stat: "80% growth",
+        stat: "95% growth",
         text: `in business formations since 2005`,
       },
     },
