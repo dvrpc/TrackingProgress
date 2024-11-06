@@ -5513,7 +5513,7 @@ const snippetsRef = {
       status: "awesome",
       text: {
         stat: "95% growth",
-        text: `in business formations since 2005`,
+        text: `in average annual applications`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/business-formations",
