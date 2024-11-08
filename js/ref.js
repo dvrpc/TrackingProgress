@@ -2,10 +2,10 @@ const snippetsRef = {
   "Air Quality": {
     categories: ["enviro", "transpo", "sustain", "equity"],
     trend: {
-      status: "awesome",
+      status: "good",
       text: {
-        stat: "62 fewer",
-        text: `days annually violating air quality standards since 2002's 5-year average`,
+        stat: "One day",
+        text: `increase in five-year average of violating days since 2022`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/air-quality-violations",
