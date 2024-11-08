@@ -638,10 +638,10 @@ const snippetsRef = {
   "Transportation Safety": {
     categories: ["transpo", "equity"],
     trend: {
-      status: "not-great",
+      status: "bad",
       text: {
-        stat: "2.5% increase",
-        text: `in fatalities and severe injuries since 2015`,
+        stat: "60.5% increase",
+        text: `in fatalities and severe injuries since 2014`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/transportation-safety",
