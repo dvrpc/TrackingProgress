@@ -692,7 +692,7 @@ const chartStrings = {
         <small class="chart-src"><em>Source: National Oceanic & Atmospheric Administration's National Centers for Environmental Information</em></small>`,
   "Housing Permits": `
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Percentage of Regional Housing Unit Permits Approved in Core Cities and Developed Communities</h2>
+            <h2 class="indicator-subheader toggle-subheader">Share of Regional Housing Unit Permits Approved in Core Cities and Developed Communities</h2>
             <form>
                 <fieldset>
                     <label>
