@@ -1466,10 +1466,10 @@ const snippetsRef = {
   "Housing Permits": {
     categories: ["comm", "econo", "enviro", "sustain"],
     trend: {
-      status: "good",
+      status: "awesome",
       text: {
-        stat: "27.9% more",
-        text: `permits in Core Cities and Developed Communities since 1999 low`,
+        stat: "1.42 times more",
+        text: `permits in Core Cities and Developed Communities since 2009`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/housing-permits",
