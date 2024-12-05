@@ -4927,7 +4927,7 @@ const snippetsRef = {
     trend: {
       status: "bad",
       text: {
-        stat: "44% decrease",
+        stat: "37% decrease",
         text: `in transit trips per person since 2019`,
       },
     },
