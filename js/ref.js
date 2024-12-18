@@ -109,7 +109,7 @@ const snippetsRef = {
             "VMT Per Vehicle",
           ],
           keepLabels: false,
-          units: ["thousands"],
+          units: ["singles"],
           keepUnits: true,
         },
         columnOptions: [
