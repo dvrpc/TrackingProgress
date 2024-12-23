@@ -1512,7 +1512,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
-        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's American Community Survey &amp; Population Estimates Program</em></small>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation Highway Statistics, U.S. Census Bureau's American Community Survey &amp; Population Estimates Program</em></small>
         
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Personal Vehicles by Geography</h2>
@@ -1532,7 +1532,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Geography: * Regional, ** County</em></small>
-        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation, U.S. Census Bureau's American Community Survey &amp; Population Estimates Program</em></small>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation Highway Statistics, U.S. Census Bureau's American Community Survey &amp; Population Estimates Program</em></small>
         `,
   "Pavement Conditions": `
         <div class="toggle-wrapper">
