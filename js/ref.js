@@ -92,8 +92,8 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "6.5% fewer",
-        text: `daily miles driven annually per person since 2000`,
+        stat: "0.5% decrease",
+        text: `in daily miles driven per person since 2000`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/vehicle-miles-traveled",
