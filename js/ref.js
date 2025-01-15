@@ -2640,7 +2640,7 @@ const snippetsRef = {
     trend: {
       status: "not-great",
       text: {
-        stat: "41 to 52%",
+        stat: "40 to 51%",
         text: `of residents not living in diverse communities`,
       },
     },
