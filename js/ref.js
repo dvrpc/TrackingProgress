@@ -2689,7 +2689,7 @@ const snippetsRef = {
     trend: {
       status: "bad",
       text: {
-        stat: "20-36% remaining",
+        stat: "20-35% remaining",
         text: `income gaps between groups`,
       },
     },
