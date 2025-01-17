@@ -3527,6 +3527,7 @@ const snippetsRef = {
           "roadwayreliablilityTOD_Fwy",
           "roadwayreliablilityTOD_Local",
         ],
+        range: [1, 1.6],
         context: {
           labels: ["Planning Time Index (Annual Weekday Average)"],
           keepLabels: true,
