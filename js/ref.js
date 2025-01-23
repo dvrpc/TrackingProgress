@@ -1697,8 +1697,8 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "752,000 cost-burdened households",
-        text: `down 10% since 2011 peak`,
+        stat: "9% fewer",
+        text: `or 79,000 less, cost burdened households since 2011`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/housing-affordability",
