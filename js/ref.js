@@ -1771,7 +1771,7 @@ const snippetsRef = {
       {
         type: "bar",
         container: "chart2",
-        dataSource: ["housing_afford_graph_1"],
+        dataSource: ["housing_afford_graph_1a"],
         context: {
           labels: ["Percentage of Households"],
           units: ["percentC"],
