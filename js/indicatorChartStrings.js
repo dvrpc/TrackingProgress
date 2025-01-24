@@ -215,24 +215,22 @@ const chartStrings = {
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Geography
+                        Select Mode 
                         <select id="viz-1" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="3">Bucks</option>
-                                <option value="4">Burlington</option>
-                                <option value="5">Camden</option>
-                                <option value="6">Chester</option>
-                                <option value="7">Delaware</option>
-                                <option value="8">Gloucester</option>
-                                <option value="9">Mercer</option>
-                                <option value="10">Montgomery</option>
-                                <option value="11">Philadelphia</option>
-                            </optgroup>
+                                <option value="0">Carpool</option>
+                                <option value="1">Public Transit</option>
+                                <option value="2">Walked</option>
+                                <option value="3">Biked</option>
+                                <option value="4">Taxi, Motorcycle, Other</option>
+                                <option value="5">Worked From Home</option>
+                                <option value="6">Bus</option>
+                                <option value="7">Rail</option>
+                                <option value="8">Subway</option>
+                                <option value="9">Trolley or Light Rail</option>
+                                <option value="10">Ferryboat</option>
+                                <option value="11">Motorcycle</option>
+                                <option value="12">Other Means</option>
+                                <option value="13">Taxi</option>
                         </select>
                     </label>
                 </fieldset>
