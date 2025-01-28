@@ -166,7 +166,7 @@ const chartStrings = {
     `,
   "Commute Mode": `
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Share of Workers by Drive-Alone Status</h2>
+            <h2 class="indicator-subheader toggle-subheader">Means of Transportation to Work by Mode</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -211,26 +211,28 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Non-Drive-Alone Workers by Means of Transportation to Work</h2>
+            <h2 class="indicator-subheader toggle-subheader">Means of Transportation to Work by Geography</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
                         Select Mode 
                         <select id="viz-1" class="toggle-data-selector">
-                                <option value="0">Carpool</option>
-                                <option value="1">Public Transit</option>
-                                <option value="2">Walked</option>
-                                <option value="3">Biked</option>
-                                <option value="4">Taxi, Motorcycle, Other</option>
-                                <option value="5">Worked From Home</option>
-                                <option value="6">Bus</option>
-                                <option value="7">Rail</option>
-                                <option value="8">Subway</option>
-                                <option value="9">Trolley or Light Rail</option>
-                                <option value="10">Ferryboat</option>
-                                <option value="11">Motorcycle</option>
-                                <option value="12">Other Means</option>
-                                <option value="13">Taxi</option>
+                                <option value="0">Drove Alone</option>
+                                <option value="1">Non-SOV</option>
+                                <option value="2">Carpool</option>
+                                <option value="3">Public Transit</option>
+                                <option value="4">Walked</option>
+                                <option value="5">Biked</option>
+                                <option value="6">Taxi, Motorcycle, Other</option>
+                                <option value="7">Worked From Home</option>
+                                <option value="8">Bus</option>
+                                <option value="9">Rail</option>
+                                <option value="10">Subway</option>
+                                <option value="11">Trolley or Light Rail</option>
+                                <option value="12">Ferryboat</option>
+                                <option value="13">Motorcycle</option>
+                                <option value="14">Other Means</option>
+                                <option value="15">Taxi</option>
                         </select>
                     </label>
                 </fieldset>
@@ -249,7 +251,43 @@ const chartStrings = {
         <div class="data-viz chart2">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
+        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Means of Transportation to Work by Geography</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Mode 
+                        <select id="viz-2" class="toggle-data-selector">
+                                <option value="0">Drove Alone</option>
+                                <option value="1">Non-SOV</option>
+                                <option value="2">Carpool</option>
+                                <option value="3">Public Transit</option>
+                                <option value="4">Walked</option>
+                                <option value="5">Biked</option>
+                                <option value="6">Taxi, Motorcycle, Other</option>
+                                <option value="7">Worked From Home</option>
+                                <option value="8">Bus</option>
+                                <option value="9">Rail</option>
+                                <option value="10">Subway</option>
+                                <option value="11">Trolley or Light Rail</option>
+                                <option value="12">Ferryboat</option>
+                                <option value="13">Motorcycle</option>
+                                <option value="14">Other Means</option>
+                                <option value="15">Taxi</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
+`,
   Congestion: `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Planning Time Index</h2>
