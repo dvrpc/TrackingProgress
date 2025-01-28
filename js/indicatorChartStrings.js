@@ -256,7 +256,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Means of Transportation to Work by Geography</h2>
+            <h2 class="indicator-subheader toggle-subheader">Means of Transportation to Work by Urban Area</h2>
             <form>
                 <fieldset>
                     <label>
