@@ -188,6 +188,10 @@ const chartStrings = {
                                 <option value="10">Montgomery</option>
                                 <option value="11">Philadelphia</option>
                             </optgroup>
+                            <optgroup label="Urbanized Areas">
+                                <option value="12">Philadelphia</option>
+                                <option value="13">Trenton</option>
+                            </optgroup>
                         </select>
                     </label>
                 </fieldset>
