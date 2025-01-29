@@ -5278,17 +5278,9 @@ const snippetsRef = {
             "philuzapool",
             "philuzatransit",
             "philuzawalk",
-            "philuzabike",
             "philuzatmo",
-            "philuzawfh",
-            "philuzabus",
-            "philuzarail",
-            "philuzasubw",
-            "philuzatroll",
-            "philuzaferry",
-            "philuzamcyc",
             "philuzaother",
-            "philuzataxi",
+            "philuzawfh"
           ],
           [
             "trenuzasov",
@@ -5296,17 +5288,9 @@ const snippetsRef = {
             "trenuzapool",
             "trenuzatransit",
             "trenuzawalk",
-            "trenuzabike",
             "trenuzatmo",
-            "trenuzawfh",
-            "trenuzabus",
-            "trenuzarail",
-            "trenuzasubw",
-            "trenuzatroll",
-            "trenuzaferry",
-            "trenuzamcyc",
             "trenuzaother",
-            "trenuzataxi",
+            "trenuzawfh"         
           ],
         ],
         data: [
@@ -5315,7 +5299,7 @@ const snippetsRef = {
             columns: ["year", "philuzasov"],
           },
           {
-            key: "Other Means",
+            key: "Non-SOV",
             columns: ["year", "philuzanonsov"],
           },
           {
@@ -5329,54 +5313,18 @@ const snippetsRef = {
             disabled: true
           },
           {
-            key: "Bus",
-            columns: ["year", "philuzabus"],
-            disabled: true
-          },
-          {
-            key: "Rail",
-            columns: ["year", "philuzarail"],
-            disabled: true
-          },
-          {
-            key: "Subway",
-            columns: ["year", "philuzasubw"],
-            disabled: true
-          },
-          {
-            key: "Trolley or Light Rail",
-            columns: ["year", "philuzatroll"],
-            disabled: true
-          },
-          {
-            key: "Ferry",
-            columns: ["year", "philuzaferry"],
-            disabled: true
-          },
-
-          {
             key: "Walked",
             columns: ["year", "philuzawalk"],
             disabled: true
           },
           {
-            key: "Biked",
-            columns: ["year", "philuzabike"],
-            disabled: true
-          },
-          {
             key: "Taxi, Motorcycle, or Other",
-            columns: ["year", "philuzabike"],
+            columns: ["year", "philuzatmo"],
             disabled: true
           },
           {
-            key: "Taxi",
-            columns: ["year", "philuzataxi"],
-            disabled: true
-          },
-          {
-            key: "Motorcycle",
-            columns: ["year", "philuzamcyc"],
+            key: "Other Means",
+            columns: ["year", "philuzaother"],
             disabled: true
           },
           {
