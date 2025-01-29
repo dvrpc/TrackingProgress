@@ -223,8 +223,8 @@ const chartStrings = {
                                 <option value="3">Public Transit</option>
                                 <option value="4">Walked</option>
                                 <option value="5">Biked</option>
-                                <option value="6">Taxi, Motorcycle, Other</option>
-                                <option value="7">Worked From Home</option>
+                                <option value="6">Taxi, Motorcycle, or Other</option>
+                                <option value="7">Worked from Home</option>
                                 <option value="8">Bus</option>
                                 <option value="9">Rail</option>
                                 <option value="10">Subway</option>
@@ -260,24 +260,10 @@ const chartStrings = {
             <form>
                 <fieldset>
                     <label>
-                        Select Mode 
+                        Select Geography 
                         <select id="viz-2" class="toggle-data-selector">
-                                <option value="0">Drove Alone</option>
-                                <option value="1">Non-SOV</option>
-                                <option value="2">Carpool</option>
-                                <option value="3">Public Transit</option>
-                                <option value="4">Walked</option>
-                                <option value="5">Biked</option>
-                                <option value="6">Taxi, Motorcycle, Other</option>
-                                <option value="7">Worked From Home</option>
-                                <option value="8">Bus</option>
-                                <option value="9">Rail</option>
-                                <option value="10">Subway</option>
-                                <option value="11">Trolley or Light Rail</option>
-                                <option value="12">Ferryboat</option>
-                                <option value="13">Motorcycle</option>
-                                <option value="14">Other Means</option>
-                                <option value="15">Taxi</option>
+                                <option value="0">Philadelphia UZA</option>
+                                <option value="1">Trenton UZA</option>
                         </select>
                     </label>
                 </fieldset>

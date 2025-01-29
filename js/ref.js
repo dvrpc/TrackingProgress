@@ -4656,7 +4656,7 @@ const snippetsRef = {
         context: {
           labels: ["Commute Mode Share"],
           keepLabels: true,
-          units: ["percentC"],
+          units: ["percentD"],
           keepUnits: true,
         },
         columnOptions: [
@@ -4864,6 +4864,40 @@ const snippetsRef = {
             "philmcyc",
             "philwfh"
           ],
+          [
+            "philuzasov",
+            "philuzanonsov",
+            "philuzapool",
+            "philuzatransit",
+            "philuzabus",
+            "philuzarail",
+            "philuzasubw",
+            "philuzatroll",
+            "philuzaferry",
+            "philuzawalk",
+            "philuzabike",
+            "philuzatmo",
+            "philuzataxi",
+            "philuzamcyc",
+            "philuzawfh"
+          ],
+          [
+            "trenuzasov",
+            "trenuzanonsov",
+            "trenuzapool",
+            "trenuzatransit",
+            "trenuzabus",
+            "trenuzarail",
+            "trenuzasubw",
+            "trenuzatroll",
+            "trenuzaferry",
+            "trenuzawalk",
+            "trenuzabike",
+            "trenuzatmo",
+            "trenuzataxi",
+            "trenuzamcyc",
+            "trenuzawfh"
+          ],
         ],
         data: [
           {
@@ -4900,7 +4934,7 @@ const snippetsRef = {
             disabled: true
           },
           {
-            key: "Trolley",
+            key: "Trolley or Light Rail",
             columns: ["year", "dvrpctroll"],
             disabled: true
           },
@@ -4921,7 +4955,7 @@ const snippetsRef = {
             disabled: true
           },
           {
-            key: "Taxi, Motorcycle, Other",
+            key: "Taxi, Motorcycle, or Other",
             columns: ["year", "dvrpcbike"],
             disabled: true
           },
@@ -4936,7 +4970,7 @@ const snippetsRef = {
             disabled: true
           },
           {
-            key: "Worked From Home",
+            key: "Worked from Home",
             columns: ["year", "dvrpcwfh"],
             disabled: true
           },
@@ -4949,7 +4983,7 @@ const snippetsRef = {
         context: {
           labels: ["Commute Mode Share"],
           keepLabels: true,
-          units: ["percentC"],
+          units: ["percentD"],
           keepUnits: true,
         },
         columnOptions: [
@@ -5234,78 +5268,122 @@ const snippetsRef = {
         context: {
           labels: ["Commute Mode Share"],
           keepLabels: true,
-          units: ["percentC"],
+          units: ["percentD"],
           keepUnits: true,
         },
         columnOptions: [
           [
             "philuzasov",
-            "trenuzasov",
-          ],
-          [
             "philuzanonsov",
-            "trenuzanonsov",
-          ],
-          [
             "philuzapool",
-            "trenuzapool",
-          ],
-          [
             "philuzatransit",
-            "trenuzatransit",
-          ],
-          [
             "philuzawalk",
-            "trenuzawalk",
-          ],
-          [
             "philuzabike",
-            "trenuzabike",
-          ],
-          [
             "philuzatmo",
-            "trenuzatmo",
-          ],
-          [
             "philuzawfh",
-            "trenuzawfh",
-          ],
-          [
             "philuzabus",
-            "trenuzabus",
-          ],
-          [
             "philuzarail",
-            "trenuzarail",
-          ],
-          [
             "philuzasubw",
-            "trenuzasubw",
-          ],
-          [
             "philuzatroll",
-            "trenuzatroll",
-          ],
-          [
             "philuzaferry",
-            "trenuzaferry",
-          ],
-          [
             "philuzamcyc",
-            "trenuzamcyc",
-          ],
-          [
             "philuzaother",
-            "trenuzaother",
+            "philuzataxi",
           ],
           [
-            "philuzataxi",
+            "trenuzasov",
+            "trenuzanonsov",
+            "trenuzapool",
+            "trenuzatransit",
+            "trenuzawalk",
+            "trenuzabike",
+            "trenuzatmo",
+            "trenuzawfh",
+            "trenuzabus",
+            "trenuzarail",
+            "trenuzasubw",
+            "trenuzatroll",
+            "trenuzaferry",
+            "trenuzamcyc",
+            "trenuzaother",
             "trenuzataxi",
           ],
         ],
         data: [
-          { key: "Philadelphia UZA", columns: ["year", "philuzasov"] },
-          { key: "Trenton UZA", columns: ["year", "trenuzasov"] },
+          {
+            key: "Drove Alone",
+            columns: ["year", "philuzasov"],
+          },
+          {
+            key: "Other Means",
+            columns: ["year", "philuzanonsov"],
+          },
+          {
+            key: "Carpool",
+            columns: ["year", "philuzapool"],
+            disabled: true
+          },
+          {
+            key: "Public Transit",
+            columns: ["year", "philuzatransit"],
+            disabled: true
+          },
+          {
+            key: "Bus",
+            columns: ["year", "philuzabus"],
+            disabled: true
+          },
+          {
+            key: "Rail",
+            columns: ["year", "philuzarail"],
+            disabled: true
+          },
+          {
+            key: "Subway",
+            columns: ["year", "philuzasubw"],
+            disabled: true
+          },
+          {
+            key: "Trolley or Light Rail",
+            columns: ["year", "philuzatroll"],
+            disabled: true
+          },
+          {
+            key: "Ferry",
+            columns: ["year", "philuzaferry"],
+            disabled: true
+          },
+
+          {
+            key: "Walked",
+            columns: ["year", "philuzawalk"],
+            disabled: true
+          },
+          {
+            key: "Biked",
+            columns: ["year", "philuzabike"],
+            disabled: true
+          },
+          {
+            key: "Taxi, Motorcycle, or Other",
+            columns: ["year", "philuzabike"],
+            disabled: true
+          },
+          {
+            key: "Taxi",
+            columns: ["year", "philuzataxi"],
+            disabled: true
+          },
+          {
+            key: "Motorcycle",
+            columns: ["year", "philuzamcyc"],
+            disabled: true
+          },
+          {
+            key: "Worked from Home",
+            columns: ["year", "philuzawfh"],
+            disabled: true
+          },
        ],
       }
     ],
