@@ -189,8 +189,8 @@ const chartStrings = {
                                 <option value="11">Philadelphia</option>
                             </optgroup>
                             <optgroup label="Urbanized Areas">
-                                <option value="12">Philadelphia</option>
-                                <option value="13">Trenton</option>
+                                <option value="12">Philadelphia UZA</option>
+                                <option value="13">Trenton UZA</option>
                             </optgroup>
                         </select>
                     </label>
@@ -210,7 +210,7 @@ const chartStrings = {
         <div class="data-viz chart">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey Five-Year Estimates</em></small>
 
         <hr class="indicator-content-hr" />
 
@@ -255,7 +255,7 @@ const chartStrings = {
         <div class="data-viz chart2">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
+        <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey One-Year Estimates</em></small>
 
         <hr class="indicator-content-hr" />
 

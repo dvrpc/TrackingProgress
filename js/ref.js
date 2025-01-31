@@ -4652,7 +4652,7 @@ const snippetsRef = {
       {
         type: "line",
         container: "chart",
-        dataSource: ["Workplace", "Residence"],
+        dataSource: ["Residence", "Workplace"],
         context: {
           labels: ["Commute Mode Share"],
           keepLabels: true,
@@ -4675,7 +4675,7 @@ const snippetsRef = {
             "dvrpctmo",
             "dvrpctaxi",
             "dvrpcmcyc",
-            "dvrpcwfh"
+            "dvrpcwfh",
           ],
           [
             "njcossov",
@@ -4692,7 +4692,7 @@ const snippetsRef = {
             "njcostmo",
             "njcostaxi",
             "njcosmcyc",
-            "njcoswfh"
+            "njcoswfh",
           ],
           [
             "pasubsov",
@@ -4709,7 +4709,7 @@ const snippetsRef = {
             "pasubtmo",
             "pasubtaxi",
             "pasubmcyc",
-            "pasubwfh"
+            "pasubwfh",
           ],
           [
             "bucksov",
@@ -4726,7 +4726,7 @@ const snippetsRef = {
             "bucktmo",
             "bucktaxi",
             "buckmcyc",
-            "buckwfh"
+            "buckwfh",
           ],
           [
             "burlsov",
@@ -4743,7 +4743,7 @@ const snippetsRef = {
             "burltmo",
             "burltaxi",
             "burlmcyc",
-            "burlwfh"
+            "burlwfh",
           ],
           [
             "camdsov",
@@ -4760,7 +4760,7 @@ const snippetsRef = {
             "camdtmo",
             "camdtaxi",
             "camdmcyc",
-            "camdwfh"
+            "camdwfh",
           ],
           [
             "chessov",
@@ -4777,7 +4777,7 @@ const snippetsRef = {
             "chestmo",
             "chestaxi",
             "chesmcyc",
-            "cheswfh"
+            "cheswfh",
           ],
           [
             "delsov",
@@ -4794,7 +4794,7 @@ const snippetsRef = {
             "deltmo",
             "deltaxi",
             "delmcyc",
-            "delwfh"
+            "delwfh",
           ],
           [
             "glocsov",
@@ -4811,7 +4811,7 @@ const snippetsRef = {
             "gloctmo",
             "gloctaxi",
             "glocmcyc",
-            "glocwfh"
+            "glocwfh",
           ],
           [
             "mercsov",
@@ -4828,7 +4828,7 @@ const snippetsRef = {
             "merctmo",
             "merctaxi",
             "mercmcyc",
-            "mercwfh"
+            "mercwfh",
           ],
           [
             "montsov",
@@ -4845,7 +4845,7 @@ const snippetsRef = {
             "monttmo",
             "monttaxi",
             "montmcyc",
-            "montwfh"
+            "montwfh",
           ],
           [
             "philsov",
@@ -4862,7 +4862,7 @@ const snippetsRef = {
             "philtmo",
             "philtaxi",
             "philmcyc",
-            "philwfh"
+            "philwfh",
           ],
           [
             "philuzasov",
@@ -4879,7 +4879,7 @@ const snippetsRef = {
             "philuzatmo",
             "philuzataxi",
             "philuzamcyc",
-            "philuzawfh"
+            "philuzawfh",
           ],
           [
             "trenuzasov",
@@ -4896,7 +4896,7 @@ const snippetsRef = {
             "trenuzatmo",
             "trenuzataxi",
             "trenuzamcyc",
-            "trenuzawfh"
+            "trenuzawfh",
           ],
         ],
         data: [
@@ -4905,81 +4905,85 @@ const snippetsRef = {
             columns: ["year", "dvrpcsov"],
           },
           {
-            key: "Other Means",
+            key: "Non-SOV",
             columns: ["year", "dvrpcnonsov"],
           },
           {
             key: "Carpool",
             columns: ["year", "dvrpcpool"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Public Transit",
             columns: ["year", "dvrpctransit"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Bus",
             columns: ["year", "dvrpcbus"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Rail",
             columns: ["year", "dvrpcrail"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Subway",
             columns: ["year", "dvrpcsubw"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Trolley or Light Rail",
             columns: ["year", "dvrpctroll"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Ferry",
             columns: ["year", "dvrpcferry"],
-            disabled: true
+            disabled: true,
           },
 
           {
             key: "Walked",
             columns: ["year", "dvrpcwalk"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Biked",
             columns: ["year", "dvrpcbike"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Taxi, Motorcycle, or Other",
             columns: ["year", "dvrpcbike"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Taxi",
             columns: ["year", "dvrpctaxi"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Motorcycle",
             columns: ["year", "dvrpcmcyc"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Worked from Home",
             columns: ["year", "dvrpcwfh"],
-            disabled: true
+            disabled: true,
+          },
+          {
+            key: "Other Means",
+            columns: ["year", "dvrpcother"],
           },
         ],
       },
       {
         type: "line",
         container: "chart2",
-        dataSource: ["Workplace", "Residence"],
+        dataSource: ["Residence", "Workplace"],
         context: {
           labels: ["Commute Mode Share"],
           keepLabels: true,
@@ -5247,7 +5251,11 @@ const snippetsRef = {
         data: [
           { key: "DVRPC Region", columns: ["year", "dvrpcsov"] },
           { key: "NJ Counties", columns: ["year", "njcossov"], disabled: true },
-          { key: "PA Suburban Counties", columns: ["year", "pasubsov"], disabled: true },
+          {
+            key: "PA Suburban Counties",
+            columns: ["year", "pasubsov"],
+            disabled: true,
+          },
           { key: "Bucks", columns: ["year", "bucksov"], disabled: true },
           { key: "Burlington", columns: ["year", "burlsov"], disabled: true },
           { key: "Camden", columns: ["year", "camdsov"], disabled: true },
@@ -5257,9 +5265,17 @@ const snippetsRef = {
           { key: "Mercer", columns: ["year", "mercsov"], disabled: true },
           { key: "Montgomery", columns: ["year", "montsov"], disabled: true },
           { key: "Philadelphia", columns: ["year", "philsov"], disabled: true },
-          { key: "Philadelphia UZA", columns: ["year", "philuzasov"], disabled: true },
-          { key: "Trenton UZA", columns: ["year", "trenuzasov"], disabled: true },
-       ],
+          {
+            key: "Philadelphia UZA",
+            columns: ["year", "philuzasov"],
+            disabled: true,
+          },
+          {
+            key: "Trenton UZA",
+            columns: ["year", "trenuzasov"],
+            disabled: true,
+          },
+        ],
       },
       {
         type: "line",
@@ -5280,7 +5296,7 @@ const snippetsRef = {
             "philuzawalk",
             "philuzatmo",
             "philuzaother",
-            "philuzawfh"
+            "philuzawfh",
           ],
           [
             "trenuzasov",
@@ -5290,7 +5306,7 @@ const snippetsRef = {
             "trenuzawalk",
             "trenuzatmo",
             "trenuzaother",
-            "trenuzawfh"         
+            "trenuzawfh",
           ],
         ],
         data: [
@@ -5305,35 +5321,35 @@ const snippetsRef = {
           {
             key: "Carpool",
             columns: ["year", "philuzapool"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Public Transit",
             columns: ["year", "philuzatransit"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Walked",
             columns: ["year", "philuzawalk"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Taxi, Motorcycle, or Other",
             columns: ["year", "philuzatmo"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Other Means",
             columns: ["year", "philuzaother"],
-            disabled: true
+            disabled: true,
           },
           {
             key: "Worked from Home",
             columns: ["year", "philuzawfh"],
-            disabled: true
+            disabled: true,
           },
-       ],
-      }
+        ],
+      },
     ],
   },
   "Transit Ridership": {
