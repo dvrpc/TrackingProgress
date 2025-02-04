@@ -4676,6 +4676,7 @@ const snippetsRef = {
             "dvrpctaxi",
             "dvrpcmcyc",
             "dvrpcwfh",
+            "dvrpcother",
           ],
           [
             "njcossov",
@@ -4693,6 +4694,7 @@ const snippetsRef = {
             "njcostaxi",
             "njcosmcyc",
             "njcoswfh",
+            "njcosother",
           ],
           [
             "pasubsov",
@@ -4710,6 +4712,7 @@ const snippetsRef = {
             "pasubtaxi",
             "pasubmcyc",
             "pasubwfh",
+            "pasubother",
           ],
           [
             "bucksov",
@@ -4727,6 +4730,7 @@ const snippetsRef = {
             "bucktaxi",
             "buckmcyc",
             "buckwfh",
+            "buckother",
           ],
           [
             "burlsov",
@@ -4744,6 +4748,7 @@ const snippetsRef = {
             "burltaxi",
             "burlmcyc",
             "burlwfh",
+            "burlother",
           ],
           [
             "camdsov",
@@ -4761,6 +4766,7 @@ const snippetsRef = {
             "camdtaxi",
             "camdmcyc",
             "camdwfh",
+            "camdother",
           ],
           [
             "chessov",
@@ -4778,6 +4784,7 @@ const snippetsRef = {
             "chestaxi",
             "chesmcyc",
             "cheswfh",
+            "chesother",
           ],
           [
             "delsov",
@@ -4795,6 +4802,7 @@ const snippetsRef = {
             "deltaxi",
             "delmcyc",
             "delwfh",
+            "delother",
           ],
           [
             "glocsov",
@@ -4812,6 +4820,7 @@ const snippetsRef = {
             "gloctaxi",
             "glocmcyc",
             "glocwfh",
+            "gloother",
           ],
           [
             "mercsov",
@@ -4829,6 +4838,7 @@ const snippetsRef = {
             "merctaxi",
             "mercmcyc",
             "mercwfh",
+            "mercother",
           ],
           [
             "montsov",
@@ -4846,6 +4856,7 @@ const snippetsRef = {
             "monttaxi",
             "montmcyc",
             "montwfh",
+            "montother",
           ],
           [
             "philsov",
@@ -4863,6 +4874,7 @@ const snippetsRef = {
             "philtaxi",
             "philmcyc",
             "philwfh",
+            "philother",
           ],
           [
             "philuzasov",
@@ -4880,6 +4892,7 @@ const snippetsRef = {
             "philuzataxi",
             "philuzamcyc",
             "philuzawfh",
+            "philuzaother",
           ],
           [
             "trenuzasov",
@@ -4897,6 +4910,7 @@ const snippetsRef = {
             "trenuzataxi",
             "trenuzamcyc",
             "trenuzawfh",
+            "trenuzaother",
           ],
         ],
         data: [
@@ -4943,7 +4957,6 @@ const snippetsRef = {
             columns: ["year", "dvrpcferry"],
             disabled: true,
           },
-
           {
             key: "Walked",
             columns: ["year", "dvrpcwalk"],
@@ -4956,7 +4969,7 @@ const snippetsRef = {
           },
           {
             key: "Taxi, Motorcycle, or Other",
-            columns: ["year", "dvrpcbike"],
+            columns: ["year", "dvrpctmo"],
             disabled: true,
           },
           {
