@@ -4990,6 +4990,7 @@ const snippetsRef = {
           {
             key: "Other Means",
             columns: ["year", "dvrpcother"],
+            disabled: true,
           },
         ],
       },
