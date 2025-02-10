@@ -188,7 +188,7 @@ const chartStrings = {
                                 <option value="10">Montgomery</option>
                                 <option value="11">Philadelphia</option>
                             </optgroup>
-                            <optgroup label="Urbanized Areas">
+                            <optgroup label="Urban Areas">
                                 <option value="12">Philadelphia UZA</option>
                                 <option value="13">Trenton UZA</option>
                             </optgroup>
