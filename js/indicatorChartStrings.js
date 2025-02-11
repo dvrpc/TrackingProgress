@@ -189,8 +189,8 @@ const chartStrings = {
                                 <option value="11">Philadelphia</option>
                             </optgroup>
                             <optgroup label="Urban Areas">
-                                <option value="12">Philadelphia UZA</option>
-                                <option value="13">Trenton UZA</option>
+                                <option value="12">Philadelphia UA</option>
+                                <option value="13">Trenton UA</option>
                             </optgroup>
                         </select>
                     </label>
@@ -266,8 +266,8 @@ const chartStrings = {
                     <label>
                         Select Geography 
                         <select id="viz-2" class="toggle-data-selector">
-                                <option value="0">Philadelphia UZA</option>
-                                <option value="1">Trenton UZA</option>
+                                <option value="0">Philadelphia UA</option>
+                                <option value="1">Trenton UA</option>
                         </select>
                     </label>
                 </fieldset>
