@@ -3913,9 +3913,9 @@ const snippetsRef = {
         columnOptions: [
           [
             "DVRPC Region",
-            "Non-DVRPC Phila UZA",
-            "Philadelphia UZA",
-            "Trenton UZA",
+            "Non-DVRPC Phila UA",
+            "Philadelphia UA",
+            "Trenton UA",
             "Bucks",
             "Burlington",
             "Camden",
@@ -3928,9 +3928,9 @@ const snippetsRef = {
             "NJ Counties",
             "PA Counties",
             "PA Suburban Counties",
-            "Total UZA",
+            "Total UA",
           ],
-          ["Philadelphia UZA", "Trenton UZA", "Total UZA"],
+          ["Philadelphia UA", "Trenton UA", "Total UA"],
         ],
         data: [
           {
@@ -3938,19 +3938,19 @@ const snippetsRef = {
             columns: ["Year", "DVRPC Region"],
           },
           {
-            key: "Non-DVRPC Phila UZA",
+            key: "Non-DVRPC Phila UA",
             disabled: true,
-            columns: ["Year", "Non-DVRPC Phila UZA"],
+            columns: ["Year", "Non-DVRPC Phila UA"],
           },
           {
-            key: "Philadelphia UZA",
+            key: "Philadelphia UA",
             disabled: true,
-            columns: ["Year", "Philadelphia UZA"],
+            columns: ["Year", "Philadelphia UA"],
           },
           {
-            key: "Trenton UZA",
+            key: "Trenton UA",
             disabled: true,
-            columns: ["Year", "Trenton UZA"],
+            columns: ["Year", "Trenton UA"],
           },
           {
             key: "Bucks",
@@ -4013,9 +4013,9 @@ const snippetsRef = {
             columns: ["Year", "PA Suburban Counties"],
           },
           {
-            key: "Total UZA",
+            key: "Total UA",
             disabled: true,
-            columns: ["Year", "Total UZA"],
+            columns: ["Year", "Total UA"],
           },
         ],
       },
