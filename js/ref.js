@@ -4643,7 +4643,7 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "11.2% fewer",
+        stat: "10.8% fewer",
         text: `residents drive alone to work since 2006`,
       },
     },
