@@ -2,9 +2,9 @@ For more resources on alternatives to a drive-alone commute go to our [Commuter 
 
 DVRPC is always working on improvements through [Transit Planning](https://www.dvrpc.org/Transit/), [Bicycle Planning](https://www.dvrpc.org/Transportation/Bicycle/), and [Pedestrian Planning](https://www.dvrpc.org/Transportation/Pedestrian/). 
 
-DVRPC’s Transportation Performance Management [system performance](https://www.dvrpc.org/tpm/?indicator=systemperf) sets targets for non-SOV commute mode share within the region’s urbanized areas. 
+DVRPC’s Transportation Performance Management [system performance](https://www.dvrpc.org/tpm/?indicator=systemperf) sets targets for non-SOV commute mode share within the region’s urban areas. 
 
-DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ suggests the following tools for improving the region’s non-drive-alone trendline:
+DVRPC’s *[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)* suggests the following tools for improving the region’s non-drive-alone trendline:
 
  - [Community Shuttle Programs](https://www.dvrpc.org/Plan/MIT/communityshuttleprograms) 
  - [Community-Centered Design in School Systems](https://www.dvrpc.org/Plan/MIT/community-centereddesigninschoolsystems) 
@@ -14,4 +14,4 @@ DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ 
  - [Sidewalk Standards and Management](https://www.dvrpc.org/Plan/MIT/sidewalkstandardsandmanagement) 
  - [Smart Location Of Public Facilities](https://www.dvrpc.org/Plan/MIT/smartlocationofpublicfacilities) 
  - [Travel Demand Management (TDM)](https://www.dvrpc.org/Plan/MIT/traveldemandmanagementtdm) 
- - [Walking and Biking Encouragement Programs](https://www.dvrpc.org/Plan/MIT/walkingandbikingencouragementprograms) 
+ - [Walking and Biking Encouragement Programs](https://www.dvrpc.org/Plan/MIT/walkingandbikingencouragementprograms)
