@@ -4027,8 +4027,8 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "3.1% gain",
-        text: `in economic growth since 2017`,
+        stat: "1.7% annual average GDP growth",
+        text: `since 2001`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/gross-domestic-product",
