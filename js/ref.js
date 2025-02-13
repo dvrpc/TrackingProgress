@@ -2641,7 +2641,8 @@ const snippetsRef = {
       status: "not-great",
       text: {
         stat: "40 to 51%",
-        text: `of residents not living in diverse communities`,
+        text: `of residents not living in
+              racially, ethnically, or economically diverse communities`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/community-integration",
