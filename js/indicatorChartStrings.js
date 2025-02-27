@@ -1455,8 +1455,8 @@ const chartStrings = {
                         Select Ownership Type
                         <select id="viz-2" class="toggle-data-selector">
                             <option value="0">Total Protected Open Space</option>
-                            <option value="1">Publicly Protected Open Space</option>
-                            <option value="2">Privately Protected Open Space</option>
+                            <option value="1">Publicly-Owned Protected Open Space</option>
+                            <option value="2">Privately-Owned Protected Open Space</option>
                         </select>
                     </label>
                 </fieldset>

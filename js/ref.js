@@ -6781,8 +6781,8 @@ const snippetsRef = {
     trend: {
       status: "good",
       text: {
-        stat: "62% drop",
-        text: `in land consumption rate from 2005-2015 compared to 1990-2005`,
+        stat: "49% drop",
+        text: `in land consumption rate from 2005-2023 compared to 1990-2005`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/land-consumption",
