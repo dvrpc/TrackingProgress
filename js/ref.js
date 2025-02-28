@@ -6439,7 +6439,7 @@ const snippetsRef = {
             columns: ["Year", "DVRPC_AA"],
           },
           {
-            key: "Native Hawaiian and Other Pacific Islander",
+            key: "Native Hawaiian and Other Pacific Islander alone",
             columns: ["Year", "DVRPC_NA"],
           },
           {
