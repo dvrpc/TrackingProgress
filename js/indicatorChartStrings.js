@@ -1637,8 +1637,8 @@ const chartStrings = {
                     <label>
                         Select Value Type
                         <select id="viz-0" class="toggle-data-selector">
-                            <option value="0">Change Since Base Year</option>
-                            <option value="1">Total Population</option>
+                            <option value="0">Total Population</option>
+                            <option value="1">Change Since Base Year</option>
                             <option value="2">Percent Change</option>
                         </select>
                     </label>
@@ -1723,8 +1723,8 @@ const chartStrings = {
                     <label>
                         Select Value Type:
                         <select id="viz-2-b" class="toggle-data-selector">
-                            <option value="0">Change Since Base Year</option>
-                            <option value="1">Total Population</option>
+                            <option value="0">Total Population</option>
+                            <option value="1">Change Since Base Year</option>
                         </select>
                 </fieldset>
             </form>
@@ -1767,8 +1767,8 @@ const chartStrings = {
                     <label>
                         Select Value Type:
                         <select id="viz-3-b" class="toggle-data-selector">
-                            <option value="0">Change Since Base Year</option>
-                            <option value="1">Total Population</option>
+                            <option value="0">Total Population</option>
+                            <option value="1">Change Since Base Year</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1812,8 +1812,8 @@ const chartStrings = {
                     <label>
                         Select Value Type:
                         <select id="viz-4-b" class="toggle-data-selector">
-                            <option value="0">Change Since Base Year</option>
-                            <option value="1">Total Population</option>
+                            <option value="0">Total Population</option>
+                            <option value="1">Change Since Base Year</option>
                         </select>
                     </label>
                 </fieldset>

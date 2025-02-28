@@ -6024,11 +6024,11 @@ const snippetsRef = {
         dataSource: ["popGrowth"],
         context: {
           labels: [
-            "Change in Population",
             "Total Population (Thousands)",
+            "Change in Population",
             "Percent Change in Population",
           ],
-          units: ["thousands", "thousandsC", "percentC"],
+          units: ["thousandsC", "thousands", "percentC"],
         },
         columnOptions: [
           [
@@ -6201,9 +6201,9 @@ const snippetsRef = {
       {
         type: "line",
         container: "chart3",
-        dataSource: ["pop_age_change", "pop_age_totals"],
+        dataSource: ["pop_age_totals", "pop_age_change"],
         context: {
-          labels: ["Change in Population", "Total Population (Thousands)"],
+          labels: ["Total Population (Thousands)", "Change in Population"],
           units: ["thousands", "thousandsC"],
         },
         columnOptions: [
@@ -6318,9 +6318,9 @@ const snippetsRef = {
       {
         type: "line",
         container: "chart4",
-        dataSource: ["pop_race_change", "pop_race_totals"],
+        dataSource: ["pop_race_totals", "pop_race_change"],
         context: {
-          labels: ["Change in Population", "Total Population (Thousands)"],
+          labels: ["Total Population (Thousands)", "Change in Population"],
           units: ["thousands", "thousandsC"],
         },
         columnOptions: [
@@ -6451,9 +6451,9 @@ const snippetsRef = {
       {
         type: "line",
         container: "chart5",
-        dataSource: ["pop_hisp_change", "pop_hisp_totals"],
+        dataSource: ["pop_hisp_totals", "pop_hisp_change"],
         context: {
-          labels: ["Change in Population", "Total Population (Thousands)"],
+          labels: ["Total Population (Thousands)", "Change in Population"],
           units: ["thousands", "thousandsC"],
         },
         columnOptions: [
