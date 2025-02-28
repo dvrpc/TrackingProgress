@@ -6294,7 +6294,7 @@ const snippetsRef = {
         ],
         data: [
           {
-            key: "<= 20 years",
+            key: "< 20 years",
             columns: ["Year", "DVRPC_<20"],
           },
           {
@@ -6423,7 +6423,7 @@ const snippetsRef = {
         ],
         data: [
           {
-            key: "White Alone",
+            key: "White alone",
             columns: ["Year", "DVRPC_WA"],
           },
           {
@@ -6472,7 +6472,7 @@ const snippetsRef = {
         ],
         data: [
           {
-            key: "non-Latinx",
+            key: "Non-Latinx",
             columns: ["Year", "DVRPC_NH"],
           },
           {
