@@ -1570,7 +1570,7 @@ const chartStrings = {
                         <select id="viz-0" class="toggle-data-selector">
                             <option value="0">All Roads</option>
                             <option value="1">Interstate</option>
-                            <option value="2">NHS, Non-Interstate</option>
+                            <option value="2">NHS Non-Interstate</option>
                             <option value="3">Non-NHS</option>
                         </select>
                     </label>
@@ -1618,7 +1618,7 @@ const chartStrings = {
                         <select id="viz-1-b" class="toggle-data-selector">
                             <option value="0">All Roads</option>
                             <option value="1">Interstate</option>
-                            <option value="2">NHS, Non-Interstate</option>
+                            <option value="2">NHS Non-Interstate</option>
                             <option value="3">Non-NHS</option>
                         </select>
                     </label>
