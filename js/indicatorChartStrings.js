@@ -1563,7 +1563,18 @@ const chartStrings = {
   "Pavement Conditions": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Percentage of Pavement in Deficient Condition by Geography</h2>
-            <form>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Metric 
+                        <select id="viz-0-b" class="toggle-data-selector">
+                            <option value="0">TPM</option>
+                            <option value="1">IRI</option>
+                            <option value="2">DOT Pavement Index</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
                 <fieldset>
                     <label>
                         Select Road Type
@@ -1586,7 +1597,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Roadways by Pavement Condition</h2>
+            <h2 class="indicator-subheader toggle-subheader">Roadways by Pavement Condition - TPM</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -1616,10 +1627,9 @@ const chartStrings = {
                     <label>
                         Select Road Type
                         <select id="viz-1-b" class="toggle-data-selector">
-                            <option value="0">All Roads</option>
+                            <option value="0">All NHS Roads</option>
                             <option value="1">Interstate</option>
                             <option value="2">NHS Non-Interstate</option>
-                            <option value="3">Non-NHS</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1628,7 +1638,102 @@ const chartStrings = {
         <div class="data-viz chart2">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>`,
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Roadways by Pavement Condition - IRI</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-2" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Road Type
+                        <select id="viz-2-b" class="toggle-data-selector">
+                            <option value="0">All NHS Roads</option>
+                            <option value="1">Interstate</option>
+                            <option value="2">NHS Non-Interstate</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart3">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Roadways by Pavement Condition - DOT Pavement Index</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-3" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Road Type
+                        <select id="viz-3-b" class="toggle-data-selector">
+                            <option value="0">All NHS Roads</option>
+                            <option value="1">Interstate</option>
+                            <option value="2">NHS Non-Interstate</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart4">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: New Jersey Department of Transportation, Pennsylvania Department of Transportation</em></small>
+
+
+`,
   "Population Growth": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Population by Geography</h2>
