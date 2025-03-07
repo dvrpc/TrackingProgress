@@ -1673,9 +1673,9 @@ const chartStrings = {
                     <label>
                         Select Road Type
                         <select id="viz-2-b" class="toggle-data-selector">
-                            <option value="0">All NHS Roads</option>
+                            <option value="0">All Roads</option>
                             <option value="1">Interstate</option>
-                            <option value="2">NHS Non-Interstate</option>
+                            <option value="2">Non-NHS Roads</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1719,9 +1719,9 @@ const chartStrings = {
                     <label>
                         Select Road Type
                         <select id="viz-3-b" class="toggle-data-selector">
-                            <option value="0">All NHS Roads</option>
+                            <option value="0">All Roads</option>
                             <option value="1">Interstate</option>
-                            <option value="2">NHS Non-Interstate</option>
+                            <option value="2">Non-NHS Roads</option>
                         </select>
                     </label>
                 </fieldset>

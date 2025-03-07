@@ -7778,7 +7778,7 @@ const snippetsRef = {
           "pavement_3_NoNHS",
         ],
         context: {
-          labels: ["Lane Miles"],
+          labels: ["Segment Miles"],
           keepLabels: true,
           units: ["thousands"],
           keepUnits: true,
@@ -7821,7 +7821,7 @@ const snippetsRef = {
           "pavement_4_NoNHS",
         ],
         context: {
-          labels: ["Lane Miles"],
+          labels: ["Segment Miles"],
           keepLabels: true,
           units: ["thousands"],
           keepUnits: true,
