@@ -7582,8 +7582,8 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "0.7% fewer",
-        text: `road segment miles in poor condition since 2010`,
+        stat: "1.0% fewer",
+        text: `road lane miles in poor condition based on PM2 since 2020`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/pavement-conditions",

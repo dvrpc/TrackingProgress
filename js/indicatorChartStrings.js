@@ -1568,7 +1568,7 @@ const chartStrings = {
                     <label>
                         Select Metric 
                         <select id="viz-0-b" class="toggle-data-selector">
-                            <option value="0">TPM</option>
+                            <option value="0">PM2</option>
                             <option value="1">IRI</option>
                             <option value="2">DOT Pavement Index</option>
                         </select>
@@ -1597,7 +1597,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Roadways by Pavement Condition - TPM</h2>
+            <h2 class="indicator-subheader toggle-subheader">Roadways by Pavement Condition - PM2</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
