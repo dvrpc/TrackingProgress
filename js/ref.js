@@ -6089,82 +6089,82 @@ const snippetsRef = {
         data: [
           {
             key: "DVRPC Region*",
-            columns: ["Year", "DVRPC-count"],
+            columns: ["Year", "DVRPC"],
           },
           {
             key: "NJ Counties*",
             disabled: true,
-            columns: ["Year", "NJCnt-count"],
+            columns: ["Year", "NJCnt"],
           },
           {
             key: "PA Suburban Counties*",
             disabled: true,
-            columns: ["Year", "PASub-count"],
+            columns: ["Year", "PASub"],
           },
           {
             key: "Core Cities^",
             disabled: true,
-            columns: ["Year", "Core-count"],
+            columns: ["Year", "Core"],
           },
           {
             key: "Developed Communities^",
             disabled: true,
-            columns: ["Year", "DevCom-count"],
+            columns: ["Year", "DevCom"],
           },
           {
             key: "Growing Suburbs^",
             disabled: true,
-            columns: ["Year", "GroSub-count"],
+            columns: ["Year", "GroSub"],
           },
           {
             key: "Rural Areas^",
             disabled: true,
-            columns: ["Year", "Rural-count"],
+            columns: ["Year", "Rural"],
           },
           {
             key: "Bucks**",
             disabled: true,
-            columns: ["Year", "Bucks-count"],
+            columns: ["Year", "Bucks"],
           },
           {
             key: "Burlington**",
             disabled: true,
-            columns: ["Year", "Burlington-count"],
+            columns: ["Year", "Burlington"],
           },
           {
             key: "Camden**",
             disabled: true,
-            columns: ["Year", "Camden-count"],
+            columns: ["Year", "Camden"],
           },
           {
             key: "Chester**",
             disabled: true,
-            columns: ["Year", "Chester-count"],
+            columns: ["Year", "Chester"],
           },
           {
             key: "Delaware**",
             disabled: true,
-            columns: ["Year", "Delaware-count"],
+            columns: ["Year", "Delaware"],
           },
           {
             key: "Gloucester**",
             disabled: true,
-            columns: ["Year", "Gloucester-count"],
+            columns: ["Year", "Gloucester"],
           },
           {
             key: "Mercer**",
             disabled: true,
-            columns: ["Year", "Mercer-count"],
+            columns: ["Year", "Mercer"],
           },
           {
             key: "Montgomery**",
             disabled: true,
-            columns: ["Year", "Montgomery-count"],
+            columns: ["Year", "Montgomery"],
           },
           {
             key: "Philadelphia**",
             disabled: true,
-            columns: ["Year", "Philadelphia-count"],
+            columns: ["Year", "Philadelphia"],
           },
         ],
       },
@@ -7598,7 +7598,7 @@ const snippetsRef = {
         ],
         context: {
           labels: [
-            "Percentage of Total Lane Miles",
+            "Percentage of Total Miles",
             "Percentage of Total Miles",
             "Percentage of Total Miles",
           ],
@@ -7731,7 +7731,7 @@ const snippetsRef = {
         container: "chart2",
         dataSource: ["pavement_2_all_nhs", "pavement_3_all", "pavement_4_all"],
         context: {
-          labels: ["Lane Miles"],
+          labels: ["Miles"],
           keepLabels: true,
           units: ["thousands"],
           keepUnits: true,
