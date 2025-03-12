@@ -290,8 +290,6 @@ const createLineChart = (source, toggleContext) => {
   let container, dataSource, context;
   [container, dataSource, source, context] = formatInpus(source, toggleContext);
 
-  console.log(container, dataSource, source, context);
-
   d3.csv(
     dataSource,
     (rows) => {
