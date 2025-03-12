@@ -7599,8 +7599,8 @@ const snippetsRef = {
         context: {
           labels: [
             "Percentage of Total Miles",
-            "Percentage of Total Miles",
-            "Percentage of Total Miles",
+            "Percentage of Total Segment Miles",
+            "Percentage of Total Segment Miles",
           ],
           keepLabels: false,
           units: ["percentC"],
@@ -7729,10 +7729,14 @@ const snippetsRef = {
       {
         type: "stacked bar",
         container: "chart2",
-        dataSource: ["pavement_2_all_nhs", "pavement_3_all", "pavement_4_all"],
+        dataSource: [
+          "pavement_graph_2a",
+          "pavement_graph_2b",
+          "pavement_graph_2c",
+        ],
         context: {
-          labels: ["Miles"],
-          keepLabels: true,
+          labels: ["Lane Miles", "Segment Miles", "Segment Miles"],
+          keepLabels: false,
           units: ["thousands"],
           keepUnits: true,
         },

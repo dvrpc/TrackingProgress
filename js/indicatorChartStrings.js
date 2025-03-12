@@ -1566,23 +1566,23 @@ const chartStrings = {
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Metric 
+                        Select Road Type
                         <select id="viz-0" class="toggle-data-selector">
-                            <option value="0">PM2</option>
-                            <option value="1">IRI</option>
-                            <option value="2">DOT Pavement Index</option>
+                            <option value="0">All Roads</option>
+                            <option value="1">Interstate</option>
+                            <option value="2">NHS Non-Interstate</option>
+                            <option value="3">Non-NHS</option>
                         </select>
                     </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
                     <label>
-                        Select Road Type
+                        Select Metric 
                         <select id="viz-0-b" class="toggle-data-selector">
-                            <option value="0">All Roads</option>
-                            <option value="1">Interstate</option>
-                            <option value="2">NHS Non-Interstate</option>
-                            <option value="3">Non-NHS</option>
+                            <option value="0">PM2</option>
+                            <option value="1">IRI</option>
+                            <option value="2">DOT Pavement Index</option>
                         </select>
                     </label>
                 </fieldset>
