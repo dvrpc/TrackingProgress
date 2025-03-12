@@ -1567,7 +1567,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Metric 
-                        <select id="viz-0-b" class="toggle-data-selector">
+                        <select id="viz-0" class="toggle-data-selector">
                             <option value="0">PM2</option>
                             <option value="1">IRI</option>
                             <option value="2">DOT Pavement Index</option>
@@ -1578,7 +1578,7 @@ const chartStrings = {
                 <fieldset>
                     <label>
                         Select Road Type
-                        <select id="viz-0" class="toggle-data-selector">
+                        <select id="viz-0-b" class="toggle-data-selector">
                             <option value="0">All Roads</option>
                             <option value="1">Interstate</option>
                             <option value="2">NHS Non-Interstate</option>

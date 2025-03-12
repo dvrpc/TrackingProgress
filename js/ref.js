@@ -7608,18 +7608,18 @@ const snippetsRef = {
         },
         columnOptions: [
           [
-            "DVRPC- All NHS",
-            "New Jersey- All NHS",
-            "Pennsylvania- All NHS",
-            "Bucks- All NHS",
-            "Burlington- All NHS",
-            "Camden- All NHS",
-            "Chester- All NHS",
-            "Delaware- All NHS",
-            "Gloucester- All NHS",
-            "Mercer- All NHS",
-            "Montgomery- All NHS",
-            "Philadelphia- All NHS",
+            "DVRPC- All",
+            "New Jersey- All",
+            "Pennsylvania- All",
+            "Bucks- All",
+            "Burlington- All",
+            "Camden- All",
+            "Chester- All",
+            "Delaware- All",
+            "Gloucester- All",
+            "Mercer- All",
+            "Montgomery- All",
+            "Philadelphia- All",
           ],
           [
             "DVRPC- NHS, interstate",
@@ -7667,7 +7667,7 @@ const snippetsRef = {
         data: [
           {
             key: "DVRPC Region",
-            columns: ["year", "DVRPC- All NHS"],
+            columns: ["year", "DVRPC- All"],
           },
           {
             key: "New Jersey Counties*",
