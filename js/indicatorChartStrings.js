@@ -1650,7 +1650,7 @@ const chartStrings = {
                         <select id="viz-0" class="toggle-data-selector">
                             <option value="0">Total Population</option>
                             <option value="1">Change Since Base Year</option>
-                            <option value="2">Percent Change</option>
+                            <option value="2">Annual Percent Change</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1736,6 +1736,7 @@ const chartStrings = {
                         <select id="viz-2-b" class="toggle-data-selector">
                             <option value="0">Total Population</option>
                             <option value="1">Change Since Base Year</option>
+                            <option value="2">Annual Percent Change</option>
                         </select>
                 </fieldset>
             </form>
@@ -1780,6 +1781,7 @@ const chartStrings = {
                         <select id="viz-3-b" class="toggle-data-selector">
                             <option value="0">Total Population</option>
                             <option value="1">Change Since Base Year</option>
+                            <option value="2">Annual Percent Change</option>
                         </select>
                     </label>
                 </fieldset>
@@ -1825,6 +1827,7 @@ const chartStrings = {
                         <select id="viz-4-b" class="toggle-data-selector">
                             <option value="0">Total Population</option>
                             <option value="1">Change Since Base Year</option>
+                            <option value="2">Annual Percent Change</option>
                         </select>
                     </label>
                 </fieldset>
