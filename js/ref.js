@@ -6012,7 +6012,7 @@ const snippetsRef = {
     trend: {
       status: "good",
       text: {
-        stat: "6.5% increase",
+        stat: "10.6% increase",
         text: `in population since 2000`,
       },
     },
