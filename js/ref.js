@@ -6728,9 +6728,7 @@ const snippetsRef = {
         container: "chart",
         dataSource: ["water_quality_1"],
         context: {
-          labels: [
-            "Percentage Attaining Quality Standards for Designated Uses",
-          ],
+          labels: ["Percentage Attaining Quality Standards for Aquatic Life"],
           units: ["percentC"],
         },
         data: [

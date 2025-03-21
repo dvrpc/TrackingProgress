@@ -2373,7 +2373,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Sources: Federal Transit Administration's National Transit Database, U.S. Census Bureau's Population Estimates Program</em></small>`,
   "Water Quality": `
-        <h2 class="indicator-subheader">Waterbodies Attaining Quality Standards by Geography</h2>
+        <h2 class="indicator-subheader">Waterbodies Attaining Quality Standards for Aquatic Life by Geography</h2>
         <div class="data-viz chart">
             <svg></svg>
         </div>
