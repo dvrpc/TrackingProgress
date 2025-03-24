@@ -360,7 +360,7 @@ const chartStrings = {
             <fieldset>
                 <label>
                     Select Value Type
-                    <select id="viz-3-b" class="toggle-data-selector">
+                    <select id="viz-3" class="toggle-data-selector">
                         <option value="0">Total</option>
                         <option value="1">Per Capita</option>
                     </select>
@@ -1570,7 +1570,7 @@ const chartStrings = {
                         <select id="viz-0" class="toggle-data-selector">
                             <option value="0">All Roads</option>
                             <option value="1">Interstate</option>
-                            <option value="2">NHS Non-Interstate</option>
+                            <option value="2">Non-Interstate NHS</option>
                             <option value="3">Non-NHS</option>
                         </select>
                     </label>
