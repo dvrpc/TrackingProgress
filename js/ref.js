@@ -6749,7 +6749,7 @@ const snippetsRef = {
       {
         type: "stacked bar",
         container: "chart2",
-        dataSource: ["water_quality_3"],
+        dataSource: ["water_quality_2"],
         context: {
           labels: ["Subwatershed Acres (Thousands)"],
           units: ["thousands"],
@@ -6772,7 +6772,7 @@ const snippetsRef = {
       {
         type: "stacked bar",
         container: "chart3",
-        dataSource: ["water_quality_2"],
+        dataSource: ["water_quality_3"],
         context: {
           labels: ["Stream Miles"],
           units: ["thousands"],
