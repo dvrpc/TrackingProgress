@@ -6717,8 +6717,8 @@ const snippetsRef = {
     trend: {
       status: "not-great",
       text: {
-        stat: "8.7% decrease",
-        text: `in water supporting aquatic life since 2006`,
+        stat: "2.8% decrease",
+        text: `in water supporting aquatic life since 2014`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/water-quality",
