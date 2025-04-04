@@ -5532,7 +5532,7 @@ const snippetsRef = {
       },
     ],
   },
-  "Greenhouse Gas Emissions": {
+  "CO2 Outputs": {
     categories: ["enviro", "comm", "sustain", "resil"],
     trend: {
       status: "good",
@@ -5546,25 +5546,25 @@ const snippetsRef = {
       {
         type: "line",
         container: "chart",
-        dataSource: ["emissions_1"],
+        dataSource: ["co2_outputs_1"],
         context: {
           labels: ["CO2 Equivalent (Millions of Metric Tons)"],
           keepLabels: true,
           units: ["singles"],
           keepUnits: true,
         },
-        columnOptions: [["emissions_total"], ["emissions_per_capita"]],
+        columnOptions: [["co2_outputs_total"], ["co2_outputs_per_capita"]],
         data: [
           {
             key: "DVRPC Region",
-            columns: ["year", "emissions_total"],
+            columns: ["year", "co2_outputs_total"],
           },
         ],
       },
       {
         type: "stacked bar",
         container: "chart2",
-        dataSource: ["emissions_2"],
+        dataSource: ["co2_outputs_2"],
         context: {
           labels: ["CO2 Equivalent (Millions of Metric Tons)"],
           units: ["singles"],
@@ -5589,49 +5589,68 @@ const snippetsRef = {
         ],
       },
       {
-        type: "stacked bar",
+        type: ["stacked bar", "stacked bar"],
         container: "chart3",
-        dataSource: ["emissions_3"],
+        dataSource: ["co2_outputs_3"],
         context: {
-          labels: ["Percent of Energy Generation Mix"],
+          labels: [
+            "Electricity Generation Mix by Source - By Individual Source",
+            "Electricity Generation Mix by Source - By Group of Sources",
+          ],
+          keepLabels: false,
           units: ["percent"],
+          keepUnits: true,
         },
+        columnOptions: [
+          [
+            "Coal",
+            "Oil",
+            "Gas",
+            "Other Fossil",
+            "Biomass",
+            "Hydro",
+            "Nuclear",
+            "Wind",
+            "Solar",
+          ],
+          ["Total Nonrenewables", "Total Renewables"],
+        ],
         data: [
           {
             key: "Coal",
-            columns: ["year", "coal"],
+            columns: ["year", "Coal"],
           },
           {
             key: "Oil",
-            columns: ["year", "oil"],
+            columns: ["year", "Oil"],
           },
           {
             key: "Gas",
-            columns: ["year", "gas"],
+            columns: ["year", "Gas"],
           },
           {
             key: "Other Fossil Fuels",
-            columns: ["year", "other_fossil"],
+            columns: ["year", "Other Fossil Fuels"],
           },
           {
             key: "Biomass",
-            columns: ["year", "biomass"],
+            columns: ["year", "Biomass"],
           },
           {
             key: "Hydro",
-            columns: ["year", "hydro"],
+            columns: ["year", "Hydro"],
           },
           {
             key: "Nuclear",
-            columns: ["year", "nuclear"],
+            columns: ["year", "Nuclear"],
           },
           {
             key: "Wind",
-            columns: ["year", "wind"],
+            columns: ["year", "Wind"],
           },
           {
             key: "Solar",
-            columns: ["year", "solar"],
+            columns: ["year", "Solar"],
           },
         ],
       },
@@ -5639,7 +5658,7 @@ const snippetsRef = {
         type: "line and scatter",
         container: "chart4",
         newKeys: true,
-        dataSource: ["emissions_4"],
+        dataSource: ["co2_outputs_4"],
         axisLabel: "Degrees Farenheit",
         context: {
           labels: [
@@ -5652,11 +5671,19 @@ const snippetsRef = {
           keepUnits: false,
         },
         columnOptions: [
-          ["Average Annual Temperature", "30 year trend - Temperature"],
-          ["Annual Precipitation", "30 year trend - Precipitation"],
+          ["Average Annual Temperature", "30 Year Trend - Temperature"],
+          [
+            "Total Daily Average Precipitation",
+            "30 Year Trend - Precipitation",
+          ],
           [
             "Precipitation from Severe Storms",
-            "30 year trend - Precipitation from Severe Storms",
+            "30 Year Trend - Precipitation from Severe Storms",
+          ],
+          ["Average Sea Level", "30 Year Trend - Average Sea Level"],
+          [
+            "Average Sea Level Change",
+            "30 Year Trend - Average Sea Level Change",
           ],
         ],
         data: [
@@ -5667,10 +5694,100 @@ const snippetsRef = {
             yAxis: 1,
           },
           {
-            key: "30-year trend",
-            columns: ["year", "30 year trend - Temperature"],
+            key: "30 Year Trend",
+            columns: ["year", "30 Year Trend - Temperature"],
             type: "line",
             yAxis: 1,
+          },
+        ],
+      },
+      {
+        type: "line",
+        container: "chart5",
+        dataSource: ["co2_outputs_5"],
+        context: {
+          labels: [],
+          units: [],
+        },
+        columnOptions: [
+          "PA Counties",
+          "PA Suburban Counties",
+          "Bucks",
+          "Chester",
+          "Delaware",
+          "Montgomery",
+          "Philadelphia",
+          "NJ Counties",
+          "Burlington",
+          "Camden",
+          "Gloucester",
+          "Mercer",
+          "DVRPC Region",
+        ],
+        data: [
+          {
+            key: "DVRPC Region",
+            columns: ["year", "DVRPC Region"],
+          },
+          {
+            key: "NJ Counties",
+            columns: ["year", "NJ Counties"],
+            disabled: true,
+          },
+          {
+            key: "PA Counties",
+            columns: ["year", "PA Counties"],
+            disabled: true,
+          },
+          {
+            key: "PA Suburban Counties",
+            columns: ["year", "PA Suburban Counties"],
+            disabled: true,
+          },
+          {
+            key: "Bucks",
+            columns: ["year", "Bucks"],
+            disabled: true,
+          },
+          {
+            key: "Burlington",
+            columns: ["year", "Burlington"],
+            disabled: true,
+          },
+          {
+            key: "Camden",
+            columns: ["year", "Camden"],
+            disabled: true,
+          },
+          {
+            key: "Chester",
+            columns: ["year", "Chester"],
+            disabled: true,
+          },
+          {
+            key: "Delaware",
+            columns: ["year", "Delaware"],
+            disabled: true,
+          },
+          {
+            key: "Gloucester",
+            columns: ["year", "Gloucester"],
+            disabled: true,
+          },
+          {
+            key: "Mercer",
+            columns: ["year", "Mercer"],
+            disabled: true,
+          },
+          {
+            key: "Montgomery",
+            columns: ["year", "Montgomery"],
+            disabled: true,
+          },
+          {
+            key: "Philadelphia",
+            columns: ["year", "Philadelphia"],
+            disabled: true,
           },
         ],
       },

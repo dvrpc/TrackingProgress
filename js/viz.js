@@ -383,7 +383,7 @@ const createLineAndScatterChart = (source, toggleContext) => {
   [container, dataSource, source, context] = formatInpus(source, toggleContext);
 
   const precipitationToggle = toggleContext.chartNumber || 0;
-  let yDomain = precipitationToggle < 2 ? [0, 65] : [0, 1];
+  let yDomain = precipitationToggle < 2 ? [0, 65] : [-0.5, 1];
 
   let scatterIndex = source.data[0].type === "scatter" ? 0 : 1;
   let lineIndex = scatterIndex === 0 ? 1 : 0;

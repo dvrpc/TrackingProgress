@@ -658,9 +658,9 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Geography: * Sex, ** Ethnicity, *** Race</em></small>
         <small class="chart-src">Federal Financial Institutions Examination Council's (FFIEC) Home Mortgage Disclosure Act (HMDA) Data</small>`,
-  "Greenhouse Gas Emissions": `
+  "CO2 Outputs": `
         <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Greenhouse Gas Emissions</h2>
+        <h2 class="indicator-subheader toggle-subheader">Regional CO<sub>2</sub> Outputs</h2>
         <form>
             <fieldset>
                 <label>
@@ -680,7 +680,7 @@ const chartStrings = {
 
         <hr class="indicator-content-hr" />
 
-        <h2 class="indicator-subheader">Greenhouse Gas Emissions by Source</h2>
+        <h2 class="indicator-subheader toggle-subheader">Regional CO<sub>2</sub> Outputs By Source</h2>
         <div class="data-viz chart2">
             <svg></svg>
         </div>
@@ -688,17 +688,29 @@ const chartStrings = {
 
         <hr class="indicator-content-hr" />
 
+        <div class="toggle-wrapper">
         <h2 class="indicator-subheader">Electricity Generation Mix by Source</h2>
+        <form>
+            <fieldset>
+                <label>
+                    Select Source Type
+                    <select id="viz-2" class="toggle-data-selector">
+                        <option value="0">Individual Source</option>
+                        <option value="1">Source Grouping</option>
+                    </select>
+                </label>
+            </fieldset>
+        </form>
+        </div>
         <div class="data-viz chart3">
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Environmental Protection Agency, Emissions & Generation Resource Integrated Database (eGRID)</em></small>
-        
 
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Regional Climate Data by Value Type</h2>
+            <h2 class="indicator-subheader toggle-subheader">Regional Climate Data by Weather Type</h2>
             <form>
                 <fieldset>
                     <label>
@@ -707,6 +719,8 @@ const chartStrings = {
                             <option value="0">Temperature</option>
                             <option value="1">Precipitation</option>
                             <option value="2">Precipitation from Severe Storms</option>
+                            <option value="3">Average Sea Level</option>
+                            <option value="4">Average Sea Level Change</option>
                         </select>
                     </label>
                 </fieldset>
@@ -715,7 +729,19 @@ const chartStrings = {
         <div class="data-viz chart4">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Source: National Oceanic & Atmospheric Administration's National Centers for Environmental Information</em></small>`,
+        <small class="chart-src"><em>Source: National Oceanic & Atmospheric Administration's National Centers for Environmental Information</em></small>
+
+        <hr class="indicator-content-hr" />
+
+            <h2 class="indicator-subheader toggle-subheader">
+            Annual CO<sub>2</sub> Outputs from National Highway System
+            </h2>
+
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: National Oceanic & Atmospheric Administration's National Centers for Environmental Information</em></small>
+`,
   "Housing Permits": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Share of Regional Housing Unit Permits Approved in Core Cities and Developed Communities</h2>
