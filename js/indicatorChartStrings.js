@@ -666,8 +666,8 @@ const chartStrings = {
                 <label>
                     Select Value Type
                     <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Total Emissions</option>
-                        <option value="1">Emissions per Capita</option>
+                        <option value="0">Total CO2 Outputs</option>
+                        <option value="1">CO2 Outputs per Capita</option>
                     </select>
                 </label>
             </fieldset>

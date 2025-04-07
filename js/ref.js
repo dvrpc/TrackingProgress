@@ -5541,7 +5541,7 @@ const snippetsRef = {
         text: `in greenhouse gas emissions since 2005`,
       },
     },
-    dataUrl: "https://catalog.dvrpc.org/dataset/greenhouse-gas-emissions",
+    dataUrl: "https://catalog.dvrpc.org/dataset/co2-outputs",
     d3: [
       {
         type: "line",
@@ -5593,11 +5593,8 @@ const snippetsRef = {
         container: "chart3",
         dataSource: ["co2_outputs_3"],
         context: {
-          labels: [
-            "Electricity Generation Mix by Source - By Individual Source",
-            "Electricity Generation Mix by Source - By Group of Sources",
-          ],
-          keepLabels: false,
+          labels: ["Electricity Generation Mix"],
+          keepLabels: true,
           units: ["percent"],
           keepUnits: true,
         },
@@ -5665,6 +5662,8 @@ const snippetsRef = {
             "Degrees Farenheit",
             "Precipitation (inches)",
             "Percentage of Precipitation from Severe Storms",
+            "Average Monthly Mean Sea Level (Meters)",
+            "Average Monthly Mean Sea Level Change (Meters)",
           ],
           keepLabels: false,
           units: ["thousands", "thousands", "percentC"],
@@ -5706,8 +5705,8 @@ const snippetsRef = {
         container: "chart5",
         dataSource: ["co2_outputs_5"],
         context: {
-          labels: [],
-          units: [],
+          labels: ["CO2 Equivalent (Millions of Metric Tons)"],
+          units: ["singles"],
         },
         columnOptions: [
           "PA Counties",

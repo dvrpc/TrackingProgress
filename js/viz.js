@@ -398,11 +398,11 @@ const createLineAndScatterChart = (source, toggleContext) => {
     (rows) => {
       source.data[scatterIndex].values.push({
         x: +rows[scatterSource[0]],
-        y: rows[scatterSource[1]] === "NA" ? -1 : +rows[scatterSource[1]], // -1 + a yMin of 0 as a hack to avoid plotting NA values
+        y: rows[scatterSource[1]] === "" ? -99 : +rows[scatterSource[1]],
       });
       source.data[lineIndex].values.push({
         x: +rows[lineSource[0]],
-        y: rows[lineSource[1]] === "NA" ? null : +rows[lineSource[1]],
+        y: rows[lineSource[1]] === "" ? null : +rows[lineSource[1]],
       });
     },
     (csvObj) => {
