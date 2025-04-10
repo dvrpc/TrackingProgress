@@ -5546,25 +5546,25 @@ const snippetsRef = {
       {
         type: "line",
         container: "chart",
-        dataSource: ["co2_outputs_1"],
+        dataSource: ["co2eqos_1"],
         context: {
           labels: ["CO2 Equivalent (Millions of Metric Tons)"],
           keepLabels: true,
           units: ["singles"],
           keepUnits: true,
         },
-        columnOptions: [["co2_outputs_total"], ["co2_outputs_per_capita"]],
+        columnOptions: [["total"], ["total_per_capita"]],
         data: [
           {
             key: "DVRPC Region",
-            columns: ["year", "co2_outputs_total"],
+            columns: ["year", "total"],
           },
         ],
       },
       {
         type: "stacked bar",
         container: "chart2",
-        dataSource: ["co2_outputs_2"],
+        dataSource: ["co2eqos_2"],
         context: {
           labels: ["CO2 Equivalent (Millions of Metric Tons)"],
           units: ["singles"],
@@ -5591,7 +5591,7 @@ const snippetsRef = {
       {
         type: ["stacked bar", "stacked bar"],
         container: "chart3",
-        dataSource: ["co2_outputs_3"],
+        dataSource: ["co2eqos_3"],
         context: {
           labels: ["Electricity Generation Mix"],
           keepLabels: true,
@@ -5655,7 +5655,7 @@ const snippetsRef = {
         type: "line and scatter",
         container: "chart4",
         newKeys: true,
-        dataSource: ["co2_outputs_4"],
+        dataSource: ["co2eqos_4"],
         axisLabel: "Degrees Farenheit",
         context: {
           labels: [
@@ -5703,7 +5703,7 @@ const snippetsRef = {
       {
         type: "line",
         container: "chart5",
-        dataSource: ["co2_outputs_5"],
+        dataSource: ["co2eqos_5"],
         context: {
           labels: ["CO2 Equivalent (Millions of Metric Tons)"],
           units: ["singles"],
