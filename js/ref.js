@@ -5532,7 +5532,7 @@ const snippetsRef = {
       },
     ],
   },
-  "CO2 Outputs": {
+  "CO2 Equivalent Outputs": {
     categories: ["enviro", "comm", "sustain", "resil"],
     trend: {
       status: "good",
