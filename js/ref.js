@@ -5541,7 +5541,7 @@ const snippetsRef = {
         text: `in greenhouse gas emissions since 2005`,
       },
     },
-    dataUrl: "https://catalog.dvrpc.org/dataset/co2-outputs",
+    dataUrl: "https://catalog.dvrpc.org/dataset/co2-equivalent-outputs",
     d3: [
       {
         type: "line",

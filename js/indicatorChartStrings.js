@@ -660,13 +660,13 @@ const chartStrings = {
         <small class="chart-src">Federal Financial Institutions Examination Council's (FFIEC) Home Mortgage Disclosure Act (HMDA) Data</small>`,
   "CO2 Equivalent Outputs": `
         <div class="toggle-wrapper">
-        <h2 class="indicator-subheader toggle-subheader">Regional CO<sub>2</sub> Outputs</h2>
+        <h2 class="indicator-subheader toggle-subheader">Regional CO<sub>2</sub> Equivalent Outputs</h2>
         <form>
             <fieldset>
                 <label>
                     Select Value Type
                     <select id="viz-0" class="toggle-data-selector">
-                        <option value="0">Total CO2 Outputs</option>
+                        <option value="0">Total</option>
                         <option value="1">CO2 Outputs per Capita</option>
                     </select>
                 </label>
@@ -680,7 +680,7 @@ const chartStrings = {
 
         <hr class="indicator-content-hr" />
 
-        <h2 class="indicator-subheader toggle-subheader">Regional CO<sub>2</sub> Outputs By Source</h2>
+        <h2 class="indicator-subheader toggle-subheader">Regional CO<sub>2</sub> Equivalent Outputs By Source</h2>
         <div class="data-viz chart2">
             <svg></svg>
         </div>
@@ -734,7 +734,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
             <h2 class="indicator-subheader toggle-subheader">
-            Annual CO<sub>2</sub> Outputs from National Highway System
+            Annual CO<sub>2</sub> Equivalent Outputs from National Highway System
             </h2>
 
         <div class="data-viz chart5">
