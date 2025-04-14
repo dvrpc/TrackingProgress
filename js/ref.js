@@ -6066,6 +6066,24 @@ const snippetsRef = {
           },
         ],
       },
+      {
+        type: "line",
+        container: "chart5",
+        dataSource: ["transit_conditions_graph_5"],
+        context: {
+          labels: ["Miles Between Failures Per 100,000 Vehicle Revenue Miles"],
+          keepLabels: true,
+          units: ["thousands"],
+          keepUnits: true,
+        },
+        columnOptions: ["All - All"],
+        data: [
+          {
+            key: "All",
+            columns: ["Year", "All - All"],
+          },
+        ],
+      },
     ],
   },
   "Business Formations": {

@@ -2353,6 +2353,13 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>               
 
+        <hr class="indicator-content-hr" />       
+
+        <h2 class="indicator-subheader toggle-subheader">Vehicle Revenue Miles Between Failures</h2>
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: Federal Transit Administration's National Transit Database</em></small>               
         `,
   "Transit Ridership": `
        <div class="toggle-wrapper">
