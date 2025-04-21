@@ -5532,7 +5532,7 @@ const snippetsRef = {
       },
     ],
   },
-  "CO2 Equivalent Outputs": {
+  "Heat Trapping Gases": {
     categories: ["enviro", "comm", "sustain", "resil"],
     trend: {
       status: "good",

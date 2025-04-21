@@ -658,7 +658,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Geography: * Sex, ** Ethnicity, *** Race</em></small>
         <small class="chart-src">Federal Financial Institutions Examination Council's (FFIEC) Home Mortgage Disclosure Act (HMDA) Data</small>`,
-  "CO2 Equivalent Outputs": `
+  "Heat Trapping Gases": `
         <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Regional CO<sub>2</sub> Equivalent Outputs</h2>
         <form>
