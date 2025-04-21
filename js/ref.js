@@ -5675,10 +5675,6 @@ const snippetsRef = {
             "Total Daily Average Precipitation",
             "30 Year Trend - Precipitation",
           ],
-          [
-            "Precipitation from Severe Storms",
-            "30 Year Trend - Precipitation from Severe Storms",
-          ],
           ["Average Sea Level", "30 Year Trend - Average Sea Level"],
           [
             "Average Sea Level Change",

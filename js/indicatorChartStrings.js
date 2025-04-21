@@ -718,9 +718,8 @@ const chartStrings = {
                         <select id="viz-3" class="toggle-data-selector">
                             <option value="0">Temperature</option>
                             <option value="1">Precipitation</option>
-                            <option value="2">Precipitation from Severe Storms</option>
-                            <option value="3">Average Sea Level</option>
-                            <option value="4">Average Sea Level Change</option>
+                            <option value="2">Average Sea Level</option>
+                            <option value="3">Average Sea Level Change</option>
                         </select>
                     </label>
                 </fieldset>
