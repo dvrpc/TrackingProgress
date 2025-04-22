@@ -5538,8 +5538,8 @@ const snippetsRef = {
     trend: {
       status: "good",
       text: {
-        stat: "21% reduction",
-        text: `in greenhouse gas emissions since 2005`,
+        stat: "30% decrease",
+        text: `in heat-trapping gases per person since 2005`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/heat-trapping-gases",
