@@ -5533,6 +5533,7 @@ const snippetsRef = {
     ],
   },
   "Heat Trapping Gases": {
+    formattedTitle: "Heat-Trapping Gases",
     categories: ["enviro", "comm", "sustain", "resil"],
     trend: {
       status: "good",
