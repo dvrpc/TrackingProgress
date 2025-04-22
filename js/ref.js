@@ -5885,7 +5885,7 @@ const snippetsRef = {
         ],
         data: [
           {
-            key: "All Agencies",
+            key: "All",
             columns: ["year", "all_all_graphed_modes"],
           },
           {
@@ -5946,7 +5946,7 @@ const snippetsRef = {
         ],
         data: [
           {
-            key: "All Agencies",
+            key: "All",
             columns: ["year", "all_all_graphed_svs"],
           },
           {
@@ -6773,7 +6773,7 @@ const snippetsRef = {
             columns: ["year", "New Jersey Suburbs- All"],
           },
           {
-            key: "PA All Counties",
+            key: "PA Counties",
             disabled: true,
             columns: ["year", "Pennsylvania All Counties- All"],
           },
@@ -6912,7 +6912,7 @@ const snippetsRef = {
             columns: ["year", "New Jersey Suburbs- All"],
           },
           {
-            key: "PA All Counties",
+            key: "PA Counties",
             disabled: true,
             columns: ["year", "Pennsylvania All Counties- All"],
           },
@@ -7036,7 +7036,7 @@ const snippetsRef = {
             columns: ["year", "New Jersey Suburbs- Poor"],
           },
           {
-            key: "PA Poor Counties",
+            key: "PA Counties",
             disabled: true,
             columns: ["year", "Pennsylvania All Counties- Poor"],
           },
