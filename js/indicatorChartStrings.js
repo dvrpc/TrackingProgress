@@ -33,25 +33,12 @@ const chartStrings = {
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Geography:
+                        Select Ownership Type:
                         <select id="viz-0" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">All PA Counties</option>
-                                <option value="3">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="4">Bucks</option>
-                                <option value="5">Burlington</option>
-                                <option value="6">Camden</option>
-                                <option value="7">Chester</option>
-                                <option value="8">Delaware</option>
-                                <option value="9">Gloucester</option>
-                                <option value="10">Mercer</option>
-                                <option value="11">Montgomery</option>
-                                <option value="12">Philadelphia</option>
-                            </optgroup>
+                            <option value="0">All</option>
+                            <option value="1">State</option>
+                            <option value="2">Local</option>
+                            <option value="3">Other</option>
                         </select>
                     </label>
                 </fieldset>
@@ -79,27 +66,13 @@ const chartStrings = {
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Geography:
+                        Select Ownership Type:
                         <select id="viz-1" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">All PA Counties</option>
-                                <option value="3">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="4">Bucks</option>
-                                <option value="5">Burlington</option>
-                                <option value="6">Camden</option>
-                                <option value="7">Chester</option>
-                                <option value="8">Delaware</option>
-                                <option value="9">Gloucester</option>
-                                <option value="10">Mercer</option>
-                                <option value="11">Montgomery</option>
-                                <option value="12">Philadelphia</option>
-                            </optgroup>
-                        </select>
-                    </label>
+                            <option value="0">All</option>
+                            <option value="1">State</option>
+                            <option value="2">Local</option>
+                            <option value="3">Other</option>
+                        </select>               
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
@@ -125,26 +98,12 @@ const chartStrings = {
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Geography:
+                        Select Condition:
                         <select id="viz-2" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">All PA Counties</option>
-                                <option value="3">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="4">Bucks</option>
-                                <option value="5">Burlington</option>
-                                <option value="6">Camden</option>
-                                <option value="7">Chester</option>
-                                <option value="8">Delaware</option>
-                                <option value="9">Gloucester</option>
-                                <option value="10">Mercer</option>
-                                <option value="11">Montgomery</option>
-                                <option value="12">Philadelphia</option>
-                            </optgroup>
-                        </select>
+                                <option value="0">Poor</option>
+                                <option value="1">Fair</option>
+                                <option value="2">Good</option>
+                       </select>
                     </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
