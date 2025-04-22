@@ -6073,11 +6073,56 @@ const snippetsRef = {
           units: ["thousands"],
           keepUnits: true,
         },
-        columnOptions: ["All - All"],
+        columnOptions: [
+          [
+            "All - All",
+            "All - Bus",
+            "All - Trolleybus",
+            "All - Heavy Rail",
+            "All - Light Rail",
+          ],
+          [
+            "SEPTA - All",
+            "SEPTA - Bus",
+            "SEPTA - Trolleybus",
+            "SEPTA - Heavy Rail",
+            "SEPTA - Light Rail",
+          ],
+          [
+            "NJ Transit - All",
+            "NJ Transit - Bus",
+            "NJ Transit - Trolleybus",
+            "NJ Transit - Heavy Rail",
+            "NJ Transit - Light Rail",
+          ],
+          [
+            "PATCO - All",
+            "PATCO - Bus",
+            "PATCO - Trolleybus",
+            "PATCO - Heavy Rail",
+            "PATCO - Light Rail",
+          ],
+        ],
         data: [
           {
-            key: "All Agencies",
+            key: "All",
             columns: ["Year", "All - All"],
+          },
+          {
+            key: "Bus",
+            columns: ["Year", "All - Bus"],
+          },
+          {
+            key: "Trolleybus",
+            columns: ["Year", "All - Trolleybus"],
+          },
+          {
+            key: "Heavy Rail",
+            columns: ["Year", "All - Heavy Rail"],
+          },
+          {
+            key: "Light Rail",
+            columns: ["Year", "All - Light Rail"],
           },
         ],
       },

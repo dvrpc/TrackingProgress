@@ -2313,7 +2313,23 @@ const chartStrings = {
 
         <hr class="indicator-content-hr" />       
 
+        <div class="toggle-wrapper">
         <h2 class="indicator-subheader toggle-subheader">Vehicle Revenue Miles Between Failures</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Transit Agency
+                        <select id="viz-4" class="toggle-data-selector">
+                            <option value="0">All</option>
+                            <option value="1">SEPTA</option>
+                            <option value="2">NJ Transit</option>
+                            <option value="3">PATCO</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+
         <div class="data-viz chart5">
             <svg></svg>
         </div>
