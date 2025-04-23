@@ -5536,7 +5536,7 @@ const snippetsRef = {
     formattedTitle: "Heat-Trapping Gases",
     categories: ["enviro", "comm", "sustain", "resil"],
     trend: {
-      status: "good",
+      status: "neutral",
       text: {
         stat: "30% decrease",
         text: `in heat-trapping gases per person since 2005`,
@@ -5662,12 +5662,11 @@ const snippetsRef = {
           labels: [
             "Degrees Farenheit",
             "Precipitation (inches)",
-            "Percentage of Precipitation from Severe Storms",
             "Average Monthly Mean Sea Level (Meters)",
             "Average Monthly Mean Sea Level Change (Meters)",
           ],
           keepLabels: false,
-          units: ["thousands", "thousands", "percentC"],
+          units: ["thousands", "thousands", "decimals", "percentC"],
           keepUnits: false,
         },
         columnOptions: [
@@ -5676,9 +5675,12 @@ const snippetsRef = {
             "Total Daily Average Precipitation",
             "30 Year Trend - Precipitation",
           ],
-          ["Average Sea Level", "30 Year Trend - Average Sea Level"],
           [
-            "Average Sea Level Change",
+            "Average Monthly Mean Sea Level (Meters)",
+            "30 Year Trend - Average Sea Level",
+          ],
+          [
+            "Average Monthly Mean Sea Level Change (Meters)",
             "30 Year Trend - Average Sea Level Change",
           ],
         ],
