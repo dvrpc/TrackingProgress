@@ -5794,8 +5794,8 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "20.6% increase",
-        text: `of revenue service vehicles past their useful life benchmark in 2022`,
+        stat: "28.6% increase",
+        text: `of revenue service vehicles past their useful life benchmark in 2023`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/transit-conditions",
