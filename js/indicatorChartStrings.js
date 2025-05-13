@@ -723,7 +723,7 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Total Housing Units Approved by Planning Area</h2>
+            <h2 class="indicator-subheader toggle-subheader">Total Housing Units Approved by Geography</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
@@ -775,7 +775,7 @@ const chartStrings = {
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
                                 <option value="1">NJ Counties</option>
-                                <option value="2">PA Suburburban Counties</option>
+                                <option value="2">PA Suburban Counties</option>
                             </optgroup>
                             <optgroup label="Planning Areas">
                                 <option value="3">Core Cities</option>
