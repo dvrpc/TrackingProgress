@@ -1468,8 +1468,8 @@ const snippetsRef = {
     trend: {
       status: "awesome",
       text: {
-        stat: "1.42 times more",
-        text: `permits in Core Cities and Developed Communities since 2009`,
+        stat: "46% increase",
+        text: `in permits in Core Cities and Developed Communities since 1999`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/housing-permits",
