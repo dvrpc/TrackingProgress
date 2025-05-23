@@ -98,12 +98,26 @@ const chartStrings = {
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Condition:
+                      Select Geography:
                         <select id="viz-2" class="toggle-data-selector">
-                                <option value="0">Poor</option>
-                                <option value="1">Fair</option>
-                                <option value="2">Good</option>
-                       </select>
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Suburban Counties</option>
+                                <option value="2">PA Counties</option>
+                                <option value="3">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="4">Bucks</option>
+                                <option value="5">Burlington</option>
+                                <option value="6">Camden</option>
+                                <option value="7">Chester</option>
+                                <option value="8">Delaware</option>
+                                <option value="9">Gloucester</option>
+                                <option value="10">Mercer</option>
+                                <option value="11">Montgomery</option>
+                                <option value="12">Philadelphia</option>
+                            </optgroup>
+                        </select>
                     </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
