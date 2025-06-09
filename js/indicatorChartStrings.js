@@ -29,26 +29,42 @@ const chartStrings = {
     `,
   "Bridge Conditions": `
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Percentage of Deficient Bridges by Ownership Type</h2>
+            <h2 class="indicator-subheader toggle-subheader">Percentage of Bridges in Poor Condition by Owner Type</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Ownership Type:
+                        Select Geography:
                         <select id="viz-0" class="toggle-data-selector">
-                            <option value="0">All</option>
-                            <option value="1">State</option>
-                            <option value="2">Local</option>
-                            <option value="3">Other</option>
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
                         </select>
                     </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
                     <label>
-                        Select Value Type:
+                        Select Ownership Type:
                         <select id="viz-0-b" class="toggle-data-selector">
-                            <option value="0">Share of Total Bridge Deck Area</option>
-                            <option value="1">Share of Total Bridges</option>
+                            <option value="0">Share of NHS Bridge Deck Area</option>
+                            <option value="1">Share of Non-NHS Bridge Deck Area</option>
+                            <option value="2">Share of All Bridge Deck Area</option>
+                            <option value="3">Share of NHS Bridges</option>
+                            <option value="4">Share of Non-NHS Bridges</option>
+                            <option value="5">Share of All Bridges</option>
                         </select>
                     </label>
                 </fieldset>
@@ -62,25 +78,42 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Deficient Bridges by Ownership Type</h2>
+            <h2 class="indicator-subheader toggle-subheader">Percentage of Bridges in Good Condition by Owner Type</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                        Select Ownership Type:
+                        Select Geography:
                         <select id="viz-1" class="toggle-data-selector">
-                            <option value="0">All</option>
-                            <option value="1">State</option>
-                            <option value="2">Local</option>
-                            <option value="3">Other</option>
-                        </select>               
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
                 </fieldset>
                 <span class="toggle-vr">|</span>
                 <fieldset>
                     <label>
-                        Select Value Type:    
+                        Select Ownership Type:
                         <select id="viz-1-b" class="toggle-data-selector">
-                            <option value="0">Bridge Deck Area</option>
-                            <option value="1">Number of Bridges</option>
+                            <option value="0">Share of NHS Bridge Deck Area</option>
+                            <option value="1">Share of Non-NHS Bridge Deck Area</option>
+                            <option value="2">Share of All Bridge Deck Area</option>
+                            <option value="3">Share of NHS Bridges</option>
+                            <option value="4">Share of Non-NHS Bridges</option>
+                            <option value="5">Share of All Bridges</option>
                         </select>
                     </label>
                 </fieldset>
@@ -94,28 +127,27 @@ const chartStrings = {
         <hr class="indicator-content-hr" />
 
         <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Bridges by Condition</h2>
+            <h2 class="indicator-subheader toggle-subheader">Poor Bridges by Owner Type</h2>
             <form class="double-toggle-form">
                 <fieldset>
                     <label>
-                      Select Geography:
+                        Select Geography:
                         <select id="viz-2" class="toggle-data-selector">
                             <optgroup label="Regional">
                                 <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Suburban Counties</option>
+                                <option value="1">NJ Counties</option>
                                 <option value="2">PA Counties</option>
-                                <option value="3">PA Suburban Counties</option>
                             </optgroup>
                             <optgroup label="Counties">
-                                <option value="4">Bucks</option>
-                                <option value="5">Burlington</option>
-                                <option value="6">Camden</option>
-                                <option value="7">Chester</option>
-                                <option value="8">Delaware</option>
-                                <option value="9">Gloucester</option>
-                                <option value="10">Mercer</option>
-                                <option value="11">Montgomery</option>
-                                <option value="12">Philadelphia</option>
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
                             </optgroup>
                         </select>
                     </label>
@@ -123,10 +155,14 @@ const chartStrings = {
                 <span class="toggle-vr">|</span>
                 <fieldset>
                     <label>
-                        Select Value Type:
+                        Select Ownership Type:
                         <select id="viz-2-b" class="toggle-data-selector">
-                            <option value="0">Bridge Deck Area</option>
-                            <option value="1">Number of Bridges</option>
+                            <option value="0">Share of NHS Bridge Deck Area</option>
+                            <option value="1">Share of Non-NHS Bridge Deck Area</option>
+                            <option value="2">Share of All Bridge Deck Area</option>
+                            <option value="3">Share of NHS Bridges</option>
+                            <option value="4">Share of Non-NHS Bridges</option>
+                            <option value="5">Share of All Bridges</option>
                         </select>
                     </label>
                 </fieldset>
@@ -136,7 +172,56 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: National Bridge Inventory (NBI)</em></small>
-    `,
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Bridges by Condition</h2>
+            <form class="double-toggle-form">
+                <fieldset>
+                    <label>
+                        Select Geography:
+                        <select id="viz-3" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Counties</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="3">Bucks</option>
+                                <option value="4">Burlington</option>
+                                <option value="5">Camden</option>
+                                <option value="6">Chester</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">Gloucester</option>
+                                <option value="9">Mercer</option>
+                                <option value="10">Montgomery</option>
+                                <option value="11">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+                <span class="toggle-vr">|</span>
+                <fieldset>
+                    <label>
+                        Select Ownership Type:
+                        <select id="viz-3-b" class="toggle-data-selector">
+                            <option value="0">Share of NHS Bridge Deck Area</option>
+                            <option value="1">Share of Non-NHS Bridge Deck Area</option>
+                            <option value="2">Share of All Bridge Deck Area</option>
+                            <option value="3">Share of NHS Bridges</option>
+                            <option value="4">Share of Non-NHS Bridges</option>
+                            <option value="5">Share of All Bridges</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart4">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: National Bridge Inventory (NBI)</em></small>
+   `,
   "Commute Mode": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Means of Transportation to Work by Mode</h2>
