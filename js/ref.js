@@ -6698,8 +6698,8 @@ const snippetsRef = {
     trend: {
       status: "awesome",
       text: {
-        stat: "62% drop",
-        text: `in bridge deck area rated deficient since a 2003 peak of 18%`,
+        stat: "62.7% drop",
+        text: `in deficient NHS bridge deck area since 2004`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/bridge-conditions",
