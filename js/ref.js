@@ -4,8 +4,8 @@ const snippetsRef = {
     trend: {
       status: "good",
       text: {
-        stat: "One day",
-        text: `increase in five-year average of violating days since 2022`,
+        stat: "-60",
+        text: `unhealthy air quality days in 2019-23 vs. 1998-2002`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/air-quality-violations",
