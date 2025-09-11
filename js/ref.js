@@ -4032,6 +4032,32 @@ const snippetsRef = {
           },
         ],
       },
+      {
+        type: "line",
+        container: "chart5",
+        dataSource: ["avg_maxptiwrst"],
+        context: {
+          labels: ["Average Highest PTI Across Peaks"],
+          keepLabels: true,
+          units: ["singles"],
+          keepUnits: true,
+        },
+        columnOptions: [["NJ Transit", "SEPTA - City", "SEPTA - Suburban"]],
+        data: [
+          {
+            key: "NJ Transit",
+            columns: ["Year", "NJ Transit"],
+          },
+          {
+            key: "SEPTA - City",
+            columns: ["Year", "SEPTA - City"],
+          },
+          {
+            key: "SEPTA - Suburban",
+            columns: ["Year", "SEPTA - Suburban"],
+          },
+        ],
+      },
     ],
   },
   "Gross Domestic Product": {

@@ -430,6 +430,17 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+
+        <hr class="indicator-content-hr" />
+
+        <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Highest Planning Time Index Across Peaks Averaged Across Routes</h2>
+        </div>
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Sources: RITIS Probe Data Analytics Suite, INRIX, DVRPC</em></small>
+   
         `,
   "Educational Attainment": `
         <h2 class="indicator-subheader">Population 25 Years and Older Having Completed High-School by Geography</h2>
