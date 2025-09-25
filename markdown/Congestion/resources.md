@@ -1,8 +1,8 @@
 For more information on transportation system performance and strategies to enhance mobility of people and goods, see DVRPC’s [Congestion Management Process](https://www.dvrpc.org/CongestionManagement/). Additionally, DVRPC’s [Transportation Systems Management and Operations (TSMO)](https://www.dvrpc.org/Transportation/TSMO/) planning programs preserve capacity and improve the security, safety, and reliability of the transportation system.
 
-DVRPC is required to track current conditions and set two- and four-year [system performance](https://dvrpc.org/tpm/?indicator=systemperf) targets for travel time reliability on the National Highway System, truck travel time reliability on the Interstate system, and annual hours of peak-hour excessive delay in the region’s urban areas based on projected changes in travel demand and transportation infrastructure investments, as part of the Federal Highway Administration’s Transportation Performance Management requirements.  
+DVRPC is required to track current conditions and set two- and four-year [system performance](https://dvrpc.org/tpm/?indicator=systemperf) targets for travel time reliability on the National Highway System, truck travel time reliability on the Interstate system, and annual hours of peak-hour excessive delay in the region’s urban areas based on projected changes in travel demand and transportation infrastructure investments, as part of the Federal Highway Administration’s Transportation Performance Management requirements. See how the region is performing: TPM [System Performance](https://www.dvrpc.org/tpm/?indicator=systemperf).
 
-DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ suggests the following tools for improving congestion:
+DVRPC’s *[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)* suggests the following tools for improving congestion:
 
 * [Access Management](https://www.dvrpc.org/Plan/MIT/accessmanagement)
 * [Complete Streets](https://www.dvrpc.org/Plan/MIT/completestreets)
