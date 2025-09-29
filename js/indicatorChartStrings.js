@@ -418,7 +418,7 @@ const chartStrings = {
             <fieldset>
                 <label>
                     Select Value Type
-                    <select id="viz-3" class="toggle-data-selector">
+                    <select id="viz-3-b" class="toggle-data-selector">
                         <option value="0">Total</option>
                         <option value="1">Per Capita</option>
                     </select>
