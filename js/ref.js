@@ -3527,8 +3527,8 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "4.3% less",
-        text: `reliability on region's highways during weekdays since 2011`,
+        stat: "9.6% less",
+        text: `reliability on region's highways during weekdays since 2021`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/congestion",
