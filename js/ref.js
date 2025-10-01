@@ -6185,9 +6185,9 @@ const snippetsRef = {
         context: {
           labels: [
             "Annual Business Formations",
-            "Percent Difference from Base Year",
+            "Cumulative Business Formations",
           ],
-          units: ["thousands", "percentC"],
+          units: ["thousands", "thousands"],
         },
         xAxisRange: [2005, 2021],
         dataSource: ["business_formations_1a", "business_formations_1b"],

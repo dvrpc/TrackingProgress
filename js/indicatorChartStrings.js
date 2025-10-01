@@ -1370,7 +1370,7 @@ const chartStrings = {
                         Select Value Type:
                         <select id="viz-0-b" class="toggle-data-selector">
                             <option value="0">Totals</option>
-                            <option value="1">Percentage</option>
+                            <option value="1">Cumulative</option>
                         </select>
                     </label>
                 </fieldset>
