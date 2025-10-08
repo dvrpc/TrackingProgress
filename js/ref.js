@@ -6173,7 +6173,7 @@ const snippetsRef = {
     trend: {
       status: "awesome",
       text: {
-        stat: "95% growth",
+        stat: "106% growth",
         text: `in average annual applications`,
       },
     },
@@ -6207,14 +6207,14 @@ const snippetsRef = {
         ],
         data: [
           {
-            key: "Annual Business Formations",
+            key: "Business Formations",
             columns: ["year", "dvrpc"],
             type: "bar",
             yAxis: 1,
             bar: true,
           },
           {
-            key: "5-year average",
+            key: "Annual 5-year average",
             columns: ["year", "dvrpc_5yr"],
             type: "line",
             yAxis: 1,
