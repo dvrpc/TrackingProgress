@@ -1123,7 +1123,7 @@ const snippetsRef = {
           "mortgage_lending_2d",
         ],
         context: {
-          labels: ["Loan Origination Rates"],
+          labels: ["Loan Origination Rate"],
           keepLabels: true,
           units: ["percentD"],
           keepUnits: true,
@@ -1138,6 +1138,7 @@ const snippetsRef = {
             "dvrpc_asian",
             "dvrpc_black",
             "dvrpc_white",
+            "dvrpc_all",
           ],
           [
             "njcos_female",
@@ -1148,6 +1149,7 @@ const snippetsRef = {
             "njcos_asian",
             "njcos_black",
             "njcos_white",
+            "njcos_all",
           ],
           [
             "pasubcos_female",
@@ -1158,6 +1160,7 @@ const snippetsRef = {
             "pasubcos_asian",
             "pasubcos_black",
             "pasubcos_white",
+            "pasubcos_all",
           ],
           [
             "bucks_female",
@@ -1168,6 +1171,7 @@ const snippetsRef = {
             "bucks_asian",
             "bucks_black",
             "bucks_white",
+            "bucks_all",
           ],
           [
             "burl_female",
@@ -1178,6 +1182,7 @@ const snippetsRef = {
             "burl_asian",
             "burl_black",
             "burl_white",
+            "burl_all",
           ],
           [
             "camd_female",
@@ -1188,6 +1193,7 @@ const snippetsRef = {
             "camd_asian",
             "camd_black",
             "camd_white",
+            "camd_all",
           ],
           [
             "ches_female",
@@ -1198,6 +1204,7 @@ const snippetsRef = {
             "ches_asian",
             "ches_black",
             "ches_white",
+            "ches_all",
           ],
           [
             "del_female",
@@ -1208,6 +1215,7 @@ const snippetsRef = {
             "del_asian",
             "del_black",
             "del_white",
+            "del_all",
           ],
           [
             "glo_female",
@@ -1218,6 +1226,7 @@ const snippetsRef = {
             "glo_asian",
             "glo_black",
             "glo_white",
+            "glo_all",
           ],
           [
             "mer_female",
@@ -1228,6 +1237,7 @@ const snippetsRef = {
             "mer_asian",
             "mer_black",
             "mer_white",
+            "mer_all",
           ],
           [
             "mont_female",
@@ -1238,6 +1248,7 @@ const snippetsRef = {
             "mont_asian",
             "mont_black",
             "mont_white",
+            "mont_all",
           ],
           [
             "phil_female",
@@ -1248,9 +1259,14 @@ const snippetsRef = {
             "phil_asian",
             "phil_black",
             "phil_white",
+            "phil_all",
           ],
         ],
         data: [
+          {
+            key: "All",
+            columns: ["year", "dvrpc_all"],
+          },
           {
             key: "Female*",
             columns: ["year", "dvrpc_female"],
@@ -1274,12 +1290,10 @@ const snippetsRef = {
           {
             key: "Asian***",
             columns: ["year", "dvrpc_asian"],
-            disabled: true,
           },
           {
             key: "Black***",
             columns: ["year", "dvrpc_black"],
-            disabled: true,
           },
           {
             key: "White***",
@@ -1312,6 +1326,7 @@ const snippetsRef = {
             "dvrpc_asian",
             "dvrpc_black",
             "dvrpc_white",
+            "dvrpc_all",
           ],
           [
             "njcos_female",
@@ -1322,6 +1337,7 @@ const snippetsRef = {
             "njcos_asian",
             "njcos_black",
             "njcos_white",
+            "njcos_all",
           ],
           [
             "pasubcos_female",
@@ -1332,6 +1348,7 @@ const snippetsRef = {
             "pasubcos_asian",
             "pasubcos_black",
             "pasubcos_white",
+            "pasubcos_all",
           ],
           [
             "bucks_female",
@@ -1342,6 +1359,7 @@ const snippetsRef = {
             "bucks_asian",
             "bucks_black",
             "bucks_white",
+            "bucks_all",
           ],
           [
             "burl_female",
@@ -1352,6 +1370,7 @@ const snippetsRef = {
             "burl_asian",
             "burl_black",
             "burl_white",
+            "burl_all",
           ],
           [
             "camd_female",
@@ -1362,6 +1381,7 @@ const snippetsRef = {
             "camd_asian",
             "camd_black",
             "camd_white",
+            "camd_all",
           ],
           [
             "ches_female",
@@ -1372,6 +1392,7 @@ const snippetsRef = {
             "ches_asian",
             "ches_black",
             "ches_white",
+            "ches_all",
           ],
           [
             "del_female",
@@ -1382,6 +1403,7 @@ const snippetsRef = {
             "del_asian",
             "del_black",
             "del_white",
+            "del_all",
           ],
           [
             "glo_female",
@@ -1392,6 +1414,7 @@ const snippetsRef = {
             "glo_asian",
             "glo_black",
             "glo_white",
+            "glo_all",
           ],
           [
             "mer_female",
@@ -1402,6 +1425,7 @@ const snippetsRef = {
             "mer_asian",
             "mer_black",
             "mer_white",
+            "mer_all",
           ],
           [
             "mont_female",
@@ -1412,6 +1436,7 @@ const snippetsRef = {
             "mont_asian",
             "mont_black",
             "mont_white",
+            "mont_all",
           ],
           [
             "phil_female",
@@ -1422,9 +1447,14 @@ const snippetsRef = {
             "phil_asian",
             "phil_black",
             "phil_white",
+            "phil_all",
           ],
         ],
         data: [
+          {
+            key: "Female*",
+            columns: ["year", "dvrpc_all"],
+          },
           {
             key: "Female*",
             columns: ["year", "dvrpc_female"],
@@ -1448,12 +1478,10 @@ const snippetsRef = {
           {
             key: "Asian***",
             columns: ["year", "dvrpc_asian"],
-            disabled: true,
           },
           {
             key: "Black***",
             columns: ["year", "dvrpc_black"],
-            disabled: true,
           },
           {
             key: "White***",
