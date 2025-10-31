@@ -982,7 +982,7 @@ const snippetsRef = {
       status: "good",
       text: {
         stat: "8-10% drop",
-        text: `in loan approval rate gaps from base year`,
+        text: `in loan approval rate gaps since 2007`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/mortgage-lending",
