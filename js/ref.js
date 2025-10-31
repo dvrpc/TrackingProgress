@@ -1130,6 +1130,7 @@ const snippetsRef = {
         },
         columnOptions: [
           [
+            "dvrpc_all",
             "dvrpc_female",
             "dvrpc_male",
             "dvrpc_latinx",
@@ -1138,9 +1139,9 @@ const snippetsRef = {
             "dvrpc_asian",
             "dvrpc_black",
             "dvrpc_white",
-            "dvrpc_all",
           ],
           [
+            "njcos_all",
             "njcos_female",
             "njcos_male",
             "njcos_latinx",
@@ -1149,9 +1150,9 @@ const snippetsRef = {
             "njcos_asian",
             "njcos_black",
             "njcos_white",
-            "njcos_all",
           ],
           [
+            "pasubcos_all",
             "pasubcos_female",
             "pasubcos_male",
             "pasubcos_latinx",
@@ -1160,9 +1161,9 @@ const snippetsRef = {
             "pasubcos_asian",
             "pasubcos_black",
             "pasubcos_white",
-            "pasubcos_all",
           ],
           [
+            "bucks_all",
             "bucks_female",
             "bucks_male",
             "bucks_latinx",
@@ -1171,9 +1172,9 @@ const snippetsRef = {
             "bucks_asian",
             "bucks_black",
             "bucks_white",
-            "bucks_all",
           ],
           [
+            "burl_all",
             "burl_female",
             "burl_male",
             "burl_latinx",
@@ -1182,9 +1183,9 @@ const snippetsRef = {
             "burl_asian",
             "burl_black",
             "burl_white",
-            "burl_all",
           ],
           [
+            "camd_all",
             "camd_female",
             "camd_male",
             "camd_latinx",
@@ -1193,9 +1194,9 @@ const snippetsRef = {
             "camd_asian",
             "camd_black",
             "camd_white",
-            "camd_all",
           ],
           [
+            "ches_all",
             "ches_female",
             "ches_male",
             "ches_latinx",
@@ -1204,9 +1205,9 @@ const snippetsRef = {
             "ches_asian",
             "ches_black",
             "ches_white",
-            "ches_all",
           ],
           [
+            "del_all",
             "del_female",
             "del_male",
             "del_latinx",
@@ -1215,9 +1216,9 @@ const snippetsRef = {
             "del_asian",
             "del_black",
             "del_white",
-            "del_all",
           ],
           [
+            "glo_all",
             "glo_female",
             "glo_male",
             "glo_latinx",
@@ -1226,9 +1227,9 @@ const snippetsRef = {
             "glo_asian",
             "glo_black",
             "glo_white",
-            "glo_all",
           ],
           [
+            "mer_all",
             "mer_female",
             "mer_male",
             "mer_latinx",
@@ -1237,9 +1238,9 @@ const snippetsRef = {
             "mer_asian",
             "mer_black",
             "mer_white",
-            "mer_all",
           ],
           [
+            "mont_all",
             "mont_female",
             "mont_male",
             "mont_latinx",
@@ -1248,9 +1249,9 @@ const snippetsRef = {
             "mont_asian",
             "mont_black",
             "mont_white",
-            "mont_all",
           ],
           [
+            "phil_all",
             "phil_female",
             "phil_male",
             "phil_latinx",
@@ -1259,7 +1260,6 @@ const snippetsRef = {
             "phil_asian",
             "phil_black",
             "phil_white",
-            "phil_all",
           ],
         ],
         data: [
@@ -1318,6 +1318,7 @@ const snippetsRef = {
         },
         columnOptions: [
           [
+            "dvrpc_all",
             "dvrpc_female",
             "dvrpc_male",
             "dvrpc_latinx",
@@ -1326,9 +1327,9 @@ const snippetsRef = {
             "dvrpc_asian",
             "dvrpc_black",
             "dvrpc_white",
-            "dvrpc_all",
           ],
           [
+            "njcos_all",
             "njcos_female",
             "njcos_male",
             "njcos_latinx",
@@ -1337,9 +1338,9 @@ const snippetsRef = {
             "njcos_asian",
             "njcos_black",
             "njcos_white",
-            "njcos_all",
           ],
           [
+            "pasubcos_all",
             "pasubcos_female",
             "pasubcos_male",
             "pasubcos_latinx",
@@ -1348,9 +1349,9 @@ const snippetsRef = {
             "pasubcos_asian",
             "pasubcos_black",
             "pasubcos_white",
-            "pasubcos_all",
           ],
           [
+            "bucks_all",
             "bucks_female",
             "bucks_male",
             "bucks_latinx",
@@ -1359,9 +1360,9 @@ const snippetsRef = {
             "bucks_asian",
             "bucks_black",
             "bucks_white",
-            "bucks_all",
           ],
           [
+            "burl_all",
             "burl_female",
             "burl_male",
             "burl_latinx",
@@ -1370,9 +1371,9 @@ const snippetsRef = {
             "burl_asian",
             "burl_black",
             "burl_white",
-            "burl_all",
           ],
           [
+            "camd_all",
             "camd_female",
             "camd_male",
             "camd_latinx",
@@ -1381,9 +1382,9 @@ const snippetsRef = {
             "camd_asian",
             "camd_black",
             "camd_white",
-            "camd_all",
           ],
           [
+            "ches_all",
             "ches_female",
             "ches_male",
             "ches_latinx",
@@ -1392,9 +1393,9 @@ const snippetsRef = {
             "ches_asian",
             "ches_black",
             "ches_white",
-            "ches_all",
           ],
           [
+            "del_all",
             "del_female",
             "del_male",
             "del_latinx",
@@ -1403,9 +1404,9 @@ const snippetsRef = {
             "del_asian",
             "del_black",
             "del_white",
-            "del_all",
           ],
           [
+            "glo_all",
             "glo_female",
             "glo_male",
             "glo_latinx",
@@ -1414,9 +1415,9 @@ const snippetsRef = {
             "glo_asian",
             "glo_black",
             "glo_white",
-            "glo_all",
           ],
           [
+            "mer_all",
             "mer_female",
             "mer_male",
             "mer_latinx",
@@ -1425,9 +1426,9 @@ const snippetsRef = {
             "mer_asian",
             "mer_black",
             "mer_white",
-            "mer_all",
           ],
           [
+            "mont_all",
             "mont_female",
             "mont_male",
             "mont_latinx",
@@ -1436,9 +1437,9 @@ const snippetsRef = {
             "mont_asian",
             "mont_black",
             "mont_white",
-            "mont_all",
           ],
           [
+            "phil_all",
             "phil_female",
             "phil_male",
             "phil_latinx",
@@ -1447,7 +1448,6 @@ const snippetsRef = {
             "phil_asian",
             "phil_black",
             "phil_white",
-            "phil_all",
           ],
         ],
         data: [
