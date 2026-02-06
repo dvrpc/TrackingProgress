@@ -2777,9 +2777,9 @@ const snippetsRef = {
         ],
         context: {
           labels: [
-            "Dollars (2022)",
-            "Change in Dollars (2022)",
-            "Percent Change in Dollars (2022)",
+            "Dollars (2024)",
+            "Change in Dollars (2024)",
+            "Percent Change in Dollars (2024)",
           ],
           keepLabels: false,
           units: ["dollars", "dollars", "percentC"],
@@ -2931,63 +2931,95 @@ const snippetsRef = {
         container: "chart3",
         dataSource: ["medincGapRace", "medincPercGapRace"],
         context: {
-          labels: ["Dollars (2022)", "Percent"],
+          labels: ["Median Income Gap (Dollars 2024)", "Percent"],
           keepLabels: false,
           units: ["dollars", "percent"],
           keepUnits: false,
         },
         columnOptions: [
-          ["region_nonwht", "region_black", "region_asian", "region_latinx"],
+          [
+            "region_nonwht",
+            "region_black",
+            "region_asian",
+            "region_latinx",
+            "region_other",
+          ],
           [
             "nj_suburban_counties_nonwht",
             "nj_suburban_counties_black",
             "nj_suburban_counties_asian",
             "nj_suburban_counties_latinx",
+            "nj_suburban_counties_other",
           ],
           [
             "pa_suburban_counties_nonwht",
             "pa_suburban_counties_black",
             "pa_suburban_counties_asian",
             "pa_suburban_counties_latinx",
+            "pa_suburban_counties_other",
           ],
-          ["bucks_nonwht", "bucks_black", "bucks_asian", "bucks_latinx"],
+          [
+            "bucks_nonwht",
+            "bucks_black",
+            "bucks_asian",
+            "bucks_latinx",
+            "bucks_other",
+          ],
           [
             "burlington_nonwht",
             "burlington_black",
             "burlington_asian",
             "burlington_latinx",
+            "burlington_other",
           ],
-          ["camden_nonwht", "camden_black", "camden_asian", "camden_latinx"],
+          [
+            "camden_nonwht",
+            "camden_black",
+            "camden_asian",
+            "camden_latinx",
+            "camden_other",
+          ],
           [
             "chester_nonwht",
             "chester_black",
             "chester_asian",
             "chester_latinx",
+            "chester_other",
           ],
           [
             "delaware_nonwht",
             "delaware_black",
             "delaware_asian",
             "delaware_latinx",
+            "delaware_other",
           ],
           [
             "gloucester_nonwht",
             "gloucester_black",
             "gloucester_asian",
             "gloucester_latinx",
+            "gloucester_other",
           ],
-          ["mercer_nonwht", "mercer_black", "mercer_asian", "mercer_latinx"],
+          [
+            "mercer_nonwht",
+            "mercer_black",
+            "mercer_asian",
+            "mercer_latinx",
+            "mercer_other",
+          ],
           [
             "montgomery_nonwht",
             "montgomery_black",
             "montgomery_asian",
             "montgomery_latinx",
+            "montgomery_other",
           ],
           [
             "philadelphia_nonwht",
             "philadelphia_black",
             "philadelphia_asian",
             "philadelphia_latinx",
+            "philadelphia_other",
           ],
         ],
         data: [
@@ -3010,6 +3042,11 @@ const snippetsRef = {
             columns: ["year", "region_latinx"],
             disabled: true,
           },
+          {
+            key: "Other",
+            columns: ["year", "region_other"],
+            disabled: true,
+          },
         ],
       },
       {
@@ -3017,7 +3054,7 @@ const snippetsRef = {
         container: "chart4",
         dataSource: ["medincRace"],
         context: {
-          labels: ["Dollars (2022)"],
+          labels: ["Dollars (2024)"],
           keepLabels: true,
           units: ["dollars"],
           keepUnits: true,
@@ -3029,6 +3066,7 @@ const snippetsRef = {
             "region_black",
             "region_asian",
             "region_latinx",
+            "region_other",
             "region_all",
           ],
           [
@@ -3037,6 +3075,7 @@ const snippetsRef = {
             "nj_suburban_counties_black",
             "nj_suburban_counties_asian",
             "nj_suburban_counties_latinx",
+            "nj_suburban_counties_other",
             "nj_suburban_counties_all",
           ],
           [
@@ -3045,6 +3084,7 @@ const snippetsRef = {
             "pa_suburban_counties_black",
             "pa_suburban_counties_asian",
             "pa_suburban_counties_latinx",
+            "pa_suburban_counties_other",
             "pa_suburban_counties_all",
           ],
           [
@@ -3053,6 +3093,7 @@ const snippetsRef = {
             "bucks_black",
             "bucks_asian",
             "bucks_latinx",
+            "bucks_other",
             "bucks_all",
           ],
           [
@@ -3061,6 +3102,7 @@ const snippetsRef = {
             "burlington_black",
             "burlington_asian",
             "burlington_latinx",
+            "burlington_other",
             "burlington_all",
           ],
           [
@@ -3069,6 +3111,7 @@ const snippetsRef = {
             "camden_black",
             "camden_asian",
             "camden_latinx",
+            "camden_other",
             "camden_all",
           ],
           [
@@ -3077,6 +3120,7 @@ const snippetsRef = {
             "chester_black",
             "chester_asian",
             "chester_latinx",
+            "chester_other",
             "chester_all",
           ],
           [
@@ -3085,6 +3129,7 @@ const snippetsRef = {
             "delaware_black",
             "delaware_asian",
             "delaware_latinx",
+            "delaware_other",
             "delaware_all",
           ],
           [
@@ -3093,6 +3138,7 @@ const snippetsRef = {
             "gloucester_black",
             "gloucester_asian",
             "gloucester_latinx",
+            "gloucester_other",
             "gloucester_all",
           ],
           [
@@ -3101,6 +3147,7 @@ const snippetsRef = {
             "mercer_black",
             "mercer_asian",
             "mercer_latinx",
+            "mercer_other",
             "mercer_all",
           ],
           [
@@ -3109,6 +3156,7 @@ const snippetsRef = {
             "montgomery_black",
             "montgomery_asian",
             "montgomery_latinx",
+            "montgomery_other",
             "montgomery_all",
           ],
           [
@@ -3117,6 +3165,7 @@ const snippetsRef = {
             "philadelphia_black",
             "philadelphia_asian",
             "philadelphia_latinx",
+            "philadelphia_other",
             "philadelphia_all",
           ],
         ],
@@ -3145,6 +3194,11 @@ const snippetsRef = {
             disabled: true,
           },
           {
+            key: "Other",
+            columns: ["year", "region_other"],
+            disabled: true,
+          },
+          {
             key: "All",
             columns: ["year", "region_all"],
             disabled: false,
@@ -3157,8 +3211,8 @@ const snippetsRef = {
         dataSource: ["sexInc_gap", "sexInc_percofmale"],
         context: {
           labels: [
-            "Median Earnings Gap (2022 Dollars)",
-            "Median Earnings Gap Percentage",
+            "Median Individual Earnings Gap (2024 Dollars)",
+            "Median Individual Earnings Gap Percentage",
           ],
           keepLabels: false,
           units: ["dollars", "percentC"],
@@ -3190,7 +3244,7 @@ const snippetsRef = {
         container: "chart6",
         dataSource: ["sexInc_median"],
         context: {
-          labels: ["Median Earnings Gap (2022 Dollars)"],
+          labels: ["Median Individual Earnings Gap (2024 Dollars)"],
           keepLabels: true,
           units: ["dollars"],
           keepUnits: true,
