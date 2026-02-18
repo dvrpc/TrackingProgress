@@ -1,6 +1,6 @@
 DVRPC’s [Comprehensive Economic Development Strategy](https://www.dvrpc.org/economic/ceds/) is the region's framework to increase economic productivity, diversify local wealth, improve the culture for underrepresented businesses, and increase individual prosperity. 
 
-DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ suggests the following tools for reducing income disparities by increasing economic and business opportunities, and access to them:
+DVRPC’s *[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)* suggests the following tools for reducing income disparities by increasing economic and business opportunities, and access to them:
 
 * [Broadband Universal Access](https://www.dvrpc.org/Plan/MIT/broadbanduniversalaccess)
 * [Buy Local Campaign](https://www.dvrpc.org/Plan/MIT/buylocalcampaign)
@@ -12,4 +12,4 @@ DVRPC’s _[Municipal Implementation Toolbox](https://www.dvrpc.org/Plan/MIT/)_ 
 * [Transit Revitalization Investment District (TRID)](https://www.dvrpc.org/Plan/MIT/transitrevitalizationinvestmentdistricttrid)
 * [Transit-Oriented Development Zoning](https://www.dvrpc.org/Plan/MIT/transit-orienteddevelopmenttodzoning)
 
-For more on how DVRPC incorporates equity, environmental justice, and civil rights, see our [Title VI and Environmental Justice](https://www.dvrpc.org/getinvolved/titlevi/) page, as well as our [Indicators of Potential Disadvantage](https://www.dvrpc.org/webmaps/ipd/) tool and [Equity through Access](https://www.dvrpc.org/eta/) project and tool.
+For more on how DVRPC incorporates nondiscrimination and civil rights see our [Title VI Compliance](https://www.dvrpc.org/getinvolved/titlevi/) page, as well as our [Title VI Compliance ](https://www.dvrpc.org/webmaps/ipd/)tool and [Coordinated Human Services Transportation](https://www.dvrpc.org/eta/) Plan (CHSTP).
