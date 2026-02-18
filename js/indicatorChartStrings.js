@@ -1177,52 +1177,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Sources: U.S. Census Bureau's American Community Survey, DVRPC</em></small>
-
-        <hr class="indicator-content-hr" />
-
-        <div class="toggle-wrapper">
-            <h2 class="indicator-subheader toggle-subheader">Median Income Gap Relative to Households with White, non-Latinx Householder</h2>
-            <form class="double-toggle-form">
-                <fieldset>
-                    <label>
-                        Select Geography
-                        <select id="viz-2" class="toggle-data-selector">
-                            <optgroup label="Regional">
-                                <option value="0">DVRPC Region</option>
-                                <option value="1">NJ Counties</option>
-                                <option value="2">PA Suburban Counties</option>
-                            </optgroup>
-                            <optgroup label="Counties">
-                                <option value="3">Bucks</option>
-                                <option value="4">Burlington</option>
-                                <option value="5">Camden</option>
-                                <option value="6">Chester</option>
-                                <option value="7">Delaware</option>
-                                <option value="8">Gloucester</option>
-                                <option value="9">Mercer</option>
-                                <option value="10">Montgomery</option>
-                                <option value="11">Philadelphia</option>
-                            </optgroup>
-                        </select>
-                    </label>
-                </fieldset>
-                <span class="toggle-vr">|</span>
-                <fieldset>
-                    <label>
-                        Select Value Type
-                        <select id="viz-2-b" class="toggle-data-selector">
-                            <option value="0">Gap</option>
-                            <option value="1">Percent Gap</option>
-                        </select>
-                    </label>
-                </fieldset>
-            </form>
-        </div>
-        <div class="data-viz chart3">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
-`,
+        `,
   "Business Formations": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Business Formations</h2>
