@@ -2730,8 +2730,8 @@ const snippetsRef = {
     trend: {
       status: "bad",
       text: {
-        stat: "20-35% remaining",
-        text: `income gaps between groups`,
+        stat: "+16%",
+        text: `income gap between highest and lowest income households.`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/income",
