@@ -2675,7 +2675,7 @@ const snippetsRef = {
       },
     ],
   },
-  "Community Integration": {
+  "Community Income Mix": {
     categories: ["comm", "econo", "equity"],
     trend: {
       status: "not-great",
