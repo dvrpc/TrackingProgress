@@ -2675,7 +2675,7 @@ const snippetsRef = {
       },
     ],
   },
-  "Community Integration": {
+  "Community Income Mix": {
     categories: ["comm", "econo", "equity"],
     trend: {
       status: "not-great",
@@ -3222,6 +3222,41 @@ const snippetsRef = {
             key: "All",
             columns: ["year", "region_all"],
             disabled: false,
+          },
+        ],
+      },
+      {
+        type: "line",
+        container: "chart5",
+        dataSource: ["labForce_percent"],
+        context: {
+          labels: ["Percent Participation Gap"],
+          keepLabels: true,
+          units: ["percentC"],
+          keepUnits: true,
+        },
+        columnOptions: [
+          ["dvrpc_region"],
+          ["nj_suburban_counties"],
+          ["pa_suburban_counties"],
+          ["bucks"],
+          ["core_cities"],
+          ["developed_communities"],
+          ["growing_suburbs"],
+          ["rural_areas"],
+          ["burlington"],
+          ["camden"],
+          ["chester"],
+          ["delaware"],
+          ["gloucester"],
+          ["mercer"],
+          ["montgomery"],
+          ["philadelphia"],
+        ],
+        data: [
+          {
+            key: "Male to Female Gap",
+            columns: ["year", "dvrpc_region"],
           },
         ],
       },

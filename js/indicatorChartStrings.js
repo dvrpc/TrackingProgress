@@ -1774,7 +1774,7 @@ const chartStrings = {
             <svg></svg>
         </div>
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
-  "Community Integration": `
+  "Community Income Mix": `
         <h2 class="indicator-subheader">Income Segregation Index</h2>
         <div class="data-viz chart2">
             <svg></svg>
@@ -2112,7 +2112,50 @@ const chartStrings = {
             <div class="data-viz chart4">
                 <svg></svg>
             </div>
-            <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>`,
+            <small class="chart-src"><em>Source: U.S. Census Bureau's American Community Survey</em></small>
+
+            <hr class="indicator-content-hr" />
+
+            <div class="toggle-wrapper">
+            <h2 class="indicator-subheader toggle-subheader">Labor Force Participation Gap between Sexes (Ages 20 to 64)</h2>
+            <form>
+                <fieldset>
+                    <label>
+                        Select Geography
+                        <select id="viz-4" class="toggle-data-selector">
+                            <optgroup label="Regional">
+                                <option value="0">DVRPC Region</option>
+                                <option value="1">NJ Counties</option>
+                                <option value="2">PA Suburban Counties</option>
+                            </optgroup>
+                            <optgroup label="Planning Areas">
+                                <option value="3">Core Cities</option>
+                                <option value="4">Developed Communities</option>
+                                <option value="5">Growing Suburbs</option>
+                                <option value="6">Rural Areas</option>
+                            </optgroup>
+                            <optgroup label="Counties">
+                                <option value="7">Bucks</option>
+                                <option value="8">Burlington</option>
+                                <option value="9">Camden</option>
+                                <option value="10">Chester</option>
+                                <option value="11">Delaware</option>
+                                <option value="12">Gloucester</option>
+                                <option value="13">Mercer</option>
+                                <option value="14">Montgomery</option>
+                                <option value="15">Philadelphia</option>
+                            </optgroup>
+                        </select>
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+        <div class="data-viz chart5">
+            <svg></svg>
+        </div>
+        <small class="chart-src"><em>Source: U.S. Census Bureau’s American Community Survey</em></small>
+
+`,
   "Transit Conditions": `
         <div class="toggle-wrapper">
             <h2 class="indicator-subheader toggle-subheader">Revenue Vehicles Past their Useful Life Benchmark (ULB)</h2>
