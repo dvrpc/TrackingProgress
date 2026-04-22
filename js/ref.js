@@ -92,7 +92,7 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "5.7% decrease",
+        stat: "0.5% decrease",
         text: `in daily miles driven per person since 2000`,
       },
     },
@@ -2687,6 +2687,23 @@ const snippetsRef = {
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/community-integration",
     d3: [
+      {
+        type: "line",
+        container: "chart",
+        dataSource: ["RaceEthnSegregation"],
+        context: {
+          labels: [
+            "Population Needing to Move to Achieve Regional Distribution",
+          ],
+          units: ["percentC"],
+        },
+        data: [
+          {
+            key: "Index Value",
+            columns: ["year", "peopleofcolor"],
+          },
+        ],
+      },
       {
         type: "line",
         container: "chart2",
