@@ -2689,23 +2689,6 @@ const snippetsRef = {
     d3: [
       {
         type: "line",
-        container: "chart",
-        dataSource: ["RaceEthnSegregation"],
-        context: {
-          labels: [
-            "Population Needing to Move to Achieve Regional Distribution",
-          ],
-          units: ["percentC"],
-        },
-        data: [
-          {
-            key: "Index Value",
-            columns: ["year", "peopleofcolor"],
-          },
-        ],
-      },
-      {
-        type: "line",
         container: "chart2",
         dataSource: ["IncomeSegregation"],
         context: {

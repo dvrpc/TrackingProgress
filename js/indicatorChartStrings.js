@@ -1775,14 +1775,6 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
   "Community Integration": `
-        <h2 class="indicator-subheader">Racial/Ethnic Segregation Index</h2>
-        <div class="data-viz chart">
-            <svg></svg>
-        </div>
-        <small class="chart-src"><em>Sources: U.S. Census Bureau's Decennial Census & American Community Survey, DVRPC</em></small>
-
-        <hr class="indicator-content-hr" />
-
         <h2 class="indicator-subheader">Income Segregation Index</h2>
         <div class="data-viz chart2">
             <svg></svg>
