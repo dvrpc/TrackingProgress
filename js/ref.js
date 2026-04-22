@@ -92,7 +92,7 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "0.5% decrease",
+        stat: "5.7% decrease",
         text: `in daily miles driven per person since 2000`,
       },
     },
