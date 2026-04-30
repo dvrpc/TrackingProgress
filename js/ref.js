@@ -2680,9 +2680,8 @@ const snippetsRef = {
     trend: {
       status: "not-great",
       text: {
-        stat: "40 to 51%",
-        text: `of residents not living in
-              racially, ethnically, or economically diverse communities`,
+        stat: "39.5%",
+        text: `of residents would need to relocate to evenly distribute households by income across communities`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/community-integration",
