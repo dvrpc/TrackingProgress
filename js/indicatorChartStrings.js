@@ -1775,7 +1775,7 @@ const chartStrings = {
         </div>
         <small class="chart-src"><em>Source: U.S. Census Bureau's Population Estimates Program</em></small>`,
   "Community Income Mix": `
-        <h2 class="indicator-subheader">Income Segregation Index</h2>
+        <h2 class="indicator-subheader">Income Concentration Index</h2>
         <div class="data-viz chart2">
             <svg></svg>
         </div>
