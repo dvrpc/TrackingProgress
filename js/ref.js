@@ -2485,7 +2485,7 @@ const snippetsRef = {
     trend: {
       status: "good",
       text: {
-        stat: "2.8% increase",
+        stat: "2.8 percentage point increase",
         text: `in labor force participation rate since 2005`,
       },
     },
