@@ -2485,8 +2485,8 @@ const snippetsRef = {
     trend: {
       status: "good",
       text: {
-        stat: "5-6% drop",
-        text: `in participation rate gaps from base year`,
+        stat: "2.8% increase",
+        text: `in labor force participation rate since 2005`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/labor-force",
