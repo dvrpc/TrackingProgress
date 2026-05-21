@@ -629,7 +629,6 @@ const chartStrings = {
         <div class="data-viz chart">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Geography: * Sex, ** Ethnicity, *** Race</em></small>
         <small class="chart-src">Federal Financial Institutions Examination Council's (FFIEC) Home Mortgage Disclosure Act (HMDA) Data</small>
        
         <hr class="indicator-content-hr" />
@@ -677,7 +676,6 @@ const chartStrings = {
         <div class="data-viz chart2">
             <svg></svg>
         </div>
-        <small class="chart-src"><em>Geography: * Sex, ** Ethnicity, *** Race</em></small>
         <small class="chart-src">Federal Financial Institutions Examination Council's (FFIEC) Home Mortgage Disclosure Act (HMDA) Data</small>`,
   "Heat Trapping Gases": `
         <div class="toggle-wrapper">
