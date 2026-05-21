@@ -981,8 +981,8 @@ const snippetsRef = {
     trend: {
       status: "good",
       text: {
-        stat: "8-10% drop",
-        text: `in loan approval rate gaps since 2007`,
+        stat: "12.1 percentage point increase",
+        text: `in loan origination rate since 2007`,
       },
     },
     dataUrl: "https://catalog.dvrpc.org/dataset/mortgage-lending",
