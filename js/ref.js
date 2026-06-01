@@ -2254,7 +2254,7 @@ const snippetsRef = {
         text: `of residents would need to relocate to evenly distribute households by income across communities`,
       },
     },
-    dataUrl: "https://catalog.dvrpc.org/dataset/community-integration",
+    dataUrl: "https://catalog.dvrpc.org/dataset/community-income-mix",
     d3: [
       {
         type: "line",
