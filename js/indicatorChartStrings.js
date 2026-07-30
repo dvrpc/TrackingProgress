@@ -1536,7 +1536,7 @@ const chartStrings = {
                         Select Value Type
                         <select id="viz-0" class="toggle-data-selector">
                             <option value="0">Total Population</option>
-                            <option value="1">Change Since Base Year</option>
+                            <option value="1">Change Since 2000</option>
                             <option value="2">Annual Percent Change</option>
                         </select>
                     </label>
@@ -1622,7 +1622,7 @@ const chartStrings = {
                         Select Value Type:
                         <select id="viz-2-b" class="toggle-data-selector">
                             <option value="0">Total Population</option>
-                            <option value="1">Change Since Base Year</option>
+                            <option value="1">Change Since 2000</option>
                             <option value="2">Annual Percent Change</option>
                         </select>
                 </fieldset>
