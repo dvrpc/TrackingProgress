@@ -5287,7 +5287,7 @@ const snippetsRef = {
     trend: {
       status: "good",
       text: {
-        stat: "10.6% increase",
+        stat: "10.7% increase",
         text: `in population since 2000`,
       },
     },
