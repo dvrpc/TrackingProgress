@@ -2985,9 +2985,11 @@ const snippetsRef = {
         columnOptions: [
           [
             "DVRPC Region",
-            "Non-DVRPC Phila UA",
-            "Philadelphia UA",
-            "Trenton UA",
+            "Non-DVRPC Phila Area Cos",
+            "Philadelphia UA - 2010s Boundaries",
+            "Philadelphia UA - 2020s Boundaries",
+            "Trenton UA - 2010s Boundaries",
+            "Trenton UA - 2020s Boundaries",
             "Bucks",
             "Burlington",
             "Camden",
@@ -3000,9 +3002,17 @@ const snippetsRef = {
             "NJ Counties",
             "PA Counties",
             "PA Suburban Counties",
-            "Total UA",
+            "Total UA - 2010s Boundaries",
+            "Total UA - 2020s Boundaries",
           ],
-          ["Philadelphia UA", "Trenton UA", "Total UA"],
+          [
+            "Philadelphia UA - 2010s Boundaries",
+            "Philadelphia UA - 2020s Boundaries",
+            "Trenton UA - 2010s Boundaries",
+            "Trenton UA - 2020s Boundaries",
+            "Total UA - 2010s Boundaries",
+            "Total UA - 2020s Boundaries",
+          ],
         ],
         data: [
           {
@@ -3010,19 +3020,29 @@ const snippetsRef = {
             columns: ["Year", "DVRPC Region"],
           },
           {
-            key: "Non-DVRPC Phila UA",
+            key: "Non-DVRPC Phila Area Cos",
             disabled: true,
-            columns: ["Year", "Non-DVRPC Phila UA"],
+            columns: ["Year", "Non-DVRPC Phila Area Cos"],
           },
           {
-            key: "Philadelphia UA",
+            key: "Philadelphia UA - 2010s Boundaries",
             disabled: true,
-            columns: ["Year", "Philadelphia UA"],
+            columns: ["Year", "Philadelphia UA - 2010s Boundaries"],
           },
           {
-            key: "Trenton UA",
+            key: "Philadelphia UA - 2020s Boundaries",
             disabled: true,
-            columns: ["Year", "Trenton UA"],
+            columns: ["Year", "Philadelphia UA - 2020s Boundaries"],
+          },
+          {
+            key: "Trenton UA - 2010s Boundaries",
+            disabled: true,
+            columns: ["Year", "Trenton UA - 2010s Boundaries"],
+          },
+          {
+            key: "Trenton UA - 2020s Boundaries",
+            disabled: true,
+            columns: ["Year", "Trenton UA - 2020s Boundaries"],
           },
           {
             key: "Bucks",
@@ -3085,9 +3105,14 @@ const snippetsRef = {
             columns: ["Year", "PA Suburban Counties"],
           },
           {
-            key: "Total UA",
+            key: "Total UA - 2010s Boundaries",
             disabled: true,
-            columns: ["Year", "Total UA"],
+            columns: ["Year", "Total UA - 2010s Boundaries"],
+          },
+          {
+            key: "Total UA - 2020s Boundaries",
+            disabled: true,
+            columns: ["Year", "Total UA - 2020s Boundaries"],
           },
         ],
       },
