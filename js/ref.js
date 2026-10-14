@@ -2586,7 +2586,7 @@ const snippetsRef = {
     trend: {
       status: "neutral",
       text: {
-        stat: "9.6% less",
+        stat: "4.9% less",
         text: `reliability on region's highways during weekdays since 2021`,
       },
     },
@@ -2596,7 +2596,7 @@ const snippetsRef = {
         type: "line",
         container: "chart",
         dataSource: [
-          "roadwayreliablilityTOD_Fwy",
+          "roadwayreliablilityTOD_Hwy",
           "roadwayreliablilityTOD_Local",
         ],
         range: [1, 1.6],
